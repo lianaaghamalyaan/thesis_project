@@ -1,0 +1,25 @@
+tech_skill,job_docs,curriculum_docs,status
+Microsoft Azure,25,0,GAP
+React,25,0,GAP
+LLM / GenAI,19,4,OVERLAP
+Node.js,17,3,OVERLAP
+Amazon Web Services,15,0,GAP
+Kubernetes,7,0,GAP
+Google Cloud,7,0,GAP
+Terraform,6,0,GAP
+REST API,5,0,GAP
+Microservices,5,0,GAP
+DevOps,4,0,GAP
+Elasticsearch,4,0,GAP
+Docker,4,0,GAP
+Redis,4,0,GAP
+PostgreSQL,3,0,GAP
+Jenkins,3,0,GAP
+Spring Framework,3,0,GAP
+GraphQL,2,0,GAP
+PyTorch,2,0,GAP
+Kafka,2,0,GAP
+TensorFlow,2,0,GAP
+.NET / C#,2,0,GAP
+TypeScript,2,0,GAP
+GitLab CI/CD,2,0,GAP

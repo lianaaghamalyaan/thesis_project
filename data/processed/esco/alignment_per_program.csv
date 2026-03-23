@@ -1,0 +1,55 @@
+method,university,program,degree,program_concepts,overlap,coverage_pct
+tfidf,American University of Armenia,Computer Science,Bachelor,57,38,7.21
+tfidf,American University of Armenia,Computer and Information Science,Master,72,48,9.11
+tfidf,American University of Armenia,Data Science,Bachelor,47,30,5.69
+tfidf,American University of Armenia,Engineering Sciences,Bachelor,47,22,4.17
+tfidf,American University of Armenia,Environmental and Sustainability Sciences,Bachelor,58,22,4.17
+tfidf,American University of Armenia,General Education,General,54,31,5.88
+tfidf,American University of Armenia,Industrial Engineering and Systems Management,Master,46,22,4.17
+tfidf,National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,7,3,0.57
+tfidf,National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,18,13,2.47
+tfidf,National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,14,9,1.71
+tfidf,National University of Architecture and Construction of Armenia,Information Systems,Bachelor,16,10,1.9
+tfidf,National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,9,7,1.33
+tfidf,Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,17,12,2.28
+tfidf,Yerevan State University,Applied Statistics and Data Science,Bachelor,71,29,5.5
+tfidf,Yerevan State University,Applied Statistics and Data Science,Master,45,28,5.31
+tfidf,Yerevan State University,Blockchain and Digital Currencies,Master,15,9,1.71
+tfidf,Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,71,24,4.55
+tfidf,Yerevan State University,Data Science in Business,Master,36,30,5.69
+tfidf,Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,23,15,2.85
+tfidf,Yerevan State University,Informatics and Applied Mathematics,Bachelor,59,21,3.98
+tfidf,Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,60,22,4.17
+tfidf,Yerevan State University,Information Security,Bachelor,62,25,4.74
+tfidf,Yerevan State University,Information Systems Development,Master,37,29,5.5
+tfidf,Yerevan State University,Information Systems Management,Master,39,26,4.93
+tfidf,Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,40,25,4.74
+tfidf,Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,32,15,2.85
+tfidf,Yerevan State University,Radiophysics and Computer Technology,Bachelor,78,31,5.88
+keybert,American University of Armenia,Computer Science,Bachelor,42,18,4.74
+keybert,American University of Armenia,Computer and Information Science,Master,50,15,3.95
+keybert,American University of Armenia,Data Science,Bachelor,30,10,2.63
+keybert,American University of Armenia,Engineering Sciences,Bachelor,38,8,2.11
+keybert,American University of Armenia,Environmental and Sustainability Sciences,Bachelor,42,5,1.32
+keybert,American University of Armenia,General Education,General,37,2,0.53
+keybert,American University of Armenia,Industrial Engineering and Systems Management,Master,26,7,1.84
+keybert,National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,7,1,0.26
+keybert,National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,22,7,1.84
+keybert,National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,19,7,1.84
+keybert,National University of Architecture and Construction of Armenia,Information Systems,Bachelor,21,2,0.53
+keybert,National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,19,9,2.37
+keybert,Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,17,5,1.32
+keybert,Yerevan State University,Applied Statistics and Data Science,Bachelor,64,9,2.37
+keybert,Yerevan State University,Applied Statistics and Data Science,Master,33,7,1.84
+keybert,Yerevan State University,Blockchain and Digital Currencies,Master,7,3,0.79
+keybert,Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,59,5,1.32
+keybert,Yerevan State University,Data Science in Business,Master,37,16,4.21
+keybert,Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,17,5,1.32
+keybert,Yerevan State University,Informatics and Applied Mathematics,Bachelor,59,8,2.11
+keybert,Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,58,8,2.11
+keybert,Yerevan State University,Information Security,Bachelor,57,7,1.84
+keybert,Yerevan State University,Information Systems Development,Master,44,20,5.26
+keybert,Yerevan State University,Information Systems Management,Master,38,14,3.68
+keybert,Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,35,13,3.42
+keybert,Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,19,5,1.32
+keybert,Yerevan State University,Radiophysics and Computer Technology,Bachelor,76,9,2.37

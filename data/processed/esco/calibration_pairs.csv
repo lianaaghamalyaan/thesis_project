@@ -1,0 +1,294 @@
+extracted_skill,top1_esco_label,top1_esco_uri,cosine_similarity,sim_band,is_match,annotator_notes
+mechanisms patterns,operate patternmaking machinery,http://data.europa.eu/esco/skill/cd7f6863-34cb-40fa-96d9-1de80b6c862b,0.511262834072113,<0.60,0,gpt-4o-mini
+keypads lcd,operate screen printing press,http://data.europa.eu/esco/skill/731ade90-4fdc-4509-9a1f-3f35a34f5141,0.4422087371349334,<0.60,0,gpt-4o-mini
+process infuse academy,application process,http://data.europa.eu/esco/skill/4fb87cb4-6442-4b5d-8bd0-eb1aa743a9ee,0.5107207894325256,<0.60,0,gpt-4o-mini
+biggest names gaming,video-games trends,http://data.europa.eu/esco/skill/44a117a9-4443-43a4-b037-23c716af671e,0.532163143157959,<0.60,0,gpt-4o-mini
+dhcp,Cisco,http://data.europa.eu/esco/skill/709ef32a-7435-48e2-8fa2-16e389ecab8a,0.3943414390087127,<0.60,0,gpt-4o-mini
+retention,develop employee retention programs,http://data.europa.eu/esco/skill/f77b73f0-8c65-4389-a3ae-3a57a73ad148,0.5935313701629639,<0.60,0,gpt-4o-mini
+points view subfields,monitor fields,http://data.europa.eu/esco/skill/70f89c90-0290-4fbb-a91a-d433a5f28b15,0.4772002100944519,<0.60,0,gpt-4o-mini
+mathematical analysis rn,mathematics,http://data.europa.eu/esco/skill/4339176e-3acd-4f7f-a5d9-445bee3d23f2,0.581727921962738,<0.60,1,gpt-4o-mini
+models proficiency python,Python (computer programming),http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d,0.5284362435340881,<0.60,1,gpt-4o-mini
+led demonstrated,LED lighting components,http://data.europa.eu/esco/skill/80d8e893-44ef-442a-a796-f1660acd570e,0.5515669584274292,<0.60,0,gpt-4o-mini
+world think love,think creatively,http://data.europa.eu/esco/skill/c624c6a3-b0ba-4a31-a296-0d433fe47e41,0.4958401024341583,<0.60,0,gpt-4o-mini
+gateway specialist organize,manage airport workshops,http://data.europa.eu/esco/skill/bbce18c7-c3d9-4f50-8519-9a9db7033e03,0.4888635873794555,<0.60,0,gpt-4o-mini
+մասնագետ job,salon management,http://data.europa.eu/esco/skill/59b4f49d-a82a-4206-ba93-3e423640de22,0.4434431493282318,<0.60,0,gpt-4o-mini
+switchers experience live,perform live,http://data.europa.eu/esco/skill/04e6474d-f6fd-4e60-9191-24faae8ba0bb,0.4771203994750976,<0.60,1,gpt-4o-mini
+developer tools earth,use earth sciences tools,http://data.europa.eu/esco/skill/16765acd-6ed2-40ae-9900-bfbda5d6dc57,0.5556434988975525,<0.60,0,gpt-4o-mini
+possible extension,find appropriate extras,http://data.europa.eu/esco/skill/478b826b-21a3-464d-a697-faef4faa7dc1,0.4277842342853546,<0.60,0,gpt-4o-mini
+fit department department,manage university department,http://data.europa.eu/esco/skill/011711eb-f20b-4d64-84d7-17b8979946dc,0.5507386922836304,<0.60,0,gpt-4o-mini
+постоянного профессионального развития,understand written Russian,http://data.europa.eu/esco/skill/ca58a2d3-b901-42b2-b85f-b2b83aeadbea,0.4243644177913666,<0.60,0,gpt-4o-mini
+expressjs nestjs framework,JavaScript Framework,http://data.europa.eu/esco/skill/9b9de2a4-d8af-4a7b-933a-a8334ae60067,0.4324663579463959,<0.60,1,gpt-4o-mini
+syntactic analyzers,natural language processing,http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a,0.5357164144515991,<0.60,0,gpt-4o-mini
+german phonological grammatical,grammar,http://data.europa.eu/esco/skill/d4ae9564-0b61-4aa0-9df0-d4fdc969fd6f,0.5949057340621948,<0.60,0,gpt-4o-mini
+taking care,give care instructions,http://data.europa.eu/esco/skill/cde53fc6-f5e9-4439-8b91-a53da0c01d34,0.5754963159561157,<0.60,0,gpt-4o-mini
+random,probability theory,http://data.europa.eu/esco/skill/b758675a-b03b-4e4b-897c-57ca14b1a3d0,0.4566769599914551,<0.60,0,gpt-4o-mini
+brandbook inteticsgeo visual,interpret visual literacy,http://data.europa.eu/esco/skill/1f403e44-7a79-4b91-b86a-e406208be161,0.5452463030815125,<0.60,0,gpt-4o-mini
+tools streamline,use traditional toolbox tools,http://data.europa.eu/esco/skill/b1338cfb-930c-4bcb-b77a-1034d76ddb0e,0.5051575303077698,<0.60,0,gpt-4o-mini
+file based ingestion,file-based workflow,http://data.europa.eu/esco/skill/a35b9b1c-ebfe-41ac-96be-2a7b2ea04670,0.5147566795349121,<0.60,0,gpt-4o-mini
+pure developer,DevOps,http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4,0.481824517250061,<0.60,0,gpt-4o-mini
+rejections bad feedback,give constructive feedback,http://data.europa.eu/esco/skill/b9bb1f03-15e2-4079-943e-7e483b21725b,0.5631176233291626,<0.60,0,gpt-4o-mini
+arnology llc seeking,patents,http://data.europa.eu/esco/skill/1349751e-dfb5-492e-89af-e7d9bd2546ac,0.4286621510982513,<0.60,0,gpt-4o-mini
+integrate secure restful,secure working area,http://data.europa.eu/esco/skill/6ed2fb8d-3580-497f-8a21-30a0ada5caae,0.4505718350410461,<0.60,0,gpt-4o-mini
+company jobhire ai,recruit employees,http://data.europa.eu/esco/skill/496932f1-0b6b-4f73-9432-d95c7ddcd43b,0.5416179895401001,<0.60,0,gpt-4o-mini
+utilities,design utility equipment,http://data.europa.eu/esco/skill/465af498-53b1-4e04-9f49-7458afb59274,0.5937376618385315,<0.60,0,gpt-4o-mini
+implementation rest graphql,NoSQL,http://data.europa.eu/esco/skill/76ef6ed3-1658-4a1a-9593-204d799c6d0c,0.5430787801742554,<0.60,0,gpt-4o-mini
+senior agent role,adapt to acting roles,http://data.europa.eu/esco/skill/f34ee429-b36d-49f9-a927-80b67a467cc8,0.520095944404602,<0.60,0,gpt-4o-mini
+foundation computer,computer graphics,http://data.europa.eu/esco/skill/afda6ca0-7aa8-41ef-ba5e-8dc607839daf,0.4894411563873291,<0.60,0,gpt-4o-mini
+smm marketing intern,marketing management,http://data.europa.eu/esco/skill/5bbaa0e6-0fd7-4df2-9db7-34f78b40dc34,0.5747207403182983,<0.60,0,gpt-4o-mini
+workflows writing clean,enhance production workflow,http://data.europa.eu/esco/skill/8add048c-4d51-41c5-8aa2-f57412c4a637,0.5560083389282227,<0.60,0,gpt-4o-mini
+connects ecommerce erp,e-commerce systems,http://data.europa.eu/esco/skill/b1272de4-1f5f-408b-8b26-061f2550fc72,0.5220796465873718,<0.60,0,gpt-4o-mini; corrected by human reviewer
+field outline,develop course outline,http://data.europa.eu/esco/skill/f0699875-51da-48d2-bc92-54b0749baef1,0.5166075229644775,<0.60,0,gpt-4o-mini
+streaming platforms,hardware platforms,http://data.europa.eu/esco/skill/117373c8-f04b-4fff-8683-aebe36edac81,0.59059739112854,<0.60,0,gpt-4o-mini
+tensorflow solid,solid mechanics,http://data.europa.eu/esco/skill/a4557e97-d7f9-4669-88b0-c57591acce80,0.4674219489097595,<0.60,0,gpt-4o-mini
+banach spaces,measure interior space,http://data.europa.eu/esco/skill/98256736-57a9-4773-98ff-0627ac790546,0.3827816247940063,<0.60,0,gpt-4o-mini
+feedback shift registers,maintain genetic registers,http://data.europa.eu/esco/skill/a5ba32c2-ae96-4601-b171-dcc84ea20657,0.443955510854721,<0.60,0,gpt-4o-mini
+squads,team building,http://data.europa.eu/esco/skill/eab3bafa-eebb-47bf-85ce-e336c5019108,0.6196516156196594,0.60-0.65,0,gpt-4o-mini
+thinking abilities analyze,think analytically,http://data.europa.eu/esco/skill/4707da90-9cfc-46ca-8de0-38a0b7bfb137,0.6290145516395569,0.60-0.65,1,gpt-4o-mini
+linguistic means according,linguistics,http://data.europa.eu/esco/skill/810df100-e85a-4c13-b619-34030a75ecc2,0.6386148929595947,0.60-0.65,0,gpt-4o-mini
+images videos,select video shots,http://data.europa.eu/esco/skill/8070c968-5a62-4fbf-8881-b4cd1fc36190,0.6190488934516907,0.60-0.65,0,gpt-4o-mini
+exhibition stands metal,present exhibition,http://data.europa.eu/esco/skill/c45848bc-33c6-45fa-b791-bc5b06c21b87,0.6464160680770874,0.60-0.65,0,gpt-4o-mini
+transact,transcreation,http://data.europa.eu/esco/skill/fa2ea1d0-0d7e-4834-a70f-a35011509c2e,0.608141303062439,0.60-0.65,0,gpt-4o-mini
+shifting,coordinate shifts,http://data.europa.eu/esco/skill/281a0cb1-4e12-46f4-ba4a-2746cba36e78,0.6446641087532043,0.60-0.65,0,gpt-4o-mini
+ux motion designer,work with motion picture editing team,http://data.europa.eu/esco/skill/12154830-df49-42d6-95b3-6f83f29733d5,0.6372340321540833,0.60-0.65,0,gpt-4o-mini
+customers assigned csm,perform customer management,http://data.europa.eu/esco/skill/91306a20-9b81-4f3d-97eb-f5368b607da7,0.6322017312049866,0.60-0.65,0,gpt-4o-mini
+goal improving metrics,analyse goal progress,http://data.europa.eu/esco/skill/dbfb9dda-48d9-4a10-9821-3237f868071b,0.6408789157867432,0.60-0.65,0,gpt-4o-mini
+technologies web,learning technologies,http://data.europa.eu/esco/skill/7fc4c18a-68f3-425a-aadf-f83633be47a1,0.6223152279853821,0.60-0.65,0,gpt-4o-mini
+firewall appliance service,implement a firewall,http://data.europa.eu/esco/skill/e5b5053e-0ef6-4c4e-a3f2-42f955f4322c,0.6318547129631042,0.60-0.65,0,gpt-4o-mini
+process funnels,business processes,http://data.europa.eu/esco/skill/9e84a506-df06-4be3-874a-fa01293e3dd5,0.6315006613731384,0.60-0.65,0,gpt-4o-mini
+business unit leaders,lead managers of company departments,http://data.europa.eu/esco/skill/3e61ee41-2bd9-466f-b313-00ce04072410,0.6091536283493042,0.60-0.65,1,gpt-4o-mini
+pipelines etl processes,perform pipeline routing studies,http://data.europa.eu/esco/skill/a46b6220-7313-4b3b-9bdb-cca897aff546,0.6450400352478027,0.60-0.65,0,gpt-4o-mini
+computation,carry out calculations,http://data.europa.eu/esco/skill/19ba11f3-9c99-41fd-a7c9-f77e6a026186,0.6418216228485107,0.60-0.65,1,gpt-4o-mini
+practices client,manage difficult clients,http://data.europa.eu/esco/skill/44985078-6f4c-42b2-bceb-a37ea224b21d,0.6400166153907776,0.60-0.65,0,gpt-4o-mini
+inference,logic,http://data.europa.eu/esco/skill/294cf13e-4fdf-4cb8-bb6b-31b9da7f4819,0.6101871728897095,0.60-0.65,0,gpt-4o-mini
+cryptography characteristics,implement cryptographic constructs,http://data.europa.eu/esco/skill/f0163b63-6794-4eb7-b17b-f91d11b2602d,0.6170788407325745,0.60-0.65,0,gpt-4o-mini
+texts socio,draw up professional texts,http://data.europa.eu/esco/skill/e83ec793-3fbc-42e0-9729-d4bd92d454b3,0.6328350901603699,0.60-0.65,0,gpt-4o-mini
+python bash,Python (computer programming),http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d,0.6498657464981079,0.60-0.65,0,gpt-4o-mini
+solutionsact strategic advisor,apply strategic thinking,http://data.europa.eu/esco/skill/6c870993-9341-438b-91c0-c7fe4f96d8f5,0.6348944902420044,0.60-0.65,0,gpt-4o-mini
+technologies enabling,computer technology,http://data.europa.eu/esco/skill/ddc3119d-1d6e-4324-9125-a3380d299ac5,0.6106614470481873,0.60-0.65,0,gpt-4o-mini
+developers web designers,web programming,http://data.europa.eu/esco/skill/69bbd53f-fbb0-4476-b4b2-ef7844464e28,0.6451267004013062,0.60-0.65,0,gpt-4o-mini
+tracking tools e.g,monitor surveillance equipment,http://data.europa.eu/esco/skill/65c4ee04-319d-417c-8f45-8594408d0d24,0.6433781981468201,0.60-0.65,0,gpt-4o-mini
+testing quality initiatives,quality assurance procedures,http://data.europa.eu/esco/skill/1177c6f5-09c5-4c35-873c-afd22d170ad3,0.611070990562439,0.60-0.65,0,gpt-4o-mini
+course starts brief,follow a brief,http://data.europa.eu/esco/skill/25f4c955-e429-44a6-98a7-7d8cb3b6b690,0.6130365133285522,0.60-0.65,0,gpt-4o-mini
+quality infrastructure tooling,quality assurance methodologies,http://data.europa.eu/esco/skill/c7cc6dc5-d56b-4323-8e5c-47c4022f615f,0.6320875287055969,0.60-0.65,0,gpt-4o-mini
+literary turkish reproduce,write Turkish,http://data.europa.eu/esco/skill/20d51474-58e1-4fb3-aec3-57bdc187c5ce,0.6439981460571289,0.60-0.65,0,gpt-4o-mini
+local reporting,follow reporting procedures,http://data.europa.eu/esco/skill/9bcfccac-8920-4024-9aef-a06f8c035063,0.6361117362976074,0.60-0.65,0,gpt-4o-mini
+improvements codebase processes,identify process improvements,http://data.europa.eu/esco/skill/958b8802-ec3e-4813-97f7-6c8f48610dbd,0.6467220783233643,0.60-0.65,0,gpt-4o-mini
+looking engineer,mechanical engineering,http://data.europa.eu/esco/skill/9c071f1d-eac3-449d-b004-c14775b5a3b9,0.6221500635147095,0.60-0.65,0,gpt-4o-mini
+tools api,use traditional toolbox tools,http://data.europa.eu/esco/skill/b1338cfb-930c-4bcb-b77a-1034d76ddb0e,0.6391327977180481,0.60-0.65,0,gpt-4o-mini
+law firms professional,corporate law,http://data.europa.eu/esco/skill/d77d7685-04fb-43a4-a1ac-09a10811f646,0.6170551776885986,0.60-0.65,0,gpt-4o-mini
+conjunction marketing team,collaborate in the development of marketing strategies,http://data.europa.eu/esco/skill/b679ef35-eebf-4da8-8e45-fee6841c3214,0.621513307094574,0.60-0.65,0,gpt-4o-mini
+modern applied cryptography,implement cryptographic constructs,http://data.europa.eu/esco/skill/f0163b63-6794-4eb7-b17b-f91d11b2602d,0.6120996475219727,0.60-0.65,1,gpt-4o-mini
+marketplaces,market participants,http://data.europa.eu/esco/skill/791e2eea-3380-4aed-b996-4bcabbe88591,0.6246651411056519,0.60-0.65,0,gpt-4o-mini
+rules govern message,disseminate messages to people,http://data.europa.eu/esco/skill/81dc035c-921b-4fea-a453-94538e86097c,0.6494517922401428,0.60-0.65,0,gpt-4o-mini
+suitable contractors database,audit contractors,http://data.europa.eu/esco/skill/0520d8ba-3c24-4f75-a8b0-f883ddeed82d,0.6308001279830933,0.60-0.65,0,gpt-4o-mini
+transaction concurrency control,use concurrent programming,http://data.europa.eu/esco/skill/25b291b5-8245-4d9d-b391-86a8a31d7109,0.6389203071594238,0.60-0.65,0,gpt-4o-mini
+propulsion,operate ship propulsion system,http://data.europa.eu/esco/skill/f774cc69-f0cf-4767-bf13-9b16dc7f7c07,0.6264908909797668,0.60-0.65,0,gpt-4o-mini
+supervised individual employing,supervision of persons,http://data.europa.eu/esco/skill/47ac9325-b072-4e37-8e40-e6ffed03e851,0.6134346723556519,0.60-0.65,1,gpt-4o-mini
+infrastructure powers,prevent damage to utility infrastructure,http://data.europa.eu/esco/skill/63395522-32f0-46c4-851d-69c2d3800a8a,0.6053935289382935,0.60-0.65,0,gpt-4o-mini
+terraform ansible similar,Ansible,http://data.europa.eu/esco/skill/6f8a40d6-f9ce-43ec-a72f-d4213a53f3ed,0.6839673519134521,0.65-0.70,0,gpt-4o-mini
+unconstrained constrained,theory of constraints,http://data.europa.eu/esco/skill/2abb7341-11a9-4799-9aef-7f2a83de0358,0.6842620372772217,0.65-0.70,0,gpt-4o-mini
+mobile app,iOS,http://data.europa.eu/esco/skill/ce26e71f-2d47-474e-89b6-7920931ac4fc,0.6593164801597595,0.65-0.70,0,gpt-4o-mini
+chains applications,types of chain,http://data.europa.eu/esco/skill/c4b3bbb4-a4f7-467f-8e91-a545d0224dce,0.6756229996681213,0.65-0.70,0,gpt-4o-mini
+reporting tools excel,develop reporting software,http://data.europa.eu/esco/skill/9d2f77af-4307-4ac5-bc50-a9980cec7e83,0.690411388874054,0.65-0.70,0,gpt-4o-mini
+testing agile scrum,Agile development,http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221,0.6893628239631653,0.65-0.70,1,gpt-4o-mini
+prototyping tools figma,Prototyping development,http://data.europa.eu/esco/skill/ed1d8bd4-cd2a-4c64-b665-56d70651026c,0.6672211289405823,0.65-0.70,1,gpt-4o-mini
+timely delivery high,deliver outstanding service,http://data.europa.eu/esco/skill/7e5786f8-1174-4f75-97e3-cfecfd95d797,0.6786602139472961,0.65-0.70,0,gpt-4o-mini
+science software engineering,computer engineering,http://data.europa.eu/esco/skill/89f6560b-2194-45c9-9ece-d33049a73eef,0.6733013987541199,0.65-0.70,0,gpt-4o-mini
+assessing ecosystem health,ecosystem management,http://data.europa.eu/esco/skill/270c4de9-97f9-4a7a-95d1-63670f1ec3bc,0.6547576189041138,0.65-0.70,0,gpt-4o-mini
+web hosting ecosystem,manage website,http://data.europa.eu/esco/skill/d04ee340-5378-4601-8181-19da6d5cbfe0,0.6509310007095337,0.65-0.70,0,gpt-4o-mini
+analyzing data course,analyse curriculum,http://data.europa.eu/esco/skill/d086b37f-8167-4051-b11b-cd4de7b0c152,0.6593536734580994,0.65-0.70,0,gpt-4o-mini
+preferably azure devops,DevOps,http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4,0.6881155371665955,0.65-0.70,1,gpt-4o-mini
+courses dedicated algorithms,algorithms,http://data.europa.eu/esco/skill/54924a2c-daca-40d3-9716-4b38ceb04f38,0.6674759984016418,0.65-0.70,1,gpt-4o-mini
+conservation laws,examine conservation issues,http://data.europa.eu/esco/skill/b55f1863-706b-4587-a756-5100c3c7ce5c,0.668944776058197,0.65-0.70,0,gpt-4o-mini
+analytics lead,marketing analytics,http://data.europa.eu/esco/skill/11c56452-fcec-4b00-9695-cca4728e5048,0.670157790184021,0.65-0.70,0,gpt-4o-mini
+practical applications game,operate games,http://data.europa.eu/esco/skill/c489caef-57b8-4e5c-b417-4e505a9b71c9,0.6512879729270935,0.65-0.70,0,gpt-4o-mini
+deployment cloud native,deploy cloud resource,http://data.europa.eu/esco/skill/6195c5f7-a4fb-425d-a3dd-c4467c4471a3,0.6785567998886108,0.65-0.70,1,gpt-4o-mini
+profiling perform,analyse own performance,http://data.europa.eu/esco/skill/a7e78a0b-aec1-45fb-8f86-d1b4ab1f9c69,0.6674613356590271,0.65-0.70,0,gpt-4o-mini
+mathematical modeling hours,mathematical modelling,http://data.europa.eu/esco/skill/0760bfac-9a03-427a-ad84-ccd33a2f2ae8,0.6632953882217407,0.65-0.70,1,gpt-4o-mini
+innovative software,industrial software,http://data.europa.eu/esco/skill/41ec47dd-08b3-464a-9c45-c706f3e74467,0.6637927293777466,0.65-0.70,0,gpt-4o-mini
+cultural phenomenon,cultural geography,http://data.europa.eu/esco/skill/7d594881-a9b4-4d4c-8a8b-75082c136b78,0.6620182394981384,0.65-0.70,0,gpt-4o-mini
+competition management recovery,develop competition policies,http://data.europa.eu/esco/skill/11e7b341-ecd9-445c-b1fe-ba220b706b21,0.6746438145637512,0.65-0.70,0,gpt-4o-mini
+conduct code,practise veterinary professional codes of conduct,http://data.europa.eu/esco/skill/3e42adbb-8089-49b7-bdfe-b9cd7247b26b,0.6535359621047974,0.65-0.70,0,gpt-4o-mini
+protected,protect game,http://data.europa.eu/esco/skill/b4bd4b00-be51-4631-b202-dcb0e33c0899,0.6690340042114258,0.65-0.70,0,gpt-4o-mini
+probabilistic,probability theory,http://data.europa.eu/esco/skill/b758675a-b03b-4e4b-897c-57ca14b1a3d0,0.6794807314872742,0.65-0.70,1,gpt-4o-mini
+platform presence,construct working platform,http://data.europa.eu/esco/skill/ad6cc4f7-0735-4924-a8fa-271d147e48d2,0.666871964931488,0.65-0.70,0,gpt-4o-mini
+frameworks entity framework,software frameworks,http://data.europa.eu/esco/skill/24c200e5-be20-4370-a137-ab53797f3a17,0.6521519422531128,0.65-0.70,1,gpt-4o-mini
+necessary automated processing,operate automated process control,http://data.europa.eu/esco/skill/0a0532c2-ee60-4410-8e07-70e4d69370ec,0.6709285974502563,0.65-0.70,0,gpt-4o-mini
+expertise high capacity,category specific expertise,http://data.europa.eu/esco/skill/d9a9cb71-a62e-4800-a518-cfb61f8b15cd,0.6714279651641846,0.65-0.70,0,gpt-4o-mini
+broadcasts install custom,prepare broadcasts,http://data.europa.eu/esco/skill/af59d780-71ca-4f3b-b343-3dacd17546b8,0.6971659660339355,0.65-0.70,0,gpt-4o-mini
+theories possibilities,psychological theories,http://data.europa.eu/esco/skill/eda8a126-08bf-4fb1-8442-fa9febabb75f,0.6546168923377991,0.65-0.70,0,gpt-4o-mini
+students characteristics machine,assess students,http://data.europa.eu/esco/skill/6fe019dd-027f-45f3-b19c-d27f7ae00980,0.667646050453186,0.65-0.70,0,gpt-4o-mini
+translate ui ux,translate tags,http://data.europa.eu/esco/skill/5be704bc-e270-448c-93b4-fad465cf05b7,0.661899983882904,0.65-0.70,0,gpt-4o-mini
+analytical reports,report analysis results,http://data.europa.eu/esco/skill/c544a9f3-5945-4b54-afed-de0697852817,0.6797575950622559,0.65-0.70,1,gpt-4o-mini
+data acquisition analysis,perform data analysis,http://data.europa.eu/esco/skill/2b92a5b2-6758-4ee3-9fb4-b6387a55cc8f,0.691994845867157,0.65-0.70,1,gpt-4o-mini
+experts elevate quality,manage quality,http://data.europa.eu/esco/skill/35ebe444-9ece-4fbc-a55d-e99ea37267ae,0.6759613156318665,0.65-0.70,0,gpt-4o-mini
+datasets machine,create data sets,http://data.europa.eu/esco/skill/906323f4-00c4-4c3b-ab5a-8af77be3456e,0.6710671782493591,0.65-0.70,0,gpt-4o-mini
+religion historical manifestations,history of theology,http://data.europa.eu/esco/skill/0e31da4d-591b-46c6-b89f-ff1812c1f67b,0.6661003232002258,0.65-0.70,0,gpt-4o-mini
+recognize logical,logic,http://data.europa.eu/esco/skill/294cf13e-4fdf-4cb8-bb6b-31b9da7f4819,0.6625668406486511,0.65-0.70,1,gpt-4o-mini
+gaming experiences job,apply gaming psychology,http://data.europa.eu/esco/skill/6f2a4a5c-2f6e-49ab-8441-cd600d1f20ae,0.6918417811393738,0.65-0.70,0,gpt-4o-mini
+data marts etl,data warehouse,http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de,0.6882977485656738,0.65-0.70,0,gpt-4o-mini
+maintainable efficient,advise on efficiency improvements,http://data.europa.eu/esco/skill/8bc75dce-beba-40f9-93fc-66c9708ed74b,0.6522254347801208,0.65-0.70,0,gpt-4o-mini
+visual identity brands,define brand identity,http://data.europa.eu/esco/skill/754690ad-6207-4e1c-9df7-9a2b58afa587,0.7008219361305237,0.70-0.75,0,gpt-4o-mini
+visualize data course,data visualisation software,http://data.europa.eu/esco/skill/65e58886-bd1e-4c5b-8ca5-8d9b353c8aa1,0.7054518461227417,0.70-0.75,0,gpt-4o-mini
+testing agile,Agile development,http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221,0.7385225296020508,0.70-0.75,0,gpt-4o-mini
+digital products,digital systems,http://data.europa.eu/esco/skill/397da142-ab35-48fe-b154-7c38f447adfb,0.7348605990409851,0.70-0.75,0,gpt-4o-mini
+linux operating,operating systems,http://data.europa.eu/esco/skill/f9a6f35b-01a7-40c9-8b61-b6ee46f97272,0.7348921298980713,0.70-0.75,1,gpt-4o-mini
+product videos,watch video and motion picture production products,http://data.europa.eu/esco/skill/9a97c406-e9c3-4a22-8d16-74bb2fae96b5,0.7360141277313232,0.70-0.75,0,gpt-4o-mini
+angular 18 typescript,TypeScript,http://data.europa.eu/esco/skill/867137fb-ff1b-4ca3-99f3-cb6969aa2c68,0.7333301901817322,0.70-0.75,0,gpt-4o-mini
+implementation aspects quantum,quantum computing,http://data.europa.eu/esco/skill/e79a3803-dd53-46b0-906b-13e6d46ef687,0.7021307945251465,0.70-0.75,0,gpt-4o-mini
+cloud postgresql,PostgreSQL,http://data.europa.eu/esco/skill/a8d07b5a-c1a1-42c6-9d53-db9c7a2ca996,0.7151076793670654,0.70-0.75,1,gpt-4o-mini
+frameworks solid,software frameworks,http://data.europa.eu/esco/skill/24c200e5-be20-4370-a137-ab53797f3a17,0.7306450009346008,0.70-0.75,0,gpt-4o-mini
+mentoring growing team,provide mentorship,http://data.europa.eu/esco/skill/28722c99-68b7-4b7b-808f-53f343299935,0.7225557565689087,0.70-0.75,1,gpt-4o-mini
+email marketing team,execute email marketing,http://data.europa.eu/esco/skill/36931cb7-ca3f-4be1-8428-f38eefc8e1ed,0.7265079617500305,0.70-0.75,0,gpt-4o-mini
+audit advisory business,prepare audit activities,http://data.europa.eu/esco/skill/095fdace-1cc3-4e80-b37b-268fe297904a,0.7201124429702759,0.70-0.75,0,gpt-4o-mini
+infrastructure automation,building automation,http://data.europa.eu/esco/skill/6709e92c-7546-46a4-aa57-5e951bd4cb0f,0.7146827578544617,0.70-0.75,0,gpt-4o-mini
+license,obtain relevant licenses,http://data.europa.eu/esco/skill/4a112f96-72c1-47f3-aa61-4b34ea415701,0.7239856719970703,0.70-0.75,1,gpt-4o-mini
+analytical applied,analytical chemistry,http://data.europa.eu/esco/skill/1b61166d-0495-4f16-aff0-f564d3a8afb3,0.7456891536712646,0.70-0.75,0,gpt-4o-mini
+platform capabilities establish,construct working platform,http://data.europa.eu/esco/skill/ad6cc4f7-0735-4924-a8fa-271d147e48d2,0.7055875062942505,0.70-0.75,0,gpt-4o-mini
+crypto,cryptocurrency,http://data.europa.eu/esco/skill/2174c1b0-e13c-4850-8e4d-2bc6183018bf,0.7479398846626282,0.70-0.75,1,gpt-4o-mini
+integrated circuit modeling,design integrated circuits,http://data.europa.eu/esco/skill/6d12ac9b-5ec0-49b9-bd70-5a19352585cb,0.7341036796569824,0.70-0.75,0,gpt-4o-mini
+cam,CAM software,http://data.europa.eu/esco/skill/27065048-bca8-4b0a-891a-b192b9ceadfd,0.7336222529411316,0.70-0.75,0,gpt-4o-mini
+expert areas expert,training  subject expertise,http://data.europa.eu/esco/skill/4f6e68b2-85c8-446e-a96d-b306ec7e0091,0.705538272857666,0.70-0.75,0,gpt-4o-mini
+computing cloud computing,cloud technologies,http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0,0.7192507982254028,0.70-0.75,1,gpt-4o-mini
+player motivations,motivate in sports,http://data.europa.eu/esco/skill/ece81686-331c-4381-bf3f-5ea610d47a7f,0.7467114329338074,0.70-0.75,0,gpt-4o-mini
+stages,organise stage,http://data.europa.eu/esco/skill/3ecff5db-ded6-4263-9db5-6601090ba299,0.7251423597335815,0.70-0.75,0,gpt-4o-mini
+compilers operating systems,operating systems,http://data.europa.eu/esco/skill/f9a6f35b-01a7-40c9-8b61-b6ee46f97272,0.7206814289093018,0.70-0.75,0,gpt-4o-mini
+leads engineering,lead technology development of an organisation,http://data.europa.eu/esco/skill/b91535d7-1265-455d-a565-901e2eafa883,0.7092443108558655,0.70-0.75,1,gpt-4o-mini
+operation software perspective,operations management,http://data.europa.eu/esco/skill/2d140a3a-45a6-4248-80dd-b3760ebc9cc6,0.7205758094787598,0.70-0.75,0,gpt-4o-mini
+marketing performance,evaluate marketing content,http://data.europa.eu/esco/skill/3d96dc4c-d812-4015-b1f9-8307c086c595,0.7100273370742798,0.70-0.75,0,gpt-4o-mini
+cloud native architectures,design cloud architecture,http://data.europa.eu/esco/skill/11430d93-c835-48ed-8e70-285fa69c9ae6,0.7420607209205627,0.70-0.75,1,gpt-4o-mini
+improve testing processes,manage system testing,http://data.europa.eu/esco/skill/ce354460-500e-4eaa-8e95-8f243fcea3db,0.702829122543335,0.70-0.75,0,gpt-4o-mini
+serve finance contact,offer financial services,http://data.europa.eu/esco/skill/e3c7bd87-edc1-4d9a-a3d5-36415de1aac6,0.7119287848472595,0.70-0.75,1,gpt-4o-mini
+typescript mobile development,TypeScript,http://data.europa.eu/esco/skill/867137fb-ff1b-4ca3-99f3-cb6969aa2c68,0.7243025302886963,0.70-0.75,0,gpt-4o-mini
+strategic operational,implement strategic management,http://data.europa.eu/esco/skill/953445c0-4770-4be0-91cf-270a64c0e297,0.7495478391647339,0.70-0.75,0,gpt-4o-mini
+sales managers,manage sales teams,http://data.europa.eu/esco/skill/0bfb44c7-c412-49ed-aab4-e33d0dd3b265,0.7023584842681885,0.70-0.75,0,gpt-4o-mini
+ecosystems physical biogeochemical,ecosystems,http://data.europa.eu/esco/skill/ddbf25f1-b91a-4083-9ef1-cc113a46e4c0,0.7165735363960266,0.70-0.75,1,gpt-4o-mini
+metrics,software metrics,http://data.europa.eu/esco/skill/fb7aee4d-f6c6-4a87-8e9d-8e542b3771f8,0.7027984261512756,0.70-0.75,0,gpt-4o-mini
+matter introduce thermodynamic,thermodynamics,http://data.europa.eu/esco/skill/857e8624-4db0-4725-a758-5914bd8cc350,0.7138773798942566,0.70-0.75,1,gpt-4o-mini
+computer interaction hci,human-computer interaction,http://data.europa.eu/esco/skill/9136cbf1-7916-4f1c-bc9a-0318ee1d6016,0.7227012515068054,0.70-0.75,1,gpt-4o-mini
+storage cloud engineer,manage cloud data and storage,http://data.europa.eu/esco/skill/d3286405-49f8-4e8a-8046-a4376b4e7963,0.7050308585166931,0.70-0.75,1,gpt-4o-mini
+forecast,financial forecasting,http://data.europa.eu/esco/skill/4b2db903-cd8e-48ce-97fb-a92db4def54e,0.743380069732666,0.70-0.75,1,gpt-4o-mini
+introduce quantum nature,quantum mechanics,http://data.europa.eu/esco/skill/d460032f-f49e-4b70-90c2-ba563aee14be,0.7241019606590271,0.70-0.75,0,gpt-4o-mini
+product platform,hardware platforms,http://data.europa.eu/esco/skill/117373c8-f04b-4fff-8683-aebe36edac81,0.7194763422012329,0.70-0.75,0,gpt-4o-mini
+threat analysis respond,assessment of risks and threats,http://data.europa.eu/esco/skill/7f27f1ff-2e17-4b69-990e-c23334478313,0.716712236404419,0.70-0.75,1,gpt-4o-mini
+environmental governance,environmental policy,http://data.europa.eu/esco/skill/081d7679-5070-4777-bece-a28c49f15636,0.7628156542778015,0.75-0.80,0,gpt-4o-mini
+data visualization course,data visualisation software,http://data.europa.eu/esco/skill/65e58886-bd1e-4c5b-8ca5-8d9b353c8aa1,0.7853728532791138,0.75-0.80,0,gpt-4o-mini
+accounting reporting,accounting,http://data.europa.eu/esco/skill/ecc18804-a466-40d9-98b4-fba5cd67dd4b,0.7914329767227173,0.75-0.80,1,gpt-4o-mini
+suites using typescript,TypeScript,http://data.europa.eu/esco/skill/867137fb-ff1b-4ca3-99f3-cb6969aa2c68,0.7867721319198608,0.75-0.80,1,gpt-4o-mini
+mathematical models natural,mathematical modelling,http://data.europa.eu/esco/skill/0760bfac-9a03-427a-ad84-ccd33a2f2ae8,0.7622984647750854,0.75-0.80,1,gpt-4o-mini
+experience penetration testing,penetration testing tool,http://data.europa.eu/esco/skill/de586dcf-d7e5-4340-bf5b-d59026f1b436,0.7594481706619263,0.75-0.80,0,gpt-4o-mini
+economic agents forecasting,evolution of economic forecasts,http://data.europa.eu/esco/skill/50a382c6-e848-467d-b156-7a1a3610b522,0.7645803689956665,0.75-0.80,0,gpt-4o-mini
+levels phonetic tonal,phonetics,http://data.europa.eu/esco/skill/dc892a23-091b-486e-85b9-fe2989414796,0.7586581110954285,0.75-0.80,1,gpt-4o-mini
+administrative,manage administrative systems,http://data.europa.eu/esco/skill/77e7cb08-2c6f-42ab-881b-b34b2318acbe,0.7627418041229248,0.75-0.80,0,gpt-4o-mini
+processing pipelines,types of pipelines,http://data.europa.eu/esco/skill/c1d7a6df-92e8-4b2f-9259-e04dd7242be3,0.7822761535644531,0.75-0.80,0,gpt-4o-mini
+machining,milling machines,http://data.europa.eu/esco/skill/7b969ac9-f085-4afb-a480-c5210fb4da7d,0.777755618095398,0.75-0.80,0,gpt-4o-mini
+films,film studies,http://data.europa.eu/esco/skill/ab3c3673-3844-47a3-aa22-63abdd58e6dd,0.7770199179649353,0.75-0.80,0,gpt-4o-mini
+resources metals minerals,evaluate mineral resources,http://data.europa.eu/esco/skill/992c2fe8-13da-4f48-8c83-ce13b4b80468,0.7544082999229431,0.75-0.80,0,gpt-4o-mini
+web security,web application security threats,http://data.europa.eu/esco/skill/902fb91c-3113-4004-9b4f-79aa86b638b7,0.7985354661941528,0.75-0.80,0,gpt-4o-mini
+sales product,sell products,http://data.europa.eu/esco/skill/29a50780-f81b-429c-b410-7f23a492e19d,0.7541831731796265,0.75-0.80,1,gpt-4o-mini
+data engineer,data engineering,http://data.europa.eu/esco/skill/48db96bf-3314-45c6-bad8-fdb6e20e5639,0.7976793050765991,0.75-0.80,1,gpt-4o-mini
+signal processing mathematical,signal processing,http://data.europa.eu/esco/skill/cfa2be0d-96d5-4017-a866-962efb9c5070,0.7685164213180542,0.75-0.80,1,gpt-4o-mini
+incidents access,handle incidents,http://data.europa.eu/esco/skill/4fb7c7aa-9f19-4cc3-9e19-64ce564f22f5,0.7655795812606812,0.75-0.80,0,gpt-4o-mini
+handling million bidding,facilitate the bidding process,http://data.europa.eu/esco/skill/68a596a2-6255-42bd-b3b1-e33a2214bef6,0.750302255153656,0.75-0.80,0,gpt-4o-mini
+law legal,criminal law,http://data.europa.eu/esco/skill/8836a5a5-e2ff-4baf-aae3-bfb78a4cca7f,0.7577128410339355,0.75-0.80,0,gpt-4o-mini
+advocate,advocate a cause,http://data.europa.eu/esco/skill/14d133af-6662-490e-9716-a4cc1e26676a,0.7978702187538147,0.75-0.80,1,gpt-4o-mini
+modeling control systems,control systems,http://data.europa.eu/esco/skill/4ff549c3-daa5-4def-9916-301c7bdf13b8,0.7864148616790771,0.75-0.80,1,gpt-4o-mini
+puppet,create puppets,http://data.europa.eu/esco/skill/8b3a2714-b2f9-4e27-84b9-b4624f0d25c1,0.7759398818016052,0.75-0.80,0,gpt-4o-mini
+tools jenkins,Jenkins (tools for software configuration management),http://data.europa.eu/esco/skill/f47a1998-0beb-43be-9f46-380aa4d183da,0.7597633004188538,0.75-0.80,1,gpt-4o-mini
+examines water various,perform water analysis,http://data.europa.eu/esco/skill/2db2667c-bbaf-4e30-8640-c9a647bd2512,0.7846844792366028,0.75-0.80,0,gpt-4o-mini
+explore data analysis,perform data analysis,http://data.europa.eu/esco/skill/2b92a5b2-6758-4ee3-9fb4-b6387a55cc8f,0.7902441620826721,0.75-0.80,0,gpt-4o-mini
+math physics ee,mathematical physics,http://data.europa.eu/esco/skill/7e5a7bec-0e19-4a35-b27b-1c4a6d9c4de0,0.7839310765266418,0.75-0.80,1,gpt-4o-mini
+libraries,use software libraries,http://data.europa.eu/esco/skill/8b94aa1e-89c9-459d-b3b4-1dfab8dec2df,0.7671976685523987,0.75-0.80,0,gpt-4o-mini
+sustainable,sustainable technologies,http://data.europa.eu/esco/skill/103f7814-d262-4df6-a1b6-759bc51f76cb,0.795917272567749,0.75-0.80,0,gpt-4o-mini
+sleek responsive designs,maintain responsive design,http://data.europa.eu/esco/skill/6ad40ca3-dc34-4442-b23f-0b1b28936f56,0.7678571343421936,0.75-0.80,0,gpt-4o-mini
+enhance debate issues,engage in debates,http://data.europa.eu/esco/skill/bad0f996-a299-4631-a7d8-104185b2ef22,0.7671972513198853,0.75-0.80,0,gpt-4o-mini
+insight clients,customer insight,http://data.europa.eu/esco/skill/05fc6f8d-639c-4329-a6de-dfdd800ed091,0.7808341979980469,0.75-0.80,1,gpt-4o-mini
+training program,develop training programmes,http://data.europa.eu/esco/skill/517f678e-001b-4985-acb4-9edc3500d74c,0.7861525416374207,0.75-0.80,1,gpt-4o-mini
+introducing python,Python (computer programming),http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d,0.7857294082641602,0.75-0.80,1,gpt-4o-mini
+chemical data analysis,analyse chemical substances,http://data.europa.eu/esco/skill/39aa5571-45ce-4ba3-a280-f6870ef0075f,0.7588191032409668,0.75-0.80,0,gpt-4o-mini; corrected by human reviewer
+course data warehousing,implement data warehousing techniques,http://data.europa.eu/esco/skill/fd6d2981-3d4a-4ce2-9741-cfc98c5b74bd,0.7806537747383118,0.75-0.80,1,gpt-4o-mini
+integrated,integrated design,http://data.europa.eu/esco/skill/f03a3387-c4a7-41e3-a5d4-dd4577147940,0.7779502272605896,0.75-0.80,0,gpt-4o-mini
+negotiation,negotiate compromises,http://data.europa.eu/esco/skill/7954861c-86d4-4529-afbb-2c23dab9ac74,0.7721211910247803,0.75-0.80,1,gpt-4o-mini
+designing managing,design management,http://data.europa.eu/esco/skill/33a0a2ea-025e-4107-8717-39ac45b3b78c,0.7643693685531616,0.75-0.80,1,gpt-4o-mini
+analysis economic,economics,http://data.europa.eu/esco/skill/88af9294-b697-4687-ae19-aefbb6234dfa,0.7900213599205017,0.75-0.80,1,gpt-4o-mini
+typescript technologies maintaining,TypeScript,http://data.europa.eu/esco/skill/867137fb-ff1b-4ca3-99f3-cb6969aa2c68,0.7987490296363831,0.75-0.80,1,gpt-4o-mini
+sales,sales activities,http://data.europa.eu/esco/skill/450de541-797a-4da0-9fe4-a81471c8047d,0.7884095907211304,0.75-0.80,1,gpt-4o-mini
+electric magnetic,electromagnetism,http://data.europa.eu/esco/skill/3edd4853-a8d2-4791-a5f0-af3a92f18245,0.7598496079444885,0.75-0.80,1,gpt-4o-mini
+regulations,comply with regulations,http://data.europa.eu/esco/skill/b618584f-6bdf-4d8f-89a7-f28c2c95afc2,0.8388996720314026,0.80-0.85,0,gpt-4o-mini
+ui design,design user interface,http://data.europa.eu/esco/skill/fd33c66c-70c4-40e6-b87c-5495bd3bf26e,0.802329421043396,0.80-0.85,1,gpt-4o-mini
+electric potential discharge,electrical discharge,http://data.europa.eu/esco/skill/56a13f47-ad7c-451f-81cf-e550107abc03,0.8251289129257202,0.80-0.85,1,gpt-4o-mini
+test foods determine,conduct food tests,http://data.europa.eu/esco/skill/7802ce4b-2b70-4bd2-bdb3-6ce1482da6ab,0.8175551891326904,0.80-0.85,1,gpt-4o-mini
+fundamentals economics,economics,http://data.europa.eu/esco/skill/88af9294-b697-4687-ae19-aefbb6234dfa,0.8158329725265503,0.80-0.85,1,gpt-4o-mini
+cloud computing,cloud technologies,http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0,0.8249935507774353,0.80-0.85,1,gpt-4o-mini
+typescript react,TypeScript,http://data.europa.eu/esco/skill/867137fb-ff1b-4ca3-99f3-cb6969aa2c68,0.8376615643501282,0.80-0.85,1,gpt-4o-mini
+provided algorithms finding,algorithms,http://data.europa.eu/esco/skill/54924a2c-daca-40d3-9716-4b38ceb04f38,0.8332147598266602,0.80-0.85,1,gpt-4o-mini
+exhibitions,set up photographic exhibitions,http://data.europa.eu/esco/skill/0c6203eb-f97a-44cd-836d-15baeb590b3f,0.8403351902961731,0.80-0.85,0,gpt-4o-mini
+business intelligence bi,business intelligence,http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c,0.8388831615447998,0.80-0.85,1,gpt-4o-mini
+application nanotechnology science,nanotechnology,http://data.europa.eu/esco/skill/a8da58c7-42fc-4fd6-b25a-b06b74c00179,0.821732759475708,0.80-0.85,1,gpt-4o-mini
+consulting skills bring,use consulting techniques,http://data.europa.eu/esco/skill/414332e4-8347-4771-b947-65bd3801a620,0.8280888795852661,0.80-0.85,1,gpt-4o-mini
+fuel,fuel gas,http://data.europa.eu/esco/skill/7c127140-3a91-4fe2-b33e-12567d78ef0f,0.8443301916122437,0.80-0.85,0,gpt-4o-mini
+programming study web,web programming,http://data.europa.eu/esco/skill/69bbd53f-fbb0-4476-b4b2-ef7844464e28,0.8058624863624573,0.80-0.85,1,gpt-4o-mini
+design patterns used,use software design patterns,http://data.europa.eu/esco/skill/2b7a79e5-84d8-4880-be66-3d9bb05bea17,0.8214819431304932,0.80-0.85,1,gpt-4o-mini
+build mentor,mentor individuals,http://data.europa.eu/esco/skill/a584a638-a2c0-4b3c-bdf3-a64f87225be9,0.8165149688720703,0.80-0.85,1,gpt-4o-mini
+campaigns google ads,online ads campaign techniques,http://data.europa.eu/esco/skill/750f86d2-18be-4015-84b1-d4a26d9b2d88,0.8014954924583435,0.80-0.85,1,gpt-4o-mini
+efficient algorithms,algorithms,http://data.europa.eu/esco/skill/54924a2c-daca-40d3-9716-4b38ceb04f38,0.8359416127204895,0.80-0.85,1,gpt-4o-mini
+tracking,tracking principles,http://data.europa.eu/esco/skill/bc9f3c50-ff9f-42b5-a2e9-c388779c707b,0.8201113343238831,0.80-0.85,0,gpt-4o-mini
+computer science technical,computer science,http://data.europa.eu/esco/skill/7b5cce4d-c7fe-4119-b48f-70aa05391787,0.8458500504493713,0.80-0.85,1,gpt-4o-mini
+technical troubleshooting,troubleshoot,http://data.europa.eu/esco/skill/334e3e49-fb02-4051-809a-f06adfdc1c40,0.8279486894607544,0.80-0.85,1,gpt-4o-mini
+work flexible shifts,work in shifts,http://data.europa.eu/esco/skill/6f2721bf-40ad-4f5d-8774-a478d1d6f5a6,0.8450751304626465,0.80-0.85,1,gpt-4o-mini
+marketing content,evaluate marketing content,http://data.europa.eu/esco/skill/3d96dc4c-d812-4015-b1f9-8307c086c595,0.8057525157928467,0.80-0.85,0,gpt-4o-mini
+multidisciplinary perspective understand,multidisciplinary research,http://data.europa.eu/esco/skill/9fc400ac-8ed2-4aff-915f-aa4f2609ec7b,0.8003747463226318,0.80-0.85,0,gpt-4o-mini
+pipelines testing frameworks,test pipeline infrastructure operations,http://data.europa.eu/esco/skill/6a0aab53-6246-41e8-a910-e7a13f314860,0.8302692770957947,0.80-0.85,1,gpt-4o-mini
+programming language,computer programming,http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97,0.8138244152069092,0.80-0.85,1,gpt-4o-mini
+usability interaction,usability engineering,http://data.europa.eu/esco/skill/95ee5e38-5c1e-4cd2-a21d-6921390025a9,0.8119096755981445,0.80-0.85,1,gpt-4o-mini
+practices business intelligence,business intelligence,http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c,0.8113028407096863,0.80-0.85,1,gpt-4o-mini
+phd computer science,computer science,http://data.europa.eu/esco/skill/7b5cce4d-c7fe-4119-b48f-70aa05391787,0.8252957463264465,0.80-0.85,1,gpt-4o-mini
+ux product design,develop product design,http://data.europa.eu/esco/skill/fd4386c5-96f0-4c6e-970c-c08729ae0cc6,0.813511848449707,0.80-0.85,1,gpt-4o-mini
+lighting,lighting techniques,http://data.europa.eu/esco/skill/c39b8441-359e-4cf9-8a52-c5f6dd918813,0.814582109451294,0.80-0.85,0,gpt-4o-mini
+data science data,data science,http://data.europa.eu/esco/skill/edebd83d-35f6-4ed5-a940-6c203d178c01,0.8429720401763916,0.80-0.85,1,gpt-4o-mini
+brand guidelines monitor,create brand guidelines,http://data.europa.eu/esco/skill/b191a064-0c14-424e-8582-8c9f8c9f305a,0.8012309074401855,0.80-0.85,0,gpt-4o-mini
+land use,advise on use of land,http://data.europa.eu/esco/skill/8b46636e-e201-4086-a8d5-049b65eaf40e,0.8326404690742493,0.80-0.85,0,gpt-4o-mini
+algorithms according data,algorithms,http://data.europa.eu/esco/skill/54924a2c-daca-40d3-9716-4b38ceb04f38,0.8026940226554871,0.80-0.85,1,gpt-4o-mini
+abap,ABAP,http://data.europa.eu/esco/skill/eb0e5615-1575-4a86-a1a2-7d39595033c5,0.9999998807907104,>0.85,1,gpt-4o-mini
+extensive customer segmentation,customer segmentation,http://data.europa.eu/esco/skill/136e0cab-0b19-48f7-9086-745d615f416b,0.9321415424346924,>0.85,1,gpt-4o-mini
+machine learning,machine learning,http://data.europa.eu/esco/skill/3a2d5b45-56e4-4f5a-a55a-4a4a65afdc43,0.9999998807907104,>0.85,1,gpt-4o-mini
+social media manager,social media management,http://data.europa.eu/esco/skill/5303169c-75d6-4751-9136-a4b88343388c,0.8730058073997498,>0.85,1,gpt-4o-mini
+role educating mentoring,provide mentorship,http://data.europa.eu/esco/skill/28722c99-68b7-4b7b-808f-53f343299935,0.8588425517082214,>0.85,1,gpt-4o-mini
+microelectronics present,microelectronics,http://data.europa.eu/esco/skill/4b164a27-849f-4be2-ae79-d26a4969b677,0.9522234797477722,>0.85,1,gpt-4o-mini
+implement disaster recovery,manage disaster recovery plans,http://data.europa.eu/esco/skill/64852ade-6ae1-4760-ba4a-976bf07ca255,0.8567953705787659,>0.85,1,gpt-4o-mini
+fundamentals metrology,metrology,http://data.europa.eu/esco/skill/a181e89d-44ae-40e7-8d37-177071237c74,0.8883365392684937,>0.85,1,gpt-4o-mini
+video pipelines,use pipeline video equipment,http://data.europa.eu/esco/skill/417eb6b1-9e5b-4b3a-bfd0-85132c9f648d,0.870837390422821,>0.85,1,gpt-4o-mini
+study political science,political science,http://data.europa.eu/esco/skill/309bc48b-2899-4396-9242-efc26c0e1aee,0.8778601288795471,>0.85,1,gpt-4o-mini
+telecommunications,telecommunications engineering,http://data.europa.eu/esco/skill/14764a75-3104-4875-ba1d-57c059b9b013,0.8891515731811523,>0.85,0,gpt-4o-mini
+financial reports,create a financial report,http://data.europa.eu/esco/skill/dd7c9dfd-6e2c-46fd-aefc-369402d0200c,0.8818088173866272,>0.85,1,gpt-4o-mini
+ukrainian,Ukrainian,http://data.europa.eu/esco/skill/354b948c-7eef-4ebc-bfd6-f60d7d5acb62,1.0,>0.85,1,gpt-4o-mini
+glass products,glassware products,http://data.europa.eu/esco/skill/f8aa753b-25d3-403f-9634-17c603ab1de0,0.8592553734779358,>0.85,1,gpt-4o-mini
+management agile,Agile project management,http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4,0.8782931566238403,>0.85,1,gpt-4o-mini
+suppliers,identify suppliers,http://data.europa.eu/esco/skill/11747665-0e98-4f27-bd0d-536862cd5746,0.8967929482460022,>0.85,0,gpt-4o-mini
+functional programming,use functional programming,http://data.europa.eu/esco/skill/d31fab87-2a7d-485c-b699-2901ca294b15,0.9304234981536864,>0.85,1,gpt-4o-mini
+alternative energy,alternative energy,http://data.europa.eu/esco/skill/8f585def-6ade-41b3-b897-3d71fba4151d,1.0000003576278689,>0.85,1,gpt-4o-mini
+quantitative research,conduct quantitative research,http://data.europa.eu/esco/skill/8316979b-df5a-4dc7-98ef-61ec6a10df84,0.867303729057312,>0.85,1,gpt-4o-mini
+cryptocurrency,cryptocurrency,http://data.europa.eu/esco/skill/2174c1b0-e13c-4850-8e4d-2bc6183018bf,1.0000003576278689,>0.85,1,gpt-4o-mini
+biology,biology,http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989,1.0000001192092896,>0.85,1,gpt-4o-mini
+merchandising,merchandising techniques,http://data.europa.eu/esco/skill/51317990-9672-4635-bd76-7882718af136,0.8928186893463135,>0.85,1,gpt-4o-mini
+ethics associated,ethics,http://data.europa.eu/esco/skill/cef5c0f8-1e40-4c09-b6a7-aa7811849e5d,0.8691679239273071,>0.85,1,gpt-4o-mini
+compliance regulations,comply with regulations,http://data.europa.eu/esco/skill/b618584f-6bdf-4d8f-89a7-f28c2c95afc2,0.8502814769744873,>0.85,1,gpt-4o-mini
+logic programming aim,use logic programming,http://data.europa.eu/esco/skill/2c4e11ef-da18-4e19-816b-e6bc19e12424,0.8918248414993286,>0.85,1,gpt-4o-mini
+perl,Perl,http://data.europa.eu/esco/skill/401eb8d8-6daa-4f8b-90ad-60afc71eb4f8,1.000000238418579,>0.85,1,gpt-4o-mini
+kinetics,kinetics,http://data.europa.eu/esco/skill/56a46b02-ab98-4603-8816-c9daff1a119a,1.0,>0.85,1,gpt-4o-mini
+physics mathematics,mathematical physics,http://data.europa.eu/esco/skill/7e5a7bec-0e19-4a35-b27b-1c4a6d9c4de0,0.9384161829948424,>0.85,1,gpt-4o-mini
+mortgage,mortgage loans,http://data.europa.eu/esco/skill/a727b46f-880a-4acb-9138-b7531b9d4121,0.8566583395004272,>0.85,1,gpt-4o-mini
+design methodologies,software design methodologies,http://data.europa.eu/esco/skill/8ff015a0-98ea-4d80-a23e-1f68110a919e,0.8733559846878052,>0.85,1,gpt-4o-mini
+python python,Python (computer programming),http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d,0.8804459571838379,>0.85,1,gpt-4o-mini
+experienced linq,LINQ,http://data.europa.eu/esco/skill/c7d24594-0c11-4b27-9039-fe0bb903da8e,0.9045137763023376,>0.85,1,gpt-4o-mini
+signal processing clarify,signal processing,http://data.europa.eu/esco/skill/cfa2be0d-96d5-4017-a866-962efb9c5070,0.8708273768424988,>0.85,1,gpt-4o-mini
+data visualization introduce,data visualisation software,http://data.europa.eu/esco/skill/65e58886-bd1e-4c5b-8ca5-8d9b353c8aa1,0.8731948733329773,>0.85,0,gpt-4o-mini
+devops engineer,DevOps,http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4,0.8584744930267334,>0.85,1,gpt-4o-mini
+philosophy,philosophy,http://data.europa.eu/esco/skill/967b60c2-4657-4ffc-bcaf-aab565793f97,0.9999998807907104,>0.85,1,gpt-4o-mini
+information protection,data protection,http://data.europa.eu/esco/skill/a4346013-a967-4a58-a533-6b32ad1364c5,0.8622015118598938,>0.85,1,gpt-4o-mini
+ensure data protection,data protection,http://data.europa.eu/esco/skill/a4346013-a967-4a58-a533-6b32ad1364c5,0.8982251286506653,>0.85,1,gpt-4o-mini
+audit,audit techniques,http://data.europa.eu/esco/skill/6a536b36-c5c7-4d10-bf67-a4fb0f8549b2,0.8615541458129883,>0.85,1,gpt-4o-mini
+chinese,Chinese,http://data.europa.eu/esco/skill/1fe42b38-cd42-4fc7-ae77-14e4c9e96295,1.0000001192092896,>0.85,1,gpt-4o-mini
+instructional design,instructional design models,http://data.europa.eu/esco/skill/e3145bd7-7f35-44ec-a5dc-4417c5c9ab9a,0.8689923286437988,>0.85,1,gpt-4o-mini
+energy,energy,http://data.europa.eu/esco/skill/1e38f5be-bb7d-42c5-8301-c16cf400f8ee,1.0,>0.85,1,gpt-4o-mini
+internal audit fun,internal auditing,http://data.europa.eu/esco/skill/8804d963-5a31-4609-b5df-f741b7199fb7,0.8501027822494507,>0.85,0,gpt-4o-mini

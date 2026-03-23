@@ -1,0 +1,49 @@
+=== YSU ENRICHMENT LOG ===
+
+Loaded 1161 rows from final_curriculum_dataset.csv
+YSU rows: 691
+Unique YSU program URLs: 14
+
+Fetching: https://www.ysu.am/en/faculty/78/educational-program-349/edu-plan
+  Parsed 26 course panels from https://www.ysu.am/en/faculty/78/educational-program-349/edu-plan
+Fetching: https://www.ysu.am/en/faculty/85/educational-program-305/edu-plan
+  Parsed 93 course panels from https://www.ysu.am/en/faculty/85/educational-program-305/edu-plan
+Fetching: https://www.ysu.am/en/faculty/85/educational-program-306/edu-plan
+  Parsed 36 course panels from https://www.ysu.am/en/faculty/85/educational-program-306/edu-plan
+Fetching: https://www.ysu.am/en/faculty/85/educational-program-307/edu-plan
+  Parsed 36 course panels from https://www.ysu.am/en/faculty/85/educational-program-307/edu-plan
+Fetching: https://www.ysu.am/en/faculty/85/educational-program-308/edu-plan
+  Parsed 36 course panels from https://www.ysu.am/en/faculty/85/educational-program-308/edu-plan
+Fetching: https://www.ysu.am/en/faculty/85/educational-program-309/edu-plan
+  Parsed 97 course panels from https://www.ysu.am/en/faculty/85/educational-program-309/edu-plan
+Fetching: https://www.ysu.am/en/faculty/85/educational-program-304/edu-plan
+  Parsed 92 course panels from https://www.ysu.am/en/faculty/85/educational-program-304/edu-plan
+Fetching: https://www.ysu.am/en/faculty/516/educational-program-299/edu-plan
+  Parsed 94 course panels from https://www.ysu.am/en/faculty/516/educational-program-299/edu-plan
+Fetching: https://www.ysu.am/en/faculty/516/educational-program-303/edu-plan
+  Parsed 36 course panels from https://www.ysu.am/en/faculty/516/educational-program-303/edu-plan
+Fetching: https://www.ysu.am/en/faculty/516/educational-program-957/edu-plan
+  Parsed 15 course panels from https://www.ysu.am/en/faculty/516/educational-program-957/edu-plan
+Fetching: https://www.ysu.am/en/faculty/520/educational-program-689/edu-plan
+  Parsed 37 course panels from https://www.ysu.am/en/faculty/520/educational-program-689/edu-plan
+Fetching: https://www.ysu.am/en/faculty/520/educational-program-500/edu-plan
+  Parsed 36 course panels from https://www.ysu.am/en/faculty/520/educational-program-500/edu-plan
+Fetching: https://www.ysu.am/en/faculty/525/educational-program-313/edu-plan
+  Parsed 97 course panels from https://www.ysu.am/en/faculty/525/educational-program-313/edu-plan
+Fetching: https://www.ysu.am/en/faculty/525/educational-program-858/edu-plan
+  Parsed 111 course panels from https://www.ysu.am/en/faculty/525/educational-program-858/edu-plan
+
+Total course detail records fetched: 701
+
+YSU rows matched to page data:  691
+YSU rows with no page match:    0
+  semester filled:    0
+  description filled: 0
+  assessment filled:  9
+
+Written: /Users/lianaaghamalyan/thesis_data/data/processed/university/final_curriculum_dataset.csv
+
+--- YSU FIELD COVERAGE AFTER ENRICHMENT ---
+  semester       :  691 / 691 (100.0%)
+  description    :  691 / 691 (100.0%)
+  assessment     :  691 / 691 (100.0%)

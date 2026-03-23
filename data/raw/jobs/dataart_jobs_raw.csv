@@ -1,0 +1,225 @@
+source,source_url,job_title,company_name,location,employment_type,seniority_level,industries,posting_date,deadline,skills_tags,full_text
+dataart,https://www.dataart.team/vacancies/net00181,.NET Engineer,DataArt,"Yerevan, Armenia",Full Time,Mid,Information Technology,2026-03-09,,,".NET Engineer — DataArt Yerevan
+
+DataArt is a global software engineering firm that takes a human-first approach to solving business challenges. We help clients in Finance, Healthcare, Travel, Media, and other industries design and build software, transforming their businesses.
+
+About the Role
+
+We are looking for a skilled .NET Engineer to join our Yerevan team working on enterprise-grade software products for international clients. You will participate in the full software development lifecycle, from design and implementation to testing and deployment.
+
+Responsibilities
+
+- Design, develop, and maintain scalable .NET applications
+- Write clean, testable, and well-documented code following best practices
+- Participate in code reviews and provide constructive feedback
+- Collaborate with cross-functional teams including product managers, designers, and QA engineers
+- Investigate and resolve technical issues and bugs
+- Contribute to architectural decisions and technical discussions
+- Integrate with RESTful APIs and third-party services
+
+Requirements
+
+- 2+ years of commercial experience with C# and .NET (Core / .NET 5+)
+- Solid understanding of OOP, SOLID principles, and design patterns
+- Experience with ASP.NET Core (Web API or MVC)
+- Proficiency with relational databases (SQL Server, PostgreSQL) and ORM frameworks (Entity Framework)
+- Familiarity with version control systems (Git)
+- Experience with unit testing (xUnit, NUnit, or MSTest)
+- Good command of English (written and spoken)
+
+Nice to Have
+
+- Experience with Azure or AWS cloud services
+- Knowledge of microservices architecture and Docker/Kubernetes
+- Familiarity with message brokers (RabbitMQ, Kafka)
+- Experience with React or Angular for full-stack tasks
+- Knowledge of CI/CD pipelines (GitHub Actions, Azure DevOps)
+
+What We Offer
+
+- Competitive compensation in USD
+- Flexible working hours and remote/hybrid options
+- Professional development budget for certifications and courses
+- Health insurance
+- Friendly, professional international team
+- Opportunity to work on projects for global clients"
+dataart,https://www.dataart.team/vacancies/de00171,Senior Python Data Engineer (Azure),DataArt,"Yerevan, Armenia",Full Time,Senior,Information Technology,2026-03-05,,,"Senior Python Data Engineer (Azure) — DataArt Yerevan
+
+DataArt is seeking an experienced Senior Python Data Engineer with Azure expertise to join our growing data engineering practice in Yerevan. You will work on large-scale data pipelines and analytics platforms for enterprise clients across multiple industries.
+
+About the Role
+
+As a Senior Data Engineer, you will design and implement robust data pipelines, ETL processes, and data infrastructure on the Microsoft Azure cloud platform. You will collaborate closely with data scientists, business analysts, and software engineers to deliver high-quality data solutions.
+
+Responsibilities
+
+- Design, build, and maintain scalable data pipelines and ETL/ELT workflows using Python and Azure services
+- Architect and implement data lake and data warehouse solutions on Azure (Azure Data Factory, Azure Databricks, Azure Synapse Analytics)
+- Optimize data models and queries for performance and scalability
+- Implement data quality checks, monitoring, and alerting
+- Collaborate with data scientists to operationalize ML models and analytical workflows
+- Mentor junior data engineers and conduct code reviews
+- Document technical architecture and data lineage
+- Work with stakeholders to understand data requirements and translate them into technical solutions
+
+Requirements
+
+- 5+ years of experience in data engineering roles
+- Strong proficiency in Python (pandas, PySpark, SQLAlchemy)
+- Hands-on experience with Azure data services: Azure Data Factory, Azure Databricks, Azure Data Lake Storage Gen2
+- Solid SQL skills and experience with cloud data warehouses (Azure Synapse, Snowflake, or similar)
+- Experience with Apache Spark for large-scale data processing
+- Familiarity with orchestration tools (Apache Airflow, Azure Data Factory pipelines)
+- Understanding of data modeling concepts (dimensional modeling, data vault)
+- Experience with Git and CI/CD practices
+- Upper-intermediate or higher English proficiency
+
+Nice to Have
+
+- Experience with streaming data processing (Azure Event Hubs, Apache Kafka)
+- Knowledge of dbt (data build tool)
+- Familiarity with ML platforms and MLOps practices
+- Azure certifications (DP-203, AZ-900)
+- Experience with Power BI or other BI tools
+
+What We Offer
+
+- Competitive USD compensation package
+- Remote/hybrid work flexibility
+- Learning budget for certifications and conferences
+- International project exposure
+- Health and wellness benefits"
+dataart,https://www.dataart.team/vacancies/bsi00047,Senior Power BI Engineer,DataArt,"Yerevan, Armenia",Full Time,Senior,Information Technology,2026-03-10,,,"Senior Power BI Engineer — DataArt Yerevan
+
+DataArt is looking for a Senior Power BI Engineer to join our Business Intelligence practice in Yerevan. You will work with international clients to design and build comprehensive analytics and reporting solutions using the Microsoft Power Platform.
+
+About the Role
+
+You will lead the design and development of Power BI dashboards, reports, and data models that deliver actionable business insights. This role requires both strong technical skills in Power BI and data modeling, as well as the ability to communicate complex analytics to non-technical stakeholders.
+
+Responsibilities
+
+- Design and develop Power BI dashboards, reports, and datasets for enterprise clients
+- Build and optimize DAX measures, calculated columns, and data models
+- Create and maintain Power BI dataflows and datasets connected to multiple data sources
+- Implement row-level security (RLS) and other access control mechanisms
+- Work with data engineering teams to design appropriate data models for BI consumption
+- Translate business requirements into technical specifications and BI solutions
+- Optimize report performance and query efficiency
+- Train and support client teams on Power BI best practices
+- Document solutions and create user guides
+
+Requirements
+
+- 4+ years of experience with Power BI development
+- Advanced DAX knowledge (time intelligence, complex calculations, performance optimization)
+- Experience with Power Query (M language) for data transformation
+- Understanding of data modeling (star schema, snowflake schema)
+- Experience connecting Power BI to various data sources (SQL databases, Azure Synapse, APIs)
+- Knowledge of Power BI Service administration (workspaces, dataflows, datasets)
+- Strong SQL skills
+- Good English communication skills (client-facing role)
+
+Nice to Have
+
+- Experience with Azure Analysis Services or SQL Server Analysis Services (SSAS)
+- Familiarity with other BI tools (Tableau, Looker)
+- Knowledge of Python or R for data analysis
+- Microsoft certifications (PL-300 Power BI Data Analyst)
+- Experience with Paginated Reports (SSRS)
+
+What We Offer
+
+- Competitive USD salary
+- International client exposure across Finance, Retail, Healthcare
+- Professional development budget
+- Flexible work arrangements
+- Health insurance and wellness perks"
+dataart,https://www.dataart.team/vacancies/bsa00128,Senior Business Analyst with NetSuite Experience,DataArt,"Yerevan, Armenia",Full Time,Senior,Information Technology,2026-03-12,,,"Senior Business Analyst with NetSuite Experience — DataArt Yerevan
+
+DataArt is seeking an experienced Senior Business Analyst with NetSuite expertise to join our enterprise solutions team in Yerevan. You will work as a key liaison between business stakeholders and technical development teams on ERP implementation and customization projects.
+
+About the Role
+
+You will gather and analyze business requirements, design functional solutions, and guide NetSuite implementation and customization projects for clients in various industries. This is a client-facing role requiring both deep NetSuite knowledge and strong business analysis skills.
+
+Responsibilities
+
+- Elicit, analyze, and document business requirements through workshops, interviews, and stakeholder meetings
+- Design and document functional specifications for NetSuite configurations, customizations, and integrations
+- Configure NetSuite modules (Financials, CRM, Inventory, Supply Chain, WMS) according to client requirements
+- Write SuiteScript (JavaScript-based) scripts or work closely with developers on custom solutions
+- Manage the full implementation lifecycle: discovery, design, build, testing, training, go-live
+- Create test plans, conduct UAT, and support end-user training
+- Manage change requests and project scope
+- Produce functional documentation including BRDs, FRDs, process flows, and training materials
+
+Requirements
+
+- 4+ years of experience as a Business Analyst with at least 2 years specifically with NetSuite
+- Hands-on experience with NetSuite ERP implementation or customization projects
+- Strong knowledge of NetSuite modules: General Ledger, AP/AR, Inventory, Order Management
+- Ability to write basic SuiteScript or understand developer-level customizations
+- Experience facilitating requirements workshops and producing formal documentation
+- Strong analytical thinking and problem-solving skills
+- Client-facing experience and excellent communication skills in English
+
+Nice to Have
+
+- NetSuite certifications (NetSuite ERP Consultant, SuiteFoundation)
+- Experience with NetSuite SuiteFlow, SuiteTalk (web services/REST), SuiteAnalytics
+- Knowledge of integration platforms (Celigo, Boomi, MuleSoft)
+- Experience in Finance, Retail, or Manufacturing industries
+
+What We Offer
+
+- Competitive USD compensation
+- International client projects
+- Professional growth and certification support
+- Flexible remote/hybrid work
+- Health insurance"
+dataart,https://www.dataart.team/vacancies/ml00100,AI & ML Engineer,DataArt,"Yerevan, Armenia",Full Time,Mid,Information Technology,2026-03-08,,,"AI & ML Engineer — DataArt Yerevan
+
+DataArt is looking for an AI & ML Engineer to join our growing Artificial Intelligence practice in Yerevan. You will design and build machine learning models and AI-powered solutions for international enterprise clients across multiple industries.
+
+About the Role
+
+As an AI & ML Engineer at DataArt, you will work on end-to-end machine learning projects — from problem framing and data analysis to model development, evaluation, and deployment. You will collaborate with data engineers, software developers, and business stakeholders to deliver impactful AI solutions.
+
+Responsibilities
+
+- Design, develop, and evaluate machine learning models for classification, regression, NLP, computer vision, and recommendation tasks
+- Build and maintain ML pipelines from data preprocessing through model training, evaluation, and serving
+- Deploy ML models to production environments (REST APIs, batch pipelines, cloud ML platforms)
+- Work with LLMs and generative AI technologies (prompt engineering, fine-tuning, RAG architectures)
+- Collaborate with data engineers on feature engineering and data pipeline design
+- Conduct experiments, track model performance, and iterate on improvements
+- Stay current with ML research and evaluate new techniques for client applications
+- Document models, experiments, and architecture decisions
+
+Requirements
+
+- 2+ years of hands-on experience building and deploying machine learning models
+- Strong proficiency in Python for data science and ML (NumPy, pandas, scikit-learn)
+- Experience with deep learning frameworks (PyTorch or TensorFlow/Keras)
+- Familiarity with NLP techniques and libraries (transformers, spaCy, NLTK)
+- Experience with MLflow, Weights & Biases, or similar experiment tracking tools
+- Knowledge of model deployment patterns (REST APIs with FastAPI/Flask, Docker)
+- Solid understanding of statistics and ML fundamentals
+- Good English communication skills
+
+Nice to Have
+
+- Experience with LLMs and generative AI (OpenAI API, LangChain, LlamaIndex, RAG)
+- Knowledge of cloud ML platforms (AWS SageMaker, Azure ML, Google Vertex AI)
+- Experience with vector databases (Pinecone, Weaviate, Qdrant)
+- Familiarity with Spark or distributed computing for large-scale ML
+- Knowledge of MLOps practices and tools (Kubeflow, Seldon, BentoML)
+
+What We Offer
+
+- Competitive USD compensation
+- Work on cutting-edge AI projects for global clients
+- Access to top learning platforms and conference budget
+- Flexible remote/hybrid work
+- Health insurance and wellness support"

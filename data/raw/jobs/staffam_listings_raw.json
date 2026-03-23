@@ -1,0 +1,4179 @@
+[
+  {
+    "page": 1,
+    "url": "https://staff.am/en/jobs?category=1&page=1",
+    "data": {
+      "props": {
+        "pageProps": {
+          "headers": {
+            "apptype": "next",
+            "version": "0.001",
+            "userAgent": "ThesisResearch/1.0 (Armenian IT curriculum alignment study; academic use only)",
+            "guestauth": "guest-user-665a7d0dfc4a0a50",
+            "x-forwarded-for": "45.159.74.194"
+          },
+          "isMobile": false,
+          "NEXT_PUBLIC_API_URL": "https://api.staff.am",
+          "NEXT_PUBLIC_MAIN_PAGE_URL": "https://staff.am",
+          "NEXT_PUBLIC_IMAGES_PATH_URL": "https://cdn.staff.am/",
+          "jobs": [
+            {
+              "activated_at": {
+                "staffam": "2026-03-20 17:07:01"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154558,
+              "title": {
+                "ru": "Ավագ ծրագրավորող",
+                "am_en": "Frontend tsragravorogh",
+                "en": "Front end developer",
+                "am": "Frontend ծրագրավորող"
+              },
+              "deadline": "2026-04-19",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/a/9/8/3/a983cf48.png",
+                "id": 329,
+                "title": {
+                  "ru": "ЗАО \"АКРА Кредит Репортинг\"",
+                  "en": "ACRA CREDIT REPORTING CJSC",
+                  "am": "«ԱՔՌԱ Քրեդիտ Ռեփորթինգ» ՓԲԸ "
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "ampquotacra-credit-reportingampquot-cjsc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "avag-tsragravorogh-17",
+                "en": "front-end-developer-965",
+                "am": "frontend-tsragravorogh-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": true,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-19 14:21:59"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154473,
+              "title": {
+                "ru": "Senior and Mid ASP.NET Web Developer",
+                "am_en": "Senior and Mid ASP.NET Web Developer",
+                "en": "Senior and Mid ASP.NET Web Developer",
+                "am": "Senior and Mid ASP.NET Web Developer"
+              },
+              "deadline": "2026-04-18",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/4/a/0/f/4a0fd265.png",
+                "id": 7231,
+                "title": {
+                  "ru": "EarnHCM LLC",
+                  "en": "EarnHCM LLC",
+                  "am": "EarnHCM LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "earnhcm-llc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-and-mid-aspnet-web-developer-11",
+                "en": "senior-and-mid-aspnet-web-developer-10",
+                "am": "senior-and-mid-aspnet-web-developer-12"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-19 12:33:32"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154464,
+              "title": {
+                "ru": "",
+                "am_en": "",
+                "en": ".Net Developer",
+                "am": ""
+              },
+              "deadline": "2026-04-18",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/c/3/2/5/c325db85.jpg",
+                "id": 269,
+                "title": {
+                  "ru": "Acba Bank OJSC ",
+                  "en": "Acba Bank OJSC ",
+                  "am": "Acba Bank OJSC "
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "acba-bank-ojsc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "",
+                "en": "net-developer-569",
+                "am": ""
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "repat": "2026-03-19 11:26:15",
+                "staffam": "2026-03-19 11:26:15"
+              },
+              "is_repat": 2,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154459,
+              "title": {
+                "ru": "Generative AI Engineer",
+                "am_en": "Generative AI Engineer",
+                "en": "Generative AI Engineer",
+                "am": "Generative AI Engineer"
+              },
+              "deadline": "2026-04-17",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/2/8/8/9/28891283.png",
+                "id": 7045,
+                "title": {
+                  "ru": "BostonGene Technologies",
+                  "en": "BostonGene Technologies",
+                  "am": "BostonGene Technologies"
+                },
+                "is_unlimited": 1,
+                "is_verified": true,
+                "slug": "bostongene-technologies",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "generative-ai-engineer-20",
+                "en": "generative-ai-engineer-19",
+                "am": "generative-ai-engineer-21"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": true,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-18 17:59:52"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154437,
+              "title": {
+                "ru": "Разработчик React Native",
+                "am_en": "React Native tsragravorogh",
+                "en": "React Native Developer ",
+                "am": "React Native ծրագրավորող"
+              },
+              "deadline": "2026-04-17",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/e/7/b/c/e7bced6c.jpg",
+                "id": 766,
+                "title": {
+                  "ru": "Family Network",
+                  "en": "Fnet Telecom",
+                  "am": "Fnet"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "family-network",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "razrabotchik-react-native",
+                "en": "react-native-developer-316",
+                "am": "react-native-tsragravorogh-5"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-18 17:43:12"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154436,
+              "title": {
+                "ru": "Junior, Middle Front-end, and Back-end Developers ",
+                "am_en": "Junior, Middle Front-end, and Back-end Developers ",
+                "en": "Junior, Middle Front-end, and Back-end Developers ",
+                "am": "Junior, Middle Front-end, and Back-end Developers "
+              },
+              "deadline": "2026-04-17",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/8/1/f/4/81f4f9e6.png",
+                "id": 1610,
+                "title": {
+                  "ru": "Arnology LLC",
+                  "en": "Arnology LLC",
+                  "am": "Arnology LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "arnology-llc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "junior-middle-front-end-and-back-end-developers-29",
+                "en": "junior-middle-front-end-and-back-end-developers-28",
+                "am": "junior-middle-front-end-and-back-end-developers-30"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 4,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-18 16:34:35"
+              },
+              "is_repat": 0,
+              "is_hot": true,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154424,
+              "title": {
+                "ru": "Lead iGaming Product Manager",
+                "am_en": "Lead iGaming Product Manager",
+                "en": "Lead iGaming Product Manager",
+                "am": "Lead iGaming Product Manager"
+              },
+              "deadline": "2026-04-17",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/0/8/9/2/0892b3f3.jpg",
+                "id": 10973,
+                "title": {
+                  "ru": "Luminex Technology ",
+                  "en": "Luminex Technology ",
+                  "am": "Luminex Technology "
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "luminex-technology",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "lead-igaming-product-manager-3",
+                "en": "lead-igaming-product-manager",
+                "am": "lead-igaming-product-manager-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-18 16:27:00"
+              },
+              "is_repat": 0,
+              "is_hot": true,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154423,
+              "title": {
+                "ru": "Full-Stack Tech Lead (iGaming)",
+                "am_en": "Full-Stack Tech Lead (iGaming)",
+                "en": "Full-Stack Tech Lead (iGaming)",
+                "am": "Full-Stack Tech Lead (iGaming)"
+              },
+              "deadline": "2026-04-17",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/0/8/9/2/0892b3f3.jpg",
+                "id": 10973,
+                "title": {
+                  "ru": "Luminex Technology ",
+                  "en": "Luminex Technology ",
+                  "am": "Luminex Technology "
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "luminex-technology",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "full-stack-tech-lead-igaming-12",
+                "en": "full-stack-tech-lead-igaming-10",
+                "am": "full-stack-tech-lead-igaming-11"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-18 11:45:06"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154399,
+              "title": {
+                "ru": "Senior Power BI Developer",
+                "am_en": "Senior Power BI Developer",
+                "en": "Senior Power BI Developer",
+                "am": "Senior Power BI Developer"
+              },
+              "deadline": "2026-04-17",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/0/6/5/1065d734.jpg",
+                "id": 25,
+                "title": {
+                  "ru": "SoftConstruct",
+                  "en": "SoftConstruct",
+                  "am": "SoftConstruct"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "softconstruct",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-power-bi-developer-4",
+                "en": "senior-power-bi-developer-1",
+                "am": "senior-power-bi-developer-5"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-17 16:41:26"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154344,
+              "title": {
+                "ru": "Senior .NET/C# Software Engineer",
+                "am_en": "Senior .NET/C# Software Engineer",
+                "en": "Senior .NET/C# Software Engineer",
+                "am": "Senior .NET/C# Software Engineer"
+              },
+              "deadline": "2026-04-16",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/0/6/5/1065d734.jpg",
+                "id": 25,
+                "title": {
+                  "ru": "SoftConstruct",
+                  "en": "SoftConstruct",
+                  "am": "SoftConstruct"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "softconstruct",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-netc-software-engineer-7",
+                "en": "senior-netc-software-engineer-6",
+                "am": "senior-netc-software-engineer-8"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "itemType": 0,
+              "image": "https://cdn.staff.am/staff.am/upload/0/3/8/5/03858420.png",
+              "image_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/6/2/6/5/626556f6.png",
+              "web_image": "https://cdn.staff.am/staff.am/upload/b/1/d/3/b1d34a68.png",
+              "web_image_mobile": "https://cdn.staff.am/staff.am/upload/0/3/8/5/03858420.png",
+              "web_image_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/c/8/4/c/c84cf8b7.png",
+              "web_image_mobile_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/6/2/6/5/626556f6.png",
+              "link": "https://staff.am/en/banner/1564"
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-17 14:31:45"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154273,
+              "title": {
+                "ru": "Senior .Net Developer",
+                "am_en": "Senior .Net Developer",
+                "en": "Senior .Net Developer",
+                "am": "Senior .Net Developer"
+              },
+              "deadline": "2026-03-31",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/9/c/5/2/9c5265bd.jpg",
+                "id": 19,
+                "title": {
+                  "ru": "Fast Bank CJSC",
+                  "en": "Fast Bank CJSC",
+                  "am": "Fast Bank CJSC"
+                },
+                "is_unlimited": 1,
+                "is_verified": true,
+                "slug": "fast-bank-cjsc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-net-developer-910",
+                "en": "senior-net-developer-909",
+                "am": "senior-net-developer-911"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": true,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-17 14:07:20"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154268,
+              "title": {
+                "ru": "Deployment Engineer",
+                "am_en": "Diployment Inzhener",
+                "en": "Deployment Engineer",
+                "am": "Դիպլոյմենթ Ինժեներ"
+              },
+              "deadline": "2026-04-16",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/d/f/8/4/df84bab0.jpg",
+                "id": 11541,
+                "title": {
+                  "ru": "ООО Протелион Ресеарч Энд Девелопмент Центр",
+                  "en": "Protelion Research and Development Center LLC",
+                  "am": "ՊՐՈՏԵԼԻՈՆ ՌԻՍԸՐՉ ԸՆԴ ԴԻՎԵԼՈՓՄԵՆԹ ՍԵՆԹՐ ՍՊԸ"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "protelion-rhiserch-end-divelopment-sentr-spe",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "deployment-engineer-2",
+                "en": "deployment-engineer",
+                "am": "diployment-inzhener"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-17 13:30:01"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154256,
+              "title": {
+                "ru": "Payroll Specialist – Product &amp; QA Team",
+                "am_en": "Payroll Specialist - Product &amp; QA Team",
+                "en": "Payroll Specialist – Product &amp; QA Team",
+                "am": "Payroll Specialist – Product &amp; QA Team"
+              },
+              "deadline": "2026-04-16",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/c/2/2/f/c22fa1cb.png",
+                "id": 8769,
+                "title": {
+                  "ru": "Chartrics Software Solutions LLC",
+                  "en": "Chartrics Software Solutions LLC",
+                  "am": "Chartrics Software Solutions LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "chartrics-software-solutions-llc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "payroll-specialist-product-qa-team-3",
+                "en": "payroll-specialist-product-qa-team",
+                "am": "payroll-specialist-product-qa-team-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-17 10:55:39"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154238,
+              "title": {
+                "ru": "Mid-Level Node.js Developer",
+                "am_en": "Mid-Level Node.js Developer",
+                "en": "Mid-Level Node.js Developer",
+                "am": "Mid-Level Node.js Developer"
+              },
+              "deadline": "2026-04-16",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/c/6/3/b/c63b1c49.png",
+                "id": 10518,
+                "title": {
+                  "ru": "Feedb2b",
+                  "en": "Feedb2b",
+                  "am": "Feedb2b"
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "feedb2b",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "mid-level-nodejs-developer-6",
+                "en": "mid-level-nodejs-developer-4",
+                "am": "mid-level-nodejs-developer-5"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-16 10:58:41"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154142,
+              "title": {
+                "ru": "Middle QA Engineer | Manual",
+                "am_en": "Middle QA Engineer | Manual",
+                "en": "Middle QA Engineer | Manual",
+                "am": "Middle QA Engineer | Manual"
+              },
+              "deadline": "2026-04-15",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/a/3/f/2/a3f2c966.png",
+                "id": 90,
+                "title": {
+                  "ru": "Digitain ",
+                  "en": "Digitain ",
+                  "am": "Digitain "
+                },
+                "is_unlimited": 1,
+                "is_verified": true,
+                "slug": "digitain",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "middle-qa-engineer-manual-3",
+                "en": "middle-qa-engineer-manual",
+                "am": "middle-qa-engineer-manual-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": true,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-15 22:07:53"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154131,
+              "title": {
+                "ru": "Backend Engineer (Senior) (Energy / IoT / Digital Twin)",
+                "am_en": "Backend Engineer (Senior) (Energy / IoT / Digital Twin)",
+                "en": "Backend Engineer (Senior) (Energy / IoT / Digital Twin)",
+                "am": "Backend Engineer (Senior) (Energy / IoT / Digital Twin)"
+              },
+              "deadline": "2026-04-14",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/0/e/e/a/0eeabbda.png",
+                "id": 11354,
+                "title": {
+                  "ru": "Areg.AI",
+                  "en": "Areg.AI",
+                  "am": "Areg.AI"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "areg-tek-pbe",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "backend-engineer-senior-energy-iot-digital-twin-3",
+                "en": "backend-engineer-senior-energy-iot-digital-twin",
+                "am": "backend-engineer-senior-energy-iot-digital-twin-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-15 01:20:20"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154127,
+              "title": {
+                "ru": "Front-End Developer",
+                "am_en": "Front-End Developer",
+                "en": "Front-End Developer",
+                "am": "Front-End Developer"
+              },
+              "deadline": "2026-04-14",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/d/7/0/1d70c7bc.jpeg",
+                "id": 11087,
+                "title": {
+                  "ru": "Tedly",
+                  "en": "Tedly",
+                  "am": "Tedly"
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "tedly",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "front-end-developer-964",
+                "en": "front-end-developer-962",
+                "am": "front-end-developer-963"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-13 10:10:15"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154065,
+              "title": {
+                "ru": "PHP Developer",
+                "am_en": "PHP Developer",
+                "en": "PHP Developer",
+                "am": "PHP Developer"
+              },
+              "deadline": "2026-04-12",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/b/e/4/8/be483cc9.png",
+                "id": 5861,
+                "title": {
+                  "ru": "ZET Digital",
+                  "en": "ZET Digital",
+                  "am": "ZET Digital"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "qualldev",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "php-developer-920",
+                "en": "php-developer-919",
+                "am": "php-developer-921"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-12 19:01:36"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154052,
+              "title": {
+                "ru": "React / Next.js Developer",
+                "am_en": "React / Next.js Developer",
+                "en": "React / Next.js Developer",
+                "am": "React / Next.js Developer"
+              },
+              "deadline": "2026-04-11",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/0/4/7/9/04792e28.jpg",
+                "id": 5515,
+                "title": {
+                  "ru": "Trucking Zone ",
+                  "en": "Logix Software LLC",
+                  "am": "Logix Software LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "-96",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "react-nextjs-developer-3",
+                "en": "react-nextjs-developer",
+                "am": "react-nextjs-developer-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 2,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-12 18:56:51"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154051,
+              "title": {
+                "ru": "Senior Backend Engineer (PHP / Laravel)",
+                "am_en": "Senior Backend Engineer (PHP / Laravel)",
+                "en": "Senior Backend Engineer (PHP / Laravel)",
+                "am": "Senior Backend Engineer (PHP / Laravel)"
+              },
+              "deadline": "2026-04-11",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/0/4/7/9/04792e28.jpg",
+                "id": 5515,
+                "title": {
+                  "ru": "Trucking Zone ",
+                  "en": "Logix Software LLC",
+                  "am": "Logix Software LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "-96",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-backend-engineer-php-laravel-3",
+                "en": "senior-backend-engineer-php-laravel",
+                "am": "senior-backend-engineer-php-laravel-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "itemType": 0,
+              "image": "https://cdn.staff.am/staff.am/upload/8/e/4/e/8e4ed6b8.png",
+              "image_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/4/e/4/c/4e4cbfaf.png",
+              "web_image": "https://cdn.staff.am/staff.am/upload/7/e/5/6/7e56039c.png",
+              "web_image_mobile": "https://cdn.staff.am/staff.am/upload/8/e/4/e/8e4ed6b8.png",
+              "web_image_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/9/b/0/2/9b024f21.png",
+              "web_image_mobile_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/4/e/4/c/4e4cbfaf.png",
+              "link": "https://staff.am/en/banner/1567"
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-12 18:14:30"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154048,
+              "title": {
+                "ru": "PHP Developer",
+                "am_en": "PHP Developer",
+                "en": "PHP Developer",
+                "am": "PHP Developer"
+              },
+              "deadline": "2026-04-11",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/8/9/9/1899c037.png",
+                "id": 947,
+                "title": {
+                  "ru": "Studio One",
+                  "en": "Studio One",
+                  "am": "ՍՏՈՒԴԻՈ ՈՒԱՆ"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "studio-one",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "php-developer-914",
+                "en": "php-developer-913",
+                "am": "php-developer-915"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-12 16:34:17"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154039,
+              "title": {
+                "ru": ".NET/C# Software Engineer",
+                "am_en": ".NET/C# Software Engineer",
+                "en": ".NET/C# Software Engineer",
+                "am": ".NET/C# Software Engineer"
+              },
+              "deadline": "2026-04-11",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/0/6/5/1065d734.jpg",
+                "id": 25,
+                "title": {
+                  "ru": "SoftConstruct",
+                  "en": "SoftConstruct",
+                  "am": "SoftConstruct"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "softconstruct",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "netc-software-engineer-3",
+                "en": "netc-software-engineer",
+                "am": "netc-software-engineer-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-12 11:34:55"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 154006,
+              "title": {
+                "ru": "Java Backend Engineer (3+ years experience)",
+                "am_en": "Java Backend Engineer (3+ years experience)",
+                "en": "Java Backend Engineer (3+ years experience)",
+                "am": "Java Backend Engineer (3+ years experience)"
+              },
+              "deadline": "2026-04-11",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/2/d/e/5/2de540a6.png",
+                "id": 5829,
+                "title": {
+                  "ru": "LLC Impex",
+                  "en": "Impex LLC",
+                  "am": "LLC Impex"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "llc-impex",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "java-backend-engineer-3-years-experience-3",
+                "en": "java-backend-engineer-3-years-experience",
+                "am": "java-backend-engineer-3-years-experience-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-12 00:43:29"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": true,
+              "job_city": {
+                "title": {
+                  "ru": "Abu Dhabi",
+                  "en": "Abu Dhabi",
+                  "am": "Abu Dhabi"
+                }
+              },
+              "id": 153991,
+              "title": {
+                "ru": "Full Stack Developer (Microsoft Stack / Azure) — Secure Coding Focus",
+                "am_en": "Full Stack Developer (Microsoft Stack / Azure) -- Secure Coding Focus",
+                "en": "Full Stack Developer (Microsoft Stack / Azure) — Secure Coding Focus",
+                "am": "Full Stack Developer (Microsoft Stack / Azure) — Secure Coding Focus"
+              },
+              "deadline": "2026-03-31",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": null,
+                "id": 11842,
+                "title": {
+                  "ru": "Safe City gruop",
+                  "en": "Safe City gruop",
+                  "am": "Safe City gruop"
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "safe-city-gruop",
+                "isEmptyProfileImage": true
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "full-stack-developer-microsoft-stack-azure-secure-coding-focus-3",
+                "en": "full-stack-developer-microsoft-stack-azure-secure-coding-focus",
+                "am": "full-stack-developer-microsoft-stack-azure-secure-coding-focus-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-11 16:33:06"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": true,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153979,
+              "title": {
+                "ru": "Senior Java Engineer",
+                "am_en": "Senior Java Engineer",
+                "en": "Senior Java Engineer",
+                "am": "Senior Java Engineer"
+              },
+              "deadline": "2026-04-10",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/8/f/8/2/8f82e433.png",
+                "id": 10773,
+                "title": {
+                  "ru": "NextChallenge",
+                  "en": "NextChallenge",
+                  "am": "NextChallenge"
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "nextchallenge",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-java-engineer-126",
+                "en": "senior-java-engineer-124",
+                "am": "senior-java-engineer-125"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-11 14:28:21"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153969,
+              "title": {
+                "ru": "Front-end developer ",
+                "am_en": "Front-end developer ",
+                "en": "Front-end developer ",
+                "am": "Front-end developer "
+              },
+              "deadline": "2026-04-10",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/9/6/e/0/96e0d2ad.jpg",
+                "id": 1162,
+                "title": {
+                  "ru": "Converse Bank ",
+                  "en": "Converse Bank ",
+                  "am": "Կոնվերս Բանկ"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "converse-bank",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "front-end-developer-960",
+                "en": "front-end-developer-959",
+                "am": "front-end-developer-961"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-09 13:52:29"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153815,
+              "title": {
+                "ru": "Senior Backend Engineer",
+                "am_en": "Senior Backend Engineer",
+                "en": "Senior Backend Engineer",
+                "am": "Senior Backend Engineer"
+              },
+              "deadline": "2026-04-08",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/d/7/8/9/d7893fa2.jpeg",
+                "id": 7449,
+                "title": {
+                  "ru": "Pogos LLC",
+                  "en": "Pogos Software Consulting",
+                  "am": "Pogos LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "pogos-llc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-backend-engineer-101",
+                "en": "senior-backend-engineer-99",
+                "am": "senior-backend-engineer-100"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-09 12:36:54"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153803,
+              "title": {
+                "ru": "Junior Flutter / iOS  Developer",
+                "am_en": "Junior Flutter / iOS  Developer",
+                "en": "Junior Flutter / iOS  Developer",
+                "am": "Junior Flutter / iOS  Developer"
+              },
+              "deadline": "2026-04-08",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/2/2/3/0/2230dcc8.png",
+                "id": 4663,
+                "title": {
+                  "ru": "Addevice",
+                  "en": "Addevice",
+                  "am": "Addevice"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "addevice",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "junior-flutter-ios-developer-3",
+                "en": "junior-flutter-ios-developer",
+                "am": "junior-flutter-ios-developer-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 2,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-09 12:04:23"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153798,
+              "title": {
+                "ru": ".Net Developer",
+                "am_en": ".Net Developer",
+                "en": ".Net Developer",
+                "am": ".Net Developer"
+              },
+              "deadline": "2026-04-08",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/d/6/9/1/d6910123.png",
+                "id": 354,
+                "title": {
+                  "ru": "CQGI MA",
+                  "en": "CQGI MA",
+                  "am": "CQGI MA"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "cqgi-ma",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "net-developer-568",
+                "en": "net-developer-566",
+                "am": "net-developer-567"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-06 12:32:32"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153743,
+              "title": {
+                "ru": "Mid-level Backend Engineer",
+                "am_en": "Tsragrayin Apahovman Mshakogh",
+                "en": "Mid-level Backend Engineer",
+                "am": "Ծրագրային Ապահովման Մշակող"
+              },
+              "deadline": "2026-04-05",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/0/b/d/a/0bda9285.jpg",
+                "id": 7482,
+                "title": {
+                  "ru": "Optimum Partners DWC LLC",
+                  "en": "Optimum Partners - Armenia",
+                  "am": "Optimum Partners DWC LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "optimum-partners-dwc-llc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "mid-level-backend-engineer-9",
+                "en": "mid-level-backend-engineer-8",
+                "am": "tsragrayin-apahovman-mshakogh-3"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-05 11:01:02"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153675,
+              "title": {
+                "ru": "Delphi Developer",
+                "am_en": "Delphi Developer",
+                "en": "Delphi Developer ",
+                "am": "Delphi Developer"
+              },
+              "deadline": "2026-04-04",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/5/1/e/e/51ee9e2d.png",
+                "id": 6740,
+                "title": {
+                  "ru": "DevSoft AM",
+                  "en": "DevExpress",
+                  "am": "DevSoft AM"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "devsoft-am",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "delphi-developer-3",
+                "en": "delphi-developer",
+                "am": "delphi-developer-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-04 18:32:21"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153652,
+              "title": {
+                "ru": "React / Node JS Developer ",
+                "am_en": "React / Node JS Developer ",
+                "en": "React / Node JS Developer ",
+                "am": "React / Node JS Developer "
+              },
+              "deadline": "2026-04-03",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/a/6/e/2/a6e24ed8.png",
+                "id": 45,
+                "title": {
+                  "ru": "Iguan Systems LLC",
+                  "en": "Iguan Systems LLC",
+                  "am": "Iguan Systems LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "iguan-systems-llc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "react-node-js-developer-3",
+                "en": "react-node-js-developer",
+                "am": "react-node-js-developer-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 2,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-04 16:53:05"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153643,
+              "title": {
+                "ru": ".Net Developer",
+                "am_en": "Tsragravorman bazhni arhajatar masnaget",
+                "en": ".Net Developer",
+                "am": "Ծրագրավորման բաժնի առաջատար մասնագետ"
+              },
+              "deadline": "2026-04-03",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/8/6/0/9/86090f6c.jpg",
+                "id": 630,
+                "title": {
+                  "ru": "ЛИГА ИНШУРАНС СЗАО",
+                  "en": "LIGA INSURANCE ICJSC Former \"RGS-ARMENIA\" ICJSC",
+                  "am": "ԼԻԳԱ ԻՆՇՈՒՐԱՆՍ ԱՓԲԸ"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "-68",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "net-developer-565",
+                "en": "net-developer-564",
+                "am": "tsragravorman-bazhni-arhajatar-masnaget"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "repat": "2026-03-04 16:26:45",
+                "staffam": "2026-03-04 16:26:45"
+              },
+              "is_repat": 2,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153642,
+              "title": {
+                "ru": "Media and Public Relations Specialist",
+                "am_en": "Media and Public Relations Specialist",
+                "en": "Media and Public Relations Specialist",
+                "am": "Media and Public Relations Specialist"
+              },
+              "deadline": "2026-04-03",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/0/6/5/1065d734.jpg",
+                "id": 25,
+                "title": {
+                  "ru": "SoftConstruct",
+                  "en": "SoftConstruct",
+                  "am": "SoftConstruct"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "softconstruct",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "media-and-public-relations-specialist-3",
+                "en": "media-and-public-relations-specialist",
+                "am": "media-and-public-relations-specialist-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-04 13:28:38"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153625,
+              "title": {
+                "ru": "Senior Frontend Developer ",
+                "am_en": "Senior Frontend Developer ",
+                "en": "Senior Frontend Developer ",
+                "am": "Senior Frontend Developer "
+              },
+              "deadline": "2026-04-03",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/5/1/e/e/51ee9e2d.png",
+                "id": 6740,
+                "title": {
+                  "ru": "DevSoft AM",
+                  "en": "DevExpress",
+                  "am": "DevSoft AM"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "devsoft-am",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-frontend-developer-73",
+                "en": "senior-frontend-developer-72",
+                "am": "senior-frontend-developer-74"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "repat": "2026-03-04 10:09:12",
+                "staffam": "2026-03-04 10:09:12"
+              },
+              "is_repat": 2,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153598,
+              "title": {
+                "ru": "Statistics Creation Specialist",
+                "am_en": "Statistics Creation Specialist",
+                "en": "Statistics Creation Specialist",
+                "am": "Statistics Creation Specialist"
+              },
+              "deadline": "2026-04-03",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/0/6/5/1065d734.jpg",
+                "id": 25,
+                "title": {
+                  "ru": "SoftConstruct",
+                  "en": "SoftConstruct",
+                  "am": "SoftConstruct"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "softconstruct",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "statistics-creation-specialist-4",
+                "en": "statistics-creation-specialist-1",
+                "am": "statistics-creation-specialist-5"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-04 06:35:49"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153585,
+              "title": {
+                "ru": "Senior Backend Developer",
+                "am_en": "Senior Backend Developer",
+                "en": "Senior Backend Developer",
+                "am": "Senior Backend Developer"
+              },
+              "deadline": "2026-03-31",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": null,
+                "id": 2758,
+                "title": {
+                  "ru": "Nika S.A. LLC",
+                  "en": "Nika S.A. LLC",
+                  "am": "Nika S.A. LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "nika-sa-llc",
+                "isEmptyProfileImage": true
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-backend-developer-140",
+                "en": "senior-backend-developer-138",
+                "am": "senior-backend-developer-139"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-03 14:52:20"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153544,
+              "title": {
+                "ru": "WordPress developer",
+                "am_en": "WordPress developer",
+                "en": "WordPress developer",
+                "am": "WordPress developer"
+              },
+              "deadline": "2026-04-02",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/f/d/2/7/fd27406c.png",
+                "id": 2599,
+                "title": {
+                  "ru": "VECTO",
+                  "en": "VECTO",
+                  "am": "VECTO"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "vecto",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "wordpress-developer-371",
+                "en": "wordpress-developer-369",
+                "am": "wordpress-developer-370"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-02 17:19:17"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153480,
+              "title": {
+                "ru": "Senior React JS Engineer",
+                "am_en": "Senior React JS Engineer",
+                "en": "Senior React JS Engineer",
+                "am": "Senior React JS Engineer"
+              },
+              "deadline": "2026-04-01",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/0/6/5/1065d734.jpg",
+                "id": 25,
+                "title": {
+                  "ru": "SoftConstruct",
+                  "en": "SoftConstruct",
+                  "am": "SoftConstruct"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "softconstruct",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-react-js-engineer-8",
+                "en": "senior-react-js-engineer-7",
+                "am": "senior-react-js-engineer-9"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-02 17:18:31"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153479,
+              "title": {
+                "ru": "Senior PHP (Pure) Developer",
+                "am_en": "Senior PHP (Pure) Developer",
+                "en": "Senior PHP (Pure) Developer",
+                "am": "Senior PHP (Pure) Developer"
+              },
+              "deadline": "2026-04-01",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/0/6/5/1065d734.jpg",
+                "id": 25,
+                "title": {
+                  "ru": "SoftConstruct",
+                  "en": "SoftConstruct",
+                  "am": "SoftConstruct"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "softconstruct",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-php-pure-developer-8",
+                "en": "senior-php-pure-developer-7",
+                "am": "senior-php-pure-developer-9"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-02 14:02:34"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": true,
+              "job_city": {
+                "title": {
+                  "ru": "Plovdiv",
+                  "en": "Plovdiv",
+                  "am": "Plovdiv"
+                }
+              },
+              "id": 153450,
+              "title": {
+                "ru": "Senior React Native Engineer",
+                "am_en": "Senior React Native Engineer",
+                "en": "Senior React Native Engineer",
+                "am": "Senior React Native Engineer"
+              },
+              "deadline": "2026-04-01",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/6/a/f/6/6af66278.png",
+                "id": 10305,
+                "title": {
+                  "ru": "Podix",
+                  "en": "Podix",
+                  "am": "Podix"
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "podix",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-react-native-engineer-4",
+                "en": "senior-react-native-engineer-2",
+                "am": "senior-react-native-engineer-3"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-03-01 23:22:26"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153411,
+              "title": {
+                "ru": "Backend Developer",
+                "am_en": "Backend Developer",
+                "en": "Backend Developer (C# / .NET + PostgreSQL / SQL)",
+                "am": "Backend Developer"
+              },
+              "deadline": "2026-03-31",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/e/4/7/1e479848.png",
+                "id": 11810,
+                "title": {
+                  "ru": "«ԴԱՅՆԱՄԻԿ ՍՈԼՅՈՒՇՆՍ» ՍՊԸ",
+                  "en": "«ԴԱՅՆԱՄԻԿ ՍՈԼՅՈՒՇՆՍ» ՍՊԸ",
+                  "am": "«ԴԱՅՆԱՄԻԿ ՍՈԼՅՈՒՇՆՍ» ՍՊԸ"
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "daynamik-solyowshns-spe",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "backend-developer-148",
+                "en": "backend-developer-c-net-postgresql-sql",
+                "am": "backend-developer-147"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 2,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-28 12:01:51"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153401,
+              "title": {
+                "ru": "React JS Developer",
+                "am_en": "React JS Developer",
+                "en": "React JS Developer",
+                "am": "React JS Developer"
+              },
+              "deadline": "2026-03-30",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/5/6/5/c/565c4e0a.png",
+                "id": 5341,
+                "title": {
+                  "ru": "Actual Solutions LLC",
+                  "en": "Actual Solutions LLC",
+                  "am": "Actual Solutions LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "actual-solutions-llc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "react-js-developer-335",
+                "en": "react-js-developer-334",
+                "am": "react-js-developer-336"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-27 16:57:23"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153374,
+              "title": {
+                "ru": "BTS  C# .Net intern",
+                "am_en": "BTS  C# .Net intern",
+                "en": "BTS C# .Net intern",
+                "am": "BTS  C# .Net intern"
+              },
+              "deadline": "2026-03-29",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/f/0/b/a/f0baf20a.png",
+                "id": 5469,
+                "title": {
+                  "ru": "BTS",
+                  "en": "BTS",
+                  "am": "BTS"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "bts",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "bts-c-net-intern-29",
+                "en": "bts-c-net-intern-28",
+                "am": "bts-c-net-intern-30"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 3,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-27 15:23:52"
+              },
+              "is_repat": 0,
+              "is_hot": true,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153368,
+              "title": {
+                "ru": "Linux / UNIX System Administrator",
+                "am_en": "Linux\\UNIX System Administrator",
+                "en": "Linux\\UNIX System Administrator",
+                "am": "Linux\\UNIX System Administrator"
+              },
+              "deadline": "2026-03-29",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/a/4/7/2/a472ba58.jpg",
+                "id": 6265,
+                "title": {
+                  "ru": "Freedom Broker Armenia",
+                  "en": "Freedom Broker Armenia",
+                  "am": "Freedom Broker  Armenia"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "freedom-finance-armenia",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "linux-unix-system-administrator",
+                "en": "linuxunix-system-administrator",
+                "am": "linuxunix-system-administrator-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-27 00:25:21"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": true,
+              "job_city": {
+                "title": {
+                  "ru": "Ashdod",
+                  "en": "Ashdod",
+                  "am": "Ashdod"
+                }
+              },
+              "id": 153318,
+              "title": {
+                "ru": "Full-Stack Developer (Junior+ / Aspiring Middle) ",
+                "am_en": "Full-Stack Developer (Junior+ / Aspiring Middle) ",
+                "en": "Full-Stack Developer (Junior+ / Aspiring Middle) ",
+                "am": "Full-Stack Developer (Junior+ / Aspiring Middle) "
+              },
+              "deadline": "2026-03-28",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/9/3/5/9/9359f129.png",
+                "id": 5002,
+                "title": {
+                  "ru": "Bringit Technologies",
+                  "en": "Bringit Technologies",
+                  "am": "Bringit Technologies"
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "bringit-technologies",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "full-stack-developer-junior-aspiring-middle-3",
+                "en": "full-stack-developer-junior-aspiring-middle",
+                "am": "full-stack-developer-junior-aspiring-middle-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-26 21:15:37"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153317,
+              "title": {
+                "ru": "Mid to Senior Full-Stack JavaScript Developer",
+                "am_en": "Mid to Senior Full-Stack JavaScript Developer",
+                "en": "Mid to Senior Full-Stack JavaScript Developer",
+                "am": "Mid to Senior Full-Stack JavaScript Developer"
+              },
+              "deadline": "2026-03-28",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/8/4/f/1/84f10f65.jpg",
+                "id": 9767,
+                "title": {
+                  "ru": "TRIVO",
+                  "en": "TRIVO",
+                  "am": "TRIVO"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "trivo",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "mid-to-senior-full-stack-javascript-developer-3",
+                "en": "mid-to-senior-full-stack-javascript-developer",
+                "am": "mid-to-senior-full-stack-javascript-developer-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-26 16:49:53"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": true,
+              "job_city": {
+                "title": {
+                  "ru": "Ashdod",
+                  "en": "Ashdod",
+                  "am": "Ashdod"
+                }
+              },
+              "id": 153215,
+              "title": {
+                "ru": "Android Developer (Junior+ / Aspiring Middle)",
+                "am_en": "Android Developer (Junior+ / Aspiring Middle)",
+                "en": "Android Developer (Junior+ / Aspiring Middle)",
+                "am": "Android Developer (Junior+ / Aspiring Middle)"
+              },
+              "deadline": "2026-03-27",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/9/3/5/9/9359f129.png",
+                "id": 5002,
+                "title": {
+                  "ru": "Bringit Technologies",
+                  "en": "Bringit Technologies",
+                  "am": "Bringit Technologies"
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "bringit-technologies",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "android-developer-junior-aspiring-middle-8",
+                "en": "android-developer-junior-aspiring-middle-7",
+                "am": "android-developer-junior-aspiring-middle-9"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-26 16:07:36"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153286,
+              "title": {
+                "ru": "PHP Laravel Developer",
+                "am_en": "PHP Laravel Developer",
+                "en": "PHP Laravel Developer",
+                "am": "PHP Laravel Developer"
+              },
+              "deadline": "2026-03-28",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/0/6/4/5/06457152.png",
+                "id": 6963,
+                "title": {
+                  "ru": "EDU Systems LLC",
+                  "en": "EDU Systems LLC",
+                  "am": "EDU Systems LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "edu-systems-llc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "php-laravel-developer-164",
+                "en": "php-laravel-developer-163",
+                "am": "php-laravel-developer-165"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-26 13:16:24"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153258,
+              "title": {
+                "ru": "Senior Front-end Software Developer",
+                "am_en": "Senior Front-end Software Developer",
+                "en": "Senior Front-end Software Developer",
+                "am": "Senior Front-end Software Developer"
+              },
+              "deadline": "2026-03-28",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": null,
+                "id": 2758,
+                "title": {
+                  "ru": "Nika S.A. LLC",
+                  "en": "Nika S.A. LLC",
+                  "am": "Nika S.A. LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": false,
+                "slug": "nika-sa-llc",
+                "isEmptyProfileImage": true
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-front-end-software-developer-24",
+                "en": "senior-front-end-software-developer-22",
+                "am": "senior-front-end-software-developer-23"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false
+            },
+            {
+              "itemType": 0,
+              "image": "https://cdn.staff.am/staff.am/upload/7/d/d/7/7dd702f3.png",
+              "image_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/5/f/b/0/5fb00f83.png",
+              "web_image": "https://cdn.staff.am/staff.am/upload/8/b/9/3/8b93e120.webm",
+              "web_image_mobile": "https://cdn.staff.am/staff.am/upload/7/d/d/7/7dd702f3.png",
+              "web_image_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/f/2/8/4/f2840843.webm",
+              "web_image_mobile_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/5/f/b/0/5fb00f83.png",
+              "link": "https://staff.am/en/banner/1174"
+            }
+          ],
+          "categoryFilters": {
+            "category": [
+              {
+                "key": 7,
+                "doc_count": 218
+              },
+              {
+                "key": 14,
+                "doc_count": 205
+              },
+              {
+                "key": 12,
+                "doc_count": 86
+              },
+              {
+                "key": 10,
+                "doc_count": 70
+              },
+              {
+                "key": 8,
+                "doc_count": 61
+              },
+              {
+                "key": 1,
+                "doc_count": 58
+              },
+              {
+                "key": 6,
+                "doc_count": 58
+              },
+              {
+                "key": 13,
+                "doc_count": 52
+              },
+              {
+                "key": 4,
+                "doc_count": 49
+              },
+              {
+                "key": 9,
+                "doc_count": 33
+              },
+              {
+                "key": 23,
+                "doc_count": 32
+              },
+              {
+                "key": 16,
+                "doc_count": 28
+              },
+              {
+                "key": 70,
+                "doc_count": 25
+              },
+              {
+                "key": 3,
+                "doc_count": 22
+              },
+              {
+                "key": 17,
+                "doc_count": 21
+              },
+              {
+                "key": 21,
+                "doc_count": 21
+              },
+              {
+                "key": 27,
+                "doc_count": 21
+              },
+              {
+                "key": 28,
+                "doc_count": 20
+              },
+              {
+                "key": 2,
+                "doc_count": 19
+              },
+              {
+                "key": 51,
+                "doc_count": 19
+              },
+              {
+                "key": 25,
+                "doc_count": 16
+              },
+              {
+                "key": 24,
+                "doc_count": 14
+              },
+              {
+                "key": 38,
+                "doc_count": 14
+              },
+              {
+                "key": 42,
+                "doc_count": 14
+              },
+              {
+                "key": 19,
+                "doc_count": 13
+              },
+              {
+                "key": 20,
+                "doc_count": 13
+              },
+              {
+                "key": 40,
+                "doc_count": 13
+              },
+              {
+                "key": 41,
+                "doc_count": 13
+              },
+              {
+                "key": 18,
+                "doc_count": 11
+              },
+              {
+                "key": 64,
+                "doc_count": 11
+              },
+              {
+                "key": 34,
+                "doc_count": 10
+              },
+              {
+                "key": 48,
+                "doc_count": 7
+              },
+              {
+                "key": 50,
+                "doc_count": 7
+              },
+              {
+                "key": 11,
+                "doc_count": 6
+              },
+              {
+                "key": 31,
+                "doc_count": 6
+              },
+              {
+                "key": 47,
+                "doc_count": 6
+              },
+              {
+                "key": 43,
+                "doc_count": 5
+              },
+              {
+                "key": 26,
+                "doc_count": 4
+              },
+              {
+                "key": 44,
+                "doc_count": 4
+              },
+              {
+                "key": 65,
+                "doc_count": 4
+              },
+              {
+                "key": 69,
+                "doc_count": 4
+              },
+              {
+                "key": 36,
+                "doc_count": 3
+              },
+              {
+                "key": 59,
+                "doc_count": 3
+              },
+              {
+                "key": 61,
+                "doc_count": 2
+              },
+              {
+                "key": 22,
+                "doc_count": 1
+              },
+              {
+                "key": 29,
+                "doc_count": 1
+              },
+              {
+                "key": 33,
+                "doc_count": 1
+              },
+              {
+                "key": 35,
+                "doc_count": 1
+              },
+              {
+                "key": 45,
+                "doc_count": 1
+              },
+              {
+                "key": 49,
+                "doc_count": 1
+              },
+              {
+                "key": 63,
+                "doc_count": 1
+              },
+              {
+                "key": 66,
+                "doc_count": 1
+              }
+            ],
+            "job_type": [
+              {
+                "key": 1,
+                "doc_count": 52
+              },
+              {
+                "key": 9,
+                "doc_count": 6
+              }
+            ],
+            "job_term": [
+              {
+                "key": 1,
+                "doc_count": 47
+              },
+              {
+                "key": 5,
+                "doc_count": 8
+              },
+              {
+                "key": 6,
+                "doc_count": 2
+              },
+              {
+                "key": 7,
+                "doc_count": 1
+              }
+            ],
+            "job_city": [
+              {
+                "key": 34,
+                "doc_count": 54
+              },
+              {
+                "key": 21796,
+                "doc_count": 2
+              },
+              {
+                "key": 3875,
+                "doc_count": 1
+              },
+              {
+                "key": 51667,
+                "doc_count": 1
+              }
+            ],
+            "job_candidate_level": [
+              {
+                "key": 3,
+                "doc_count": 25
+              },
+              {
+                "key": 4,
+                "doc_count": 20
+              },
+              {
+                "key": 6,
+                "doc_count": 7
+              },
+              {
+                "key": 2,
+                "doc_count": 6
+              }
+            ],
+            "job_salary": [
+              {
+                "key": 0,
+                "doc_count": 56
+              },
+              {
+                "key": 1,
+                "doc_count": 2
+              }
+            ],
+            "tags": [
+              {
+                "key": 5,
+                "doc_count": 1
+              },
+              {
+                "key": 10,
+                "doc_count": 1
+              },
+              {
+                "key": 13,
+                "doc_count": 1
+              },
+              {
+                "key": 14,
+                "doc_count": 1
+              }
+            ]
+          },
+          "totalCount": 58
+        },
+        "__N_SSP": true
+      },
+      "page": "/jobs",
+      "query": {
+        "category": "1",
+        "page": "1"
+      },
+      "buildId": "mqCkBIb-VL2z5iraMVP8w",
+      "isFallback": false,
+      "isExperimentalCompile": false,
+      "gssp": true,
+      "locale": "en",
+      "locales": [
+        "en",
+        "ru",
+        "am"
+      ],
+      "defaultLocale": "en",
+      "scriptLoader": []
+    }
+  },
+  {
+    "page": 2,
+    "url": "https://staff.am/en/jobs?category=1&page=2",
+    "data": {
+      "props": {
+        "pageProps": {
+          "headers": {
+            "apptype": "next",
+            "version": "0.001",
+            "userAgent": "ThesisResearch/1.0 (Armenian IT curriculum alignment study; academic use only)",
+            "guestauth": "guest-user-302d2c93d228d114",
+            "x-forwarded-for": "45.159.74.194"
+          },
+          "isMobile": false,
+          "NEXT_PUBLIC_API_URL": "https://api.staff.am",
+          "NEXT_PUBLIC_MAIN_PAGE_URL": "https://staff.am",
+          "NEXT_PUBLIC_IMAGES_PATH_URL": "https://cdn.staff.am/",
+          "jobs": [
+            {
+              "activated_at": {
+                "staffam": "2026-02-25 12:30:32"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153137,
+              "title": {
+                "ru": "Node JS Developer",
+                "am_en": "Node JS Developer",
+                "en": "Node JS Engineer  ",
+                "am": "Node JS Developer"
+              },
+              "deadline": "2026-03-27",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/2/2/6/1/2261eec6.png",
+                "id": 5126,
+                "title": {
+                  "ru": "SoftShark",
+                  "en": "SoftShark",
+                  "am": "SoftShark"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "softshark",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "node-js-developer-97",
+                "en": "node-js-engineer-7",
+                "am": "node-js-developer-98"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-24 14:03:57"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 153087,
+              "title": {
+                "ru": "Junior C# /.Net Developer",
+                "am_en": "Junior C# /.Net Developer",
+                "en": "Junior C# /.Net Developer",
+                "am": "Junior C# /.Net Developer"
+              },
+              "deadline": "2026-03-26",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/c/2/2/f/c22fa1cb.png",
+                "id": 8769,
+                "title": {
+                  "ru": "Chartrics Software Solutions LLC",
+                  "en": "Chartrics Software Solutions LLC",
+                  "am": "Chartrics Software Solutions LLC"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "chartrics-software-solutions-llc",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "junior-c-net-developer-53",
+                "en": "junior-c-net-developer-52",
+                "am": "junior-c-net-developer-54"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-21 09:59:56"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 152872,
+              "title": {
+                "ru": "Backend Engineer (AI &amp; Automation)",
+                "am_en": "Backend Engineer (AI &amp; Automation)",
+                "en": "Backend Engineer (AI &amp; Automation)",
+                "am": "Backend Engineer (AI &amp; Automation)"
+              },
+              "deadline": "2026-03-23",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/3/a/6/b/3a6b7a50.png",
+                "id": 650,
+                "title": {
+                  "ru": "AOByte",
+                  "en": "AOByte",
+                  "am": "AOByte"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "aobyte",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "backend-engineer-ai-automation-3",
+                "en": "backend-engineer-ai-automation",
+                "am": "backend-engineer-ai-automation-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 2,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-20 18:09:02"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 152863,
+              "title": {
+                "ru": "Senior Front-end Developer",
+                "am_en": "Senior Front-end Developer",
+                "en": "Senior Front-end Developer",
+                "am": "Senior Front-end Developer"
+              },
+              "deadline": "2026-03-22",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/d/6/9/1/d6910123.png",
+                "id": 354,
+                "title": {
+                  "ru": "CQGI MA",
+                  "en": "CQGI MA",
+                  "am": "CQGI MA"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "cqgi-ma",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-front-end-developer-244",
+                "en": "senior-front-end-developer-242",
+                "am": "senior-front-end-developer-243"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-20 17:55:36"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 152857,
+              "title": {
+                "ru": "Senior C++ Software Developer",
+                "am_en": "Senior C++ Software Developer",
+                "en": "Senior C++ Software Developer",
+                "am": "Senior C++ Software Developer"
+              },
+              "deadline": "2026-03-22",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/d/6/9/1/d6910123.png",
+                "id": 354,
+                "title": {
+                  "ru": "CQGI MA",
+                  "en": "CQGI MA",
+                  "am": "CQGI MA"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "cqgi-ma",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "senior-c-software-developer-12",
+                "en": "senior-c-software-developer-10",
+                "am": "senior-c-software-developer-11"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "repat": "2026-02-19 16:36:31",
+                "staffam": "2026-02-19 16:36:31"
+              },
+              "is_repat": 2,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 152759,
+              "title": {
+                "ru": "Strategy Associate",
+                "am_en": "Strategy Associate",
+                "en": "Strategy Associate",
+                "am": "Strategy Associate"
+              },
+              "deadline": "2026-03-21",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/1/0/6/5/1065d734.jpg",
+                "id": 25,
+                "title": {
+                  "ru": "SoftConstruct",
+                  "en": "SoftConstruct",
+                  "am": "SoftConstruct"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "softconstruct",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "strategy-associate-15",
+                "en": "strategy-associate-14",
+                "am": "strategy-associate-16"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 0,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-19 16:02:33"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 152753,
+              "title": {
+                "ru": "React JS Developer ",
+                "am_en": "React JS Developer ",
+                "en": "React JS Developer ",
+                "am": "React JS Developer "
+              },
+              "deadline": "2026-03-21",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/4/6/5/b/465b8e40.png",
+                "id": 2086,
+                "title": {
+                  "ru": "TT soft",
+                  "en": "TT soft",
+                  "am": "TT soft"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "tt-soft",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "react-js-developer-214",
+                "en": "react-js-developer-213",
+                "am": "react-js-developer-215"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 2,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "activated_at": {
+                "staffam": "2026-02-19 14:10:15"
+              },
+              "is_repat": 0,
+              "is_hot": false,
+              "is_remote": false,
+              "job_city": {
+                "title": {
+                  "ru": "Ереван",
+                  "en": "Yerevan",
+                  "am": "Երևան"
+                }
+              },
+              "id": 152731,
+              "title": {
+                "ru": "Business Analyst (Intern)",
+                "am_en": "Business Analyst (Intern)",
+                "en": "Business Analyst (Intern)",
+                "am": "Business Analyst (Intern)"
+              },
+              "deadline": "2026-03-21",
+              "companiesStruct": {
+                "domain_id": 1,
+                "profile_image": "https://cdn.staff.am/staff.am/upload/9/0/a/f/90afa9b9.jpg",
+                "id": 8644,
+                "title": {
+                  "ru": "Haysell",
+                  "en": "Haysell",
+                  "am": "Haysell"
+                },
+                "is_unlimited": 0,
+                "is_verified": true,
+                "slug": "-50",
+                "isEmptyProfileImage": false
+              },
+              "category": {
+                "code": "software-development",
+                "id": 1,
+                "title": {
+                  "ru": "Программирование",
+                  "en": "Software development",
+                  "am": "Ծրագրավորում"
+                }
+              },
+              "slug": {
+                "ru": "business-analyst-junior-3",
+                "en": "business-analyst-intern",
+                "am": "business-analyst-junior-2"
+              },
+              "status": 1,
+              "saved_job_id": false,
+              "like_id": false,
+              "is_featured": false,
+              "likeCount": 1,
+              "is_new": false,
+              "itemType": 1,
+              "is_following": false,
+              "last": false
+            },
+            {
+              "itemType": 0,
+              "image": "https://cdn.staff.am/staff.am/upload/7/d/d/7/7dd702f3.png",
+              "image_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/5/f/b/0/5fb00f83.png",
+              "web_image": "https://cdn.staff.am/staff.am/upload/8/b/9/3/8b93e120.webm",
+              "web_image_mobile": "https://cdn.staff.am/staff.am/upload/7/d/d/7/7dd702f3.png",
+              "web_image_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/f/2/8/4/f2840843.webm",
+              "web_image_mobile_dark": "https://cdn.staff.am/staff.am/upload/dark_mode/5/f/b/0/5fb00f83.png",
+              "link": "https://staff.am/en/banner/1174",
+              "last": true
+            }
+          ],
+          "categoryFilters": {
+            "category": [
+              {
+                "key": 7,
+                "doc_count": 218
+              },
+              {
+                "key": 14,
+                "doc_count": 205
+              },
+              {
+                "key": 12,
+                "doc_count": 86
+              },
+              {
+                "key": 10,
+                "doc_count": 70
+              },
+              {
+                "key": 8,
+                "doc_count": 61
+              },
+              {
+                "key": 1,
+                "doc_count": 58
+              },
+              {
+                "key": 6,
+                "doc_count": 58
+              },
+              {
+                "key": 13,
+                "doc_count": 52
+              },
+              {
+                "key": 4,
+                "doc_count": 49
+              },
+              {
+                "key": 9,
+                "doc_count": 33
+              },
+              {
+                "key": 23,
+                "doc_count": 32
+              },
+              {
+                "key": 16,
+                "doc_count": 28
+              },
+              {
+                "key": 70,
+                "doc_count": 25
+              },
+              {
+                "key": 3,
+                "doc_count": 22
+              },
+              {
+                "key": 17,
+                "doc_count": 21
+              },
+              {
+                "key": 21,
+                "doc_count": 21
+              },
+              {
+                "key": 27,
+                "doc_count": 21
+              },
+              {
+                "key": 28,
+                "doc_count": 20
+              },
+              {
+                "key": 2,
+                "doc_count": 19
+              },
+              {
+                "key": 51,
+                "doc_count": 19
+              },
+              {
+                "key": 25,
+                "doc_count": 16
+              },
+              {
+                "key": 24,
+                "doc_count": 14
+              },
+              {
+                "key": 38,
+                "doc_count": 14
+              },
+              {
+                "key": 42,
+                "doc_count": 14
+              },
+              {
+                "key": 19,
+                "doc_count": 13
+              },
+              {
+                "key": 20,
+                "doc_count": 13
+              },
+              {
+                "key": 40,
+                "doc_count": 13
+              },
+              {
+                "key": 41,
+                "doc_count": 13
+              },
+              {
+                "key": 18,
+                "doc_count": 11
+              },
+              {
+                "key": 64,
+                "doc_count": 11
+              },
+              {
+                "key": 34,
+                "doc_count": 10
+              },
+              {
+                "key": 48,
+                "doc_count": 7
+              },
+              {
+                "key": 50,
+                "doc_count": 7
+              },
+              {
+                "key": 11,
+                "doc_count": 6
+              },
+              {
+                "key": 31,
+                "doc_count": 6
+              },
+              {
+                "key": 47,
+                "doc_count": 6
+              },
+              {
+                "key": 43,
+                "doc_count": 5
+              },
+              {
+                "key": 26,
+                "doc_count": 4
+              },
+              {
+                "key": 44,
+                "doc_count": 4
+              },
+              {
+                "key": 65,
+                "doc_count": 4
+              },
+              {
+                "key": 69,
+                "doc_count": 4
+              },
+              {
+                "key": 36,
+                "doc_count": 3
+              },
+              {
+                "key": 59,
+                "doc_count": 3
+              },
+              {
+                "key": 61,
+                "doc_count": 2
+              },
+              {
+                "key": 22,
+                "doc_count": 1
+              },
+              {
+                "key": 29,
+                "doc_count": 1
+              },
+              {
+                "key": 33,
+                "doc_count": 1
+              },
+              {
+                "key": 35,
+                "doc_count": 1
+              },
+              {
+                "key": 45,
+                "doc_count": 1
+              },
+              {
+                "key": 49,
+                "doc_count": 1
+              },
+              {
+                "key": 63,
+                "doc_count": 1
+              },
+              {
+                "key": 66,
+                "doc_count": 1
+              }
+            ],
+            "job_type": [
+              {
+                "key": 1,
+                "doc_count": 52
+              },
+              {
+                "key": 9,
+                "doc_count": 6
+              }
+            ],
+            "job_term": [
+              {
+                "key": 1,
+                "doc_count": 47
+              },
+              {
+                "key": 5,
+                "doc_count": 8
+              },
+              {
+                "key": 6,
+                "doc_count": 2
+              },
+              {
+                "key": 7,
+                "doc_count": 1
+              }
+            ],
+            "job_city": [
+              {
+                "key": 34,
+                "doc_count": 54
+              },
+              {
+                "key": 21796,
+                "doc_count": 2
+              },
+              {
+                "key": 3875,
+                "doc_count": 1
+              },
+              {
+                "key": 51667,
+                "doc_count": 1
+              }
+            ],
+            "job_candidate_level": [
+              {
+                "key": 3,
+                "doc_count": 25
+              },
+              {
+                "key": 4,
+                "doc_count": 20
+              },
+              {
+                "key": 6,
+                "doc_count": 7
+              },
+              {
+                "key": 2,
+                "doc_count": 6
+              }
+            ],
+            "job_salary": [
+              {
+                "key": 0,
+                "doc_count": 56
+              },
+              {
+                "key": 1,
+                "doc_count": 2
+              }
+            ],
+            "tags": [
+              {
+                "key": 5,
+                "doc_count": 1
+              },
+              {
+                "key": 10,
+                "doc_count": 1
+              },
+              {
+                "key": 13,
+                "doc_count": 1
+              },
+              {
+                "key": 14,
+                "doc_count": 1
+              }
+            ]
+          },
+          "totalCount": 58
+        },
+        "__N_SSP": true
+      },
+      "page": "/jobs",
+      "query": {
+        "category": "1",
+        "page": "2"
+      },
+      "buildId": "mqCkBIb-VL2z5iraMVP8w",
+      "isFallback": false,
+      "isExperimentalCompile": false,
+      "gssp": true,
+      "locale": "en",
+      "locales": [
+        "en",
+        "ru",
+        "am"
+      ],
+      "defaultLocale": "en",
+      "scriptLoader": []
+    }
+  }
+]
