@@ -1,30 +1,10 @@
-# Measuring the Alignment Between Armenian IT University Curricula and Labor Market Skill Demands: A Computational NLP Analysis
-
-**Master's Thesis**
-
-Submitted in partial fulfilment of the requirements for the degree of Master of Science
-
-[Program Name]  
-[University Name]  
-Yerevan, 2026
-
----
-
-*Supervisor: [Supervisor Name and Title]*
-
-*Student: [Your Name]*
-
----
-
-
-
 # Abstract
 
 This thesis presents the first large-scale, computational analysis of the alignment between IT university curricula and labor market skill demands in Armenia. Four Armenian universities — Yerevan State University (YSU), the American University of Armenia (AUA), the National University of Architecture and Construction of Armenia (NUACA), and the Russian-Armenian University (RAU) — are examined alongside 1,068 job postings collected from 11 sources active in Armenia in March 2026.
 
 A five-stage NLP pipeline is constructed: (1) data collection and structuring; (2) multilingual preprocessing including Armenian-to-English translation of 691 YSU course records; (3) automated skill extraction using TF-IDF and KeyBERT (all-MiniLM-L6-v2); (4) normalization of extracted skill phrases against the ESCO v1.2 taxonomy via cosine similarity; and (5) alignment analysis producing per-program coverage rates, gap sets, and surplus sets.
 
-Pre-ESCO baseline results indicate a raw string overlap of 6.4% (TF-IDF) and 0.26% (KeyBERT) between curriculum and job market skill vocabularies — figures that substantially underestimate true alignment due to synonymous phrasing. ESCO normalization is expected to consolidate these into a higher, more meaningful alignment estimate. Sensitivity analyses confirm a 5× coverage advantage for programs with full course descriptions (AUA) over name-only programs (YSU), and a 44% soft recall against human-curated skill tags from 151 job postings. Key skill gaps identified include DevOps tooling (Docker, Kubernetes, CI/CD), cloud infrastructure, and modern backend frameworks; key curriculum-only content includes general-education subjects (philosophy, history, foreign languages) and theoretical mathematics courses with limited direct market relevance in the current job postings sample.
+Pre-ESCO baseline results indicate a raw string overlap of 6.4% (TF-IDF) and 0.26% (KeyBERT) between curriculum and job market skill vocabularies — figures that substantially underestimate true alignment due to synonymous phrasing. After ESCO normalization, coverage rises to 25.2% (TF-IDF) and 20.3% (KeyBERT), with a union estimate of 25.7%. The overlap is dominated by knowledge concepts (70%) over applied competences (30%), while the gap is predominantly applied (51%), indicating that curricula cover relevant subject domains but fall short on practice-oriented content. Sensitivity analyses confirm a 5× coverage advantage for programs with full course descriptions (AUA) over name-only programs (YSU), and a 44% soft recall against human-curated skill tags from 151 job postings. Key skill gaps include DevOps tooling (Docker, Kubernetes, CI/CD), cloud infrastructure (AWS, Azure), and modern web frameworks (React, TypeScript); key curriculum-only content includes general-education subjects (philosophy, history, foreign languages) and theoretical mathematics with limited direct market relevance.
 
 The thesis contributes: a reusable methodology for curriculum–labor market alignment analysis in multilingual, data-scarce contexts; the first structured IT curriculum dataset for Armenian higher education; and an evidence base for targeted curriculum reform in a rapidly growing IT sector that has not previously been studied at this scale or precision.
 
@@ -38,13 +18,6 @@ The thesis contributes: a reusable methodology for curriculum–labor market ali
 *Program: [program name]*
 *Institution: [institution]*
 *Year: 2026*
-
-
-
----
-
-
-
 # Chapter 1: Introduction
 
 ## 1.1 Background and Motivation
@@ -61,9 +34,9 @@ At the heart of this research is the lack of structured, data-driven analysis re
 
 The primary goal of this thesis is to provide a quantitative assessment of how well Armenian university IT curricula match the current demands of the domestic job market. To achieve this, the following objectives have been established:
 
-1. To build a structured curriculum dataset by collecting and processing data from 26 programs across four major Armenian universities: Yerevan State University (YSU), the American University of Armenia (AUA), the National University of Architecture and Construction of Armenia (NUACA), and the Russian-Armenian University (RAU).
-2. To aggregate a comprehensive job market dataset from 11 diverse sources, including job aggregators (LinkedIn, Staff.am, job.am) and direct company career portals (EPAM, SoftConstruct, Picsart, Krisp, and others), covering 1,348 postings active in Armenia as of March 2026.
-3. To implement a Natural Language Processing (NLP) pipeline for automated skill extraction from 1,161 curriculum records and 1,348 job postings, handling multilingual content (Armenian, English, and Russian).
+1. To build a structured curriculum dataset by collecting and processing data from 25 programs across four major Armenian universities: Yerevan State University (YSU), the American University of Armenia (AUA), the National University of Architecture and Construction of Armenia (NUACA), and the Russian-Armenian University (RAU).
+2. To aggregate a comprehensive job market dataset from 11 diverse sources, including job aggregators (LinkedIn, Staff.am, job.am) and direct company career portals (EPAM, SoftConstruct, Picsart, Krisp, and others), covering 1,068 postings active in Armenia as of March 2026 after deduplication.
+3. To implement a Natural Language Processing (NLP) pipeline for automated skill extraction from 1,161 curriculum records and 1,068 job postings, handling multilingual content (Armenian, English, and Russian).
 4. To define and compute alignment metrics — including skill coverage rate, gap sets, and surplus sets — that objectively measure the overlap between educational content and industry demand.
 
 ## 1.4 Research Questions
@@ -81,7 +54,7 @@ This thesis makes the following contributions to the field:
 
 1. **First computational alignment study for Armenian IT education.** To the best of the author's knowledge, this is the first study to apply automated skill extraction and taxonomy-based alignment analysis to Armenian university curricula and job market data jointly.
 
-2. **Multi-source job dataset.** By aggregating 1,348 postings from 11 distinct sources—combining broad aggregators with direct employer portals—this research provides a more representative picture of the Armenian IT labor market than any single-source approach.
+2. **Multi-source job dataset.** By aggregating 1,068 deduplicated postings from 11 distinct sources—combining broad aggregators with direct employer portals—this research provides a more representative picture of the Armenian IT labor market than any single-source approach.
 
 3. **Multilingual NLP pipeline.** The methodology is designed to address the challenge of Armenian-language curriculum data (691 of 1,161 course records) alongside English and Russian sources, providing a replicable model for curriculum alignment research in other non-English educational contexts.
 
@@ -101,6 +74,8 @@ The remainder of this thesis is organized as follows. Chapter 2 reviews current 
 
 ---
 
+*[DRAFT STATUS: citations are indicated by author/year — full references to be formatted in final bibliography. ⚠️ = verify before submission.]*
+
 *Citation checklist for this chapter:*
 - *Kupets (2016) — IZA World of Labor, verified ✓*
 - *World Economic Forum (2025) — Future of Jobs Report, verified ✓*
@@ -108,14 +83,9 @@ The remainder of this thesis is organized as follows. Chapter 2 reviews current 
 - *Almaleh et al. (2019) — Sustainability, verified ✓*
 - *Biggs & Tang (2011) — Teaching for Quality Learning, verified ✓*
 - *ANQA — Armenian National Quality Assurance body, add URL in references*
-
-
-
----
-
-
-
 # Chapter 2: Literature Review
+
+*[DRAFT STATUS — substantive skeleton. Send to Gemini for tone/flow polish after review.]*
 
 ---
 
@@ -222,14 +192,9 @@ This thesis fills that gap by constructing the first large-scale, multi-source, 
 - *Amirova & Valiyev (2021) — Journal of Teaching and Learning for Graduate Employability, verified ✓*
 - *Biggs & Tang (2011) — Teaching for Quality Learning, verified ✓*
 - *Autor, Levy & Murnane (2003) — Quarterly Journal of Economics, verified ✓*
-
-
-
----
-
-
-
 # Chapter 3: Theoretical Framework
+
+*[DRAFT STATUS — substantive skeleton. Send to Gemini for tone/flow polish after review.]*
 
 ---
 
@@ -319,14 +284,9 @@ Taken together, these frameworks position this thesis as a study that is simulta
 - *Autor, Levy & Murnane (2003) — Quarterly Journal of Economics, verified ✓*
 - *European Commission (2023) — ESCO — add URL and version reference*
 - *SFIA Foundation (2021) — sfia-online.org — add URL in references*
-
-
-
----
-
-
-
 # Chapter 4: Data and Methodology
+
+*[DRAFT STATUS — substantive skeleton with accurate numbers. Send to Gemini for tone/flow polish after review.]*
 
 ---
 
@@ -760,13 +720,6 @@ The scope filter applied to YSU data retained 13 programs and excluded 6 non-IT 
 - *Reimers & Gurevych (2019) — Sentence-BERT, EMNLP, verified ✓*
 - *European Commission (2023) — ESCO v1.2 — add version and URL*
 - *Chiarello et al. (2021) — Technological Forecasting and Social Change, verified ✓*
-
-
-
----
-
-
-
 # Chapter 5: Results
 
 ---
@@ -1138,13 +1091,6 @@ The sensitivity analyses confirm that: (a) programs with richer description data
 
 *Citation checklist for this chapter:*
 - *Ahadi et al. (2022) — EDM 2022, for soft recall comparison — verified ✓*
-
-
-
----
-
-
-
 # Chapter 6: Discussion
 
 ---
@@ -1311,22 +1257,13 @@ Students in NUACA and RAU programs, whose institutional alignment scores are mos
 - *Gilardi et al. (2023) — LLM-as-annotator ✓*
 - *He et al. (2024) — LLM annotation quality ✓*
 - *ANQA — Armenian National Quality Assurance body — add URL in references*
-
-
-
----
-
-
-
 # Chapter 7: Conclusion
-
----
 
 ## 7.1 Summary of the Study
 
 This thesis set out to answer one question: how well do Armenian IT university curricula align with the skill demands of the Armenian IT labor market? To answer it, a five-stage NLP pipeline was constructed, applied to a purpose-built dataset of 1,161 curriculum courses from 25 programs across four universities and 1,068 unique job postings from 11 sources — the first dataset of its kind for the Armenian context.
 
-The pipeline produced two types of results. The first is a pre-ESCO baseline: a raw string-level overlap of 6.4% (TF-IDF) between the curriculum and job market skill vocabularies. This figure is a lower bound, suppressed by the synonymous phrasing problem that ESCO normalization is designed to resolve. The second type — ESCO-normalized per-program alignment scores — is the primary output of the study and will be finalized after the manual calibration step is complete.
+The pipeline produced two types of results. The first is a pre-ESCO baseline: a raw string-level overlap of 6.4% (TF-IDF) and 0.26% (KeyBERT) between the curriculum and job market skill vocabularies — a lower bound suppressed by synonymous phrasing. After applying a calibrated ESCO similarity threshold of 0.75 (F1=0.711, validated against 293 annotated pairs), coverage rises to 25.2% (TF-IDF) and 20.3% (KeyBERT), with a union estimate of 25.7%. The best-performing program — AUA Computer and Information Science (Master) — covers 9.1% of employer-demanded ESCO concepts; the weakest — NUACA Geographic Information Systems (Master) — covers 0.57%.
 
 Regardless of the exact ESCO-normalized figure, the structural findings are clear:
 
@@ -1396,13 +1333,6 @@ The tools to close this gap exist: the technology is widely available and well-d
 - *Kupets (2016) — IZA World of Labor, verified ✓*
 - *Zhang et al. (2022) — SkillSpan, NAACL, verified ✓*
 - *ANQA — Armenian National Quality Assurance body — add URL in references*
-
-
-
----
-
-
-
 # References
 
 *[DRAFT — all citations marked ✓ in chapter checklists are included below. Format to be confirmed with supervisor (APA 7th edition assumed). Entries marked ⚠️ need URL or DOI added.]*
@@ -1478,8 +1408,3 @@ The tools to close this gap exist: the technology is widely available and well-d
 ---
 
 *Total references: ~25 academic + data/tool citations. Cross-check all DOIs before final submission.*
-
-
-
----
-

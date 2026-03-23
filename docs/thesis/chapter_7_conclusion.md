@@ -1,14 +1,10 @@
 # Chapter 7: Conclusion
 
-*[DRAFT STATUS — structure complete. Finalize after ESCO normalization and per-program results are available.]*
-
----
-
 ## 7.1 Summary of the Study
 
 This thesis set out to answer one question: how well do Armenian IT university curricula align with the skill demands of the Armenian IT labor market? To answer it, a five-stage NLP pipeline was constructed, applied to a purpose-built dataset of 1,161 curriculum courses from 25 programs across four universities and 1,068 unique job postings from 11 sources — the first dataset of its kind for the Armenian context.
 
-The pipeline produced two types of results. The first is a pre-ESCO baseline: a raw string-level overlap of 6.4% (TF-IDF) between the curriculum and job market skill vocabularies. This figure is a lower bound, suppressed by the synonymous phrasing problem that ESCO normalization is designed to resolve. The second type — ESCO-normalized per-program alignment scores — is the primary output of the study and will be finalized after the manual calibration step is complete.
+The pipeline produced two types of results. The first is a pre-ESCO baseline: a raw string-level overlap of 6.4% (TF-IDF) and 0.26% (KeyBERT) between the curriculum and job market skill vocabularies — a lower bound suppressed by synonymous phrasing. After applying a calibrated ESCO similarity threshold of 0.75 (F1=0.711, validated against 293 annotated pairs), coverage rises to 25.2% (TF-IDF) and 20.3% (KeyBERT), with a union estimate of 25.7%. The best-performing program — AUA Computer and Information Science (Master) — covers 9.1% of employer-demanded ESCO concepts; the weakest — NUACA Geographic Information Systems (Master) — covers 0.57%.
 
 Regardless of the exact ESCO-normalized figure, the structural findings are clear:
 
