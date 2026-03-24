@@ -1,0 +1,127 @@
+role,n_jobs,rank,skill,doc_count,pct_of_role,source
+DevOps / Cloud,40,1,DevOps,7,17.5,ESCO
+DevOps / Cloud,40,2,security threats,6,15.0,ESCO
+DevOps / Cloud,40,3,cloud technologies,5,12.5,ESCO
+DevOps / Cloud,40,4,Kubernetes,5,12.5,Tech
+DevOps / Cloud,40,5,automation technology,4,10.0,ESCO
+DevOps / Cloud,40,6,Terraform,4,10.0,Tech
+DevOps / Cloud,40,7,Amazon Web Services,4,10.0,Tech
+DevOps / Cloud,40,8,sales activities,3,7.5,ESCO
+DevOps / Cloud,40,9,migration,3,7.5,ESCO
+DevOps / Cloud,40,10,database,3,7.5,ESCO
+DevOps / Cloud,40,11,Microsoft Azure,3,7.5,Tech
+DevOps / Cloud,40,12,woodworking tools,2,5.0,ESCO
+DevOps / Cloud,40,13,data storage,2,5.0,ESCO
+DevOps / Cloud,40,14,solution deployment,2,5.0,ESCO
+DevOps / Cloud,40,15,Oracle Relational Database,2,5.0,ESCO
+Data / ML / AI,58,1,LLM / GenAI,9,15.5,Tech
+Data / ML / AI,58,2,data models,7,12.1,ESCO
+Data / ML / AI,58,3,data science,7,12.1,ESCO
+Data / ML / AI,58,4,Microsoft Azure,5,8.6,Tech
+Data / ML / AI,58,5,data engineering,3,5.2,ESCO
+Data / ML / AI,58,6,SQL,3,5.2,ESCO
+Data / ML / AI,58,7,data analytics,3,5.2,ESCO
+Data / ML / AI,58,8,computer vision,3,5.2,ESCO
+Data / ML / AI,58,9,deal cards,2,3.4,ESCO
+Data / ML / AI,58,10,Oracle Relational Database,2,3.4,ESCO
+Data / ML / AI,58,11,government policy,2,3.4,ESCO
+Data / ML / AI,58,12,financial forecasting,2,3.4,ESCO
+Data / ML / AI,58,13,marketing management,2,3.4,ESCO
+Data / ML / AI,58,14,software frameworks,2,3.4,ESCO
+Data / ML / AI,58,15,perform data analysis,2,3.4,ESCO
+Backend,117,1,PHP,13,11.1,ESCO
+Backend,117,2,Node.js,12,10.3,Tech
+Backend,117,3,architectural design,9,7.7,ESCO
+Backend,117,4,software frameworks,9,7.7,ESCO
+Backend,117,5,Microsoft Azure,9,7.7,Tech
+Backend,117,6,Java (computer programming),8,6.8,ESCO
+Backend,117,7,Amazon Web Services,8,6.8,Tech
+Backend,117,8,ASP.NET,6,5.1,ESCO
+Backend,117,9,Python (computer programming),6,5.1,ESCO
+Backend,117,10,Go (Golang),6,5.1,Tech
+Backend,117,11,database,5,4.3,ESCO
+Backend,117,12,Agile development,5,4.3,ESCO
+Backend,117,13,Microservices,5,4.3,Tech
+Backend,117,14,NoSQL,4,3.4,ESCO
+Backend,117,15,Angular,4,3.4,ESCO
+Frontend / JS,34,1,React,14,41.2,Tech
+Frontend / JS,34,2,TypeScript,8,23.5,ESCO
+Frontend / JS,34,3,JavaScript,7,20.6,ESCO
+Frontend / JS,34,4,CSS,5,14.7,ESCO
+Frontend / JS,34,5,Angular,5,14.7,ESCO
+Frontend / JS,34,6,solution deployment,3,8.8,ESCO
+Frontend / JS,34,7,property law,3,8.8,ESCO
+Frontend / JS,34,8,architectural design,2,5.9,ESCO
+Frontend / JS,34,9,software frameworks,2,5.9,ESCO
+Frontend / JS,34,10,real estate market,2,5.9,ESCO
+Frontend / JS,34,11,mortgage loans,2,5.9,ESCO
+Frontend / JS,34,12,canvassing methods,2,5.9,ESCO
+Frontend / JS,34,13,computer programming,2,5.9,ESCO
+Frontend / JS,34,14,use software libraries,2,5.9,ESCO
+Frontend / JS,34,15,deep learning,1,2.9,ESCO
+Full Stack,26,1,React,7,26.9,Tech
+Full Stack,26,2,architectural design,5,19.2,ESCO
+Full Stack,26,3,Node.js,4,15.4,Tech
+Full Stack,26,4,perform fundraising activities,2,7.7,ESCO
+Full Stack,26,5,TypeScript,2,7.7,ESCO
+Full Stack,26,6,automation technology,2,7.7,ESCO
+Full Stack,26,7,Go (Golang),2,7.7,Tech
+Full Stack,26,8,Docker,2,7.7,Tech
+Full Stack,26,9,software frameworks,1,3.8,ESCO
+Full Stack,26,10,deploy cloud resource,1,3.8,ESCO
+Full Stack,26,11,solution deployment,1,3.8,ESCO
+Full Stack,26,12,manage vessel fleet,1,3.8,ESCO
+Full Stack,26,13,JavaScript Framework,1,3.8,ESCO
+Full Stack,26,14,process payments,1,3.8,ESCO
+Full Stack,26,15,digital systems,1,3.8,ESCO
+Mobile,8,1,Android (mobile operating systems),4,50.0,ESCO
+Mobile,8,2,iOS,3,37.5,ESCO
+Mobile,8,3,provide mentorship,1,12.5,ESCO
+Mobile,8,4,architectural design,1,12.5,ESCO
+Mobile,8,5,Swift (computer programming),1,12.5,ESCO
+Mobile,8,6,Java (computer programming),1,12.5,ESCO
+QA / Testing,48,1,automation technology,18,37.5,ESCO
+QA / Testing,48,2,TypeScript,5,10.4,ESCO
+QA / Testing,48,3,software frameworks,4,8.3,ESCO
+QA / Testing,48,4,develop automated software tests,3,6.2,ESCO
+QA / Testing,48,5,Android (mobile operating systems),3,6.2,ESCO
+QA / Testing,48,6,algorithms,2,4.2,ESCO
+QA / Testing,48,7,maintain privacy,2,4.2,ESCO
+QA / Testing,48,8,geometry,2,4.2,ESCO
+QA / Testing,48,9,tracking principles,2,4.2,ESCO
+QA / Testing,48,10,label samples,2,4.2,ESCO
+QA / Testing,48,11,iOS,2,4.2,ESCO
+QA / Testing,48,12,orchestrate music,2,4.2,ESCO
+QA / Testing,48,13,Apache Maven,2,4.2,ESCO
+QA / Testing,48,14,web based collaborative platforms,2,4.2,ESCO
+QA / Testing,48,15,Java (computer programming),2,4.2,ESCO
+Security,14,1,security threats,14,100.0,ESCO
+Security,14,2,cyber security,4,28.6,ESCO
+Security,14,3,handle incidents,4,28.6,ESCO
+Security,14,4,security engineering,3,21.4,ESCO
+Security,14,5,use access control software,2,14.3,ESCO
+Security,14,6,manage accounts,2,14.3,ESCO
+Security,14,7,control systems,2,14.3,ESCO
+Security,14,8,Serbian,1,7.1,ESCO
+Security,14,9,audit techniques,1,7.1,ESCO
+Security,14,10,logging,1,7.1,ESCO
+Security,14,11,implement a firewall,1,7.1,ESCO
+Security,14,12,internal auditing,1,7.1,ESCO
+Security,14,13,assess risk factors,1,7.1,ESCO
+Security,14,14,good governance,1,7.1,ESCO
+Security,14,15,law enforcement,1,7.1,ESCO
+Hardware / Embedded,15,1,design hardware,5,33.3,ESCO
+Hardware / Embedded,15,2,debug software,2,13.3,ESCO
+Hardware / Embedded,15,3,use scripting programming,2,13.3,ESCO
+Hardware / Embedded,15,4,synthesise information,2,13.3,ESCO
+Hardware / Embedded,15,5,audio technology,1,6.7,ESCO
+Hardware / Embedded,15,6,plant trees,1,6.7,ESCO
+Hardware / Embedded,15,7,maintain power plants,1,6.7,ESCO
+Hardware / Embedded,15,8,energy,1,6.7,ESCO
+Hardware / Embedded,15,9,robotics,1,6.7,ESCO
+Hardware / Embedded,15,10,make drawings,1,6.7,ESCO
+Hardware / Embedded,15,11,dies,1,6.7,ESCO
+Hardware / Embedded,15,12,scan photos,1,6.7,ESCO
+Hardware / Embedded,15,13,theory of constraints,1,6.7,ESCO
+Hardware / Embedded,15,14,interpreting modes,1,6.7,ESCO
+Hardware / Embedded,15,15,logic,1,6.7,ESCO

@@ -1,0 +1,61 @@
+rank,skill,doc_count,source,pct_of_it_jobs
+1,Python,126,ESCO,35.0
+2,CI/CD,110,Tech,30.6
+3,Amazon Web Services,100,Tech,27.8
+4,Docker,76,Tech,21.1
+5,Kubernetes,75,Tech,20.8
+6,Microsoft Azure,69,Tech,19.2
+7,DevOps,68,ESCO,18.9
+8,TypeScript,64,Tech,17.8
+9,Google Cloud,64,Tech,17.8
+10,React,63,Tech,17.5
+11,Node.js,50,Tech,13.9
+12,database,49,ESCO,13.6
+13,.NET / C#,49,Tech,13.6
+14,PostgreSQL,48,Tech,13.3
+15,Java,43,ESCO,11.9
+16,Microservices,39,Tech,10.8
+17,LLM / GenAI,34,Tech,9.4
+18,Kafka,33,Tech,9.2
+19,Redis,32,Tech,8.9
+20,Terraform,30,Tech,8.3
+21,algorithms,29,ESCO,8.1
+22,Jenkins,28,ESCO,7.8
+23,MySQL,27,Tech,7.5
+24,computer programming,26,ESCO,7.2
+25,machine learning,25,ESCO,6.9
+26,process data,23,ESCO,6.4
+27,digital data processing,22,ESCO,6.1
+28,GitLab CI/CD,21,Tech,5.8
+29,cloud technologies,19,ESCO,5.3
+30,cyber security,19,ESCO,5.3
+31,data science,18,ESCO,5.0
+32,MongoDB,18,Tech,5.0
+33,automation technology,17,ESCO,4.7
+34,PyTorch,17,Tech,4.7
+35,Android,17,ESCO,4.7
+36,GraphQL,17,Tech,4.7
+37,Go (Golang),16,Tech,4.4
+38,Agile development,13,ESCO,3.6
+39,data engineering,12,ESCO,3.3
+40,web services,10,ESCO,2.8
+41,data models,10,ESCO,2.8
+42,data protection,10,ESCO,2.8
+43,data analytics,10,ESCO,2.8
+44,unstructured data,10,ESCO,2.8
+45,TensorFlow,10,Tech,2.8
+46,REST API,10,Tech,2.8
+47,Spring Framework,9,Tech,2.5
+48,Ruby,8,ESCO,2.2
+49,Elasticsearch,7,Tech,1.9
+50,Ansible,7,Tech,1.9
+51,data warehouse,6,ESCO,1.7
+52,Vue.js,6,Tech,1.7
+53,ML,5,ESCO,1.4
+54,database management systems,5,ESCO,1.4
+55,blockchain,5,ESCO,1.4
+56,Swift,5,ESCO,1.4
+57,data storage,4,ESCO,1.1
+58,operating systems,4,ESCO,1.1
+59,cloud security and compliance,4,ESCO,1.1
+60,network engineering,3,ESCO,0.8
