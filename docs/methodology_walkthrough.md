@@ -232,14 +232,67 @@ Note: coverage percentages are share of job-market ESCO concepts covered by the 
 
 ---
 
-## Stage 6: Final Alignment Analysis (upcoming)
+## Stage 6: Final Alignment Analysis
 
-Detailed analysis notebook (`06_alignment_analysis.ipynb`) will produce:
+`06_alignment_analysis.ipynb` — completed. Produces all result tables, charts, and skill frequency analyses.
 
-1. Full per-program ranking with confidence intervals
-2. Skill gap breakdown by category (programming, soft skills, domain tools)
-3. University-level and degree-level comparisons
-4. Visualizations for thesis Chapter 5
+### Steps 1–10: Alignment metrics, gap/surplus, emerging tech
+
+- Per-program and university-level coverage tables
+- Gap analysis: top 50 ESCO concepts demanded by employers but absent from curricula
+- Surplus analysis: curriculum content with no job market counterpart
+- Emerging tech skills (beyond ESCO v1.2): Docker, Kubernetes, React, TypeScript, AWS, CI/CD, etc., matched via a curated tech lexicon using direct regex search on raw job text
+
+### Step 11: Skill demand by job role
+
+Job postings are classified into 9 IT roles by keyword matching on job title:
+
+| Role | Jobs |
+|---|---:|
+| Backend | 117 |
+| Data / ML / AI | 58 |
+| QA / Testing | 48 |
+| DevOps / Cloud | 40 |
+| Frontend / JS | 34 |
+| Full Stack | 26 |
+| Security | 14 |
+| Hardware / Embedded | 15 |
+| Mobile | 8 |
+
+For each role, top 15 skills are computed using **direct text search** on raw job descriptions — not TF-IDF extraction. This avoids the IDF frequency bias that suppresses common terms like Python.
+
+Output: `data/processed/esco/skills_by_role.csv`
+
+### Step 12: Overall skill frequency
+
+Top 60 skills across all IT job postings, combining:
+- ESCO concepts: all 760 IT-relevant ESCO concepts (filtered by IT-domain label keywords) searched via `preferredLabel` + `altLabels` regex match on raw text
+- Tech lexicon: 30+ modern tools absent from ESCO v1.2, searched directly
+
+ESCO concepts take priority over tech lexicon entries when both cover the same skill (case-insensitive dedup).
+
+**Top 10 most demanded skills (360 IT job postings):**
+
+| Rank | Skill | % of IT jobs |
+|---:|---|---:|
+| 1 | Python | 35.0% |
+| 2 | CI/CD | 30.6% |
+| 3 | Amazon Web Services | 27.8% |
+| 4 | Docker | 21.1% |
+| 5 | Kubernetes | 20.8% |
+| 6 | ICT project management methodologies | 19.4% |
+| 7 | Microsoft Azure | 19.2% |
+| 8 | DevOps | 18.9% |
+| 9 | TypeScript | 17.8% |
+| 10 | Google Cloud | 17.8% |
+
+Output: `data/processed/esco/skill_frequency_overall.csv`
+
+### Excluded courses
+
+28 courses (2.4% of 1,161) were excluded from skill extraction due to having ≤10 characters of text (name-only entries with no description). These are mostly NUACA general-education courses (Physics, Philosophy, Management, Practice) and RAU general subjects. No IT-relevant courses were lost.
+
+Full list: `data/processed/skills/excluded_courses.csv`
 
 ---
 
@@ -265,7 +318,8 @@ thesis_data/
 │   │       ├── keybert_curriculum_skills.json   ← KeyBERT phrases per course
 │   │       ├── keybert_jobs_skills.json         ← KeyBERT phrases per job
 │   │       ├── method_comparison.csv           ← side-by-side metrics
-│   │       └── alignment_details.json          ← full overlap/gap/surplus lists
+│   │       ├── alignment_details.json          ← full overlap/gap/surplus lists
+│   │       └── excluded_courses.csv            ← 28 courses excluded (≤10 chars text)
 │
 ├── notebooks/
 │   ├── 1_collection_jobs/              Per-source scraping notebooks (01–12) + merge (13)
