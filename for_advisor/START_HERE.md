@@ -25,6 +25,7 @@ The goal is to identify overlap, gaps, and mismatches in a structured and reprod
 - ESCO normalization: all phrases mapped to ESCO v1.2 concept identifiers
 - Final alignment analysis: per-program coverage, gap/surplus breakdown, visualizations
 - Emerging tech skills analysis: modern tools beyond ESCO vocabulary identified
+- Skill frequency analysis: top 60 demanded skills overall + top 15 per role (9 IT roles)
 - Thesis Chapter 5 (Results): fully written with all results
 
 ## What Is Still In Progress

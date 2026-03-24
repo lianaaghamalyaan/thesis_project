@@ -16,6 +16,7 @@ The current status is:
 - ESCO normalization completed ✓
 - Final alignment analysis completed (per-program, by university, by degree, gap/surplus) ✓
 - Emerging tech skills analysis completed ✓
+- Skill frequency analysis completed (top 60 overall + top 15 per role, 9 IT roles) ✓
 - Chapter 5 (Results) written ✓
 - Chapter 6 (Discussion) — in progress
 - Chapter 7 (Conclusion) — in progress
@@ -126,18 +127,22 @@ Coverage improved from 6.4% → 25.2% (TF-IDF) and 0.26% → 20.3% (KeyBERT) aft
 
 Per-program coverage ranges from 9.1% (AUA Computer and Information Science, Master) to 0.6% (NUACA GIS, Master). AUA leads consistently due to richer course descriptions.
 
-## Main Open Step
+## Completed Analytical Work
 
-The ESCO-normalized alignment metrics are now produced. The remaining work is the final analysis notebook (`06_alignment_analysis.ipynb`) which will add visualizations, per-category breakdowns, and the interpretation layer for thesis Chapter 5.
+The full pipeline is complete. The project has:
 
-The project currently has:
-
-- a valid baseline
-- a valid extraction comparison
-- a valid validation section
+- a valid baseline (pre-ESCO string-level overlap)
+- a valid extraction comparison (TF-IDF vs KeyBERT)
+- a valid validation section (sensitivity analysis, human-curated tag recall)
 - a calibrated ESCO threshold (0.75, F1=0.711)
 - normalized alignment results at the concept level
 - per-program coverage scores for all 25 programs
+- skill frequency ranking (top 60 overall, top 15 per role across 9 IT roles)
+- all outputs saved to `data/processed/esco/` and `data/processed/skills/`
+
+## Main Open Step
+
+Thesis write-up — Chapters 6 (Discussion) and 7 (Conclusion) are in progress.
 
 ## Main Current Limitations
 
