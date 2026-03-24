@@ -22,7 +22,7 @@ Regardless of the exact ESCO-normalized figure, the structural findings are clea
 
 This thesis makes four contributions.
 
-**Contribution 1: First computational alignment study for Armenian IT education.** No prior study has applied automated skill extraction and taxonomy-based alignment analysis to Armenian university curricula and job market data jointly. This fills a decade-old gap in the evidence base for Armenian higher education policy, updating and extending the survey-based findings of Kupets (2016) with contemporaneous, program-level data.
+**Contribution 1: First computational alignment study for Armenian IT education.** No prior study has applied automated skill extraction and taxonomy-based alignment analysis to Armenian university curricula and job market data jointly. This fills a decade-old gap in the evidence base for Armenian higher education policy, updating and extending the survey-based findings of Kupets [2] with contemporaneous, program-level data.
 
 **Contribution 2: Multi-source Armenian IT job market dataset.** The job market dataset aggregates 1,068 unique postings from 11 sources — three aggregators and eight company portals — collected and deduplicated in March 2026. No comparable multi-source Armenian IT job dataset appears to exist in the literature. The dataset, pipeline, and documentation are archived for reproducibility and future extension.
 
@@ -54,7 +54,7 @@ Several directions emerge naturally from this work.
 
 **Longitudinal tracking.** This study is a cross-sectional snapshot. A longitudinal study collecting job posting data annually over 3–5 years would reveal whether the skill gap is growing (curricula falling further behind accelerating technology change) or shrinking (curriculum updates beginning to close the gap). It would also allow tracking of emerging skill categories like generative AI tools.
 
-**Supervised skill extraction.** The 44% recall ceiling of TF-IDF extraction could be raised substantially by training a supervised NER model on Armenian-domain labeled data. The SkillSpan annotation framework (Zhang et al., 2022) provides a replicable methodology; the main obstacle is obtaining labeled Armenian curriculum and job market sentences, which could be achieved with a crowdsourced annotation effort.
+**Supervised skill extraction.** The 44% recall ceiling of TF-IDF extraction could be raised substantially by training a supervised NER model on Armenian-domain labeled data. The SkillSpan annotation framework [10] provides a replicable methodology; the main obstacle is obtaining labeled Armenian curriculum and job market sentences, which could be achieved with a crowdsourced annotation effort.
 
 **Student-level outcomes.** This thesis measures what curricula teach and what employers demand. A natural extension is to measure what graduates actually know (via competence assessment), allowing triangulation: the gap between teaching and demand, and the additional gap between teaching and graduate competence. This would make constructive alignment failures directly observable at the individual level.
 
@@ -70,7 +70,4 @@ The tools to close this gap exist: the technology is widely available and well-d
 
 ---
 
-*Citation checklist for this chapter:*
-- *Kupets (2016) — IZA World of Labor, verified ✓*
-- *Zhang et al. (2022) — SkillSpan, NAACL, verified ✓*
-- *ANQA — Armenian National Quality Assurance body — add URL in references*
+**Chapter references:** [2] Kupets (2016) · [10] Zhang et al. (2022)

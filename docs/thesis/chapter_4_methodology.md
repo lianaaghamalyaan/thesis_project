@@ -1,9 +1,5 @@
 # Chapter 4: Data and Methodology
 
-*[DRAFT STATUS — substantive skeleton with accurate numbers. Send to Gemini for tone/flow polish after review.]*
-
----
-
 ## 4.1 Research Design
 
 This thesis employs a quantitative, data-driven comparative study design. The central methodology is corpus analysis: two text corpora — one representing university curricula and one representing the labor market — are processed through a Natural Language Processing pipeline to extract skill profiles, which are then compared using alignment metrics. This design is cross-sectional: all data reflects a single point in time (March 2026) rather than a longitudinal trajectory.
@@ -19,9 +15,11 @@ Stage 5: Normalization       → ESCO taxonomy matching
 Stage 6: Alignment Analysis  → coverage rate, gap sets, surplus sets
 ```
 
-This design is consistent with the methodological precedent established by Almaleh et al. (2019), who applied a comparable two-corpus computational framework in the Saudi Arabian context. The present study extends that precedent by using a multi-source job dataset, a multilingual curriculum corpus, and a standardized EU skill taxonomy (ESCO) as the normalization target.
+This design is consistent with the methodological precedent established by Almaleh et al. [4], who applied a comparable two-corpus computational framework in the Saudi Arabian context. The present study extends that precedent by using a multi-source job dataset, a multilingual curriculum corpus, and a standardized EU skill taxonomy (ESCO) as the normalization target.
 
 All data collection, processing, and analysis steps were implemented in Python (version 3.11) using Jupyter notebooks. The full pipeline is archived in the project repository alongside the datasets, enabling end-to-end reproducibility.
+
+> **[Figure 4.1 — NLP Pipeline Overview]** *Insert pipeline flowchart here. See `docs/thesis/FIGURE_PLACEMENT_GUIDE.md` for specifications.*
 
 ---
 
@@ -191,13 +189,21 @@ A manual spot-check of 50 randomly selected translated course names confirmed ac
 
 Skill extraction — identifying skill-denoting phrases in free text — is the methodologically critical step in this pipeline. Two unsupervised approaches were implemented and compared as baselines before ESCO normalization:
 
-**TF-IDF keyword extraction** uses term frequency–inverse document frequency weighting (sklearn `TfidfVectorizer`) to identify terms that are distinctive to a given document relative to the corpus. It operates at corpus scale, treating the entire curriculum or job market corpus as the reference distribution, and selects n-grams whose TF-IDF weight ranks highest for each individual document. This method captures terminology that is specific to individual courses or postings rather than terminology common across the corpus.
+**TF-IDF keyword extraction** uses term frequency–inverse document frequency weighting (sklearn `TfidfVectorizer`) [19] to identify terms that are distinctive to a given document relative to the corpus. It operates at corpus scale, treating the entire curriculum or job market corpus as the reference distribution, and selects n-grams whose TF-IDF weight ranks highest for each individual document. For a term $t$ in document $d$ drawn from corpus $D$, the TF-IDF weight is:
 
-**KeyBERT** (Grootendorst, 2020) uses a sentence transformer to represent the full document as an embedding, then ranks candidate n-grams by their cosine similarity to the document embedding — identifying the phrases that best represent the semantic content of the text. This approach handles short texts well (a course name of five words is sufficient) and requires no domain-specific training data.
+$$\text{TF-IDF}(t, d, D) = \frac{f_{t,d}}{\displaystyle\sum_{t' \in d} f_{t',d}} \cdot \log\frac{|D| + 1}{1 + |\{d' \in D : t \in d'\}|}$$
+
+where $f_{t,d}$ is the raw count of term $t$ in document $d$. This method captures terminology that is specific to individual courses or postings rather than terminology common across the corpus.
+
+**KeyBERT** [9] uses a sentence transformer to represent the full document as an embedding, then ranks candidate n-grams by their cosine similarity to the document embedding — identifying the phrases that best represent the semantic content of the text. For candidate phrase $p$ and document $d$, cosine similarity is:
+
+$$\text{sim}(p, d) = \frac{\mathbf{e}_p \cdot \mathbf{e}_d}{\|\mathbf{e}_p\| \cdot \|\mathbf{e}_d\|}$$
+
+where $\mathbf{e}_p$ and $\mathbf{e}_d$ are the phrase and document embeddings produced by the sentence transformer. This approach handles short texts well (a course name of five words is sufficient) and requires no domain-specific training data.
 
 Both methods were applied to all 1,161 curriculum documents and all 1,068 job postings, enabling comparison of their alignment metrics prior to ESCO normalization.
 
-The sentence transformer model for KeyBERT is `all-MiniLM-L6-v2` (Wang et al., 2020), a lightweight English model (22M parameters). This model was selected over the larger multilingual alternative (`paraphrase-multilingual-mpnet-base-v2`, 278M parameters) for two reasons: (1) all curriculum text is available in English after the translation step described in Section 4.4, making a multilingual model unnecessary; (2) the smaller model allows the full extraction pipeline to run on a standard laptop without hardware accelerators, within the practical constraints of this project.
+The sentence transformer model for KeyBERT is `all-MiniLM-L6-v2` [12], a lightweight English model (22M parameters) whose architecture builds on Sentence-BERT [11]. This model was selected over the larger multilingual alternative (`paraphrase-multilingual-mpnet-base-v2`, 278M parameters) for two reasons: (1) all curriculum text is available in English after the translation step described in Section 4.4, making a multilingual model unnecessary; (2) the smaller model allows the full extraction pipeline to run on a standard laptop without hardware accelerators, within the practical constraints of this project.
 
 ### 4.5.2 Text Preprocessing for Skill Extraction
 
@@ -242,7 +248,11 @@ keywords = kw_model.extract_keywords(
 )
 ```
 
-Up to 10 skill phrases per document are retained after post-filtering. The `use_mmr=True` parameter applies Maximal Marginal Relevance (Carbonell & Goldstein, 1998) to select diverse top phrases, reducing extraction of near-duplicate variants of the same concept. MMR was preferred over the Max-Sum algorithm (`use_maxsum=True`) for computational efficiency: MMR runs in O(n·k) time per document while MaxSum requires O(n²) pairwise comparisons, making MaxSum impractical at corpus scale on a CPU-only laptop.
+Up to 10 skill phrases per document are retained after post-filtering. The `use_mmr=True` parameter applies Maximal Marginal Relevance (MMR) [17] to select diverse top phrases, reducing extraction of near-duplicate variants of the same concept. At each step, MMR selects the candidate phrase $c_i$ from the remaining set $C \setminus S$ that maximizes:
+
+$$\text{MMR} = \underset{c_i \in C \setminus S}{\arg\max}\left[\lambda \cdot \text{sim}(c_i,\, d) - (1 - \lambda) \cdot \underset{c_j \in S}{\max}\, \text{sim}(c_i,\, c_j)\right]$$
+
+where $S$ is the set of already-selected phrases, $d$ is the document embedding, and $\lambda = 0.5$ balances relevance to the document against redundancy with already-selected phrases. MMR was preferred over the Max-Sum algorithm (`use_maxsum=True`) for computational efficiency: MMR runs in $O(n \cdot k)$ time per document while MaxSum requires $O(n^2)$ pairwise comparisons, making MaxSum impractical at corpus scale on a CPU-only machine.
 
 For course names (typically 3–8 words), the combined course name + description provides sufficient context. For job postings (median ~3,200 characters), the full `full_text` after boilerplate removal is used.
 
@@ -250,11 +260,13 @@ For course names (typically 3–8 words), the combined course name + description
 
 Raw extracted phrases ("machine learning algorithms", "neural network training", "deep learning frameworks") refer to the same conceptual domain but use different surface forms. ESCO normalization maps these to a shared vocabulary of 13,939 standardized skill concepts, enabling direct comparison between curriculum-derived and job-derived skill profiles.
 
-Normalization is performed via cosine similarity matching. The ESCO v1.2 skills dataset (European Commission, 2023) — downloaded as a CSV file for local matching — provides a preferred label and description for each skill concept. Each extracted phrase and each ESCO skill description are encoded using the `all-MiniLM-L6-v2` sentence transformer, and the extracted phrase is mapped to the ESCO concept with the highest cosine similarity score above a threshold of 0.75.
+Normalization is performed via cosine similarity matching. The ESCO v1.2 skills dataset [14] — downloaded as a CSV file for local matching — provides a preferred label and description for each skill concept. Each extracted phrase and each ESCO skill label are encoded using the `all-MiniLM-L6-v2` sentence transformer [12], and the extracted phrase $p$ is mapped to the ESCO concept $e^*$ with the highest cosine similarity above threshold $\tau = 0.75$:
 
-Phrases that do not match any ESCO concept above the threshold are retained as an "emerging skills" set rather than discarded. These unmatched phrases — representing recent technical terminology not yet absorbed by the ESCO taxonomy (e.g., specific cloud service APIs, LLM-related tooling) — are reported separately as a finding in Chapter 5, following the recommendation of Chiarello et al. (2021) who document ESCO's documented lag in coverage of Industry 4.0 skills.
+$$e^*(p) = \underset{e \in \mathcal{E}}{\arg\max}\; \text{sim}(p, e) \qquad \text{subject to}\quad \text{sim}(p, e^*) \geq \tau$$
 
-The threshold of 0.75 is the starting point based on values reported in prior ESCO-matching studies (Decorte et al., 2021; Gnehm et al., 2022). Empirical calibration on a sample of extracted phrases was performed to validate this value; results are reported in Section 4.5.6.
+Phrases that do not match any ESCO concept above the threshold are retained as an "emerging skills" set rather than discarded. These unmatched phrases — representing recent technical terminology not yet absorbed by the ESCO taxonomy (e.g., specific cloud service APIs, LLM-related tooling) — are reported separately as a finding in Chapter 5, following the recommendation of Chiarello et al. [15] who document ESCO's lag in coverage of Industry 4.0 skills.
+
+The threshold $\tau = 0.75$ was selected as a starting point consistent with values reported in prior ESCO-matching studies, then validated empirically through the calibration procedure described in Section 4.5.6.
 
 ### 4.5.5 Baseline Results (Pre-ESCO)
 
@@ -282,11 +294,13 @@ Note: a visual inspection of both output files confirms that the extraction qual
 
 To validate the cosine similarity threshold empirically rather than adopting a value from prior work without verification, a calibration sample was constructed from extracted skills. Two hundred and ninety-three phrase–ESCO pairs were drawn from the TF-IDF and KeyBERT extraction outputs, stratified across seven cosine similarity bands (below 0.60 through above 0.85), to cover the full range of match quality.
 
-**Annotation procedure.** Given the volume of pairs and the well-defined binary nature of the judgment task, annotation was performed using GPT-4o-mini as an automated judge (OpenAI, 2024), following the LLM-as-annotator approach established in recent NLP research (Gilardi et al., 2023; He et al., 2024). Each pair was submitted individually with a structured system prompt requiring a binary output: 1 (the extracted phrase and ESCO label refer to the same competency) or 0 (surface similarity without conceptual alignment). The model was run at temperature=0 to ensure deterministic, reproducible outputs.
+**Annotation procedure.** Given the volume of pairs and the well-defined binary nature of the judgment task, annotation was performed using GPT-4o-mini as an automated judge [18], following the LLM-as-annotator approach established in recent NLP research [20, 21]. Each pair was submitted individually with a structured system prompt requiring a binary output: 1 (the extracted phrase and ESCO label refer to the same competency) or 0 (surface similarity without conceptual alignment). The model was run at temperature=0 to ensure deterministic, reproducible outputs.
 
 To validate the automated annotations, a stratified sample of 35 pairs (5 per similarity band) was reviewed manually by the author. Inter-annotator agreement between GPT-4o-mini and the human reviewer was 94.3% (33/35 pairs). Two corrections were applied: a phrase describing ERP–ecommerce integration incorrectly matched to "e-commerce systems", and "chemical data analysis" incorrectly matched to "analyse chemical substances" (a laboratory skill). Corrected pairs are flagged in the dataset with `annotator_notes = "gpt-4o-mini; corrected by human reviewer"`.
 
 Precision, recall, and F1 were computed at thresholds 0.60, 0.65, 0.70, 0.75, 0.80, and 0.85. The threshold yielding the highest F1 score was selected as the operating point. Results are reported in Section 5.1 alongside the main skill normalization findings.
+
+> **[Figure 4.3 — ESCO Threshold Calibration Curve]** *Insert precision/recall/F1 vs. threshold line chart here. Export from `notebooks/3_analysis/04_esco_calibration.ipynb`.*
 
 The calibration procedure is implemented across `notebooks/3_analysis/04_esco_calibration.ipynb` (pair generation and threshold sweep) and `notebooks/3_analysis/04b_annotate_calibration_pairs.ipynb` (annotation and manual validation).
 
@@ -311,6 +325,8 @@ To quantify this effect, AUA was used as a controlled test case: skill extractio
 | Coverage rate | 1.3% | 6.8% |
 
 The results demonstrate a 5x multiplier on coverage when descriptions are available. Course names alone (3–8 words) provide insufficient text for meaningful TF-IDF extraction — the vectorizer produces only 1.8 skills per course on average, compared to 9.6 with descriptions.
+
+> **[Figure 4.2 — University Description Coverage]** *Insert stacked bar chart of description availability by university (AUA 97%, YSU 100%, NUACA 0%, RAU 0%). Create from Table 4.2 data.*
 
 This finding has two implications for interpreting the results in Chapter 5:
 
@@ -353,35 +369,29 @@ KeyBERT overlap was unaffected by the noise cleanup (23 terms before and after),
 
 Following skill extraction and ESCO normalization, the curriculum and job market skill profiles are compared using four metrics:
 
-**Coverage rate** measures what proportion of the skills demanded by the job market are present in the curriculum:
+Let $C$ denote the set of ESCO skill concepts present in the curriculum corpus and $J$ the set present in the job market corpus. Four metrics are computed:
 
-```
-coverage_rate = |curriculum_skills ∩ job_skills| / |job_skills|
-```
+**Coverage rate** measures what proportion of employer-demanded skills are represented in the curriculum:
 
-A coverage rate of 1.0 would mean that every skill demanded in job postings is also taught in the curriculum. A rate of 0.5 means half of demanded skills are covered.
+$$\text{CR}(C, J) = \frac{|C \cap J|}{|J|}$$
 
-**Gap set** is the set of skills present in job postings but absent from the curriculum:
+A coverage rate of 1.0 would mean every skill demanded in job postings is also taught in the curriculum; 0.25 means one in four demanded skills is covered.
 
-```
-gap_set = job_skills \ curriculum_skills
-```
+**Gap set** is the set of skills demanded by employers but absent from the curriculum:
 
-The gap set is the primary finding of interest: it identifies the skills the labor market demands that universities are not currently teaching. Gap skills are ranked by frequency of occurrence in job postings to prioritize the most critical gaps.
+$$\text{gap}(C, J) = J \setminus C = \{s \in J : s \notin C\}$$
+
+Gap skills are ranked by their frequency of occurrence in job postings to prioritize the most actionable curriculum interventions.
 
 **Surplus set** is the set of skills present in the curriculum but not found in any job posting:
 
-```
-surplus_set = curriculum_skills \ job_skills
-```
+$$\text{surplus}(C, J) = C \setminus J = \{s \in C : s \notin J\}$$
 
-The surplus set indicates curriculum content that has limited current market relevance. A large surplus does not necessarily indicate poor curriculum quality — foundational theoretical content may not appear explicitly in job descriptions while still being prerequisite knowledge — but it is reported as a finding for discussion.
+A large surplus does not necessarily indicate poor curriculum quality — foundational theoretical content may not appear explicitly in job descriptions while still underpinning applied competences — but it is reported as a finding for discussion.
 
-**Jaccard similarity** provides a normalized overlap score:
+**Jaccard similarity** provides a symmetric, size-normalized overlap score:
 
-```
-jaccard = |curriculum_skills ∩ job_skills| / |curriculum_skills ∪ job_skills|
-```
+$$\text{Jaccard}(C, J) = \frac{|C \cap J|}{|C \cup J|}$$
 
 All four metrics are computed at four levels of granularity: (1) overall (all universities combined vs. all job postings), (2) per university, (3) per program, and (4) Bachelor vs. Master degree level. Company portal and aggregator job postings are analyzed separately to assess whether the two source types exhibit different skill demand profiles.
 
@@ -427,10 +437,4 @@ The scope filter applied to YSU data retained 13 programs and excluded 6 non-IT 
 
 ---
 
-*Citation checklist for this chapter:*
-- *Almaleh et al. (2019) — Sustainability, verified ✓*
-- *Grootendorst, M. (2020) — KeyBERT — verify publication details*
-- *Zhang et al. (2022) — SkillSpan, NAACL — cited in Ch. 2 as supervised benchmark; not used in this study's pipeline*
-- *Reimers & Gurevych (2019) — Sentence-BERT, EMNLP, verified ✓*
-- *European Commission (2023) — ESCO v1.2 — add version and URL*
-- *Chiarello et al. (2021) — Technological Forecasting and Social Change, verified ✓*
+**Chapter references:** [4] Almaleh et al. (2019) · [9] Grootendorst (2020) · [10] Zhang et al. (2022) · [11] Reimers & Gurevych (2019) · [12] Wang et al. (2020) · [14] European Commission (2023) · [15] Chiarello et al. (2021) · [17] Carbonell & Goldstein (1998) · [18] OpenAI (2024) · [19] Pedregosa et al. (2011) · [20] Gilardi et al. (2023) · [21] He et al. (2024)

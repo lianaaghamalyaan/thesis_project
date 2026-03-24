@@ -4,7 +4,7 @@
 
 ## 6.1 Overview
 
-This chapter interprets the empirical findings reported in Chapter 5 through the three theoretical lenses introduced in Chapter 3: constructive alignment (Biggs & Tang, 2011), the task-based view of skill demand (Autor, Levy & Murnane, 2003), and ESCO as an operational bridge. It then situates the results in the context of the existing literature reviewed in Chapter 2 and directly addresses each of the four research questions. Section 6.4 discusses methodological contributions and limitations. Section 6.5 draws implications for policy and practice.
+This chapter interprets the empirical findings reported in Chapter 5 through the three theoretical lenses introduced in Chapter 3: constructive alignment [5], the task-based view of skill demand [13], and ESCO as an operational bridge [14]. It then situates the results in the context of the existing literature reviewed in Chapter 2 and directly addresses each of the four research questions. Section 6.4 discusses methodological contributions and limitations. Section 6.5 draws implications for policy and practice.
 
 ---
 
@@ -12,7 +12,7 @@ This chapter interprets the empirical findings reported in Chapter 5 through the
 
 ### 6.2.1 Constructive Alignment Lens: What Does the Gap Mean for ILO Quality?
 
-The constructive alignment framework (Biggs & Tang, 2011) predicts that a curriculum is externally misaligned when its intended learning outcomes (ILOs) are not defined with reference to external standards — in this case, the skill demands of the Armenian IT labor market. The findings in Chapter 5 are consistent with this prediction.
+The constructive alignment framework [5] predicts that a curriculum is externally misaligned when its intended learning outcomes (ILOs) are not defined with reference to external standards — in this case, the skill demands of the Armenian IT labor market. The findings in Chapter 5 are consistent with this prediction.
 
 The surplus content identified in the analysis — philosophy, history, physical education, Armenian language — reflects a state educational standard inherited from the Soviet-era centralized curriculum architecture, not program-level pedagogical decisions. These courses serve a different educational function (civic education, cultural formation) and cannot be evaluated for labor market alignment. Their presence in the surplus is a structural feature of the Armenian degree framework, not a critique of individual program design.
 
@@ -22,7 +22,7 @@ The gap content — Docker, Kubernetes, CI/CD, DevOps, cloud infrastructure, RES
 
 ### 6.2.2 Task-Based Lens: Routine vs. Non-Routine Cognitive Skills
 
-The task-based framework of Autor, Levy, and Murnane (2003) classifies job tasks along the cognitive–manual and routine–non-routine axes. It predicts that labor market demand concentrates on non-routine cognitive tasks — analysis, synthesis, adaptive problem-solving — as automation substitutes for routine cognitive tasks.
+The task-based framework of Autor, Levy, and Murnane [13] classifies job tasks along the cognitive–manual and routine–non-routine axes. It predicts that labor market demand concentrates on non-routine cognitive tasks — analysis, synthesis, adaptive problem-solving — as automation substitutes for routine cognitive tasks.
 
 The gap skills identified in this study align with this prediction. Containerization (Docker, Kubernetes), infrastructure-as-code (Terraform), CI/CD pipeline management, and cloud deployment are non-routine cognitive tasks: they require adaptive reasoning about complex distributed systems, debugging across multiple abstraction layers, and continuous integration of rapidly evolving tooling ecosystems. The fact that these skills are simultaneously the most in demand and the most absent from curricula is consistent with the task-based framework's implication that educational systems systematically underinvest in the non-routine competences that provide the highest wage premium in the current labor market.
 
@@ -96,7 +96,7 @@ This study makes three methodological contributions to the curriculum–labor ma
 
 **First, a reusable pipeline for multilingual, data-scarce contexts.** The combination of automated scraping, LLM-assisted translation (Armenian → English), two-method unsupervised skill extraction, and ESCO normalization via sentence embeddings produces an end-to-end reproducible pipeline that does not require manually labeled training data. This is particularly relevant for contexts — Central Asian, Eastern European, and South Caucasus higher education systems — where structured curriculum data and labeled skill corpora do not exist.
 
-**Second, LLM-as-annotator for threshold calibration.** Rather than requiring manual annotation of all 293 calibration pairs, GPT-4o-mini was used as an automated judge (temperature=0), following the LLM-as-annotator approach validated in recent NLP research (Gilardi et al., 2023; He et al., 2024). A 35-pair stratified human spot-check confirmed 94.3% agreement. This calibration approach is time-efficient, reproducible, and achieves comparable annotation quality to full manual annotation for binary match/no-match judgements.
+**Second, LLM-as-annotator for threshold calibration.** Rather than requiring manual annotation of all 293 calibration pairs, GPT-4o-mini was used as an automated judge (temperature=0), following the LLM-as-annotator approach validated in recent NLP research [20, 21]. A 35-pair stratified human spot-check confirmed 94.3% agreement. This calibration approach is time-efficient, reproducible, and achieves comparable annotation quality to full manual annotation for binary match/no-match judgements.
 
 **Third, a two-layer analysis combining ESCO normalization with a supplementary tech lexicon.** ESCO normalization captures conceptual alignment within the formal taxonomy vocabulary; the tech lexicon layer captures the most important emerging tools that ESCO v1.2 does not yet include. Reporting both layers — separately and transparently — provides a more complete picture than ESCO alone, while making the contribution of each layer explicit.
 
@@ -118,13 +118,13 @@ This study makes three methodological contributions to the curriculum–labor ma
 
 ## 6.5 Comparison with Prior Studies
 
-The methodological parallel with Almaleh et al. (2019) is direct: both studies apply a two-corpus NLP pipeline to measure curriculum–job market alignment in a developing country higher education context. Both find low baseline overlap rates, consistent with the cross-national finding that curriculum–labor market gaps are structurally common where curriculum design operates without institutionalized employer-facing review. The present study extends this approach with ESCO normalization and a multilingual preprocessing pipeline.
+The methodological parallel with Almaleh et al. [4] is direct: both studies apply a two-corpus NLP pipeline to measure curriculum–job market alignment in a developing country higher education context. Both find low baseline overlap rates, consistent with the cross-national finding that curriculum–labor market gaps are structurally common where curriculum design operates without institutionalized employer-facing review. The present study extends this approach with ESCO normalization and a multilingual preprocessing pipeline.
 
-The validation results (44% TF-IDF soft recall against human skill tags) are consistent with skill extraction benchmarks reported by Ahadi et al. (2022) for TF-IDF applied to curriculum data in an Australian context. Cross-national consistency in extraction quality suggests the results are not anomalous for this method class.
+The validation results (44% TF-IDF soft recall against human skill tags) are consistent with skill extraction benchmarks reported by Ahadi et al. [7] for TF-IDF applied to curriculum data in an Australian context. Cross-national consistency in extraction quality suggests the results are not anomalous for this method class.
 
-The UniSkill framework (Musazade, Mezei & Zhang, 2026) provides the most direct methodological parallel for the ESCO normalization step: curriculum-to-ESCO mapping via embedding similarity, evaluated with calibrated thresholds. The calibrated threshold of 0.75 (F1=0.711) used in this study is consistent with the operating thresholds reported in the UniSkill benchmark, providing an external plausibility check on the calibration approach.
+The UniSkill framework [8] provides the most direct methodological parallel for the ESCO normalization step: curriculum-to-ESCO mapping via embedding similarity, evaluated with calibrated thresholds. The calibrated threshold of 0.75 (F1=0.711) used in this study is consistent with the operating thresholds reported in the UniSkill benchmark, providing an external plausibility check on the calibration approach.
 
-Compared to studies that use supervised skill extraction (SkillSpan, ESCOXLM-R), the present approach trades extraction precision for accessibility: labeled training data for Armenian curriculum text does not exist, making supervised approaches inapplicable. The 44% soft recall achieved by TF-IDF is lower than supervised benchmarks but is consistent with the literature on unsupervised curriculum skill extraction and is sufficient for the comparative alignment analysis the study performs.
+Compared to studies that use supervised skill extraction (SkillSpan [10], ESCOXLM-R), the present approach trades extraction precision for accessibility: labeled training data for Armenian curriculum text does not exist, making supervised approaches inapplicable. The 44% soft recall achieved by TF-IDF is lower than supervised benchmarks but is consistent with the literature on unsupervised curriculum skill extraction and is sufficient for the comparative alignment analysis the study performs.
 
 ---
 
@@ -154,13 +154,4 @@ Students in NUACA and RAU programs, whose institutional alignment scores are mos
 
 ---
 
-*Citation checklist for this chapter:*
-- *Biggs & Tang (2011) — Teaching for Quality Learning ✓*
-- *Autor, Levy & Murnane (2003) — Quarterly Journal of Economics ✓*
-- *Almaleh et al. (2019) — Sustainability ✓*
-- *Ahadi et al. (2022) — EDM 2022 ✓*
-- *Musazade, Mezei & Zhang (2026) — UniSkill, arXiv:2603.03134 ✓*
-- *Chiarello et al. (2021) — Technological Forecasting and Social Change ✓*
-- *Gilardi et al. (2023) — LLM-as-annotator ✓*
-- *He et al. (2024) — LLM annotation quality ✓*
-- *ANQA — Armenian National Quality Assurance body — add URL in references*
+**Chapter references:** [4] Almaleh et al. (2019) · [5] Biggs & Tang (2011) · [7] Ahadi et al. (2022) · [8] Musazade et al. (2026) · [10] Zhang et al. (2022) · [13] Autor et al. (2003) · [14] European Commission (2023) · [15] Chiarello et al. (2021) · [20] Gilardi et al. (2023) · [21] He et al. (2024)
