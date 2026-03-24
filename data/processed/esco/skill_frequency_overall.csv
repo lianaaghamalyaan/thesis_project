@@ -4,58 +4,58 @@ rank,skill,doc_count,source,pct_of_it_jobs
 3,Amazon Web Services,100,Tech,27.8
 4,Docker,76,Tech,21.1
 5,Kubernetes,75,Tech,20.8
-6,Microsoft Azure,69,Tech,19.2
-7,DevOps,68,ESCO,18.9
-8,TypeScript,64,Tech,17.8
-9,Google Cloud,64,Tech,17.8
-10,React,63,Tech,17.5
-11,Node.js,50,Tech,13.9
-12,database,49,ESCO,13.6
+6,ICT project management methodologies,70,ESCO,19.4
+7,Microsoft Azure,69,Tech,19.2
+8,DevOps,68,ESCO,18.9
+9,TypeScript,64,Tech,17.8
+10,Google Cloud,64,Tech,17.8
+11,React,63,Tech,17.5
+12,Node.js,50,Tech,13.9
 13,.NET / C#,49,Tech,13.6
-14,PostgreSQL,48,Tech,13.3
-15,Java,43,ESCO,11.9
-16,Microservices,39,Tech,10.8
-17,LLM / GenAI,34,Tech,9.4
-18,Kafka,33,Tech,9.2
-19,Redis,32,Tech,8.9
-20,Terraform,30,Tech,8.3
-21,algorithms,29,ESCO,8.1
-22,Jenkins,28,ESCO,7.8
-23,MySQL,27,Tech,7.5
-24,computer programming,26,ESCO,7.2
-25,machine learning,25,ESCO,6.9
-26,process data,23,ESCO,6.4
-27,digital data processing,22,ESCO,6.1
-28,GitLab CI/CD,21,Tech,5.8
-29,cloud technologies,19,ESCO,5.3
-30,cyber security,19,ESCO,5.3
-31,data science,18,ESCO,5.0
-32,MongoDB,18,Tech,5.0
-33,automation technology,17,ESCO,4.7
-34,PyTorch,17,Tech,4.7
-35,Android,17,ESCO,4.7
-36,GraphQL,17,Tech,4.7
-37,Go (Golang),16,Tech,4.4
-38,Agile development,13,ESCO,3.6
-39,data engineering,12,ESCO,3.3
-40,web services,10,ESCO,2.8
-41,data models,10,ESCO,2.8
-42,data protection,10,ESCO,2.8
-43,data analytics,10,ESCO,2.8
-44,unstructured data,10,ESCO,2.8
-45,TensorFlow,10,Tech,2.8
+14,database,49,ESCO,13.6
+15,PostgreSQL,48,Tech,13.3
+16,ICT system programming,44,ESCO,12.2
+17,Java,43,ESCO,11.9
+18,Microservices,39,Tech,10.8
+19,LLM / GenAI,34,Tech,9.4
+20,Kafka,33,Tech,9.2
+21,Redis,32,Tech,8.9
+22,Terraform,30,Tech,8.3
+23,algorithms,29,ESCO,8.1
+24,Jenkins,28,ESCO,7.8
+25,MySQL,27,Tech,7.5
+26,computer programming,26,ESCO,7.2
+27,machine learning,25,ESCO,6.9
+28,Backend dev,24,Tech,6.7
+29,process data,23,ESCO,6.4
+30,digital data processing,22,ESCO,6.1
+31,GitLab CI/CD,21,Tech,5.8
+32,cloud technologies,19,ESCO,5.3
+33,cyber security,19,ESCO,5.3
+34,tools for ICT test automation,18,ESCO,5.0
+35,MongoDB,18,Tech,5.0
+36,data science,18,ESCO,5.0
+37,Android,17,ESCO,4.7
+38,automation technology,17,ESCO,4.7
+39,PyTorch,17,Tech,4.7
+40,GraphQL,17,Tech,4.7
+41,Go (Golang),16,Tech,4.4
+42,Agile development,13,ESCO,3.6
+43,data engineering,12,ESCO,3.3
+44,web services,10,ESCO,2.8
+45,unstructured data,10,ESCO,2.8
 46,REST API,10,Tech,2.8
-47,Spring Framework,9,Tech,2.5
-48,Ruby,8,ESCO,2.2
-49,Elasticsearch,7,Tech,1.9
-50,Ansible,7,Tech,1.9
-51,data warehouse,6,ESCO,1.7
-52,Vue.js,6,Tech,1.7
-53,ML,5,ESCO,1.4
-54,database management systems,5,ESCO,1.4
-55,blockchain,5,ESCO,1.4
-56,Swift,5,ESCO,1.4
-57,data storage,4,ESCO,1.1
-58,operating systems,4,ESCO,1.1
-59,cloud security and compliance,4,ESCO,1.1
-60,network engineering,3,ESCO,0.8
+47,data models,10,ESCO,2.8
+48,security regulations,10,ESCO,2.8
+49,data protection,10,ESCO,2.8
+50,data analytics,10,ESCO,2.8
+51,TensorFlow,10,Tech,2.8
+52,Spring Framework,9,Tech,2.5
+53,Scratch,8,ESCO,2.2
+54,Ruby,8,ESCO,2.2
+55,implement ICT recovery system,8,ESCO,2.2
+56,Ansible,7,Tech,1.9
+57,Elasticsearch,7,Tech,1.9
+58,Vue.js,6,Tech,1.7
+59,Frontend dev,6,Tech,1.7
+60,apply information security policies,6,ESCO,1.7
