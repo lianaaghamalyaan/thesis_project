@@ -1,125 +1,125 @@
 role,n_jobs,rank,skill,doc_count,pct_of_role,source
-DevOps / Cloud,40,1,Kubernetes,25,62.5,Tech
-DevOps / Cloud,40,2,Amazon Web Services,24,60.0,Tech
-DevOps / Cloud,40,3,Python,21,52.5,ESCO
-DevOps / Cloud,40,4,DevOps,21,52.5,ESCO
-DevOps / Cloud,40,5,Terraform,20,50.0,Tech
-DevOps / Cloud,40,6,CI/CD,18,45.0,Tech
-DevOps / Cloud,40,7,Docker,17,42.5,Tech
-DevOps / Cloud,40,8,computer programming,15,37.5,ESCO
-DevOps / Cloud,40,9,ICT system programming,15,37.5,ESCO
-DevOps / Cloud,40,10,Microsoft Azure,14,35.0,Tech
-DevOps / Cloud,40,11,Google Cloud,12,30.0,Tech
-DevOps / Cloud,40,12,PostgreSQL,8,20.0,Tech
-DevOps / Cloud,40,13,implement ICT recovery system,6,15.0,ESCO
-DevOps / Cloud,40,14,Ansible,6,15.0,Tech
-DevOps / Cloud,40,15,database,5,12.5,ESCO
-Data / ML / AI,58,1,Python,41,70.7,ESCO
-Data / ML / AI,58,2,machine learning,21,36.2,ESCO
-Data / ML / AI,58,3,LLM / GenAI,18,31.0,Tech
-Data / ML / AI,58,4,Microsoft Azure,17,29.3,Tech
-Data / ML / AI,58,5,data science,16,27.6,ESCO
-Data / ML / AI,58,6,Amazon Web Services,15,25.9,Tech
-Data / ML / AI,58,7,PyTorch,15,25.9,Tech
-Data / ML / AI,58,8,digital data processing,14,24.1,ESCO
-Data / ML / AI,58,9,process data,14,24.1,ESCO
-Data / ML / AI,58,10,Docker,14,24.1,Tech
-Data / ML / AI,58,11,Kubernetes,13,22.4,Tech
-Data / ML / AI,58,12,Google Cloud,13,22.4,Tech
-Data / ML / AI,58,13,TensorFlow,10,17.2,Tech
-Data / ML / AI,58,14,CI/CD,9,15.5,Tech
-Data / ML / AI,58,15,data engineering,8,13.8,ESCO
-Backend,117,1,Amazon Web Services,37,31.6,Tech
-Backend,117,2,CI/CD,37,31.6,Tech
-Backend,117,3,.NET / C#,35,29.9,Tech
-Backend,117,4,ICT project management methodologies,34,29.1,ESCO
-Backend,117,5,PostgreSQL,29,24.8,Tech
-Backend,117,6,Docker,28,23.9,Tech
-Backend,117,7,database,27,23.1,ESCO
-Backend,117,8,DevOps,26,22.2,ESCO
-Backend,117,9,Kubernetes,26,22.2,Tech
-Backend,117,10,Node.js,26,22.2,Tech
-Backend,117,11,Google Cloud,26,22.2,Tech
-Backend,117,12,Microservices,26,22.2,Tech
-Backend,117,13,Microsoft Azure,24,20.5,Tech
-Backend,117,14,Python,22,18.8,ESCO
-Backend,117,15,Java,21,17.9,ESCO
-Frontend / JS,34,1,React,24,70.6,Tech
-Frontend / JS,34,2,TypeScript,23,67.6,Tech
-Frontend / JS,34,3,GraphQL,8,23.5,Tech
-Frontend / JS,34,4,ICT project management methodologies,7,20.6,ESCO
-Frontend / JS,34,5,Node.js,6,17.6,Tech
-Frontend / JS,34,6,Amazon Web Services,6,17.6,Tech
-Frontend / JS,34,7,CI/CD,6,17.6,Tech
-Frontend / JS,34,8,Google Cloud,4,11.8,Tech
-Frontend / JS,34,9,Agile development,3,8.8,ESCO
-Frontend / JS,34,10,automation technology,3,8.8,ESCO
-Frontend / JS,34,11,Docker,3,8.8,Tech
-Frontend / JS,34,12,Microsoft Azure,3,8.8,Tech
-Frontend / JS,34,13,GitLab CI/CD,3,8.8,Tech
-Frontend / JS,34,14,Frontend dev,3,8.8,Tech
-Frontend / JS,34,15,Android,2,5.9,ESCO
-Full Stack,26,1,React,21,80.8,Tech
-Full Stack,26,2,Node.js,13,50.0,Tech
-Full Stack,26,3,TypeScript,12,46.2,Tech
-Full Stack,26,4,CI/CD,11,42.3,Tech
-Full Stack,26,5,Python,9,34.6,ESCO
-Full Stack,26,6,Docker,9,34.6,Tech
-Full Stack,26,7,database,8,30.8,ESCO
-Full Stack,26,8,Amazon Web Services,7,26.9,Tech
-Full Stack,26,9,DevOps,6,23.1,ESCO
-Full Stack,26,10,Redis,6,23.1,Tech
-Full Stack,26,11,Kubernetes,5,19.2,Tech
-Full Stack,26,12,algorithms,4,15.4,ESCO
-Full Stack,26,13,PostgreSQL,4,15.4,Tech
-Full Stack,26,14,Backend dev,4,15.4,Tech
-Full Stack,26,15,Java,3,11.5,ESCO
-Mobile,8,1,Android,5,62.5,ESCO
-Mobile,8,2,Swift,3,37.5,ESCO
-Mobile,8,3,CI/CD,3,37.5,Tech
-Mobile,8,4,Android development,3,37.5,Tech
-Mobile,8,5,cloud technologies,2,25.0,ESCO
-Mobile,8,6,ICT project management methodologies,2,25.0,ESCO
-Mobile,8,7,iOS development,2,25.0,Tech
-Mobile,8,8,Ruby,1,12.5,ESCO
-Mobile,8,9,Java,1,12.5,ESCO
-Mobile,8,10,ICT system integration,1,12.5,ESCO
-Mobile,8,11,apply information security policies,1,12.5,ESCO
-QA / Testing,48,1,CI/CD,22,45.8,Tech
-QA / Testing,48,2,Jenkins,15,31.2,ESCO
-QA / Testing,48,3,tools for ICT test automation,14,29.2,ESCO
-QA / Testing,48,4,ICT project management methodologies,13,27.1,ESCO
-QA / Testing,48,5,TypeScript,12,25.0,Tech
-QA / Testing,48,6,Python,10,20.8,ESCO
-QA / Testing,48,7,Java,9,18.8,ESCO
-QA / Testing,48,8,DevOps,8,16.7,ESCO
-QA / Testing,48,9,database,5,10.4,ESCO
-QA / Testing,48,10,ICT system programming,5,10.4,ESCO
-QA / Testing,48,11,Amazon Web Services,5,10.4,Tech
-QA / Testing,48,12,Android,4,8.3,ESCO
-QA / Testing,48,13,Microsoft Azure,4,8.3,Tech
-QA / Testing,48,14,GitLab CI/CD,4,8.3,Tech
-QA / Testing,48,15,Xcode,3,6.2,ESCO
-Security,14,1,cyber security,12,85.7,ESCO
-Security,14,2,Python,10,71.4,ESCO
-Security,14,3,ICT system programming,7,50.0,ESCO
-Security,14,4,computer programming,6,42.9,ESCO
-Security,14,5,Amazon Web Services,6,42.9,Tech
-Security,14,6,security regulations,5,35.7,ESCO
-Security,14,7,Google Cloud,5,35.7,Tech
-Security,14,8,Microsoft Azure,4,28.6,Tech
-Security,14,9,CI/CD,4,28.6,Tech
-Security,14,10,ICT project management methodologies,3,21.4,ESCO
-Security,14,11,Kubernetes,3,21.4,Tech
-Security,14,12,Terraform,3,21.4,Tech
-Security,14,13,security threats,2,14.3,ESCO
-Security,14,14,security engineering,2,14.3,ESCO
-Security,14,15,Jenkins,2,14.3,ESCO
-Hardware / Embedded,15,1,Python,12,80.0,ESCO
-Hardware / Embedded,15,2,ICT system programming,11,73.3,ESCO
-Hardware / Embedded,15,3,computer programming,1,6.7,ESCO
-Hardware / Embedded,15,4,Assembly,1,6.7,ESCO
-Hardware / Embedded,15,5,algorithms,1,6.7,ESCO
-Hardware / Embedded,15,6,ICT project management methodologies,1,6.7,ESCO
-Hardware / Embedded,15,7,automation technology,1,6.7,ESCO
-Hardware / Embedded,15,8,operating systems,1,6.7,ESCO
+DevOps / Cloud,52,1,Kubernetes,37,71.2,Tech
+DevOps / Cloud,52,2,DevOps,31,59.6,ESCO
+DevOps / Cloud,52,3,Amazon Web Services,30,57.7,Tech
+DevOps / Cloud,52,4,Docker,26,50.0,Tech
+DevOps / Cloud,52,5,Terraform,25,48.1,Tech
+DevOps / Cloud,52,6,ICT system programming,22,42.3,ESCO
+DevOps / Cloud,52,7,CI/CD,22,42.3,Tech
+DevOps / Cloud,52,8,computer programming,21,40.4,ESCO
+DevOps / Cloud,52,9,Python,21,40.4,ESCO
+DevOps / Cloud,52,10,Microsoft Azure,20,38.5,Tech
+DevOps / Cloud,52,11,Google Cloud,18,34.6,Tech
+DevOps / Cloud,52,12,algorithms,9,17.3,ESCO
+DevOps / Cloud,52,13,PostgreSQL,8,15.4,Tech
+DevOps / Cloud,52,14,Ansible,7,13.5,Tech
+DevOps / Cloud,52,15,Jenkins,6,11.5,ESCO
+Data / ML / AI,62,1,Python,51,82.3,ESCO
+Data / ML / AI,62,2,machine learning,31,50.0,ESCO
+Data / ML / AI,62,3,Microsoft Azure,29,46.8,Tech
+Data / ML / AI,62,4,Amazon Web Services,27,43.5,Tech
+Data / ML / AI,62,5,Google Cloud,26,41.9,Tech
+Data / ML / AI,62,6,data science,24,38.7,ESCO
+Data / ML / AI,62,7,LLM / GenAI,24,38.7,Tech
+Data / ML / AI,62,8,PyTorch,23,37.1,Tech
+Data / ML / AI,62,9,Docker,18,29.0,Tech
+Data / ML / AI,62,10,digital data processing,16,25.8,ESCO
+Data / ML / AI,62,11,process data,16,25.8,ESCO
+Data / ML / AI,62,12,Kubernetes,16,25.8,Tech
+Data / ML / AI,62,13,TensorFlow,14,22.6,Tech
+Data / ML / AI,62,14,CI/CD,13,21.0,Tech
+Data / ML / AI,62,15,data engineering,11,17.7,ESCO
+Backend,159,1,.NET / C#,54,34.0,Tech
+Backend,159,2,CI/CD,51,32.1,Tech
+Backend,159,3,ICT project management methodologies,50,31.4,ESCO
+Backend,159,4,Amazon Web Services,50,31.4,Tech
+Backend,159,5,Google Cloud,46,28.9,Tech
+Backend,159,6,Microsoft Azure,45,28.3,Tech
+Backend,159,7,database,42,26.4,ESCO
+Backend,159,8,Docker,37,23.3,Tech
+Backend,159,9,Microservices,37,23.3,Tech
+Backend,159,10,DevOps,36,22.6,ESCO
+Backend,159,11,PostgreSQL,34,21.4,Tech
+Backend,159,12,Node.js,33,20.8,Tech
+Backend,159,13,Kubernetes,31,19.5,Tech
+Backend,159,14,Java,28,17.6,ESCO
+Backend,159,15,Python,27,17.0,ESCO
+Frontend / JS,45,1,React,27,60.0,Tech
+Frontend / JS,45,2,TypeScript,26,57.8,Tech
+Frontend / JS,45,3,GraphQL,11,24.4,Tech
+Frontend / JS,45,4,ICT project management methodologies,9,20.0,ESCO
+Frontend / JS,45,5,Node.js,6,13.3,Tech
+Frontend / JS,45,6,Amazon Web Services,6,13.3,Tech
+Frontend / JS,45,7,CI/CD,6,13.3,Tech
+Frontend / JS,45,8,Agile development,5,11.1,ESCO
+Frontend / JS,45,9,automation technology,5,11.1,ESCO
+Frontend / JS,45,10,Frontend dev,5,11.1,Tech
+Frontend / JS,45,11,Google Cloud,4,8.9,Tech
+Frontend / JS,45,12,DevOps,3,6.7,ESCO
+Frontend / JS,45,13,Docker,3,6.7,Tech
+Frontend / JS,45,14,Microsoft Azure,3,6.7,Tech
+Frontend / JS,45,15,GitLab CI/CD,3,6.7,Tech
+Full Stack,31,1,React,25,80.6,Tech
+Full Stack,31,2,Node.js,15,48.4,Tech
+Full Stack,31,3,TypeScript,13,41.9,Tech
+Full Stack,31,4,CI/CD,12,38.7,Tech
+Full Stack,31,5,Python,11,35.5,ESCO
+Full Stack,31,6,Docker,11,35.5,Tech
+Full Stack,31,7,Amazon Web Services,10,32.3,Tech
+Full Stack,31,8,database,9,29.0,ESCO
+Full Stack,31,9,DevOps,7,22.6,ESCO
+Full Stack,31,10,Redis,7,22.6,Tech
+Full Stack,31,11,Kubernetes,6,19.4,Tech
+Full Stack,31,12,PostgreSQL,5,16.1,Tech
+Full Stack,31,13,Microservices,5,16.1,Tech
+Full Stack,31,14,Backend dev,5,16.1,Tech
+Full Stack,31,15,Java,4,12.9,ESCO
+Mobile,14,1,Android,11,78.6,ESCO
+Mobile,14,2,Android development,9,64.3,Tech
+Mobile,14,3,Swift,3,21.4,ESCO
+Mobile,14,4,CI/CD,3,21.4,Tech
+Mobile,14,5,cloud technologies,2,14.3,ESCO
+Mobile,14,6,ICT project management methodologies,2,14.3,ESCO
+Mobile,14,7,iOS development,2,14.3,Tech
+Mobile,14,8,Ruby,1,7.1,ESCO
+Mobile,14,9,Java,1,7.1,ESCO
+Mobile,14,10,ICT system integration,1,7.1,ESCO
+Mobile,14,11,apply information security policies,1,7.1,ESCO
+QA / Testing,59,1,CI/CD,30,50.8,Tech
+QA / Testing,59,2,Jenkins,19,32.2,ESCO
+QA / Testing,59,3,tools for ICT test automation,18,30.5,ESCO
+QA / Testing,59,4,ICT project management methodologies,17,28.8,ESCO
+QA / Testing,59,5,Python,15,25.4,ESCO
+QA / Testing,59,6,Microsoft Azure,13,22.0,Tech
+QA / Testing,59,7,TypeScript,12,20.3,Tech
+QA / Testing,59,8,Java,11,18.6,ESCO
+QA / Testing,59,9,DevOps,10,16.9,ESCO
+QA / Testing,59,10,Google Cloud,8,13.6,Tech
+QA / Testing,59,11,Amazon Web Services,7,11.9,Tech
+QA / Testing,59,12,ICT system programming,6,10.2,ESCO
+QA / Testing,59,13,database,5,8.5,ESCO
+QA / Testing,59,14,GitLab CI/CD,5,8.5,Tech
+QA / Testing,59,15,PostgreSQL,5,8.5,Tech
+Security,17,1,cyber security,14,82.4,ESCO
+Security,17,2,Python,13,76.5,ESCO
+Security,17,3,ICT system programming,9,52.9,ESCO
+Security,17,4,computer programming,8,47.1,ESCO
+Security,17,5,Google Cloud,7,41.2,Tech
+Security,17,6,security regulations,6,35.3,ESCO
+Security,17,7,Microsoft Azure,6,35.3,Tech
+Security,17,8,Amazon Web Services,6,35.3,Tech
+Security,17,9,CI/CD,5,29.4,Tech
+Security,17,10,Kubernetes,4,23.5,Tech
+Security,17,11,security threats,3,17.6,ESCO
+Security,17,12,security engineering,3,17.6,ESCO
+Security,17,13,ICT project management methodologies,3,17.6,ESCO
+Security,17,14,Terraform,3,17.6,Tech
+Security,17,15,LLM / GenAI,3,17.6,Tech
+Hardware / Embedded,17,1,Python,14,82.4,ESCO
+Hardware / Embedded,17,2,ICT system programming,12,70.6,ESCO
+Hardware / Embedded,17,3,computer programming,1,5.9,ESCO
+Hardware / Embedded,17,4,Assembly,1,5.9,ESCO
+Hardware / Embedded,17,5,algorithms,1,5.9,ESCO
+Hardware / Embedded,17,6,ICT project management methodologies,1,5.9,ESCO
+Hardware / Embedded,17,7,automation technology,1,5.9,ESCO
+Hardware / Embedded,17,8,operating systems,1,5.9,ESCO

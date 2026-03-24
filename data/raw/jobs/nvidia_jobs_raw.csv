@@ -1,0 +1,105 @@
+source,source_type,source_url,job_title,company_name,location,department,employment_type,seniority_level,industries,posting_date,skills_tags,full_text
+nvidia,company_portal,https://jobs.nvidia.com/careers/job/893392799578,Applied Research Intern - 2026,NVIDIA,"Armenia, Yerevan",Intern,,,Technology / Semiconductors,,,"We are now recruiting top Applied Research Interns to join Conversational AI team in Yerevan! Our team develops new deep learning models and algorithms for speech and language processing. Do you love the challenge of training large deep learning models? If so, join our team!
+We are looking for candidates who can commit to a 6 months long, full-time internship.
+What you'll be doing:
+Design and train new models for speech and natural language
+Build new speech datasets
+Create new tools for speech and natural language processing
+Develop novel deep learning algorithms
+Contribute to NeMo - Conversational AI framework
+What we need to see:
+Students pursuing a Master or PhD in Computer Science or Electrical Engineering
+Excellent Python programming skills
+Strong knowledge in Deep Learning for Speech or Natural Language Processing
+Hands-on Experience with PyTorch
+Ability to work independently
+With highly competitive salaries and a comprehensive benefits package, Nvidia is widely considered to be one of the technology industry's most desirable employers. We have some of the most brilliant and talented people in the world working with us and our engineering teams are growing fast in some of the hottest innovative fields: Deep Learning, Artificial Intelligence, and Large Language Models."
+nvidia,company_portal,https://jobs.nvidia.com/careers/job/893392912340,Senior Data Engineer,NVIDIA,"Poland, Warsaw, Hungary, Budapest, Armenia, Yerevan","Engineer, Sys SW",,,Technology / Semiconductors,,,"NVIDIA has been transforming computer graphics, PC gaming, and accelerated computing for more than 25 years. It’s a unique legacy of innovation that’s fueled by great technology—and amazing people. Today, we’re tapping into the unlimited potential of AI to define the next era of computing. An era in which our GPU acts as the brains of computers, robots, and self-driving cars that can understand the world. Doing what’s never been done before takes vision, innovation, and the world’s best talent. As an NVIDIAN, you’ll be immersed in a diverse, supportive environment where everyone is inspired to do their best work. Come join the team and see how you can make a lasting impact on the world.
+We are now looking for Senior Data Engineer to become a member of Data Platform Team to work on a multi-cluster multi-cloud set of engineering and customer engagement APIs. We serve an audience of more than 200M users with rich targeting and segmentation capabilities. Join us to support this development!
+What you will be doing:
+Design various RESTful APIs and backend databases in multi region environment.
+Contribute into targeting engine and segmentation pipelines.
+Develop automations and tests to ensure system stability.
+Collaborate with various Engineering and Business teams on their needs.
+Drive innovation in Data Platform architecture and software stack.
+What we need to see:
+A Bachelor's or Master's degree in a Computer Science, Engineering, or equivalent, and 6+ years of experience.
+Expert knowledge of Java and Springboot.
+Hands on skills in Relational/NoSQL database technologies.
+Strong understanding of distributed systems architecture.
+Proficient in English.
+Ways to stand out from the crowd:
+Knowledge of either Cassandra, Clickhouse or Postgres and ability to build solutions based on it.
+Past experience with Kubernetes and AWS.
+Creative and autonomous with a genuinely real passion for the modern technologies is highly desired.
+NVIDIA is committed to fostering a diverse work environment and proud to be an equal opportunity employer. As we highly value diversity in our current and future employees, we do not discriminate (including in our hiring and promotion practices) on the basis of race, religion, color, national origin, gender, gender expression, sexual orientation, age, marital status, veteran status, disability status or any other characteristic protected by law.
+Widely considered to be one of the technology world’s most desirable employers, NVIDIA offers highly competitive salaries and a comprehensive benefits package. As you plan your future, see what we can offer to you and your family www.nvidiabenefits.com/
+Your base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4."
+nvidia,company_portal,https://jobs.nvidia.com/careers/job/893392984032,Senior Full Stack Engineer,NVIDIA,"Poland, Warsaw, Hungary, Budapest, Armenia, Yerevan, Remote - Poland","Engineer, Sys SW",,,Technology / Semiconductors,,,"NVIDIA has been transforming computer graphics, PC gaming, and accelerated computing for more than 25 years. It’s a unique legacy of innovation that’s fueled by great technology—and amazing people. Today, we’re tapping into the unlimited potential of AI to define the next era of computing. An era in which our GPU acts as the brains of computers, robots, and self-driving cars that can understand the world. Doing what’s never been done before takes vision, innovation, and the world’s best talent. As an NVIDIAN, you’ll be immersed in a diverse, supportive environment where everyone is inspired to do their best work. Come join the team and see how you can make a lasting impact on the world.
+We are looking for a Senior Full Stack Engineer to join our dynamic international team. This is a groundbreaking opportunity to work with innovative technologies and collaborate with world-class professionals. You will be part of a team that is developing an enterprise data platform with corporate-grade scale, which has a significant business impact.
+What you'll be doing:
+Develop and improve our enterprise applications to ensure flawless performance
+Lead the development of our Content Management System, implementing robust features and functionalities
+Collaborate with various teams and engineers to integrate their tools into our portal seamlessly
+Drive innovation and determine the guidelines for building the frontend
+Efficiently implement solutions that meet our ambitious project goals
+What we need to see:
+MS or BS in Computer Science or an equivalent field
+5+ years of software engineering experience
+5+ years of overall UI/UX development using modern Front-end frameworks such as Angular, React, Vue or Lit
+Strong understanding of common API technologies (REST, gRPC, OpenAPI, GraphAPI, etc)
+Hands-on experience in enterprise applications development
+Independence, self-sufficiency, and a strong sense of ownership and accountability over your work
+Proficient in English
+Ways to stand out from the crowd:
+Experience with Figma or similar tools to build user interfaces
+Passion to use AI, and a basic understanding of MCP or Agent-to-Agent interoperability
+Familiarity with web-stack backend: python, MongoDB, Postgres, redis, etc
+Hands-on experience with Kubernetes, Docker, and message brokers (Apache Kafka preferred)
+Experience with AWS Cloud technology stack (or similar)
+NVIDIA is committed to fostering a diverse work environment and proud to be an equal opportunity employer. As we highly value diversity in our current and future employees, we do not discriminate (including in our hiring and promotion practices) on the basis of race, religion, color, national origin, gender, gender expression, sexual orientation, age, marital status, veteran status, disability status or any other characteristic protected by law.
+Widely considered to be one of the technology world’s most desirable employers, NVIDIA offers highly competitive salaries and a comprehensive benefits package. As you plan your future, see what we can offer to you and your family www.nvidiabenefits.com/
+Your base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4."
+nvidia,company_portal,https://jobs.nvidia.com/careers/job/893392933605,"Senior Software Engineer, Real-Time Data Platform",NVIDIA,"Remote - Poland, Poland, Warsaw, Remote - Armenia, Armenia, Yerevan","Engineer, Sys SW",,,Technology / Semiconductors,,,"NVIDIA has been transforming computer graphics, PC gaming, and accelerated computing for more than 25 years. It’s a unique legacy of innovation that’s fueled by great technology—and amazing people.
+Today, we’re tapping into the unlimited potential of AI to define the next era of computing. An era in which our GPU acts as the brains of computers, robots, and self-driving cars that can understand the world. Doing what’s never been done before takes vision, innovation, and the world’s best talent. As an NVIDIAN, you’ll be immersed in a diverse, supportive environment where everyone is inspired to do their best work. Come join the team and see how you can make a lasting impact on the world.
+Are you ready to tackle sophisticated distributed systems challenges at scale? Our Telemetry Platform team is looking for a Senior Software Engineer to help us build and evolve the services that collect and process data from millions of NVIDIA users worldwide. If you love working on high-impact infrastructure, we want to hear from you!
+What you will be doing:
+Build real-time, high-load data collection services;
+Drive architectural decisions for shared infrastructure components: metrics, distributed tracing, and configuration management;
+Collaborate with multi-functional teams on integration points and API contracts;
+Ensure operational perfection: monitoring, and performance optimization.
+What we need to see:
+A Bachelor’s or Master’s degree in Computer Science, Engineering, or a related field;
+7+ years of software engineering experience;
+Proven Java expertise (Java 17+), including JMM and concurrency;
+Proficiency in Spring Boot and reactive architecture (Project Reactor or similar);
+Strong understanding of distributed systems, microservices architecture, and event-driven development;
+Hands-on experience with Kubernetes, Docker, and message brokers (Apache Kafka preferred);
+Proficient in English.
+Ways to stand out from the crowd:
+Familiarity with Cloud Events specification;
+Experience with AWS Cloud technology stack (or similar);
+Familiarity with observability tools, including Prometheus, Grafana, and distributed tracing (OpenTelemetry or similar);
+Experience building and maintaining CI/CD pipelines (GitLab CI, Jenkins, or equivalent);
+Knowledge of time-series or columnar databases (ClickHouse, Cassandra).
+NVIDIA is at the forefront of breakthroughs in Artificial Intelligence, High-Performance Computing, and Visualization. Our teams are composed of driven, innovative professionals dedicated to pushing the boundaries of technology. We offer highly competitive salaries, an extensive benefits package, and a work environment that promotes diversity, inclusion, and flexibility. As an equal opportunity employer, we are committed to fostering a supportive and empowering workplace for all.
+Your base salary will be determined based on your location, experience, and the pay of employees in similar positions. For Poland: The base salary range is 221,250 PLN - 383,500 PLN for Level 3, and 292,500 PLN - 507,000 PLN for Level 4."
+nvidia,company_portal,https://jobs.nvidia.com/careers/job/893382594658,Research Scientist - New College Grad 2025,NVIDIA,"Armenia, Yerevan",Research Staff Member,,,Technology / Semiconductors,,,"NVIDIA's technology is at the heart of AI revolution, touching people across the planet by powering everything from self-driving cars, robotics, and voice-powered intelligent assistants! Join a diverse applied research team that is building a next generation of Conversational AI systems.
+We work on new language models for code and mathematics reasoning. Our team crafted the math reasoning model which won the latest Kaggle  AI MO competition. We also develop algorithms to accelerate training large models on our GPU cloud. We release new models as part of NeMo - open-source toolkit for Conversational AI used by many companies for such applications as customer service, voice assistants, etc. We collaborate with research and product teams, as well as researchers from top academic machine learning labs.
+What you'll be doing:
+Develop new Deep Learning models for on new language models for code and mathematics reasoning,
+Design new large scale training algorithm
+Open-source models using NeMo conversational AI frameworks
+Mentor interns
+Publish research papers on top AI conferences
+Collaborate with universities and research teams.
+What we need to see:
+PhD in Computer Science or Electrical Engineering with specialization in  Deep Learning
+2+ years of research experience in Deep Learning theory  and applications
+Excellent Python programming skills
+Experience with PyTorch
+Strong publications record in Deep Learning
+Ways to stand out from the crowd:
+Contribution to open-source projects
+Being reviewers for one of the top speech conferences
+NVIDIA is at the forefront of breakthroughs in Artificial Intelligence, High-Performance Computing, and Visualization. Our teams are composed of driven, innovative professionals dedicated to pushing the boundaries of technology. We offer highly competitive salaries, an extensive benefits package, and a work environment that promotes diversity, inclusion, and flexibility. As an equal opportunity employer, we are committed to fostering a supportive and empowering workplace for all"

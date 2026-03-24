@@ -1,8 +1,8 @@
 Metric,TF-IDF,KeyBERT
-Curriculum unique skills,3423.0,4801.0
-Job unique skills,4625.0,8695.0
-Overlap,296.0,23.0
-Coverage rate,0.064,0.0026
-Gap (jobs - curriculum),4329.0,8672.0
-Surplus (curriculum - jobs),3127.0,4778.0
-Jaccard similarity,0.0382,0.0017
+Curriculum unique skills,3442.0,4812.0
+Job unique skills,3153.0,5530.0
+Overlap,279.0,18.0
+Coverage rate,0.0885,0.0033
+Gap (jobs - curriculum),2874.0,5512.0
+Surplus (curriculum - jobs),3163.0,4794.0
+Jaccard similarity,0.0442,0.0017

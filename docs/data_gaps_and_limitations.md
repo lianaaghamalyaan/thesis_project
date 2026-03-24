@@ -1,6 +1,6 @@
 # Data Gaps and Limitations
 
-*Generated: 2026-03-22. Updated: 2026-03-22 (IT-only filter applied; program names corrected; UFAR added to gaps). For use in thesis Chapter 3 (Methodology) and Chapter 4 (Data Description).*
+*Generated: 2026-03-22. Updated: 2026-03-24 (final thesis dataset counts synchronized; notebook paths refreshed). For use in thesis Chapter 3 (Methodology) and Chapter 4 (Data Description).*
 
 ---
 
@@ -10,11 +10,11 @@ The following universities have structured, course-level curriculum data include
 
 | University | Programs | Courses | Source | Language |
 |---|---|---|---|---|
-| Yerevan State University (YSU) | 13 IT programs | 820 | Web scrape (Apify, markdown) | Armenian |
+| Yerevan State University (YSU) | 13 IT programs | 691 | Web scrape (Apify, markdown) | Armenian |
 | American University of Armenia (AUA) | 7 programs | 249 | Web scrape (Apify, course catalog) | English |
-| National University of Architecture and Construction of Armenia (NUACA) | 5 programs | 174 | Web scrape (Apify, plain text) | English |
+| National University of Architecture and Construction of Armenia (NUACA) | 4 programs | 174 | Web scrape (Apify, plain text) | English |
 | Russian-Armenian University (RAU) | 1 program | 47 | PDF study plans (manual download + PyPDF2) | Russian → English |
-| **Total** | | **1,290** | | |
+| **Total** | | **1,161** | | |
 
 > **Note on YSU filtering:** YSU raw scraping captured 19 program pages across multiple faculties. After applying the IT-scope filter, 13 programs (820 courses) were retained. Six programs were excluded: Finance (Bachelor + Master), Management (Bachelor + Master), and Economics (Bachelor + Master). All other YSU programs — including those whose official speciality codes fall under Physics, Statistics, or Financial Mathematics faculties — were retained under their actual program names (e.g. "Data Processing in Physics and Artificial Intelligence", "Applied Statistics and Data Science", "Blockchain and Digital Currencies").
 
@@ -26,7 +26,7 @@ The following universities have structured, course-level curriculum data include
 
 **AUA:** The course catalog at `cse.aua.am/courses/` provides a complete, structured listing of all AUA programs including course codes, full English descriptions, prerequisites, and credits. This is the richest dataset in terms of metadata per course.
 
-**NUACA:** All five IT-related programs in the Faculty of Management and Technology are included. Additional non-IT programs (Economics, Accounting, Logistics, Construction Management) were identified but excluded as out of scope.
+**NUACA:** Four IT-related programs in the Faculty of Management and Technology are included in the final analysis dataset. Additional non-IT programs (Economics, Accounting, Logistics, Construction Management) were identified but excluded as out of scope.
 
 **RAU:** Only the Applied Mathematics and Informatics bachelor program (01.03.02) was parsed. This was the entry point identified during initial data collection. Additional programs were discovered during final validation (see Section 2).
 
@@ -74,11 +74,11 @@ PDFs are downloadable but require parsing using PyPDF2 or similar tools. The RAU
 - The bachelor program 01.03.02 (Applied Mathematics and Informatics) is representative of the core RAU IT curriculum.
 - Additional programs are noted as identified and potentially scrapeable.
 - Include in extended analysis if time permits; otherwise justify exclusion in thesis as a resource constraint.
-- **Do not include in current analysis.** Dataset is frozen at 1,601 courses for the purposes of this thesis.
+- **Do not include in current analysis.** Dataset is frozen at 1,161 courses for the purposes of this thesis.
 
 **Recommended action if extending:**
 - Download PDF study plans for 11.03.02 (bachelor) and Information Security, ML, System Programming Master programs
-- Reuse existing RAU PDF parsing pipeline from `notebooks/university/01_university_pipeline.ipynb`
+- Reuse existing RAU PDF parsing pipeline from `notebooks/2_collection_university/01_university_pipeline.ipynb`
 - Add English translations via existing translation step
 
 ---
@@ -170,7 +170,7 @@ UFAR was not included in the original data collection scope. Its curriculum page
 | Universities fully excluded due to inaccessibility | 1 (NPUA — HTTP 403) |
 | Universities fully excluded due to scope | 1 (UFAR — not assessed) |
 | Universities with partial coverage (identified gap) | 1 (RAU — 1 of ~8 IT programs) |
-| Total courses in dataset (IT programs only) | 1,290 |
+| Total courses in dataset (IT programs only) | 1,161 |
 | YSU IT programs included / total scraped | 13 / 19 (6 non-IT removed: Finance, Management, Economics) |
 | Approximate program coverage (assessed universities only) | ~65–75% of accessible Armenian IT higher-education programs |
 | Approximate program coverage (including NPUA and UFAR) | ~45–55% of all Armenian IT higher-education programs |
@@ -191,4 +191,73 @@ These limitations mean that the analysis reflects the publicly accessible portio
 
 ---
 
-*Last updated: 2026-03-22*
+---
+
+## 5. ESCO Mapping Noise and False Positives
+
+*Identified: 2026-03-25. Based on inspection of `data/processed/esco/gap_analysis.csv` and `data/processed/esco/skill_frequency_overall.csv` (notebook 06 outputs). For use in thesis Chapter 3 (Methodology) or Chapter 5 (Results — limitations of the normalization step).*
+
+The ESCO normalization step (notebook 05) maps extracted keyword phrases to ESCO skill concepts using cosine similarity on sentence embeddings. While this enables structured comparison across the curriculum-industry skill space, inspection of the output reveals two categories of problems: **false positive mappings** and **overly broad concepts**.
+
+---
+
+### 5.1 Clear False Positive Mappings
+
+These ESCO labels appear in job skill outputs but are semantically unrelated to the actual content that triggered them. They result from the embedding model finding surface-level or contextual similarity to the wrong concept.
+
+| ESCO concept matched | Appears in | Actual source phrase | Why it's wrong |
+|---|---|---|---|
+| `work with playwrights` | 8 job docs (1.1%) | "Playwright" (Microsoft browser testing framework) | ESCO concept refers to theatre; Playwright the tool shares the word but is a JavaScript E2E testing library |
+| `woodworking tools` | 7 job docs (1.0%) | "tools" in developer context (dev tools, CLI tools, testing tools) | ESCO concept refers to physical craft/carpentry tools |
+| `sell tickets` | 5 job docs (0.7%) | Ticketing systems (JIRA tickets, support tickets, incident tickets) | ESCO concept refers to selling event/transport tickets |
+| `scan photos` | 4 job docs (0.6%) | Image/camera API or photo processing mentions | ESCO concept is about document/photo scanning as a clerical task |
+| `property law` | 3 job docs (0.4%) | Likely from real-estate-tech company descriptions | Legal concept unrelated to IT skills |
+| `Scratch` | 10 job docs (2.2%) | "from scratch" in job descriptions ("build from scratch", "develop from scratch") | ESCO maps this to Scratch, the visual block-based programming language for children |
+
+**Most notable case for thesis:** The `work with playwrights` → Playwright mapping is the clearest illustration of a fundamental limitation of embedding-based ESCO normalization: the model cannot distinguish between a proper noun (a software tool named "Playwright") and the common noun ("playwright" as a profession). This is a known challenge for domain-specific technical vocabulary where tool names overlap with natural language words.
+
+---
+
+### 5.2 Overly Broad ESCO Concepts
+
+These concepts are technically correct matches but are so general that their high frequency inflates alignment scores without adding meaningful signal. They function more as noise than as informative skill indicators.
+
+| ESCO concept | Frequency | Issue |
+|---|---|---|
+| `ICT project management methodologies` | 89 job docs (19.5%) | Catches any mention of Agile, Scrum, Kanban, sprint, or roadmap — present in almost every tech job posting |
+| `ICT system programming` | 54 job docs (11.8%) | Broad catch-all for any systems/low-level programming context; maps to OS internals, drivers, architecture, and general "programming" mentions alike |
+| `computer programming` | 36 job docs (7.9%) | Too generic to distinguish any specific skill |
+| `process data` | 29 job docs (6.4%) | Covers any data handling mention; maps indistinguishably to ETL pipelines, analytics, and casual data use |
+| `digital data processing` | 28 job docs (6.1%) | Same problem as above; overlaps heavily with `process data` |
+| `automation technology` | 23 job docs (5.0%) | Aggregates CI/CD pipelines, test automation, RPA, and industrial automation under one label |
+| `implement ICT recovery system` | 10 job docs (2.2%) | Triggered by backup, disaster recovery, or business continuity mentions; the ESCO label implies a more specific implementation task |
+
+**Implication for coverage percentages:** The high frequencies of `ICT project management methodologies` and `ICT system programming` in particular mean that alignment coverage scores (e.g., 10–12% for AUA Computer Science) may be partially inflated by these coarse concepts. Programs that include any project management or general programming content will match these regardless of actual technical depth alignment.
+
+---
+
+### 5.3 Contextually Ambiguous Matches
+
+These concepts appear in the outputs and are not wrong, but require context to interpret correctly.
+
+| ESCO concept | Frequency | Context |
+|---|---|---|
+| `betting` | 7 job docs (1.0%) | Legitimate — SoftConstruct and BetConstruct are Armenian betting/gaming software companies; their job descriptions genuinely relate to betting platform development |
+| `banking activities` | 10 job docs (1.4%) | Fintech roles in the dataset; ESCO label is accurate but sounds non-technical out of context |
+| `develop animations` / `principles of animation` | 6 + 5 job docs | Possibly legitimate for UI/frontend roles (CSS animations, Lottie, etc.) but could also be false matches from unrelated content |
+
+---
+
+### 5.4 Recommended Thesis Framing
+
+When reporting ESCO-normalized alignment results, acknowledge:
+
+1. **Embedding-based mapping does not handle proper nouns reliably.** Technical tool names (Playwright, Scratch, Docker, React) are sometimes mismatched to unrelated ESCO concepts when the word has a common-language meaning. A post-filtering step using a curated IT tool lexicon would reduce this noise.
+
+2. **ESCO concept granularity is uneven.** Some concepts (e.g., `Python`, `Java`, `DevOps`) map cleanly to specific technologies. Others (`ICT system programming`, `computer programming`) are so broad they add little discriminative value to alignment analysis.
+
+3. **Coverage percentages should be interpreted as lower bounds with caveats.** False positives inflate the overlap count, while the broad concepts make it harder to distinguish deep from shallow alignment.
+
+---
+
+*Last updated: 2026-03-25*
