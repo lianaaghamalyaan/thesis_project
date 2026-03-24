@@ -9,7 +9,7 @@
 | # | Author(s) | Year | Short title |
 |---|---|---|---|
 | [1] | World Economic Forum | 2025 | Future of Jobs Report 2025 |
-| [2] | Kupets, O. | 2016 | Education-job mismatch in Ukraine |
+| [2] | Kupets, O. | 2016 | Skill mismatch and overeducation in transition economies |
 | [3] | Aljohani et al. | 2022 | Systematic review: curriculum and labor market alignment |
 | [4] | Almaleh et al. | 2019 | Align My Curriculum |
 | [5] | Biggs, J. & Tang, C. | 2011 | Teaching for Quality Learning |
@@ -29,6 +29,7 @@
 | [19] | Pedregosa et al. | 2011 | Scikit-learn |
 | [20] | Gilardi et al. | 2023 | ChatGPT outperforms crowd workers (PNAS) |
 | [21] | He et al. | 2024 | Is ChatGPT a good annotator? |
+| [22] | Salton, G. & Buckley, C. | 1988 | Term-weighting in automatic text retrieval (TF-IDF) |
 
 ---
 
@@ -36,11 +37,11 @@
 
 **[1]** World Economic Forum. (2025). *The future of jobs report 2025*. World Economic Forum. https://www.weforum.org/publications/the-future-of-jobs-report-2025/
 
-**[2]** Kupets, O. (2016). *Education-job mismatch in Ukraine: Too many people with tertiary education or too many jobs for low-skilled?* IZA World of Labor, 2016(258). https://doi.org/10.15185/izawol.258
+**[2]** Kupets, O. (2016). *Skill mismatch and overeducation in transition economies.* IZA World of Labor, Article 224. https://wol.iza.org/articles/skill-mismatch-and-overeducation-in-transition-economies/long
 
 **[3]** Aljohani, M., Alnafessah, A., Alhumaid, K., & Gawanmeh, A. (2022). A systematic review of research on curriculum and labor market alignment. *Journal of Innovation & Knowledge, 7*(1), 100186. https://doi.org/10.1016/j.jik.2022.100186
 
-**[4]** Almaleh, A., Abumelha, M., Alharbi, G., Alshammari, M., & Almuhaidib, M. (2019). Align my curriculum: Algorithm for matching course curricula with job market needs. *Sustainability, 11*(24), 7050. https://doi.org/10.3390/su11247050
+**[4]** Almaleh, A., Aslam, M. A., Saeedi, K., & Aljohani, N. R. (2019). Align my curriculum: A framework to bridge the gap between acquired university curriculum and required market skills. *Sustainability, 11*(9), 2607. https://doi.org/10.3390/su11092607
 
 **[5]** Biggs, J., & Tang, C. (2011). *Teaching for quality learning at university* (4th ed.). Society for Research into Higher Education & Open University Press.
 
@@ -62,7 +63,7 @@
 
 **[14]** European Commission. (2023). *ESCO: European skills, competences, qualifications and occupations* (v1.2). Publications Office of the European Union. https://esco.ec.europa.eu/
 
-**[15]** Chiarello, F., Trivelli, L., Bonaccorsi, A., & Fantoni, G. (2021). Extracting and mapping industry 4.0 technologies using Wikipedia. *Technological Forecasting and Social Change, 167*, 120653. https://doi.org/10.1016/j.techfore.2021.120653
+**[15]** Chiarello, F., Trivelli, L., Bonaccorsi, A., & Fantoni, G. (2021). Towards ESCO 4.0 — Is the European classification of skills in line with Industry 4.0? *Technological Forecasting and Social Change, 173*, 121177. https://doi.org/10.1016/j.techfore.2021.121177
 
 **[16]** SFIA Foundation. (2021). *Skills framework for the information age* (v8). https://sfia-online.org/
 
@@ -71,6 +72,8 @@
 **[18]** OpenAI. (2024). *GPT-4o mini* [Language model]. https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/
 
 **[19]** Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., … Duchesnay, É. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research, 12*, 2825–2830.
+
+**[22]** Salton, G., & Buckley, C. (1988). Term-weighting approaches in automatic text retrieval. *Information Processing & Management, 24*(5), 513–523. https://doi.org/10.1016/0306-4573(88)90021-0
 
 **[20]** Gilardi, F., Alizadeh, M., & Kubli, M. (2023). ChatGPT outperforms crowd workers for text-annotation tasks. *Proceedings of the National Academy of Sciences, 120*(30), e2305016120. https://doi.org/10.1073/pnas.2305016120
 

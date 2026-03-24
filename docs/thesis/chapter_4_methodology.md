@@ -189,7 +189,7 @@ A manual spot-check of 50 randomly selected translated course names confirmed ac
 
 Skill extraction — identifying skill-denoting phrases in free text — is the methodologically critical step in this pipeline. Two unsupervised approaches were implemented and compared as baselines before ESCO normalization:
 
-**TF-IDF keyword extraction** uses term frequency–inverse document frequency weighting (sklearn `TfidfVectorizer`) [19] to identify terms that are distinctive to a given document relative to the corpus. It operates at corpus scale, treating the entire curriculum or job market corpus as the reference distribution, and selects n-grams whose TF-IDF weight ranks highest for each individual document. For a term $t$ in document $d$ drawn from corpus $D$, the TF-IDF weight is:
+**TF-IDF keyword extraction** uses term frequency–inverse document frequency weighting [22] (sklearn `TfidfVectorizer` [19]) to identify terms that are distinctive to a given document relative to the corpus. It operates at corpus scale, treating the entire curriculum or job market corpus as the reference distribution, and selects n-grams whose TF-IDF weight ranks highest for each individual document. For a term $t$ in document $d$ drawn from corpus $D$, the TF-IDF weight is:
 
 $$\text{TF-IDF}(t, d, D) = \frac{f_{t,d}}{\displaystyle\sum_{t' \in d} f_{t',d}} \cdot \log\frac{|D| + 1}{1 + |\{d' \in D : t \in d'\}|}$$
 
