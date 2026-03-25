@@ -1,7 +1,7 @@
 # Skill Extraction Results — Phase 3 (Cleaned)
 
-**Date:** 2026-03-23 (updated after noise cleanup)
-**Notebook:** `notebooks/03_skill_extraction.ipynb`
+**Date:** 2026-03-25 (updated after noise cleanup and IT-only market filtering)
+**Notebook:** `notebooks/3_analysis/02_skill_extraction.ipynb`
 **Outputs:** `data/processed/skills/`
 
 ---
@@ -25,23 +25,23 @@ Ran the complete skill extraction pipeline on both corpora. After the initial ru
 
 | Metric | TF-IDF | KeyBERT |
 |---|---|---|
-| Curriculum unique skills | 3,423 | 4,801 |
-| Job unique skills | 4,625 | 8,695 |
-| Overlap | 296 | 23 |
-| Coverage rate | **6.4%** | 0.26% |
-| Jaccard similarity | 3.8% | 0.17% |
-| Gap (jobs only) | 4,329 | 8,672 |
-| Surplus (curriculum only) | 3,127 | 4,778 |
+| Curriculum unique skills | 3,442 | 4,812 |
+| Job unique skills | 3,153 | 5,530 |
+| Overlap | 279 | 18 |
+| Coverage rate | **8.85%** | 0.33% |
+| Jaccard similarity | 4.42% | 0.17% |
+| Gap (jobs only) | 2,874 | 5,512 |
+| Surplus (curriculum only) | 3,163 | 4,794 |
 
 ### Comparison with pre-cleanup run:
 
 | Metric | Before (noisy) | After (cleaned) | Change |
 |---|---|---|---|
-| TF-IDF overlap | 584 (12.6%) | 296 (6.4%) | -288 noise terms removed |
-| TF-IDF curriculum skills | 3,734 | 3,423 | -311 |
-| KeyBERT overlap | 23 (0.24%) | 23 (0.26%) | Unchanged |
+| TF-IDF overlap | 584 (12.6%) | 279 (8.85%) | -305 noisy terms removed |
+| TF-IDF curriculum skills | 3,734 | 3,442 | -292 |
+| KeyBERT overlap | 23 (0.24%) | 18 (0.33%) | Cleaner but still sparse |
 
-The inflated 12.6% was caused by generic English words (`access`, `achieve`, `activities`, `challenges`, etc.) appearing in both corpora. The cleaned 6.4% reflects genuine vocabulary overlap.
+The inflated 12.6% was caused by generic English words (`access`, `achieve`, `activities`, `challenges`, etc.) appearing in both corpora. The cleaned 8.85% reflects the stronger but more realistic overlap after both noise filtering and IT-only job-market scoping.
 
 ### Why TF-IDF >> KeyBERT at raw level:
 TF-IDF extracts corpus vocabulary — same word forms appear in both corpora ("data", "algorithms", "programming"). KeyBERT extracts semantically representative keyphrases per document, which are idiomatic and rarely match verbatim across corpora ("object oriented programming" vs "backend development"). After ESCO normalization maps both to shared concept IDs, KeyBERT coverage is expected to rise significantly.
@@ -66,7 +66,7 @@ AUA sensitivity test (names-only vs names+descriptions):
 
 ## Known Remaining Issues (pre-ESCO)
 
-1. Some borderline terms remain (`mindset`, `drug`, `cells`) — ESCO normalization will drop non-skill concepts
+1. Some borderline terms remain (`mindset`, `drug`, `cells`) — ESCO normalization removes some of this noise, but broader concept filtering is still needed in the final analysis layer
 2. Russian-language phrases in KeyBERT job output — ESCO will not match these
 3. Description asymmetry means NUACA/RAU results are lower bounds
 
@@ -82,11 +82,10 @@ ESCO normalization has been completed. See `docs/methodology_walkthrough.md` and
 
 | Method | Pre-ESCO | Post-ESCO | Improvement |
 |---|---|---|---|
-| TF-IDF | 6.4% | 25.2% | +18.8pp |
-| KeyBERT | 0.26% | 20.3% | +20.0pp |
-| Union | — | 25.7% | — |
+| TF-IDF | 8.85% | 32.82% | +23.97pp |
+| KeyBERT | 0.33% | 28.5% | +28.17pp |
 
-The improvement confirms that ESCO normalization collapses surface-form variation (e.g. "object oriented programming" and "OOP principles") into shared concept IDs. The remaining gap represents genuine missing coverage, not terminology mismatch.
+The improvement confirms that ESCO normalization collapses surface-form variation (e.g. "object oriented programming" and "OOP principles") into shared concept IDs. It substantially reduces terminology mismatch, although some broad ESCO concepts still require filtering and interpretation in the final analysis layer.
 
 **Key files produced:**
 - `data/processed/esco/phrase_to_esco.csv` — all phrase → ESCO concept mappings

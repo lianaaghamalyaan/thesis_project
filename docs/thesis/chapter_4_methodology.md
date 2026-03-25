@@ -10,7 +10,7 @@ The study follows a sequential multi-stage pipeline:
 Stage 1: Data Collection     → curriculum scraping + job market scraping
 Stage 2: Data Processing     → cleaning, normalization, unified schemas
 Stage 3: Translation         → Armenian/Russian → English (YSU, RAU)
-Stage 4: Skill Extraction    → KeyBERT applied to both corpora
+Stage 4: Skill Extraction    → TF-IDF and KeyBERT applied to both corpora
 Stage 5: Normalization       → ESCO taxonomy matching
 Stage 6: Alignment Analysis  → coverage rate, gap sets, surplus sets
 ```
@@ -35,9 +35,9 @@ Curriculum data was collected from four Armenian universities whose IT-related p
 |---|---|---|---|---|---|
 | Yerevan State University | YSU | 13 | 691 | Web scrape (Apify, markdown) | Armenian |
 | American University of Armenia | AUA | 7 | 249 | Web scrape (Apify, HTML catalog) | English |
-| National University of Architecture and Construction of Armenia | NUACA | 5 | 174 | Web scrape (Apify, plain text) | English |
+| National University of Architecture and Construction of Armenia | NUACA | 4 | 174 | Web scrape (Apify, plain text) | English |
 | Russian-Armenian University | RAU | 1 | 47 | PDF study plans (PyPDF2 + regex) | Russian |
-| **Total** | | **26** | **1,161** | | |
+| **Total** | | **25** | **1,161** | | |
 
 Each university required a distinct collection approach due to differences in how curriculum data was published online.
 
@@ -75,7 +75,7 @@ All four source-specific datasets were merged into a single unified analysis fil
 
 *Description coverage: AUA 242/249 (97%), YSU 691/691 (100%), NUACA 0/174 (0%), RAU 0/47 (0%).
 
-The final dataset contains **1,161 rows** across **26 program–degree combinations** at **4 universities**, covering **761 Bachelor**, **373 Master**, and **27 General education** courses.
+The final dataset contains **1,161 rows** across **27 program–degree combinations** at **4 universities**, covering Bachelor, Master, and General Education coursework.
 
 ---
 
@@ -83,7 +83,7 @@ The final dataset contains **1,161 rows** across **26 program–degree combinati
 
 ### 4.3.1 Sources and Collection Strategy
 
-Job market data was aggregated from 11 distinct sources representing the Armenian IT labor market as of March 2026. Sources were selected to maximize coverage of employer types and seniority levels within the Armenian market, combining broad aggregators that index many employers with direct company career portals that represent the largest IT employers in Yerevan.
+Job market data was aggregated from a 14-source market snapshot representing the Armenian IT labor market as of March 2026. Sources were selected to maximize coverage of employer types and seniority levels within the Armenian market, combining broad aggregators that index many employers with direct company career portals that represent the largest IT employers in Yerevan. A later filtering step derives the IT-only analysis subset used in downstream NLP and alignment stages.
 
 **Table 4.3 — Job market data sources**
 
@@ -94,21 +94,24 @@ Job market data was aggregated from 11 distinct sources representing the Armenia
 | EPAM Armenia | Company portal | Internal careers API (JSON) | 108 |
 | Staff.am | Aggregator | Next.js `__NEXT_DATA__` JSON + JSON-LD | 55 |
 | job.am | Aggregator | Requests + BeautifulSoup (SSR HTML) | 20 |
+| Grid Dynamics | Company portal | Requests + API-backed listing extraction | 11 |
 | Krisp | Company portal | Requests + BeautifulSoup (SSR HTML) | 7 |
+| NVIDIA | Company portal | Requests + SSR/API extraction | 5 |
+| 10Web | Company portal | Requests + SSR/API extraction | 5 |
 | DataArt | Company portal | `window.INITIAL_STATE` (React SPA) + Playwright | 5 |
 | ServiceTitan | Company portal | Workday listing API + Playwright detail | 4 |
 | Picsart | Company portal | Greenhouse public API (Armenia filter) | 2 |
 | Synopsys | Company portal | Avature ATS SSR HTML + JSON-LD | 2 |
 | DISQO | Company portal | Lever public API | 1 |
-| **Total (pre-dedup)** | | | **1,348** |
+| **Total (broad snapshot)** | | | **1,369** |
 
-Collection for each source was implemented in a dedicated Jupyter notebook (notebooks 01–11 in `notebooks/jobs/`). All scrapers used Python's `requests` library and `BeautifulSoup` for server-rendered HTML sources; Playwright headless browser automation was used for JavaScript-heavy sources (DataArt, ServiceTitan) where the listing metadata or job content was not accessible via static requests. Each scraper included rate limiting (minimum 1.5-second delay between requests) and a custom User-Agent identifying the purpose as academic research. All sources were confirmed compliant with their respective `robots.txt` policies at the time of collection.
+Collection for each source was implemented in a dedicated Jupyter notebook (notebooks 01–11 in `notebooks/1_collection_jobs/`). All scrapers used Python's `requests` library and `BeautifulSoup` for server-rendered HTML sources; Playwright headless browser automation was used for JavaScript-heavy sources (DataArt, ServiceTitan) where the listing metadata or job content was not accessible via static requests. Each scraper included rate limiting (minimum 1.5-second delay between requests) and a custom User-Agent identifying the purpose as academic research. All sources were confirmed compliant with their respective `robots.txt` policies at the time of collection.
 
 The choice to include both aggregators and company portals was deliberate. Aggregators (LinkedIn, Staff.am, job.am) provide broad market coverage but may contain duplicates, outdated postings, and variable description quality. Company portals represent direct employer demand — the job descriptions are written by the hiring company with no intermediary — and typically contain higher-quality skill specifications. The `source_type` column encodes this distinction, enabling separate analysis of the two segments.
 
 ### 4.3.2 Data Processing and Schema
 
-Across 11 sources, raw data varied significantly in structure (HTML tables, JSON-LD Schema.org blocks, proprietary API responses, Next.js embedded state). A canonical schema was defined prior to collection, and each source-specific standardization notebook applied a `to_canonical()` transformation to normalize raw fields into the shared schema.
+Across 14 sources, raw data varied significantly in structure (HTML tables, JSON-LD Schema.org blocks, proprietary API responses, Next.js embedded state). A canonical schema was defined prior to collection, and each source-specific standardization notebook applied a `to_canonical()` transformation to normalize raw fields into the shared schema.
 
 **Table 4.4 — Canonical job dataset schema**
 
@@ -129,15 +132,13 @@ Across 11 sources, raw data varied significantly in structure (HTML tables, JSON
 
 The `full_text` field — the primary input for skill extraction — achieves 100% coverage across all rows. It was constructed as the concatenation of description, responsibilities, and required qualifications fields where these were separate in the source, or as the full description text where they were unified.
 
-### 4.3.3 Deduplication
+### 4.3.3 Broad Snapshot and IT-Only Filtering
 
-The merged dataset of 1,348 postings contained two categories of duplicates requiring removal before skill extraction:
+The broad market snapshot used in the current project contains **1,369 postings** merged into a shared 13-column schema. This broad snapshot is preserved as `final_jobs_dataset.csv` for transparency and reproducibility.
 
-**Within-source duplicates (75 rows removed):** Identical job descriptions appearing multiple times within the same source, caused by scraping artifacts. All 75 duplicates originated from the LinkedIn scrape, where the Apify scraper returned the same posting multiple times — most notably, nine EPAM trainee/intern postings were each duplicated seven times. Detection used MD5 hashing of the `full_text` field; within each (source, hash) group, only the first occurrence was retained.
+Because the broad Armenia tech hiring landscape still includes clearly non-technical, managerial, commercial, and mixed-role postings, a dedicated IT-only filtering step was introduced before downstream NLP analysis. The filter combines job-title rules, lexical technical cues, and manual review flags. The resulting analysis subset contains **753 IT-only postings**. The full audit is stored in `it_job_filter_audit.csv` (`keep=753`, `drop=558`, `review=58`), and ambiguous cases are preserved in `it_job_filter_review_queue.csv`.
 
-**Cross-source duplicates (205 rows removed):** The same job appearing on both an aggregator (LinkedIn, Staff.am) and the company's own career portal. The largest overlaps were EPAM (99 shared postings between LinkedIn and the EPAM careers API), SoftConstruct (42 shared between LinkedIn and the SoftConstruct portal), and Krisp (7 shared). Detection used normalized (job\_title, company\_name) matching. In all cases, the company portal version was retained over the aggregator version, as company portals represent direct employer demand with typically richer, more structured job descriptions.
-
-After deduplication, the final job market dataset contains **1,068 unique postings**: 802 aggregator (75.1%) and 266 company portal (24.9%). The pre-deduplication dataset is archived as `final_jobs_dataset_pre_dedup.csv` for reproducibility.
+This separation between the broad market snapshot and the IT-only downstream subset is methodologically important. It preserves the full market collection for descriptive reporting while preventing obviously non-IT roles from distorting the skill-demand signal used for alignment analysis.
 
 ---
 
@@ -201,7 +202,7 @@ $$\text{sim}(p, d) = \frac{\mathbf{e}_p \cdot \mathbf{e}_d}{\|\mathbf{e}_p\| \cd
 
 where $\mathbf{e}_p$ and $\mathbf{e}_d$ are the phrase and document embeddings produced by the sentence transformer. This approach handles short texts well (a course name of five words is sufficient) and requires no domain-specific training data.
 
-Both methods were applied to all 1,161 curriculum documents and all 1,068 job postings, enabling comparison of their alignment metrics prior to ESCO normalization.
+Both methods were applied to all 1,161 curriculum documents and the 753-posting IT-only job subset, enabling comparison of their alignment metrics prior to ESCO normalization.
 
 The sentence transformer model for KeyBERT is `all-MiniLM-L6-v2` [12], a lightweight English model (22M parameters) whose architecture builds on Sentence-BERT [11]. This model was selected over the larger multilingual alternative (`paraphrase-multilingual-mpnet-base-v2`, 278M parameters) for two reasons: (1) all curriculum text is available in English after the translation step described in Section 4.4, making a multilingual model unnecessary; (2) the smaller model allows the full extraction pipeline to run on a standard laptop without hardware accelerators, within the practical constraints of this project.
 
@@ -256,7 +257,7 @@ where $S$ is the set of already-selected phrases, $d$ is the document embedding,
 
 For course names (typically 3–8 words), the combined course name + description provides sufficient context. For job postings (median ~3,200 characters), the full `full_text` after boilerplate removal is used.
 
-### 4.5.4 ESCO Normalization *(planned — next pipeline stage)*
+### 4.5.4 ESCO Normalization
 
 Raw extracted phrases ("machine learning algorithms", "neural network training", "deep learning frameworks") refer to the same conceptual domain but use different surface forms. ESCO normalization maps these to a shared vocabulary of 13,939 standardized skill concepts, enabling direct comparison between curriculum-derived and job-derived skill profiles.
 
@@ -266,7 +267,7 @@ $$e^*(p) = \underset{e \in \mathcal{E}}{\arg\max}\; \text{sim}(p, e) \qquad \tex
 
 Phrases that do not match any ESCO concept above the threshold are retained as an "emerging skills" set rather than discarded. These unmatched phrases — representing recent technical terminology not yet absorbed by the ESCO taxonomy (e.g., specific cloud service APIs, LLM-related tooling) — are reported separately as a finding in Chapter 5, following the recommendation of Chiarello et al. [15] who document ESCO's lag in coverage of Industry 4.0 skills.
 
-The threshold $\tau = 0.75$ was selected as a starting point consistent with values reported in prior ESCO-matching studies, then validated empirically through the calibration procedure described in Section 4.5.6.
+The threshold $\tau = 0.75$ was selected through the calibration procedure described in Section 4.5.6 and then used in the completed ESCO normalization stage.
 
 ### 4.5.5 Baseline Results (Pre-ESCO)
 
@@ -276,17 +277,17 @@ Before ESCO normalization, alignment was measured directly on the raw extracted 
 
 | Metric | TF-IDF | KeyBERT |
 |---|---|---|
-| Curriculum unique skills | 3,423 | 4,801 |
-| Job unique skills | 4,625 | 8,695 |
-| Overlap | 296 | 23 |
-| Coverage rate | 6.4% | 0.26% |
-| Jaccard similarity | 3.8% | 0.17% |
-| Gap (jobs only) | 4,329 | 8,672 |
-| Surplus (curriculum only) | 3,127 | 4,778 |
+| Curriculum unique skills | 3,442 | 4,812 |
+| Job unique skills | 3,153 | 5,530 |
+| Overlap | 279 | 18 |
+| Coverage rate | 8.85% | 0.33% |
+| Jaccard similarity | 4.42% | 0.17% |
+| Gap (jobs only) | 2,874 | 5,512 |
+| Surplus (curriculum only) | 3,163 | 4,794 |
 
-The difference between TF-IDF (6.4%) and KeyBERT (0.26%) at the raw phrase level is expected and does not indicate a quality problem. TF-IDF extracts corpus-specific vocabulary, producing overlapping terms like "algorithms", "analytics", "python", "sql", and "cloud" — words that appear across both corpora using identical surface forms. KeyBERT extracts semantically rich keyphrases that are idiomatic to each text (e.g., "object oriented programming" in curriculum vs. "backend development" in jobs), which rarely match verbatim. After ESCO normalization maps both sets to shared concept identifiers, the alignment numbers for KeyBERT are expected to rise substantially. The TF-IDF coverage of 6.4% provides a literal string-match lower bound; the post-ESCO result in Chapter 5 provides the primary finding.
+The difference between TF-IDF (8.85%) and KeyBERT (0.33%) at the raw phrase level is expected and does not indicate a quality problem. TF-IDF extracts corpus-specific vocabulary, producing overlapping terms like "algorithms", "analytics", "python", "sql", and "cloud" — words that appear across both corpora using identical surface forms. KeyBERT extracts semantically rich keyphrases that are idiomatic to each text (e.g., "object oriented programming" in curriculum vs. "backend development" in jobs), which rarely match verbatim. After ESCO normalization maps both sets to shared concept identifiers, the alignment numbers for KeyBERT rise substantially. The TF-IDF coverage of 8.85% provides a literal string-match lower bound; the post-ESCO result in Chapter 5 provides the primary finding.
 
-Note: an earlier version of this pipeline reported a TF-IDF overlap of 12.6% (584 terms). A systematic audit revealed that approximately 60% of those overlap terms were generic English words (e.g., "access", "achieve", "activities") rather than skills. After expanding the generic word filters from ~130 to 459 terms and tightening the multi-word noise filter, the overlap fell to the more accurate 296 terms (6.4%). Validation against 151 jobs with human-curated `skills_tags` from Staff.am and EPAM yielded a soft-match recall of 44.2% for TF-IDF and 20.5% for KeyBERT, confirming that the pipeline captures a reasonable share of ground-truth skills despite operating unsupervised.
+Note: an earlier version of this pipeline reported a TF-IDF overlap of 12.6% (584 terms). A systematic audit revealed that approximately 60% of those overlap terms were generic English words (e.g., "access", "achieve", "activities") rather than skills. After expanding the generic word filters from ~130 to 459 terms, tightening the multi-word noise filter, and restricting the demand-side corpus to the IT-only subset, the overlap settled at the more accurate 279 terms (8.85%). Validation against 151 jobs with human-curated `skills_tags` from Staff.am and EPAM yielded a soft-match recall of 44.2% for TF-IDF and 20.5% for KeyBERT, confirming that the pipeline captures a reasonable share of ground-truth skills despite operating unsupervised.
 
 Note: a visual inspection of both output files confirms that the extraction quality is qualitatively reasonable — TF-IDF curriculum top terms include `data`, `programming`, `algorithms`, `mathematics`, `machine` (learning), `analysis`, `statistics`; TF-IDF jobs top terms include `data`, `testing`, `cloud`, `backend`, `automation`, `security`, `software`. The gap between them (low raw overlap despite conceptual similarity) illustrates exactly the vocabulary fragmentation problem that ESCO normalization is designed to solve.
 
@@ -306,7 +307,7 @@ The calibration procedure is implemented across `notebooks/3_analysis/04_esco_ca
 
 ### 4.5.7 Sensitivity Analysis
 
-Three sensitivity analyses were conducted to assess the robustness and quality of the extraction pipeline before proceeding to ESCO normalization. Full details and code are in `notebooks/03b_sensitivity_analysis.ipynb`.
+Three sensitivity analyses were conducted to assess the robustness and quality of the extraction pipeline before proceeding to ESCO normalization. Full details and code are in `notebooks/3_analysis/03_sensitivity_analysis.ipynb`.
 
 #### 4.5.7.1 Description Asymmetry
 
@@ -359,7 +360,7 @@ The precision proxy of 20.3% is a lower bound — it counts an extracted skill a
 
 A systematic audit of the initial TF-IDF overlap set (584 terms at 12.6% coverage) revealed that approximately 60% of overlapping terms were generic English words appearing in both corpora without being IT skills — words such as "access", "achieve", "activities", "challenges", "comprehensive", "effective", "innovation", and "transformation".
 
-The generic unigram filter was expanded from approximately 130 terms to 459 terms, and 11 multi-word noise phrases were added (e.g., "cutting edge", "wide range", "data data"). The multi-word filter threshold was tightened from 70% to 60% stop-word ratio. After re-running extraction with the expanded filters, the TF-IDF overlap fell from 584 terms (12.6% coverage) to 296 terms (6.4% coverage). The remaining overlap terms are predominantly genuine IT skills: `algorithms`, `analytics`, `angular`, `automation`, `blockchain`, `cloud`, `cybersecurity`, `data science`, `database`, `deployment`, `javascript`, `python`, `sql`, `testing`, `visualization`.
+The generic unigram filter was expanded from approximately 130 terms to 459 terms, and 11 multi-word noise phrases were added (e.g., "cutting edge", "wide range", "data data"). The multi-word filter threshold was tightened from 70% to 60% stop-word ratio. After re-running extraction with the expanded filters and then restricting the demand-side corpus to the IT-only subset, the TF-IDF overlap fell from 584 terms (12.6% coverage) to 279 terms (8.85% coverage). The remaining overlap terms are predominantly genuine IT skills: `algorithms`, `analytics`, `angular`, `automation`, `blockchain`, `cloud`, `cybersecurity`, `data science`, `database`, `deployment`, `javascript`, `python`, `sql`, `testing`, `visualization`.
 
 KeyBERT overlap was unaffected by the noise cleanup (23 terms before and after), confirming that KeyBERT's semantic extraction already produces domain-specific phrases that do not suffer from the generic-word problem inherent to frequency-based methods.
 
@@ -425,7 +426,7 @@ These exclusions mean the curriculum side of the analysis reflects approximately
 
 ### 4.8.2 Job Market Coverage
 
-The job dataset is a cross-sectional snapshot of postings active in Armenia during March 2026. It does not capture seasonal variation in hiring demand, longitudinal trends in skill requirements, or jobs that were posted and filled before the collection date. The company portal segment (266 postings from 8 companies after deduplication) is sufficient for aggregate analysis but does not support individual company-level conclusions for companies with fewer than 10 postings.
+The job dataset is a cross-sectional snapshot of postings active in Armenia during March 2026. It does not capture seasonal variation in hiring demand, longitudinal trends in skill requirements, or jobs that were posted and filled before the collection date. The broad market snapshot contains 1,369 postings from 14 sources, while the downstream IT-only subset contains 753 postings. The company-portal segment is sufficient for aggregate analysis but does not support individual company-level conclusions for smaller employers with only a handful of postings.
 
 ### 4.8.3 Translation Quality
 

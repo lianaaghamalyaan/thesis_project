@@ -1,6 +1,6 @@
 # Sensitivity Analysis
 
-**Source notebook:** `notebooks/03b_sensitivity_analysis.ipynb`
+**Source notebook:** `notebooks/3_analysis/03_sensitivity_analysis.ipynb`
 
 This document reports the results of three sensitivity analyses performed to assess the robustness of the skill extraction pipeline and to quantify known limitations that affect interpretation of the main alignment results.
 

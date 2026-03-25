@@ -30,26 +30,29 @@ Degree levels: 16 Bachelor programs (855 courses) and 9 Master programs (306 cou
 
 ### 5.2.2 Job Market Dataset
 
-The job market dataset contains 1,068 unique postings from 11 sources, collected in March 2026.
+The job market side consists of a 1,369-posting broad market snapshot from 14 sources, collected in March 2026, and a downstream IT-only subset of 753 postings used for NLP extraction and alignment analysis.
 
 **Table 5.2 — Job market dataset summary**
 
 | Source | Type | Postings | Full text available |
 |---|---|---|---|
-| LinkedIn | Aggregator | 734 | Yes |
-| SoftConstruct | Company portal | 141 | Yes |
-| EPAM | Company portal | 104 | Yes |
-| Staff.am | Aggregator | 48 | Yes |
+| LinkedIn | Aggregator | 992 | Yes |
+| SoftConstruct | Company portal | 152 | Yes |
+| EPAM | Company portal | 108 | Yes |
+| Staff.am | Aggregator | 55 | Yes |
 | job.am | Aggregator | 20 | Yes |
+| Grid Dynamics | Company portal | 11 | Yes |
 | Krisp | Company portal | 7 | Yes |
+| NVIDIA | Company portal | 5 | Yes |
+| 10Web | Company portal | 5 | Yes |
 | DataArt | Company portal | 5 | Yes |
 | ServiceTitan | Company portal | 4 | Yes |
 | Synopsys | Company portal | 2 | Yes |
 | Picsart | Company portal | 2 | Yes |
 | DISQO | Company portal | 1 | Yes |
-| **Total** | | **1,068** | **100%** |
+| **Total (broad snapshot)** | | **1,369** | **100%** |
 
-280 duplicate postings were removed before analysis: 75 within-source duplicates (exact title+company matches) and 205 cross-source duplicates identified by fuzzy title+company matching. The 140 recurring boilerplate paragraphs (e.g., EPAM's standard "About Us" section appearing in 100+ postings) were stripped prior to skill extraction to prevent systematic inflation of company-generic terms.
+For downstream NLP and alignment analysis, the broad snapshot was narrowed to an IT-only subset of 753 postings. The 140 recurring boilerplate paragraphs (e.g., EPAM's standard "About Us" section appearing in 100+ postings) were stripped prior to skill extraction to prevent systematic inflation of company-generic terms.
 
 ---
 
@@ -71,9 +74,9 @@ Post-extraction filters applied to both methods: company name blocklist (434 tok
 | Corpus | TF-IDF unique skills | KeyBERT unique skills |
 |---|---|---|
 | Curriculum | 3,423 | 4,801 |
-| Job market | 4,625 | 8,695 |
+| Job market | 3,153 | 5,530 |
 
-KeyBERT extracts more unique phrases than TF-IDF because it captures full multi-word semantic units rather than term-frequency peaks. Curriculum yields fewer unique terms than the job market despite having more documents (1,133 vs. 1,068), reflecting the more standardized vocabulary of academic course names relative to the diverse register of commercial job postings.
+KeyBERT extracts more unique phrases than TF-IDF because it captures full multi-word semantic units rather than term-frequency peaks. Curriculum yields slightly more unique terms than the IT-only job corpus despite having a comparable document scale, reflecting the standardized vocabulary of academic course descriptions and the tighter job-scope definition after IT filtering.
 
 ### 5.3.3 Pre-ESCO Alignment Metrics
 
@@ -81,17 +84,17 @@ KeyBERT extracts more unique phrases than TF-IDF because it captures full multi-
 
 | Metric | TF-IDF | KeyBERT |
 |---|---|---|
-| Curriculum unique skills | 3,423 | 4,801 |
-| Job market unique skills | 4,625 | 8,695 |
-| **Overlap** | **296 (6.4%)** | **23 (0.26%)** |
-| Gap (jobs demand, not taught) | 4,329 | 8,672 |
-| Surplus (taught, not demanded) | 3,127 | 4,778 |
+| Curriculum unique skills | 3,442 | 4,812 |
+| Job market unique skills | 3,153 | 5,530 |
+| **Overlap** | **279 (8.85%)** | **18 (0.33%)** |
+| Gap (jobs demand, not taught) | 2,874 | 5,512 |
+| Surplus (taught, not demanded) | 3,163 | 4,794 |
 
 The overlap metric here is computed as the intersection of exact string matches between the curriculum skill set and the job market skill set, expressed as a proportion of the job market set. This pre-ESCO figure intentionally understates true alignment: synonymous phrases that describe identical competences (e.g., "object-oriented programming" vs. "OOP principles") count as non-overlapping until ESCO normalization is applied.
 
 ### 5.3.4 Divergence Between TF-IDF and KeyBERT Overlap
 
-The 25-fold difference in overlap rates between TF-IDF (6.4%) and KeyBERT (0.26%) is a structural artifact of the methods, not a finding about the true alignment. TF-IDF extracts individual words and short phrases that tend to be shared across all technical documents (e.g., `data`, `algorithms`, `analysis`). KeyBERT extracts idiomatic multi-word phrases anchored to each corpus's specific register:
+The difference in overlap rates between TF-IDF (8.85%) and KeyBERT (0.33%) is a structural artifact of the methods, not a finding about the true alignment. TF-IDF extracts individual words and short phrases that tend to be shared across all technical documents (e.g., `data`, `algorithms`, `analysis`). KeyBERT extracts idiomatic multi-word phrases anchored to each corpus's specific register:
 
 - Curriculum phrases: `"object oriented programming"`, `"mathematical modeling applications"`, `"data structures algorithms"`
 - Job market phrases: `"backend development experience"`, `"cloud infrastructure design"`, `"agile software delivery"`
@@ -102,7 +105,7 @@ These phrase pairs describe overlapping skills but share no common string. ESCO 
 
 **Skills in the overlap (present in both curricula and job market — TF-IDF):**
 
-The 296 overlapping terms represent the most directly shared vocabulary. Representative examples include: `algorithms`, `analysis`, `data`, `design`, `machine learning`, `programming`, `python`, `statistics`, `testing`, `cloud`, `agile`, `software`, `networks`.
+The 279 overlapping terms represent the most directly shared vocabulary. Representative examples include: `algorithms`, `analysis`, `data`, `design`, `machine learning`, `programming`, `python`, `statistics`, `testing`, `cloud`, `agile`, `software`, `networks`.
 
 **Skills in the gap (demanded by employers, absent from curricula — TF-IDF top terms):**
 
@@ -165,17 +168,17 @@ The threshold of 0.75 was selected as it achieves the best F1 (0.711) with balan
 
 **Table 5.6 — ESCO-normalized alignment results**
 
-| Metric | TF-IDF | KeyBERT | Union (both) |
-|---|---|---|---|
-| Unique ESCO concepts in curriculum | 329 | 397 | 511 |
-| Unique ESCO concepts in job market | 527 | 380 | 728 |
-| **Overlap** | **133 (25.2%)** | **77 (20.3%)** | **187 (25.7%)** |
-| Gap (demanded, not taught) | 394 | 303 | — |
-| Surplus (taught, not demanded) | 196 | 320 | — |
+| Metric | TF-IDF | KeyBERT |
+|---|---|---|
+| Unique ESCO concepts in curriculum | 332 | 398 |
+| Unique ESCO concepts in job market | 326 | 207 |
+| **Overlap** | **107 (32.82%)** | **59 (28.5%)** |
+| Gap (demanded, not taught) | 219 | 148 |
+| Surplus (taught, not demanded) | 225 | 339 |
 
-Coverage is expressed as the overlap divided by the number of unique job-market ESCO concepts. The Union row aggregates both methods' concept sets and provides the broadest estimate. All three estimates cluster between 20–26%, confirming the result is robust to extraction method choice.
+Coverage is expressed as the overlap divided by the number of unique job-market ESCO concepts. Both methods converge on the same overall story, with TF-IDF producing the stronger overlap on the IT-only analysis set.
 
-The normalized results represent a substantial improvement over the pre-ESCO string baseline (TF-IDF: 6.4% → 25.2%; KeyBERT: 0.26% → 20.3%), demonstrating that ESCO normalization successfully resolves surface-form variation: phrase pairs such as "object oriented programming" and "OOP principles" now map to the same ESCO concept and count as overlap.
+The normalized results represent a substantial improvement over the pre-ESCO string baseline (TF-IDF: 8.85% → 32.82%; KeyBERT: 0.33% → 28.5%), demonstrating that ESCO normalization successfully resolves surface-form variation: phrase pairs such as "object oriented programming" and "OOP principles" now map to the same ESCO concept and count as overlap.
 
 ### 5.4.3 Knowledge vs. Applied Competence Split
 
@@ -185,11 +188,11 @@ ESCO v1.2 classifies each skill concept as either *knowledge* (declarative under
 
 | Category | Knowledge | Skill/Competence | Total |
 |---|---|---|---|
-| Overlap (taught AND demanded) | 93 (70%) | 40 (30%) | 133 |
-| Gap (demanded, NOT taught) | 191 (48%) | 202 (51%) | 394 |
-| Surplus (taught, NOT demanded) | 120 (61%) | 75 (38%) | 196 |
+| Overlap (taught AND demanded) | 83 (77.6%) | 24 (22.4%) | 107 |
+| Gap (demanded, NOT taught) | 107 (48.9%) | 112 (51.1%) | 219 |
+| Surplus (taught, NOT demanded) | 136 (60.4%) | 88 (39.1%) | 225 |
 
-The overlap is disproportionately composed of knowledge concepts (70%), while the gap is roughly balanced (51% skill/competence). This pattern indicates that Armenian IT curricula successfully cover the *knowledge* layer demanded by employers — subject matter familiarity with algorithms, data structures, programming languages, and technical domains — but fall short on the *applied competence* layer: the ability to perform specific technical tasks in commercial contexts (DevOps pipelines, responsive design, CI/CD workflows, cloud deployment). This distinction has implications for curriculum reform: the required changes are not primarily about what subject areas are taught, but about how they are practiced and assessed.
+The overlap is disproportionately composed of knowledge concepts (77.6%), while the gap remains slightly competence-heavy (51.1% skill/competence). This pattern indicates that Armenian IT curricula successfully cover the *knowledge* layer demanded by employers — subject matter familiarity with algorithms, data structures, programming languages, and technical domains — but fall short on the *applied competence* layer: the ability to perform specific technical tasks in commercial contexts (DevOps pipelines, responsive design, CI/CD workflows, cloud deployment). This distinction has implications for curriculum reform: the required changes are not primarily about what subject areas are taught, but about how they are practiced and assessed.
 
 ### 5.4.4 ESCO Vocabulary Coverage Limitation
 
@@ -208,7 +211,7 @@ The share of courses contributing zero ESCO concepts varies substantially by uni
 
 Nearly half of NUACA courses and more than half of RAU courses produce no ESCO concept assignment, meaning they contribute nothing to the alignment calculation. This structural dark matter further confirms that coverage figures for these institutions are lower bounds rather than true estimates.
 
-The 25.2% overall coverage figure should be interpreted as a lower-bound estimate of true conceptual alignment within the ESCO-expressible vocabulary.
+The 32.82% overall TF-IDF coverage figure should be interpreted as a lower-bound estimate of true conceptual alignment within the ESCO-expressible vocabulary.
 
 ### 5.4.5 Emerging Tech Skills Beyond ESCO
 
@@ -218,33 +221,33 @@ A supplementary analysis using a curated technology lexicon (36 terms) identifie
 
 | Technology | Job postings | Curriculum courses | Status |
 |---|---|---|---|
-| Microsoft Azure | 25 | 0 | Gap |
-| React | 25 | 0 | Gap |
-| Amazon Web Services | 15 | 0 | Gap |
-| Node.js | 17 | 3 | Overlap |
-| LLM / Generative AI | 19 | 4 | Overlap |
-| Kubernetes | 7 | 0 | Gap |
-| Terraform | 6 | 0 | Gap |
-| REST API | 5 | 0 | Gap |
-| Microservices | 5 | 0 | Gap |
-| DevOps | 4 | 0 | Gap |
-| Docker | 4 | 0 | Gap |
+| Microsoft Azure | 35 | 0 | Gap |
+| React | 30 | 0 | Gap |
+| LLM / Generative AI | 25 | 4 | Overlap |
+| Node.js | 20 | 3 | Overlap |
+| Amazon Web Services | 20 | 0 | Gap |
+| Go (Golang) | 14 | 0 | Gap |
+| Microservices | 10 | 0 | Gap |
+| REST API | 9 | 0 | Gap |
+| Google Cloud | 8 | 0 | Gap |
+| Kubernetes | 6 | 0 | Gap |
+| Docker | 5 | 0 | Gap |
 
 The dominant pattern is one-sided demand: the most-requested modern tools (Azure, React, AWS, Kubernetes, Docker) appear in job postings but not in any curriculum course content. LLM/GenAI is the only major emerging category with meaningful curriculum presence (4 courses), suggesting early but limited adoption.
 
 ### 5.4.6 Top Gap ESCO Skills (Demanded, Not Taught)
 
-The 394 ESCO concepts in the gap span three analytically distinct categories:
+The 219 ESCO concepts in the TF-IDF gap span three analytically distinct categories:
 
-**Technology skills:** Java (1.9% of job postings), TypeScript (1.8%), PHP (1.6%), CSS (0.8%), Android (0.8%), maintain responsive design (1.0%), develop animations (1.0%), types of pipelines (1.2%), DevOps (1.1%), search engines (0.9%).
+**Technology skills:** PHP (2.7% of IT-only postings), Java (2.6%), TypeScript (2.3%), SQL Server (1.6%), DevOps (1.6%), CSS (1.3%), Android (1.3%), maintain responsive design (1.4%).
 
-**Domain-specific skills (SoftConstruct effect):** betting (2.1%), gambling games (1.4%), manage casino (1.0%), banking activities (1.5%), fraud detection (0.9%). SoftConstruct contributes 141 postings (13.2% of the dataset) and is Armenia's largest single-employer source. These domain concepts inflate the gap with industry-specific competences that are structurally outside the scope of general IT education.
+**Domain-specific skills (SoftConstruct effect):** betting, banking activities, gambling games, and related commercial concepts remain visible in the ESCO-based gap list. SoftConstruct contributes 37 postings to the IT-only analysis set, so these domain concepts are much smaller than in the original broad-market corpus but still require careful interpretation.
 
 **Business and professional skills:** sales activities (4.0%), develop campaigns (1.4%), logistics (1.2%), comply with regulations (1.0%), contract law (0.9%), develop training programmes (0.8%). These reflect the operational context of IT roles in commercial environments.
 
 ### 5.4.7 Top Surplus ESCO Skills (Taught, Not Demanded)
 
-The 196 ESCO surplus concepts divide into three categories:
+The 225 ESCO surplus concepts divide into three categories:
 
 **General-education requirements** mandated by Armenian state educational standards: these include language courses (Chinese, Turkish, Ancient Greek), humanities (Christianity, acting techniques), and physical/life sciences outside the IT domain. These are not misalignments in the pedagogical sense — they fulfil accreditation requirements and are not expected to appear in IT job postings.
 
@@ -262,14 +265,14 @@ The 196 ESCO surplus concepts divide into three categories:
 
 | University | Programs | Avg. coverage | Total ESCO concepts | Notes |
 |---|---|---|---|---|
-| AUA | 7 | 5.77% | 381 | Full descriptions; most reliable |
-| YSU | 14 | 4.46% | 668 | Full descriptions (translated); largest dataset |
-| RAU | 1 | 2.28% | 17 | Single program; high uncertainty |
-| NUACA | 5 | 1.60% | 64 | Course names only; lower bound |
+| AUA | 7 | 8.06% | 387 | Full descriptions; most reliable |
+| YSU | 14 | 5.96% | 679 | Full descriptions (translated); largest dataset |
+| RAU | 1 | 2.76% | 18 | Single program; high uncertainty |
+| NUACA | 5 | 2.52% | 68 | Course names only; lower bound |
 
-AUA achieves the highest average alignment (5.77%), consistent with its richer course description availability and English-language instruction. YSU ranks second despite having the most courses (691), partly because its extracted ESCO concepts are more evenly distributed across 14 programs. NUACA's low alignment (1.60%) reflects the description asymmetry documented in Section 5.6.1 — name-only analysis structurally underestimates skill content.
+AUA achieves the highest average alignment (8.06%), consistent with its richer course description availability and English-language instruction. YSU ranks second at 5.96%. NUACA and RAU remain substantially lower, reflecting the description asymmetry documented in Section 5.6.1 — name-only analysis structurally underestimates skill content.
 
-Coverage percentages are expressed as the fraction of all unique job-market ESCO concepts covered by each university's programs. The denominator (527 concepts) includes domain-specific concepts from SoftConstruct (gambling, betting) that no university program would be expected to cover; the figures are therefore conservative estimates.
+Coverage percentages are expressed as the fraction of all unique job-market ESCO concepts covered by each university's programs. The denominator (326 concepts in TF-IDF) still includes some domain-specific concepts from employer-specific postings, so the figures remain conservative estimates.
 
 ### 5.5.2 Program-Level Alignment Scores
 
@@ -277,20 +280,20 @@ Coverage percentages are expressed as the fraction of all unique job-market ESCO
 
 | Rank | University | Program | Degree | Coverage |
 |---|---|---|---|---|
-| 1 | AUA | Computer and Information Science | Master | 9.1% |
-| 2 | AUA | Computer Science | Bachelor | 7.2% |
-| 3 | AUA | General Education | General | 5.9% |
-| 4 | YSU | Radiophysics and Computer Technology | Bachelor | 5.9% |
-| 5 | YSU | Data Science in Business | Master | 5.7% |
-| 6 | AUA | Data Science | Bachelor | 5.7% |
-| 7 | YSU | Applied Statistics and Data Science | Bachelor | 5.5% |
-| 8 | YSU | Information Systems Development | Master | 5.5% |
-| 9 | YSU | Applied Statistics and Data Science | Master | 5.3% |
-| 10 | YSU | Information Systems Management | Master | 4.9% |
+| 1 | AUA | Computer and Information Science | Master | 12.27% |
+| 2 | AUA | Computer Science | Bachelor | 10.74% |
+| 3 | AUA | Data Science | Bachelor | 8.28% |
+| 4 | YSU | Data Science in Business | Master | 7.98% |
+| 5 | YSU | Information Systems Development | Master | 7.98% |
+| 6 | AUA | General Education | General | 7.67% |
+| 7 | AUA | Industrial Engineering and Systems Management | Master | 7.06% |
+| 8 | YSU | Applied Statistics and Data Science | Bachelor | 6.75% |
+| 9 | YSU | Applied Statistics and Data Science | Master | 6.44% |
+| 10 | YSU | Information Systems Management | Master | 6.13% |
 | … | | | | |
-| 25 | NUACA | Geographic Information Systems | Master | 0.6% |
+| 25 | NUACA | Geographic Information Systems | Master | 0.92% |
 
-The spread between the best program (AUA CIS, 9.1%) and worst (NUACA GIS, 0.6%) is 15-fold, indicating substantial variation in how well individual programs prepare students for market-demanded skills. AUA programs occupy the top three positions. Data Science and Applied Statistics programs from both AUA and YSU cluster in the top half, reflecting stronger overlap between quantitative analytical curricula and market demand. NUACA programs occupy the bottom five positions, consistent with the description asymmetry limitation.
+The spread between the best program (AUA CIS, 12.27%) and worst (NUACA GIS, 0.92%) is substantial, indicating major variation in how well individual programs prepare students for market-demanded skills. AUA programs occupy the top three positions. Data Science and Applied Statistics programs from both AUA and YSU cluster in the top half, reflecting stronger overlap between quantitative analytical curricula and market demand. NUACA programs occupy the bottom range, consistent with the description asymmetry limitation.
 
 ### 5.5.3 Bachelor vs. Master Degree Comparison
 
@@ -298,17 +301,17 @@ The spread between the best program (AUA CIS, 9.1%) and worst (NUACA GIS, 0.6%) 
 
 | Degree | Programs | Avg. coverage |
 |---|---|---|
-| Master | 13 | 3.88% |
-| Bachelor | 13 | 4.36% |
-| General | 1 | 5.88% |
+| Master | 13 | 5.66% |
+| Bachelor | 13 | 5.69% |
+| General | 1 | 7.67% |
 
-Bachelor and Master programs show nearly identical average coverage (4.36% vs. 3.88%), indicating that degree level is not a meaningful predictor of curriculum–market alignment in this sample. The small advantage for Bachelor programs may reflect that some Master programs are more theoretically specialised (e.g., Discrete Mathematics and Theoretical Informatics, Numerical Analysis and Mathematical Modelling), which reduces their ESCO concept overlap with industry job postings.
+Bachelor and Master programs show nearly identical average coverage (5.69% vs. 5.66%), indicating that degree level is not a meaningful predictor of curriculum–market alignment in this sample. The tiny difference reinforces that the gap is driven more by curriculum design priorities than by degree level.
 
 ---
 
 ## 5.6 Sensitivity Analyses
 
-Three sensitivity analyses were conducted to assess the robustness of the extraction results. Full details are documented in `docs/sensitivity_analysis.md` and `notebooks/03b_sensitivity_analysis.ipynb`.
+Three sensitivity analyses were conducted to assess the robustness of the extraction results. Full details are documented in `docs/sensitivity_analysis.md` and `notebooks/3_analysis/03_sensitivity_analysis.ipynb`.
 
 ### 5.6.1 Description Asymmetry (AUA Sensitivity Test)
 
@@ -341,27 +344,27 @@ The 44% soft recall of TF-IDF indicates that approximately half of human-identif
 
 ### 5.6.3 Noise Audit
 
-Prior to the noise cleanup described in Section 4.5.6, an audit of the 584 TF-IDF overlapping terms found that 351 (60%) were generic English words with no specific IT skill meaning (e.g., `"team"`, `"experience"`, `"role"`, `"environment"`). Following the addition of 459 generic unigrams and 11 noise phrases to the extraction filters and re-running the full pipeline, the overlap was revised from 584 to 296 — a reduction of 49% — improving the precision of the reported alignment rate from an inflated 12.6% to a more conservative and defensible 6.4%.
+Prior to the noise cleanup described in Section 4.5.6, an audit of the 584 TF-IDF overlapping terms found that 351 (60%) were generic English words with no specific IT skill meaning (e.g., `"team"`, `"experience"`, `"role"`, `"environment"`). Following the addition of 459 generic unigrams and 11 noise phrases to the extraction filters, and then rerunning the analysis on the IT-only job subset, the overlap was revised to 279 — a reduction that improved the precision of the reported alignment rate from an inflated 12.6% to a more conservative and defensible 8.85%.
 
-This audit is reported here as a finding because it quantifies the magnitude of noise in unsupervised extraction and demonstrates the importance of systematic quality control. The cleaned 6.4% figure is used in all subsequent analyses.
+This audit is reported here as a finding because it quantifies the magnitude of noise in unsupervised extraction and demonstrates the importance of systematic quality control. The cleaned 8.85% figure is used in all subsequent analyses.
 
 ---
 
 ## 5.7 Summary of Results
 
-**Pre-ESCO baseline:** String-level overlap is low (TF-IDF 6.4%, KeyBERT 0.26%), as expected — synonymous phrases describing the same skill are counted as non-overlapping until normalization is applied.
+**Pre-ESCO baseline:** String-level overlap is low (TF-IDF 8.85%, KeyBERT 0.33%), as expected — synonymous phrases describing the same skill are counted as non-overlapping until normalization is applied.
 
-**ESCO-normalized alignment:** After mapping extracted phrases to shared ESCO concept identifiers, coverage rises to 25.2% (TF-IDF) and 20.3% (KeyBERT), with the combined union estimate at 25.7%. All estimates are stable across method and threshold variations, confirming robustness.
+**ESCO-normalized alignment:** After mapping extracted phrases to shared ESCO concept identifiers, coverage rises to 32.82% (TF-IDF) and 28.5% (KeyBERT). Both estimates remain well above the string-level baseline, confirming the value of normalization.
 
-**Knowledge vs. competence:** The overlap is 70% *knowledge* concepts (shared factual domains) and only 30% *skill/competence*. The gap is 51% applied competences. Curricula cover the knowledge layer but fall short on applied practice — DevOps, CI/CD, cloud deployment, responsive design.
+**Knowledge vs. competence:** The overlap is 77.6% *knowledge* concepts (shared factual domains) and 22.4% *skill/competence*. The gap is 51.1% applied competences. Curricula cover the knowledge layer but fall short on applied practice — DevOps, CI/CD, cloud deployment, responsive design.
 
 **Gap pattern:** The skill gap is concentrated in three clusters: (1) modern cloud and DevOps tooling (Azure, React, AWS, Docker, Kubernetes, Terraform — all absent from curricula); (2) domain-specific competences driven by the gaming/betting industry (SoftConstruct effect); and (3) practical software delivery skills (CI/CD, microservices, REST APIs).
 
 **Surplus pattern:** The surplus consists primarily of general-education requirements mandated by state standards (languages, humanities, physical education) and advanced theoretical content (algebra, Monte Carlo simulation, biostatistics) whose market relevance is not directly signalled by job posting language.
 
-**Per-program variation:** Coverage ranges from 9.1% (AUA Computer and Information Science, Master) to 0.6% (NUACA GIS, Master). AUA consistently outperforms due to richer description availability. Degree level (Bachelor vs. Master) is not a significant predictor of alignment.
+**Per-program variation:** Coverage ranges from 12.27% (AUA Computer and Information Science, Master) to 0.92% (NUACA GIS, Master). AUA consistently outperforms due to richer description availability. Degree level (Bachelor vs. Master) is not a meaningful predictor of alignment.
 
-**Key limitation:** The 25% coverage figure is a lower bound. ESCO v1.2 does not contain Docker, Kubernetes, React, Azure, and other modern tools — these are captured separately in the emerging skills analysis. Adjusting for ESCO's vocabulary gap, true conceptual alignment is likely higher.
+**Key limitation:** The 32.82% coverage figure is a lower bound. ESCO v1.2 does not contain Docker, Kubernetes, React, Azure, and other modern tools — these are captured separately in the emerging skills analysis. Adjusting for ESCO's vocabulary gap, true conceptual alignment is likely higher.
 
 The sensitivity analyses confirm that: (a) programs with richer description data produce substantially higher alignment estimates; (b) roughly 44% of human-identified skills in job postings are recoverable by TF-IDF extraction; and (c) noise filtering is essential for interpretable results.
 

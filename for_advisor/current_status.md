@@ -9,6 +9,7 @@ The current status is:
 - research question defined ✓
 - datasets built ✓
 - preprocessing completed ✓
+- IT-only market filtering completed ✓
 - translation completed ✓
 - baseline NLP extraction completed ✓
 - validation and sensitivity analysis completed ✓
@@ -16,7 +17,7 @@ The current status is:
 - ESCO normalization completed ✓
 - Final alignment analysis completed (per-program, by university, by degree, gap/surplus) ✓
 - Emerging tech skills analysis completed ✓
-- Skill frequency analysis completed (top 60 overall + top 15 per role, 9 IT roles) ✓
+- Skill frequency analysis completed (top 60 overall + top 15 per role, 9 core IT roles) ✓
 - Chapter 5 (Results) written ✓
 - Chapter 6 (Discussion) — in progress
 - Chapter 7 (Conclusion) — in progress
@@ -29,6 +30,7 @@ Curriculum collection
 -> Armenian/Russian to English handling
 -> jobs collection
 -> jobs deduplication and schema merge
+-> IT-only market filtering
 -> skill extraction (TF-IDF, KeyBERT)
 -> validation and sensitivity analysis
 -> ESCO normalization [complete]
@@ -62,13 +64,17 @@ Known coverage limits:
 ### Jobs side
 
 - File: `data/processed/jobs/final_jobs_dataset.csv`
-- Rows after deduplication: `1,068`
-- Sources: `11`
+- Rows in broad market snapshot: `1,369`
+- Sources: `14`
+
+- File: `data/processed/jobs/final_jobs_dataset_it_only.csv`
+- Rows used in downstream analysis: `753`
+- Sources after IT filtering: `13`
 
 Source mix:
 
 - aggregators: LinkedIn, Staff.am, job.am
-- company portals: EPAM, SoftConstruct, Krisp, DataArt, ServiceTitan, Synopsys, Picsart, DISQO
+- company portals: EPAM, SoftConstruct, Krisp, DataArt, ServiceTitan, Synopsys, Picsart, DISQO, Grid Dynamics, NVIDIA, 10Web
 
 ## What Is Methodologically Strong Already
 
@@ -105,10 +111,10 @@ Important decisions are already justified:
 
 | Metric | TF-IDF | KeyBERT |
 |---|---:|---:|
-| Curriculum unique skills | 3,423 | 4,801 |
-| Job unique skills | 4,625 | 8,695 |
-| Overlap | 296 | 23 |
-| Coverage rate | 6.4% | 0.26% |
+| Curriculum unique skills | 3,442 | 4,812 |
+| Job unique skills | 3,153 | 5,530 |
+| Overlap | 279 | 18 |
+| Coverage rate | 8.85% | 0.33% |
 
 Validation against human-curated `skills_tags`: TF-IDF soft recall 44%, KeyBERT 21%.
 
@@ -116,16 +122,16 @@ Validation against human-curated `skills_tags`: TF-IDF soft recall 44%, KeyBERT 
 
 | Metric | TF-IDF | KeyBERT |
 |---|---:|---:|
-| Curriculum ESCO concepts | 329 | 397 |
-| Job market ESCO concepts | 527 | 380 |
-| **Overlap** | **133** | **77** |
-| **Coverage rate** | **25.2%** | **20.3%** |
-| Gap (demanded, not taught) | 394 | 303 |
-| Surplus (taught, not demanded) | 196 | 320 |
+| Curriculum ESCO concepts | 332 | 398 |
+| Job market ESCO concepts | 326 | 207 |
+| **Overlap** | **107** | **59** |
+| **Coverage rate** | **32.82%** | **28.5%** |
+| Gap (demanded, not taught) | 219 | 148 |
+| Surplus (taught, not demanded) | 225 | 339 |
 
-Coverage improved from 6.4% → 25.2% (TF-IDF) and 0.26% → 20.3% (KeyBERT) after ESCO normalization, as expected — surface-form variation collapses into shared concept IDs.
+Coverage improved from 8.85% → 32.82% (TF-IDF) and 0.33% → 28.5% (KeyBERT) after ESCO normalization, as expected — surface-form variation collapses into shared concept IDs.
 
-Per-program coverage ranges from 9.1% (AUA Computer and Information Science, Master) to 0.6% (NUACA GIS, Master). AUA leads consistently due to richer course descriptions.
+Per-program coverage ranges from 12.27% (AUA Computer and Information Science, Master) to 0.92% (NUACA GIS, Master). AUA leads consistently due to richer course descriptions and higher concept density.
 
 ## Completed Analytical Work
 
@@ -137,7 +143,7 @@ The full pipeline is complete. The project has:
 - a calibrated ESCO threshold (0.75, F1=0.711)
 - normalized alignment results at the concept level
 - per-program coverage scores for all 25 programs
-- skill frequency ranking (top 60 overall, top 15 per role across 9 IT roles)
+- skill frequency ranking (top 60 overall, top 15 per role across 9 core IT roles)
 - all outputs saved to `data/processed/esco/` and `data/processed/skills/`
 
 ## Main Open Step

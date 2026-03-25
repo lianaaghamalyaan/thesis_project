@@ -28,15 +28,15 @@ The gap skills identified in this study align with this prediction. Containeriza
 
 The surplus content, by contrast — calculus, differential equations, linear algebra, formal logic — is associated with routine cognitive task patterns: formal derivations following well-defined procedures. This does not make them valueless (they develop abstract reasoning capacity that underlies applied competences), but it explains why they are not directly requested in job postings. Employers purchase the outputs of foundational training without explicitly naming the courses that produced them.
 
-The knowledge/competence split in the ESCO overlap reinforces this interpretation. Of the 133 overlapping ESCO concepts (TF-IDF), 70% are classified as *knowledge* and 30% as *skill/competence*. The gap is approximately balanced (48% knowledge, 51% applied competence). Armenian curricula are stronger on the knowledge transmission side of the task spectrum and weaker on applied competence — precisely where the task-based framework predicts the largest market premium.
+The knowledge/competence split in the ESCO overlap reinforces this interpretation. Of the 107 overlapping ESCO concepts (TF-IDF), 77.6% are classified as *knowledge* and 22.4% as *skill/competence*. The gap is approximately balanced (48.9% knowledge, 51.1% applied competence). Armenian curricula are stronger on the knowledge transmission side of the task spectrum and weaker on applied competence — precisely where the task-based framework predicts the largest market premium.
 
 ### 6.2.3 ESCO Lens: Structural Coverage and Emerging Skills
 
 The ESCO-normalized results reveal two analytically distinct layers of the alignment picture.
 
-The first layer is **structural coverage within the ESCO vocabulary**. Armenian IT curricula cover 329 unique ESCO concepts (TF-IDF) against a job market demand of 527 — a 25.2% overlap. This means that roughly three in four employer-demanded ESCO concepts have no representation in any Armenian IT curriculum. The gap is not concentrated in exotic or niche areas: it includes Java (demanded in 1.9% of all postings), TypeScript (1.8%), PHP (1.6%), and CSS (0.8%) — mainstream technologies taught in the majority of Western software engineering programs.
+The first layer is **structural coverage within the ESCO vocabulary**. Armenian IT curricula cover 332 unique ESCO concepts (TF-IDF) against a job market demand of 326 — a 32.82% overlap. This means that roughly two thirds of employer-demanded ESCO concepts still have no representation in any Armenian IT curriculum. The gap is not concentrated in exotic or niche areas: it includes PHP, Java, TypeScript, SQL Server, DevOps, and CSS — mainstream technologies and practices taught in the majority of contemporary software engineering programs.
 
-The second layer is **emerging skills beyond ESCO**. The supplementary tech lexicon analysis identified 24 specific modern tools absent from both ESCO v1.2 and from curricula. Azure (25 postings), React (25), AWS (15), Kubernetes (7), Docker (4), and Terraform (6) all have zero curriculum presence. LLM/GenAI tools (19 postings) and Node.js (17) are the only emerging categories with any curriculum representation (4 and 3 courses respectively), suggesting limited early adoption. The absence of cloud platforms, containerization, and infrastructure-as-code from curricula while these tools appear in double-digit percentages of job postings represents the most concrete and time-sensitive curriculum reform target.
+The second layer is **emerging skills beyond ESCO**. The supplementary tech lexicon analysis identified 25 specific modern tools absent from or poorly represented in ESCO v1.2. Azure (35 postings), React (30), AWS (20), Google Cloud (8), Kubernetes (6), Docker (5), and Terraform (5) all have zero curriculum presence. LLM/GenAI tools (25 postings) and Node.js (20) are the only major emerging categories with any curriculum representation (4 and 3 courses respectively), suggesting limited early adoption. The absence of cloud platforms, containerization, and infrastructure-as-code from curricula while these tools appear repeatedly in employer demand represents the most concrete and time-sensitive curriculum reform target.
 
 ### 6.2.4 Synthesis: A Coherent Picture Across Three Lenses
 
@@ -50,14 +50,14 @@ The structural pattern that emerges is: Armenian IT curricula are well-aligned w
 
 ### RQ1: Most frequently demanded skills in the Armenian IT job market
 
-The most frequently demanded skills in the Armenian IT job market, as identified by TF-IDF extraction from 1,068 job postings, cluster into four categories:
+The most frequently demanded skills in the Armenian IT job market, as identified by the direct frequency analysis on the IT-only market subset, cluster into four categories:
 
-1. **Programming languages and platforms:** Python, JavaScript, Java, SQL, .NET, TypeScript
-2. **Modern software delivery tools:** Docker, Kubernetes, CI/CD, Git, Terraform, Ansible
-3. **Cloud and infrastructure:** AWS, Azure, Google Cloud, cloud architecture, microservices, REST APIs
-4. **Core competences:** algorithms, data structures, testing, software design, Agile, DevOps
+1. **Programming languages and platforms:** Python, Java, .NET / C#, TypeScript, Node.js, React
+2. **Modern software delivery tools:** CI/CD, Docker, Kubernetes, DevOps, Terraform
+3. **Cloud and infrastructure:** AWS, Azure, Google Cloud, microservices, REST APIs
+4. **Core competences:** testing, software design, Agile, project management methodologies
 
-The source composition of the dataset shapes this demand signal. LinkedIn (734 postings, 68.7%) skews toward senior and mid-level roles in international company Armenia offices. SoftConstruct (141 postings, 13.2%) introduces domain-specific gaming and betting industry demand — notably, ESCO concepts such as *betting*, *gambling games*, and *manage casino* appear in the top gap list precisely because SoftConstruct is the largest single non-aggregator employer source. These domain-specific demands are reported in full but should be understood as employer-specific rather than sector-wide IT requirements. Filtering them out does not materially change the top 10 IT-specific gap skills (Java, TypeScript, PHP, DevOps, CI/CD, REST APIs, Docker, Kubernetes, CSS, Android).
+The source composition of the dataset shapes this demand signal. LinkedIn contributes 556 of the 753 IT-only postings and therefore skews the market view toward roles posted by larger, more formal employers. SoftConstruct contributes 37 IT-only postings and still introduces some gaming and betting industry vocabulary — notably, ESCO concepts such as *betting* and *banking activities* remain visible in the raw gap list. These domain-specific demands are reported in full but should be understood as employer-specific rather than sector-wide IT requirements. They do not change the main IT-specific gap story, which is centered on PHP, Java, TypeScript, DevOps, SQL Server, responsive design, CSS, and Android-related practice.
 
 ### RQ2: Most prevalent competences in Armenian IT curricula
 
@@ -69,22 +69,22 @@ NUACA and RAU, with name-only course records, yield the most conservative skill 
 
 ### RQ3: Overall alignment magnitude
 
-The pre-ESCO baseline alignment rate is 6.4% (TF-IDF string match) and 0.26% (KeyBERT). These figures substantially underestimate true conceptual alignment due to synonymous phrasing — a phrase pair like "object oriented programming" and "OOP principles" counts as non-overlapping at the string level.
+The pre-ESCO baseline alignment rate is 8.85% (TF-IDF string match) and 0.33% (KeyBERT). These figures substantially underestimate true conceptual alignment due to synonymous phrasing — a phrase pair like "object oriented programming" and "OOP principles" counts as non-overlapping at the string level.
 
-After ESCO normalization, the alignment rises to **25.2%** (TF-IDF), **20.3%** (KeyBERT), and **25.7%** (union of both methods). All three estimates are robust across the 0.70–0.80 threshold range: lowering the threshold adds matched phrases but not new ESCO concepts, confirming the bottleneck is ESCO vocabulary coverage rather than calibration sensitivity.
+After ESCO normalization, the alignment rises to **32.82%** (TF-IDF) and **28.5%** (KeyBERT). The estimates remain robust across threshold variation: lowering the threshold adds matched phrases but not many new concepts, confirming the bottleneck is ESCO vocabulary coverage rather than calibration sensitivity.
 
-The 25.2% figure means that approximately one in four skills expressible in ESCO v1.2 that employers demand is covered somewhere across Armenian IT curricula. This figure is best interpreted as a lower bound, for two reasons: (1) ESCO v1.2 does not contain many modern tools that are both demanded and potentially taught (Docker, React, Azure), and (2) NUACA and RAU scores are structurally suppressed by name-only description coverage. Adjusting for these factors, the true alignment is likely meaningfully higher — but the present methodology cannot produce a precise adjusted estimate.
+The 32.82% figure means that roughly one in three skills expressible in ESCO v1.2 that employers demand is covered somewhere across Armenian IT curricula. This figure is best interpreted as a lower bound, for two reasons: (1) ESCO v1.2 does not contain many modern tools that are both demanded and potentially taught (Docker, React, Azure), and (2) NUACA and RAU scores are structurally suppressed by name-only description coverage. Adjusting for these factors, the true alignment is likely meaningfully higher — but the present methodology cannot produce a precise adjusted estimate.
 
 ### RQ4: Programs with strongest and weakest alignment
 
 The per-program ESCO-normalized results confirm the structural hypotheses:
 
-- **AUA programs lead** (5.77% average coverage). AUA Computer and Information Science (Master) achieves 9.1%, AUA Computer Science (Bachelor) 7.2%. AUA's advantage reflects fuller course descriptions and an applied-technology-oriented curriculum.
-- **YSU programs cluster in the middle** (4.46% average). Data Science in Business (5.7%), Information Systems Development (5.5%), and Applied Statistics programs (5.3–5.5%) lead the YSU group. The theoretically oriented programs — Discrete Mathematics and Theoretical Informatics (2.85%), Numerical Analysis and Mathematical Modelling (2.85%), Blockchain and Digital Currencies (1.71%) — rank lower.
-- **NUACA programs occupy the lower range** (1.60% average, 0.57%–2.47%). This reflects both name-only data and a curriculum oriented toward architecture, construction, and geographic information systems rather than software industry practice.
-- **RAU's single program** aligns at 2.28%, above NUACA but below most YSU programs, consistent with its strong theoretical mathematics orientation.
+- **AUA programs lead** (8.06% average coverage). AUA Computer and Information Science (Master) achieves 12.27%, AUA Computer Science (Bachelor) 10.74%, and AUA Data Science (Bachelor) 8.28%. AUA's advantage reflects fuller course descriptions and an applied-technology-oriented curriculum.
+- **YSU programs cluster in the middle** (5.96% average). Data Science in Business (7.98%), Information Systems Development (7.98%), and Applied Statistics programs (6.13%–6.75%) lead the YSU group. The more theoretically oriented programs rank lower.
+- **NUACA programs occupy the lower range** (2.52% average, with GIS at 0.92%). This reflects both name-only data and a curriculum oriented toward architecture, construction, and geographic information systems rather than software industry practice.
+- **RAU's single program** aligns at 2.76%, above the lower NUACA range but below most YSU and AUA programs, consistent with its strong theoretical mathematics orientation.
 
-The 15-fold spread between best (9.1%) and worst (0.57%) program confirms that alignment varies more within institutions than between them. Degree level (Bachelor vs. Master) is not a significant predictor (4.36% vs. 3.88%), indicating that graduate programs are not systematically better aligned with market demand than undergraduate ones. This is notable: it suggests that the curriculum gap is not primarily a matter of educational level but of curriculum design priorities.
+The wide spread between best (12.27%) and worst (0.92%) program confirms that alignment varies more within institutions than between them. Degree level is not a significant predictor (Bachelor 5.69% vs. Master 5.66%), indicating that graduate programs are not systematically better aligned with market demand than undergraduate ones. This is notable: it suggests that the curriculum gap is not primarily a matter of educational level but of curriculum design priorities.
 
 ---
 
@@ -110,7 +110,7 @@ This study makes three methodological contributions to the curriculum–labor ma
 
 **Unsupervised extraction ceiling.** TF-IDF recall against human-curated skill tags is 44%, KeyBERT 21%. Approximately half of identifiable skills are not retrieved. The alignment rates are partial estimates, not upper bounds on true alignment.
 
-**ESCO vocabulary lag.** ESCO v1.2 does not contain Docker, Kubernetes, React, Azure, and other tools in active professional use. The 12.6% phrase match rate (only 2,523 of 19,998 unique phrases match ESCO) reflects this structural vocabulary gap. The 25.2% coverage figure understates true alignment for the most modern technology layers of both curricula and job postings.
+**ESCO vocabulary lag.** ESCO v1.2 does not contain Docker, Kubernetes, React, Azure, and other tools in active professional use. The relatively low phrase-to-taxonomy match rate reflects this structural vocabulary gap. The 32.82% coverage figure therefore understates true alignment for the most modern technology layers of both curricula and job postings.
 
 **Single false positive identified.** The phrase `docker` maps to the ESCO concept *dock operations* (maritime logistics) at similarity 0.761 — a known embedding collision. This marginally inflates the job-market gap count by one concept. The impact is negligible but exemplifies the precision risk in similarity-based taxonomy matching.
 

@@ -15,8 +15,8 @@ At the heart of this research is the lack of structured, data-driven analysis re
 The primary goal of this thesis is to provide a quantitative assessment of how well Armenian university IT curricula match the current demands of the domestic job market. To achieve this, the following objectives have been established:
 
 1. To build a structured curriculum dataset by collecting and processing data from 25 programs across four major Armenian universities: Yerevan State University (YSU), the American University of Armenia (AUA), the National University of Architecture and Construction of Armenia (NUACA), and the Russian-Armenian University (RAU).
-2. To aggregate a comprehensive job market dataset from 11 diverse sources, including job aggregators (LinkedIn, Staff.am, job.am) and direct company career portals (EPAM, SoftConstruct, Picsart, Krisp, and others), covering 1,068 postings active in Armenia as of March 2026 after deduplication.
-3. To implement a Natural Language Processing (NLP) pipeline for automated skill extraction from 1,161 curriculum records and 1,068 job postings, handling multilingual content (Armenian, English, and Russian).
+2. To aggregate a comprehensive job market dataset from 14 diverse sources, including job aggregators (LinkedIn, Staff.am, job.am) and direct company career portals (EPAM, SoftConstruct, Grid Dynamics, NVIDIA, 10Web, Picsart, Krisp, and others), covering a 1,369-posting Armenian market snapshot and a downstream IT-only subset of 753 postings active in March 2026.
+3. To implement a Natural Language Processing (NLP) pipeline for automated skill extraction from 1,161 curriculum records and the 753-posting IT-only job-market subset, handling multilingual content (Armenian, English, and Russian).
 4. To define and compute alignment metrics — including skill coverage rate, gap sets, and surplus sets — that objectively measure the overlap between educational content and industry demand.
 
 ## 1.4 Research Questions
@@ -34,7 +34,7 @@ This thesis makes the following contributions to the field:
 
 1. **First computational alignment study for Armenian IT education.** To the best of the author's knowledge, this is the first study to apply automated skill extraction and taxonomy-based alignment analysis to Armenian university curricula and job market data jointly.
 
-2. **Multi-source job dataset.** By aggregating 1,068 deduplicated postings from 11 distinct sources—combining broad aggregators with direct employer portals—this research provides a more representative picture of the Armenian IT labor market than any single-source approach.
+2. **Multi-source job dataset.** By aggregating a 1,369-posting market snapshot from 14 distinct sources, then deriving a focused 753-posting IT-only analysis subset, this research provides a more representative picture of the Armenian IT labor market than any single-source approach.
 
 3. **Multilingual NLP pipeline.** The methodology is designed to address the challenge of Armenian-language curriculum data (691 of 1,161 course records) alongside English and Russian sources, providing a replicable model for curriculum alignment research in other non-English educational contexts.
 

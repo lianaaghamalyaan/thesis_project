@@ -1,6 +1,6 @@
 # Data Inventory
 
-*Last updated: 2026-03-23 — All analysis phases complete. Thesis writing in progress.*
+*Last updated: 2026-03-25 — All analysis phases complete. Thesis writing in progress.*
 
 ## Project Structure
 
@@ -28,6 +28,9 @@ data/
 │   │   ├── servicetitan_jobs_raw.csv         4 ServiceTitan Yerevan jobs
 │   │   ├── epam_jobs_raw.csv               108 EPAM Armenia jobs
 │   │   ├── softconstruct_jobs_raw.csv       152 SoftConstruct Yerevan jobs
+│   │   ├── griddynamics_jobs_raw.csv         11 Grid Dynamics Armenia jobs
+│   │   ├── nvidia_jobs_raw.csv                5 NVIDIA Armenia jobs
+│   │   ├── 10web_jobs_raw.csv                 5 10Web Armenia jobs
 │   │   └── disqo_jobs_raw.csv                1 DISQO Armenia job
 │   └── _originals/                   <- raw Apify export filenames + duplicates
 │
@@ -52,10 +55,16 @@ data/
 │       ├── servicetitan_jobs_standardized.csv     4 rows — ServiceTitan (canonical schema)
 │       ├── epam_jobs_standardized.csv           108 rows — EPAM (canonical schema)
 │       ├── softconstruct_jobs_standardized.csv  152 rows — SoftConstruct (canonical schema)
+│       ├── griddynamics_jobs_standardized.csv    11 rows — Grid Dynamics (canonical schema)
+│       ├── nvidia_jobs_standardized.csv           5 rows — NVIDIA (canonical schema)
+│       ├── 10web_jobs_standardized.csv            5 rows — 10Web (canonical schema)
 │       ├── disqo_jobs_standardized.csv            1 row  — DISQO (canonical schema)
 │       ├── synopsys_jobs_standardized.csv         2 rows — Synopsys (canonical schema)
 │       ├── dataart_jobs_standardized.csv          5 rows — DataArt (canonical schema)
-│       └── final_jobs_dataset.csv            *** 1,348 rows — FINAL JOBS DATASET ***
+│       ├── final_jobs_dataset.csv            *** 1,369 rows — FINAL BROAD JOBS DATASET ***
+│       ├── final_jobs_dataset_it_only.csv        753 rows — IT-only filtered subset used downstream
+│       ├── it_job_filter_audit.csv             1,369 rows — keep/drop/review audit
+│       └── it_job_filter_review_queue.csv         58 rows — ambiguous titles for manual review
 │
 │
 ├── processed/esco/                   ESCO normalization outputs (Phases 4–5)
@@ -74,7 +83,9 @@ data/
 │   ├── alignment_by_university.csv   university-level aggregation
 │   ├── alignment_by_degree.csv       Bachelor vs. Master comparison
 │   ├── gap_analysis.csv              top gap skills ranked by job market frequency
-│   └── emerging_tech_skills.csv      modern tools beyond ESCO (lexicon-matched, 24 terms)
+│   ├── emerging_tech_skills.csv      modern tools beyond ESCO (lexicon-matched, 25 terms)
+│   ├── skills_by_role.csv            top 15 demanded skills by role across 9 IT job groups
+│   └── skill_frequency_overall.csv   top 60 demanded skills across IT-role job postings
 │
 docs/figures/                         publication-ready charts
 │   ├── per_program_coverage.png      horizontal bar chart, all 25 programs, color-coded by university
@@ -127,7 +138,7 @@ Scraped: 2026-03-22 | Category: Software Development (id=1) | `totalCount=58` (s
 ### `jobam_jobs_raw.csv`
 20 rows | 15 columns | IT jobs from job.am (category I=17 + keyword filtering)
 Scraped: 2026-03-22 | 0 errors | 100% full_text coverage
-Built by: `notebooks/jobs/03_jobam_scraping.ipynb`
+Built by: `notebooks/1_collection_jobs/03_jobam_scraping.ipynb`
 
 ### `staffam_jobs_raw.csv`
 58 rows | 11 columns | Original scrape (description only — superseded)
@@ -137,109 +148,127 @@ Scraped: 2026-03-22 | Fields: `source, source_url, job_title, company_name, loca
 55 rows | 18 columns | Improved re-scrape with full content (non-expired only)
 Scraped: 2026-03-22 | 0 errors | 100% field coverage
 Fields: `source, source_url, job_title, company_name, location, is_remote, employment_type, specialist_level, posting_date, deadline, salary_from, salary_to, salary_currency, skills_tags, description, responsibilities, required_qualifications, full_text`
-Built by: `scripts/rescrape_staffam.py`
+Built by: final Staff.am full-content re-scrape pipeline used in the merged dataset
 
 ### `picsart_jobs_raw.csv`
 2 rows | Armenia-filtered | Picsart careers (Greenhouse ATS)
-Scraped: 2026-03-22 | Built by: `notebooks/jobs/04_picsart_scraping.ipynb`
+Scraped: 2026-03-22 | Built by: `notebooks/1_collection_jobs/04_picsart_scraping.ipynb`
 
 ### `krisp_jobs_raw.csv`
 7 rows | Armenia-filtered | Krisp careers (SSR HTML)
-Scraped: 2026-03-22 | Built by: `notebooks/jobs/05_krisp_scraping.ipynb`
+Scraped: 2026-03-22 | Built by: `notebooks/1_collection_jobs/05_krisp_scraping.ipynb`
 
 ### `servicetitan_jobs_raw.csv`
 4 rows | Yerevan-filtered | ServiceTitan careers (Workday + Playwright)
-Scraped: 2026-03-22 | Built by: `notebooks/jobs/06_servicetitan_scraping.ipynb`
+Scraped: 2026-03-22 | Built by: `notebooks/1_collection_jobs/06_servicetitan_scraping.ipynb`
 
 ### `epam_jobs_raw.csv`
 108 rows | Armenia-filtered | EPAM careers (internal search API)
-Scraped: 2026-03-22 | Built by: `notebooks/jobs/07_epam_scraping.ipynb`
+Scraped: 2026-03-22 | Built by: `notebooks/1_collection_jobs/07_epam_scraping.ipynb`
 
 ### `softconstruct_jobs_raw.csv`
 152 rows | Yerevan-filtered | SoftConstruct careers (PeopleForce SSR HTML)
-Scraped: 2026-03-22 | Built by: `notebooks/jobs/08_softconstruct_scraping.ipynb`
+Scraped: 2026-03-22 | Built by: `notebooks/1_collection_jobs/08_softconstruct_scraping.ipynb`
 
 ### `disqo_jobs_raw.csv`
 1 row | Armenia-filtered | DISQO careers (Lever public API)
-Scraped: 2026-03-22 | Built by: `notebooks/jobs/09_disqo_scraping.ipynb`
+Scraped: 2026-03-22 | Built by: `notebooks/1_collection_jobs/09_disqo_scraping.ipynb`
 
 ### `synopsys_jobs_raw.csv`
 2 rows | Yerevan-filtered | Synopsys careers (Avature SSR HTML + JSON-LD)
-Scraped: 2026-03-22 | Built by: `notebooks/jobs/10_synopsys_scraping.ipynb`
+Scraped: 2026-03-22 | Built by: `notebooks/1_collection_jobs/10_synopsys_scraping.ipynb`
 
 ---
 
 ## Processed Data — Jobs
 
 ### `linkedin_jobs_standardized.csv` — 992 rows
-Built by: `notebooks/jobs/01_linkedin_jobs_pipeline.ipynb`
+Built by: `notebooks/1_collection_jobs/01_linkedin_jobs_pipeline.ipynb`
 13 columns: `id, title, standardizedTitle, companyName, location, employmentType, seniorityLevel, jobFunction, industries, postedAt, descriptionText, link, applyUrl`
 Primary NLP field: `descriptionText` (100% filled)
 
 ### `staffam_jobs_standardized.csv` — 55 rows (updated 2026-03-22)
-Built by: `scripts/rescrape_staffam.py` (re-scrape with full content)
+Built by: Staff.am full-content re-scrape used in the final merged dataset
 18 columns: `source, source_url, job_title, company_name, location, is_remote, employment_type, specialist_level, posting_date, deadline, salary_from, salary_to, salary_currency, skills_tags, description, responsibilities, required_qualifications, full_text`
 Field coverage: 100% on all fields
 **Primary NLP field: `full_text`** (description + responsibilities + required_qualifications concatenated, min 502 / median 1755 / max 3401 chars)
 `skills_tags`: comma-separated structured skill tags from Staff.am taxonomy (98% filled)
 
 ### `jobam_jobs_standardized.csv` — 20 rows (created 2026-03-22)
-Built by: `notebooks/jobs/03_jobam_scraping.ipynb`
+Built by: `notebooks/1_collection_jobs/03_jobam_scraping.ipynb`
 14 columns: `source, source_url, job_title, company_name, location, employment_type, experience_level, salary, deadline, description, responsibilities, requirements, additional_notes, full_text`
 100% full_text coverage | full_text median 1624 chars | 21 non-IT jobs filtered out
 Note: job.am has a small IT category (20 active postings); all are included
 
 ### `picsart_jobs_standardized.csv` — 2 rows (created 2026-03-22)
-Built by: `notebooks/jobs/04_picsart_scraping.ipynb` | Greenhouse API, Armenia filter
+Built by: `notebooks/1_collection_jobs/04_picsart_scraping.ipynb` | Greenhouse API, Armenia filter
 Canonical schema: `source, source_url, job_title, company_name, location, employment_type, seniority_level, department, posting_date, deadline, skills_tags, full_text`
 
 ### `krisp_jobs_standardized.csv` — 7 rows (created 2026-03-22)
-Built by: `notebooks/jobs/05_krisp_scraping.ipynb` | requests+BS4, Armenia filter
+Built by: `notebooks/1_collection_jobs/05_krisp_scraping.ipynb` | requests+BS4, Armenia filter
 full_text median 3694 chars
 
 ### `servicetitan_jobs_standardized.csv` — 4 rows (created 2026-03-22)
-Built by: `notebooks/jobs/06_servicetitan_scraping.ipynb` | Workday API listing + Playwright detail, Yerevan filter
+Built by: `notebooks/1_collection_jobs/06_servicetitan_scraping.ipynb` | Workday API listing + Playwright detail, Yerevan filter
 full_text range 4959–8158 chars
 
 ### `epam_jobs_standardized.csv` — 108 rows (created 2026-03-22)
-Built by: `notebooks/jobs/07_epam_scraping.ipynb` | EPAM internal search API, Armenia country filter
+Built by: `notebooks/1_collection_jobs/07_epam_scraping.ipynb` | EPAM internal search API, Armenia country filter
 Includes: `seniority_level`, `skills_tags`, `department` fields | full_text 100% coverage
 
 ### `softconstruct_jobs_standardized.csv` — 152 rows (created 2026-03-22)
-Built by: `notebooks/jobs/08_softconstruct_scraping.ipynb` | PeopleForce SSR HTML (20 listing pages), Yerevan filter
+Built by: `notebooks/1_collection_jobs/08_softconstruct_scraping.ipynb` | PeopleForce SSR HTML (20 listing pages), Yerevan filter
 full_text median 2202 chars
 
 ### `disqo_jobs_standardized.csv` — 1 row (created 2026-03-22)
-Built by: `notebooks/jobs/09_disqo_scraping.ipynb` | Lever public API, Armenia filter
+Built by: `notebooks/1_collection_jobs/09_disqo_scraping.ipynb` | Lever public API, Armenia filter
 full_text 6721 chars
 
 ### `synopsys_jobs_standardized.csv` — 2 rows (created 2026-03-22)
-Built by: `notebooks/jobs/10_synopsys_scraping.ipynb` | Avature SSR + JSON-LD, Yerevan filter
+Built by: `notebooks/1_collection_jobs/10_synopsys_scraping.ipynb` | Avature SSR + JSON-LD, Yerevan filter
 Both internship positions | includes `industries`, `deadline` fields
 
-### `final_jobs_dataset.csv` — **1,068 rows ★ FINAL JOBS DATASET (deduplicated) ★**
-Built by: `scripts/merge_jobs.py` + `notebooks/jobs/12_jobs_deduplication.ipynb` | All 11 sources merged, 280 duplicates removed
+### `final_jobs_dataset.csv` — **1,369 rows ★ FINAL BROAD JOBS DATASET ★**
+Built by: `notebooks/1_collection_jobs/13_merge_all_sources.ipynb` | All 14 sources merged into the canonical broad market snapshot
 Schema (13 columns): `source, source_type, source_url, job_title, company_name, location, employment_type, seniority_level, industries, posting_date, deadline, skills_tags, full_text`
 
-**Pre-dedup:** 1,348 rows from 11 sources. **Post-dedup:** 1,068 rows (280 removed by `notebooks/jobs/12_jobs_deduplication.ipynb` — 75 within-source, 205 cross-source duplicates).
+This file is the frozen broad market snapshot used as the input to the IT-only filtering notebook.
 
-| Source | Post-dedup rows |
+| Source | Rows |
 |---|---|
-| linkedin | 734 |
-| softconstruct | 141 |
-| epam | 104 |
-| staff.am | 48 |
+| linkedin | 992 |
+| softconstruct | 152 |
+| epam | 108 |
+| staff.am | 55 |
 | job.am | 20 |
+| griddynamics | 11 |
 | krisp | 7 |
+| nvidia | 5 |
+| 10web | 5 |
 | dataart | 5 |
 | servicetitan | 4 |
 | picsart | 2 |
 | synopsys | 2 |
 | disqo | 1 |
-| **Total** | **1,068** |
+| **Total** | **1,369** |
 
 full_text: 100% coverage, 0 nulls, 0 empty.
 See `docs/jobs_data_pipeline.md` Section 4 for the canonical column mapping.
+
+### `final_jobs_dataset_it_only.csv` — **753 rows IT-only subset**
+Built by: `notebooks/3_analysis/00_filter_it_jobs.ipynb`
+Derived from: `final_jobs_dataset.csv`
+Adds audit columns: `it_filter_decision`, `it_role_group`, `it_filter_reason`, `it_tech_text_score`
+
+Purpose: removes clearly non-IT postings from the broad market scrape before downstream skill-demand analysis.
+
+### `it_job_filter_audit.csv` — **1,369 rows**
+Built by: `notebooks/3_analysis/00_filter_it_jobs.ipynb`
+One row per posting with filter decision (`keep`, `drop`, `review`), assigned role group, reason, and text-based technical score.
+
+### `it_job_filter_review_queue.csv` — **58 rows**
+Built by: `notebooks/3_analysis/00_filter_it_jobs.ipynb`
+Ambiguous postings that mix technical and non-technical cues and may require manual inspection before final analysis.
 
 ---
 
@@ -305,8 +334,8 @@ Used as the primary input for skill extraction (Phase 3).
 
 ## Processed Data — Skills (`data/processed/skills/`)
 
-All files produced by `notebooks/03_skill_extraction.ipynb` (2026-03-23).
-Sensitivity analysis: `notebooks/03b_sensitivity_analysis.ipynb` (description asymmetry, skills_tags validation, noise audit).
+All files produced by `notebooks/3_analysis/02_skill_extraction.ipynb` (2026-03-23).
+Sensitivity analysis: `notebooks/3_analysis/03_sensitivity_analysis.ipynb` (description asymmetry, skills_tags validation, noise audit).
 
 ### `tfidf_curriculum_skills.json`
 TF-IDF top-10 keywords per curriculum document. Keys = `course_id`. Values = `[(keyword, tfidf_score), ...]`.
@@ -314,7 +343,7 @@ Corpus: 1,161 curriculum documents. Vectorizer: ngram_range=(1,3), max_df=0.85, 
 
 ### `tfidf_jobs_skills.json`
 TF-IDF top-10 keywords per job posting. Keys = row index. Values = `[(keyword, tfidf_score), ...]`.
-Corpus: 1,068 job postings (after 140 boilerplate paragraphs removed).
+Corpus: 753 IT-only job postings (after 140 boilerplate paragraphs removed).
 
 ### `keybert_curriculum_skills.json`
 KeyBERT top-10 keyphrases per curriculum document (all-MiniLM-L6-v2, use_mmr=True, diversity=0.5).
@@ -349,7 +378,7 @@ Per-source technical decisions: which HTTP method, which ATS platform, why Playw
 Use for thesis Chapter 3 (Methodology / Data Collection).
 
 ### `docs/sensitivity_analysis.md`
-Sensitivity analysis of the NLP extraction pipeline: description asymmetry (AUA test, 5x coverage difference), validation against skills_tags (151 jobs, TF-IDF 44% recall), noise audit (60% of overlap was generic English). Companion to `notebooks/03b_sensitivity_analysis.ipynb`.
+Sensitivity analysis of the NLP extraction pipeline: description asymmetry (AUA test, 5x coverage difference), validation against skills_tags (151 jobs, TF-IDF 44% recall), noise audit (60% of overlap was generic English). Companion to `notebooks/3_analysis/03_sensitivity_analysis.ipynb`.
 Use for thesis Chapter 4 (Section 4.5.7).
 
 ---

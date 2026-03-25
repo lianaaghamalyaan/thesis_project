@@ -4,7 +4,7 @@ This folder is the entry point for reviewing the project without needing to unde
 
 ## What This Project Is
 
-A master's thesis on the alignment between Armenian university IT curricula and Armenian IT labor market demand.
+A master's thesis on the alignment between IT curricula from selected Armenian universities and Armenian IT labor market demand.
 
 The project compares:
 
@@ -17,7 +17,7 @@ The goal is to identify overlap, gaps, and mismatches in a structured and reprod
 ## What Is Already Done
 
 - Curriculum dataset: 1,161 courses, 25 programs, 4 universities
-- Jobs dataset: 1,068 unique postings from 11 sources, deduplicated
+- Jobs dataset: 1,369 merged postings from 14 sources; 753 IT-only postings used in downstream analysis
 - YSU Armenian content translated to English (GPT-4o-mini, validated)
 - Skill extraction: TF-IDF and KeyBERT on both corpora
 - Sensitivity analysis and validation against human-curated skill tags
@@ -25,7 +25,7 @@ The goal is to identify overlap, gaps, and mismatches in a structured and reprod
 - ESCO normalization: all phrases mapped to ESCO v1.2 concept identifiers
 - Final alignment analysis: per-program coverage, gap/surplus breakdown, visualizations
 - Emerging tech skills analysis: modern tools beyond ESCO vocabulary identified
-- Skill frequency analysis: top 60 demanded skills overall + top 15 per role (9 IT roles)
+- Skill frequency analysis: top 60 demanded skills overall + top 15 per role (9 core IT roles)
 - Thesis Chapter 5 (Results): fully written with all results
 
 ## What Is Still In Progress
@@ -39,15 +39,17 @@ The goal is to identify overlap, gaps, and mismatches in a structured and reprod
 
 | Method | Coverage |
 |---|---|
-| TF-IDF | 25.2% |
-| KeyBERT | 20.3% |
-| Both combined | 25.7% |
+| TF-IDF | 32.82% |
+| KeyBERT | 28.5% |
+| Analysis set | 753 IT-only job postings after filtering the 1,369-posting market snapshot |
 
-**Per-program range:** 0.6% (NUACA GIS) to 9.1% (AUA Computer and Information Science, Master).
+**Per-program range:** 0.92% (NUACA GIS, Master) to 12.27% (AUA Computer and Information Science, Master).
 
-**Top gap skills** (demanded by market, absent from curricula): Azure, React, AWS, Kubernetes, Docker, Terraform, Java, TypeScript, DevOps, CI/CD.
+**Most demanded skills overall** (IT-only market): Python, CI/CD, AWS, Azure, GCP, Docker, DevOps, Kubernetes, React, .NET / C#.
 
-**Top surplus skills** (taught but not demanded): general-education requirements (languages, humanities), advanced theory (differential equations, Monte Carlo simulation, biostatistics).
+**Top interpretable ESCO gap skills** (demanded by market, absent from curricula): SAP R3, PHP, Java, TypeScript, SQL Server, DevOps, CSS, Android, responsive design.
+
+**Top surplus skills** (taught but not demanded): general-education requirements (languages, humanities), advanced theory (algebra, Monte Carlo simulation, biostatistics).
 
 ## Suggested Reading Order
 

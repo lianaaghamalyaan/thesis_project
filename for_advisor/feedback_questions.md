@@ -4,31 +4,31 @@ The empirical analysis is complete. The questions below are the main areas where
 
 ---
 
-## 1. Interpretation of the 25% Coverage Finding
+## 1. Interpretation of the 33% Coverage Finding
 
-The ESCO-normalized analysis shows ~25% of job-market skill concepts are covered by Armenian IT curricula. Is this framing appropriate:
+The ESCO-normalized analysis now shows 32.82% coverage (TF-IDF) and 28.5% (KeyBERT) on the IT-only job market subset. Is this framing appropriate:
 
 - Presented as a lower bound (ESCO v1.2 vocabulary gap, description asymmetry at NUACA/RAU)
 - The "true" alignment is likely higher but not measurable with this approach
-- Is 25% a finding worth reporting as a headline number, or should the emphasis shift to the gap/surplus breakdown instead?
+- Is ~33% a finding worth reporting as a headline number, or should the emphasis shift to the gap/surplus breakdown instead?
 
 ## 2. Knowledge vs. Competence Split
 
-The overlap is 70% *knowledge* concepts and 30% *skill/competence* concepts. The gap is 51% applied competences. This suggests curricula share the right knowledge domains with employers but fall short on applied practice.
+The overlap is 77.6% *knowledge* concepts and 22.4% *skill/competence* concepts. The gap is 51.1% applied competences. This suggests curricula share the right knowledge domains with employers but fall short on applied practice.
 
 - Is this distinction (ESCO's knowledge/skill-competence taxonomy) well-known enough to use without extensive justification?
 - Does this finding support a strong recommendation about curriculum reform (add practical labs, industry projects) or is it too indirect?
 
 ## 3. SoftConstruct Effect in the Gap
 
-SoftConstruct (gambling/gaming company, 141 postings = 13% of the dataset) inflates the gap with domain-specific concepts (betting, gambling games, manage casino). These appear in the gap alongside genuine IT skills.
+Betting/gaming employers still introduce domain-specific concepts into the gap list even after IT-only filtering. SoftConstruct contributes 37 postings to the current IT-only analysis set, but labels such as betting, banking activities, and sales activities can still surface in ESCO-based gap outputs alongside genuine IT skills.
 
 - Should these be filtered out of the gap analysis entirely?
 - Or reported separately as "domain-specific employer demand" to distinguish from general IT skill gaps?
 
 ## 4. ESCO Vocabulary Gap
 
-Docker, React, Azure, Kubernetes, Node.js are not in ESCO v1.2. The emerging tech analysis identifies these via a curated lexicon, but they cannot contribute to the main ESCO-normalized metric.
+Docker, React, Azure, Kubernetes, Node.js, TypeScript, and CI/CD are not cleanly represented in ESCO v1.2. The emerging tech analysis identifies these via a curated lexicon, but they cannot contribute fully to the main ESCO-normalized metric.
 
 - Is it methodologically clean to report two parallel analyses (ESCO + tech lexicon supplement)?
 - Or should this be framed purely as a limitation?

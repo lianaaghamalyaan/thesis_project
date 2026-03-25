@@ -35,7 +35,7 @@
 | Batch 2 | 2026-03-21 | 8 | Faculty 85 (304), 516 (299, 303, 957), 520 (500, 689), 525 (313, 858) | `ysu_batch2_2026-03-21.json` |
 | **Merged** | | **22** | All YSU IT/STEM programs identified in reference | `ysu_merged.json` |
 
-**Parsing:** A Python script (in `notebooks/university/01_university_pipeline.ipynb`) extracts structured course data from the markdown using regex:
+**Parsing:** A Python script (in `notebooks/2_collection_university/01_university_pipeline.ipynb`) extracts structured course data from the markdown using regex:
 - Program metadata: degree type, speciality code, academic year
 - Course tables: chair code, course name (Armenian), credits
 - Curriculum component: matched to `###` section headers
@@ -215,7 +215,7 @@ All have downloadable PDF study plans at `impht.rau.am`. Not scraped due to reso
 ### NPUA (polytech.am) — Inaccessible
 All requests to polytech.am return HTTP 403. No course-level data accessible. Documented in `docs/data_gaps_and_limitations.md`.
 
-**Dataset frozen at 1,601 courses. Phase 1 (Data Collection) is complete.**
+**Dataset frozen at 1,161 courses. Phase 1 (Data Collection) is complete.**
 
 ---
 

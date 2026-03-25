@@ -1,22 +1,22 @@
 # Jobs Data Pipeline
 
 *Dataset: `data/processed/jobs/final_jobs_dataset.csv`*
-*Phase 2 — Jobs side | Last updated: 2026-03-22*
+*Phase 2 — Jobs side | Last updated: 2026-03-25*
 *Purpose: Produce a clean, analysis-ready jobs dataset for the curriculum–job-market alignment study.*
 
 ---
 
 ## 1. Overview
 
-Job posting data is collected from **11 sources** across two categories:
+Job posting data is collected from a **14-source broad market snapshot** across two categories:
 
 | Category | Sources | Rows |
 |---|---|---|
 | **Aggregators** (broad Armenia IT market) | LinkedIn, Staff.am, job.am | 1,067 |
-| **Company portals** (large Armenian IT employers) | EPAM, SoftConstruct, Krisp, DataArt, ServiceTitan, Synopsys, Picsart, DISQO | 281 |
-| **Total** | 11 sources | **1,348** |
+| **Company portals** (large Armenian and international employers) | EPAM, SoftConstruct, Grid Dynamics, Krisp, NVIDIA, 10Web, DataArt, ServiceTitan, Synopsys, Picsart, DISQO | 302 |
+| **Total** | 14 sources | **1,369** |
 
-All sources are cleaned and standardized to a shared canonical schema, then merged into `final_jobs_dataset.csv`.
+All sources are cleaned and standardized to a shared canonical schema, then merged into `final_jobs_dataset.csv`. A later notebook derives the IT-only downstream analysis set in `final_jobs_dataset_it_only.csv` (753 postings).
 
 The `source_type` column distinguishes aggregators (broad market signal) from company portals (employer-specific signal), enabling weighted analysis in Phase 4.
 
@@ -62,7 +62,7 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-20 | Search: Armenian IT job market
 - **Raw file:** `data/raw/jobs/linkedin_jobs_raw.csv`
 - **Standardized:** `data/processed/jobs/linkedin_jobs_standardized.csv`
-- **Built by:** `notebooks/jobs/01_linkedin_jobs_pipeline.ipynb`
+- **Built by:** `notebooks/1_collection_jobs/01_linkedin_jobs_pipeline.ipynb`
 - **Key field:** `descriptionText` (full job description, 100% coverage)
 - **Notes:** `seniorityLevel` from LinkedIn taxonomy (94% filled). Includes Armenia-based and remote roles posted to Armenian candidates.
 
@@ -72,7 +72,7 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-22 | Category: Software Development (id=1)
 - **Raw file:** `data/raw/jobs/staffam_jobs_raw_v2.csv` (55 non-expired; original v1 at `staffam_jobs_raw.csv`)
 - **Standardized:** `data/processed/jobs/staffam_jobs_standardized.csv`
-- **Built by:** `scripts/rescrape_staffam.py`
+- **Built by:** final Staff.am full-content re-scrape pipeline used in the merged dataset
 - **Key field:** `full_text` = description + responsibilities + required_qualifications (100% coverage, median 1,755 chars)
 - **Notes:** `skills_tags` is a structured field from Staff.am's own taxonomy (98% filled). Armenia-specific board; 4 expired listings excluded.
 
@@ -82,7 +82,7 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-22 | IT category (I=17) + keyword searches
 - **Raw file:** `data/raw/jobs/jobam_jobs_raw.csv`
 - **Standardized:** `data/processed/jobs/jobam_jobs_standardized.csv`
-- **Built by:** `notebooks/jobs/03_jobam_scraping.ipynb`
+- **Built by:** `notebooks/1_collection_jobs/03_jobam_scraping.ipynb`
 - **Notes:** job.am has a small IT category (~20 active postings). 21 non-IT jobs filtered out via title/industry keywords. No `posting_date` available.
 
 ### 3.4 EPAM (`source_type: company_portal`)
@@ -91,7 +91,7 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-22 | Country filter: Armenia
 - **Raw file:** `data/raw/jobs/epam_jobs_raw.csv`
 - **Standardized:** `data/processed/jobs/epam_jobs_standardized.csv`
-- **Built by:** `notebooks/jobs/07_epam_scraping.ipynb`
+- **Built by:** `notebooks/1_collection_jobs/07_epam_scraping.ipynb`
 - **Notes:** Full content in API response (no detail page scraping needed). Includes `seniority_level` and `skills_tags` from EPAM's taxonomy. Largest company-portal source.
 
 ### 3.5 SoftConstruct (`source_type: company_portal`)
@@ -100,7 +100,7 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-22 | Location filter: Yerevan
 - **Raw file:** `data/raw/jobs/softconstruct_jobs_raw.csv`
 - **Standardized:** `data/processed/jobs/softconstruct_jobs_standardized.csv`
-- **Built by:** `notebooks/jobs/08_softconstruct_scraping.ipynb`
+- **Built by:** `notebooks/1_collection_jobs/08_softconstruct_scraping.ipynb`
 - **Notes:** 196 total jobs → 152 Yerevan-filtered. `seniority_level` inferred from title (41% coverage — many titles lack explicit level indicator).
 
 ### 3.6 Krisp (`source_type: company_portal`)
@@ -109,7 +109,7 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-22 | Location filter: Armenia
 - **Raw file:** `data/raw/jobs/krisp_jobs_raw.csv`
 - **Standardized:** `data/processed/jobs/krisp_jobs_standardized.csv`
-- **Built by:** `notebooks/jobs/05_krisp_scraping.ipynb`
+- **Built by:** `notebooks/1_collection_jobs/05_krisp_scraping.ipynb`
 
 ### 3.7 DataArt (`source_type: company_portal`)
 - **Rows:** 5
@@ -117,7 +117,7 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-22 | Location filter: Yerevan
 - **Raw file:** `data/raw/jobs/dataart_jobs_raw.csv`
 - **Standardized:** `data/processed/jobs/dataart_jobs_standardized.csv`
-- **Built by:** `notebooks/jobs/11_dataart_scraping.ipynb`
+- **Built by:** `notebooks/1_collection_jobs/11_dataart_scraping.ipynb`
 
 ### 3.8 ServiceTitan (`source_type: company_portal`)
 - **Rows:** 4
@@ -125,7 +125,7 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-22 | Location filter: Yerevan
 - **Raw file:** `data/raw/jobs/servicetitan_jobs_raw.csv`
 - **Standardized:** `data/processed/jobs/servicetitan_jobs_standardized.csv`
-- **Built by:** `notebooks/jobs/06_servicetitan_scraping.ipynb`
+- **Built by:** `notebooks/1_collection_jobs/06_servicetitan_scraping.ipynb`
 
 ### 3.9 Synopsys (`source_type: company_portal`)
 - **Rows:** 2
@@ -133,7 +133,7 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-22 | Location filter: `?location=Yerevan`
 - **Raw file:** `data/raw/jobs/synopsys_jobs_raw.csv`
 - **Standardized:** `data/processed/jobs/synopsys_jobs_standardized.csv`
-- **Built by:** `notebooks/jobs/10_synopsys_scraping.ipynb`
+- **Built by:** `notebooks/1_collection_jobs/10_synopsys_scraping.ipynb`
 - **Notes:** Both positions are internships.
 
 ### 3.10 Picsart (`source_type: company_portal`)
@@ -142,7 +142,7 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-22 | Location filter: Armenia
 - **Raw file:** `data/raw/jobs/picsart_jobs_raw.csv`
 - **Standardized:** `data/processed/jobs/picsart_jobs_standardized.csv`
-- **Built by:** `notebooks/jobs/04_picsart_scraping.ipynb`
+- **Built by:** `notebooks/1_collection_jobs/04_picsart_scraping.ipynb`
 
 ### 3.11 DISQO (`source_type: company_portal`)
 - **Rows:** 1
@@ -150,20 +150,32 @@ The `source_type` column distinguishes aggregators (broad market signal) from co
 - **Collected:** 2026-03-22 | Location filter: Armenia
 - **Raw file:** `data/raw/jobs/disqo_jobs_raw.csv`
 - **Standardized:** `data/processed/jobs/disqo_jobs_standardized.csv`
-- **Built by:** `notebooks/jobs/09_disqo_scraping.ipynb`
+- **Built by:** `notebooks/1_collection_jobs/09_disqo_scraping.ipynb`
 
 ---
 
 ## 4. Merge
 
-**Script:** `scripts/merge_jobs.py`
-**Output:** `data/processed/jobs/final_jobs_dataset.csv` — 1,348 rows, 13 columns
+**Pipeline:** `notebooks/1_collection_jobs/12_jobs_deduplication.ipynb` + `notebooks/1_collection_jobs/13_merge_all_sources.ipynb`
+**Output:** `data/processed/jobs/final_jobs_dataset.csv` — 1,369 rows, 13 columns
 
 Each source is normalized to the canonical schema (see Section 2). Where a field is absent from a source's standardized file, it is left blank. `seniority_level` is derived from the job title when not available in structured form.
 
 ---
 
-## 5. What This Dataset Does Not Contain
+## 5. IT-Only Filtering
+
+**Pipeline:** `notebooks/3_analysis/00_filter_it_jobs.ipynb`
+**Outputs:**
+- `data/processed/jobs/final_jobs_dataset_it_only.csv` — 753 postings kept for downstream NLP and alignment analysis
+- `data/processed/jobs/it_job_filter_audit.csv` — 1,369 keep/drop/review decisions
+- `data/processed/jobs/it_job_filter_review_queue.csv` — 58 ambiguous postings
+
+The broad market snapshot intentionally preserves the wider Armenia tech hiring landscape. The thesis analysis then narrows this to the IT-only subset to avoid letting clearly non-technical, commercial, or operations-heavy postings dominate the skill-demand signal.
+
+---
+
+## 6. What This Dataset Does Not Contain
 
 - **Salary data** — not reliably available from any source at scale
 - **Applicant counts or engagement metrics**
@@ -173,7 +185,7 @@ Each source is normalized to the canonical schema (see Section 2). Where a field
 
 ---
 
-## 6. Notes for Phase 3 (NLP)
+## 7. Notes for Phase 3 (NLP)
 
 - Primary NLP field: **`full_text`** (100% coverage, 141–15,594 chars, median 2,879)
 - The `source_type` column can be used to apply differential weights in analysis: company portal postings reflect direct employer demand; aggregator postings reflect the broader market

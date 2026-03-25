@@ -6,7 +6,7 @@
 
 ## Overview
 
-Job data was collected from 11 sources using a combination of techniques chosen based on each site's technical architecture. The primary principle was: **use the simplest tool that works**. Python `requests` + `BeautifulSoup` was the default; headless browser automation (`Playwright`) was used only when JavaScript execution was unavoidable.
+Job data was collected from 14 sources using a combination of techniques chosen based on each site's technical architecture. The primary principle was: **use the simplest tool that works**. Python `requests` + `BeautifulSoup` was the default; headless browser automation (`Playwright`) was used only when JavaScript execution was unavoidable.
 
 ---
 
@@ -249,19 +249,81 @@ All scrapers use `time.sleep(1.5)` or `asyncio.sleep(2.0)` between requests. Hea
 
 ## ATS / Platform Summary
 
-| Source | Platform | Technique |
-|---|---|---|
-| LinkedIn | LinkedIn (proprietary) | Apify cloud scraper |
-| Staff.am | Custom Next.js | `__NEXT_DATA__` JSON parsing |
-| job.am | Custom PHP/HTML | BeautifulSoup HTML parsing |
-| Picsart | Greenhouse ATS | Public JSON API |
-| Krisp | Custom SSR | BeautifulSoup HTML parsing |
-| ServiceTitan | Workday | CXS API (listing) + Playwright (detail) |
-| EPAM | Custom React | Internal API (network interception) |
-| SoftConstruct | PeopleForce | BeautifulSoup HTML parsing |
-| DISQO | Lever ATS | Public JSON API |
-| Synopsys | Avature ATS | SSR HTML + JSON-LD |
-| DataArt | Custom React | `window.INITIAL_STATE` + Playwright |
+| Source | Platform | Technique | Result |
+|---|---|---|---|
+| LinkedIn | LinkedIn (proprietary) | Apify cloud scraper | 992 jobs |
+| Staff.am | Custom Next.js | `__NEXT_DATA__` JSON parsing | 55 jobs |
+| job.am | Custom PHP/HTML | BeautifulSoup HTML parsing | 20 jobs |
+| Picsart | Greenhouse ATS | Public JSON API | 2 jobs |
+| Krisp | Custom SSR | BeautifulSoup HTML parsing | 7 jobs |
+| ServiceTitan | Workday | CXS API (listing) + Playwright (detail) | 4 jobs |
+| EPAM | Custom React | Internal API (network interception) | 108 jobs |
+| SoftConstruct | PeopleForce | BeautifulSoup HTML parsing | 152 jobs |
+| DISQO | Lever ATS | Public JSON API | 1 job |
+| Synopsys | Avature ATS | SSR HTML + JSON-LD | 2 jobs |
+| DataArt | Custom React | `window.INITIAL_STATE` + Playwright | 5 jobs |
+| **BetConstruct** | **PeopleForce (shared w/ SoftConstruct)** | **Skipped — /careers returns 404, same portal as SoftConstruct** | **0 (excluded)** |
+| **TeamViewer** | **TeamTailor** | **Scraped (21 jobs); 0 Armenia postings** | **0 (excluded)** |
+| Grid Dynamics | WordPress + Angular SPA | Playwright → Angular renders jobs → extract vacancy links | 11 jobs |
+| NVIDIA | Eightfold AI | Playwright session → `/api/pcsx/search` internal API | 5 jobs |
+| **SuperAnnotate** | **Lever ATS** | **API accessible; 0 Armenia postings** | **0 (excluded)** |
+| 10Web | BambooHR | Public JSON API (`/careers/list` + `/careers/{id}/detail`) | 5 jobs |
+
+---
+
+### 12. BetConstruct — Skipped (shared portal with SoftConstruct, /careers path removed)
+- **Originally planned:** PeopleForce SSR HTML at `https://careers.betconstruct.com/careers`
+- **Reason not scraped:** `careers.betconstruct.com/careers` returns HTTP 404. The BetConstruct careers homepage links directly to `https://peopleforce.softconstruct.com/careers` — the same PeopleForce instance used by SoftConstruct (source #8). BetConstruct does not maintain a separate job listing page.
+- **Implication:** Any BetConstruct Armenia jobs that exist would already be captured in the SoftConstruct scrape (which targets the same `peopleforce.softconstruct.com` portal). No separate collection needed.
+- **Result:** 0 rows, notebook deleted.
+
+---
+
+### 13. TeamViewer — Scraped, 0 Armenia jobs
+- **Method:** Plain HTTP GET → BeautifulSoup, `https://careers.teamviewer.com/jobs`
+- **Scraping result:** 21 job links successfully found and visited. Location data embedded in a combined metadata div (e.g., "DepartmentSalesLocationsAmmanRemote statusHybrid...") — no `data-qa="job-location"` attribute present in current TeamTailor HTML.
+- **Armenia jobs found:** 0. All 21 active postings are located in Germany (Göppingen/remote). TeamViewer has no Armenia-based open positions at time of collection (2026-03-24).
+- **Thesis note:** TeamViewer has a Yerevan office but no Armenia-located job postings were active at collection date.
+- **Result:** 0 rows, notebook deleted.
+
+---
+
+### 14. Grid Dynamics — Playwright (Angular SPA)
+- **ATS:** Custom WordPress + Angular widget (`griddynamics.com/careers/discover-openings`)
+- **Method:** Playwright renders the page fully (triggering the Angular widget), then parses `<a href="/careers/vacancy/{id}">` links whose text contains "Yerevan" or "Armenia". Each detail page fetched individually via Playwright.
+- **Why Playwright:** WP REST API only returns location filter dropdown config, not job listings. The Angular widget fetches jobs client-side with no accessible public API endpoint. RSS feed is empty.
+- **Link structure:** All job links follow `/careers/vacancy/{numeric_id}`; title and location concatenated in link text (e.g., "Senior System AnalystYerevan, Armenia") — parsed with regex.
+- **Armenia jobs found:** 11 (at 2026-03-24)
+- **Output:** `data/processed/jobs/griddynamics_jobs_standardized.csv`
+
+---
+
+### 16. 10Web — BambooHR Public JSON API
+- **ATS:** BambooHR (`10web.bamboohr.com`)
+- **Method:** `GET /careers/list` (JSON) returns all open positions; `GET /careers/{id}/detail` returns full HTML description. No authentication required.
+- **Location filter:** All 5 jobs are Yerevan — defensively checked `location.city == "Yerevan"`
+- **Content:** `jobOpening.description` field contains HTML; stripped with BeautifulSoup
+- **Armenia jobs found:** 5 (at 2026-03-24)
+- **Output:** `data/processed/jobs/10web_jobs_standardized.csv`
+
+---
+
+### 15. NVIDIA — Playwright + internal PCSX API
+- **ATS:** Eightfold AI (`jobs.nvidia.com`)
+- **Method:** Playwright loads the careers page to establish a valid browser session, then calls the internal `/api/pcsx/search?domain=nvidia.com&location=Yerevan%2C+Armenia` endpoint via `page.evaluate()`. Detail text fetched via `/api/pcsx/position_details?position_id={id}&domain=nvidia.com`.
+- **Why Playwright:** Plain HTTP to `/api/pcsx/search` returns 403 "Not authorized for PCSX". The endpoint requires session cookies set by the Eightfold JavaScript runtime. Playwright's `credentials: 'include'` fetch passes these automatically.
+- **API discovery:** Network interception during initial Playwright probe revealed the real endpoint (`/api/pcsx/search`) — earlier attempts used wrong paths (`/api/apply/v2/jobs`, `/api/search`).
+- **Armenia jobs found:** 5 (at 2026-03-24)
+- **Output:** `data/processed/jobs/nvidia_jobs_standardized.csv`
+
+---
+
+### SuperAnnotate — Skipped (Lever API, 0 Armenia jobs)
+- **ATS:** Lever (`api.lever.co/v0/postings/superannotate`)
+- **API status:** HTTP 200 — Lever API accessible and working
+- **Reason not included:** Queried the full job feed; 0 postings with `categories.location` containing "yerevan" or "armenia". SuperAnnotate has an Armenian founding team but their job listings are posted for US/EU/remote locations only.
+- **Verified:** 2026-03-24 — no Armenia-based openings active at time of data collection
+- **Thesis note:** SuperAnnotate excluded from dataset; zero Armenia-located postings at collection date.
 
 ---
 

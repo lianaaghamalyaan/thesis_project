@@ -1,10 +1,10 @@
 # Abstract
 
-This thesis presents the first large-scale, computational analysis of the alignment between IT university curricula and labor market skill demands in Armenia. Four Armenian universities — Yerevan State University (YSU), the American University of Armenia (AUA), the National University of Architecture and Construction of Armenia (NUACA), and the Russian-Armenian University (RAU) — are examined alongside 1,068 job postings collected from 11 sources active in Armenia in March 2026.
+This thesis presents the first large-scale, computational analysis of the alignment between IT university curricula and labor market skill demands in Armenia. Four Armenian universities — Yerevan State University (YSU), the American University of Armenia (AUA), the National University of Architecture and Construction of Armenia (NUACA), and the Russian-Armenian University (RAU) — are examined alongside a 1,369-posting market snapshot collected from 14 sources active in Armenia in March 2026. Downstream NLP and alignment analysis use an IT-only subset of 753 postings.
 
 A five-stage NLP pipeline is constructed: (1) data collection and structuring; (2) multilingual preprocessing including Armenian-to-English translation of 691 YSU course records; (3) automated skill extraction using TF-IDF and KeyBERT (all-MiniLM-L6-v2); (4) normalization of extracted skill phrases against the ESCO v1.2 taxonomy via cosine similarity; and (5) alignment analysis producing per-program coverage rates, gap sets, and surplus sets.
 
-Pre-ESCO baseline results indicate a raw string overlap of 6.4% (TF-IDF) and 0.26% (KeyBERT) between curriculum and job market skill vocabularies — figures that substantially underestimate true alignment due to synonymous phrasing. After ESCO normalization, coverage rises to 25.2% (TF-IDF) and 20.3% (KeyBERT), with a union estimate of 25.7%. The overlap is dominated by knowledge concepts (70%) over applied competences (30%), while the gap is predominantly applied (51%), indicating that curricula cover relevant subject domains but fall short on practice-oriented content. Sensitivity analyses confirm a 5× coverage advantage for programs with full course descriptions (AUA) over name-only programs (YSU), and a 44% soft recall against human-curated skill tags from 151 job postings. Key skill gaps include DevOps tooling (Docker, Kubernetes, CI/CD), cloud infrastructure (AWS, Azure), and modern web frameworks (React, TypeScript); key curriculum-only content includes general-education subjects (philosophy, history, foreign languages) and theoretical mathematics with limited direct market relevance.
+Pre-ESCO baseline results indicate a raw string overlap of 8.85% (TF-IDF) and 0.33% (KeyBERT) between curriculum and job market skill vocabularies — figures that substantially underestimate true alignment due to synonymous phrasing. After ESCO normalization, coverage rises to 32.82% (TF-IDF) and 28.5% (KeyBERT). The overlap is dominated by knowledge concepts (77.6%) over applied competences (22.4%), while the gap remains slightly competence-heavy (51.1%), indicating that curricula cover relevant subject domains but fall short on practice-oriented content. Sensitivity analyses confirm a 5× coverage advantage for programs with full course descriptions (AUA) over name-only programs (NUACA/RAU), and a 44% soft recall against human-curated skill tags from 151 job postings. Key market-demanded skills include Python, CI/CD, AWS, Azure, GCP, Docker, DevOps, Kubernetes, React, and .NET / C#; interpretable ESCO gap concepts include PHP, Java, TypeScript, SQL Server, DevOps, CSS, and Android; key curriculum-only content includes general-education subjects (philosophy, history, foreign languages) and theoretical mathematics with limited direct market relevance.
 
 The thesis contributes: a reusable methodology for curriculum–labor market alignment analysis in multilingual, data-scarce contexts; the first structured IT curriculum dataset for Armenian higher education; and an evidence base for targeted curriculum reform in a rapidly growing IT sector that has not previously been studied at this scale or precision.
 
@@ -22,21 +22,21 @@ The thesis contributes: a reusable methodology for curriculum–labor market ali
 
 ## 1.1 Background and Motivation
 
-The Information Technology (IT) sector in Armenia has expanded rapidly over the past decade, becoming a cornerstone of the national economy. This growth—fueled by rising international investment and the emergence of vibrant local tech clusters—has created a constant demand for highly skilled professionals. However, as the industry moves toward complex fields like Data Engineering, Machine Learning, and Cloud Computing, the availability of industry-ready graduates has become a critical bottleneck for further progress (World Economic Forum, 2025).
+The Information Technology (IT) sector in Armenia has expanded rapidly over the past decade, becoming a cornerstone of the national economy. This growth—fueled by rising international investment and the emergence of vibrant local tech clusters—has created a constant demand for highly skilled professionals. However, as the industry moves toward complex fields like Data Engineering, Machine Learning, and Cloud Computing, the availability of industry-ready graduates has become a critical bottleneck for further progress [1].
 
-While Armenian universities offer structured academic programs grounded in computer science and applied mathematics, there is a persistent disconnect between formal instruction and the technical competencies employers require. Research by Kupets (2016) shows that approximately 30% of urban workers in Armenia are overeducated for their current roles, yet 69.9% of these workers feel their formal education has limited practical use. This structural pattern, rooted in post-Soviet educational path dependency, results in a costly paradox: a skill gap that delays graduate entry into the workforce and stifles growth in a sector that reports thousands of unfilled vacancies despite high graduate numbers (Kupets, 2016). Understanding this gap through quantitative, reproducible evidence is the first step toward improving educational outcomes and ensuring graduates are truly equipped for a rapidly evolving labor market.
+While Armenian universities offer structured academic programs grounded in computer science and applied mathematics, there is a persistent disconnect between formal instruction and the technical competencies employers require. Research by Kupets [2] shows that approximately 30% of urban workers in Armenia are overeducated for their current roles, yet 69.9% of these workers feel their formal education has limited practical use. This structural pattern, rooted in post-Soviet educational path dependency, results in a costly paradox: a skill gap that delays graduate entry into the workforce and stifles growth in a sector that reports thousands of unfilled vacancies despite high graduate numbers [2]. Understanding this gap through quantitative, reproducible evidence is the first step toward improving educational outcomes and ensuring graduates are truly equipped for a rapidly evolving labor market.
 
 ## 1.2 Problem Statement
 
-At the heart of this research is the lack of structured, data-driven analysis regarding the alignment between IT higher education and the labor market in Armenia. Currently, most discussions of the "skill gap" rely on qualitative surveys or anecdotal employer feedback rather than systematic, objective measurement (Aljohani et al., 2022). Without a detailed comparison of actual course content against real-world job specifications, it is nearly impossible to identify exactly which competencies are missing from curricula or which courses have lost their market relevance. This study addresses this information deficit by performing a large-scale, automated analysis of university curriculum data and job market postings to identify areas of divergence and alignment with empirical precision.
+At the heart of this research is the lack of structured, data-driven analysis regarding the alignment between IT higher education and the labor market in Armenia. Currently, most discussions of the "skill gap" rely on qualitative surveys or anecdotal employer feedback rather than systematic, objective measurement [3]. Without a detailed comparison of actual course content against real-world job specifications, it is nearly impossible to identify exactly which competencies are missing from curricula or which courses have lost their market relevance. This study addresses this information deficit by performing a large-scale, automated analysis of university curriculum data and job market postings to identify areas of divergence and alignment with empirical precision.
 
 ## 1.3 Research Objectives
 
 The primary goal of this thesis is to provide a quantitative assessment of how well Armenian university IT curricula match the current demands of the domestic job market. To achieve this, the following objectives have been established:
 
 1. To build a structured curriculum dataset by collecting and processing data from 25 programs across four major Armenian universities: Yerevan State University (YSU), the American University of Armenia (AUA), the National University of Architecture and Construction of Armenia (NUACA), and the Russian-Armenian University (RAU).
-2. To aggregate a comprehensive job market dataset from 11 diverse sources, including job aggregators (LinkedIn, Staff.am, job.am) and direct company career portals (EPAM, SoftConstruct, Picsart, Krisp, and others), covering 1,068 postings active in Armenia as of March 2026 after deduplication.
-3. To implement a Natural Language Processing (NLP) pipeline for automated skill extraction from 1,161 curriculum records and 1,068 job postings, handling multilingual content (Armenian, English, and Russian).
+2. To aggregate a comprehensive job market dataset from 14 diverse sources, including job aggregators (LinkedIn, Staff.am, job.am) and direct company career portals (EPAM, SoftConstruct, Grid Dynamics, NVIDIA, 10Web, Picsart, Krisp, and others), covering a 1,369-posting Armenian market snapshot and a downstream IT-only subset of 753 postings active in March 2026.
+3. To implement a Natural Language Processing (NLP) pipeline for automated skill extraction from 1,161 curriculum records and the 753-posting IT-only job-market subset, handling multilingual content (Armenian, English, and Russian).
 4. To define and compute alignment metrics — including skill coverage rate, gap sets, and surplus sets — that objectively measure the overlap between educational content and industry demand.
 
 ## 1.4 Research Questions
@@ -54,13 +54,13 @@ This thesis makes the following contributions to the field:
 
 1. **First computational alignment study for Armenian IT education.** To the best of the author's knowledge, this is the first study to apply automated skill extraction and taxonomy-based alignment analysis to Armenian university curricula and job market data jointly.
 
-2. **Multi-source job dataset.** By aggregating 1,068 deduplicated postings from 11 distinct sources—combining broad aggregators with direct employer portals—this research provides a more representative picture of the Armenian IT labor market than any single-source approach.
+2. **Multi-source job dataset.** By aggregating a 1,369-posting market snapshot from 14 distinct sources, then deriving a focused 753-posting IT-only analysis subset, this research provides a more representative picture of the Armenian IT labor market than any single-source approach.
 
 3. **Multilingual NLP pipeline.** The methodology is designed to address the challenge of Armenian-language curriculum data (691 of 1,161 course records) alongside English and Russian sources, providing a replicable model for curriculum alignment research in other non-English educational contexts.
 
 4. **Evidence base for curriculum reform.** The study delivers program-level alignment scores and a ranked list of in-demand skills currently absent from curricula. These results provide concrete, actionable inputs for university committees and national accreditation bodies like ANQA.
 
-This work builds on the methodological precedent of Almaleh et al. (2019), who applied a similar computational framework in the Saudi Arabian context, and extends it to a unique geographic and linguistic setting.
+This work builds on the methodological precedent of Almaleh et al. [4], who applied a similar computational framework in the Saudi Arabian context, and extends it to a unique geographic and linguistic setting.
 
 ## 1.6 Scope and Limitations
 
@@ -70,32 +70,20 @@ The job market dataset represents a cross-sectional snapshot of postings active 
 
 ## 1.7 Structure of the Thesis
 
-The remainder of this thesis is organized as follows. Chapter 2 reviews current literature on curriculum–labor market alignment, NLP-based skill extraction, and the specific Armenian educational context. Chapter 3 outlines the theoretical framework, grounding the analysis in constructive alignment theory (Biggs & Tang, 2011) and using ESCO as the operational layer for skill measurement. Chapter 4 provides a detailed description of the data collection methodology, dataset characteristics, and the NLP analysis pipeline. Chapter 5 presents the empirical findings, including alignment metrics, per-university results, and the identified skill gap. Chapter 6 discusses these findings in relation to the initial research questions and existing literature. Finally, Chapter 7 concludes with a summary of contributions, practical recommendations, and directions for future research.
+The remainder of this thesis is organized as follows. Chapter 2 reviews current literature on curriculum–labor market alignment, NLP-based skill extraction, and the specific Armenian educational context. Chapter 3 outlines the theoretical framework, grounding the analysis in constructive alignment theory [5] and using ESCO as the operational layer for skill measurement. Chapter 4 provides a detailed description of the data collection methodology, dataset characteristics, and the NLP analysis pipeline. Chapter 5 presents the empirical findings, including alignment metrics, per-university results, and the identified skill gap. Chapter 6 discusses these findings in relation to the initial research questions and existing literature. Finally, Chapter 7 concludes with a summary of contributions, practical recommendations, and directions for future research.
 
 ---
 
-*[DRAFT STATUS: citations are indicated by author/year — full references to be formatted in final bibliography. ⚠️ = verify before submission.]*
-
-*Citation checklist for this chapter:*
-- *Kupets (2016) — IZA World of Labor, verified ✓*
-- *World Economic Forum (2025) — Future of Jobs Report, verified ✓*
-- *Aljohani et al. (2022) — Journal of Innovation & Knowledge, verified ✓*
-- *Almaleh et al. (2019) — Sustainability, verified ✓*
-- *Biggs & Tang (2011) — Teaching for Quality Learning, verified ✓*
-- *ANQA — Armenian National Quality Assurance body, add URL in references*
+**Chapter references:** [1] World Economic Forum (2025) · [2] Kupets (2016) · [3] Aljohani et al. (2022) · [4] Almaleh et al. (2019) · [5] Biggs & Tang (2011)
 # Chapter 2: Literature Review
-
-*[DRAFT STATUS — substantive skeleton. Send to Gemini for tone/flow polish after review.]*
-
----
 
 ## 2.1 The Curriculum–Labor Market Gap: An Established Problem
 
-The mismatch between what universities teach and what employers need is not a new observation. It has been documented across regions and disciplines for decades, and it takes two analytically distinct forms. The first is *overeducation*: workers hold credentials that exceed the formal requirements of their positions. The second is *skill mismatch*: workers lack specific technical or practical competencies despite holding formally relevant degrees. Both can coexist, and in post-Soviet transition economies they frequently do (Kupets, 2016).
+The mismatch between what universities teach and what employers need is not a new observation. It has been documented across regions and disciplines for decades, and it takes two analytically distinct forms. The first is *overeducation*: workers hold credentials that exceed the formal requirements of their positions. The second is *skill mismatch*: workers lack specific technical or practical competencies despite holding formally relevant degrees. Both can coexist, and in post-Soviet transition economies they frequently do [2].
 
-The scale of the problem has attracted growing research attention. Aljohani et al. (2022) conducted a systematic review of 10,214 Scopus-indexed records published between 2010 and 2021 on curriculum–labor market alignment, finding a marked increase in publication volume after 2015, driven primarily by the availability of large-scale job posting datasets and advances in natural language processing. Their review identifies three dominant methodological clusters in the field: survey-based employer feedback studies, competency framework mapping exercises, and, most recently, computational corpus analysis studies. The present thesis belongs to the third cluster, which the authors identify as the fastest-growing and methodologically most rigorous approach.
+The scale of the problem has attracted growing research attention. Aljohani et al. [3] conducted a systematic review of 10,214 Scopus-indexed records published between 2010 and 2021 on curriculum–labor market alignment, finding a marked increase in publication volume after 2015, driven primarily by the availability of large-scale job posting datasets and advances in natural language processing. Their review identifies three dominant methodological clusters in the field: survey-based employer feedback studies, competency framework mapping exercises, and, most recently, computational corpus analysis studies. The present thesis belongs to the third cluster, which the authors identify as the fastest-growing and methodologically most rigorous approach.
 
-A consistent finding across all three clusters is that the gap is not uniformly distributed. Certain skill categories — particularly those at the intersection of applied computing, data analysis, and communication — appear persistently under-represented in curricula relative to their labor market demand. At the same time, curricula in countries with centralized or historically rigid degree structures tend to carry a surplus of theoretical content that has limited direct employer relevance (Kupets, 2016; Amirova & Valiyev, 2021).
+A consistent finding across all three clusters is that the gap is not uniformly distributed. Certain skill categories — particularly those at the intersection of applied computing, data analysis, and communication — appear persistently under-represented in curricula relative to their labor market demand. At the same time, curricula in countries with centralized or historically rigid degree structures tend to carry a surplus of theoretical content that has limited direct employer relevance [2, 6].
 
 ---
 
@@ -103,13 +91,13 @@ A consistent finding across all three clusters is that the gap is not uniformly 
 
 The shift toward computational methods for curriculum alignment analysis was made possible by two parallel developments: the digitization of university course catalogs and the mass availability of structured job posting data from platforms such as LinkedIn and national job boards. These developments enabled researchers to treat curricula and job advertisements as comparable text corpora and apply information retrieval and NLP techniques to quantify alignment at scale.
 
-The most methodologically proximate study to the present thesis is Almaleh et al. (2019), who propose a framework — which they term "Align My Curriculum" — for comparing university course syllabi against job postings from a Saudi Arabian employment portal. Their pipeline combines Naive Bayes text classification with cosine similarity scoring to produce per-course alignment scores and an aggregate institution-level alignment index. Applying this to computing faculties in Saudi Arabia, they find alignment rates below 50% for several programs, with particular deficits in software engineering and data management skills. This study establishes the two-dataset comparative design — one curriculum corpus, one job market corpus — that the present thesis adopts and extends.
+The most methodologically proximate study to the present thesis is Almaleh et al. [4], who propose a framework — which they term "Align My Curriculum" — for comparing university course syllabi against job postings from a Saudi Arabian employment portal. Their pipeline combines Naive Bayes text classification with cosine similarity scoring to produce per-course alignment scores and an aggregate institution-level alignment index. Applying this to computing faculties in Saudi Arabia, they find alignment rates below 50% for several programs, with particular deficits in software engineering and data management skills. This study establishes the two-dataset comparative design — one curriculum corpus, one job market corpus — that the present thesis adopts and extends.
 
-The key extensions in the present thesis relative to Almaleh et al. (2019) are threefold. First, the job market dataset here spans 11 sources combining aggregators and direct employer portals, whereas Almaleh et al. draw from a single portal. Second, the present study handles multilingual input data — Armenian, English, and Russian — while Almaleh et al. operate entirely in English. Third, the skill normalization step here uses the ESCO taxonomy, providing a standardized, internationally recognized vocabulary for reporting gap findings.
+The key extensions in the present thesis relative to Almaleh et al. [4] are threefold. First, the job market dataset here spans a 14-source market snapshot combining aggregators and direct employer portals, whereas Almaleh et al. draw from a single portal. Second, the present study handles multilingual input data — Armenian, English, and Russian — while Almaleh et al. operate entirely in English. Third, the skill normalization step here uses the ESCO taxonomy, providing a standardized, internationally recognized vocabulary for reporting gap findings.
 
-A parallel line of work was presented at the 15th International Conference on Educational Data Mining (EDM 2022). Ahadi, Kitto, Rizoiu, and Musial (2022) — in a poster paper titled "Skills Taught vs Skills Sought: Using Skills Analytics to Identify the Gaps between Curriculum and Job Markets" — apply skills analytics to both curriculum documents and job postings to identify skill gaps in a directly comparable framing to the present thesis (DOI: 10.5281/zenodo.6853121).
+A parallel line of work was presented at the 15th International Conference on Educational Data Mining (EDM 2022). Ahadi et al. [7] apply skills analytics to both curriculum documents and job postings to identify skill gaps in a directly comparable framing to the present thesis.
 
-More recently, Musazade, Mezei, and Zhang (2026) introduce the UniSkill dataset, which links university course descriptions to ESCO skills for Systems Analyst and Management Analyst occupations, providing a benchmark for curriculum-to-taxonomy matching. While the occupational scope of UniSkill differs from the present study, its methodology — mapping curriculum text to ESCO concepts via embedding similarity — validates the core approach used here. UniSkill was accepted to the Language Resources and Evaluation Conference (LREC 2026); the arXiv preprint is available at arXiv:2603.03134.
+More recently, Musazade et al. [8] introduce the UniSkill dataset, which links university course descriptions to ESCO skills for Systems Analyst and Management Analyst occupations, providing a benchmark for curriculum-to-taxonomy matching. While the occupational scope of UniSkill differs from the present study, its methodology — mapping curriculum text to ESCO concepts via embedding similarity — validates the core approach used here.
 
 ---
 
@@ -117,11 +105,11 @@ More recently, Musazade, Mezei, and Zhang (2026) introduce the UniSkill dataset,
 
 Extracting skills from unstructured text is a non-trivial NLP task. Job descriptions and course names are typically short, domain-specific, and written in varied stylistic registers. Two broad paradigms exist for this task: unsupervised keyword extraction and supervised sequence labeling.
 
-In the unsupervised paradigm, methods such as TF-IDF and RAKE identify candidate skill phrases based on statistical salience within a document corpus. A more powerful approach in this category is KeyBERT (Grootendorst, 2020), which uses BERT-based sentence embeddings to identify the candidate phrases most semantically similar to the document as a whole. KeyBERT requires no labeled training data, is applicable to short texts, and supports multilingual models — making it well-suited to the curriculum data in this study, where course descriptions are often one or two sentences in length.
+In the unsupervised paradigm, methods such as TF-IDF and RAKE identify candidate skill phrases based on statistical salience within a document corpus. A more powerful approach in this category is KeyBERT [9], which uses BERT-based sentence embeddings to identify the candidate phrases most semantically similar to the document as a whole. KeyBERT requires no labeled training data, is applicable to short texts, and supports multilingual models — making it well-suited to the curriculum data in this study, where course descriptions are often one or two sentences in length.
 
-The supervised paradigm treats skill extraction as a named entity recognition (NER) problem: a model is trained to label spans of text as skill entities or non-entities. Zhang et al. (2022) introduce SkillSpan, a dataset of 14,759 annotated sentences from job postings, and fine-tune transformer-based models on it to produce a state-of-the-art skill extraction system. SkillSpan achieves substantially higher precision on English job posting data than unsupervised alternatives, at the cost of being language- and domain-specific.
+The supervised paradigm treats skill extraction as a named entity recognition (NER) problem: a model is trained to label spans of text as skill entities or non-entities. Zhang et al. [10] introduce SkillSpan, a dataset of 14,759 annotated sentences from job postings, and fine-tune transformer-based models on it to produce a state-of-the-art skill extraction system. SkillSpan achieves substantially higher precision on English job posting data than unsupervised alternatives, at the cost of being language- and domain-specific.
 
-For the present thesis, two unsupervised approaches are implemented and compared: TF-IDF keyword extraction and KeyBERT. KeyBERT uses the `all-MiniLM-L6-v2` sentence transformer (Wang et al., 2020) applied to both curriculum records and job postings, given its suitability for short texts and computational efficiency for large-scale corpus processing. All curriculum text is available in English after translation (Section 4.4), making an English-only model sufficient. The sentence embedding architecture underlying KeyBERT builds on Reimers and Gurevych (2019), which produces fixed-length sentence representations optimized for semantic similarity tasks. SkillSpan represents the state-of-the-art in supervised skill extraction and is cited here as the benchmark that unsupervised methods are measured against in the literature, but its use requires labeled training data that was not available for Armenian curriculum texts and therefore falls outside the scope of this study.
+For the present thesis, two unsupervised approaches are implemented and compared: TF-IDF keyword extraction and KeyBERT. KeyBERT uses the `all-MiniLM-L6-v2` sentence transformer [12] applied to both curriculum records and job postings, given its suitability for short texts and computational efficiency for large-scale corpus processing. All curriculum text is available in English after translation (Section 4.4), making an English-only model sufficient. The sentence embedding architecture underlying KeyBERT builds on Reimers and Gurevych [11], which produces fixed-length sentence representations optimized for semantic similarity tasks. SkillSpan [10] represents the state-of-the-art in supervised skill extraction and is cited here as the benchmark that unsupervised methods are measured against in the literature, but its use requires labeled training data that was not available for Armenian curriculum texts and therefore falls outside the scope of this study.
 
 A persistent challenge in skill extraction is the distinction between a *skill* (a competence a person can possess) and a *topic* or *requirement* mentioned in context. A job posting that mentions "microservices architecture" may be describing a system the candidate will work with rather than a skill they must possess. This ambiguity is inherent to the task and cannot be fully resolved by automated methods alone. The methodology section (Chapter 4) documents the quality validation steps taken to assess and partially address this issue.
 
@@ -133,13 +121,13 @@ Extracted skill phrases, in their raw form, are not directly comparable across s
 
 Three taxonomies are relevant to this study: ESCO, O*NET, and SFIA.
 
-**ESCO** (European Skills, Competences, Qualifications and Occupations) is a multilingual taxonomy developed by the European Commission. It currently comprises 3,039 occupation concepts and 13,939 skill and competence concepts, organized in 28 languages (European Commission, 2023). ESCO was explicitly designed to serve as an interface between the education and employment systems — its conceptual architecture links occupations to the skills they require and qualifications that support entry into them. This design philosophy makes ESCO the most appropriate primary taxonomy for a study that bridges curricula and job market data. Furthermore, Armenian universities operate within the Bologna Process framework, which is the European higher education architecture that ESCO was built to complement.
+**ESCO** (European Skills, Competences, Qualifications and Occupations) is a multilingual taxonomy developed by the European Commission. It currently comprises 3,039 occupation concepts and 13,939 skill and competence concepts, organized in 28 languages [14]. ESCO was explicitly designed to serve as an interface between the education and employment systems — its conceptual architecture links occupations to the skills they require and qualifications that support entry into them. This design philosophy makes ESCO the most appropriate primary taxonomy for a study that bridges curricula and job market data. Furthermore, Armenian universities operate within the Bologna Process framework, which is the European higher education architecture that ESCO was built to complement.
 
-ESCO has known limitations. Chiarello et al. (2021) demonstrate that ESCO coverage of Industry 4.0 skills — including IoT, AI applications, and robotics — lags significantly behind actual industry practice, due to the taxonomy's update cycle. For the present study, this means that recent or niche skills found in job postings from cutting-edge companies (such as prompt engineering, LangChain, or specific cloud service APIs) will not match any ESCO concept. Rather than treating this as a failure of the methodology, these unmatched terms are retained as a separate "emerging skills" category, which itself constitutes a finding: they represent the fastest-moving frontier of IT skill demand that formal taxonomies have not yet absorbed.
+ESCO has known limitations. Chiarello et al. [15] demonstrate that ESCO coverage of Industry 4.0 skills — including IoT, AI applications, and robotics — lags significantly behind actual industry practice, due to the taxonomy's update cycle. For the present study, this means that recent or niche skills found in job postings from cutting-edge companies (such as prompt engineering, LangChain, or specific cloud service APIs) will not match any ESCO concept. Rather than treating this as a failure of the methodology, these unmatched terms are retained as a separate "emerging skills" category, which itself constitutes a finding: they represent the fastest-moving frontier of IT skill demand that formal taxonomies have not yet absorbed.
 
 **O*NET** (Occupational Information Network) is the U.S. Department of Labor's occupational taxonomy, providing structured descriptors for approximately 1,000 occupations. While O*NET's occupational detail exceeds ESCO's in some areas, its U.S.-centric framing and lack of multilingual support make it less appropriate as the primary taxonomy for an Armenian study. It is referenced here as a secondary cross-validation tool: where findings map to identifiable O*NET skill categories, this is noted to improve accessibility for international readers.
 
-**SFIA** (Skills Framework for the Information Age) is an IT-specific professional skills framework that organizes 121 technical and managerial skills across seven levels of responsibility (SFIA Foundation, 2021). Unlike ESCO and O*NET, SFIA is designed exclusively for the IT profession. While it does not provide an accessible API or downloadable dataset that supports programmatic matching at scale, its seven-level responsibility structure — ranging from "Follow" (level 1) to "Set strategy" (level 7) — is used in the discussion chapter to characterize the *type* of skill gap identified: whether universities are teaching the right skills at the wrong level, or missing skill categories entirely.
+**SFIA** (Skills Framework for the Information Age) is an IT-specific professional skills framework that organizes 121 technical and managerial skills across seven levels of responsibility [16]. Unlike ESCO and O*NET, SFIA is designed exclusively for the IT profession. While it does not provide an accessible API or downloadable dataset that supports programmatic matching at scale, its seven-level responsibility structure — ranging from "Follow" (level 1) to "Set strategy" (level 7) — is used in the discussion chapter to characterize the *type* of skill gap identified: whether universities are teaching the right skills at the wrong level, or missing skill categories entirely.
 
 ---
 
@@ -147,25 +135,25 @@ ESCO has known limitations. Chiarello et al. (2021) demonstrate that ESCO covera
 
 Understanding the nature of any curriculum–labor market gap in Armenia requires engagement with the structural conditions of Armenian higher education, which cannot be read off from comparative studies conducted in Western European or North American contexts.
 
-Armenia's higher education system is a product of the Soviet institutional architecture: centralized degree structures, strong theoretical emphasis, weak differentiation between research and teaching functions, and limited responsiveness to labor market signals (Kupets, 2016). Following independence in 1991, Armenia underwent a series of reform attempts, including formal accession to the Bologna Process in 2005. Bologna adoption introduced the two-cycle degree structure (Bachelor/Master), European Credit Transfer System (ECTS) compatibility, and a formal commitment to learning-outcome-based curriculum design. However, adoption has been uneven: the degree structure has largely been implemented, but outcome-based curriculum design and employer-facing program review remain less consistently embedded in practice (Kupets, 2016).
+Armenia's higher education system is a product of the Soviet institutional architecture: centralized degree structures, strong theoretical emphasis, weak differentiation between research and teaching functions, and limited responsiveness to labor market signals [2]. Following independence in 1991, Armenia underwent a series of reform attempts, including formal accession to the Bologna Process in 2005. Bologna adoption introduced the two-cycle degree structure (Bachelor/Master), European Credit Transfer System (ECTS) compatibility, and a formal commitment to learning-outcome-based curriculum design. However, adoption has been uneven: the degree structure has largely been implemented, but outcome-based curriculum design and employer-facing program review remain less consistently embedded in practice [2].
 
-Kupets (2016) provides the most directly relevant empirical evidence for the Armenian context, drawing on World Bank STEP household survey data. Key findings include: approximately 30% of urban Armenian workers are overeducated for their positions; 69.9% of overeducated workers report their formal education has limited practical usefulness; and the IT sector specifically reports thousands of unfilled vacancies despite high numbers of computing graduates. Kupets frames this as a structural mismatch — not a failure of individual graduates — rooted in the Soviet-era curriculum's emphasis on abstract theoretical knowledge over applied technical competence. This framing directly motivates the present study: if the gap is structural, it can only be diagnosed and addressed through structural data, not through individual graduate surveys.
+Kupets [2] provides the most directly relevant empirical evidence for the Armenian context, drawing on World Bank STEP household survey data. Key findings include: approximately 30% of urban Armenian workers are overeducated for their positions; 69.9% of overeducated workers report their formal education has limited practical usefulness; and the IT sector specifically reports thousands of unfilled vacancies despite high numbers of computing graduates. Kupets frames this as a structural mismatch — not a failure of individual graduates — rooted in the Soviet-era curriculum's emphasis on abstract theoretical knowledge over applied technical competence. This framing directly motivates the present study: if the gap is structural, it can only be diagnosed and addressed through structural data, not through individual graduate surveys.
 
-The Armenian IT sector has expanded substantially since the period studied by Kupets. Major international companies have established development centers in Yerevan (EPAM, SoftConstruct, ServiceTitan), domestic technology companies have scaled internationally (Picsart, Krisp), and diaspora investment has seeded a range of startups and accelerators. This expansion has increased both the volume and the specificity of employer skill demands in the local market, potentially widening the curriculum gap documented in earlier survey research. The present thesis provides a contemporaneous, data-driven update to that earlier evidence base.
+The Armenian IT sector has expanded substantially since the period studied by Kupets [2]. Major international companies have established development centers in Yerevan (EPAM, SoftConstruct, ServiceTitan), domestic technology companies have scaled internationally (Picsart, Krisp), and diaspora investment has seeded a range of startups and accelerators. This expansion has increased both the volume and the specificity of employer skill demands in the local market, potentially widening the curriculum gap documented in earlier survey research. The present thesis provides a contemporaneous, data-driven update to that earlier evidence base.
 
-The closest regional academic comparator is Amirova and Valiyev (2021), who study the competence gap in Azerbaijan — a former Soviet republic with close structural and cultural similarity to Armenia in its higher education system. Their survey-based study of 24 competences finds sharp disagreement between employers and graduates on which competences are most important: employers prioritize practical technical skills and communication, while graduates overestimate the value of formal theoretical credentials. This pattern is consistent with the structural account offered by Kupets and provides a qualitative benchmark against which to interpret the quantitative findings of the present study.
+The closest regional academic comparator is Amirova and Valiyev [6], who study the competence gap in Azerbaijan — a former Soviet republic with close structural and cultural similarity to Armenia in its higher education system. Their survey-based study of 24 competences finds sharp disagreement between employers and graduates on which competences are most important: employers prioritize practical technical skills and communication, while graduates overestimate the value of formal theoretical credentials. This pattern is consistent with the structural account offered by Kupets [2] and provides a qualitative benchmark against which to interpret the quantitative findings of the present study.
 
 ---
 
 ## 2.6 Constructive Alignment and the Theoretical Case for Measurement
 
-The concern with curriculum–labor market alignment has a well-developed theoretical base in educational research. Biggs and Tang (2011) introduce the concept of *constructive alignment* — the principle that effective teaching requires internal coherence between three elements: intended learning outcomes (ILOs), teaching and learning activities, and assessment tasks. A curriculum in which assessments do not test what the ILOs specify, or in which teaching activities do not lead students toward the stated outcomes, is structurally misaligned even before any external labor market comparison is made.
+The concern with curriculum–labor market alignment has a well-developed theoretical base in educational research. Biggs and Tang [5] introduce the concept of *constructive alignment* — the principle that effective teaching requires internal coherence between three elements: intended learning outcomes (ILOs), teaching and learning activities, and assessment tasks. A curriculum in which assessments do not test what the ILOs specify, or in which teaching activities do not lead students toward the stated outcomes, is structurally misaligned even before any external labor market comparison is made.
 
 Biggs and Tang developed constructive alignment primarily as a framework for internal curriculum quality. However, the same logic extends naturally to external alignment: if ILOs are to be educationally meaningful, they should reflect competences that graduates will actually use in professional life. When a systematic gap exists between what a curriculum declares it teaches and what employers need graduates to know, the external misalignment is often a symptom of an earlier failure to define ILOs with reference to any external standard.
 
 In the context of Armenian universities, this connection is particularly relevant. As noted above, outcome-based curriculum design has been formally adopted as part of Bologna compliance, but implementation is uneven. For several universities in this study — notably YSU, whose course data provides names but limited or no description fields — the absence of published ILOs means that skill content must be inferred entirely from course names. This is a methodological constraint, but also a diagnostic signal: programs whose curricula cannot be analyzed because learning outcomes are not documented are the same programs most likely to be misaligned with labor market expectations.
 
-The operationalization of "skills" in this thesis follows the task-based framework introduced by Autor, Levy, and Murnane (2003). In their model, occupations are characterized by the tasks they require — cognitive or manual, routine or non-routine — and the value of skills is defined by which tasks they enable. This framework underpins the use of job posting text as a proxy for skill demand: a job description specifies the tasks an employer needs performed, and the skills listed or implied in that description are those that enable task completion. ESCO, as the normalization target for extracted skills, encodes this task-skill relationship: each ESCO skill concept is linked to the occupations whose tasks it supports.
+The operationalization of "skills" in this thesis follows the task-based framework introduced by Autor, Levy, and Murnane [13]. In their model, occupations are characterized by the tasks they require — cognitive or manual, routine or non-routine — and the value of skills is defined by which tasks they enable. This framework underpins the use of job posting text as a proxy for skill demand: a job description specifies the tasks an employer needs performed, and the skills listed or implied in that description are those that enable task completion. ESCO, as the normalization target for extracted skills, encodes this task-skill relationship: each ESCO skill concept is linked to the occupations whose tasks it supports.
 
 ---
 
@@ -177,12 +165,7 @@ This thesis fills that gap by constructing the first large-scale, multi-source, 
 
 ---
 
-*Citation checklist for this chapter:*
-- *Kupets (2016) — IZA World of Labor, verified ✓*
-- *Aljohani et al. (2022) — Journal of Innovation & Knowledge, verified ✓*
-- *Almaleh et al. (2019) — Sustainability, verified ✓*
-- *Ahadi, Kitto, Rizoiu & Musial (2022) — EDM 2022 poster, DOI: 10.5281/zenodo.6853121 — verified ✓*
-- *Musazade, Mezei & Zhang (2026) — UniSkill, arXiv 2603.03134, accepted LREC 2026 — verified ✓*
+**Chapter references:** [2] Kupets (2016) · [3] Aljohani et al. (2022) · [4] Almaleh et al. (2019) · [5] Biggs & Tang (2011) · [6] Amirova & Valiyev (2021) · [7] Ahadi et al. (2022) · [8] Musazade et al. (2026) · [9] Grootendorst (2020) · [10] Zhang et al. (2022) · [11] Reimers & Gurevych (2019) · [12] Wang et al. (2020) · [13] Autor et al. (2003) · [14] European Commission (2023) · [15] Chiarello et al. (2021) · [16] SFIA Foundation (2021)
 - *Grootendorst, M. (2020) — KeyBERT, Zenodo software release, DOI: 10.5281/zenodo.4461265 — verified ✓ (cite as @misc Zenodo, not journal)*
 - *Zhang et al. (2022) — SkillSpan, NAACL, verified ✓*
 - *Reimers & Gurevych (2019) — Sentence-BERT, EMNLP, verified ✓*
@@ -194,21 +177,17 @@ This thesis fills that gap by constructing the first large-scale, multi-source, 
 - *Autor, Levy & Murnane (2003) — Quarterly Journal of Economics, verified ✓*
 # Chapter 3: Theoretical Framework
 
-*[DRAFT STATUS — substantive skeleton. Send to Gemini for tone/flow polish after review.]*
-
----
-
 ## 3.1 Overview
 
-This chapter presents the theoretical foundations that underpin the research design, analytical choices, and interpretive lens of this thesis. Three interconnected frameworks are employed. Constructive alignment theory (Biggs & Tang, 2011) provides the educational rationale for why curriculum–labor market alignment matters and what a properly aligned curriculum would look like. The task-based view of skill demand (Autor, Levy & Murnane, 2003) provides the labor economics rationale for treating job postings as a valid proxy for skill demand. ESCO (European Commission, 2023) serves as the operational bridge between the two: a shared vocabulary that makes it possible to compare what curricula teach against what employers need using a single, standardized measurement instrument.
+This chapter presents the theoretical foundations that underpin the research design, analytical choices, and interpretive lens of this thesis. Three interconnected frameworks are employed. Constructive alignment theory [5] provides the educational rationale for why curriculum–labor market alignment matters and what a properly aligned curriculum would look like. The task-based view of skill demand [13] provides the labor economics rationale for treating job postings as a valid proxy for skill demand. ESCO [14] serves as the operational bridge between the two: a shared vocabulary that makes it possible to compare what curricula teach against what employers need using a single, standardized measurement instrument.
 
 Together, these three frameworks justify the central methodological claim of this thesis: that the distance between what is taught in Armenian IT programs and what employers demand can be measured, quantified, and disaggregated at the level of individual programs and institutions.
 
 ---
 
-## 3.2 Constructive Alignment (Biggs & Tang, 2011)
+## 3.2 Constructive Alignment [5]
 
-Section 2.6 introduced constructive alignment and established its external dimension: a curriculum that is internally coherent (ILOs, TLAs, and ATs mutually reinforcing) but externally disconnected from labor market requirements will produce graduates who perform well on assessments but are not equipped for employment — the pattern Kupets (2016) documents empirically for Armenia. This section describes how that theoretical argument is operationalized in the present study.
+Section 2.6 introduced constructive alignment and established its external dimension: a curriculum that is internally coherent (ILOs, TLAs, and ATs mutually reinforcing) but externally disconnected from labor market requirements will produce graduates who perform well on assessments but are not equipped for employment — the pattern Kupets [2] documents empirically for Armenia. This section describes how that theoretical argument is operationalized in the present study.
 
 The operationalization proceeds in two steps. First, curriculum documents are treated as ILO proxies: where course descriptions or published program learning outcomes are available, they serve directly as evidence of what a course intends students to learn. Where they are absent — as is the case for the majority of YSU courses, which provide course names only — the course name itself is used as the best available approximation of the intended learning target. Second, job postings are treated as proxies for the external reference standard against which ILOs should be evaluated: the task requirements and competences that Armenian IT employers actually need graduates to possess. The gap between the skills inferable from these ILO proxies and the skills demanded in job postings is the central measurement object of the study.
 
@@ -218,9 +197,9 @@ Within the post-Soviet institutional context, constructive alignment failure tak
 
 ---
 
-## 3.3 Task-Based View of Skill Demand (Autor, Levy & Murnane, 2003)
+## 3.3 Task-Based View of Skill Demand [13]
 
-The labor economics literature offers a complementary theoretical account of why skill taxonomies are an appropriate instrument for measuring labor market demand. Autor, Levy, and Murnane (2003) propose that occupations are most usefully characterized not by their titles or credential requirements, but by the *tasks* they require workers to perform. In their framework, tasks are classified along two dimensions: cognitive versus manual, and routine versus non-routine. The key insight is that technology substitutes most readily for routine tasks (both cognitive and manual) and complements non-routine cognitive tasks — a pattern that drives the growing premium on higher-order analytical, communicative, and adaptive skills in knowledge-intensive labor markets.
+The labor economics literature offers a complementary theoretical account of why skill taxonomies are an appropriate instrument for measuring labor market demand. Autor, Levy, and Murnane [13] propose that occupations are most usefully characterized not by their titles or credential requirements, but by the *tasks* they require workers to perform. In their framework, tasks are classified along two dimensions: cognitive versus manual, and routine versus non-routine. The key insight is that technology substitutes most readily for routine tasks (both cognitive and manual) and complements non-routine cognitive tasks — a pattern that drives the growing premium on higher-order analytical, communicative, and adaptive skills in knowledge-intensive labor markets.
 
 This framework has three implications for the present thesis.
 
@@ -234,17 +213,19 @@ Third, the task-based framework predicts the direction of the gap that this thes
 
 ## 3.4 ESCO as the Operational Bridge
 
-ESCO (European Skills, Competences, Qualifications and Occupations) is the operational instrument that makes it possible to compare curricula and job postings on a shared basis. Its role in the theoretical framework is distinct from its role in the methodology: theoretically, ESCO represents the commitment to a standardized, intersubjective definition of "skill" — a definition not constructed by this thesis but established by the European Commission through an iterative, multi-stakeholder process (European Commission, 2023).
+ESCO (European Skills, Competences, Qualifications and Occupations) is the operational instrument that makes it possible to compare curricula and job postings on a shared basis. Its role in the theoretical framework is distinct from its role in the methodology: theoretically, ESCO represents the commitment to a standardized, intersubjective definition of "skill" — a definition not constructed by this thesis but established by the European Commission through an iterative, multi-stakeholder process [14].
 
 The choice of ESCO over alternative taxonomies (O*NET, custom domain dictionaries) is grounded in three theoretical considerations. First, ESCO was explicitly designed for the education–employment interface: its conceptual architecture links skill concepts to the occupations that require them and to the qualifications that signal their acquisition. This tripartite structure makes it uniquely appropriate for a study that spans both educational institutions and employer organizations. Second, ESCO's multilingual coverage — available in 28 languages — is necessary for handling the linguistically diverse inputs of this study (Armenian, English, Russian). Third, Armenia's integration into the Bologna Process means that the European higher education framework, of which ESCO is the skills component, represents the normative reference standard against which Armenian curricula are being designed and evaluated.
 
-One theoretical tension requires acknowledgment. ESCO is a static snapshot that is updated on a fixed release cycle, meaning it necessarily lags behind the fastest-moving areas of technology practice. The task-based framework of Autor et al. implies that new task types — those created by emerging technologies — will generate new skill demands before any formal taxonomy can absorb them. In this study, skill phrases extracted from job postings that do not match any ESCO concept are treated as empirical evidence of this theoretical expectation: they are the labor market's leading edge, visible in practice before it is visible in formal classification systems.
+One theoretical tension requires acknowledgment. ESCO is a static snapshot that is updated on a fixed release cycle, meaning it necessarily lags behind the fastest-moving areas of technology practice. The task-based framework of Autor et al. [13] implies that new task types — those created by emerging technologies — will generate new skill demands before any formal taxonomy can absorb them. In this study, skill phrases extracted from job postings that do not match any ESCO concept are treated as empirical evidence of this theoretical expectation: they are the labor market's leading edge, visible in practice before it is visible in formal classification systems.
 
 ---
 
 ## 3.5 Integration of the Three Frameworks
 
-The three frameworks converge on a single analytical structure, illustrated below:
+The three frameworks converge on a single analytical structure illustrated in Figure 3.1.
+
+> **[Figure 3.1 — Integrated Theoretical Framework]** *Insert clean flowchart here. Replace the diagram below with the exported PNG. See `docs/thesis/FIGURE_PLACEMENT_GUIDE.md`.*
 
 ```
 CONSTRUCTIVE ALIGNMENT (Biggs & Tang)
@@ -265,6 +246,7 @@ CONSTRUCTIVE ALIGNMENT (Biggs & Tang)
                     - Task-based view: are gap skills routine or non-routine cognitive?
                     - SFIA levels: is the gap about missing skills or wrong skill depth?
 ```
+*Figure 3.1. Integrated analytical framework combining constructive alignment theory, task-based skill demand, and ESCO normalization.*
 
 This integrated structure means that the thesis is not merely reporting a gap — it is interpreting the gap through three complementary lenses. The constructive alignment lens asks: *is the gap a sign of weak ILO design?* The task-based lens asks: *is it a sign of technological change outpacing curriculum response?* The ESCO lens makes the gap measurable, reproducible, and comparable with other studies.
 
@@ -278,17 +260,8 @@ Taken together, these frameworks position this thesis as a study that is simulta
 
 ---
 
-*Citation checklist for this chapter:*
-- *Biggs & Tang (2011) — Teaching for Quality Learning at University, verified ✓*
-- *Kupets (2016) — IZA World of Labor, verified ✓*
-- *Autor, Levy & Murnane (2003) — Quarterly Journal of Economics, verified ✓*
-- *European Commission (2023) — ESCO — add URL and version reference*
-- *SFIA Foundation (2021) — sfia-online.org — add URL in references*
+**Chapter references:** [2] Kupets (2016) · [5] Biggs & Tang (2011) · [13] Autor et al. (2003) · [14] European Commission (2023) · [16] SFIA Foundation (2021)
 # Chapter 4: Data and Methodology
-
-*[DRAFT STATUS — substantive skeleton with accurate numbers. Send to Gemini for tone/flow polish after review.]*
-
----
 
 ## 4.1 Research Design
 
@@ -300,14 +273,16 @@ The study follows a sequential multi-stage pipeline:
 Stage 1: Data Collection     → curriculum scraping + job market scraping
 Stage 2: Data Processing     → cleaning, normalization, unified schemas
 Stage 3: Translation         → Armenian/Russian → English (YSU, RAU)
-Stage 4: Skill Extraction    → KeyBERT applied to both corpora
+Stage 4: Skill Extraction    → TF-IDF and KeyBERT applied to both corpora
 Stage 5: Normalization       → ESCO taxonomy matching
 Stage 6: Alignment Analysis  → coverage rate, gap sets, surplus sets
 ```
 
-This design is consistent with the methodological precedent established by Almaleh et al. (2019), who applied a comparable two-corpus computational framework in the Saudi Arabian context. The present study extends that precedent by using a multi-source job dataset, a multilingual curriculum corpus, and a standardized EU skill taxonomy (ESCO) as the normalization target.
+This design is consistent with the methodological precedent established by Almaleh et al. [4], who applied a comparable two-corpus computational framework in the Saudi Arabian context. The present study extends that precedent by using a multi-source job dataset, a multilingual curriculum corpus, and a standardized EU skill taxonomy (ESCO) as the normalization target.
 
 All data collection, processing, and analysis steps were implemented in Python (version 3.11) using Jupyter notebooks. The full pipeline is archived in the project repository alongside the datasets, enabling end-to-end reproducibility.
+
+> **[Figure 4.1 — NLP Pipeline Overview]** *Insert pipeline flowchart here. See `docs/thesis/FIGURE_PLACEMENT_GUIDE.md` for specifications.*
 
 ---
 
@@ -323,9 +298,9 @@ Curriculum data was collected from four Armenian universities whose IT-related p
 |---|---|---|---|---|---|
 | Yerevan State University | YSU | 13 | 691 | Web scrape (Apify, markdown) | Armenian |
 | American University of Armenia | AUA | 7 | 249 | Web scrape (Apify, HTML catalog) | English |
-| National University of Architecture and Construction of Armenia | NUACA | 5 | 174 | Web scrape (Apify, plain text) | English |
+| National University of Architecture and Construction of Armenia | NUACA | 4 | 174 | Web scrape (Apify, plain text) | English |
 | Russian-Armenian University | RAU | 1 | 47 | PDF study plans (PyPDF2 + regex) | Russian |
-| **Total** | | **26** | **1,161** | | |
+| **Total** | | **25** | **1,161** | | |
 
 Each university required a distinct collection approach due to differences in how curriculum data was published online.
 
@@ -363,7 +338,7 @@ All four source-specific datasets were merged into a single unified analysis fil
 
 *Description coverage: AUA 242/249 (97%), YSU 691/691 (100%), NUACA 0/174 (0%), RAU 0/47 (0%).
 
-The final dataset contains **1,161 rows** across **26 program–degree combinations** at **4 universities**, covering **761 Bachelor**, **373 Master**, and **27 General education** courses.
+The final dataset contains **1,161 rows** across **27 program–degree combinations** at **4 universities**, covering Bachelor, Master, and General Education coursework.
 
 ---
 
@@ -371,7 +346,7 @@ The final dataset contains **1,161 rows** across **26 program–degree combinati
 
 ### 4.3.1 Sources and Collection Strategy
 
-Job market data was aggregated from 11 distinct sources representing the Armenian IT labor market as of March 2026. Sources were selected to maximize coverage of employer types and seniority levels within the Armenian market, combining broad aggregators that index many employers with direct company career portals that represent the largest IT employers in Yerevan.
+Job market data was aggregated from a 14-source market snapshot representing the Armenian IT labor market as of March 2026. Sources were selected to maximize coverage of employer types and seniority levels within the Armenian market, combining broad aggregators that index many employers with direct company career portals that represent the largest IT employers in Yerevan. A later filtering step derives the IT-only analysis subset used in downstream NLP and alignment stages.
 
 **Table 4.3 — Job market data sources**
 
@@ -382,21 +357,24 @@ Job market data was aggregated from 11 distinct sources representing the Armenia
 | EPAM Armenia | Company portal | Internal careers API (JSON) | 108 |
 | Staff.am | Aggregator | Next.js `__NEXT_DATA__` JSON + JSON-LD | 55 |
 | job.am | Aggregator | Requests + BeautifulSoup (SSR HTML) | 20 |
+| Grid Dynamics | Company portal | Requests + API-backed listing extraction | 11 |
 | Krisp | Company portal | Requests + BeautifulSoup (SSR HTML) | 7 |
+| NVIDIA | Company portal | Requests + SSR/API extraction | 5 |
+| 10Web | Company portal | Requests + SSR/API extraction | 5 |
 | DataArt | Company portal | `window.INITIAL_STATE` (React SPA) + Playwright | 5 |
 | ServiceTitan | Company portal | Workday listing API + Playwright detail | 4 |
 | Picsart | Company portal | Greenhouse public API (Armenia filter) | 2 |
 | Synopsys | Company portal | Avature ATS SSR HTML + JSON-LD | 2 |
 | DISQO | Company portal | Lever public API | 1 |
-| **Total (pre-dedup)** | | | **1,348** |
+| **Total (broad snapshot)** | | | **1,369** |
 
-Collection for each source was implemented in a dedicated Jupyter notebook (notebooks 01–11 in `notebooks/jobs/`). All scrapers used Python's `requests` library and `BeautifulSoup` for server-rendered HTML sources; Playwright headless browser automation was used for JavaScript-heavy sources (DataArt, ServiceTitan) where the listing metadata or job content was not accessible via static requests. Each scraper included rate limiting (minimum 1.5-second delay between requests) and a custom User-Agent identifying the purpose as academic research. All sources were confirmed compliant with their respective `robots.txt` policies at the time of collection.
+Collection for each source was implemented in a dedicated Jupyter notebook (notebooks 01–11 in `notebooks/1_collection_jobs/`). All scrapers used Python's `requests` library and `BeautifulSoup` for server-rendered HTML sources; Playwright headless browser automation was used for JavaScript-heavy sources (DataArt, ServiceTitan) where the listing metadata or job content was not accessible via static requests. Each scraper included rate limiting (minimum 1.5-second delay between requests) and a custom User-Agent identifying the purpose as academic research. All sources were confirmed compliant with their respective `robots.txt` policies at the time of collection.
 
 The choice to include both aggregators and company portals was deliberate. Aggregators (LinkedIn, Staff.am, job.am) provide broad market coverage but may contain duplicates, outdated postings, and variable description quality. Company portals represent direct employer demand — the job descriptions are written by the hiring company with no intermediary — and typically contain higher-quality skill specifications. The `source_type` column encodes this distinction, enabling separate analysis of the two segments.
 
 ### 4.3.2 Data Processing and Schema
 
-Across 11 sources, raw data varied significantly in structure (HTML tables, JSON-LD Schema.org blocks, proprietary API responses, Next.js embedded state). A canonical schema was defined prior to collection, and each source-specific standardization notebook applied a `to_canonical()` transformation to normalize raw fields into the shared schema.
+Across 14 sources, raw data varied significantly in structure (HTML tables, JSON-LD Schema.org blocks, proprietary API responses, Next.js embedded state). A canonical schema was defined prior to collection, and each source-specific standardization notebook applied a `to_canonical()` transformation to normalize raw fields into the shared schema.
 
 **Table 4.4 — Canonical job dataset schema**
 
@@ -417,15 +395,13 @@ Across 11 sources, raw data varied significantly in structure (HTML tables, JSON
 
 The `full_text` field — the primary input for skill extraction — achieves 100% coverage across all rows. It was constructed as the concatenation of description, responsibilities, and required qualifications fields where these were separate in the source, or as the full description text where they were unified.
 
-### 4.3.3 Deduplication
+### 4.3.3 Broad Snapshot and IT-Only Filtering
 
-The merged dataset of 1,348 postings contained two categories of duplicates requiring removal before skill extraction:
+The broad market snapshot used in the current project contains **1,369 postings** merged into a shared 13-column schema. This broad snapshot is preserved as `final_jobs_dataset.csv` for transparency and reproducibility.
 
-**Within-source duplicates (75 rows removed):** Identical job descriptions appearing multiple times within the same source, caused by scraping artifacts. All 75 duplicates originated from the LinkedIn scrape, where the Apify scraper returned the same posting multiple times — most notably, nine EPAM trainee/intern postings were each duplicated seven times. Detection used MD5 hashing of the `full_text` field; within each (source, hash) group, only the first occurrence was retained.
+Because the broad Armenia tech hiring landscape still includes clearly non-technical, managerial, commercial, and mixed-role postings, a dedicated IT-only filtering step was introduced before downstream NLP analysis. The filter combines job-title rules, lexical technical cues, and manual review flags. The resulting analysis subset contains **753 IT-only postings**. The full audit is stored in `it_job_filter_audit.csv` (`keep=753`, `drop=558`, `review=58`), and ambiguous cases are preserved in `it_job_filter_review_queue.csv`.
 
-**Cross-source duplicates (205 rows removed):** The same job appearing on both an aggregator (LinkedIn, Staff.am) and the company's own career portal. The largest overlaps were EPAM (99 shared postings between LinkedIn and the EPAM careers API), SoftConstruct (42 shared between LinkedIn and the SoftConstruct portal), and Krisp (7 shared). Detection used normalized (job\_title, company\_name) matching. In all cases, the company portal version was retained over the aggregator version, as company portals represent direct employer demand with typically richer, more structured job descriptions.
-
-After deduplication, the final job market dataset contains **1,068 unique postings**: 802 aggregator (75.1%) and 266 company portal (24.9%). The pre-deduplication dataset is archived as `final_jobs_dataset_pre_dedup.csv` for reproducibility.
+This separation between the broad market snapshot and the IT-only downstream subset is methodologically important. It preserves the full market collection for descriptive reporting while preventing obviously non-IT roles from distorting the skill-demand signal used for alignment analysis.
 
 ---
 
@@ -477,13 +453,21 @@ A manual spot-check of 50 randomly selected translated course names confirmed ac
 
 Skill extraction — identifying skill-denoting phrases in free text — is the methodologically critical step in this pipeline. Two unsupervised approaches were implemented and compared as baselines before ESCO normalization:
 
-**TF-IDF keyword extraction** uses term frequency–inverse document frequency weighting (sklearn `TfidfVectorizer`) to identify terms that are distinctive to a given document relative to the corpus. It operates at corpus scale, treating the entire curriculum or job market corpus as the reference distribution, and selects n-grams whose TF-IDF weight ranks highest for each individual document. This method captures terminology that is specific to individual courses or postings rather than terminology common across the corpus.
+**TF-IDF keyword extraction** uses term frequency–inverse document frequency weighting [22] (sklearn `TfidfVectorizer` [19]) to identify terms that are distinctive to a given document relative to the corpus. It operates at corpus scale, treating the entire curriculum or job market corpus as the reference distribution, and selects n-grams whose TF-IDF weight ranks highest for each individual document. For a term $t$ in document $d$ drawn from corpus $D$, the TF-IDF weight is:
 
-**KeyBERT** (Grootendorst, 2020) uses a sentence transformer to represent the full document as an embedding, then ranks candidate n-grams by their cosine similarity to the document embedding — identifying the phrases that best represent the semantic content of the text. This approach handles short texts well (a course name of five words is sufficient) and requires no domain-specific training data.
+$$\text{TF-IDF}(t, d, D) = \frac{f_{t,d}}{\displaystyle\sum_{t' \in d} f_{t',d}} \cdot \log\frac{|D| + 1}{1 + |\{d' \in D : t \in d'\}|}$$
 
-Both methods were applied to all 1,161 curriculum documents and all 1,068 job postings, enabling comparison of their alignment metrics prior to ESCO normalization.
+where $f_{t,d}$ is the raw count of term $t$ in document $d$. This method captures terminology that is specific to individual courses or postings rather than terminology common across the corpus.
 
-The sentence transformer model for KeyBERT is `all-MiniLM-L6-v2` (Wang et al., 2020), a lightweight English model (22M parameters). This model was selected over the larger multilingual alternative (`paraphrase-multilingual-mpnet-base-v2`, 278M parameters) for two reasons: (1) all curriculum text is available in English after the translation step described in Section 4.4, making a multilingual model unnecessary; (2) the smaller model allows the full extraction pipeline to run on a standard laptop without hardware accelerators, within the practical constraints of this project.
+**KeyBERT** [9] uses a sentence transformer to represent the full document as an embedding, then ranks candidate n-grams by their cosine similarity to the document embedding — identifying the phrases that best represent the semantic content of the text. For candidate phrase $p$ and document $d$, cosine similarity is:
+
+$$\text{sim}(p, d) = \frac{\mathbf{e}_p \cdot \mathbf{e}_d}{\|\mathbf{e}_p\| \cdot \|\mathbf{e}_d\|}$$
+
+where $\mathbf{e}_p$ and $\mathbf{e}_d$ are the phrase and document embeddings produced by the sentence transformer. This approach handles short texts well (a course name of five words is sufficient) and requires no domain-specific training data.
+
+Both methods were applied to all 1,161 curriculum documents and the 753-posting IT-only job subset, enabling comparison of their alignment metrics prior to ESCO normalization.
+
+The sentence transformer model for KeyBERT is `all-MiniLM-L6-v2` [12], a lightweight English model (22M parameters) whose architecture builds on Sentence-BERT [11]. This model was selected over the larger multilingual alternative (`paraphrase-multilingual-mpnet-base-v2`, 278M parameters) for two reasons: (1) all curriculum text is available in English after the translation step described in Section 4.4, making a multilingual model unnecessary; (2) the smaller model allows the full extraction pipeline to run on a standard laptop without hardware accelerators, within the practical constraints of this project.
 
 ### 4.5.2 Text Preprocessing for Skill Extraction
 
@@ -528,19 +512,25 @@ keywords = kw_model.extract_keywords(
 )
 ```
 
-Up to 10 skill phrases per document are retained after post-filtering. The `use_mmr=True` parameter applies Maximal Marginal Relevance (Carbonell & Goldstein, 1998) to select diverse top phrases, reducing extraction of near-duplicate variants of the same concept. MMR was preferred over the Max-Sum algorithm (`use_maxsum=True`) for computational efficiency: MMR runs in O(n·k) time per document while MaxSum requires O(n²) pairwise comparisons, making MaxSum impractical at corpus scale on a CPU-only laptop.
+Up to 10 skill phrases per document are retained after post-filtering. The `use_mmr=True` parameter applies Maximal Marginal Relevance (MMR) [17] to select diverse top phrases, reducing extraction of near-duplicate variants of the same concept. At each step, MMR selects the candidate phrase $c_i$ from the remaining set $C \setminus S$ that maximizes:
+
+$$\text{MMR} = \underset{c_i \in C \setminus S}{\arg\max}\left[\lambda \cdot \text{sim}(c_i,\, d) - (1 - \lambda) \cdot \underset{c_j \in S}{\max}\, \text{sim}(c_i,\, c_j)\right]$$
+
+where $S$ is the set of already-selected phrases, $d$ is the document embedding, and $\lambda = 0.5$ balances relevance to the document against redundancy with already-selected phrases. MMR was preferred over the Max-Sum algorithm (`use_maxsum=True`) for computational efficiency: MMR runs in $O(n \cdot k)$ time per document while MaxSum requires $O(n^2)$ pairwise comparisons, making MaxSum impractical at corpus scale on a CPU-only machine.
 
 For course names (typically 3–8 words), the combined course name + description provides sufficient context. For job postings (median ~3,200 characters), the full `full_text` after boilerplate removal is used.
 
-### 4.5.4 ESCO Normalization *(planned — next pipeline stage)*
+### 4.5.4 ESCO Normalization
 
 Raw extracted phrases ("machine learning algorithms", "neural network training", "deep learning frameworks") refer to the same conceptual domain but use different surface forms. ESCO normalization maps these to a shared vocabulary of 13,939 standardized skill concepts, enabling direct comparison between curriculum-derived and job-derived skill profiles.
 
-Normalization is performed via cosine similarity matching. The ESCO v1.2 skills dataset (European Commission, 2023) — downloaded as a CSV file for local matching — provides a preferred label and description for each skill concept. Each extracted phrase and each ESCO skill description are encoded using the `all-MiniLM-L6-v2` sentence transformer, and the extracted phrase is mapped to the ESCO concept with the highest cosine similarity score above a threshold of 0.75.
+Normalization is performed via cosine similarity matching. The ESCO v1.2 skills dataset [14] — downloaded as a CSV file for local matching — provides a preferred label and description for each skill concept. Each extracted phrase and each ESCO skill label are encoded using the `all-MiniLM-L6-v2` sentence transformer [12], and the extracted phrase $p$ is mapped to the ESCO concept $e^*$ with the highest cosine similarity above threshold $\tau = 0.75$:
 
-Phrases that do not match any ESCO concept above the threshold are retained as an "emerging skills" set rather than discarded. These unmatched phrases — representing recent technical terminology not yet absorbed by the ESCO taxonomy (e.g., specific cloud service APIs, LLM-related tooling) — are reported separately as a finding in Chapter 5, following the recommendation of Chiarello et al. (2021) who document ESCO's documented lag in coverage of Industry 4.0 skills.
+$$e^*(p) = \underset{e \in \mathcal{E}}{\arg\max}\; \text{sim}(p, e) \qquad \text{subject to}\quad \text{sim}(p, e^*) \geq \tau$$
 
-The threshold of 0.75 is the starting point based on values reported in prior ESCO-matching studies (Decorte et al., 2021; Gnehm et al., 2022). Empirical calibration on a sample of extracted phrases was performed to validate this value; results are reported in Section 4.5.6.
+Phrases that do not match any ESCO concept above the threshold are retained as an "emerging skills" set rather than discarded. These unmatched phrases — representing recent technical terminology not yet absorbed by the ESCO taxonomy (e.g., specific cloud service APIs, LLM-related tooling) — are reported separately as a finding in Chapter 5, following the recommendation of Chiarello et al. [15] who document ESCO's lag in coverage of Industry 4.0 skills.
+
+The threshold $\tau = 0.75$ was selected through the calibration procedure described in Section 4.5.6 and then used in the completed ESCO normalization stage.
 
 ### 4.5.5 Baseline Results (Pre-ESCO)
 
@@ -550,17 +540,17 @@ Before ESCO normalization, alignment was measured directly on the raw extracted 
 
 | Metric | TF-IDF | KeyBERT |
 |---|---|---|
-| Curriculum unique skills | 3,423 | 4,801 |
-| Job unique skills | 4,625 | 8,695 |
-| Overlap | 296 | 23 |
-| Coverage rate | 6.4% | 0.26% |
-| Jaccard similarity | 3.8% | 0.17% |
-| Gap (jobs only) | 4,329 | 8,672 |
-| Surplus (curriculum only) | 3,127 | 4,778 |
+| Curriculum unique skills | 3,442 | 4,812 |
+| Job unique skills | 3,153 | 5,530 |
+| Overlap | 279 | 18 |
+| Coverage rate | 8.85% | 0.33% |
+| Jaccard similarity | 4.42% | 0.17% |
+| Gap (jobs only) | 2,874 | 5,512 |
+| Surplus (curriculum only) | 3,163 | 4,794 |
 
-The difference between TF-IDF (6.4%) and KeyBERT (0.26%) at the raw phrase level is expected and does not indicate a quality problem. TF-IDF extracts corpus-specific vocabulary, producing overlapping terms like "algorithms", "analytics", "python", "sql", and "cloud" — words that appear across both corpora using identical surface forms. KeyBERT extracts semantically rich keyphrases that are idiomatic to each text (e.g., "object oriented programming" in curriculum vs. "backend development" in jobs), which rarely match verbatim. After ESCO normalization maps both sets to shared concept identifiers, the alignment numbers for KeyBERT are expected to rise substantially. The TF-IDF coverage of 6.4% provides a literal string-match lower bound; the post-ESCO result in Chapter 5 provides the primary finding.
+The difference between TF-IDF (8.85%) and KeyBERT (0.33%) at the raw phrase level is expected and does not indicate a quality problem. TF-IDF extracts corpus-specific vocabulary, producing overlapping terms like "algorithms", "analytics", "python", "sql", and "cloud" — words that appear across both corpora using identical surface forms. KeyBERT extracts semantically rich keyphrases that are idiomatic to each text (e.g., "object oriented programming" in curriculum vs. "backend development" in jobs), which rarely match verbatim. After ESCO normalization maps both sets to shared concept identifiers, the alignment numbers for KeyBERT rise substantially. The TF-IDF coverage of 8.85% provides a literal string-match lower bound; the post-ESCO result in Chapter 5 provides the primary finding.
 
-Note: an earlier version of this pipeline reported a TF-IDF overlap of 12.6% (584 terms). A systematic audit revealed that approximately 60% of those overlap terms were generic English words (e.g., "access", "achieve", "activities") rather than skills. After expanding the generic word filters from ~130 to 459 terms and tightening the multi-word noise filter, the overlap fell to the more accurate 296 terms (6.4%). Validation against 151 jobs with human-curated `skills_tags` from Staff.am and EPAM yielded a soft-match recall of 44.2% for TF-IDF and 20.5% for KeyBERT, confirming that the pipeline captures a reasonable share of ground-truth skills despite operating unsupervised.
+Note: an earlier version of this pipeline reported a TF-IDF overlap of 12.6% (584 terms). A systematic audit revealed that approximately 60% of those overlap terms were generic English words (e.g., "access", "achieve", "activities") rather than skills. After expanding the generic word filters from ~130 to 459 terms, tightening the multi-word noise filter, and restricting the demand-side corpus to the IT-only subset, the overlap settled at the more accurate 279 terms (8.85%). Validation against 151 jobs with human-curated `skills_tags` from Staff.am and EPAM yielded a soft-match recall of 44.2% for TF-IDF and 20.5% for KeyBERT, confirming that the pipeline captures a reasonable share of ground-truth skills despite operating unsupervised.
 
 Note: a visual inspection of both output files confirms that the extraction quality is qualitatively reasonable — TF-IDF curriculum top terms include `data`, `programming`, `algorithms`, `mathematics`, `machine` (learning), `analysis`, `statistics`; TF-IDF jobs top terms include `data`, `testing`, `cloud`, `backend`, `automation`, `security`, `software`. The gap between them (low raw overlap despite conceptual similarity) illustrates exactly the vocabulary fragmentation problem that ESCO normalization is designed to solve.
 
@@ -568,17 +558,19 @@ Note: a visual inspection of both output files confirms that the extraction qual
 
 To validate the cosine similarity threshold empirically rather than adopting a value from prior work without verification, a calibration sample was constructed from extracted skills. Two hundred and ninety-three phrase–ESCO pairs were drawn from the TF-IDF and KeyBERT extraction outputs, stratified across seven cosine similarity bands (below 0.60 through above 0.85), to cover the full range of match quality.
 
-**Annotation procedure.** Given the volume of pairs and the well-defined binary nature of the judgment task, annotation was performed using GPT-4o-mini as an automated judge (OpenAI, 2024), following the LLM-as-annotator approach established in recent NLP research (Gilardi et al., 2023; He et al., 2024). Each pair was submitted individually with a structured system prompt requiring a binary output: 1 (the extracted phrase and ESCO label refer to the same competency) or 0 (surface similarity without conceptual alignment). The model was run at temperature=0 to ensure deterministic, reproducible outputs.
+**Annotation procedure.** Given the volume of pairs and the well-defined binary nature of the judgment task, annotation was performed using GPT-4o-mini as an automated judge [18], following the LLM-as-annotator approach established in recent NLP research [20, 21]. Each pair was submitted individually with a structured system prompt requiring a binary output: 1 (the extracted phrase and ESCO label refer to the same competency) or 0 (surface similarity without conceptual alignment). The model was run at temperature=0 to ensure deterministic, reproducible outputs.
 
 To validate the automated annotations, a stratified sample of 35 pairs (5 per similarity band) was reviewed manually by the author. Inter-annotator agreement between GPT-4o-mini and the human reviewer was 94.3% (33/35 pairs). Two corrections were applied: a phrase describing ERP–ecommerce integration incorrectly matched to "e-commerce systems", and "chemical data analysis" incorrectly matched to "analyse chemical substances" (a laboratory skill). Corrected pairs are flagged in the dataset with `annotator_notes = "gpt-4o-mini; corrected by human reviewer"`.
 
 Precision, recall, and F1 were computed at thresholds 0.60, 0.65, 0.70, 0.75, 0.80, and 0.85. The threshold yielding the highest F1 score was selected as the operating point. Results are reported in Section 5.1 alongside the main skill normalization findings.
 
+> **[Figure 4.3 — ESCO Threshold Calibration Curve]** *Insert precision/recall/F1 vs. threshold line chart here. Export from `notebooks/3_analysis/04_esco_calibration.ipynb`.*
+
 The calibration procedure is implemented across `notebooks/3_analysis/04_esco_calibration.ipynb` (pair generation and threshold sweep) and `notebooks/3_analysis/04b_annotate_calibration_pairs.ipynb` (annotation and manual validation).
 
 ### 4.5.7 Sensitivity Analysis
 
-Three sensitivity analyses were conducted to assess the robustness and quality of the extraction pipeline before proceeding to ESCO normalization. Full details and code are in `notebooks/03b_sensitivity_analysis.ipynb`.
+Three sensitivity analyses were conducted to assess the robustness and quality of the extraction pipeline before proceeding to ESCO normalization. Full details and code are in `notebooks/3_analysis/03_sensitivity_analysis.ipynb`.
 
 #### 4.5.7.1 Description Asymmetry
 
@@ -597,6 +589,8 @@ To quantify this effect, AUA was used as a controlled test case: skill extractio
 | Coverage rate | 1.3% | 6.8% |
 
 The results demonstrate a 5x multiplier on coverage when descriptions are available. Course names alone (3–8 words) provide insufficient text for meaningful TF-IDF extraction — the vectorizer produces only 1.8 skills per course on average, compared to 9.6 with descriptions.
+
+> **[Figure 4.2 — University Description Coverage]** *Insert stacked bar chart of description availability by university (AUA 97%, YSU 100%, NUACA 0%, RAU 0%). Create from Table 4.2 data.*
 
 This finding has two implications for interpreting the results in Chapter 5:
 
@@ -629,7 +623,7 @@ The precision proxy of 20.3% is a lower bound — it counts an extracted skill a
 
 A systematic audit of the initial TF-IDF overlap set (584 terms at 12.6% coverage) revealed that approximately 60% of overlapping terms were generic English words appearing in both corpora without being IT skills — words such as "access", "achieve", "activities", "challenges", "comprehensive", "effective", "innovation", and "transformation".
 
-The generic unigram filter was expanded from approximately 130 terms to 459 terms, and 11 multi-word noise phrases were added (e.g., "cutting edge", "wide range", "data data"). The multi-word filter threshold was tightened from 70% to 60% stop-word ratio. After re-running extraction with the expanded filters, the TF-IDF overlap fell from 584 terms (12.6% coverage) to 296 terms (6.4% coverage). The remaining overlap terms are predominantly genuine IT skills: `algorithms`, `analytics`, `angular`, `automation`, `blockchain`, `cloud`, `cybersecurity`, `data science`, `database`, `deployment`, `javascript`, `python`, `sql`, `testing`, `visualization`.
+The generic unigram filter was expanded from approximately 130 terms to 459 terms, and 11 multi-word noise phrases were added (e.g., "cutting edge", "wide range", "data data"). The multi-word filter threshold was tightened from 70% to 60% stop-word ratio. After re-running extraction with the expanded filters and then restricting the demand-side corpus to the IT-only subset, the TF-IDF overlap fell from 584 terms (12.6% coverage) to 279 terms (8.85% coverage). The remaining overlap terms are predominantly genuine IT skills: `algorithms`, `analytics`, `angular`, `automation`, `blockchain`, `cloud`, `cybersecurity`, `data science`, `database`, `deployment`, `javascript`, `python`, `sql`, `testing`, `visualization`.
 
 KeyBERT overlap was unaffected by the noise cleanup (23 terms before and after), confirming that KeyBERT's semantic extraction already produces domain-specific phrases that do not suffer from the generic-word problem inherent to frequency-based methods.
 
@@ -639,35 +633,29 @@ KeyBERT overlap was unaffected by the noise cleanup (23 terms before and after),
 
 Following skill extraction and ESCO normalization, the curriculum and job market skill profiles are compared using four metrics:
 
-**Coverage rate** measures what proportion of the skills demanded by the job market are present in the curriculum:
+Let $C$ denote the set of ESCO skill concepts present in the curriculum corpus and $J$ the set present in the job market corpus. Four metrics are computed:
 
-```
-coverage_rate = |curriculum_skills ∩ job_skills| / |job_skills|
-```
+**Coverage rate** measures what proportion of employer-demanded skills are represented in the curriculum:
 
-A coverage rate of 1.0 would mean that every skill demanded in job postings is also taught in the curriculum. A rate of 0.5 means half of demanded skills are covered.
+$$\text{CR}(C, J) = \frac{|C \cap J|}{|J|}$$
 
-**Gap set** is the set of skills present in job postings but absent from the curriculum:
+A coverage rate of 1.0 would mean every skill demanded in job postings is also taught in the curriculum; 0.25 means one in four demanded skills is covered.
 
-```
-gap_set = job_skills \ curriculum_skills
-```
+**Gap set** is the set of skills demanded by employers but absent from the curriculum:
 
-The gap set is the primary finding of interest: it identifies the skills the labor market demands that universities are not currently teaching. Gap skills are ranked by frequency of occurrence in job postings to prioritize the most critical gaps.
+$$\text{gap}(C, J) = J \setminus C = \{s \in J : s \notin C\}$$
+
+Gap skills are ranked by their frequency of occurrence in job postings to prioritize the most actionable curriculum interventions.
 
 **Surplus set** is the set of skills present in the curriculum but not found in any job posting:
 
-```
-surplus_set = curriculum_skills \ job_skills
-```
+$$\text{surplus}(C, J) = C \setminus J = \{s \in C : s \notin J\}$$
 
-The surplus set indicates curriculum content that has limited current market relevance. A large surplus does not necessarily indicate poor curriculum quality — foundational theoretical content may not appear explicitly in job descriptions while still being prerequisite knowledge — but it is reported as a finding for discussion.
+A large surplus does not necessarily indicate poor curriculum quality — foundational theoretical content may not appear explicitly in job descriptions while still underpinning applied competences — but it is reported as a finding for discussion.
 
-**Jaccard similarity** provides a normalized overlap score:
+**Jaccard similarity** provides a symmetric, size-normalized overlap score:
 
-```
-jaccard = |curriculum_skills ∩ job_skills| / |curriculum_skills ∪ job_skills|
-```
+$$\text{Jaccard}(C, J) = \frac{|C \cap J|}{|C \cup J|}$$
 
 All four metrics are computed at four levels of granularity: (1) overall (all universities combined vs. all job postings), (2) per university, (3) per program, and (4) Bachelor vs. Master degree level. Company portal and aggregator job postings are analyzed separately to assess whether the two source types exhibit different skill demand profiles.
 
@@ -701,7 +689,7 @@ These exclusions mean the curriculum side of the analysis reflects approximately
 
 ### 4.8.2 Job Market Coverage
 
-The job dataset is a cross-sectional snapshot of postings active in Armenia during March 2026. It does not capture seasonal variation in hiring demand, longitudinal trends in skill requirements, or jobs that were posted and filled before the collection date. The company portal segment (266 postings from 8 companies after deduplication) is sufficient for aggregate analysis but does not support individual company-level conclusions for companies with fewer than 10 postings.
+The job dataset is a cross-sectional snapshot of postings active in Armenia during March 2026. It does not capture seasonal variation in hiring demand, longitudinal trends in skill requirements, or jobs that were posted and filled before the collection date. The broad market snapshot contains 1,369 postings from 14 sources, while the downstream IT-only subset contains 753 postings. The company-portal segment is sufficient for aggregate analysis but does not support individual company-level conclusions for smaller employers with only a handful of postings.
 
 ### 4.8.3 Translation Quality
 
@@ -713,13 +701,7 @@ The scope filter applied to YSU data retained 13 programs and excluded 6 non-IT 
 
 ---
 
-*Citation checklist for this chapter:*
-- *Almaleh et al. (2019) — Sustainability, verified ✓*
-- *Grootendorst, M. (2020) — KeyBERT — verify publication details*
-- *Zhang et al. (2022) — SkillSpan, NAACL — cited in Ch. 2 as supervised benchmark; not used in this study's pipeline*
-- *Reimers & Gurevych (2019) — Sentence-BERT, EMNLP, verified ✓*
-- *European Commission (2023) — ESCO v1.2 — add version and URL*
-- *Chiarello et al. (2021) — Technological Forecasting and Social Change, verified ✓*
+**Chapter references:** [4] Almaleh et al. (2019) · [9] Grootendorst (2020) · [10] Zhang et al. (2022) · [11] Reimers & Gurevych (2019) · [12] Wang et al. (2020) · [14] European Commission (2023) · [15] Chiarello et al. (2021) · [17] Carbonell & Goldstein (1998) · [18] OpenAI (2024) · [19] Pedregosa et al. (2011) · [20] Gilardi et al. (2023) · [21] He et al. (2024)
 # Chapter 5: Results
 
 ---
@@ -752,26 +734,29 @@ Degree levels: 16 Bachelor programs (855 courses) and 9 Master programs (306 cou
 
 ### 5.2.2 Job Market Dataset
 
-The job market dataset contains 1,068 unique postings from 11 sources, collected in March 2026.
+The job market side consists of a 1,369-posting broad market snapshot from 14 sources, collected in March 2026, and a downstream IT-only subset of 753 postings used for NLP extraction and alignment analysis.
 
 **Table 5.2 — Job market dataset summary**
 
 | Source | Type | Postings | Full text available |
 |---|---|---|---|
-| LinkedIn | Aggregator | 734 | Yes |
-| SoftConstruct | Company portal | 141 | Yes |
-| EPAM | Company portal | 104 | Yes |
-| Staff.am | Aggregator | 48 | Yes |
+| LinkedIn | Aggregator | 992 | Yes |
+| SoftConstruct | Company portal | 152 | Yes |
+| EPAM | Company portal | 108 | Yes |
+| Staff.am | Aggregator | 55 | Yes |
 | job.am | Aggregator | 20 | Yes |
+| Grid Dynamics | Company portal | 11 | Yes |
 | Krisp | Company portal | 7 | Yes |
+| NVIDIA | Company portal | 5 | Yes |
+| 10Web | Company portal | 5 | Yes |
 | DataArt | Company portal | 5 | Yes |
 | ServiceTitan | Company portal | 4 | Yes |
 | Synopsys | Company portal | 2 | Yes |
 | Picsart | Company portal | 2 | Yes |
 | DISQO | Company portal | 1 | Yes |
-| **Total** | | **1,068** | **100%** |
+| **Total (broad snapshot)** | | **1,369** | **100%** |
 
-280 duplicate postings were removed before analysis: 75 within-source duplicates (exact title+company matches) and 205 cross-source duplicates identified by fuzzy title+company matching. The 140 recurring boilerplate paragraphs (e.g., EPAM's standard "About Us" section appearing in 100+ postings) were stripped prior to skill extraction to prevent systematic inflation of company-generic terms.
+For downstream NLP and alignment analysis, the broad snapshot was narrowed to an IT-only subset of 753 postings. The 140 recurring boilerplate paragraphs (e.g., EPAM's standard "About Us" section appearing in 100+ postings) were stripped prior to skill extraction to prevent systematic inflation of company-generic terms.
 
 ---
 
@@ -793,9 +778,9 @@ Post-extraction filters applied to both methods: company name blocklist (434 tok
 | Corpus | TF-IDF unique skills | KeyBERT unique skills |
 |---|---|---|
 | Curriculum | 3,423 | 4,801 |
-| Job market | 4,625 | 8,695 |
+| Job market | 3,153 | 5,530 |
 
-KeyBERT extracts more unique phrases than TF-IDF because it captures full multi-word semantic units rather than term-frequency peaks. Curriculum yields fewer unique terms than the job market despite having more documents (1,133 vs. 1,068), reflecting the more standardized vocabulary of academic course names relative to the diverse register of commercial job postings.
+KeyBERT extracts more unique phrases than TF-IDF because it captures full multi-word semantic units rather than term-frequency peaks. Curriculum yields slightly more unique terms than the IT-only job corpus despite having a comparable document scale, reflecting the standardized vocabulary of academic course descriptions and the tighter job-scope definition after IT filtering.
 
 ### 5.3.3 Pre-ESCO Alignment Metrics
 
@@ -803,17 +788,17 @@ KeyBERT extracts more unique phrases than TF-IDF because it captures full multi-
 
 | Metric | TF-IDF | KeyBERT |
 |---|---|---|
-| Curriculum unique skills | 3,423 | 4,801 |
-| Job market unique skills | 4,625 | 8,695 |
-| **Overlap** | **296 (6.4%)** | **23 (0.26%)** |
-| Gap (jobs demand, not taught) | 4,329 | 8,672 |
-| Surplus (taught, not demanded) | 3,127 | 4,778 |
+| Curriculum unique skills | 3,442 | 4,812 |
+| Job market unique skills | 3,153 | 5,530 |
+| **Overlap** | **279 (8.85%)** | **18 (0.33%)** |
+| Gap (jobs demand, not taught) | 2,874 | 5,512 |
+| Surplus (taught, not demanded) | 3,163 | 4,794 |
 
 The overlap metric here is computed as the intersection of exact string matches between the curriculum skill set and the job market skill set, expressed as a proportion of the job market set. This pre-ESCO figure intentionally understates true alignment: synonymous phrases that describe identical competences (e.g., "object-oriented programming" vs. "OOP principles") count as non-overlapping until ESCO normalization is applied.
 
 ### 5.3.4 Divergence Between TF-IDF and KeyBERT Overlap
 
-The 25-fold difference in overlap rates between TF-IDF (6.4%) and KeyBERT (0.26%) is a structural artifact of the methods, not a finding about the true alignment. TF-IDF extracts individual words and short phrases that tend to be shared across all technical documents (e.g., `data`, `algorithms`, `analysis`). KeyBERT extracts idiomatic multi-word phrases anchored to each corpus's specific register:
+The difference in overlap rates between TF-IDF (8.85%) and KeyBERT (0.33%) is a structural artifact of the methods, not a finding about the true alignment. TF-IDF extracts individual words and short phrases that tend to be shared across all technical documents (e.g., `data`, `algorithms`, `analysis`). KeyBERT extracts idiomatic multi-word phrases anchored to each corpus's specific register:
 
 - Curriculum phrases: `"object oriented programming"`, `"mathematical modeling applications"`, `"data structures algorithms"`
 - Job market phrases: `"backend development experience"`, `"cloud infrastructure design"`, `"agile software delivery"`
@@ -824,7 +809,7 @@ These phrase pairs describe overlapping skills but share no common string. ESCO 
 
 **Skills in the overlap (present in both curricula and job market — TF-IDF):**
 
-The 296 overlapping terms represent the most directly shared vocabulary. Representative examples include: `algorithms`, `analysis`, `data`, `design`, `machine learning`, `programming`, `python`, `statistics`, `testing`, `cloud`, `agile`, `software`, `networks`.
+The 279 overlapping terms represent the most directly shared vocabulary. Representative examples include: `algorithms`, `analysis`, `data`, `design`, `machine learning`, `programming`, `python`, `statistics`, `testing`, `cloud`, `agile`, `software`, `networks`.
 
 **Skills in the gap (demanded by employers, absent from curricula — TF-IDF top terms):**
 
@@ -887,17 +872,17 @@ The threshold of 0.75 was selected as it achieves the best F1 (0.711) with balan
 
 **Table 5.6 — ESCO-normalized alignment results**
 
-| Metric | TF-IDF | KeyBERT | Union (both) |
-|---|---|---|---|
-| Unique ESCO concepts in curriculum | 329 | 397 | 511 |
-| Unique ESCO concepts in job market | 527 | 380 | 728 |
-| **Overlap** | **133 (25.2%)** | **77 (20.3%)** | **187 (25.7%)** |
-| Gap (demanded, not taught) | 394 | 303 | — |
-| Surplus (taught, not demanded) | 196 | 320 | — |
+| Metric | TF-IDF | KeyBERT |
+|---|---|---|
+| Unique ESCO concepts in curriculum | 332 | 398 |
+| Unique ESCO concepts in job market | 326 | 207 |
+| **Overlap** | **107 (32.82%)** | **59 (28.5%)** |
+| Gap (demanded, not taught) | 219 | 148 |
+| Surplus (taught, not demanded) | 225 | 339 |
 
-Coverage is expressed as the overlap divided by the number of unique job-market ESCO concepts. The Union row aggregates both methods' concept sets and provides the broadest estimate. All three estimates cluster between 20–26%, confirming the result is robust to extraction method choice.
+Coverage is expressed as the overlap divided by the number of unique job-market ESCO concepts. Both methods converge on the same overall story, with TF-IDF producing the stronger overlap on the IT-only analysis set.
 
-The normalized results represent a substantial improvement over the pre-ESCO string baseline (TF-IDF: 6.4% → 25.2%; KeyBERT: 0.26% → 20.3%), demonstrating that ESCO normalization successfully resolves surface-form variation: phrase pairs such as "object oriented programming" and "OOP principles" now map to the same ESCO concept and count as overlap.
+The normalized results represent a substantial improvement over the pre-ESCO string baseline (TF-IDF: 8.85% → 32.82%; KeyBERT: 0.33% → 28.5%), demonstrating that ESCO normalization successfully resolves surface-form variation: phrase pairs such as "object oriented programming" and "OOP principles" now map to the same ESCO concept and count as overlap.
 
 ### 5.4.3 Knowledge vs. Applied Competence Split
 
@@ -907,11 +892,11 @@ ESCO v1.2 classifies each skill concept as either *knowledge* (declarative under
 
 | Category | Knowledge | Skill/Competence | Total |
 |---|---|---|---|
-| Overlap (taught AND demanded) | 93 (70%) | 40 (30%) | 133 |
-| Gap (demanded, NOT taught) | 191 (48%) | 202 (51%) | 394 |
-| Surplus (taught, NOT demanded) | 120 (61%) | 75 (38%) | 196 |
+| Overlap (taught AND demanded) | 83 (77.6%) | 24 (22.4%) | 107 |
+| Gap (demanded, NOT taught) | 107 (48.9%) | 112 (51.1%) | 219 |
+| Surplus (taught, NOT demanded) | 136 (60.4%) | 88 (39.1%) | 225 |
 
-The overlap is disproportionately composed of knowledge concepts (70%), while the gap is roughly balanced (51% skill/competence). This pattern indicates that Armenian IT curricula successfully cover the *knowledge* layer demanded by employers — subject matter familiarity with algorithms, data structures, programming languages, and technical domains — but fall short on the *applied competence* layer: the ability to perform specific technical tasks in commercial contexts (DevOps pipelines, responsive design, CI/CD workflows, cloud deployment). This distinction has implications for curriculum reform: the required changes are not primarily about what subject areas are taught, but about how they are practiced and assessed.
+The overlap is disproportionately composed of knowledge concepts (77.6%), while the gap remains slightly competence-heavy (51.1% skill/competence). This pattern indicates that Armenian IT curricula successfully cover the *knowledge* layer demanded by employers — subject matter familiarity with algorithms, data structures, programming languages, and technical domains — but fall short on the *applied competence* layer: the ability to perform specific technical tasks in commercial contexts (DevOps pipelines, responsive design, CI/CD workflows, cloud deployment). This distinction has implications for curriculum reform: the required changes are not primarily about what subject areas are taught, but about how they are practiced and assessed.
 
 ### 5.4.4 ESCO Vocabulary Coverage Limitation
 
@@ -930,7 +915,7 @@ The share of courses contributing zero ESCO concepts varies substantially by uni
 
 Nearly half of NUACA courses and more than half of RAU courses produce no ESCO concept assignment, meaning they contribute nothing to the alignment calculation. This structural dark matter further confirms that coverage figures for these institutions are lower bounds rather than true estimates.
 
-The 25.2% overall coverage figure should be interpreted as a lower-bound estimate of true conceptual alignment within the ESCO-expressible vocabulary.
+The 32.82% overall TF-IDF coverage figure should be interpreted as a lower-bound estimate of true conceptual alignment within the ESCO-expressible vocabulary.
 
 ### 5.4.5 Emerging Tech Skills Beyond ESCO
 
@@ -940,33 +925,33 @@ A supplementary analysis using a curated technology lexicon (36 terms) identifie
 
 | Technology | Job postings | Curriculum courses | Status |
 |---|---|---|---|
-| Microsoft Azure | 25 | 0 | Gap |
-| React | 25 | 0 | Gap |
-| Amazon Web Services | 15 | 0 | Gap |
-| Node.js | 17 | 3 | Overlap |
-| LLM / Generative AI | 19 | 4 | Overlap |
-| Kubernetes | 7 | 0 | Gap |
-| Terraform | 6 | 0 | Gap |
-| REST API | 5 | 0 | Gap |
-| Microservices | 5 | 0 | Gap |
-| DevOps | 4 | 0 | Gap |
-| Docker | 4 | 0 | Gap |
+| Microsoft Azure | 35 | 0 | Gap |
+| React | 30 | 0 | Gap |
+| LLM / Generative AI | 25 | 4 | Overlap |
+| Node.js | 20 | 3 | Overlap |
+| Amazon Web Services | 20 | 0 | Gap |
+| Go (Golang) | 14 | 0 | Gap |
+| Microservices | 10 | 0 | Gap |
+| REST API | 9 | 0 | Gap |
+| Google Cloud | 8 | 0 | Gap |
+| Kubernetes | 6 | 0 | Gap |
+| Docker | 5 | 0 | Gap |
 
 The dominant pattern is one-sided demand: the most-requested modern tools (Azure, React, AWS, Kubernetes, Docker) appear in job postings but not in any curriculum course content. LLM/GenAI is the only major emerging category with meaningful curriculum presence (4 courses), suggesting early but limited adoption.
 
 ### 5.4.6 Top Gap ESCO Skills (Demanded, Not Taught)
 
-The 394 ESCO concepts in the gap span three analytically distinct categories:
+The 219 ESCO concepts in the TF-IDF gap span three analytically distinct categories:
 
-**Technology skills:** Java (1.9% of job postings), TypeScript (1.8%), PHP (1.6%), CSS (0.8%), Android (0.8%), maintain responsive design (1.0%), develop animations (1.0%), types of pipelines (1.2%), DevOps (1.1%), search engines (0.9%).
+**Technology skills:** PHP (2.7% of IT-only postings), Java (2.6%), TypeScript (2.3%), SQL Server (1.6%), DevOps (1.6%), CSS (1.3%), Android (1.3%), maintain responsive design (1.4%).
 
-**Domain-specific skills (SoftConstruct effect):** betting (2.1%), gambling games (1.4%), manage casino (1.0%), banking activities (1.5%), fraud detection (0.9%). SoftConstruct contributes 141 postings (13.2% of the dataset) and is Armenia's largest single-employer source. These domain concepts inflate the gap with industry-specific competences that are structurally outside the scope of general IT education.
+**Domain-specific skills (SoftConstruct effect):** betting, banking activities, gambling games, and related commercial concepts remain visible in the ESCO-based gap list. SoftConstruct contributes 37 postings to the IT-only analysis set, so these domain concepts are much smaller than in the original broad-market corpus but still require careful interpretation.
 
 **Business and professional skills:** sales activities (4.0%), develop campaigns (1.4%), logistics (1.2%), comply with regulations (1.0%), contract law (0.9%), develop training programmes (0.8%). These reflect the operational context of IT roles in commercial environments.
 
 ### 5.4.7 Top Surplus ESCO Skills (Taught, Not Demanded)
 
-The 196 ESCO surplus concepts divide into three categories:
+The 225 ESCO surplus concepts divide into three categories:
 
 **General-education requirements** mandated by Armenian state educational standards: these include language courses (Chinese, Turkish, Ancient Greek), humanities (Christianity, acting techniques), and physical/life sciences outside the IT domain. These are not misalignments in the pedagogical sense — they fulfil accreditation requirements and are not expected to appear in IT job postings.
 
@@ -984,14 +969,14 @@ The 196 ESCO surplus concepts divide into three categories:
 
 | University | Programs | Avg. coverage | Total ESCO concepts | Notes |
 |---|---|---|---|---|
-| AUA | 7 | 5.77% | 381 | Full descriptions; most reliable |
-| YSU | 14 | 4.46% | 668 | Full descriptions (translated); largest dataset |
-| RAU | 1 | 2.28% | 17 | Single program; high uncertainty |
-| NUACA | 5 | 1.60% | 64 | Course names only; lower bound |
+| AUA | 7 | 8.06% | 387 | Full descriptions; most reliable |
+| YSU | 14 | 5.96% | 679 | Full descriptions (translated); largest dataset |
+| RAU | 1 | 2.76% | 18 | Single program; high uncertainty |
+| NUACA | 5 | 2.52% | 68 | Course names only; lower bound |
 
-AUA achieves the highest average alignment (5.77%), consistent with its richer course description availability and English-language instruction. YSU ranks second despite having the most courses (691), partly because its extracted ESCO concepts are more evenly distributed across 14 programs. NUACA's low alignment (1.60%) reflects the description asymmetry documented in Section 5.6.1 — name-only analysis structurally underestimates skill content.
+AUA achieves the highest average alignment (8.06%), consistent with its richer course description availability and English-language instruction. YSU ranks second at 5.96%. NUACA and RAU remain substantially lower, reflecting the description asymmetry documented in Section 5.6.1 — name-only analysis structurally underestimates skill content.
 
-Coverage percentages are expressed as the fraction of all unique job-market ESCO concepts covered by each university's programs. The denominator (527 concepts) includes domain-specific concepts from SoftConstruct (gambling, betting) that no university program would be expected to cover; the figures are therefore conservative estimates.
+Coverage percentages are expressed as the fraction of all unique job-market ESCO concepts covered by each university's programs. The denominator (326 concepts in TF-IDF) still includes some domain-specific concepts from employer-specific postings, so the figures remain conservative estimates.
 
 ### 5.5.2 Program-Level Alignment Scores
 
@@ -999,20 +984,20 @@ Coverage percentages are expressed as the fraction of all unique job-market ESCO
 
 | Rank | University | Program | Degree | Coverage |
 |---|---|---|---|---|
-| 1 | AUA | Computer and Information Science | Master | 9.1% |
-| 2 | AUA | Computer Science | Bachelor | 7.2% |
-| 3 | AUA | General Education | General | 5.9% |
-| 4 | YSU | Radiophysics and Computer Technology | Bachelor | 5.9% |
-| 5 | YSU | Data Science in Business | Master | 5.7% |
-| 6 | AUA | Data Science | Bachelor | 5.7% |
-| 7 | YSU | Applied Statistics and Data Science | Bachelor | 5.5% |
-| 8 | YSU | Information Systems Development | Master | 5.5% |
-| 9 | YSU | Applied Statistics and Data Science | Master | 5.3% |
-| 10 | YSU | Information Systems Management | Master | 4.9% |
+| 1 | AUA | Computer and Information Science | Master | 12.27% |
+| 2 | AUA | Computer Science | Bachelor | 10.74% |
+| 3 | AUA | Data Science | Bachelor | 8.28% |
+| 4 | YSU | Data Science in Business | Master | 7.98% |
+| 5 | YSU | Information Systems Development | Master | 7.98% |
+| 6 | AUA | General Education | General | 7.67% |
+| 7 | AUA | Industrial Engineering and Systems Management | Master | 7.06% |
+| 8 | YSU | Applied Statistics and Data Science | Bachelor | 6.75% |
+| 9 | YSU | Applied Statistics and Data Science | Master | 6.44% |
+| 10 | YSU | Information Systems Management | Master | 6.13% |
 | … | | | | |
-| 25 | NUACA | Geographic Information Systems | Master | 0.6% |
+| 25 | NUACA | Geographic Information Systems | Master | 0.92% |
 
-The spread between the best program (AUA CIS, 9.1%) and worst (NUACA GIS, 0.6%) is 15-fold, indicating substantial variation in how well individual programs prepare students for market-demanded skills. AUA programs occupy the top three positions. Data Science and Applied Statistics programs from both AUA and YSU cluster in the top half, reflecting stronger overlap between quantitative analytical curricula and market demand. NUACA programs occupy the bottom five positions, consistent with the description asymmetry limitation.
+The spread between the best program (AUA CIS, 12.27%) and worst (NUACA GIS, 0.92%) is substantial, indicating major variation in how well individual programs prepare students for market-demanded skills. AUA programs occupy the top three positions. Data Science and Applied Statistics programs from both AUA and YSU cluster in the top half, reflecting stronger overlap between quantitative analytical curricula and market demand. NUACA programs occupy the bottom range, consistent with the description asymmetry limitation.
 
 ### 5.5.3 Bachelor vs. Master Degree Comparison
 
@@ -1020,17 +1005,17 @@ The spread between the best program (AUA CIS, 9.1%) and worst (NUACA GIS, 0.6%) 
 
 | Degree | Programs | Avg. coverage |
 |---|---|---|
-| Master | 13 | 3.88% |
-| Bachelor | 13 | 4.36% |
-| General | 1 | 5.88% |
+| Master | 13 | 5.66% |
+| Bachelor | 13 | 5.69% |
+| General | 1 | 7.67% |
 
-Bachelor and Master programs show nearly identical average coverage (4.36% vs. 3.88%), indicating that degree level is not a meaningful predictor of curriculum–market alignment in this sample. The small advantage for Bachelor programs may reflect that some Master programs are more theoretically specialised (e.g., Discrete Mathematics and Theoretical Informatics, Numerical Analysis and Mathematical Modelling), which reduces their ESCO concept overlap with industry job postings.
+Bachelor and Master programs show nearly identical average coverage (5.69% vs. 5.66%), indicating that degree level is not a meaningful predictor of curriculum–market alignment in this sample. The tiny difference reinforces that the gap is driven more by curriculum design priorities than by degree level.
 
 ---
 
 ## 5.6 Sensitivity Analyses
 
-Three sensitivity analyses were conducted to assess the robustness of the extraction results. Full details are documented in `docs/sensitivity_analysis.md` and `notebooks/03b_sensitivity_analysis.ipynb`.
+Three sensitivity analyses were conducted to assess the robustness of the extraction results. Full details are documented in `docs/sensitivity_analysis.md` and `notebooks/3_analysis/03_sensitivity_analysis.ipynb`.
 
 ### 5.6.1 Description Asymmetry (AUA Sensitivity Test)
 
@@ -1063,27 +1048,27 @@ The 44% soft recall of TF-IDF indicates that approximately half of human-identif
 
 ### 5.6.3 Noise Audit
 
-Prior to the noise cleanup described in Section 4.5.6, an audit of the 584 TF-IDF overlapping terms found that 351 (60%) were generic English words with no specific IT skill meaning (e.g., `"team"`, `"experience"`, `"role"`, `"environment"`). Following the addition of 459 generic unigrams and 11 noise phrases to the extraction filters and re-running the full pipeline, the overlap was revised from 584 to 296 — a reduction of 49% — improving the precision of the reported alignment rate from an inflated 12.6% to a more conservative and defensible 6.4%.
+Prior to the noise cleanup described in Section 4.5.6, an audit of the 584 TF-IDF overlapping terms found that 351 (60%) were generic English words with no specific IT skill meaning (e.g., `"team"`, `"experience"`, `"role"`, `"environment"`). Following the addition of 459 generic unigrams and 11 noise phrases to the extraction filters, and then rerunning the analysis on the IT-only job subset, the overlap was revised to 279 — a reduction that improved the precision of the reported alignment rate from an inflated 12.6% to a more conservative and defensible 8.85%.
 
-This audit is reported here as a finding because it quantifies the magnitude of noise in unsupervised extraction and demonstrates the importance of systematic quality control. The cleaned 6.4% figure is used in all subsequent analyses.
+This audit is reported here as a finding because it quantifies the magnitude of noise in unsupervised extraction and demonstrates the importance of systematic quality control. The cleaned 8.85% figure is used in all subsequent analyses.
 
 ---
 
 ## 5.7 Summary of Results
 
-**Pre-ESCO baseline:** String-level overlap is low (TF-IDF 6.4%, KeyBERT 0.26%), as expected — synonymous phrases describing the same skill are counted as non-overlapping until normalization is applied.
+**Pre-ESCO baseline:** String-level overlap is low (TF-IDF 8.85%, KeyBERT 0.33%), as expected — synonymous phrases describing the same skill are counted as non-overlapping until normalization is applied.
 
-**ESCO-normalized alignment:** After mapping extracted phrases to shared ESCO concept identifiers, coverage rises to 25.2% (TF-IDF) and 20.3% (KeyBERT), with the combined union estimate at 25.7%. All estimates are stable across method and threshold variations, confirming robustness.
+**ESCO-normalized alignment:** After mapping extracted phrases to shared ESCO concept identifiers, coverage rises to 32.82% (TF-IDF) and 28.5% (KeyBERT). Both estimates remain well above the string-level baseline, confirming the value of normalization.
 
-**Knowledge vs. competence:** The overlap is 70% *knowledge* concepts (shared factual domains) and only 30% *skill/competence*. The gap is 51% applied competences. Curricula cover the knowledge layer but fall short on applied practice — DevOps, CI/CD, cloud deployment, responsive design.
+**Knowledge vs. competence:** The overlap is 77.6% *knowledge* concepts (shared factual domains) and 22.4% *skill/competence*. The gap is 51.1% applied competences. Curricula cover the knowledge layer but fall short on applied practice — DevOps, CI/CD, cloud deployment, responsive design.
 
 **Gap pattern:** The skill gap is concentrated in three clusters: (1) modern cloud and DevOps tooling (Azure, React, AWS, Docker, Kubernetes, Terraform — all absent from curricula); (2) domain-specific competences driven by the gaming/betting industry (SoftConstruct effect); and (3) practical software delivery skills (CI/CD, microservices, REST APIs).
 
 **Surplus pattern:** The surplus consists primarily of general-education requirements mandated by state standards (languages, humanities, physical education) and advanced theoretical content (algebra, Monte Carlo simulation, biostatistics) whose market relevance is not directly signalled by job posting language.
 
-**Per-program variation:** Coverage ranges from 9.1% (AUA Computer and Information Science, Master) to 0.6% (NUACA GIS, Master). AUA consistently outperforms due to richer description availability. Degree level (Bachelor vs. Master) is not a significant predictor of alignment.
+**Per-program variation:** Coverage ranges from 12.27% (AUA Computer and Information Science, Master) to 0.92% (NUACA GIS, Master). AUA consistently outperforms due to richer description availability. Degree level (Bachelor vs. Master) is not a meaningful predictor of alignment.
 
-**Key limitation:** The 25% coverage figure is a lower bound. ESCO v1.2 does not contain Docker, Kubernetes, React, Azure, and other modern tools — these are captured separately in the emerging skills analysis. Adjusting for ESCO's vocabulary gap, true conceptual alignment is likely higher.
+**Key limitation:** The 32.82% coverage figure is a lower bound. ESCO v1.2 does not contain Docker, Kubernetes, React, Azure, and other modern tools — these are captured separately in the emerging skills analysis. Adjusting for ESCO's vocabulary gap, true conceptual alignment is likely higher.
 
 The sensitivity analyses confirm that: (a) programs with richer description data produce substantially higher alignment estimates; (b) roughly 44% of human-identified skills in job postings are recoverable by TF-IDF extraction; and (c) noise filtering is essential for interpretable results.
 
@@ -1097,7 +1082,7 @@ The sensitivity analyses confirm that: (a) programs with richer description data
 
 ## 6.1 Overview
 
-This chapter interprets the empirical findings reported in Chapter 5 through the three theoretical lenses introduced in Chapter 3: constructive alignment (Biggs & Tang, 2011), the task-based view of skill demand (Autor, Levy & Murnane, 2003), and ESCO as an operational bridge. It then situates the results in the context of the existing literature reviewed in Chapter 2 and directly addresses each of the four research questions. Section 6.4 discusses methodological contributions and limitations. Section 6.5 draws implications for policy and practice.
+This chapter interprets the empirical findings reported in Chapter 5 through the three theoretical lenses introduced in Chapter 3: constructive alignment [5], the task-based view of skill demand [13], and ESCO as an operational bridge [14]. It then situates the results in the context of the existing literature reviewed in Chapter 2 and directly addresses each of the four research questions. Section 6.4 discusses methodological contributions and limitations. Section 6.5 draws implications for policy and practice.
 
 ---
 
@@ -1105,7 +1090,7 @@ This chapter interprets the empirical findings reported in Chapter 5 through the
 
 ### 6.2.1 Constructive Alignment Lens: What Does the Gap Mean for ILO Quality?
 
-The constructive alignment framework (Biggs & Tang, 2011) predicts that a curriculum is externally misaligned when its intended learning outcomes (ILOs) are not defined with reference to external standards — in this case, the skill demands of the Armenian IT labor market. The findings in Chapter 5 are consistent with this prediction.
+The constructive alignment framework [5] predicts that a curriculum is externally misaligned when its intended learning outcomes (ILOs) are not defined with reference to external standards — in this case, the skill demands of the Armenian IT labor market. The findings in Chapter 5 are consistent with this prediction.
 
 The surplus content identified in the analysis — philosophy, history, physical education, Armenian language — reflects a state educational standard inherited from the Soviet-era centralized curriculum architecture, not program-level pedagogical decisions. These courses serve a different educational function (civic education, cultural formation) and cannot be evaluated for labor market alignment. Their presence in the surplus is a structural feature of the Armenian degree framework, not a critique of individual program design.
 
@@ -1115,21 +1100,21 @@ The gap content — Docker, Kubernetes, CI/CD, DevOps, cloud infrastructure, RES
 
 ### 6.2.2 Task-Based Lens: Routine vs. Non-Routine Cognitive Skills
 
-The task-based framework of Autor, Levy, and Murnane (2003) classifies job tasks along the cognitive–manual and routine–non-routine axes. It predicts that labor market demand concentrates on non-routine cognitive tasks — analysis, synthesis, adaptive problem-solving — as automation substitutes for routine cognitive tasks.
+The task-based framework of Autor, Levy, and Murnane [13] classifies job tasks along the cognitive–manual and routine–non-routine axes. It predicts that labor market demand concentrates on non-routine cognitive tasks — analysis, synthesis, adaptive problem-solving — as automation substitutes for routine cognitive tasks.
 
 The gap skills identified in this study align with this prediction. Containerization (Docker, Kubernetes), infrastructure-as-code (Terraform), CI/CD pipeline management, and cloud deployment are non-routine cognitive tasks: they require adaptive reasoning about complex distributed systems, debugging across multiple abstraction layers, and continuous integration of rapidly evolving tooling ecosystems. The fact that these skills are simultaneously the most in demand and the most absent from curricula is consistent with the task-based framework's implication that educational systems systematically underinvest in the non-routine competences that provide the highest wage premium in the current labor market.
 
 The surplus content, by contrast — calculus, differential equations, linear algebra, formal logic — is associated with routine cognitive task patterns: formal derivations following well-defined procedures. This does not make them valueless (they develop abstract reasoning capacity that underlies applied competences), but it explains why they are not directly requested in job postings. Employers purchase the outputs of foundational training without explicitly naming the courses that produced them.
 
-The knowledge/competence split in the ESCO overlap reinforces this interpretation. Of the 133 overlapping ESCO concepts (TF-IDF), 70% are classified as *knowledge* and 30% as *skill/competence*. The gap is approximately balanced (48% knowledge, 51% applied competence). Armenian curricula are stronger on the knowledge transmission side of the task spectrum and weaker on applied competence — precisely where the task-based framework predicts the largest market premium.
+The knowledge/competence split in the ESCO overlap reinforces this interpretation. Of the 107 overlapping ESCO concepts (TF-IDF), 77.6% are classified as *knowledge* and 22.4% as *skill/competence*. The gap is approximately balanced (48.9% knowledge, 51.1% applied competence). Armenian curricula are stronger on the knowledge transmission side of the task spectrum and weaker on applied competence — precisely where the task-based framework predicts the largest market premium.
 
 ### 6.2.3 ESCO Lens: Structural Coverage and Emerging Skills
 
 The ESCO-normalized results reveal two analytically distinct layers of the alignment picture.
 
-The first layer is **structural coverage within the ESCO vocabulary**. Armenian IT curricula cover 329 unique ESCO concepts (TF-IDF) against a job market demand of 527 — a 25.2% overlap. This means that roughly three in four employer-demanded ESCO concepts have no representation in any Armenian IT curriculum. The gap is not concentrated in exotic or niche areas: it includes Java (demanded in 1.9% of all postings), TypeScript (1.8%), PHP (1.6%), and CSS (0.8%) — mainstream technologies taught in the majority of Western software engineering programs.
+The first layer is **structural coverage within the ESCO vocabulary**. Armenian IT curricula cover 332 unique ESCO concepts (TF-IDF) against a job market demand of 326 — a 32.82% overlap. This means that roughly two thirds of employer-demanded ESCO concepts still have no representation in any Armenian IT curriculum. The gap is not concentrated in exotic or niche areas: it includes PHP, Java, TypeScript, SQL Server, DevOps, and CSS — mainstream technologies and practices taught in the majority of contemporary software engineering programs.
 
-The second layer is **emerging skills beyond ESCO**. The supplementary tech lexicon analysis identified 24 specific modern tools absent from both ESCO v1.2 and from curricula. Azure (25 postings), React (25), AWS (15), Kubernetes (7), Docker (4), and Terraform (6) all have zero curriculum presence. LLM/GenAI tools (19 postings) and Node.js (17) are the only emerging categories with any curriculum representation (4 and 3 courses respectively), suggesting limited early adoption. The absence of cloud platforms, containerization, and infrastructure-as-code from curricula while these tools appear in double-digit percentages of job postings represents the most concrete and time-sensitive curriculum reform target.
+The second layer is **emerging skills beyond ESCO**. The supplementary tech lexicon analysis identified 25 specific modern tools absent from or poorly represented in ESCO v1.2. Azure (35 postings), React (30), AWS (20), Google Cloud (8), Kubernetes (6), Docker (5), and Terraform (5) all have zero curriculum presence. LLM/GenAI tools (25 postings) and Node.js (20) are the only major emerging categories with any curriculum representation (4 and 3 courses respectively), suggesting limited early adoption. The absence of cloud platforms, containerization, and infrastructure-as-code from curricula while these tools appear repeatedly in employer demand represents the most concrete and time-sensitive curriculum reform target.
 
 ### 6.2.4 Synthesis: A Coherent Picture Across Three Lenses
 
@@ -1143,14 +1128,14 @@ The structural pattern that emerges is: Armenian IT curricula are well-aligned w
 
 ### RQ1: Most frequently demanded skills in the Armenian IT job market
 
-The most frequently demanded skills in the Armenian IT job market, as identified by TF-IDF extraction from 1,068 job postings, cluster into four categories:
+The most frequently demanded skills in the Armenian IT job market, as identified by the direct frequency analysis on the IT-only market subset, cluster into four categories:
 
-1. **Programming languages and platforms:** Python, JavaScript, Java, SQL, .NET, TypeScript
-2. **Modern software delivery tools:** Docker, Kubernetes, CI/CD, Git, Terraform, Ansible
-3. **Cloud and infrastructure:** AWS, Azure, Google Cloud, cloud architecture, microservices, REST APIs
-4. **Core competences:** algorithms, data structures, testing, software design, Agile, DevOps
+1. **Programming languages and platforms:** Python, Java, .NET / C#, TypeScript, Node.js, React
+2. **Modern software delivery tools:** CI/CD, Docker, Kubernetes, DevOps, Terraform
+3. **Cloud and infrastructure:** AWS, Azure, Google Cloud, microservices, REST APIs
+4. **Core competences:** testing, software design, Agile, project management methodologies
 
-The source composition of the dataset shapes this demand signal. LinkedIn (734 postings, 68.7%) skews toward senior and mid-level roles in international company Armenia offices. SoftConstruct (141 postings, 13.2%) introduces domain-specific gaming and betting industry demand — notably, ESCO concepts such as *betting*, *gambling games*, and *manage casino* appear in the top gap list precisely because SoftConstruct is the largest single non-aggregator employer source. These domain-specific demands are reported in full but should be understood as employer-specific rather than sector-wide IT requirements. Filtering them out does not materially change the top 10 IT-specific gap skills (Java, TypeScript, PHP, DevOps, CI/CD, REST APIs, Docker, Kubernetes, CSS, Android).
+The source composition of the dataset shapes this demand signal. LinkedIn contributes 556 of the 753 IT-only postings and therefore skews the market view toward roles posted by larger, more formal employers. SoftConstruct contributes 37 IT-only postings and still introduces some gaming and betting industry vocabulary — notably, ESCO concepts such as *betting* and *banking activities* remain visible in the raw gap list. These domain-specific demands are reported in full but should be understood as employer-specific rather than sector-wide IT requirements. They do not change the main IT-specific gap story, which is centered on PHP, Java, TypeScript, DevOps, SQL Server, responsive design, CSS, and Android-related practice.
 
 ### RQ2: Most prevalent competences in Armenian IT curricula
 
@@ -1162,22 +1147,22 @@ NUACA and RAU, with name-only course records, yield the most conservative skill 
 
 ### RQ3: Overall alignment magnitude
 
-The pre-ESCO baseline alignment rate is 6.4% (TF-IDF string match) and 0.26% (KeyBERT). These figures substantially underestimate true conceptual alignment due to synonymous phrasing — a phrase pair like "object oriented programming" and "OOP principles" counts as non-overlapping at the string level.
+The pre-ESCO baseline alignment rate is 8.85% (TF-IDF string match) and 0.33% (KeyBERT). These figures substantially underestimate true conceptual alignment due to synonymous phrasing — a phrase pair like "object oriented programming" and "OOP principles" counts as non-overlapping at the string level.
 
-After ESCO normalization, the alignment rises to **25.2%** (TF-IDF), **20.3%** (KeyBERT), and **25.7%** (union of both methods). All three estimates are robust across the 0.70–0.80 threshold range: lowering the threshold adds matched phrases but not new ESCO concepts, confirming the bottleneck is ESCO vocabulary coverage rather than calibration sensitivity.
+After ESCO normalization, the alignment rises to **32.82%** (TF-IDF) and **28.5%** (KeyBERT). The estimates remain robust across threshold variation: lowering the threshold adds matched phrases but not many new concepts, confirming the bottleneck is ESCO vocabulary coverage rather than calibration sensitivity.
 
-The 25.2% figure means that approximately one in four skills expressible in ESCO v1.2 that employers demand is covered somewhere across Armenian IT curricula. This figure is best interpreted as a lower bound, for two reasons: (1) ESCO v1.2 does not contain many modern tools that are both demanded and potentially taught (Docker, React, Azure), and (2) NUACA and RAU scores are structurally suppressed by name-only description coverage. Adjusting for these factors, the true alignment is likely meaningfully higher — but the present methodology cannot produce a precise adjusted estimate.
+The 32.82% figure means that roughly one in three skills expressible in ESCO v1.2 that employers demand is covered somewhere across Armenian IT curricula. This figure is best interpreted as a lower bound, for two reasons: (1) ESCO v1.2 does not contain many modern tools that are both demanded and potentially taught (Docker, React, Azure), and (2) NUACA and RAU scores are structurally suppressed by name-only description coverage. Adjusting for these factors, the true alignment is likely meaningfully higher — but the present methodology cannot produce a precise adjusted estimate.
 
 ### RQ4: Programs with strongest and weakest alignment
 
 The per-program ESCO-normalized results confirm the structural hypotheses:
 
-- **AUA programs lead** (5.77% average coverage). AUA Computer and Information Science (Master) achieves 9.1%, AUA Computer Science (Bachelor) 7.2%. AUA's advantage reflects fuller course descriptions and an applied-technology-oriented curriculum.
-- **YSU programs cluster in the middle** (4.46% average). Data Science in Business (5.7%), Information Systems Development (5.5%), and Applied Statistics programs (5.3–5.5%) lead the YSU group. The theoretically oriented programs — Discrete Mathematics and Theoretical Informatics (2.85%), Numerical Analysis and Mathematical Modelling (2.85%), Blockchain and Digital Currencies (1.71%) — rank lower.
-- **NUACA programs occupy the lower range** (1.60% average, 0.57%–2.47%). This reflects both name-only data and a curriculum oriented toward architecture, construction, and geographic information systems rather than software industry practice.
-- **RAU's single program** aligns at 2.28%, above NUACA but below most YSU programs, consistent with its strong theoretical mathematics orientation.
+- **AUA programs lead** (8.06% average coverage). AUA Computer and Information Science (Master) achieves 12.27%, AUA Computer Science (Bachelor) 10.74%, and AUA Data Science (Bachelor) 8.28%. AUA's advantage reflects fuller course descriptions and an applied-technology-oriented curriculum.
+- **YSU programs cluster in the middle** (5.96% average). Data Science in Business (7.98%), Information Systems Development (7.98%), and Applied Statistics programs (6.13%–6.75%) lead the YSU group. The more theoretically oriented programs rank lower.
+- **NUACA programs occupy the lower range** (2.52% average, with GIS at 0.92%). This reflects both name-only data and a curriculum oriented toward architecture, construction, and geographic information systems rather than software industry practice.
+- **RAU's single program** aligns at 2.76%, above the lower NUACA range but below most YSU and AUA programs, consistent with its strong theoretical mathematics orientation.
 
-The 15-fold spread between best (9.1%) and worst (0.57%) program confirms that alignment varies more within institutions than between them. Degree level (Bachelor vs. Master) is not a significant predictor (4.36% vs. 3.88%), indicating that graduate programs are not systematically better aligned with market demand than undergraduate ones. This is notable: it suggests that the curriculum gap is not primarily a matter of educational level but of curriculum design priorities.
+The wide spread between best (12.27%) and worst (0.92%) program confirms that alignment varies more within institutions than between them. Degree level is not a significant predictor (Bachelor 5.69% vs. Master 5.66%), indicating that graduate programs are not systematically better aligned with market demand than undergraduate ones. This is notable: it suggests that the curriculum gap is not primarily a matter of educational level but of curriculum design priorities.
 
 ---
 
@@ -1189,7 +1174,7 @@ This study makes three methodological contributions to the curriculum–labor ma
 
 **First, a reusable pipeline for multilingual, data-scarce contexts.** The combination of automated scraping, LLM-assisted translation (Armenian → English), two-method unsupervised skill extraction, and ESCO normalization via sentence embeddings produces an end-to-end reproducible pipeline that does not require manually labeled training data. This is particularly relevant for contexts — Central Asian, Eastern European, and South Caucasus higher education systems — where structured curriculum data and labeled skill corpora do not exist.
 
-**Second, LLM-as-annotator for threshold calibration.** Rather than requiring manual annotation of all 293 calibration pairs, GPT-4o-mini was used as an automated judge (temperature=0), following the LLM-as-annotator approach validated in recent NLP research (Gilardi et al., 2023; He et al., 2024). A 35-pair stratified human spot-check confirmed 94.3% agreement. This calibration approach is time-efficient, reproducible, and achieves comparable annotation quality to full manual annotation for binary match/no-match judgements.
+**Second, LLM-as-annotator for threshold calibration.** Rather than requiring manual annotation of all 293 calibration pairs, GPT-4o-mini was used as an automated judge (temperature=0), following the LLM-as-annotator approach validated in recent NLP research [20, 21]. A 35-pair stratified human spot-check confirmed 94.3% agreement. This calibration approach is time-efficient, reproducible, and achieves comparable annotation quality to full manual annotation for binary match/no-match judgements.
 
 **Third, a two-layer analysis combining ESCO normalization with a supplementary tech lexicon.** ESCO normalization captures conceptual alignment within the formal taxonomy vocabulary; the tech lexicon layer captures the most important emerging tools that ESCO v1.2 does not yet include. Reporting both layers — separately and transparently — provides a more complete picture than ESCO alone, while making the contribution of each layer explicit.
 
@@ -1203,7 +1188,7 @@ This study makes three methodological contributions to the curriculum–labor ma
 
 **Unsupervised extraction ceiling.** TF-IDF recall against human-curated skill tags is 44%, KeyBERT 21%. Approximately half of identifiable skills are not retrieved. The alignment rates are partial estimates, not upper bounds on true alignment.
 
-**ESCO vocabulary lag.** ESCO v1.2 does not contain Docker, Kubernetes, React, Azure, and other tools in active professional use. The 12.6% phrase match rate (only 2,523 of 19,998 unique phrases match ESCO) reflects this structural vocabulary gap. The 25.2% coverage figure understates true alignment for the most modern technology layers of both curricula and job postings.
+**ESCO vocabulary lag.** ESCO v1.2 does not contain Docker, Kubernetes, React, Azure, and other tools in active professional use. The relatively low phrase-to-taxonomy match rate reflects this structural vocabulary gap. The 32.82% coverage figure therefore understates true alignment for the most modern technology layers of both curricula and job postings.
 
 **Single false positive identified.** The phrase `docker` maps to the ESCO concept *dock operations* (maritime logistics) at similarity 0.761 — a known embedding collision. This marginally inflates the job-market gap count by one concept. The impact is negligible but exemplifies the precision risk in similarity-based taxonomy matching.
 
@@ -1211,13 +1196,13 @@ This study makes three methodological contributions to the curriculum–labor ma
 
 ## 6.5 Comparison with Prior Studies
 
-The methodological parallel with Almaleh et al. (2019) is direct: both studies apply a two-corpus NLP pipeline to measure curriculum–job market alignment in a developing country higher education context. Both find low baseline overlap rates, consistent with the cross-national finding that curriculum–labor market gaps are structurally common where curriculum design operates without institutionalized employer-facing review. The present study extends this approach with ESCO normalization and a multilingual preprocessing pipeline.
+The methodological parallel with Almaleh et al. [4] is direct: both studies apply a two-corpus NLP pipeline to measure curriculum–job market alignment in a developing country higher education context. Both find low baseline overlap rates, consistent with the cross-national finding that curriculum–labor market gaps are structurally common where curriculum design operates without institutionalized employer-facing review. The present study extends this approach with ESCO normalization and a multilingual preprocessing pipeline.
 
-The validation results (44% TF-IDF soft recall against human skill tags) are consistent with skill extraction benchmarks reported by Ahadi et al. (2022) for TF-IDF applied to curriculum data in an Australian context. Cross-national consistency in extraction quality suggests the results are not anomalous for this method class.
+The validation results (44% TF-IDF soft recall against human skill tags) are consistent with skill extraction benchmarks reported by Ahadi et al. [7] for TF-IDF applied to curriculum data in an Australian context. Cross-national consistency in extraction quality suggests the results are not anomalous for this method class.
 
-The UniSkill framework (Musazade, Mezei & Zhang, 2026) provides the most direct methodological parallel for the ESCO normalization step: curriculum-to-ESCO mapping via embedding similarity, evaluated with calibrated thresholds. The calibrated threshold of 0.75 (F1=0.711) used in this study is consistent with the operating thresholds reported in the UniSkill benchmark, providing an external plausibility check on the calibration approach.
+The UniSkill framework [8] provides the most direct methodological parallel for the ESCO normalization step: curriculum-to-ESCO mapping via embedding similarity, evaluated with calibrated thresholds. The calibrated threshold of 0.75 (F1=0.711) used in this study is consistent with the operating thresholds reported in the UniSkill benchmark, providing an external plausibility check on the calibration approach.
 
-Compared to studies that use supervised skill extraction (SkillSpan, ESCOXLM-R), the present approach trades extraction precision for accessibility: labeled training data for Armenian curriculum text does not exist, making supervised approaches inapplicable. The 44% soft recall achieved by TF-IDF is lower than supervised benchmarks but is consistent with the literature on unsupervised curriculum skill extraction and is sufficient for the comparative alignment analysis the study performs.
+Compared to studies that use supervised skill extraction (SkillSpan [10], ESCOXLM-R), the present approach trades extraction precision for accessibility: labeled training data for Armenian curriculum text does not exist, making supervised approaches inapplicable. The 44% soft recall achieved by TF-IDF is lower than supervised benchmarks but is consistent with the literature on unsupervised curriculum skill extraction and is sufficient for the comparative alignment analysis the study performs.
 
 ---
 
@@ -1247,23 +1232,14 @@ Students in NUACA and RAU programs, whose institutional alignment scores are mos
 
 ---
 
-*Citation checklist for this chapter:*
-- *Biggs & Tang (2011) — Teaching for Quality Learning ✓*
-- *Autor, Levy & Murnane (2003) — Quarterly Journal of Economics ✓*
-- *Almaleh et al. (2019) — Sustainability ✓*
-- *Ahadi et al. (2022) — EDM 2022 ✓*
-- *Musazade, Mezei & Zhang (2026) — UniSkill, arXiv:2603.03134 ✓*
-- *Chiarello et al. (2021) — Technological Forecasting and Social Change ✓*
-- *Gilardi et al. (2023) — LLM-as-annotator ✓*
-- *He et al. (2024) — LLM annotation quality ✓*
-- *ANQA — Armenian National Quality Assurance body — add URL in references*
+**Chapter references:** [4] Almaleh et al. (2019) · [5] Biggs & Tang (2011) · [7] Ahadi et al. (2022) · [8] Musazade et al. (2026) · [10] Zhang et al. (2022) · [13] Autor et al. (2003) · [14] European Commission (2023) · [15] Chiarello et al. (2021) · [20] Gilardi et al. (2023) · [21] He et al. (2024)
 # Chapter 7: Conclusion
 
 ## 7.1 Summary of the Study
 
-This thesis set out to answer one question: how well do Armenian IT university curricula align with the skill demands of the Armenian IT labor market? To answer it, a five-stage NLP pipeline was constructed, applied to a purpose-built dataset of 1,161 curriculum courses from 25 programs across four universities and 1,068 unique job postings from 11 sources — the first dataset of its kind for the Armenian context.
+This thesis set out to answer one question: how well do Armenian IT university curricula align with the skill demands of the Armenian IT labor market? To answer it, a five-stage NLP pipeline was constructed, applied to a purpose-built dataset of 1,161 curriculum courses from 25 programs across four universities and a 1,369-posting market snapshot from 14 sources, with a downstream IT-only subset of 753 postings used for NLP and alignment analysis — the first dataset of its kind for the Armenian context.
 
-The pipeline produced two types of results. The first is a pre-ESCO baseline: a raw string-level overlap of 6.4% (TF-IDF) and 0.26% (KeyBERT) between the curriculum and job market skill vocabularies — a lower bound suppressed by synonymous phrasing. After applying a calibrated ESCO similarity threshold of 0.75 (F1=0.711, validated against 293 annotated pairs), coverage rises to 25.2% (TF-IDF) and 20.3% (KeyBERT), with a union estimate of 25.7%. The best-performing program — AUA Computer and Information Science (Master) — covers 9.1% of employer-demanded ESCO concepts; the weakest — NUACA Geographic Information Systems (Master) — covers 0.57%.
+The pipeline produced two types of results. The first is a pre-ESCO baseline: a raw string-level overlap of 8.85% (TF-IDF) and 0.33% (KeyBERT) between the curriculum and job market skill vocabularies — a lower bound suppressed by synonymous phrasing. After applying a calibrated ESCO similarity threshold of 0.75 (F1=0.711, validated against 293 annotated pairs), coverage rises to 32.82% (TF-IDF) and 28.5% (KeyBERT). The best-performing program — AUA Computer and Information Science (Master) — covers 12.27% of employer-demanded ESCO concepts; the weakest — NUACA Geographic Information Systems (Master) — covers 0.92%.
 
 Regardless of the exact ESCO-normalized figure, the structural findings are clear:
 
@@ -1281,9 +1257,9 @@ Regardless of the exact ESCO-normalized figure, the structural findings are clea
 
 This thesis makes four contributions.
 
-**Contribution 1: First computational alignment study for Armenian IT education.** No prior study has applied automated skill extraction and taxonomy-based alignment analysis to Armenian university curricula and job market data jointly. This fills a decade-old gap in the evidence base for Armenian higher education policy, updating and extending the survey-based findings of Kupets (2016) with contemporaneous, program-level data.
+**Contribution 1: First computational alignment study for Armenian IT education.** No prior study has applied automated skill extraction and taxonomy-based alignment analysis to Armenian university curricula and job market data jointly. This fills a decade-old gap in the evidence base for Armenian higher education policy, updating and extending the survey-based findings of Kupets [2] with contemporaneous, program-level data.
 
-**Contribution 2: Multi-source Armenian IT job market dataset.** The job market dataset aggregates 1,068 unique postings from 11 sources — three aggregators and eight company portals — collected and deduplicated in March 2026. No comparable multi-source Armenian IT job dataset appears to exist in the literature. The dataset, pipeline, and documentation are archived for reproducibility and future extension.
+**Contribution 2: Multi-source Armenian IT job market dataset.** The job market dataset aggregates a 1,369-posting market snapshot from 14 sources and derives a 753-posting IT-only subset for downstream analysis. No comparable multi-source Armenian IT job dataset appears to exist in the literature. The dataset, pipeline, and documentation are archived for reproducibility and future extension.
 
 **Contribution 3: Multilingual NLP pipeline for curriculum analysis.** The methodology handles Armenian-language input via machine translation (OpenAI gpt-4o-mini), validated at 20/20 quality against a human-rated comparator. The pipeline is documented end-to-end and can be adapted to other non-English higher education contexts where curriculum data is not in the dominant NLP language.
 
@@ -1313,7 +1289,7 @@ Several directions emerge naturally from this work.
 
 **Longitudinal tracking.** This study is a cross-sectional snapshot. A longitudinal study collecting job posting data annually over 3–5 years would reveal whether the skill gap is growing (curricula falling further behind accelerating technology change) or shrinking (curriculum updates beginning to close the gap). It would also allow tracking of emerging skill categories like generative AI tools.
 
-**Supervised skill extraction.** The 44% recall ceiling of TF-IDF extraction could be raised substantially by training a supervised NER model on Armenian-domain labeled data. The SkillSpan annotation framework (Zhang et al., 2022) provides a replicable methodology; the main obstacle is obtaining labeled Armenian curriculum and job market sentences, which could be achieved with a crowdsourced annotation effort.
+**Supervised skill extraction.** The 44% recall ceiling of TF-IDF extraction could be raised substantially by training a supervised NER model on Armenian-domain labeled data. The SkillSpan annotation framework [10] provides a replicable methodology; the main obstacle is obtaining labeled Armenian curriculum and job market sentences, which could be achieved with a crowdsourced annotation effort.
 
 **Student-level outcomes.** This thesis measures what curricula teach and what employers demand. A natural extension is to measure what graduates actually know (via competence assessment), allowing triangulation: the gap between teaching and demand, and the additional gap between teaching and graduate competence. This would make constructive alignment failures directly observable at the individual level.
 
@@ -1329,82 +1305,98 @@ The tools to close this gap exist: the technology is widely available and well-d
 
 ---
 
-*Citation checklist for this chapter:*
-- *Kupets (2016) — IZA World of Labor, verified ✓*
-- *Zhang et al. (2022) — SkillSpan, NAACL, verified ✓*
-- *ANQA — Armenian National Quality Assurance body — add URL in references*
+**Chapter references:** [2] Kupets (2016) · [10] Zhang et al. (2022)
 # References
 
-*[DRAFT — all citations marked ✓ in chapter checklists are included below. Format to be confirmed with supervisor (APA 7th edition assumed). Entries marked ⚠️ need URL or DOI added.]*
+*APA 7th edition format. Numbers correspond to inline citations [n] throughout the thesis.*
 
 ---
 
-## A
+## Citation Index
 
-- Ahadi, A., Kitto, K., Rizoiu, M., & Musial, K. (2022). *Skills taught vs skills sought: Using skills analytics to identify the gaps between curriculum and job markets*. Poster presented at the 15th International Conference on Educational Data Mining (EDM 2022). https://doi.org/10.5281/zenodo.6853121
+| # | Author(s) | Year | Short title |
+|---|---|---|---|
+| [1] | World Economic Forum | 2025 | Future of Jobs Report 2025 |
+| [2] | Kupets, O. | 2016 | Skill mismatch and overeducation in transition economies |
+| [3] | Aljohani et al. | 2022 | Systematic review: curriculum and labor market alignment |
+| [4] | Almaleh et al. | 2019 | Align My Curriculum |
+| [5] | Biggs, J. & Tang, C. | 2011 | Teaching for Quality Learning |
+| [6] | Amirova, T. & Valiyev, A. | 2021 | Competence gap in Azerbaijan |
+| [7] | Ahadi et al. | 2022 | Skills Taught vs Skills Sought (EDM) |
+| [8] | Musazade et al. | 2026 | UniSkill dataset (LREC) |
+| [9] | Grootendorst, M. | 2020 | KeyBERT |
+| [10] | Zhang et al. | 2022 | SkillSpan (NAACL) |
+| [11] | Reimers, N. & Gurevych, I. | 2019 | Sentence-BERT (EMNLP) |
+| [12] | Wang et al. | 2020 | MiniLM (NeurIPS) |
+| [13] | Autor, D.H., Levy, F. & Murnane, R.J. | 2003 | Skill content of technological change |
+| [14] | European Commission | 2023 | ESCO v1.2 |
+| [15] | Chiarello et al. | 2021 | Industry 4.0 skills in Wikipedia |
+| [16] | SFIA Foundation | 2021 | Skills Framework for the Information Age v8 |
+| [17] | Carbonell, J. & Goldstein, J. | 1998 | Maximal Marginal Relevance (SIGIR) |
+| [18] | OpenAI | 2024 | GPT-4o mini |
+| [19] | Pedregosa et al. | 2011 | Scikit-learn |
+| [20] | Gilardi et al. | 2023 | ChatGPT outperforms crowd workers (PNAS) |
+| [21] | He et al. | 2024 | Is ChatGPT a good annotator? |
+| [22] | Salton, G. & Buckley, C. | 1988 | Term-weighting in automatic text retrieval (TF-IDF) |
 
-- Aljohani, M., Alnafessah, A., Alhumaid, K., & Gawanmeh, A. (2022). A systematic review of research on curriculum and labor market alignment. *Journal of Innovation & Knowledge, 7*(1), 100186.
+---
 
-- Almaleh, A., Abumelha, M., Alharbi, G., Alshammari, M., & Almuhaidib, M. (2019). Align my curriculum: Algorithm for matching course curricula with job market needs. *Sustainability, 11*(24), 7050. https://doi.org/10.3390/su11247050
+## Full References
 
-- Amirova, T., & Valiyev, A. (2021). Competence gap analysis: Employer and graduate perspectives from Azerbaijan. *Journal of Teaching and Learning for Graduate Employability, 12*(1), 117–133.
+**[1]** World Economic Forum. (2025). *The future of jobs report 2025*. World Economic Forum. https://www.weforum.org/publications/the-future-of-jobs-report-2025/
 
-- Autor, D. H., Levy, F., & Murnane, R. J. (2003). The skill content of recent technological change: An empirical exploration. *The Quarterly Journal of Economics, 118*(4), 1279–1333. https://doi.org/10.1162/003355303322552801
+**[2]** Kupets, O. (2016). *Skill mismatch and overeducation in transition economies.* IZA World of Labor, Article 224. https://wol.iza.org/articles/skill-mismatch-and-overeducation-in-transition-economies/long
 
-## B
+**[3]** Aljohani, M., Alnafessah, A., Alhumaid, K., & Gawanmeh, A. (2022). A systematic review of research on curriculum and labor market alignment. *Journal of Innovation & Knowledge, 7*(1), 100186. https://doi.org/10.1016/j.jik.2022.100186
 
-- Biggs, J., & Tang, C. (2011). *Teaching for quality learning at university* (4th ed.). Society for Research into Higher Education & Open University Press.
+**[4]** Almaleh, A., Aslam, M. A., Saeedi, K., & Aljohani, N. R. (2019). Align my curriculum: A framework to bridge the gap between acquired university curriculum and required market skills. *Sustainability, 11*(9), 2607. https://doi.org/10.3390/su11092607
 
-## C
+**[5]** Biggs, J., & Tang, C. (2011). *Teaching for quality learning at university* (4th ed.). Society for Research into Higher Education & Open University Press.
 
-- Chiarello, F., Trivelli, L., Bonaccorsi, A., & Fantoni, G. (2021). Extracting and mapping industry 4.0 technologies using Wikipedia. *Technological Forecasting and Social Change, 167*, 120653.
+**[6]** Amirova, T., & Valiyev, A. (2021). Competence gap analysis: Employer and graduate perspectives from Azerbaijan. *Journal of Teaching and Learning for Graduate Employability, 12*(1), 117–133.
 
-## E
+**[7]** Ahadi, A., Kitto, K., Rizoiu, M., & Musial, K. (2022). *Skills taught vs skills sought: Using skills analytics to identify the gaps between curriculum and job markets*. Poster presented at the 15th International Conference on Educational Data Mining (EDM 2022). https://doi.org/10.5281/zenodo.6853121
 
-- European Commission. (2023). *ESCO: European skills, competences, qualifications and occupations* (v1.2). Publications Office of the European Union. ⚠️ Add URL: https://esco.ec.europa.eu/
+**[8]** Musazade, E., Mezei, J., & Zhang, H. (2026). UniSkill: A dataset for linking university courses to ESCO skills. *Proceedings of the 2026 Language Resources and Evaluation Conference (LREC)*. arXiv:2603.03134
 
-## G
+**[9]** Grootendorst, M. (2020). *KeyBERT: Minimal keyword extraction with BERT* [Software]. Zenodo. https://doi.org/10.5281/zenodo.4461265
 
-- Grootendorst, M. (2020). *KeyBERT: Minimal keyword extraction with BERT* [Software]. Zenodo. https://doi.org/10.5281/zenodo.4461265
+**[10]** Zhang, M., Jensen, K., Sonnenschein, H., Brekke, A. S., & Plank, B. (2022). SkillSpan: Hard and soft skill extraction from English job postings. In *Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2022)* (pp. 4962–4984). https://doi.org/10.18653/v1/2022.naacl-main.366
 
-## K
+**[11]** Reimers, N., & Gurevych, I. (2019). Sentence-BERT: Sentence embeddings using Siamese BERT-networks. In *Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP)* (pp. 3982–3992). https://doi.org/10.18653/v1/D19-1410
 
-- Kupets, O. (2016). *Education-job mismatch in Ukraine: Too many people with tertiary education or too many jobs for low-skilled?* IZA World of Labor, 2016(258). https://doi.org/10.15185/izawol.258
+**[12]** Wang, W., Wei, F., Dong, L., Bao, H., Yang, N., & Zhou, M. (2020). MiniLM: Deep self-attention distillation for task-agnostic compression of pre-trained transformers. In *Proceedings of the 34th Conference on Neural Information Processing Systems (NeurIPS 2020)*. arXiv:2002.10957
 
-## M
+**[13]** Autor, D. H., Levy, F., & Murnane, R. J. (2003). The skill content of recent technological change: An empirical exploration. *The Quarterly Journal of Economics, 118*(4), 1279–1333. https://doi.org/10.1162/003355303322552801
 
-- Musazade, E., Mezei, J., & Zhang, H. (2026). UniSkill: A dataset for linking university courses to ESCO skills. *Proceedings of the 2026 Language Resources and Evaluation Conference (LREC)*. arXiv:2603.03134
+**[14]** European Commission. (2023). *ESCO: European skills, competences, qualifications and occupations* (v1.2). Publications Office of the European Union. https://esco.ec.europa.eu/
 
-## R
+**[15]** Chiarello, F., Trivelli, L., Bonaccorsi, A., & Fantoni, G. (2021). Towards ESCO 4.0 — Is the European classification of skills in line with Industry 4.0? *Technological Forecasting and Social Change, 173*, 121177. https://doi.org/10.1016/j.techfore.2021.121177
 
-- Reimers, N., & Gurevych, I. (2019). Sentence-BERT: Sentence embeddings using Siamese BERT-networks. In *Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP)* (pp. 3982–3992). https://doi.org/10.18653/v1/D19-1410
+**[16]** SFIA Foundation. (2021). *Skills framework for the information age* (v8). https://sfia-online.org/
 
-## S
+**[17]** Carbonell, J., & Goldstein, J. (1998). The use of MMR, diversity-based reranking for reordering documents and producing summaries. In *Proceedings of the 21st Annual International ACM SIGIR Conference* (pp. 335–336). https://doi.org/10.1145/290941.291025
 
-- SFIA Foundation. (2021). *Skills framework for the information age* (v8). ⚠️ Add URL: https://sfia-online.org/
+**[18]** OpenAI. (2024). *GPT-4o mini* [Language model]. https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/
 
-## W
+**[19]** Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., … Duchesnay, É. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research, 12*, 2825–2830.
 
-- Wang, W., Wei, F., Dong, L., Bao, H., Yang, N., & Zhou, M. (2020). MiniLM: Deep self-attention distillation for task-agnostic compression of pre-trained transformers. In *Proceedings of the 34th Conference on Neural Information Processing Systems (NeurIPS 2020)*. arXiv:2002.10957
+**[22]** Salton, G., & Buckley, C. (1988). Term-weighting approaches in automatic text retrieval. *Information Processing & Management, 24*(5), 513–523. https://doi.org/10.1016/0306-4573(88)90021-0
 
-- World Economic Forum. (2025). *The future of jobs report 2025*. World Economic Forum. ⚠️ Add URL
+**[20]** Gilardi, F., Alizadeh, M., & Kubli, M. (2023). ChatGPT outperforms crowd workers for text-annotation tasks. *Proceedings of the National Academy of Sciences, 120*(30), e2305016120. https://doi.org/10.1073/pnas.2305016120
 
-## Z
-
-- Zhang, M., Jensen, K., Sonnenschein, H., Brekke, A. S., & Plank, B. (2022). SkillSpan: Hard and soft skill extraction from English job postings. In *Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2022)* (pp. 4962–4984). https://doi.org/10.18653/v1/2022.naacl-main.366
+**[21]** He, X., Lin, Z., Gong, Y., Jin, H., Han, T., Mou, X., … Dolan, B. (2024). AnnoLLM: Making large language models to be better crowdsourced annotators. *Proceedings of NAACL 2024 (Industry Track)*. arXiv:2303.16854
 
 ---
 
 ## Data Sources and Tools
 
 - Apify, Inc. (2026). *Apify web scraping platform* [Software]. https://apify.com/
-- OpenAI. (2024). *GPT-4o mini* [Language model]. https://openai.com/
 - Python Software Foundation. (2023). *Python* (version 3.11) [Software]. https://www.python.org/
-- Pedregosa, F., et al. (2011). Scikit-learn: Machine learning in Python. *Journal of Machine Learning Research, 12*, 2825–2830.
-- LinkedIn Corporation. (2026). *LinkedIn job postings, Armenia* [Dataset, accessed March 2026].
+- LinkedIn Corporation. (2026). *LinkedIn job postings, Armenia* [Dataset, accessed March 2026]. https://linkedin.com/
 - Staff.am. (2026). *Staff.am job listings* [Dataset, accessed March 2026]. https://staff.am/
 - job.am. (2026). *job.am listings* [Dataset, accessed March 2026]. https://job.am/
 
 ---
 
-*Total references: ~25 academic + data/tool citations. Cross-check all DOIs before final submission.*
+*Total: 21 academic references + data/tool citations.*

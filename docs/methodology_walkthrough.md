@@ -26,9 +26,9 @@ Each stage is explained below with real inputs and outputs.
 - **NUACA** (174 courses, 4 programs) — scraped from nuaca.am, English course names
 - **RAU** (47 courses, 1 program) — parsed from PDF study plans, Russian → English
 
-**Job market side:** IT job postings from 11 sources.
-- 3 aggregators: LinkedIn (734), Staff.am (48), job.am (20)
-- 8 company portals: EPAM (104), SoftConstruct (141), Krisp (7), DataArt (5), ServiceTitan (4), Synopsys (2), Picsart (2), DISQO (1)
+**Job market side:** A broad Armenian tech-market snapshot from 14 sources, followed by an IT-only analysis subset.
+- 3 aggregators: LinkedIn (992), Staff.am (55), job.am (20)
+- 11 company portals: EPAM (108), SoftConstruct (152), Grid Dynamics (11), Krisp (7), NVIDIA (5), 10Web (5), DataArt (5), ServiceTitan (4), Synopsys (2), Picsart (2), DISQO (1)
 
 ### Real example — raw curriculum data
 
@@ -57,9 +57,11 @@ Each stage is explained below with real inputs and outputs.
 
 1. **Curriculum:** Merged all 4 universities into a unified 18-column schema (`final_curriculum_dataset.csv`, 1,161 rows). Removed 129 YSU within-program duplicates. Normalized assessment values.
 
-2. **Jobs:** Merged all 11 sources into a 13-column schema (`final_jobs_dataset.csv`). Removed 280 duplicates (75 within-source, 205 cross-source). Final: **1,068 unique job postings**.
+2. **Jobs:** Merged all 14 sources into a 13-column schema (`final_jobs_dataset.csv`). Final broad market snapshot: **1,369 postings**.
 
-3. **Translation:** Translated 691 YSU course names and descriptions from Armenian to English using OpenAI gpt-4o-mini. Quality validated: 20/20 vs Perplexity 6/20.
+3. **IT-only filtering:** Applied a rule-based title and text filter in `00_filter_it_jobs.ipynb` to separate core IT postings from broader commercial and support roles. Final downstream analysis set: **753 IT-only postings** (`keep=753`, `drop=558`, `review=58`).
+
+4. **Translation:** Translated 691 YSU course names and descriptions from Armenian to English using OpenAI gpt-4o-mini. Quality validated: 20/20 vs Perplexity 6/20.
 
 ### Output files
 
@@ -67,7 +69,8 @@ Each stage is explained below with real inputs and outputs.
 |---|---|---|
 | `data/processed/university/final_curriculum_dataset.csv` | 1,161 | Canonical curriculum data |
 | `data/processed/university/ysu_translated.csv` | 1,161 | NLP-ready version with English text |
-| `data/processed/jobs/final_jobs_dataset.csv` | 1,068 | Canonical job postings |
+| `data/processed/jobs/final_jobs_dataset.csv` | 1,369 | Broad market snapshot |
+| `data/processed/jobs/final_jobs_dataset_it_only.csv` | 753 | IT-only job market used in downstream analysis |
 
 ---
 
@@ -123,11 +126,11 @@ KeyBERT uses a pre-trained BERT model (`all-MiniLM-L6-v2`, 22M parameters) to fi
 
 | Metric | TF-IDF | KeyBERT |
 |---|---|---|
-| Curriculum unique skills | 3,423 | 4,801 |
-| Job market unique skills | 4,625 | 8,695 |
-| **Overlap** | **296 (6.4%)** | **23 (0.26%)** |
-| Gap (jobs need, curriculum doesn't teach) | 4,329 | 8,672 |
-| Surplus (curriculum teaches, jobs don't ask) | 3,127 | 4,778 |
+| Curriculum unique skills | 3,442 | 4,812 |
+| Job market unique skills | 3,153 | 5,530 |
+| **Overlap** | **279 (8.85%)** | **18 (0.33%)** |
+| Gap (jobs need, curriculum doesn't teach) | 2,874 | 5,512 |
+| Surplus (curriculum teaches, jobs don't ask) | 3,163 | 4,794 |
 
 ### Why KeyBERT overlap is so low (and why that's OK)
 
@@ -147,7 +150,7 @@ These phrases describe overlapping skills but don't match as strings. **ESCO nor
 
 ---
 
-## Stage 4: ESCO Normalization (next step)
+## Stage 4: ESCO Normalization
 
 ### What ESCO is
 
@@ -195,23 +198,23 @@ ESCO normalization has been completed. All extracted phrases were encoded with `
 
 | Metric | TF-IDF | KeyBERT |
 |---|---:|---:|
-| Curriculum ESCO concepts | 329 | 397 |
-| Job market ESCO concepts | 527 | 380 |
-| **Overlap** | **133 (25.2%)** | **77 (20.3%)** |
-| Gap (demanded, not taught) | 394 | 303 |
-| Surplus (taught, not demanded) | 196 | 320 |
+| Curriculum ESCO concepts | 332 | 398 |
+| Job market ESCO concepts | 326 | 207 |
+| **Overlap** | **107 (32.82%)** | **59 (28.5%)** |
+| Gap (demanded, not taught) | 219 | 148 |
+| Surplus (taught, not demanded) | 225 | 339 |
 
-Coverage improved dramatically versus the pre-ESCO string-level baseline (TF-IDF: 6.4% → 25.2%; KeyBERT: 0.26% → 20.3%), confirming that ESCO normalization collapses surface-form variation into shared concept IDs.
+Coverage improved dramatically versus the pre-ESCO string-level baseline (TF-IDF: 8.85% → 32.82%; KeyBERT: 0.33% → 28.5%), confirming that ESCO normalization collapses surface-form variation into shared concept IDs.
 
 ### Knowledge vs. competence split
 
-ESCO classifies each concept as *knowledge* or *skill/competence*. The overlap is 70% knowledge, 30% competence. The gap is 51% applied competences. This means curricula cover the right subject domains but fall short on applied practice — DevOps pipelines, CI/CD, cloud deployment, responsive design.
+ESCO classifies each concept as *knowledge* or *skill/competence*. In the current TF-IDF overlap, 83 of 107 shared concepts (77.6%) are knowledge concepts and 24 (22.4%) are skill/competence concepts. The gap remains slightly competence-heavy (51.1% skill/competence). This means curricula cover the right subject domains but fall short on applied practice — DevOps pipelines, CI/CD, cloud deployment, responsive design.
 
 ### Sample overlap (taught AND demanded)
 `algorithms`, `Python`, `SQL`, `JavaScript`, `NoSQL`, `Agile development`, `blockchain`, `Internet of Things`, `automation technology`, `architectural design`
 
 ### Sample gap (demanded, NOT taught)
-`Java`, `PHP`, `MySQL`, `PostgreSQL`, `CSS`, `DevOps`, `Android`, `Docker/Ansible`, `Adobe Photoshop`, `GDPR`
+`SAP R3`, `PHP`, `Java`, `TypeScript`, `SQL Server`, `DevOps`, `CSS`, `Android`, `responsive design`, `protect personal data and privacy`
 
 ### Sample surplus (taught, NOT demanded)
 `algebra`, `MATLAB`, `Monte Carlo simulation`, `Assembly`, `Ancient Greek`, `Turkish`, `Chinese`
@@ -220,13 +223,13 @@ ESCO classifies each concept as *knowledge* or *skill/competence*. The overlap i
 
 | University | Program | Degree | Coverage |
 |---|---|---|---:|
-| AUA | Computer and Information Science | Master | 9.1% |
-| AUA | Computer Science | Bachelor | 7.2% |
-| YSU | Data Science in Business | Master | 5.7% |
-| AUA | Data Science | Bachelor | 5.7% |
-| NUACA | Informatics (CS) | Bachelor | 2.5% |
-| RAU | Applied Mathematics and Informatics | Bachelor | 2.3% |
-| NUACA | GIS | Master | 0.6% |
+| AUA | Computer and Information Science | Master | 12.27% |
+| AUA | Computer Science | Bachelor | 10.74% |
+| AUA | Data Science | Bachelor | 8.28% |
+| YSU | Data Science in Business | Master | 7.98% |
+| YSU | Information Systems Development | Master | 7.98% |
+| RAU | Applied Mathematics and Informatics | Bachelor | 2.76% |
+| NUACA | GIS | Master | 0.92% |
 
 Note: coverage percentages are share of job-market ESCO concepts covered by the program. AUA leads due to richer course descriptions.
 
@@ -243,21 +246,23 @@ Note: coverage percentages are share of job-market ESCO concepts covered by the 
 - Surplus analysis: curriculum content with no job market counterpart
 - Emerging tech skills (beyond ESCO v1.2): Docker, Kubernetes, React, TypeScript, AWS, CI/CD, etc., matched via a curated tech lexicon using direct regex search on raw job text
 
+Note: the raw ESCO gap table is the broad concept-level view of the full job corpus. In the final interpretation layer, the cleaner IT-role and direct-text-search outputs from Steps 11-12 are the more reliable view for concrete skill-demand discussion.
+
 ### Step 11: Skill demand by job role
 
 Job postings are classified into 9 IT roles by keyword matching on job title:
 
 | Role | Jobs |
 |---|---:|
-| Backend | 117 |
-| Data / ML / AI | 58 |
-| QA / Testing | 48 |
-| DevOps / Cloud | 40 |
-| Frontend / JS | 34 |
-| Full Stack | 26 |
-| Security | 14 |
-| Hardware / Embedded | 15 |
-| Mobile | 8 |
+| Backend | 159 |
+| Data / ML / AI | 62 |
+| QA / Testing | 59 |
+| DevOps / Cloud | 52 |
+| Frontend / JS | 45 |
+| Full Stack | 31 |
+| Security | 17 |
+| Hardware / Embedded | 17 |
+| Mobile | 14 |
 
 For each role, top 15 skills are computed using **direct text search** on raw job descriptions — not TF-IDF extraction. This avoids the IDF frequency bias that suppresses common terms like Python.
 
@@ -271,20 +276,20 @@ Top 60 skills across all IT job postings, combining:
 
 ESCO concepts take priority over tech lexicon entries when both cover the same skill (case-insensitive dedup).
 
-**Top 10 most demanded skills (360 IT job postings):**
+**Top 10 most demanded skills (456 role-grouped IT job postings):**
 
 | Rank | Skill | % of IT jobs |
 |---:|---|---:|
-| 1 | Python | 35.0% |
-| 2 | CI/CD | 30.6% |
-| 3 | Amazon Web Services | 27.8% |
-| 4 | Docker | 21.1% |
-| 5 | Kubernetes | 20.8% |
-| 6 | ICT project management methodologies | 19.4% |
-| 7 | Microsoft Azure | 19.2% |
-| 8 | DevOps | 18.9% |
-| 9 | TypeScript | 17.8% |
-| 10 | Google Cloud | 17.8% |
+| 1 | Python | 33.6% |
+| 2 | CI/CD | 31.1% |
+| 3 | Amazon Web Services | 29.8% |
+| 4 | Microsoft Azure | 26.3% |
+| 5 | Google Cloud | 24.8% |
+| 6 | Docker | 22.1% |
+| 7 | DevOps | 21.5% |
+| 8 | Kubernetes | 21.5% |
+| 9 | ICT project management methodologies | 19.5% |
+| 10 | React | 16.2% |
 
 Output: `data/processed/esco/skill_frequency_overall.csv`
 
@@ -311,7 +316,8 @@ thesis_data/
 │   │   │   ├── translation_cache.json          ← API response cache (avoids re-running)
 │   │   │   └── translation_comparison_50.csv   ← OpenAI vs Perplexity quality evaluation
 │   │   ├── jobs/
-│   │   │   └── final_jobs_dataset.csv          ← 1,068 jobs (deduplicated)
+│   │   │   ├── final_jobs_dataset.csv          ← 1,369 broad-market postings
+│   │   │   └── final_jobs_dataset_it_only.csv  ← 753 IT-only postings used downstream
 │   │   └── skills/
 │   │       ├── tfidf_curriculum_skills.json    ← TF-IDF keywords per course
 │   │       ├── tfidf_jobs_skills.json          ← TF-IDF keywords per job
@@ -325,12 +331,14 @@ thesis_data/
 │   ├── 1_collection_jobs/              Per-source scraping notebooks (01–12) + merge (13)
 │   ├── 2_collection_university/        University parsing (01), translation (02), build (03), enrich (04)
 │   └── 3_analysis/
+│       ├── 00_filter_it_jobs.ipynb     IT-only market filter and audit
 │       ├── 01_eda.ipynb                Exploratory data analysis (both datasets)
 │       ├── 02_skill_extraction.ipynb   TF-IDF + KeyBERT extraction ← HAS OUTPUTS
 │       ├── 03_sensitivity_analysis.ipynb  Sensitivity analysis (asymmetry, validation, noise)
 │       ├── 04_esco_calibration.ipynb   ESCO pair generation and threshold sweep
 │       ├── 04b_annotate_calibration_pairs.ipynb  GPT-4o-mini annotation + manual validation
-│       └── 05_esco_normalization.ipynb  Phrase → ESCO mapping, normalized alignment ← HAS OUTPUTS
+│       ├── 05_esco_normalization.ipynb  Phrase → ESCO mapping, normalized alignment ← HAS OUTPUTS
+│       └── 06_alignment_analysis.ipynb  Program-, role-, and market-level analysis ← HAS OUTPUTS
 │
 ├── docs/
 │   ├── methodology_walkthrough.md      ← THIS DOCUMENT
@@ -357,21 +365,21 @@ thesis_data/
 | Universities | 4 (YSU, AUA, NUACA, RAU) |
 | Programs | 25 |
 | Curriculum courses | 1,161 |
-| Job postings | 1,068 (from 11 sources, deduplicated) |
+| Broad job postings | 1,369 (from 14 sources) |
+| IT-only job postings used downstream | 753 (from 13 sources) |
 | Courses used for NLP | 1,133 (28 too short) |
-| TF-IDF unique curriculum skills | 3,423 |
-| TF-IDF unique job skills | 4,625 |
-| TF-IDF overlap (pre-ESCO) | 296 (6.4%) |
-| KeyBERT unique curriculum skills | 4,801 |
-| KeyBERT unique job skills | 8,695 |
-| KeyBERT overlap (pre-ESCO) | 23 (0.26%) |
+| TF-IDF unique curriculum skills | 3,442 |
+| TF-IDF unique job skills | 3,153 |
+| TF-IDF overlap (pre-ESCO) | 279 (8.85%) |
+| KeyBERT unique curriculum skills | 4,812 |
+| KeyBERT unique job skills | 5,530 |
+| KeyBERT overlap (pre-ESCO) | 18 (0.33%) |
 | ESCO skill concepts (v1.2) | 13,937 |
 | Embedding model | all-MiniLM-L6-v2 (22M params) |
-| TF-IDF overlap (post-ESCO) | 133 (25.2% of job-market concepts) |
-| KeyBERT overlap (post-ESCO) | 77 (20.3% of job-market concepts) |
-| Union overlap (post-ESCO) | 187 (25.7%) |
+| TF-IDF overlap (post-ESCO) | 107 (32.82% of job-market concepts) |
+| KeyBERT overlap (post-ESCO) | 59 (28.5% of job-market concepts) |
 | ESCO calibration threshold | 0.75 (F1=0.711) |
-| Best program coverage | AUA Computer and Information Science, Master — 9.1% |
-| Worst program coverage | NUACA Geographic Information Systems, Master — 0.6% |
-| Overlap knowledge/competence split | 70% knowledge / 30% competence |
+| Best program coverage | AUA Computer and Information Science, Master — 12.27% |
+| Worst program coverage | NUACA Geographic Information Systems, Master — 0.92% |
+| Overlap knowledge/competence split | 77.6% knowledge / 22.4% competence |
 | Courses with 0 ESCO concepts | AUA 12%, YSU 27%, NUACA 48%, RAU 56% |

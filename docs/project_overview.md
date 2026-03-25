@@ -2,13 +2,13 @@
 
 ## Research Question
 
-How well do Armenian university IT/STEM curricula align with the current demands of the Armenian IT job market?
+How well do IT/STEM curricula from selected Armenian universities align with the current demands of the Armenian IT job market?
 
 ## Goal
 
 Produce a data-driven, quantitative comparison between:
 1. **University IT/STEM curricula** — what students are taught across 4 Armenian universities
-2. **Armenian IT job market demands** — what employers require, from 11 job data sources
+2. **Armenian IT job market demands** — what employers require, from a 14-source market snapshot and a filtered IT-only analysis subset
 
 The outcome is a structured skill-gap analysis: which skills are taught but not demanded, which are demanded but not taught, and where the strongest alignment exists — broken down by university, program, and degree level.
 
@@ -31,24 +31,27 @@ The outcome is a structured skill-gap analysis: which skills are taught but not 
 
 ---
 
-## Job Data Sources (after deduplication)
+## Job Data Sources (broad market snapshot)
 
 | Source | Type | Rows |
 |---|---|---|
-| LinkedIn | Aggregator | 734 |
-| SoftConstruct | Company portal | 141 |
-| EPAM | Company portal | 104 |
-| Staff.am | Aggregator | 48 |
+| LinkedIn | Aggregator | 992 |
+| SoftConstruct | Company portal | 152 |
+| EPAM | Company portal | 108 |
+| Staff.am | Aggregator | 55 |
 | job.am | Aggregator | 20 |
+| Grid Dynamics | Company portal | 11 |
 | Krisp | Company portal | 7 |
+| NVIDIA | Company portal | 5 |
+| 10Web | Company portal | 5 |
 | DataArt | Company portal | 5 |
 | ServiceTitan | Company portal | 4 |
 | Synopsys | Company portal | 2 |
 | Picsart | Company portal | 2 |
 | DISQO | Company portal | 1 |
-| **Total** | | **1,068** |
+| **Total** | | **1,369** |
 
-280 duplicates removed (75 within-source, 205 cross-source).
+Downstream NLP and alignment analysis use the IT-only filtered subset: `753` postings from `13` sources.
 
 ---
 
@@ -58,7 +61,8 @@ The outcome is a structured skill-gap analysis: which skills are taught but not 
 |---|---|---|---|
 | Curriculum | `data/processed/university/final_curriculum_dataset.csv` | 1,161 | Frozen |
 | Curriculum (NLP-ready) | `data/processed/university/ysu_translated.csv` | 1,161 | Frozen — includes `course_name_en` + `description_en` |
-| Jobs | `data/processed/jobs/final_jobs_dataset.csv` | 1,068 | Frozen |
+| Jobs (broad snapshot) | `data/processed/jobs/final_jobs_dataset.csv` | 1,369 | Frozen |
+| Jobs (IT-only analysis set) | `data/processed/jobs/final_jobs_dataset_it_only.csv` | 753 | Frozen |
 
 ---
 
@@ -66,38 +70,41 @@ The outcome is a structured skill-gap analysis: which skills are taught but not 
 
 ```
 Phase 1: Data Collection ✓ COMPLETE
-  Raw scraping from 4 universities + 11 job sources
+  Raw scraping from 4 universities + 14 job sources
 
 Phase 2: Data Cleaning ✓ COMPLETE
   final_curriculum_dataset.csv (1,161 rows)
-  final_jobs_dataset.csv (1,068 rows, deduplicated)
+  final_jobs_dataset.csv (1,369 rows, merged broad market snapshot)
+  final_jobs_dataset_it_only.csv (753 rows, downstream analysis set)
   YSU course translation (Armenian → English, OpenAI gpt-4o-mini)
 
-Phase 3: Skill Extraction ✓ COMPLETE
+Phase 3: IT Filtering + Skill Extraction ✓ COMPLETE
+  IT-only market filter: keep 753 / drop 558 / review 58
   TF-IDF + KeyBERT extraction from both corpora
   Noise audit: 60% of original overlap was generic English — expanded filters, re-ran
-  Pre-ESCO baseline: TF-IDF 6.4%, KeyBERT 0.26%
+  Pre-ESCO baseline: TF-IDF 8.85%, KeyBERT 0.33%
   Validation vs skills_tags: TF-IDF 44% recall, KeyBERT 21% recall (soft match, 151 jobs)
 
 Phase 4: ESCO Normalization ✓ COMPLETE
   293 calibration pairs annotated (GPT-4o-mini, 94.3% human agreement on 35-pair spot-check)
   Threshold: 0.75 (F1=0.711, selected by sweep across 0.60-0.85)
-  All 19,998 unique phrases mapped to ESCO v1.2 concept IDs
-  Normalized alignment: TF-IDF 25.2%, KeyBERT 20.3%, Union 25.7%
+  All extracted phrases mapped to ESCO v1.2 concept IDs
+  Normalized alignment: TF-IDF 32.82%, KeyBERT 28.5%
 
 Phase 5: Alignment Analysis ✓ COMPLETE
-  Per-program coverage: 25 programs ranked (0.6%-9.1%)
-  University breakdown: AUA 5.77% > YSU 4.46% > RAU 2.28% > NUACA 1.60%
-  Knowledge vs. competence split: overlap 70% knowledge / 30% competence
-  Gap: 394 ESCO concepts demanded but not taught (top: Java, TypeScript, Azure, React)
-  Surplus: 196 ESCO concepts taught but not demanded (state requirements + theory)
-  Emerging tech analysis: 24 modern tools beyond ESCO (Azure, React, AWS, Kubernetes all gaps)
+  Per-program coverage: 25 programs ranked (0.92%-12.27%)
+  University breakdown: AUA 8.06% > YSU 5.96% > RAU 2.76% > NUACA 2.52%
+  Knowledge vs. competence split: overlap 77.6% knowledge / 22.4% competence
+  Gap: 219 ESCO concepts demanded but not taught
+  Surplus: 225 ESCO concepts taught but not demanded
+  Emerging tech analysis: 25 modern tools beyond ESCO
+  Skill frequency analysis: top 60 skills overall + top 15 per role across 9 core IT roles
   Figures: docs/figures/per_program_coverage.png, gap_surplus_breakdown.png
 
 Phase 6: Thesis Writing <- CURRENT STEP
   Chapter 5 (Results): complete
   Chapter 6 (Discussion): in progress
-  Chapter 7 (Conclusion): not started
+  Chapter 7 (Conclusion): in progress
 ```
 
 ---

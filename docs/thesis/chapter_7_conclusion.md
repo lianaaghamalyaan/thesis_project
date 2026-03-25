@@ -2,9 +2,9 @@
 
 ## 7.1 Summary of the Study
 
-This thesis set out to answer one question: how well do Armenian IT university curricula align with the skill demands of the Armenian IT labor market? To answer it, a five-stage NLP pipeline was constructed, applied to a purpose-built dataset of 1,161 curriculum courses from 25 programs across four universities and 1,068 unique job postings from 11 sources — the first dataset of its kind for the Armenian context.
+This thesis set out to answer one question: how well do Armenian IT university curricula align with the skill demands of the Armenian IT labor market? To answer it, a five-stage NLP pipeline was constructed, applied to a purpose-built dataset of 1,161 curriculum courses from 25 programs across four universities and a 1,369-posting market snapshot from 14 sources, with a downstream IT-only subset of 753 postings used for NLP and alignment analysis — the first dataset of its kind for the Armenian context.
 
-The pipeline produced two types of results. The first is a pre-ESCO baseline: a raw string-level overlap of 6.4% (TF-IDF) and 0.26% (KeyBERT) between the curriculum and job market skill vocabularies — a lower bound suppressed by synonymous phrasing. After applying a calibrated ESCO similarity threshold of 0.75 (F1=0.711, validated against 293 annotated pairs), coverage rises to 25.2% (TF-IDF) and 20.3% (KeyBERT), with a union estimate of 25.7%. The best-performing program — AUA Computer and Information Science (Master) — covers 9.1% of employer-demanded ESCO concepts; the weakest — NUACA Geographic Information Systems (Master) — covers 0.57%.
+The pipeline produced two types of results. The first is a pre-ESCO baseline: a raw string-level overlap of 8.85% (TF-IDF) and 0.33% (KeyBERT) between the curriculum and job market skill vocabularies — a lower bound suppressed by synonymous phrasing. After applying a calibrated ESCO similarity threshold of 0.75 (F1=0.711, validated against 293 annotated pairs), coverage rises to 32.82% (TF-IDF) and 28.5% (KeyBERT). The best-performing program — AUA Computer and Information Science (Master) — covers 12.27% of employer-demanded ESCO concepts; the weakest — NUACA Geographic Information Systems (Master) — covers 0.92%.
 
 Regardless of the exact ESCO-normalized figure, the structural findings are clear:
 
@@ -24,7 +24,7 @@ This thesis makes four contributions.
 
 **Contribution 1: First computational alignment study for Armenian IT education.** No prior study has applied automated skill extraction and taxonomy-based alignment analysis to Armenian university curricula and job market data jointly. This fills a decade-old gap in the evidence base for Armenian higher education policy, updating and extending the survey-based findings of Kupets [2] with contemporaneous, program-level data.
 
-**Contribution 2: Multi-source Armenian IT job market dataset.** The job market dataset aggregates 1,068 unique postings from 11 sources — three aggregators and eight company portals — collected and deduplicated in March 2026. No comparable multi-source Armenian IT job dataset appears to exist in the literature. The dataset, pipeline, and documentation are archived for reproducibility and future extension.
+**Contribution 2: Multi-source Armenian IT job market dataset.** The job market dataset aggregates a 1,369-posting market snapshot from 14 sources and derives a 753-posting IT-only subset for downstream analysis. No comparable multi-source Armenian IT job dataset appears to exist in the literature. The dataset, pipeline, and documentation are archived for reproducibility and future extension.
 
 **Contribution 3: Multilingual NLP pipeline for curriculum analysis.** The methodology handles Armenian-language input via machine translation (OpenAI gpt-4o-mini), validated at 20/20 quality against a human-rated comparator. The pipeline is documented end-to-end and can be adapted to other non-English higher education contexts where curriculum data is not in the dominant NLP language.
 

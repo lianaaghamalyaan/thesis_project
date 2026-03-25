@@ -51,10 +51,10 @@ Figures marked ✓ already exist as notebook outputs in `data/processed/`. Figur
 
 **Figure 5.1 — Pre-ESCO vs Post-ESCO Coverage (method comparison)**
 - Location: Start of Section 5.2 (ESCO normalization results), before Table 5.x
-- Content: Grouped bar chart: TF-IDF and KeyBERT side by side, showing pre-ESCO (6.4%, 0.26%) vs post-ESCO (25.2%, 20.3%) coverage rates
+- Content: Grouped bar chart: TF-IDF and KeyBERT side by side, showing pre-ESCO (8.85%, 0.33%) vs post-ESCO (32.82%, 28.5%) coverage rates
 - Source: Computed results
 - Status: ★ Create simple bar chart
-- Caption: *Figure 5.1. Coverage rate before and after ESCO normalization. ESCO normalization raises TF-IDF coverage from 6.4% to 25.2% by resolving surface-form variation.*
+- Caption: *Figure 5.1. Coverage rate before and after ESCO normalization. ESCO normalization raises TF-IDF coverage from 8.85% to 32.82% by resolving surface-form variation.*
 
 **Figure 5.2 — Per-Program Alignment Heatmap**
 - Location: Section 5.3 (per-program results), after the program-level table
@@ -68,13 +68,13 @@ Figures marked ✓ already exist as notebook outputs in `data/processed/`. Figur
 - Content: Horizontal bar chart of top 20 gap skills ranked by job posting frequency
 - Source: `data/processed/esco/skill_frequency_overall.csv`
 - Status: ✓ Exists in notebook — export as PNG
-- Caption: *Figure 5.3. Top 20 employer-demanded skills absent from Armenian IT curricula, ranked by frequency across 1,068 job postings.*
+- Caption: *Figure 5.3. Top 20 employer-demanded skills absent from Armenian IT curricula, ranked by frequency across the IT-only job-market subset.*
 
 **Figure 5.4 — Skill Overlap Venn Diagram**
 - Location: Section 5.2 overview, before the gap/surplus breakdown
 - Content: Two-circle Venn diagram: Curriculum skills (C), Job market skills (J), overlap, gap, and surplus regions labeled with counts
 - Status: ★ Simple to create with matplotlib or draw.io
-- Caption: *Figure 5.4. ESCO concept set relationships: curriculum (C = 329), job market (J = 527), overlap (133), gap (394), surplus (196).*
+- Caption: *Figure 5.4. ESCO concept set relationships: curriculum (C = 332), job market (J = 326), overlap (107), gap (219), surplus (225).*
 
 **Figure 5.5 — Top Skills by IT Role (heatmap)**
 - Location: Section 5.5 (role-level analysis)
@@ -88,10 +88,10 @@ Figures marked ✓ already exist as notebook outputs in `data/processed/`. Figur
 ## Chapter 6: Discussion
 
 **Figure 6.1 — Knowledge vs. Competence Split**
-- Location: Section 6.2.3, after the "70% knowledge / 30% applied" finding
+- Location: Section 6.2.3, after the knowledge-versus-competence finding
 - Content: Stacked bar chart showing ESCO concept type breakdown (knowledge vs. skill/competence) for: Overlap set, Gap set, Surplus set
 - Status: ★ Data in notebook outputs, create visualization
-- Caption: *Figure 6.1. ESCO concept type composition of the overlap, gap, and surplus sets. The overlap is knowledge-dominant (70%); the gap is competence-dominant (51%).*
+- Caption: *Figure 6.1. ESCO concept type composition of the overlap, gap, and surplus sets. The overlap is knowledge-dominant (77.6%); the gap is slightly competence-dominant (51.1%).*
 
 ---
 
