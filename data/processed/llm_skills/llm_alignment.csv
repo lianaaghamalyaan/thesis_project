@@ -1,0 +1,38 @@
+university,program_name,degree_level,role_groups,n_courses,n_relevant_jobs,program_skills,job_skills,overlap,role_coverage_pct,full_coverage_pct,coverage_delta,gap_count,surplus_count
+American University of Armenia,Computer Science,Bachelor,ALL,44,650,220,1556,48,3.1,3.1,0.0,1508,172
+American University of Armenia,Computer and Information Science,Master,ALL,56,650,247,1556,65,4.2,4.2,0.0,1491,182
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,31,110,145,345,39,11.3,2.9,8.4,306,106
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,38,292,148,753,8,1.1,0.8,0.2,745,140
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,30,99,124,439,11,2.5,1.3,1.2,428,113
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,36,292,145,753,28,3.7,2.8,1.0,725,117
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,36,292,145,753,28,3.7,2.8,1.0,725,117
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,40,650,166,1556,25,1.6,1.6,0.0,1531,141
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,40,650,166,1556,25,1.6,1.6,0.0,1531,141
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,16,18,79,100,10,10.0,2.1,7.9,90,69
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,45,315,168,834,35,4.2,3.7,0.5,799,133
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,45,315,168,834,35,4.2,3.7,0.5,799,133
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,21,650,90,1556,32,2.1,2.1,0.0,1524,58
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,66,315,246,714,60,8.4,5.4,3.0,654,186
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,66,315,246,714,60,8.4,5.4,3.0,654,186
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,16,166,45,573,6,1.0,0.4,0.7,567,39
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,76,650,205,1556,54,3.5,3.5,0.0,1502,151
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,76,650,205,1556,54,3.5,3.5,0.0,1502,151
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,60,315,130,834,25,3.0,2.5,0.5,809,105
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,22,99,79,439,18,4.1,2.7,1.4,421,61
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,47,650,140,1556,18,1.2,1.2,0.0,1538,122
+Université Française en Arménie,Computer Science,Bachelor,ALL,59,650,222,1556,53,3.4,3.4,0.0,1503,169
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,22,369,74,858,19,2.2,1.2,1.0,839,55
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,106,110,241,345,34,9.9,3.1,6.8,311,207
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,106,110,241,345,34,9.9,3.1,6.8,311,207
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,15,369,45,858,9,1.0,0.6,0.4,849,36
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,75,110,181,345,14,4.1,1.3,2.8,331,167
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,24,110,92,345,39,11.3,3.1,8.2,306,53
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,33,369,103,858,11,1.3,0.8,0.5,847,92
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,76,650,182,1556,29,1.9,1.9,0.0,1527,153
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,73,650,185,1556,28,1.8,1.8,0.0,1528,157
+Yerevan State University,Information Security,Bachelor,Security,72,18,180,100,6,6.0,1.9,4.1,94,174
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,33,315,115,834,34,4.1,3.0,1.1,800,81
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,33,99,110,439,23,5.2,3.0,2.2,416,87
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,33,316,119,778,19,2.4,2.1,0.3,759,100
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,33,369,103,858,10,1.2,0.6,0.5,848,93
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,91,33,260,152,6,3.9,1.4,2.5,146,254

@@ -1,0 +1,6454 @@
+{
+ "0": [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Web Archive",
+  "Template Development",
+  "Web Debugging",
+  "English",
+  "Russian"
+ ],
+ "1": [
+  "Serial Digital Interface (SDI)",
+  "HDMI",
+  "Video Camera Operation",
+  "Production Video Switchers",
+  "Chroma Keying",
+  "Broadcast Equipment",
+  "Audio-Visual (AV) Infrastructure",
+  "Audio-Visual Systems"
+ ],
+ "2": [
+  "Windows OS",
+  "Microsoft Office",
+  "Hardware Troubleshooting",
+  "Network Troubleshooting",
+  "Help Desk Software",
+  "Remote Desktop Applications",
+  "Operating System Support",
+  "Database Support"
+ ],
+ "3": [
+  "Low Voltage Data Cabling",
+  "Studio Equipment Installation",
+  "Camera Setup",
+  "Electrical Tools Operation",
+  "Soundproofing Installation",
+  "Woodworking",
+  "Metalworking",
+  "Equipment Maintenance"
+ ],
+ "4": [
+  "Microsoft Office",
+  "Windows OS",
+  "Equipment Maintenance",
+  "Preventive Maintenance",
+  "Hardware Installation",
+  "Equipment Testing",
+  "Inventory Management",
+  "Temperature Monitoring"
+ ],
+ "5": [
+  "FortiGate Firewall",
+  "QNAP NAS",
+  "Modbus",
+  "Virtual Private Network",
+  "VLAN",
+  "Moxa",
+  "RS-485",
+  "DNS"
+ ],
+ "6": [
+  "CCTV Systems",
+  "DVR/NVR Configuration",
+  "IP Cameras",
+  "Security Systems",
+  "Network Configuration",
+  "Cable Installation",
+  "Alarm Systems",
+  "Hardware Troubleshooting"
+ ],
+ "7": [
+  ".NET Core",
+  "C#",
+  "REST APIs",
+  "PostgreSQL",
+  "AWS",
+  "OAuth2",
+  "JWT",
+  "SQL Server"
+ ],
+ "8": [
+  "Next.js",
+  "React.js",
+  "TypeScript",
+  "Progressive Web Apps (PWA)",
+  "GraphQL",
+  "REST APIs",
+  "AWS",
+  "CI/CD"
+ ],
+ "9": [
+  "1C ERP",
+  "1C Accounting 8.3",
+  "XML",
+  "JSON",
+  "CommerceML",
+  "Microsoft Excel",
+  "API Integration",
+  "CMS"
+ ],
+ "10": [
+  "Network Infrastructure (LAN/WAN/VLAN)",
+  "DHCP",
+  "DNS",
+  "Server Management",
+  "Firewall Configuration",
+  "Disaster Recovery",
+  "Data Backup",
+  "iiko"
+ ],
+ "11": [
+  "1C ERP",
+  "1C Configuration",
+  "ERP Systems",
+  "Business Process Automation",
+  "System Administration",
+  "Technical Support",
+  "System Optimization",
+  "Business Process Analysis"
+ ],
+ "12": [
+  "SQL",
+  "ERP Systems",
+  "Data Mapping",
+  "Data Reconciliation",
+  "Business Intelligence",
+  "Data Transformation",
+  "Finance Automation",
+  "Data Analysis"
+ ],
+ "13": [
+  "Python",
+  "SQL",
+  "ETL/ELT",
+  "Data Warehousing",
+  "Data Pipeline Development",
+  "Cloud Infrastructure",
+  "Data Quality Monitoring",
+  "Data Architecture"
+ ],
+ "14": [
+  "Nuxt.js",
+  "Vue.js 3",
+  "TypeScript",
+  "PHP",
+  "Node.js",
+  "Docker",
+  "SQL",
+  "Symfony"
+ ],
+ "15": [
+  "Python",
+  "JavaScript",
+  "REST APIs",
+  "Frontend Development",
+  "Backend Development",
+  "Full-Stack Development",
+  "Scalable Architecture",
+  "System Integration"
+ ],
+ "16": [
+  "ServiceTitan",
+  "SaaS",
+  "Technical Support",
+  "Software Troubleshooting",
+  "Help Desk",
+  "Ticketing Systems",
+  "Windows OS",
+  "macOS"
+ ],
+ "17": [
+  "Windows Server",
+  "Linux Server",
+  "Active Directory",
+  "VMware",
+  "PowerShell",
+  "Microsoft SQL Server",
+  "TCP/IP",
+  "DNS/DHCP"
+ ],
+ "18": [
+  "Penetration Testing",
+  "Active Directory",
+  "Kali Linux",
+  "Burp Suite",
+  "Metasploit",
+  "Web Application Security",
+  "Network Security",
+  "Privilege Escalation"
+ ],
+ "19": [
+  "Angular",
+  "TypeScript",
+  "HTML",
+  "CSS",
+  "Firebase",
+  "Node.js",
+  "Python",
+  "Git"
+ ],
+ "20": [
+  "Large Language Models",
+  "Python",
+  "Hugging Face Transformers",
+  "FastAPI",
+  "Docker",
+  "Fine-Tuning (LoRA/QLoRA/PEFT)",
+  "vLLM",
+  "DeepSpeed"
+ ],
+ "21": [
+  "Python",
+  "TypeScript",
+  "NestJS",
+  "C#",
+  ".NET",
+  "AWS",
+  "Microsoft Azure",
+  "REST APIs"
+ ],
+ "22": [
+  "Python",
+  "Large Language Models",
+  "Multi-Agent Orchestration",
+  "LangGraph",
+  "OpenAI API",
+  "Distributed Systems",
+  "Recommendation Systems",
+  "CrewAI"
+ ],
+ "23": [
+  "Java",
+  "Spring Framework",
+  "Apache Kafka",
+  "AWS",
+  "NoSQL",
+  "Docker",
+  "React.js",
+  "Kotlin"
+ ],
+ "24": [
+  "Node.js",
+  "SQL",
+  "Object-Oriented Programming",
+  "SaaS",
+  "Database Design",
+  "Stored Procedures",
+  "Software Development Life Cycle",
+  "Microservices"
+ ],
+ "25": [
+  "SQL",
+  "Python",
+  "Data Analysis",
+  "Statistical Modeling",
+  "A/B Testing",
+  "Data Visualization",
+  "Dashboard Development",
+  "Forecasting"
+ ],
+ "26": [
+  "SQL",
+  "Python",
+  "Data Analysis",
+  "Statistical Modeling",
+  "A/B Testing",
+  "Data Visualization",
+  "Dashboard Development",
+  "Forecasting"
+ ],
+ "27": [
+  "Embedded Systems",
+  "Digital Signal Processing",
+  "C",
+  "Audio Processing",
+  "Speech Processing",
+  "Acoustic Echo Cancellation",
+  "Noise Reduction",
+  "DSP Algorithm Optimization"
+ ],
+ "28": [
+  "Kubernetes",
+  "AWS",
+  "Google Cloud Platform",
+  "Terraform",
+  "Python",
+  "Bash",
+  "Go",
+  "Infrastructure as Code"
+ ],
+ "29": [
+  "Python",
+  "Pandas",
+  "NumPy",
+  "Time Series Analysis",
+  "Data Cleaning",
+  "Data Reconciliation",
+  "Elexon API",
+  "Master Data Management"
+ ],
+ "30": [
+  "PostgreSQL",
+  "ClickHouse",
+  "Kubernetes",
+  "Terraform",
+  "Ansible",
+  "Apache Airflow",
+  "MongoDB",
+  "Python"
+ ],
+ "31": [
+  "Application Security",
+  "Static Application Security Testing",
+  "Software Composition Analysis",
+  "Bug Bounty Programs",
+  "Cloud Security",
+  "Mobile Security",
+  "Agile",
+  "Data Protection"
+ ],
+ "32": [
+  "Azure DevOps",
+  "CI/CD",
+  "DevOps",
+  "Networking",
+  "Security",
+  "Compliance",
+  "Release Management",
+  "Automation"
+ ],
+ "33": [
+  "Python",
+  "C++",
+  "Test Automation",
+  "3D Geometry Algorithms",
+  "Git",
+  "CI/CD",
+  "Jenkins",
+  "AWS"
+ ],
+ "34": [
+  "Python",
+  "AWS",
+  "DevOps",
+  "Test Automation",
+  "Amazon EC2",
+  "Amazon S3",
+  "AWS Lambda",
+  "Computational Geometry"
+ ],
+ "35": [
+  "Python",
+  "Pytest",
+  "Test Automation",
+  "AWS",
+  "CI/CD",
+  "API Testing",
+  "Backend Testing",
+  "UI Testing"
+ ],
+ "36": [
+  "C++",
+  "C++17",
+  "3D CAD Software",
+  "Cross-Platform Development",
+  "Agile",
+  "Medical Device Software Development",
+  "Software Architecture",
+  "Test Coverage"
+ ],
+ "37": [
+  "TypeScript",
+  "Cypress",
+  "Playwright",
+  "CI/CD",
+  "GitHub",
+  "Bamboo",
+  "Test Automation",
+  "Software Quality Assurance"
+ ],
+ "38": [
+  "Python",
+  "Test Automation",
+  "AWS",
+  "CI/CD",
+  "API Testing",
+  "Object-Oriented Programming",
+  "Backend Testing",
+  "UI Testing"
+ ],
+ "39": [
+  "Java",
+  "JavaScript",
+  "REST APIs",
+  "Low-Code/No-Code Platforms",
+  "AI Integration",
+  "DevOps",
+  "Enterprise Web Applications",
+  "Automated Testing"
+ ],
+ "40": [
+  "Node.js",
+  "React.js",
+  "TypeScript",
+  "JavaScript",
+  "PHP",
+  "Laravel",
+  "REST APIs",
+  "SQL"
+ ],
+ "41": [
+  "Oracle Database",
+  "PostgreSQL",
+  "MongoDB",
+  "Microsoft SQL Server",
+  "Oracle Data Guard",
+  "RMAN",
+  "pgBackRest",
+  "Prometheus"
+ ],
+ "42": [
+  "C#",
+  ".NET",
+  "Microservices",
+  "REST APIs",
+  "SQL",
+  "NoSQL",
+  "OAuth2",
+  "Clean Architecture"
+ ],
+ "43": [
+  "API Design",
+  "Core Banking Systems",
+  "Oracle Banking",
+  "REST APIs",
+  "Requirements Engineering",
+  "Backlog Management",
+  "User Acceptance Testing",
+  "Integration Analysis"
+ ],
+ "44": [
+  "Robotics",
+  "Internet of Things",
+  "Hardware Engineering",
+  "Manufacturing Resource Planning",
+  "Prototype Development",
+  "Quality Assurance",
+  "Embedded Systems",
+  "Automation"
+ ],
+ "45": [
+  "C",
+  "Git",
+  "Linux Kernel",
+  "QEMU",
+  "TCP/IP",
+  "Ethernet",
+  "KVM",
+  "ARM"
+ ],
+ "46": [
+  "Python",
+  "REST APIs",
+  "WebSocket",
+  "Streaming Systems",
+  "Low-Latency Systems",
+  "AI Infrastructure",
+  "Audio Processing",
+  "Backend Services"
+ ],
+ "47": [
+  "Cypress",
+  "TypeScript",
+  "JavaScript",
+  "API Testing",
+  "Playwright",
+  "CI/CD",
+  "Regression Testing",
+  "Test Automation"
+ ],
+ "48": [
+  "Mobile Application Development",
+  "Web Application Development",
+  "AI Workflows",
+  "Technical Architecture",
+  "Requirements Engineering",
+  "User Stories",
+  "Software Estimation",
+  "API Integration"
+ ],
+ "49": [
+  "Go",
+  "Microservices",
+  "REST APIs",
+  "PostgreSQL",
+  "MySQL",
+  "Event-Driven Architecture",
+  "Prometheus",
+  "Grafana"
+ ],
+ "50": [
+  "DITA Open Toolkit",
+  "XSLT",
+  "XML",
+  "AEM Guides",
+  "PDF Publishing",
+  "DITA",
+  "Content Management Systems",
+  "Publishing Pipeline Automation"
+ ],
+ "51": [
+  "Snowflake",
+  "SQL",
+  "Azure Data Factory",
+  "ETL",
+  "REST APIs",
+  "dbt",
+  "Python",
+  "Apache Parquet"
+ ],
+ "52": [
+  "Access Control",
+  "Identity and Access Management",
+  "User Account Management",
+  "Information Security",
+  "Security Auditing",
+  "Incident Response",
+  "Vulnerability Analysis",
+  "Compliance Management"
+ ],
+ "53": [
+  "Google Workspace",
+  "Okta",
+  "SAML",
+  "OpenID Connect",
+  "SCIM",
+  "Active Directory",
+  "LDAP",
+  "AWS"
+ ],
+ "54": [
+  "Python",
+  "Microsoft Excel",
+  "Tableau",
+  "Power BI",
+  "Data Visualization",
+  "People Analytics",
+  "Data Modeling",
+  "SQL"
+ ],
+ "55": [
+  "Okta",
+  "Google Workspace",
+  "Identity and Access Management",
+  "Single Sign-On",
+  "Multi-Factor Authentication",
+  "Okta Lifecycle Management",
+  "API Access Management",
+  "Okta Universal Directory"
+ ],
+ "56": [
+  "Kubernetes",
+  "Docker",
+  "Helm",
+  "Argo CD",
+  "GitLab CI/CD",
+  "Jenkins",
+  "Python",
+  "Argo Rollouts"
+ ],
+ "57": [
+  "Application Security",
+  "CI/CD Pipelines",
+  "Python",
+  "JavaScript",
+  "TypeScript",
+  "Terraform",
+  "AWS",
+  "GitLab"
+ ],
+ "58": [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Sass",
+  "CSS Animation",
+  "Figma",
+  "Webpack",
+  "GSAP"
+ ],
+ "59": [
+  "SQL",
+  "Python",
+  "R",
+  "Machine Learning",
+  "Statistical Methods",
+  "Predictive Analytics",
+  "Data Analysis",
+  "Prescriptive Analytics"
+ ],
+ "60": [
+  "Node.js",
+  "NestJS",
+  "TypeScript",
+  "JavaScript",
+  "REST APIs",
+  "WebSockets",
+  "MySQL",
+  "RabbitMQ"
+ ],
+ "61": [
+  "Artificial Intelligence",
+  "Machine Learning",
+  "Large Language Models",
+  "CI/CD",
+  "Test Automation",
+  "Python",
+  "Software Development Life Cycle (SDLC)",
+  "Data Pipelines"
+ ],
+ "62": [
+  "TypeScript",
+  "Playwright",
+  "JavaScript",
+  "Selenium",
+  "Cypress",
+  "GitHub Actions",
+  "API Testing",
+  "CI/CD"
+ ],
+ "63": [
+  "PHP",
+  "Symfony",
+  "Go",
+  "REST APIs",
+  "Backend Development",
+  "Microservices",
+  "DevOps",
+  "Software Architecture"
+ ],
+ "64": [
+  "Playwright",
+  "Test Automation",
+  "CI/CD",
+  "Bitbucket Pipelines",
+  "Allure",
+  "DevOps",
+  "JavaScript",
+  "Manual Testing"
+ ],
+ "65": [
+  "TypeScript",
+  "React Native",
+  "NestJS",
+  "PostgreSQL",
+  "GraphQL",
+  "Next.js",
+  "Prisma",
+  "Python"
+ ],
+ "66": [
+  "Design for Testability (DFT)",
+  "ASIC Design",
+  "Design Verification",
+  "Python",
+  "Tcl",
+  "Perl",
+  "Verdi",
+  "SystemVerilog"
+ ],
+ "67": [
+  "Static Timing Analysis",
+  "SDC",
+  "PrimeTime",
+  "ASIC Design",
+  "Design for Test (DFT)",
+  "Tcl",
+  "Python",
+  "Perl"
+ ],
+ "68": [
+  "SystemVerilog",
+  "UVM",
+  "ASIC Design Verification",
+  "Python",
+  "Tcl",
+  "Perl",
+  "Verdi",
+  "DVE"
+ ],
+ "69": [
+  "SystemVerilog",
+  "UVM",
+  "Python",
+  "Tcl",
+  "Perl",
+  "Verdi",
+  "JTAG",
+  "Functional Coverage"
+ ],
+ "70": [
+  "Verilog",
+  "SystemVerilog",
+  "RTL Design",
+  "Design for Test (DFT)",
+  "Formal Verification",
+  "Synthesis",
+  "Clock Domain Crossing (CDC)",
+  "SoC Integration"
+ ],
+ "71": [
+  "RTL-to-GDSII",
+  "Physical Design",
+  "Clock Tree Synthesis",
+  "Static Timing Analysis",
+  "Formal Verification",
+  "Floorplanning",
+  "EM/IR Analysis",
+  "Gate-Level Netlist Synthesis"
+ ],
+ "72": [
+  "VLSI Design",
+  "ASIC Implementation",
+  "Static Timing Analysis",
+  "Physical Design",
+  "Design Rule Check (DRC)",
+  "Layout Versus Schematic (LVS)",
+  "EM/IR Analysis",
+  "Floorplanning"
+ ],
+ "73": [
+  "Python",
+  "Tcl",
+  "RTL Design",
+  "SoC Design",
+  "ASIC Design",
+  "Design for Test (DFT)",
+  "Physical Design",
+  "VLSI"
+ ],
+ "74": [
+  "ASIC Physical Design",
+  "Fusion Compiler",
+  "Innovus",
+  "PrimeTime",
+  "Static Timing Analysis",
+  "RTL-to-GDSII",
+  "Physical Verification",
+  "Power Analysis"
+ ],
+ "75": [
+  "RTL-to-GDSII",
+  "Clock Tree Synthesis",
+  "Static Timing Analysis",
+  "Floorplanning",
+  "Synthesis",
+  "EM/IR Analysis",
+  "Physical Verification",
+  "Power Performance Area (PPA) Optimization"
+ ],
+ "76": [
+  "Analog IC Layout Design",
+  "Cadence Virtuoso",
+  "Calibre DRC",
+  "Calibre LVS",
+  "Design Rule Check (DRC)",
+  "Layout Versus Schematic (LVS)",
+  "Parasitic Extraction",
+  "Semiconductor Process Technology"
+ ],
+ "77": [
+  "Python",
+  "Tcl",
+  "ASIC Design",
+  "Digital Design",
+  "Design for Test (DFT)",
+  "Physical Design",
+  "RTL (Register Transfer Level)",
+  "VLSI"
+ ],
+ "78": [
+  "CAD Design",
+  "Standard Cell Characterization",
+  "EDA Tools",
+  "CMOS Process",
+  "Circuit Board Layout",
+  "Signal Integrity",
+  "Physical Implementation",
+  "Hardware Automation"
+ ],
+ "79": [
+  "ASIC Design",
+  "Process Design Kits (PDK)",
+  "CAD Design",
+  "IP Integration",
+  "Standard Cell Libraries",
+  "Physical Design",
+  "Version Control",
+  "EDA Tools"
+ ],
+ "80": [
+  "Static Timing Analysis",
+  "PrimeTime",
+  "SDC",
+  "Tcl",
+  "Python",
+  "Perl",
+  "ASIC Design",
+  "Clock Domain Crossing"
+ ],
+ "81": [
+  "Cadence Virtuoso",
+  "Calibre DRC",
+  "Calibre LVS",
+  "Full Custom Layout Design",
+  "CMOS Process",
+  "Standard Cell Design",
+  "Signal Integrity",
+  "Circuit Board Layout"
+ ],
+ "82": [
+  "Memory BIST (MBIST)",
+  "Design for Test (DFT)",
+  "Scan Chain Design",
+  "Built-In Self-Test (BIST)",
+  "Test Access Mechanisms (TAM)",
+  "ASIC Design",
+  "Test Pattern Generation",
+  "Automated Test Equipment (ATE)"
+ ],
+ "83": [
+  "Memory BIST (MBIST)",
+  "Design for Test (DFT)",
+  "Automatic Test Pattern Generation (ATPG)",
+  "ASIC Design",
+  "RTL Design",
+  "Python",
+  "Tcl",
+  "Synopsys DFT Compiler"
+ ],
+ "84": [
+  "Static Timing Analysis",
+  "SDC",
+  "Tcl",
+  "Python",
+  "Physical Design",
+  "ASIC Design",
+  "EDA Tools",
+  "SoC Design"
+ ],
+ "85": [
+  "Static Timing Analysis",
+  "PrimeTime",
+  "SDC",
+  "Automatic Test Pattern Generation (ATPG)",
+  "Scan Testing",
+  "Timing Constraints",
+  "VLSI Design",
+  "RTL Design"
+ ],
+ "86": [
+  "Cadence Virtuoso",
+  "Calibre DRC/LVS",
+  "Analog IC Layout Design",
+  "Design Rule Check (DRC)",
+  "Layout Versus Schematic (LVS)",
+  "Parasitic Extraction",
+  "Analog Circuit Design",
+  "Semiconductor Technology"
+ ],
+ "87": [
+  "RTL-to-GDSII",
+  "Clock Tree Synthesis",
+  "Static Timing Analysis",
+  "Floorplanning",
+  "Gate-Level Netlist Synthesis",
+  "Formal Verification",
+  "EM/IR Analysis",
+  "Physical Verification"
+ ],
+ "88": [
+  "Static Timing Analysis",
+  "Place and Route",
+  "Physical Verification",
+  "Formal Verification",
+  "RTL to GDS",
+  "VLSI Design",
+  "Synopsys EDA Tools",
+  "Cadence EDA Tools"
+ ],
+ "89": [
+  "SystemVerilog",
+  "Verilog",
+  "ASIC Design",
+  "RTL Design",
+  "Python",
+  "Tcl",
+  "AMBA (Advanced Microcontroller Bus Architecture)",
+  "Formal Verification"
+ ],
+ "90": [
+  "Static Timing Analysis",
+  "SDC",
+  "Tcl",
+  "Python",
+  "ASIC Design",
+  "Multi-Mode Multi-Corner (MMMC)",
+  "Physical Design",
+  "Makefiles"
+ ],
+ "91": [
+  "Python",
+  "Large Language Models",
+  "AI Agents",
+  "REST APIs",
+  "Docker",
+  "Tcl",
+  "Shell Scripting",
+  "Backend Development"
+ ],
+ "92": [
+  "Python",
+  "Large Language Models",
+  "AI Agents",
+  "REST APIs",
+  "Tcl",
+  "Shell Scripting",
+  "Docker",
+  "Backend Development"
+ ],
+ "93": [
+  "Python",
+  "GitLab",
+  "Large Language Models",
+  "AI Agents",
+  "Linux",
+  "Requirements Engineering",
+  "Scripting",
+  "Workflow Automation"
+ ],
+ "94": [
+  "Python",
+  "Linux",
+  "PHP",
+  "Django",
+  "Flask",
+  "Angular",
+  "Claude",
+  "ChatGPT"
+ ],
+ "95": [
+  "Python",
+  "Linux",
+  "AI Agents",
+  "Data Pipelines",
+  "Patch Management",
+  "Automation Infrastructure",
+  "CLI Development",
+  "DevOps"
+ ],
+ "96": [
+  "Linux",
+  "Jira",
+  "Linux Security",
+  "Business Systems Analysis",
+  "Quality Assurance",
+  "Product Ownership",
+  "Requirements Engineering",
+  "Open-Source Software"
+ ],
+ "97": [
+  "Linux Kernel Development",
+  "Python",
+  "Go",
+  "Bash",
+  "Patch Backporting",
+  "CVE Analysis",
+  "RPM Package Management",
+  "Debian"
+ ],
+ "98": [
+  "Manual Testing",
+  "UI Testing",
+  "Business Logic Testing",
+  "Test Case Design",
+  "Linux",
+  "QA Methodologies",
+  "Edge Case Testing",
+  "User Journey Mapping"
+ ],
+ "99": [
+  "PostgreSQL",
+  "ClickHouse",
+  "Kubernetes",
+  "Terraform",
+  "Ansible",
+  "Apache Airflow",
+  "MongoDB",
+  "Redis"
+ ],
+ "100": [
+  "Linux",
+  "C",
+  "Kernel Development",
+  "Web Server Optimization",
+  "Virtualization",
+  "MySQL",
+  "File System Security",
+  "Performance Optimization"
+ ],
+ "101": [
+  "Linux",
+  "Python",
+  "PHP",
+  "Django",
+  "Flask",
+  "Angular",
+  "CentOS",
+  "Ubuntu"
+ ],
+ "102": [
+  "Python",
+  "Linux",
+  "CI/CD",
+  "Git",
+  "Cybersecurity",
+  "Machine Learning",
+  "Data Engineering",
+  "System Design"
+ ],
+ "103": [
+  "Node.js",
+  "JavaScript",
+  "TypeScript",
+  "REST APIs",
+  "Agile",
+  "Lean Methodology",
+  "Databases",
+  "E-Commerce Platforms"
+ ],
+ "104": [
+  "Node.js",
+  "React",
+  "Express.js",
+  "NestJS",
+  "MySQL",
+  "MongoDB",
+  "Redux-Saga",
+  "Docker"
+ ],
+ "105": [
+  "Manual Testing",
+  "API Testing",
+  "Postman",
+  "SQL",
+  "Jira",
+  "Regression Testing",
+  "Agile/Scrum",
+  "Cross-Browser Testing"
+ ],
+ "106": [
+  "Test Automation",
+  "Java",
+  "JavaScript",
+  "Python",
+  "TypeScript",
+  "Postman",
+  "REST APIs",
+  "Agile/Scrum"
+ ],
+ "107": [
+  "Playwright",
+  "Test Automation",
+  "Manual Testing",
+  "SQL",
+  "BigQuery",
+  "Amazon Redshift",
+  "Software Testing Methodologies",
+  "Cross-Browser Testing"
+ ],
+ "108": [
+  "TypeScript",
+  "Playwright",
+  "Cypress",
+  "Selenium",
+  "GitHub Actions",
+  "Jenkins",
+  "SQL",
+  "Postman"
+ ],
+ "109": [
+  "AWS",
+  "Pulumi",
+  "Docker",
+  "GitHub Actions",
+  "TypeScript",
+  "Python",
+  "PostgreSQL",
+  "Terraform"
+ ],
+ "110": [
+  "Python",
+  "PHP",
+  "React",
+  "WordPress",
+  "Agile",
+  "Scrum",
+  "Backend Engineering",
+  "Full-Stack Development"
+ ],
+ "111": [
+  "Google Cloud Platform",
+  "Vertex AI",
+  "Kubernetes",
+  "Docker",
+  "Python",
+  "BigQuery",
+  "CI/CD",
+  "MLOps"
+ ],
+ "112": [
+  "Python",
+  "C#",
+  "Generative AI",
+  "Large Language Models",
+  "RAG Pipelines",
+  "Prompt Engineering",
+  ".NET",
+  "SQL"
+ ],
+ "113": [
+  "Playwright",
+  "TypeScript",
+  "JavaScript",
+  "API Testing",
+  "SQL",
+  "Postman",
+  "CI/CD",
+  "REST APIs"
+ ],
+ "114": [
+  "Figma",
+  "UX Design",
+  "UI Design",
+  "React",
+  "AI-Powered Workflows",
+  "Prototyping",
+  "Frontend Development",
+  "Code Generation"
+ ],
+ "115": [
+  "Figma",
+  "Adobe Creative Cloud",
+  "Graphic Design",
+  "Digital Design",
+  "Print Design",
+  "Landing Page Design",
+  "Social Media Design",
+  "AI Tools"
+ ],
+ "116": [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Shopify",
+  "Node.js",
+  "Tailwind CSS",
+  "Playwright",
+  "AWS"
+ ],
+ "117": [
+  "Node.js",
+  "TypeScript",
+  "Next.js",
+  "PostgreSQL",
+  "GraphQL",
+  "WebSockets",
+  "Apache Kafka",
+  "REST APIs"
+ ],
+ "118": [
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "TypeScript",
+  "JavaScript",
+  "Redux",
+  "REST APIs",
+  "CSS3"
+ ],
+ "119": [
+  "React",
+  "TypeScript",
+  "Node.js",
+  "PostgreSQL",
+  "Redis",
+  "AWS",
+  "Terraform",
+  "CI/CD"
+ ],
+ "120": [
+  "Python",
+  "OpenAI API",
+  "Retrieval-Augmented Generation",
+  "Prompt Engineering",
+  ".NET",
+  "Docker",
+  "Kubernetes",
+  "SQL"
+ ],
+ "121": [
+  "Node.js",
+  "AWS",
+  "Microservices",
+  "Amazon DynamoDB",
+  "Amazon SQS",
+  "AWS Lambda",
+  "Amazon RDS",
+  "Amazon EC2"
+ ],
+ "122": [
+  "React.js",
+  "Next.js",
+  "TypeScript",
+  "Tailwind CSS",
+  "JavaScript",
+  "Redux",
+  "Monorepos",
+  "Node.js"
+ ],
+ "123": [
+  "Playwright",
+  "TypeScript",
+  "CI/CD",
+  "GitHub Actions",
+  "Jenkins",
+  "AWS",
+  "Google Cloud Platform",
+  "Agile/Scrum"
+ ],
+ "124": [
+  "API Integration",
+  "Cloud Platforms",
+  "Data Analysis",
+  "Financial Data Services",
+  "REST APIs",
+  "Troubleshooting",
+  "FinTech",
+  "Stock Data Analysis"
+ ],
+ "125": [
+  "Webflow",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Figma",
+  "A/B Testing",
+  "Responsive Design",
+  "Landing Page Development"
+ ],
+ "126": [
+  "Airtable",
+  "Zapier",
+  "Looker Studio",
+  "Jira",
+  "Trello",
+  "Notion",
+  "SaaS",
+  "APIs"
+ ],
+ "127": [
+  "Cloud Infrastructure",
+  "Storage Solutions",
+  "Automation",
+  "Scripting",
+  "Security Policies",
+  "High Availability",
+  "Monitoring",
+  "Deployment"
+ ],
+ "128": [
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "Python",
+  "Machine Learning",
+  "Large Language Models",
+  "REST APIs",
+  "UI Component Libraries"
+ ],
+ "129": [
+  "UX Design",
+  "Product Design",
+  "Prototyping",
+  "User Research",
+  "Information Architecture",
+  "Wireframing",
+  "E-Commerce",
+  "Search Systems"
+ ],
+ "130": [
+  "Electrical Systems",
+  "Telecommunications Systems",
+  "Cable Installation",
+  "Structured Cabling",
+  "Equipment Installation",
+  "Technical Documentation",
+  "System Testing",
+  "Safety Procedures"
+ ],
+ "131": [
+  "Lua",
+  "Python",
+  "Go",
+  "C++",
+  "Java",
+  "Node.js",
+  "CI/CD",
+  "Real-Time Systems"
+ ],
+ "132": [
+  "Jira",
+  "Confluence",
+  "REST APIs",
+  "Jira Query Language",
+  "Jira Administration",
+  "Workflow Configuration",
+  "Dashboard Configuration",
+  "User Management"
+ ],
+ "133": [
+  ".NET Framework",
+  "T-SQL",
+  "Apache Kafka",
+  "AWS",
+  "ISO 8583",
+  "SQL Server",
+  "ASP.NET Core",
+  "JavaScript"
+ ],
+ "134": [
+  "Java",
+  "Quarkus",
+  "Hibernate",
+  "REST APIs",
+  "Docker",
+  "Elasticsearch",
+  "MySQL",
+  "Angular"
+ ],
+ "135": [
+  ".NET",
+  "ASP.NET",
+  "C#",
+  "Git",
+  "Design Patterns",
+  "Application Architecture",
+  "Database Management",
+  "AI Tools"
+ ],
+ "136": [
+  "Kotlin",
+  "Android Studio",
+  "Android Development",
+  "Android Jetpack",
+  "Object-Oriented Programming",
+  "REST APIs",
+  "Git",
+  "Data Structures"
+ ],
+ "137": [
+  "C#",
+  ".NET",
+  "Test Automation",
+  "Git",
+  "Software Testing",
+  "NUnit",
+  "Selenium",
+  "Test Planning"
+ ],
+ "138": [
+  "Java",
+  "Test Automation",
+  "Git",
+  "Software Testing",
+  "Test Planning",
+  "Functional Testing",
+  "Non-Functional Testing",
+  "Testing Frameworks"
+ ],
+ "139": [
+  "JavaScript",
+  "Test Automation",
+  "Software Testing",
+  "Git",
+  "Testing Pyramid",
+  "Test Case Design",
+  "Functional Testing",
+  "Non-Functional Testing"
+ ],
+ "140": [
+  "Linux",
+  "Docker",
+  "Git",
+  "Kubernetes",
+  "Bash",
+  "Python",
+  "Networking",
+  "Hypervisor"
+ ],
+ "141": [
+  "Java",
+  "Java Multithreading",
+  "Spring Core",
+  "Spring MVC",
+  "SQL",
+  "Java Database Connectivity (JDBC)",
+  "JavaScript",
+  "HTML"
+ ],
+ "142": [
+  "Java",
+  "Spring Framework",
+  "Object-Oriented Programming",
+  "SQL",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Data Structures"
+ ],
+ "143": [
+  "Python",
+  "Data Structures",
+  "Algorithms",
+  "Databases",
+  "Cloud Platforms",
+  "Generative AI",
+  "Software Development",
+  "AI Tools"
+ ],
+ "144": [
+  "SAP FICO",
+  "SAP S/4HANA Cloud",
+  "SAP Financial Accounting",
+  "SAP Controlling",
+  "SAP Document and Reporting Compliance",
+  "E-Invoicing",
+  "Parallel Accounting",
+  "SAP Business Technology Platform"
+ ],
+ "145": [
+  "Software Testing",
+  "Agile",
+  "Test Design Techniques",
+  "Defect Reporting",
+  "Requirements Analysis",
+  "API Testing",
+  "SQL",
+  "Prompt Engineering"
+ ],
+ "146": [
+  "Software Testing",
+  "Test Planning",
+  "Test Design Techniques",
+  "Defect Reporting",
+  "Agile",
+  "API Testing",
+  "Databases",
+  "Requirements Analysis"
+ ],
+ "147": [
+  "Python",
+  "Large Language Models",
+  "LangChain",
+  "LangGraph",
+  "Natural Language Processing",
+  "n8n",
+  "OpenAI API",
+  "Hugging Face"
+ ],
+ "148": [
+  "Linux",
+  "Kubernetes",
+  "Docker",
+  "Computer Networks",
+  "Technical Support",
+  "System Log Analysis",
+  "Application Troubleshooting",
+  "SLA Management"
+ ],
+ "149": [
+  "Python",
+  "Pytest",
+  "REST APIs",
+  "FIX Protocol",
+  "Linux",
+  "Jira",
+  "Agile",
+  "Scrum"
+ ],
+ "150": [
+  "Python",
+  "Pytest",
+  "API Testing",
+  "Linux",
+  "Jira",
+  "Qase",
+  "Agile/Scrum",
+  "Automated Trading Systems"
+ ],
+ "151": [
+  "Financial Trading Platforms",
+  "System Monitoring",
+  "B2B Financial Infrastructure",
+  "ETFs",
+  "Futures",
+  "Options Trading",
+  "Multi-Currency Systems",
+  "Trading Operations"
+ ],
+ "152": [
+  "Java",
+  "Spring Boot",
+  "Angular",
+  "Kubernetes",
+  "REST APIs",
+  "MySQL",
+  "PostgreSQL",
+  "CI/CD"
+ ],
+ "153": [
+  "Java",
+  "Quarkus",
+  "Hibernate",
+  "Docker",
+  "Elasticsearch",
+  "MySQL",
+  "Angular",
+  "REST APIs"
+ ],
+ "154": [
+  "Enterprise Architecture",
+  "Solution Architecture",
+  "Pre-Sales",
+  "Business Operations Systems",
+  "Portfolio Management",
+  "Delivery Management",
+  "Automation",
+  "Product Management"
+ ],
+ "155": [
+  "PHP",
+  "MySQL",
+  "Microservices",
+  "REST APIs",
+  "High-Load Systems",
+  "Database Optimization",
+  "SaaS",
+  "B2B Software Development"
+ ],
+ "156": [
+  "Functional Testing",
+  "API Testing",
+  "Postman",
+  "SQL",
+  "Jira",
+  "Confluence",
+  "Mobile Application Testing",
+  "Regression Testing"
+ ],
+ "157": [
+  "Python",
+  "Machine Learning",
+  "Exploratory Data Analysis",
+  "Feature Engineering",
+  "Data Visualization",
+  "SQL",
+  "Clustering",
+  "Version Control"
+ ],
+ "158": [
+  "SQL",
+  "API Design",
+  "Microservices",
+  "System Architecture",
+  "Relational Databases",
+  "Non-Relational Databases",
+  "Microsoft Visio",
+  "Forex Trading Platforms"
+ ],
+ "159": [
+  "Laravel",
+  "Vue.js",
+  "PHP",
+  "JavaScript",
+  "MySQL",
+  "CSS",
+  "Git",
+  "React"
+ ],
+ "160": [
+  "Laravel",
+  "PHP",
+  "MySQL",
+  "JavaScript",
+  "Vue.js",
+  "React",
+  "Bootstrap",
+  "AJAX"
+ ],
+ "161": [
+  "Next.js",
+  "Node.js",
+  "JavaScript",
+  "React.js",
+  "TypeScript",
+  "Vue.js",
+  "Responsive Design",
+  "Cross-Browser Development"
+ ],
+ "162": [
+  "QA Testing",
+  "Test Planning",
+  "Test Case Design",
+  "Defect Tracking",
+  "Document Management Systems",
+  "Software Testing Methodologies",
+  "Testing Tools",
+  "Software Development Life Cycle"
+ ],
+ "163": [
+  "Figma",
+  "Adobe XD",
+  "Adobe Photoshop",
+  "Adobe Illustrator",
+  "UI/UX Design",
+  "Mobile Application Design",
+  "Interaction Design",
+  "User Interface Design"
+ ],
+ "164": [
+  "Backend Development",
+  "Frontend Development",
+  "Mobile Development",
+  "System Architecture",
+  "Cross-Functional Team Leadership",
+  "Quality Assurance",
+  "Artificial Intelligence",
+  "B2B Platform Development"
+ ],
+ "165": [
+  "Python",
+  "Backend Development",
+  "Microservices",
+  "REST APIs",
+  "Distributed Systems",
+  "Machine Learning",
+  "Cloud Platforms",
+  "Database Design"
+ ],
+ "166": [
+  "Product Design",
+  "UX Design",
+  "UI Design",
+  "Mobile-First Design",
+  "Figma",
+  "Prototyping",
+  "User Research",
+  "Design Systems"
+ ],
+ "167": [
+  "Machine Learning",
+  "Python",
+  "Large Language Models",
+  "Generative AI",
+  "MLOps",
+  "Feature Engineering",
+  "Data Science",
+  "Deep Learning"
+ ],
+ "168": [
+  "React",
+  "JavaScript",
+  "C#",
+  ".NET Core",
+  "REST APIs",
+  "Microsoft Azure",
+  "Azure Functions",
+  "Azure App Services"
+ ],
+ "169": [
+  "Machine Learning",
+  "MLOps",
+  "Python",
+  "Data Pipelines",
+  "Machine Learning Model Deployment",
+  "Machine Learning Architecture Design",
+  "Data Science",
+  "Cloud Infrastructure"
+ ],
+ "170": [
+  "Java",
+  "Spring Framework",
+  "Agile",
+  "Software Design",
+  "Requirements Analysis",
+  "Debugging",
+  "Technical Specifications",
+  "Software Development Life Cycle"
+ ],
+ "171": [
+  "C#",
+  "Selenium",
+  "Ranorex",
+  "Azure DevOps",
+  "Jira",
+  "Test Automation",
+  "Object-Oriented Design",
+  "Microsoft Azure"
+ ],
+ "172": [
+  "SQL",
+  "Linux",
+  "Windows OS",
+  "IBM i",
+  "Test Automation",
+  "Exploratory Testing",
+  "Non-Functional Testing",
+  "Scripting"
+ ],
+ "173": [
+  "Python",
+  "Distributed Systems",
+  "Low-Latency Systems",
+  "Microservices",
+  "REST APIs",
+  "Circuit Breakers",
+  "Real-Time Data Processing",
+  "Security Controls"
+ ],
+ "174": [
+  "C#",
+  "ASP.NET Core",
+  "Entity Framework Core",
+  "Dapper",
+  "REST APIs",
+  "SQL",
+  "Elasticsearch",
+  "Microservices"
+ ],
+ "175": [
+  "ASP.NET WebForms",
+  "C#",
+  "SQL",
+  "JavaScript",
+  "jQuery",
+  ".NET Framework",
+  "HTML",
+  "CSS"
+ ],
+ "176": [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "React Query",
+  "Vitest",
+  "React Context",
+  "Tailwind CSS"
+ ],
+ "177": [
+  "Node.js",
+  "TypeScript",
+  "MongoDB",
+  "NestJS",
+  "Apache Kafka",
+  "Redis",
+  "ClickHouse",
+  "Elasticsearch"
+ ],
+ "178": [
+  "Node.js",
+  "TypeScript",
+  "Vue.js",
+  "React",
+  "MongoDB",
+  "Apache Kafka",
+  "Redis",
+  "NestJS"
+ ],
+ "179": [
+  "TypeScript",
+  "Vue.js",
+  "React",
+  "Node.js",
+  "MongoDB",
+  "Apache Kafka",
+  "Redis",
+  "NestJS"
+ ],
+ "180": [
+  "A/B Testing",
+  "Data Analysis",
+  "SQL",
+  "Product Analytics",
+  "Funnel Analysis",
+  "Cohort Analysis",
+  "Statistical Analysis",
+  "Data Visualization"
+ ],
+ "181": [
+  "SQL",
+  "Data Analysis",
+  "Python",
+  "Business Intelligence",
+  "Data Visualization",
+  "Product Analytics",
+  "A/B Testing",
+  "Statistical Analysis"
+ ],
+ "182": [
+  "SQL",
+  "Python",
+  "ETL",
+  "A/B Testing",
+  "Data Modeling",
+  "Statistical Analysis",
+  "Data Visualization",
+  "Business Intelligence"
+ ],
+ "183": [
+  "Product Analytics",
+  "Data Analysis",
+  "SQL",
+  "Python",
+  "A/B Testing",
+  "Machine Learning",
+  "Business Intelligence",
+  "Data Visualization"
+ ],
+ "184": [
+  "Figma",
+  "UI Design",
+  "UX Design",
+  "Prototyping",
+  "Design Systems",
+  "User Research",
+  "Wireframing",
+  "Interaction Design"
+ ],
+ "185": [
+  "TypeScript",
+  "Node.js",
+  "Vue.js",
+  "React",
+  "MongoDB",
+  "Apache Kafka",
+  "Redis",
+  "Elasticsearch"
+ ],
+ "186": [
+  "JavaScript",
+  "TypeScript",
+  "Node.js",
+  "Vue.js",
+  "React",
+  "MongoDB",
+  "REST APIs",
+  "Elasticsearch"
+ ],
+ "187": [
+  "Node.js",
+  "MongoDB",
+  "Vue.js",
+  "React",
+  "TypeScript",
+  "Apache Kafka",
+  "Redis",
+  "Elasticsearch"
+ ],
+ "188": [
+  "UX Research",
+  "Product Discovery",
+  "Usability Testing",
+  "User Interviews",
+  "Qualitative Research",
+  "Quantitative Research",
+  "Single Page Applications",
+  "Figma"
+ ],
+ "189": [
+  "Java",
+  "Spring Boot",
+  "Apache Kafka",
+  "Kubernetes",
+  "Docker",
+  "PostgreSQL",
+  "Hibernate",
+  "gRPC"
+ ],
+ "190": [
+  "Playwright",
+  "TypeScript",
+  "REST APIs",
+  "SQL",
+  "Postman",
+  "Jenkins",
+  "GitLab",
+  "Kibana"
+ ],
+ "191": [
+  "iOS Testing",
+  "Android Testing",
+  "Jira",
+  "Postman",
+  "REST APIs",
+  "Jenkins",
+  "Git",
+  "Charles Proxy"
+ ],
+ "192": [
+  "Access Control Management",
+  "Identity and Access Management",
+  "User Account Management",
+  "Information Security",
+  "Security Auditing",
+  "Incident Response",
+  "Vulnerability Analysis",
+  "Compliance Management"
+ ],
+ "193": [
+  "Python",
+  "JavaScript",
+  "TypeScript",
+  "CI/CD",
+  "GitLab",
+  "Terraform",
+  "AWS",
+  "Microservices"
+ ],
+ "194": [
+  "Google Workspace",
+  "Okta",
+  "SAML",
+  "OpenID Connect",
+  "SCIM",
+  "Active Directory",
+  "LDAP",
+  "AWS"
+ ],
+ "195": [
+  "Python",
+  "Microsoft Excel",
+  "Data Analytics",
+  "Dashboard Development",
+  "Data Visualization",
+  "SQL",
+  "HR Analytics",
+  "Data Modeling"
+ ],
+ "196": [
+  "Okta",
+  "Google Workspace",
+  "Identity and Access Management",
+  "Single Sign-On",
+  "Multi-Factor Authentication",
+  "Okta Lifecycle Management",
+  "Okta API Access Management",
+  "Okta Universal Directory"
+ ],
+ "197": [
+  "Angular",
+  "TypeScript",
+  "Jest",
+  "REST APIs",
+  "Git",
+  "Webpack",
+  "SOLID Principles",
+  "Nx"
+ ],
+ "198": [
+  "Node.js",
+  "NestJS",
+  "JavaScript",
+  "GraphQL",
+  "MongoDB",
+  "MySQL",
+  "RabbitMQ",
+  "Redis"
+ ],
+ "199": [
+  "AWS",
+  "Terraform",
+  "Kubernetes",
+  "CI/CD",
+  "Infrastructure as Code",
+  "Python",
+  "Observability",
+  "Docker"
+ ],
+ "200": [
+  "Docker",
+  "GitLab CI/CD",
+  "Terraform",
+  "Python",
+  "Bash",
+  "Google Cloud Platform",
+  "Kubernetes",
+  "SSL/TLS"
+ ],
+ "201": [
+  "Python",
+  "Machine Learning",
+  "Deep Learning",
+  "Large Language Models",
+  "PyTorch",
+  "TensorFlow",
+  "MLOps",
+  "Generative AI"
+ ],
+ "202": [
+  ".NET",
+  "REST APIs",
+  "SOAP",
+  "AWS",
+  "Kubernetes",
+  "Docker",
+  "Grafana",
+  "GitLab"
+ ],
+ "203": [
+  "n8n",
+  "REST APIs",
+  "Docker",
+  "Kubernetes",
+  "Optical Character Recognition",
+  "Natural Language Processing",
+  "Microservices",
+  "Machine Learning"
+ ],
+ "204": [
+  "Python",
+  "Django",
+  "Pandas",
+  "AWS",
+  "SQL",
+  "Amazon EC2",
+  "Amazon S3",
+  "Amazon EKS"
+ ],
+ "205": [
+  "SQL",
+  "Python",
+  "Pandas",
+  "Tableau",
+  "Power BI",
+  "Looker Studio",
+  "NumPy",
+  "Financial Modeling"
+ ],
+ "206": [
+  "SQL",
+  "Python",
+  "Tableau",
+  "Power BI",
+  "Looker Studio",
+  "Financial Modeling",
+  "Data Analytics",
+  "Blockchain"
+ ],
+ "207": [
+  "AppsFlyer",
+  "Adjust",
+  "Google Firebase",
+  "SQL",
+  "A/B Testing",
+  "Server-to-Server Tracking",
+  "Mobile SDK Integration",
+  "Attribution Modeling"
+ ],
+ "208": [
+  "Go",
+  "Python",
+  "Kubernetes",
+  "Apache Kafka",
+  "Redis",
+  "PostgreSQL",
+  "Design Patterns",
+  "SOLID Principles"
+ ],
+ "209": [
+  "Slurm",
+  "Hadoop",
+  "Apache Airflow",
+  "GitHub Actions",
+  "Distributed Tracing",
+  "Secrets Management",
+  "Observability",
+  "Virtual Private Network"
+ ],
+ "210": [
+  "Linux",
+  "Python",
+  "Bash",
+  "Ansible",
+  "VMware",
+  "LDAP",
+  "TCP/IP",
+  "Nagios"
+ ],
+ "211": [
+  "Data Analysis",
+  "SQL",
+  "Python",
+  "Data Visualization",
+  "Microsoft Excel",
+  "Business Intelligence",
+  "Reporting",
+  "ETL"
+ ],
+ "212": [
+  "SQL",
+  "Oracle Database",
+  "PostgreSQL",
+  "Software Installation",
+  "Quality Assurance",
+  "Property Management Systems",
+  "Remote Support",
+  "IT Troubleshooting"
+ ],
+ "213": [
+  "Manual Testing",
+  "Exploratory Testing",
+  "Test Automation",
+  "UI Testing",
+  "API Testing",
+  "Test Case Design",
+  "CI/CD Pipelines",
+  "Automated Test Frameworks"
+ ],
+ "214": [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Frontend Development",
+  "Software Architecture",
+  "Code Quality",
+  "Web Development"
+ ],
+ "215": [
+  "React Native",
+  "Mobile Development",
+  "Cross-Platform Development",
+  "iOS",
+  "Android",
+  "JavaScript",
+  "TypeScript",
+  "App Store Deployment"
+ ],
+ "216": [
+  "Python",
+  "Arduino",
+  "Project-Based Learning",
+  "Programming Fundamentals",
+  "Hardware Programming",
+  "Non-Formal Education Methodologies"
+ ],
+ "217": [
+  "App Store Optimization",
+  "UI/UX Design",
+  "Conversion Rate Optimization",
+  "App Icon Design",
+  "Screenshot Design",
+  "App Preview Video",
+  "Competitor Analysis",
+  "iOS App Store"
+ ],
+ "218": [
+  "C#",
+  ".NET Framework",
+  "Entity Framework",
+  "Object-Oriented Programming",
+  "Microsoft SQL Server",
+  "MySQL",
+  "TypeScript",
+  "Git"
+ ],
+ "219": [
+  "SQL",
+  "PostgreSQL",
+  "Python",
+  "dbt",
+  "ETL/ELT",
+  "Data Warehousing",
+  "MongoDB",
+  "TypeScript"
+ ],
+ "220": [
+  "Low-Code/No-Code Platforms",
+  "API Design",
+  "Microservices Architecture",
+  "X-Road",
+  "Enterprise Architecture",
+  "Data Modeling",
+  "Systems Integration",
+  "Interoperability Frameworks"
+ ],
+ "221": [
+  "Low-Code/No-Code",
+  "Project Management",
+  "Risk Management",
+  "Agile",
+  "Documentation",
+  "Version Control",
+  "Governance Frameworks",
+  "Digital Services Delivery"
+ ],
+ "222": [
+  "Data Annotation",
+  "Large Language Models",
+  "Natural Language Processing",
+  "Text Evaluation",
+  "AI-Generated Content Review",
+  "Linguistic Analysis",
+  "Machine Learning",
+  "Semantic Analysis"
+ ],
+ "223": [
+  "AWS Batch",
+  "Amazon S3",
+  "DICOM",
+  "ClearML",
+  "Machine Learning",
+  "Medical Imaging",
+  "Data Pipeline Architecture",
+  "Lance"
+ ],
+ "224": [
+  "TypeScript",
+  "Claude",
+  "Agentic AI",
+  "Machine Learning",
+  "Adaptive Learning Systems",
+  "Algorithm Design",
+  "Generative AI",
+  "Learning Management Systems"
+ ],
+ "225": [
+  "C++",
+  "WebRTC",
+  "Remote Desktop Protocol",
+  "Virtual Desktop Infrastructure",
+  "RTP/RTCP",
+  "SRTP",
+  "ICE/TURN",
+  "VoIP"
+ ],
+ "226": [
+  "JavaScript",
+  "HTML5",
+  "CSS",
+  "SVG",
+  "SQL",
+  "XML",
+  "JSON",
+  "Scrum"
+ ],
+ "227": [
+  "Amazon Web Services",
+  "DevSecOps",
+  "AWS IAM",
+  "AWS VPC",
+  "AWS CloudTrail",
+  "AWS GuardDuty",
+  "Cloud Security",
+  "AWS WAF"
+ ],
+ "228": [
+  "Java",
+  "Agile",
+  "Scrum",
+  "HERE Open Location Platform",
+  "Internet of Things",
+  "Embedded Application Development",
+  "Python",
+  "Software Architecture"
+ ],
+ "229": [
+  "Node.js",
+  "JavaScript",
+  "AWS",
+  "Microservices",
+  "Game Development",
+  "Matchmaking Systems",
+  "Identity Services",
+  "Distributed Systems"
+ ],
+ "230": [
+  "PHP",
+  "MySQL",
+  "Laravel",
+  "JavaScript",
+  "HTML5",
+  "CSS3",
+  "React",
+  "Git"
+ ],
+ "231": [
+  "Go",
+  "Microservices",
+  "gRPC",
+  "REST APIs",
+  "Distributed Systems",
+  "SQL",
+  "NoSQL",
+  "Cloud-Native Applications"
+ ],
+ "232": [
+  "PHP",
+  "SQL",
+  "SingleStore",
+  "MySQL",
+  "Linux",
+  "Cloud Platforms",
+  "Agile",
+  "Relational Databases"
+ ],
+ "233": [
+  "Apache Superset",
+  "Elasticsearch Query DSL",
+  "SQL",
+  "PostgreSQL",
+  "Oracle",
+  "Unix/Linux",
+  "Jira",
+  "Data Visualization"
+ ],
+ "234": [
+  "Apache Airflow",
+  "Python",
+  "Elasticsearch",
+  "PostgreSQL",
+  "Oracle",
+  "Flask",
+  "GitLab CI/CD",
+  "Unix/Linux"
+ ],
+ "235": [
+  "Go",
+  "Concurrency",
+  "API Integration",
+  "Scalable Systems",
+  "Software Development",
+  "Go Frameworks",
+  "Distributed Systems",
+  "Technical Interviewing"
+ ],
+ "236": [
+  "CI/CD",
+  "Docker",
+  "Kubernetes",
+  "Cloud Platforms",
+  "DevOps",
+  "Infrastructure Automation",
+  "Site Reliability Engineering",
+  "Containerization"
+ ],
+ "237": [
+  "Linux",
+  "VMware",
+  "Oracle VM",
+  "CentOS/Red Hat",
+  "Prometheus",
+  "Grafana",
+  "NGINX",
+  "OpenShift"
+ ],
+ "238": [
+  "Generative AI",
+  "AI-Driven Design Software",
+  "Machine Learning",
+  "AI Algorithms",
+  "Intelligent Virtual Assistants",
+  "Natural Language Processing",
+  "Agent Technologies",
+  "Data-Driven Decision Making"
+ ],
+ "239": [
+  "Cloud Security",
+  "Identity and Access Management",
+  "Vulnerability Management",
+  "Incident Response",
+  "Secure SDLC",
+  "Security Architecture",
+  "Penetration Testing",
+  "Compliance Frameworks"
+ ],
+ "240": [
+  "Kotlin",
+  "Gradle",
+  "Apache Maven",
+  "Java",
+  "Kotlin Multiplatform",
+  "Android",
+  "Spring Framework",
+  "Ktor"
+ ],
+ "241": [
+  "SQL",
+  "Kotlin",
+  "Java",
+  "Postman",
+  "Web Application Testing",
+  "Browser DevTools",
+  "Linux Command Line Tools",
+  "Web Application Security"
+ ],
+ "242": [
+  "Kotlin",
+  "Kotlin Coroutines",
+  "Compose Multiplatform",
+  "Jetpack Compose",
+  "gRPC",
+  "kotlinx.serialization",
+  "Asynchronous Programming",
+  "UI/UX Development"
+ ],
+ "243": [
+  "Kotlin",
+  "Java",
+  "Android",
+  "Kotlin Multiplatform",
+  "Compose Multiplatform",
+  "IntelliJ IDEA",
+  "Android Studio",
+  "Test Automation"
+ ],
+ "244": [
+  "Software Asset Management",
+  "IT Asset Management",
+  "License Management",
+  "Notion",
+  "Miro",
+  "Figma",
+  "Software Procurement",
+  "IT Infrastructure"
+ ],
+ "245": [
+  "JavaScript",
+  "YouTrack",
+  "Workflow Automation",
+  "REST APIs",
+  "Third-Party Integrations",
+  "Project Management Tools",
+  "Scripting",
+  "Software Development"
+ ],
+ "246": [
+  "TypeScript",
+  "NestJS",
+  "Node.js",
+  "MongoDB",
+  "PostgreSQL",
+  "RabbitMQ",
+  "Git",
+  "Redis"
+ ],
+ "247": [
+  "Python",
+  "A/B Testing",
+  "Statistical Analysis",
+  "Data Visualization",
+  "Dashboard Development",
+  "SQL",
+  "Statistics",
+  "Data Analysis"
+ ],
+ "248": [
+  "Windows Server",
+  "AWS",
+  "Terraform",
+  "PowerShell",
+  "VMware ESXi",
+  "Zabbix",
+  "Terragrunt",
+  "Linux"
+ ],
+ "249": [
+  "Java",
+  "Selenium",
+  "Selenide",
+  "SQL",
+  "Jenkins",
+  "Appium",
+  "CI/CD",
+  "Allure"
+ ],
+ "250": [
+  "C++",
+  "C++ Standard Template Library (STL)",
+  "Boost C++ Libraries",
+  "PostgreSQL",
+  "Apache Kafka",
+  "TCP/IP",
+  "Git",
+  "Multithreading"
+ ],
+ "251": [
+  "Windows Server",
+  "Linux",
+  "Active Directory",
+  "Google Workspace",
+  "Microsoft SQL Server",
+  "Virtualization",
+  "Cloud Platforms",
+  "Disaster Recovery"
+ ],
+ "252": [
+  "macOS",
+  "Windows OS",
+  "Hardware Troubleshooting",
+  "Software Troubleshooting",
+  "IT Support",
+  "CompTIA A+",
+  "CompTIA Network+",
+  "Ticketing Systems"
+ ],
+ "253": [
+  "UX Design",
+  "UI Design",
+  "Design Systems",
+  "Interaction Design",
+  "User Research",
+  "Prototyping",
+  "Wireframing",
+  "Product Design"
+ ],
+ "254": [
+  ".NET",
+  "ASP.NET Core",
+  "PostgreSQL",
+  "Entity Framework Core",
+  "AWS",
+  "Docker",
+  "GitLab CI/CD",
+  "xUnit"
+ ],
+ "255": [
+  "Java",
+  "REST APIs",
+  "SOAP APIs",
+  "SQL",
+  "PostgreSQL",
+  "Jenkins",
+  "TestNG",
+  "GitLab"
+ ],
+ "256": [
+  "Bitrix",
+  "Bitrix D7",
+  "PHP",
+  "API Integration",
+  "1C-Bitrix",
+  "Custom Data Exchange",
+  "CMS",
+  "Web Development"
+ ],
+ "257": [
+  "Dell PowerEdge Servers",
+  "OpenManage Enterprise",
+  "GPU Hardware Configuration",
+  "NVIDIA Bright Cluster",
+  "Linux (Red Hat, Ubuntu)",
+  "TCP/IP",
+  "VLAN Configuration",
+  "NVLink"
+ ],
+ "258": [
+  "PHP",
+  "PHP 8.2",
+  "Mobile Gaming",
+  "Game Development",
+  "Multiplayer Games",
+  "Backend Development",
+  "REST APIs",
+  "MySQL"
+ ],
+ "259": [
+  "Digital Transformation",
+  "Enterprise Software",
+  "Solution Architecture",
+  "RFP Development",
+  "Governance Frameworks",
+  "Workshop Facilitation",
+  "Product Management",
+  "Business Analysis"
+ ],
+ "260": [
+  "JavaScript",
+  "Node.js",
+  "REST APIs",
+  "SOAP APIs",
+  "SQL",
+  "PostgreSQL",
+  "SQLite",
+  "B2B SaaS"
+ ],
+ "261": [
+  "NAND Memory",
+  "ATE Test Systems",
+  "IC Design",
+  "Characterization",
+  "Test Automation",
+  "Data Storage Systems",
+  "Memory Technology",
+  "Semiconductor Testing"
+ ],
+ "262": [
+  "RTL Design",
+  "FPGA",
+  "SoC",
+  "RTL Verification",
+  "Synthesis",
+  "Power Performance Area (PPA) Analysis",
+  "IP Integration",
+  "Hardware Description Language (HDL)"
+ ],
+ "263": [
+  "C++",
+  "Python",
+  "Embedded Systems",
+  "FPGA",
+  "SoC",
+  "Secure Provisioning",
+  "Debugging Tools",
+  "Software Development"
+ ],
+ "264": [
+  "Java",
+  "Kotlin",
+  "Spring Boot",
+  "Spring Framework",
+  "REST APIs",
+  "WebSockets",
+  "Distributed Systems",
+  "Concurrency"
+ ],
+ "265": [
+  "gRPC",
+  "WebSocket",
+  "Java",
+  "Kotlin",
+  "Real-Time Systems",
+  "Distributed Systems",
+  "Microservices",
+  "Connection Multiplexing"
+ ],
+ "266": [
+  "JavaScript",
+  "TypeScript",
+  "Frontend Development",
+  "React",
+  "Unit Testing",
+  "Integration Testing",
+  "Software Architecture",
+  "Canvas API"
+ ],
+ "267": [
+  "Frontend Development",
+  "JavaScript",
+  "React",
+  "SLI/SLO",
+  "A/B Testing",
+  "System Architecture",
+  "Data Analysis",
+  "Content Management Systems"
+ ],
+ "268": [
+  "Flutter",
+  "Dart",
+  "Bloc",
+  "Riverpod",
+  "Provider",
+  "CI/CD",
+  "Codemagic",
+  "GitHub Actions"
+ ],
+ "269": [
+  "T-SQL",
+  "Grafana",
+  "Zabbix",
+  "Swagger",
+  "API",
+  "Incident Management",
+  "Application Support",
+  "System Monitoring"
+ ],
+ "270": [
+  "AIX",
+  "IBM POWER Hardware",
+  "PowerVM",
+  "HMC",
+  "LPAR",
+  "PowerHA",
+  "Logical Volume Manager",
+  "Red Hat Linux"
+ ],
+ "271": [
+  "Fortinet",
+  "Palo Alto Networks",
+  "Cisco",
+  "F5",
+  "Next-Generation Firewalls (NGFW)",
+  "TCP/IP",
+  "Network Security",
+  "VLANs"
+ ],
+ "272": [
+  "Apache HTTP Server",
+  "IBM WebSphere",
+  "Apache Tomcat",
+  "Internet Information Services (IIS)",
+  "Python",
+  "Shell Scripting",
+  "Jenkins",
+  "SSL/TLS"
+ ],
+ "273": [
+  "Data Validation",
+  "Data Quality Management",
+  "Data Governance",
+  "Data Auditing",
+  "Artificial Intelligence",
+  "Business Intelligence",
+  "Data Analytics",
+  "Statistical Analysis"
+ ],
+ "274": [
+  "Python",
+  "Apache Airflow",
+  "AWS",
+  "Linux",
+  "ETL",
+  "Time-Series Data",
+  "Data Pipelines",
+  "SQL"
+ ],
+ "275": [
+  "RDLC",
+  "Microsoft SQL Server",
+  "SQL",
+  "Database Views",
+  "Report Development",
+  "Data Binding",
+  "Query Optimization",
+  "Performance Optimization"
+ ],
+ "276": [
+  "C#",
+  ".NET",
+  "Microsoft SQL Server",
+  "REST APIs",
+  "Microservices",
+  "Stored Procedures",
+  "Query Performance Tuning",
+  "Backend Development"
+ ],
+ "277": [
+  "JavaScript",
+  "Full-Stack Development",
+  "React",
+  "Node.js",
+  "Artificial Intelligence",
+  "UI/UX",
+  "Web Applications",
+  "Scalable Architecture"
+ ],
+ "278": [
+  "AWS",
+  "Terraform",
+  "Infrastructure as Code",
+  "AWS IAM",
+  "AWS Organizations",
+  "CI/CD",
+  "AWS Lambda",
+  "AWS CloudFront"
+ ],
+ "279": [
+  "Data Integration",
+  "Data Warehousing",
+  "ETL",
+  "Data Engineering",
+  "SQL",
+  "Python",
+  "Data Modeling",
+  "Cloud Platforms"
+ ],
+ "280": [
+  "Appium",
+  "Selenium",
+  "Kotlin",
+  "Java",
+  "TestNG",
+  "JUnit",
+  "REST APIs",
+  "GraphQL"
+ ],
+ "281": [
+  "Python",
+  "Triton Inference Server",
+  "ONNX",
+  "TensorRT",
+  "LangChain",
+  "ChatGPT API",
+  "Data Pipeline Development",
+  "Machine Learning"
+ ],
+ "282": [
+  "Manual Testing",
+  "iOS",
+  "Android",
+  "macOS",
+  "Universal Windows Platform (UWP)",
+  "Bug Tracking",
+  "Regression Testing",
+  "Game Design"
+ ],
+ "283": [
+  "C++",
+  "Lua",
+  "Python",
+  "OpenGL ES",
+  "Metal",
+  "CI/CD",
+  "Game Engine Development",
+  "Code Review"
+ ],
+ "284": [
+  "Unity",
+  "C++",
+  "Lua",
+  "Python",
+  "OpenGL ES",
+  "Metal",
+  "CI/CD",
+  "Code Review"
+ ],
+ "285": [
+  "C++",
+  "Unity",
+  "Lua",
+  "Python",
+  "OpenGL ES",
+  "Metal",
+  "iOS",
+  "Android"
+ ],
+ "286": [
+  "C++",
+  "Unity",
+  "OpenGL ES",
+  "Metal",
+  "Lua",
+  "Python",
+  "CI/CD",
+  "C++ Standard Template Library (STL)"
+ ],
+ "287": [
+  "Unity",
+  "C++",
+  "OpenGL ES",
+  "Metal",
+  "Python",
+  "Lua",
+  "CI/CD",
+  "Game Development"
+ ],
+ "288": [
+  "C++",
+  "GLSL",
+  "HLSL",
+  "OpenGL ES",
+  "Metal",
+  "Adobe Photoshop",
+  "Visual Effects (VFX)",
+  "Shader Development"
+ ],
+ "289": [
+  "Python",
+  "Large Language Models",
+  "Retrieval-Augmented Generation",
+  "Model Quantization",
+  "Inference Optimization",
+  "Stable Diffusion",
+  "Embedding Pipelines",
+  "Multimodal AI"
+ ],
+ "290": [
+  "Docker",
+  "Kubernetes",
+  "AWS",
+  "Google Cloud Platform",
+  "CI/CD",
+  "GitHub Actions",
+  "Key Management Systems",
+  "Monitoring and Logging"
+ ],
+ "291": [
+  "AWS",
+  "Go",
+  "Distributed Systems",
+  "Cloud Platforms",
+  "Infrastructure Engineering",
+  "Container Orchestration",
+  "Observability",
+  "Platform Engineering"
+ ],
+ "292": [
+  "Swift",
+  "Android",
+  ".NET",
+  "TypeScript",
+  "Express.js",
+  "GraphQL",
+  "REST APIs",
+  "API Design"
+ ],
+ "293": [
+  "Go",
+  "AWS",
+  "Amazon EC2",
+  "Amazon ECS",
+  "AWS Lambda",
+  "Distributed Systems",
+  "Cloud Platforms",
+  "Infrastructure as Code"
+ ],
+ "294": [
+  "Python",
+  "Full-Stack Development",
+  "Artificial Intelligence",
+  "Machine Learning",
+  "AWS",
+  "DevOps",
+  "Recommendation Systems",
+  "Data Modeling"
+ ],
+ "295": [
+  "Python",
+  "Full-Stack Development",
+  "Artificial Intelligence",
+  "Machine Learning",
+  "AWS",
+  "DevOps",
+  "Recommendation Systems",
+  "Cloud Infrastructure"
+ ],
+ "296": [
+  "Kotlin",
+  "Android",
+  "Mobile System Design",
+  "Jetpack Compose",
+  "REST APIs",
+  "Agile/Scrum",
+  "Android SDK",
+  "Performance Optimization"
+ ],
+ "297": [
+  "React",
+  "Next.js",
+  "Node.js",
+  "WebSocket",
+  "REST APIs",
+  "CI/CD",
+  "TypeScript",
+  "Server-Side Rendering"
+ ],
+ "298": [
+  "Swift",
+  "iOS",
+  "Mobile Architecture",
+  "REST APIs",
+  "Performance Optimization",
+  "Agile/Scrum",
+  "Distributed Systems",
+  "UIKit"
+ ],
+ "299": [
+  "Go",
+  "Peer-to-Peer (P2P) Systems",
+  "libp2p",
+  "Distributed Systems",
+  "Microservices",
+  "AWS",
+  "System Programming",
+  "Agile/Scrum"
+ ],
+ "300": [
+  "React",
+  "Node.js",
+  "TypeScript",
+  "REST APIs",
+  "GraphQL",
+  "Single Page Applications",
+  "Microservices Architecture",
+  "API Design"
+ ],
+ "301": [
+  "Go",
+  "Peer-to-Peer (P2P) Systems",
+  "libp2p",
+  "Distributed Systems",
+  "Microservices",
+  "AWS",
+  "Microsoft Azure",
+  "Google Cloud Platform"
+ ],
+ "302": [
+  "Go",
+  "Peer-to-Peer (P2P) Systems",
+  "libp2p",
+  "Distributed Systems",
+  "Microservices",
+  "AWS",
+  "Microsoft Azure",
+  "Google Cloud Platform"
+ ],
+ "303": [
+  "Figma",
+  "Motion Design",
+  "UI/UX Design",
+  "Adobe After Effects",
+  "Webflow",
+  "3D Animation",
+  "Prototyping",
+  "AI Creative Tools"
+ ],
+ "304": [
+  "n8n",
+  "Python",
+  "TypeScript",
+  "JavaScript",
+  "REST APIs",
+  "GraphQL",
+  "OAuth",
+  "Webhooks"
+ ],
+ "305": [
+  "UI/UX Design",
+  "Design Systems",
+  "User Research",
+  "Usability Testing",
+  "Component Libraries",
+  "Conversion Rate Optimization",
+  "Wireframing",
+  "Prototyping"
+ ],
+ "306": [
+  "Python",
+  "FastAPI",
+  "Docker",
+  "Git",
+  "Retrieval-Augmented Generation",
+  "Large Language Models",
+  "Amazon Bedrock",
+  "Flask"
+ ],
+ "307": [
+  "Linux",
+  "AWS",
+  "Network Management",
+  "Scripting",
+  "Zabbix",
+  "Grafana",
+  "Docker",
+  "Kubernetes"
+ ],
+ "308": [
+  "Python",
+  "FastAPI",
+  "Retrieval-Augmented Generation (RAG)",
+  "Large Language Models",
+  "AWS",
+  "Docker",
+  "Kubernetes",
+  "PostgreSQL"
+ ],
+ "309": [
+  "ISO 27001",
+  "IT Governance",
+  "Information Security",
+  "IT Auditing",
+  "Governance, Risk, and Compliance (GRC)",
+  "Risk Management",
+  "Access Management",
+  "Compliance Management"
+ ],
+ "310": [
+  "Python",
+  "Pandas",
+  "SQL",
+  "Data Validation",
+  "Metabase",
+  "Apache Spark",
+  "Machine Learning",
+  "Data Pipelines"
+ ],
+ "311": [
+  "TypeScript",
+  "React",
+  "Python",
+  "FastAPI",
+  "CI/CD",
+  "Docker",
+  "ETL",
+  "Apache Spark"
+ ],
+ "312": [
+  "TypeScript",
+  "React",
+  "Go",
+  "AWS",
+  "System Architecture",
+  "Observability",
+  "Data Pipelines",
+  "Distributed Systems"
+ ],
+ "313": [
+  "Go",
+  "AWS Lambda",
+  "Amazon EKS",
+  "Gin (Go Framework)",
+  "Echo (Go Framework)",
+  "Microservices",
+  "REST APIs",
+  "Docker"
+ ],
+ "314": [
+  "Data Annotation",
+  "Data Collection",
+  "Data Preprocessing",
+  "Machine Learning",
+  "Data Evaluation",
+  "Quality Assurance",
+  "Image Labeling",
+  "Audio Processing"
+ ],
+ "315": [
+  "Structured Cabling",
+  "Fiber Optic Networking",
+  "Server Hardware",
+  "Network Troubleshooting",
+  "Data Center Infrastructure Management (DCIM)",
+  "CompTIA Network+",
+  "Cisco Certified Network Associate (CCNA)",
+  "Patch Panel Configuration"
+ ],
+ "316": [
+  "Structured Cabling",
+  "Fiber Optic Networking",
+  "Server Hardware",
+  "Network Troubleshooting",
+  "Data Center Infrastructure Management (DCIM)",
+  "Cat5e/6/6a Cabling",
+  "Dell/HP/Supermicro Server Hardware",
+  "Patch Panel Configuration"
+ ],
+ "317": [
+  "Structured Cabling",
+  "Fiber Optic Networking",
+  "Server Hardware",
+  "Network Troubleshooting",
+  "Data Center Infrastructure Management (DCIM)",
+  "Cat5e/6/6a Cabling",
+  "Dell/HP/Supermicro Server Hardware",
+  "Patch Panel Configuration"
+ ],
+ "318": [
+  "Structured Cabling",
+  "Fiber Optic Networking",
+  "Server Hardware",
+  "Network Infrastructure",
+  "Data Center Infrastructure Management (DCIM)",
+  "CompTIA Network+",
+  "Cisco Certified Network Associate (CCNA)",
+  "Cat5e/6/6a Cabling"
+ ],
+ "319": [
+  "Structured Cabling",
+  "Fiber Optic Networking",
+  "Server Hardware",
+  "Network Troubleshooting",
+  "Data Center Infrastructure Management (DCIM)",
+  "Patch Panel Configuration",
+  "Cat5e/6/6a Cabling",
+  "Data Center Infrastructure"
+ ],
+ "320": [
+  "Linux",
+  "Windows Server",
+  "Cisco",
+  "Juniper Networks",
+  "Network Configuration",
+  "Hardware Installation",
+  "Server Management",
+  "Firewall Management"
+ ],
+ "321": [
+  "React",
+  "Node.js",
+  "TypeScript",
+  "JavaScript",
+  "Hono (Web Framework)",
+  "Large Language Models",
+  "REST APIs",
+  "Claude Code"
+ ],
+ "322": [
+  "VLSI Physical Design",
+  "ASIC RTL-to-GDS",
+  "Static Timing Analysis",
+  "Synthesis",
+  "Place and Route",
+  "Clock Tree Synthesis",
+  "Tcl",
+  "Design for Test (DFT)"
+ ],
+ "323": [
+  "RTL-to-GDSII",
+  "Physical Design",
+  "Static Timing Analysis",
+  "Logic Synthesis",
+  "Place and Route",
+  "Low Power Design",
+  "Design for Test (DFT)",
+  "Clock Tree Synthesis"
+ ],
+ "324": [
+  "Google Cloud Platform",
+  "Cloud Architecture",
+  "Networking",
+  "Virtual Private Network",
+  "Compute Infrastructure",
+  "Load Balancers",
+  "Databases",
+  "Virtualization"
+ ],
+ "325": [
+  "Google Workspace",
+  "Google Workspace Administration",
+  "Migration Tools",
+  "System Integration",
+  "Identity Management",
+  "Directory Services",
+  "Cloud Platforms",
+  "Troubleshooting"
+ ],
+ "326": [
+  "Google Cloud Platform",
+  "Python",
+  "REST APIs",
+  "Cloud-Native Development",
+  "Edge Computing",
+  "Microservices",
+  "CI/CD Pipelines",
+  "Backend Development"
+ ],
+ "327": [
+  "Google Cloud Platform",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Node.js",
+  "REST APIs",
+  "Cloud-Native Development",
+  "Full-Stack Development"
+ ],
+ "328": [
+  "Linux",
+  "Proxmox",
+  "CI/CD",
+  "Prometheus",
+  "Grafana",
+  "Bash",
+  "Python",
+  "Git"
+ ],
+ "329": [
+  "C#",
+  ".NET",
+  "ASP.NET Core",
+  "LINQ",
+  "SQL Server",
+  "PostgreSQL",
+  "Entity Framework Core",
+  "Docker"
+ ],
+ "330": [
+  "Systems Analysis",
+  "IT Integration",
+  "Data Analytics",
+  "A/B Testing",
+  "Business Requirements Documents",
+  "Functional Specifications Documents",
+  "User Stories",
+  "Test Cases"
+ ],
+ "331": [
+  "A/B Testing",
+  "Marketing Analytics",
+  "Attribution Modeling",
+  "Statistical Analysis",
+  "SQL",
+  "Forecasting",
+  "Experimentation Frameworks",
+  "Python"
+ ],
+ "332": [
+  "SQL",
+  "Python",
+  "Databricks",
+  "dbt",
+  "Data Quality Monitoring",
+  "Statistical Analysis",
+  "Model Monitoring",
+  "Dashboard Development"
+ ],
+ "333": [
+  "Python",
+  "SQL",
+  "Pandas",
+  "Financial Modeling",
+  "NPV Modeling",
+  "Unit Economics",
+  "Cohort Analysis",
+  "Sensitivity Analysis"
+ ],
+ "334": [
+  "SQL",
+  "Python",
+  "A/B Testing",
+  "Dashboard Development",
+  "Product Analytics",
+  "Portfolio Analytics",
+  "Experimentation",
+  "Cohort Analysis"
+ ],
+ "335": [
+  "Python",
+  "Natural Language Processing",
+  "Large Language Models",
+  "LangChain",
+  "Apache Kafka",
+  "AWS",
+  "Docker",
+  "REST APIs"
+ ],
+ "336": [
+  "SQL",
+  "Python",
+  "Tableau",
+  "Databricks",
+  "A/B Testing",
+  "Statistics",
+  "Data Visualization",
+  "Data Modeling"
+ ],
+ "337": [
+  "C++",
+  "C++11",
+  "Qt",
+  "CMake",
+  "Computational Geometry",
+  "Graphics Programming",
+  "Real-Time Systems",
+  "Cross-Platform Development"
+ ],
+ "338": [
+  "Linux",
+  "Windows OS",
+  "macOS",
+  "Google Workspace",
+  "GitLab",
+  "LDAP",
+  "DNS",
+  "Active Directory"
+ ],
+ "339": [
+  "C++",
+  "C++17",
+  "C++20",
+  "gRPC",
+  "Protocol Buffers",
+  "Prometheus",
+  "Grafana",
+  "InfluxDB"
+ ],
+ "340": [
+  "C++",
+  "Game Development",
+  "Software Architecture",
+  "API Design",
+  "Refactoring",
+  "Modular Design",
+  "4X Strategy Game Development",
+  "Hot Reload Systems"
+ ],
+ "341": [
+  "Mobile Application Testing",
+  "Web Application Testing",
+  "Client-Server Architecture",
+  "Bug Tracking Systems",
+  "Test Management Tools",
+  "System Log Analysis",
+  "Regression Testing",
+  "Requirements Analysis"
+ ],
+ "342": [
+  "SQL",
+  "T-SQL",
+  "ETL",
+  "SQL Server",
+  "Data Migration",
+  "Database Design",
+  "Data Quality",
+  "Data Modeling"
+ ],
+ "343": [
+  "Software Engineering",
+  "Distributed Systems",
+  "Technical Strategy",
+  "Software Architecture",
+  "Product Development",
+  "Engineering Management",
+  "SaaS",
+  "Agile"
+ ],
+ "344": [
+  "REST APIs",
+  "Postman",
+  "API Integration",
+  "Solution Architecture",
+  "Security Compliance",
+  "Technical Documentation",
+  "Integration Frameworks",
+  "App Marketplace Development"
+ ],
+ "345": [
+  "Agile",
+  "SMS Integration",
+  "Email Campaign Management",
+  "Telecom Integration",
+  "Google Ads API",
+  "Facebook Ads API",
+  "Software Architecture",
+  "Cross-Functional Team Leadership"
+ ],
+ "346": [
+  "TypeScript",
+  "C#",
+  ".NET",
+  "REST APIs",
+  "SQL",
+  "CI/CD",
+  "Distributed Systems",
+  "Cypress"
+ ],
+ "347": [
+  "SQL Server",
+  "PostgreSQL",
+  "Microsoft Azure",
+  "AWS",
+  "Python",
+  "PowerShell",
+  "Terraform",
+  "Datadog"
+ ],
+ "348": [
+  "C#",
+  ".NET",
+  "ASP.NET MVC",
+  "Web APIs",
+  "SQL",
+  "Microsoft .NET",
+  "API Design",
+  "Code Review"
+ ],
+ "349": [
+  "ServiceTitan",
+  "Aspire",
+  "FieldRoutes",
+  "Troubleshooting",
+  "Bug Reporting",
+  "Technical Documentation",
+  "Root Cause Analysis",
+  "Customer Support Platforms"
+ ],
+ "350": [
+  "SaaS",
+  "Project Management",
+  "Customer Implementation",
+  "Product Training"
+ ],
+ "351": [
+  "Python",
+  "Perl",
+  "Shell Scripting",
+  "Linux",
+  "MySQL",
+  "Git",
+  "CMake",
+  "GNU Make"
+ ],
+ "352": [
+  "SQL",
+  "Python",
+  "ETL",
+  "Apache Airflow",
+  "dbt",
+  "A/B Testing",
+  "Looker",
+  "Tableau"
+ ],
+ "353": [
+  "C#",
+  ".NET",
+  "REST APIs",
+  "SQL Server",
+  "NoSQL",
+  "AWS",
+  "Big Data",
+  "Data Warehousing"
+ ],
+ "354": [
+  "PHP",
+  "Laravel",
+  "REST APIs",
+  "JavaScript",
+  "MySQL",
+  "jQuery",
+  "Git",
+  "HTML/CSS"
+ ],
+ "355": [
+  "Angular",
+  "TypeScript",
+  "Jest",
+  "REST APIs",
+  "Git",
+  "Webpack",
+  "npm",
+  "SOLID Principles"
+ ],
+ "356": [
+  "TypeScript",
+  "Test Automation",
+  "Playwright",
+  "GitLab CI/CD",
+  "REST APIs",
+  "GraphQL",
+  "CI/CD",
+  "Microservices"
+ ],
+ "357": [
+  "Figma",
+  "UX Design",
+  "UI Design",
+  "Prototyping",
+  "Wireframing",
+  "Design Systems",
+  "Interaction Design",
+  "AI-Assisted Design Tools"
+ ],
+ "358": [
+  "Selenium",
+  "C#",
+  "API Testing",
+  "REST APIs",
+  "Git",
+  "HTML/CSS",
+  "Agile",
+  "Test Automation"
+ ],
+ "359": [
+  "Manual Testing",
+  "SQL",
+  "Jira",
+  "TestRail",
+  "Regression Testing",
+  "Functional Testing",
+  "Agile",
+  "Mobile Application Testing"
+ ],
+ "360": [
+  "Jira",
+  "Confluence",
+  "Agile",
+  "Scrum",
+  "Postman",
+  "Microsoft Project",
+  "PRINCE2",
+  "Project Management Professional (PMP)"
+ ],
+ "361": [
+  "PHP",
+  "Laravel",
+  "API Development",
+  "Database Design",
+  "HIPAA Compliance",
+  "Electronic Health Record (EHR) Systems",
+  "Agile",
+  "Code Review"
+ ],
+ "362": [
+  "Terraform",
+  "Microsoft Azure",
+  "GitHub Actions",
+  "Datadog",
+  "Infrastructure as Code",
+  "CI/CD Pipelines",
+  "SAST/DAST/SCA",
+  "Docker"
+ ],
+ "363": [
+  "R",
+  "R Shiny",
+  "Statistical Programming",
+  "SAS",
+  "Clinical Data Analysis",
+  "CDISC",
+  "ADaM",
+  "SDTM"
+ ],
+ "364": [
+  "React",
+  "Angular",
+  "Node.js",
+  "Python",
+  "Go",
+  "PostgreSQL",
+  "MongoDB",
+  "Docker"
+ ],
+ "365": [
+  "Python",
+  "Bash",
+  "Tcl",
+  "Perl",
+  "Unix/Linux",
+  "Analog Design",
+  "Digital Design",
+  "DDR/HBM PHY"
+ ],
+ "366": [
+  "Machine Learning",
+  "Generative AI",
+  "Agentic AI",
+  "Deep Learning",
+  "Feature Engineering",
+  "Model Fine-Tuning",
+  "MLOps",
+  "Data Preprocessing"
+ ],
+ "367": [
+  "Automated Testing",
+  "Test Automation Frameworks",
+  "Regression Testing",
+  "Test Planning",
+  "Root Cause Analysis",
+  "Code Review",
+  "Manual Testing",
+  "Quality Assurance"
+ ],
+ "368": [
+  "Python",
+  "Unix/Linux",
+  "Shell Scripting",
+  "Software Development Life Cycle (SDLC)",
+  "Automated Testing",
+  "Data Pipelines",
+  "Analog Design",
+  "EDA Tools"
+ ],
+ "369": [
+  "Power BI",
+  "DAX",
+  "Python",
+  "SQL",
+  "PostgreSQL",
+  "ETL",
+  "Excel OLAP",
+  "Microsoft Power Automate"
+ ],
+ "370": [
+  "APIs",
+  "Databases",
+  "Jira",
+  "Confluence",
+  "Zendesk",
+  "Freshdesk",
+  "Distributed Systems",
+  "System Integration"
+ ],
+ "371": [
+  "Python",
+  "Machine Learning",
+  "BigQuery",
+  "AutoML",
+  "SQL",
+  "Risk Modeling",
+  "Behavioral Modeling",
+  "MLOps"
+ ],
+ "372": [
+  "Go",
+  "PostgreSQL",
+  "Redis",
+  "Kubernetes",
+  "Google Cloud Platform",
+  "Microservices",
+  "Distributed Systems",
+  "GitLab"
+ ],
+ "373": [
+  "Go",
+  "PostgreSQL",
+  "Redis",
+  "Kubernetes",
+  "Google Cloud Platform",
+  "Microservices",
+  "Distributed Systems",
+  "GitLab"
+ ],
+ "374": [
+  "SQL",
+  "Customer Relationship Management (CRM)",
+  "Workforce Management",
+  "Data Analytics",
+  "SLA Management",
+  "Queue Management",
+  "Python",
+  "Dashboard/Reporting Tools"
+ ],
+ "375": [
+  "Go",
+  "TypeScript",
+  "React",
+  "PostgreSQL",
+  "Redis",
+  "Kubernetes",
+  "Google Cloud Platform",
+  "Git"
+ ],
+ "376": [
+  "vLLM",
+  "Kubernetes",
+  "Docker",
+  "Apache Kafka",
+  "ClickHouse",
+  "Apache Airflow",
+  "PostgreSQL",
+  "NVIDIA TensorRT"
+ ],
+ "377": [
+  "Elasticsearch",
+  "Datadog",
+  "Security Information and Event Management (SIEM)",
+  "Distributed Tracing",
+  "Log Management",
+  "Application Performance Monitoring (APM)",
+  "SOC 2",
+  "Kubernetes"
+ ],
+ "378": [
+  "SQL",
+  "Python",
+  "Data Visualization",
+  "A/B Testing",
+  "Dashboard Development",
+  "Data Quality Management",
+  "Analytics Frameworks",
+  "Multivariate Testing"
+ ],
+ "379": [
+  "SQL",
+  "Python",
+  "A/B Testing",
+  "Data Visualization",
+  "Statistics",
+  "Product Analytics",
+  "Dashboard Development",
+  "FinTech"
+ ],
+ "380": [
+  "SQL",
+  "Python",
+  "A/B Testing",
+  "Data Analysis",
+  "Customer Segmentation",
+  "Funnel Analysis",
+  "Statistical Analysis",
+  "Data Visualization"
+ ],
+ "381": [
+  "SQL",
+  "Python",
+  "A/B Testing",
+  "Data Analysis",
+  "Product Analytics",
+  "Statistical Analysis",
+  "Customer Lifecycle Analytics",
+  "Funnel Analysis"
+ ],
+ "382": [
+  "Go",
+  "Test Automation",
+  "CI/CD",
+  "Quality Assurance",
+  "Automation Frameworks",
+  "Infrastructure",
+  "Performance Testing",
+  "DevOps"
+ ],
+ "383": [
+  "Jira",
+  "Datadog",
+  "Grafana",
+  "Kibana",
+  "SQL",
+  "Google Cloud Platform",
+  "Monitoring Tools",
+  "Automation Tools"
+ ],
+ "384": [
+  "Jira",
+  "HTTP",
+  "API",
+  "Log Analysis",
+  "Root Cause Analysis",
+  "Monitoring",
+  "Incident Management",
+  "Web Integrations"
+ ],
+ "385": [
+  "Go",
+  "PostgreSQL",
+  "Redis",
+  "Kubernetes",
+  "Google Cloud Platform",
+  "Microservices",
+  "CI/CD",
+  "GitLab"
+ ],
+ "386": [
+  "Altium Designer",
+  "PCB Layout Design",
+  "Signal Integrity",
+  "High-Speed PCB Design",
+  "DDR/PCIe/USB/Ethernet/MIPI Interfaces",
+  "Impedance Control",
+  "DFM/DFT",
+  "Gerber/ODB++ Output"
+ ],
+ "387": [
+  "Test Automation",
+  "Manual Testing",
+  "CI/CD",
+  "Test Planning",
+  "Software Testing",
+  "Defect Lifecycle Management",
+  "Root Cause Analysis",
+  "Regression Testing"
+ ],
+ "388": [
+  "UI Design",
+  "UX Design",
+  "Prototyping",
+  "Figma",
+  "Graphic Design",
+  "UI/UX QA",
+  "Design Systems",
+  "Wireframing"
+ ],
+ "389": [
+  "Python",
+  "Backend Development",
+  "API Development",
+  "Scalable Systems Design",
+  "Distributed Systems",
+  "Microservices",
+  "Cloud Platforms",
+  "Database Management"
+ ],
+ "390": [
+  "Blockchain",
+  "Bitcoin",
+  "Stablecoin",
+  "Distributed Systems",
+  "Peer-to-Peer Technology",
+  "Digital Asset Tokenization",
+  "Backend Development",
+  "Cryptography"
+ ],
+ "391": [
+  "Blockchain",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Node.js",
+  "Web3",
+  "Smart Contracts",
+  "REST APIs"
+ ],
+ "392": [
+  "Linux",
+  "Python",
+  "Bash",
+  "Ansible",
+  "VMware",
+  "LDAP",
+  "TCP/IP",
+  "Zabbix"
+ ],
+ "393": [
+  "Python",
+  "Node.js",
+  "React",
+  "REST APIs",
+  "Cloud Infrastructure",
+  "Event-Driven Architecture",
+  "Stripe API",
+  "Airbnb API"
+ ],
+ "394": [
+  "React",
+  "Node.js",
+  "REST APIs",
+  "AWS",
+  "Serverless",
+  "Python",
+  "PostgreSQL",
+  "Event-Driven Architecture"
+ ],
+ "395": [
+  "Node.js",
+  "React",
+  "AWS",
+  "Serverless",
+  "REST APIs",
+  "Event-Driven Architecture",
+  "Stripe",
+  "PostgreSQL"
+ ],
+ "396": [
+  "React",
+  "Node.js",
+  "APIs",
+  "Cloud-Native Platforms",
+  "Web Applications",
+  "System Architecture",
+  "Frontend Development",
+  "Backend Development"
+ ],
+ "397": [
+  "Python",
+  "AWS",
+  "REST APIs",
+  "Event-Driven Architecture",
+  "Cloud-Native Infrastructure",
+  "Real-Time Systems",
+  "Microservices",
+  "Automation"
+ ],
+ "398": [
+  "Android",
+  "Kotlin",
+  "Java",
+  "Mobile Development",
+  "Native Android Development",
+  "REST APIs",
+  "UI/UX Implementation",
+  "Test-Driven Development (TDD)"
+ ],
+ "399": [
+  "Ruby on Rails",
+  "Ruby",
+  "GraphQL",
+  "Apache Kafka",
+  "Node.js",
+  "PostgreSQL",
+  "REST APIs",
+  "Test-Driven Development (TDD)"
+ ],
+ "400": [
+  "TypeScript",
+  "React",
+  "GraphQL",
+  "JavaScript",
+  "Unit Testing",
+  "Monorepo",
+  "Component Libraries",
+  "Accessibility"
+ ],
+ "401": [
+  "React",
+  "TypeScript",
+  "Apollo",
+  "Ruby on Rails",
+  "GraphQL",
+  "Frontend Development",
+  "JavaScript",
+  "REST APIs"
+ ],
+ "402": [
+  "DevOps",
+  "Cloud Infrastructure",
+  "Networking",
+  "Database Administration",
+  "Monitoring",
+  "Logging",
+  "High Availability",
+  "Automation"
+ ],
+ "403": [
+  "Swift",
+  "SwiftUI",
+  "UIKit",
+  "Combine",
+  "Swift Concurrency",
+  "Kotlin Multiplatform",
+  "Ruby on Rails",
+  "iOS Development"
+ ],
+ "404": [
+  "Cursor",
+  "GitHub Copilot",
+  "AI-Assisted Development",
+  "Prompt Engineering",
+  "System Design",
+  "Software Testing",
+  "Full-Stack Development",
+  "Model Context Protocol"
+ ],
+ "405": [
+  "Cursor",
+  "GitHub Copilot",
+  "AI-Assisted Development",
+  "Prompt Engineering",
+  "System Design",
+  "Software Testing",
+  "Full-Stack Development",
+  "Model Context Protocol"
+ ],
+ "406": [
+  "LEGO Mindstorms",
+  "Arduino IDE",
+  "Robotics",
+  "Curriculum Development",
+  "Educational Material Design"
+ ],
+ "407": [
+  "GDPR",
+  "IT Service Management",
+  "Service Desk Operations",
+  "SLA Management",
+  "Incident Management",
+  "IT Infrastructure",
+  "Systems Administration",
+  "Network Management"
+ ],
+ "408": [
+  "Game Development",
+  "Project-Based Learning",
+  "Curriculum Development",
+  "Lesson Planning"
+ ],
+ "409": [
+  "Programming"
+ ],
+ "410": [
+  "Robotics",
+  "Project-Based Learning",
+  "Curriculum Development",
+  "Lesson Planning"
+ ],
+ "411": [
+  "Web Development",
+  "Project-Based Learning"
+ ],
+ "412": [
+  "Proxmox",
+  "Ceph",
+  "KVM",
+  "BGP",
+  "OpenStack",
+  "Juniper Networks",
+  "VMware vSphere",
+  "Linux"
+ ],
+ "413": [
+  "Linux",
+  "cPanel",
+  "Plesk",
+  "DirectAdmin",
+  "DevOps",
+  "Infrastructure Automation",
+  "Cloud Infrastructure",
+  "VPS"
+ ],
+ "414": [
+  "Temenos Transact",
+  "Temenos T24",
+  "Core Banking",
+  "Banking-as-a-Service",
+  "Payment Processing",
+  "System Integration",
+  "AI-Driven Automation",
+  "Regulatory Compliance"
+ ],
+ "415": [
+  "Jira",
+  "Microsoft Office",
+  "Online Gaming Platforms",
+  "Knowledge Base Management",
+  "Incident Management",
+  "Gambling Industry Regulations",
+  "Licensing and Regulatory Frameworks",
+  "Service Desk Operations"
+ ],
+ "416": [
+  "Rust",
+  "Kubernetes",
+  "Docker",
+  "gRPC",
+  "Apache Kafka",
+  "AWS",
+  "REST APIs",
+  "CI/CD"
+ ],
+ "417": [
+  "Angular",
+  "JavaScript",
+  "TypeScript",
+  "HTML",
+  "CSS",
+  "Frontend Development",
+  "UI Component Architecture",
+  "REST APIs"
+ ],
+ "418": [
+  "Kubernetes",
+  "Observability",
+  "Distributed Tracing",
+  "Metrics and Alerting",
+  "Logging Pipelines",
+  "Infrastructure Engineering",
+  "Multi-Datacenter Architecture",
+  "Platform Engineering"
+ ],
+ "419": [
+  "Kubernetes",
+  "Terraform",
+  "AWS",
+  "Docker",
+  "CI/CD",
+  "Infrastructure as Code",
+  "Distributed Systems",
+  "Linux"
+ ],
+ "420": [
+  "Ruby",
+  "Ruby on Rails",
+  "API Development",
+  "Backend Development",
+  "DevOps",
+  "Server-Side Infrastructure",
+  "AI-Powered Platforms",
+  "Cloud Computing"
+ ],
+ "421": [
+  "Ruby",
+  "Ruby on Rails",
+  "API Development",
+  "Backend Infrastructure",
+  "DevOps",
+  "Cloud Platforms",
+  "Microservices",
+  "REST APIs"
+ ],
+ "422": [
+  "ClickHouse",
+  "Kubernetes",
+  "Database Administration",
+  "Infrastructure Engineering",
+  "Cloud Platforms",
+  "Distributed Systems",
+  "Database Performance Tuning",
+  "Site Reliability Engineering"
+ ],
+ "423": [
+  "Ruby",
+  "Domain-Specific Language",
+  "Webhooks",
+  "Concurrency",
+  "Distributed Systems",
+  "Backend Development",
+  "Data Encryption",
+  "Cloud Platforms"
+ ],
+ "424": [
+  "Python",
+  "Machine Learning",
+  "Large Language Models",
+  "AI Application Development",
+  "Software Engineering",
+  "Distributed Systems",
+  "Natural Language Processing",
+  "Cloud Platforms"
+ ],
+ "425": [
+  "Python",
+  "Machine Learning",
+  "Data Engineering",
+  "Software Architecture",
+  "Data Pipelines",
+  "AI Systems",
+  "Code Review",
+  "Financial Systems"
+ ],
+ "426": [
+  "Python",
+  "Machine Learning",
+  "Data Engineering",
+  "Data Pipelines",
+  "Software Architecture",
+  "AI Systems",
+  "Code Review",
+  "Financial Systems"
+ ],
+ "427": [
+  "Manual Testing",
+  "TypeScript",
+  "Playwright",
+  "Test Automation",
+  "SaaS",
+  "Microservices",
+  "End-to-End Testing",
+  "Web Testing"
+ ],
+ "428": [
+  "Manual Testing",
+  "TypeScript",
+  "Playwright",
+  "Test Automation",
+  "Web Application Testing",
+  "Microservices",
+  "SaaS",
+  "End-to-End Testing"
+ ],
+ "429": [
+  "C#",
+  ".NET",
+  ".NET Core",
+  "SQL",
+  "Object-Oriented Programming",
+  "Design Patterns",
+  "TypeScript",
+  "Angular"
+ ],
+ "430": [
+  "Selenium",
+  "Playwright",
+  "Appium",
+  "REST APIs",
+  "SQL",
+  "Python",
+  "Java",
+  "CI/CD"
+ ],
+ "431": [
+  "C#",
+  ".NET",
+  ".NET Core",
+  "SQL",
+  "Object-Oriented Programming",
+  "Design Patterns",
+  "TypeScript",
+  "Angular"
+ ],
+ "432": [
+  "Web Application Testing",
+  "Mobile App Testing",
+  "Backend Testing",
+  "Regression Testing",
+  "Integration Testing",
+  "User Acceptance Testing",
+  "Scrum",
+  "Test Case Management"
+ ],
+ "433": [
+  "Flutter",
+  "Dart",
+  "Bloc",
+  "Riverpod",
+  "REST APIs",
+  "CI/CD",
+  "Git",
+  "Provider"
+ ],
+ "434": [
+  "Figma",
+  "Adobe Creative Suite",
+  "Midjourney",
+  "Adobe Firefly",
+  "DALL\u00b7E",
+  "HTML5",
+  "CSS3",
+  "JavaScript"
+ ],
+ "435": [
+  "Terraform",
+  "Kubernetes",
+  "Python",
+  "Microsoft Azure",
+  "AWS",
+  "MongoDB",
+  "Docker",
+  "CI/CD"
+ ],
+ "436": [
+  "Java",
+  "JavaScript",
+  "Node.js",
+  "MongoDB",
+  "Git",
+  "Apache Maven",
+  "CI/CD",
+  "Distributed Systems"
+ ],
+ "437": [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Angular",
+  "Vue.js",
+  "Git",
+  "REST APIs"
+ ],
+ "438": [
+  "Python",
+  "Node.js",
+  "AWS",
+  "Retrieval-Augmented Generation",
+  "Large Language Models",
+  "Serverless",
+  "REST API Integration",
+  "Agentic AI"
+ ],
+ "439": [
+  "C#",
+  ".NET Framework",
+  "ASP.NET Core",
+  "SQL Server",
+  "JavaScript",
+  "jQuery",
+  "HTML/CSS",
+  "Git"
+ ],
+ "440": [
+  "React.js",
+  "TypeScript",
+  "Redux Toolkit",
+  "React Query",
+  "React Hook Form",
+  "Ant Design",
+  "Material UI",
+  "Vite"
+ ],
+ "441": [
+  "Flutter",
+  "iOS Development",
+  "Swift",
+  "Kotlin",
+  "Dart",
+  "Mobile Development",
+  "Unit Testing",
+  "Debugging"
+ ],
+ "442": [
+  "Python",
+  "Node.js",
+  "PostgreSQL",
+  "REST APIs",
+  "Internet of Things",
+  "Time-Series Data Processing",
+  "CI/CD",
+  "Git"
+ ],
+ "443": [
+  "JavaScript",
+  "PHP",
+  "Vue.js",
+  "React",
+  "Laravel",
+  "MySQL",
+  "PostgreSQL",
+  "Object-Oriented Programming"
+ ],
+ "444": [
+  "C#",
+  ".NET",
+  "ASP.NET",
+  "SQL",
+  "Acumatica ERP"
+ ],
+ "445": [
+  "Python",
+  "Deep Learning",
+  "Generative AI",
+  "Computer Vision",
+  "Diffusion Models",
+  "Variational Autoencoders",
+  "RNA-seq",
+  "Large Language Models"
+ ],
+ "446": [
+  "Kotlin",
+  "Java",
+  "Android SDK",
+  "Android Jetpack",
+  "Kotlin Coroutines",
+  "Model-View-ViewModel",
+  "REST APIs",
+  "Git"
+ ],
+ "447": [
+  "React.js",
+  "JavaScript",
+  "TypeScript",
+  "HTML",
+  "CSS",
+  "MySQL",
+  "Next.js",
+  "PHP"
+ ],
+ "448": [
+  "C#",
+  ".NET Framework",
+  ".NET Core",
+  "ASP.NET MVC",
+  "SQL",
+  "Python",
+  "jQuery",
+  "Docker"
+ ],
+ "449": [
+  "C++",
+  "C++ Standard Template Library (STL)",
+  "Boost C++ Libraries",
+  "Linux",
+  "Multithreading",
+  "Object-Oriented Programming",
+  "Design Patterns",
+  "SQL"
+ ],
+ "450": [
+  "TypeScript",
+  "JavaScript",
+  "Angular",
+  "React",
+  "Node.js",
+  "CSS3",
+  "REST APIs",
+  "Git"
+ ],
+ "451": [
+  "C#",
+  "ASP.NET",
+  "SQL",
+  ".NET",
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "Azure DevOps"
+ ],
+ "452": [
+  "React.js",
+  "JavaScript",
+  "TypeScript",
+  "CSS",
+  "HTML",
+  "Responsive Web Design",
+  "Web Performance Optimization",
+  "Front-End Development"
+ ],
+ "453": [
+  "Delphi",
+  "VCL",
+  "Embarcadero RAD Studio",
+  "WinAPI",
+  "Object-Oriented Programming",
+  "C++ Builder",
+  "RAD Studio Tools API",
+  "DevExpress VCL"
+ ],
+ "454": [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Angular",
+  "Test-Driven Development (TDD)",
+  "Component-Based Development",
+  "Automated Testing",
+  "UI Libraries"
+ ],
+ "455": [
+  "Postman",
+  "SQL",
+  "JMeter",
+  "LoadRunner",
+  "API Testing",
+  "Regression Testing",
+  "Functional Testing",
+  "Load Testing"
+ ],
+ "456": [
+  "PHP",
+  "Laravel",
+  "MySQL",
+  "PostgreSQL",
+  "REST APIs",
+  "JavaScript",
+  "Git",
+  "PHPUnit"
+ ],
+ "457": [
+  "ASP.NET MVC",
+  "ASP.NET Core",
+  "C#",
+  "Entity Framework",
+  "Microsoft SQL Server",
+  "JavaScript",
+  "jQuery",
+  "Git"
+ ],
+ "458": [
+  ".NET Framework",
+  "ASP.NET Core",
+  "Entity Framework",
+  "SQL Server",
+  "Windows Communication Foundation (WCF)",
+  "LINQ",
+  "Windows Presentation Foundation (WPF)",
+  "Model-View-ViewModel"
+ ],
+ "459": [
+  "Node.js",
+  "System Architecture",
+  "API Integration",
+  "Database Design",
+  "Data Pipelines",
+  "REST APIs",
+  "Database Optimization",
+  "Automated Testing"
+ ],
+ "460": [
+  "React Native",
+  "JavaScript",
+  "TypeScript",
+  "Redux",
+  "GraphQL",
+  "REST APIs",
+  "React Navigation",
+  "Git"
+ ],
+ "461": [
+  "Linux",
+  "Docker",
+  "Kubernetes",
+  "PostgreSQL",
+  "VMware",
+  "Zabbix",
+  "Prometheus",
+  "Bash"
+ ],
+ "462": [
+  "React",
+  "Node.js",
+  "JavaScript",
+  "TypeScript",
+  "Redux",
+  "Express.js",
+  "NestJS",
+  "Component-Based Design"
+ ],
+ "463": [
+  "Java",
+  "Spring Boot",
+  "PostgreSQL",
+  "JPA/Hibernate",
+  "Docker",
+  "React.js",
+  "Domain-Driven Design",
+  "REST APIs"
+ ],
+ "464": [
+  "C#",
+  ".NET Core",
+  "ASP.NET Core",
+  "Web API",
+  "Entity Framework",
+  "Microsoft SQL Server",
+  "Transact-SQL (T-SQL)",
+  "REST APIs"
+ ],
+ "465": [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Server-Side Rendering (SSR)",
+  "Redux Toolkit",
+  "REST APIs",
+  "JavaScript",
+  "ESLint"
+ ],
+ "466": [
+  "PHP",
+  "Laravel",
+  "MySQL",
+  "REST APIs",
+  "Git",
+  "API Design",
+  "Caching",
+  "JSON"
+ ],
+ "467": [
+  "C#",
+  ".NET Core",
+  "Redis",
+  "Vue.js",
+  "React",
+  "Distributed Systems",
+  "Real-Time Systems",
+  "Performance Optimization"
+ ],
+ "468": [
+  "Java",
+  "Spring Framework",
+  "Apache Kafka",
+  "Redis",
+  "Microsoft SQL Server",
+  "Distributed Systems",
+  "SQL",
+  "Microservices"
+ ],
+ "469": [
+  ".NET Core",
+  "ASP.NET Core",
+  "C#",
+  "REST APIs",
+  "PostgreSQL",
+  "SQL Server",
+  "AWS",
+  "OAuth2"
+ ],
+ "470": [
+  "Next.js",
+  "React.js",
+  "TypeScript",
+  "Progressive Web Apps (PWA)",
+  "GraphQL",
+  "AWS",
+  "Git",
+  "CI/CD"
+ ],
+ "471": [
+  "Java",
+  "Go",
+  "Data Structures",
+  "Algorithms",
+  "Object-Oriented Programming",
+  "Software Design",
+  "Backend Development",
+  "Code Review"
+ ],
+ "472": [
+  "React Native",
+  "TypeScript",
+  "iOS Development",
+  "Android Development",
+  "Automated Testing",
+  "Clean Architecture",
+  "Mobile Development",
+  "FinTech"
+ ],
+ "473": [
+  "Node.js",
+  "REST APIs",
+  "Microservices",
+  "MongoDB",
+  "Distributed Systems",
+  "CI/CD",
+  "Cloud Platforms",
+  "Git"
+ ],
+ "474": [
+  "TCP/IP",
+  "Linux",
+  "Windows OS",
+  "VMware ESXi",
+  "Virtual Private Network",
+  "DNS",
+  "Networking",
+  "Cybersecurity"
+ ],
+ "475": [
+  "TypeScript",
+  "React",
+  "Angular",
+  ".NET",
+  "ASP.NET Core",
+  "SQL Server",
+  "Microsoft Azure",
+  "OAuth2"
+ ],
+ "476": [
+  "Node.js",
+  "AWS Lambda",
+  "Amazon SQS",
+  "Amazon S3",
+  "Serverless Framework",
+  "Docker",
+  "Large Language Models",
+  "Git"
+ ],
+ "477": [
+  "PHP",
+  "Laravel",
+  "Magento",
+  "MySQL",
+  "JavaScript",
+  "jQuery",
+  "CSS",
+  "REST APIs"
+ ],
+ "478": [
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "Node.js",
+  "GraphQL",
+  "Jest",
+  "CI/CD",
+  "REST APIs"
+ ],
+ "479": [
+  "Next.js",
+  "TypeScript",
+  "React",
+  "Tailwind CSS",
+  "JavaScript",
+  "Figma",
+  "REST APIs",
+  "HTML/CSS"
+ ],
+ "480": [
+  "WordPress",
+  "PHP",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Elementor",
+  "WooCommerce",
+  "Advanced Custom Fields (ACF)"
+ ],
+ "481": [
+  "PHP",
+  "Laravel",
+  "Symfony",
+  "MySQL",
+  "PostgreSQL",
+  "REST APIs",
+  "Git",
+  "JavaScript"
+ ],
+ "482": [
+  "C#",
+  ".NET",
+  "PostgreSQL",
+  "Microsoft SQL Server",
+  "REST APIs",
+  "SQL",
+  "Docker",
+  "Git"
+ ],
+ "483": [
+  "Figma",
+  "UI Design",
+  "UX Design",
+  "Prototyping",
+  "Design Systems",
+  "User Research",
+  "Usability Testing",
+  "Wireframing"
+ ],
+ "484": [
+  "Node.js",
+  "Python",
+  "LangChain",
+  "LangGraph",
+  "PostgreSQL",
+  "REST APIs",
+  "Docker",
+  "Kubernetes"
+ ],
+ "485": [
+  "C#",
+  ".NET Core",
+  "ASP.NET Core",
+  "Entity Framework",
+  "SQL Server",
+  "PostgreSQL",
+  "Git",
+  "REST APIs"
+ ],
+ "486": [
+  "Python",
+  "PyTorch",
+  "TensorFlow",
+  "Scikit-learn",
+  "MLflow",
+  "FastAPI",
+  "Docker",
+  "Natural Language Processing"
+ ],
+ "487": [
+  "NetSuite",
+  "SuiteScript",
+  "JavaScript",
+  "ERP Implementation",
+  "NetSuite CRM",
+  "NetSuite Financials",
+  "Business Requirements Documentation",
+  "User Acceptance Testing"
+ ],
+ "488": [
+  "Power BI",
+  "DAX",
+  "Power Query",
+  "SQL",
+  "Data Modeling",
+  "Azure Synapse Analytics",
+  "Power BI Service",
+  "Power Query M Language"
+ ],
+ "489": [
+  "Python",
+  "Azure Data Factory",
+  "Azure Databricks",
+  "Apache Spark",
+  "PySpark",
+  "Azure Synapse Analytics",
+  "SQL",
+  "Apache Airflow"
+ ],
+ "490": [
+  "Microsoft Azure",
+  ".NET",
+  "Amazon Web Services (AWS)",
+  "Scrum",
+  "Agile",
+  "Solution Architecture",
+  "Architectural Design Patterns",
+  "Cloud Computing"
+ ],
+ "491": [
+  "SAP ABAP",
+  "SAP S/4HANA",
+  "ABAP RESTful Application Programming (RAP)",
+  "OData",
+  "SAP Reports",
+  "SAP Forms",
+  "SAP Interfaces",
+  "System Analysis and Design"
+ ],
+ "492": [
+  "LangChain",
+  "Retrieval-Augmented Generation",
+  "Vector Databases",
+  "Machine Learning",
+  "MLOps",
+  "Generative AI",
+  "Prompt Engineering",
+  "Cloud Services"
+ ],
+ "493": [
+  "AWS",
+  "Terraform",
+  "AWS CloudFormation",
+  "AWS Cloud Development Kit (CDK)",
+  "Infrastructure as Code",
+  "CI/CD",
+  "Amazon EKS",
+  "Amazon EC2"
+ ],
+ "494": [
+  "Microsoft Azure",
+  "Azure Networking",
+  "Azure Firewall",
+  "VPN/ExpressRoute",
+  "Azure DNS",
+  "Azure Kubernetes Service (AKS)",
+  "TCP/IP Routing",
+  "Zero Trust Networking"
+ ],
+ "495": [
+  "Microsoft Azure",
+  "Terraform",
+  "Azure Kubernetes Service (AKS)",
+  "CI/CD Pipelines",
+  "Infrastructure as Code (IaC)",
+  "Azure ARM Templates",
+  "Bicep",
+  "Azure DevOps"
+ ],
+ "496": [
+  "ABAP RESTful Application Programming (RAP)",
+  "ABAP Object-Oriented Programming",
+  "SAP HANA CDS Views",
+  "REST APIs",
+  "BAPI",
+  "SAP Fiori",
+  "BOPF",
+  "Scaled Agile Framework (SAFe)"
+ ],
+ "497": [
+  "C#",
+  ".NET",
+  "Large Language Models",
+  "Retrieval-Augmented Generation (RAG)",
+  "Microsoft Azure",
+  "AWS",
+  "Google Cloud Platform",
+  "Generative AI"
+ ],
+ "498": [
+  "Data Warehousing",
+  "Data Lakes",
+  "AWS",
+  "Microsoft Azure",
+  "Google Cloud Platform",
+  "Databricks",
+  "Agile",
+  "Data Engineering"
+ ],
+ "499": [
+  "Machine Learning",
+  "Generative AI",
+  "Natural Language Processing",
+  "AWS",
+  "Microsoft Azure",
+  "Google Cloud Platform",
+  "Databricks",
+  "Data Analytics"
+ ],
+ "500": [
+  "ETL",
+  "Data Migration",
+  "Informatica",
+  "Talend",
+  "Apache NiFi",
+  "Apache Spark",
+  "Data Governance",
+  "Data Integration"
+ ],
+ "501": [
+  "Python",
+  "PySpark",
+  "Palantir Foundry",
+  "SQL",
+  "ETL/ELT",
+  "Big Data",
+  "Machine Learning",
+  "Agile"
+ ],
+ "502": [
+  "AWS",
+  "Microsoft Azure",
+  "Google Cloud Platform",
+  "Big Data",
+  "Data Warehousing",
+  "Data Science",
+  "Data Visualization",
+  "Business Intelligence"
+ ],
+ "503": [
+  "Azure DevOps",
+  "CI/CD",
+  "Infrastructure as Code",
+  "Terraform",
+  "Bicep",
+  "Azure ARM Templates",
+  "Azure Application Insights",
+  "Azure Log Analytics"
+ ],
+ "504": [
+  "Hardware Troubleshooting",
+  "Networking",
+  "Operating Systems",
+  "IT Infrastructure",
+  "End-User Support",
+  "IT Asset Management",
+  "Software Troubleshooting",
+  "Network Troubleshooting"
+ ],
+ "505": [
+  "SAP Cloud Application Programming Model (CAP)",
+  "Node.js",
+  "SAP Business Technology Platform (BTP)",
+  "ABAP",
+  "SAP S/4HANA",
+  "Java",
+  "Spring Boot",
+  "OData"
+ ],
+ "506": [
+  "Large Language Models",
+  "Kubernetes",
+  "Terraform",
+  "CI/CD",
+  "Docker",
+  "Microsoft Azure",
+  "AWS",
+  "LLMOps"
+ ],
+ "507": [
+  "Python",
+  "Pytest",
+  "Playwright",
+  "PostgreSQL",
+  "Kubernetes",
+  "Jenkins",
+  "Argo CD",
+  "Qdrant"
+ ],
+ "508": [
+  "C++",
+  "Node.js",
+  "WebRTC",
+  "GStreamer",
+  "TCP/UDP",
+  "Video Streaming",
+  "Audio/Video Codecs",
+  "Linux"
+ ],
+ "509": [
+  "Manual Testing",
+  "Functional Testing",
+  "SQL",
+  "API Testing",
+  "Web Services",
+  "Mobile Testing",
+  "Test Documentation",
+  "Agile"
+ ],
+ "510": [
+  "C#",
+  ".NET Framework",
+  "Angular",
+  "SQL",
+  "AWS",
+  "Azure DevOps",
+  "Docker",
+  "JavaScript"
+ ],
+ "511": [
+  "C#",
+  ".NET Framework",
+  "Microsoft Azure",
+  "Azure DevOps",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  ".NET"
+ ],
+ "512": [
+  ".NET",
+  "C#",
+  "Windows Presentation Foundation (WPF)",
+  "Windows Communication Foundation (WCF)",
+  "T-SQL",
+  "XML",
+  "JSON",
+  "SQL"
+ ],
+ "513": [
+  "ABAP",
+  "SAP Master Data Governance (MDG)",
+  "SAP Master Data Management (MDM)",
+  "SAP S/4HANA",
+  "Data Modeling",
+  "Data Quality Management",
+  "Data Governance",
+  "SAP Master Data Governance"
+ ],
+ "514": [
+  "Python",
+  "FastAPI",
+  "Large Language Models",
+  "Streamlit",
+  "Gradio",
+  "Retrieval-Augmented Generation",
+  "Data Pipelines",
+  "Generative AI"
+ ],
+ "515": [
+  "Python",
+  "FastAPI",
+  "Large Language Models",
+  "Retrieval-Augmented Generation (RAG)",
+  "Generative AI",
+  "AWS",
+  "Django",
+  "Flask"
+ ],
+ "516": [
+  "C",
+  "C++",
+  "Socket Programming",
+  "Distributed Systems",
+  "Networking",
+  "Compute Clusters",
+  "System Architecture",
+  "High-Performance Computing (HPC)"
+ ],
+ "517": [
+  "Power BI",
+  "SQL",
+  "Tableau",
+  "Snowflake",
+  "Python",
+  "Microsoft Azure",
+  "AWS",
+  "Data Warehousing"
+ ],
+ "518": [
+  "Snowflake",
+  "Azure Data Factory",
+  "AWS Glue",
+  "Apache NiFi",
+  "PostgreSQL",
+  "Azure Synapse Analytics",
+  "Google BigQuery",
+  "Amazon Redshift"
+ ],
+ "519": [
+  "Python",
+  "Machine Learning",
+  "Deep Learning",
+  "Natural Language Processing",
+  "Computer Vision",
+  "Time Series",
+  "AWS",
+  "Large Language Models"
+ ],
+ "520": [
+  "SQL",
+  "Apache Spark",
+  "Apache Kafka",
+  "NoSQL",
+  "Microsoft Azure",
+  "AWS",
+  "Databricks",
+  "MLOps"
+ ],
+ "521": [
+  ".NET",
+  "Angular",
+  "Microsoft Azure",
+  "Azure ARM Templates",
+  "AWS Cloud Development Kit (CDK)",
+  "GitHub Actions",
+  "Azure SQL",
+  "Test Automation"
+ ],
+ "522": [
+  "Java",
+  "Scala",
+  "Amazon Web Services (AWS)",
+  "CI/CD",
+  "Python",
+  "REST APIs",
+  "SOLID Principles",
+  "Object-Oriented Design"
+ ],
+ "523": [
+  "Python",
+  "Machine Learning",
+  "MLOps",
+  "Apache Spark",
+  "AWS SageMaker",
+  "Azure Machine Learning",
+  "Databricks",
+  "Google Cloud Vertex AI"
+ ],
+ "524": [
+  "ABAP RESTful Application Programming (RAP)",
+  "ABAP Object-Oriented Programming",
+  "SAP HANA CDS Views",
+  "REST APIs",
+  "BAPI",
+  "SAP Fiori",
+  "BOPF",
+  "Scaled Agile Framework (SAFe)"
+ ],
+ "525": [
+  "SAP BW/4HANA",
+  "SAP HANA",
+  "ABAP",
+  "ABAP Core Data Services",
+  "ABAP Managed Database Procedures",
+  "SAP HANA Calculation Views",
+  "SQL",
+  "Advanced DataStore Objects"
+ ],
+ "526": [
+  "SAP FICO",
+  "SAP Financial Accounting",
+  "SAP Controlling",
+  "SAP S/4HANA",
+  "Finance Process Design",
+  "SAP Integration",
+  "Functional Configuration",
+  "End-to-End SAP Implementation"
+ ],
+ "527": [
+  "Java",
+  "Selenium WebDriver",
+  "Test Automation",
+  "REST APIs",
+  "CI/CD",
+  "Jenkins",
+  "Object-Oriented Programming",
+  "Design Patterns"
+ ],
+ "528": [
+  "iOS Development",
+  "Android Development",
+  "Swift",
+  "Kotlin",
+  "Java",
+  "Objective-C",
+  "Backend-as-a-Service",
+  "Mobile Architecture"
+ ],
+ "529": [
+  "Java",
+  "Microservices",
+  "API Integration",
+  "Event-Driven Architecture",
+  "PCI DSS",
+  "ISO 20022",
+  "ISO 8583",
+  "Hardware Security Module"
+ ],
+ "530": [
+  "Python",
+  "R",
+  "Nextflow",
+  "Next-Generation Sequencing",
+  "Bioinformatics",
+  "High-Performance Computing (HPC)",
+  "Cloud Computing",
+  "Linux"
+ ],
+ "531": [
+  "SAP BW/4HANA",
+  "ABAP",
+  "SAP HANA",
+  "ABAP Managed Database Procedures",
+  "SAP HANA Calculation Views",
+  "ABAP Core Data Services",
+  "Advanced DataStore Object Transformations",
+  "SQL"
+ ],
+ "532": [
+  "SAP Business Technology Platform",
+  "Cloud Foundry",
+  "Java",
+  "Node.js",
+  "ABAP",
+  "REST APIs",
+  "OData",
+  "Microservices"
+ ],
+ "533": [
+  "SAP Cloud Platform Integration",
+  "Groovy",
+  "SAP Event Mesh",
+  "Apache Kafka",
+  "SAP S/4HANA",
+  "REST APIs",
+  "OData",
+  "RabbitMQ"
+ ],
+ "534": [
+  "SAP FICO",
+  "SAP",
+  "Financial Accounting",
+  "Controlling",
+  "SAP Implementation",
+  "ERP Systems",
+  "SAP Project Management",
+  "Information Systems"
+ ],
+ "535": [
+  "Salesforce",
+  "Salesforce DX",
+  "Git",
+  "Enterprise Architecture Patterns",
+  "Integration Architecture",
+  "Salesforce Data Cloud",
+  "Agentforce",
+  "Automated Testing"
+ ],
+ "536": [
+  "C#",
+  ".NET",
+  "MetaTrader 4",
+  "MetaTrader 5",
+  "C++",
+  "Trading Platform Integration",
+  "Performance Optimization",
+  "Platform Migration"
+ ],
+ "537": [
+  "Python",
+  "Generative AI",
+  "Prompt Engineering",
+  "Large Language Models",
+  "Java",
+  "JavaScript",
+  "Fine-Tuning",
+  ".NET"
+ ],
+ "538": [
+  "ABAP",
+  "SAP S/4HANA",
+  "ABAP RESTful Application Programming Model",
+  "OData",
+  "Core Data Services Views",
+  "SAP Fiori",
+  "Business Add-In",
+  "SAP Application Interface Framework"
+ ],
+ "539": [
+  "Python",
+  "FastAPI",
+  "LangGraph",
+  "LlamaIndex",
+  "Retrieval-Augmented Generation",
+  "OpenAI API",
+  "Amazon Bedrock",
+  "Streamlit"
+ ],
+ "540": [
+  "Python",
+  "Machine Learning",
+  "Large Language Models",
+  "Retrieval-Augmented Generation",
+  "Bioinformatics",
+  "Genomics",
+  "Cloud-Native Development",
+  "Data Pipeline Development"
+ ],
+ "541": [
+  "Power BI",
+  "Tableau",
+  "SQL",
+  "Data Warehouse",
+  "Data Lake",
+  "Agile",
+  "Scrum",
+  "Kanban"
+ ],
+ "542": [
+  "Bioinformatics",
+  "Business Analysis",
+  "Data Analysis",
+  "Systems Analysis",
+  "GxP",
+  "HIPAA",
+  "Laboratory Automation",
+  "Clinical Trials"
+ ],
+ "543": [
+  "Machine Learning",
+  "Large Language Models",
+  "Neural Networks",
+  "AI Solution Architecture",
+  "Predictive Modeling",
+  "Agile",
+  "Scrum",
+  "Cloud Platforms"
+ ],
+ "544": [
+  "C",
+  "C++",
+  "CUDA",
+  "OpenCL",
+  "GPU Programming",
+  "High-Performance Computing (HPC)",
+  "Kernel Development",
+  "Machine Learning"
+ ],
+ "545": [
+  "Power BI",
+  "SQL",
+  "Tableau",
+  "Snowflake",
+  "Python",
+  "ETL",
+  "Microsoft Azure",
+  "AWS"
+ ],
+ "546": [
+  "SQL",
+  "Azure Synapse Analytics",
+  "Azure Data Lake Storage",
+  "Azure Blob Storage",
+  "Microsoft SQL Server",
+  "ETL",
+  "Microsoft Fabric",
+  "Data Modeling"
+ ],
+ "547": [
+  "Azure Data Factory",
+  "AWS Glue",
+  "Google Cloud Dataflow",
+  "SQL",
+  "Python",
+  "PySpark",
+  "ETL",
+  "Data Warehousing"
+ ],
+ "548": [
+  "Python",
+  "PyTorch",
+  "TensorFlow",
+  "Natural Language Processing",
+  "Large Language Models",
+  "Deep Learning",
+  "Scikit-learn",
+  "Time Series Analysis"
+ ],
+ "549": [
+  "SQL",
+  "Apache Spark",
+  "Apache Kafka",
+  "NoSQL",
+  "Microsoft Azure",
+  "AWS",
+  "Google Cloud Platform",
+  "Databricks"
+ ],
+ "550": [
+  "Microsoft SQL Server",
+  "T-SQL",
+  "PowerShell",
+  "SQL Server Integration Services",
+  "SQL Server Reporting Services",
+  "SQL Server Analysis Services",
+  "Power BI",
+  "SQL Server Always On Availability Groups"
+ ],
+ "551": [
+  "Azure Virtual Desktop",
+  "Microsoft Intune",
+  "Microsoft System Center Configuration Manager",
+  "Windows 10/11",
+  "Active Directory",
+  "Group Policy",
+  "Windows Autopilot",
+  "PowerShell"
+ ],
+ "552": [
+  "ABAP",
+  "SAP UI5",
+  "ABAP Objects",
+  "OData",
+  "Core Data Services Views",
+  "SAP CRM",
+  "Unit Testing",
+  "SAP"
+ ],
+ "553": [
+  ".NET",
+  "Angular",
+  "TypeScript",
+  "Microsoft Azure",
+  "Infrastructure as Code",
+  "Azure Container Apps",
+  "Azure Event Hubs",
+  "Azure Service Bus"
+ ],
+ "554": [
+  "SAP Retail",
+  "SAP ECC",
+  "SAP Materials Management",
+  "SAP Sales and Distribution",
+  "SAP Logistics",
+  "Master Data Management",
+  "SAP Configuration",
+  "SAP Functional Consulting"
+ ],
+ "555": [
+  "Go",
+  "gRPC",
+  "REST APIs",
+  "OAuth",
+  "CI/CD",
+  "Distributed Tracing",
+  "JFrog Artifactory",
+  "GitOps"
+ ],
+ "556": [
+  "Go",
+  "HashiCorp Vault",
+  "Docker",
+  "Kubernetes",
+  "Helm",
+  "GitHub",
+  "Google Cloud Platform",
+  "AWS"
+ ],
+ "557": [
+  "Java",
+  "Microservices",
+  "REST APIs",
+  "CI/CD",
+  "SQL",
+  "NoSQL",
+  "AWS",
+  "Agile"
+ ],
+ "558": [
+  "Java",
+  "Spring Boot",
+  "REST APIs",
+  "OpenAPI",
+  "Unit Testing",
+  "CI/CD",
+  "DevOps",
+  "Scrum"
+ ],
+ "559": [
+  "Salesforce",
+  "Groovy",
+  "Spock",
+  "Selenium",
+  "Postman",
+  "Jenkins",
+  "Docker",
+  "Java"
+ ],
+ "560": [
+  "Python",
+  "Apache Spark",
+  "MLOps",
+  "PyTorch",
+  "TensorFlow",
+  "AWS SageMaker",
+  "Databricks",
+  "Docker"
+ ],
+ "561": [
+  "Oracle E-Business Suite R12",
+  "Oracle Database",
+  "Oracle WebLogic Server",
+  "Oracle APEX",
+  "Oracle Cloud Infrastructure",
+  "Oracle Data Guard",
+  "RMAN",
+  "Integrated SOA Gateway"
+ ],
+ "562": [
+  "Go",
+  "Kubernetes",
+  "HashiCorp Vault",
+  "AWS",
+  "Terraform",
+  "Amazon EKS",
+  "Git",
+  "Infrastructure as Code"
+ ],
+ "563": [
+  "Python",
+  "RDKit",
+  "Cheminformatics",
+  "QSAR/SAR Modeling",
+  "Machine Learning",
+  "ChEMBL",
+  "SMILES",
+  "Virtual Screening"
+ ],
+ "564": [
+  "ABAP RESTful Application Programming (RAP)",
+  "ABAP Object-Oriented Programming",
+  "SAP HANA CDS Views",
+  "REST APIs",
+  "BAPI",
+  "SAP Fiori",
+  "BOPF",
+  "SAP S/4HANA"
+ ],
+ "565": [
+  "SAP BW/4HANA",
+  "SAP HANA",
+  "ABAP",
+  "ABAP Core Data Services",
+  "ABAP Managed Database Procedures (AMDP)",
+  "SQL",
+  "SAP HANA Calculation Views",
+  "Advanced DSO (ADSO)"
+ ],
+ "566": [
+  "Node.js",
+  "SAP Cloud Application Programming Model (CAP)",
+  "SAPUI5",
+  "SAP Business Technology Platform",
+  "SAP HANA",
+  "Jenkins",
+  "Microservices Architecture",
+  "CI/CD"
+ ],
+ "567": [
+  "SAP FICO",
+  "SAP S/4HANA",
+  "SAP Financial Accounting",
+  "SAP Document and Reporting Compliance",
+  "E-Invoicing",
+  "Parallel Accounting",
+  "SAP Controlling",
+  "SAP Business Technology Platform"
+ ],
+ "568": [
+  "SAP FICO",
+  "SAP RE-FX",
+  "SAP Real Estate Management",
+  "SAP Configuration",
+  "SAP S/4HANA",
+  "Financial Accounting",
+  "Controlling",
+  "SAP Custom Code"
+ ],
+ "569": [
+  "SAP Treasury and Risk Management",
+  "SAP FICO",
+  "Advanced Payment",
+  "Multi-Bank Connectivity",
+  "Liquidity Reporting",
+  "Credit Risk Analysis",
+  "SAP Project Implementation"
+ ],
+ "570": [
+  "SAP ECC",
+  "SAP Retail",
+  "SAP Sales and Distribution",
+  "SAP Materials Management",
+  "SAP Logistics",
+  "Master Data Management",
+  "SAP Configuration",
+  "SAP Testing"
+ ],
+ "571": [
+  "SAP Master Data Governance (MDG)",
+  "SAP S/4HANA",
+  "SAP Master Data Management (MDM)",
+  "BRFplus",
+  "Data Replication Framework (DRF)",
+  "Central Finance (CFIN)",
+  "MDG Data Modeling",
+  "SAP MDG Workflow Configuration"
+ ],
+ "572": [
+  "SAP UI5",
+  "Microservices Architecture",
+  "Node.js",
+  "SAP HANA",
+  "OData",
+  "JavaScript",
+  "REST APIs",
+  "SAP Fiori"
+ ],
+ "573": [
+  "SAP UI5",
+  "SAP Fiori",
+  "JavaScript",
+  "HTML5",
+  "CSS3",
+  "REST APIs",
+  "jQuery",
+  "SAP HANA"
+ ],
+ "574": [
+  "SAPUI5",
+  "SAP Business Technology Platform (BTP)",
+  "SAP Fiori Elements",
+  "JavaScript",
+  "HTML5",
+  "CSS",
+  "OData",
+  "SAP Cloud Application Programming Model (CAP)"
+ ],
+ "575": [
+  "AWS",
+  "Terraform",
+  "Kubernetes",
+  "Prometheus",
+  "Grafana",
+  "Jenkins",
+  "GitHub Actions",
+  "TypeScript"
+ ],
+ "576": [
+  "Salesforce Service Cloud",
+  "Salesforce Sales Cloud",
+  "Salesforce CPQ",
+  "Agile",
+  "Scrum",
+  "Business Analysis",
+  "Software Development Life Cycle",
+  "Project Management"
+ ],
+ "577": [
+  "Model Context Protocol",
+  "CI/CD",
+  "GitHub Advanced Security",
+  "CodeQL",
+  "Static Application Security Testing (SAST)",
+  "Software Bill of Materials (SBOM)",
+  "Python",
+  "Terraform"
+ ],
+ "578": [
+  "ServiceNow",
+  "JavaScript",
+  "API Development",
+  "REST APIs",
+  "ServiceNow Widgets",
+  "Third-Party Integrations",
+  "API Documentation",
+  "Front-End Development"
+ ],
+ "579": [
+  "ServiceNow",
+  "IT Service Management (ITSM)",
+  "IT Operations Management (ITOM)",
+  "HR Service Delivery (HRSD)",
+  "Agile",
+  "Scrum",
+  "Business Analysis",
+  "Data Analysis"
+ ],
+ "580": [
+  "Nginx/OpenResty",
+  "Lua",
+  "eBPF",
+  "C",
+  "Linux",
+  "Terraform",
+  "Ansible",
+  "BGP"
+ ],
+ "581": [
+  "Java",
+  "Selenium",
+  "CI/CD",
+  "Jenkins",
+  "TeamCity",
+  "Azure DevOps",
+  "Behavior-Driven Development",
+  "Test Automation"
+ ],
+ "582": [
+  "Python",
+  "Test Automation",
+  "CI/CD",
+  "API Testing",
+  "DevOps",
+  "Backend Engineering",
+  "Machine Learning",
+  "Service Orchestration"
+ ],
+ "583": [
+  "Python",
+  "Machine Learning",
+  "Microsoft Azure",
+  "CI/CD",
+  "Test Automation",
+  "Large Language Models",
+  "QA Processes",
+  "Version Control"
+ ],
+ "584": [
+  "SAP Retail",
+  "SAP Logistics",
+  "SAP Sales and Distribution",
+  "SAP Materials Management",
+  "SAP Merchandising Management",
+  "SAP Configuration",
+  "Knowledge Transfer",
+  "SAP Functional Consulting"
+ ],
+ "585": [
+  "SAP Supplier Relationship Management",
+  "SAP Logistics",
+  "Supplier Relationship Management",
+  "SAP Configuration",
+  "Sourcing Processes",
+  "System Validation",
+  "SAP Certification",
+  "Custom Code Development"
+ ],
+ "586": [
+  "SAP Vendor Invoice Management",
+  "SAP Logistics",
+  "Vendor Invoice Management",
+  "SAP Configuration",
+  "SAP Transition",
+  "OpenText Vendor Invoice Management",
+  "SAP ERP",
+  "SAP Support"
+ ],
+ "587": [
+  "SAP",
+  "SAP Forecasting and Replenishment",
+  "SAP Logistics",
+  "SAP Configuration",
+  "Supply Chain Management",
+  "Demand Planning",
+  "Inventory Management",
+  "SAP S/4HANA"
+ ],
+ "588": [
+  "SAP Materials Management",
+  "SAP Order-to-Cash",
+  "SAP Procure-to-Pay",
+  "SAP Integration",
+  "Kanban",
+  "SAP Configuration",
+  "Business Process Design",
+  "SAP Certification"
+ ],
+ "589": [
+  "Python",
+  "Cloud Technologies",
+  "Agile",
+  "Scrum",
+  "Kanban",
+  "Software Engineering",
+  "Project Management",
+  "Product Lifecycle Management"
+ ],
+ "590": [
+  "Microsoft Azure",
+  "Generative AI",
+  "OpenAI",
+  "Large Language Models",
+  ".NET",
+  "SAP",
+  "SAP Business Technology Platform (BTP)",
+  "Azure AI Services"
+ ],
+ "591": [
+  "AWS",
+  "Magento",
+  "Salesforce Commerce Cloud",
+  "SAP Commerce",
+  "Microservices",
+  "Kubernetes",
+  "Docker",
+  "Shopify"
+ ],
+ "592": [
+  "Python",
+  "React",
+  "LangChain",
+  "LangGraph",
+  "Model Context Protocol",
+  "AI/ML",
+  "Software Development Life Cycle",
+  "Prototyping"
+ ],
+ "593": [
+  "Machine Learning",
+  "Large Language Models",
+  "Cloud Platforms",
+  "AI/ML Architecture",
+  "Python",
+  "MLOps",
+  "Deep Learning",
+  "Data Engineering"
+ ],
+ "594": [
+  "Big Data",
+  "Data Engineering",
+  "Machine Learning",
+  "MLOps",
+  "LLMOps",
+  "Cloud Data Platforms",
+  "Data Governance",
+  "Business Intelligence"
+ ],
+ "595": [
+  "Apache Spark",
+  "PySpark",
+  "Python",
+  "AWS",
+  "Apache Airflow",
+  "SQL",
+  "Apache Kafka",
+  "Apache Iceberg"
+ ],
+ "596": [
+  "C++",
+  "CUDA",
+  "cuDNN",
+  "NCCL",
+  "Linux",
+  "GPU Programming",
+  "XLA",
+  "Dynamic Linking"
+ ],
+ "597": [
+  "Python",
+  "Google Cloud Platform",
+  "Vertex AI",
+  "Terraform",
+  "Kubernetes",
+  "OpenTelemetry",
+  "GitHub Actions",
+  "Grafana"
+ ],
+ "598": [
+  "Python",
+  "Google Cloud Platform",
+  "Large Language Models",
+  "Retrieval-Augmented Generation",
+  "Google Agent Development Kit",
+  "Microservices",
+  "REST APIs",
+  "Embeddings"
+ ],
+ "599": [
+  "Backlog Management",
+  "User Story Creation",
+  "Acceptance Criteria Definition",
+  "Requirements Analysis",
+  "Solution Design",
+  "Platform Development",
+  "Technical Documentation",
+  "B2B Systems"
+ ],
+ "600": [
+  "Elasticsearch",
+  "Apache Solr",
+  "OpenSearch",
+  "Java",
+  "LangChain",
+  "LangGraph",
+  "Vector Search",
+  "Machine Learning"
+ ],
+ "601": [
+  "Java",
+  "Spring Boot",
+  "CI/CD",
+  "Agile",
+  "Microservices",
+  "Cloud Platforms",
+  "Backend Development",
+  "REST APIs"
+ ],
+ "602": [
+  "Python",
+  "Large Language Models",
+  "pytest",
+  "Machine Learning",
+  "Synthetic Data Generation",
+  "Adversarial Testing",
+  "Test Automation",
+  "Dataset Annotation"
+ ],
+ "603": [
+  "GPU Performance Engineering",
+  "Machine Learning",
+  "Distributed Systems",
+  "Model Serving",
+  "Inference Optimization",
+  "CUDA",
+  "FP16/INT8 Quantization",
+  "MLOps"
+ ],
+ "604": [
+  "Python",
+  "TensorFlow",
+  "PyTorch",
+  "Machine Learning",
+  "Deep Learning",
+  "Signal Processing",
+  "Distributed Training",
+  "Voice AI"
+ ],
+ "605": [
+  "Windows OS",
+  "macOS",
+  "Web Technologies",
+  "HAR Files Analysis",
+  "Log Analysis",
+  "Proof of Concept",
+  "Diagnostic Tools",
+  "Network Diagnostics"
+ ],
+ "606": [
+  "React",
+  "Node.js",
+  "Python",
+  "Full-Stack Development",
+  "Voice AI",
+  "Automated Testing",
+  "Secure Coding",
+  "System Architecture"
+ ],
+ "607": [
+  "Zendesk",
+  "Single Sign-On",
+  "Azure Active Directory",
+  "Okta",
+  "Virtual Desktop Infrastructure",
+  "HAR Files Analysis",
+  "Network Troubleshooting",
+  "Transport Layer Security"
+ ],
+ "608": [
+  "Python",
+  "Deep Learning",
+  "PyTorch",
+  "Natural Language Processing",
+  "Speech Processing",
+  "Large Language Models",
+  "NVIDIA NeMo",
+  "Conversational AI"
+ ],
+ "609": [
+  "Deep Learning",
+  "Python",
+  "PyTorch",
+  "Large Language Models",
+  "NVIDIA NeMo",
+  "Mathematical Reasoning",
+  "Conversational AI",
+  "GPU Computing"
+ ],
+ "610": [
+  "Java",
+  "Spring Boot",
+  "REST APIs",
+  "Apache Cassandra",
+  "ClickHouse",
+  "PostgreSQL",
+  "Kubernetes",
+  "AWS"
+ ],
+ "611": [
+  "React",
+  "Angular",
+  "Vue.js",
+  "REST APIs",
+  "gRPC",
+  "GraphQL",
+  "OpenAPI",
+  "TypeScript"
+ ],
+ "612": [
+  "Java",
+  "Spring Boot",
+  "Apache Kafka",
+  "Kubernetes",
+  "Docker",
+  "Distributed Systems",
+  "Microservices",
+  "Project Reactor"
+ ],
+ "613": [
+  "SQL",
+  "T-SQL",
+  "ETL",
+  "SQL Server",
+  "Data Migration",
+  "Database Design",
+  "Data Quality",
+  "Data Engineering"
+ ],
+ "614": [
+  "SQL Server",
+  "PostgreSQL",
+  "Microsoft Azure",
+  "AWS",
+  "Python",
+  "PowerShell",
+  "Terraform",
+  "Datadog"
+ ],
+ "615": [
+  "C#",
+  ".NET Framework",
+  "ASP.NET",
+  "Entity Framework",
+  "Microsoft SQL Server",
+  "Microservices Architecture",
+  "Git",
+  "ASP.NET Web API"
+ ],
+ "616": [
+  "Python",
+  "FastAPI",
+  "LangChain",
+  "Apache Kafka",
+  "PostgreSQL",
+  "Redis",
+  "Apache Airflow",
+  "Azure DevOps"
+ ],
+ "617": [
+  "Python",
+  "Machine Learning",
+  "Statistics",
+  "Data Engineering",
+  "Data Mining",
+  "Causal Inference",
+  "Git",
+  "Optimization"
+ ],
+ "618": [
+  "Serial Digital Interface (SDI)",
+  "HDMI",
+  "Video Camera Operation",
+  "Production Video Switchers",
+  "Chroma Keying",
+  "Broadcast Equipment",
+  "Audio-Visual (AV) Infrastructure",
+  "Audio-Visual Systems"
+ ],
+ "619": [
+  "Power BI",
+  "SQL",
+  "Data Warehousing",
+  "Data Mining",
+  "Statistical Analysis",
+  "Dashboard Development",
+  "Data Cleansing",
+  "Data Visualization"
+ ],
+ "620": [
+  "OpenCV",
+  "CUDA",
+  "TensorRT",
+  "MediaPipe",
+  "ONNX Runtime",
+  "Deep Learning",
+  "Computer Vision",
+  "Unreal Engine"
+ ],
+ "621": [
+  "Firewalls",
+  "Intrusion Detection Systems",
+  "Vulnerability Assessment",
+  "Penetration Testing",
+  "DevSecOps",
+  "Incident Response",
+  "Security Information and Event Management (SIEM)",
+  "Network Security"
+ ],
+ "622": [
+  "Python",
+  "SQL",
+  "Pandas",
+  "ETL",
+  "Power BI",
+  "NumPy",
+  "Polars",
+  "Dimensional Modeling"
+ ],
+ "623": [
+  "JavaScript",
+  "HTML5",
+  "CSS",
+  "HTML5 Canvas API",
+  "PixiJS",
+  "ES6+",
+  "Web Animation",
+  "Frontend Development"
+ ],
+ "624": [
+  "Go",
+  "Microservices",
+  "Distributed Architecture",
+  "Goroutines",
+  "Go Channels",
+  "Go Templates",
+  "Godoc",
+  "Git"
+ ],
+ "625": [
+  "Go",
+  "Blockchain",
+  "Web3",
+  "Microservices",
+  "Goroutines",
+  "Go Modules",
+  "Git",
+  "Distributed Systems"
+ ],
+ "626": [
+  "PixiJS",
+  "JavaScript",
+  "HTML5",
+  "CSS",
+  "HTML5 Canvas",
+  "2D Animation",
+  "GSAP",
+  "WebGL"
+ ],
+ "627": [
+  "Windows OS",
+  "Microsoft Office",
+  "Remote Desktop",
+  "Help Desk Software",
+  "Hardware Troubleshooting",
+  "Network Configuration",
+  "Operating System Support",
+  "Database Support"
+ ],
+ "628": [
+  "Python",
+  "OpenCV",
+  "Raspberry Pi",
+  "Arduino",
+  "REST APIs",
+  "WebSockets",
+  "MQTT",
+  "NVIDIA Jetson"
+ ],
+ "629": [
+  "Manual Testing",
+  "SQL",
+  "Jira",
+  "TestRail",
+  "Regression Testing",
+  "Functional Testing",
+  "Agile",
+  "Mobile Application Testing"
+ ],
+ "630": [],
+ "631": [
+  "PHP",
+  "MySQL",
+  "PostgreSQL",
+  "Redis",
+  "Docker",
+  "PHPUnit",
+  "RabbitMQ",
+  "REST APIs"
+ ],
+ "632": [
+  "Figma",
+  "UI/UX Design",
+  "Wireframing",
+  "Prototyping",
+  "Design Systems",
+  "Usability Testing",
+  "User Research",
+  "Mobile Web Design"
+ ],
+ "633": [
+  "Selenium",
+  "C#",
+  "API Testing",
+  "Git",
+  "REST APIs",
+  "HTML/CSS",
+  "Agile",
+  "Test Automation"
+ ],
+ "634": [
+  "Security Information and Event Management (SIEM)",
+  "Splunk",
+  "ELK Stack",
+  "Intrusion Detection System/Intrusion Prevention System",
+  "Endpoint Detection and Response/Extended Detection and Response",
+  "Threat Intelligence",
+  "Digital Forensics",
+  "TCP/IP"
+ ],
+ "635": [
+  "C#",
+  ".NET Core",
+  "ASP.NET Core",
+  "Microservices",
+  "REST APIs",
+  "SQL Server",
+  "PostgreSQL",
+  "RabbitMQ"
+ ],
+ "636": [
+  "Python",
+  "TensorFlow",
+  "PyTorch",
+  "Scikit-learn",
+  "Machine Learning",
+  "ETL",
+  "AWS",
+  "Git"
+ ],
+ "637": [
+  "PHP",
+  "MySQL",
+  "PostgreSQL",
+  "REST APIs",
+  "Docker",
+  "Redis",
+  "Git",
+  "CI/CD"
+ ],
+ "638": [
+  "Power BI",
+  "DAX",
+  "Power Query",
+  "Power Query M Language",
+  "Star Schema",
+  "Row-Level Security (RLS)",
+  "Dimensional Modeling",
+  "Financial Modeling"
+ ],
+ "639": [
+  "A/B Testing",
+  "Statistical Analysis",
+  "SQL",
+  "Data Pipelines",
+  "KPI Development",
+  "Business Intelligence",
+  "Product Analytics",
+  "Event Tracking"
+ ],
+ "640": [
+  "React.js",
+  "JavaScript",
+  "TypeScript",
+  "Redux",
+  "Jest",
+  "Cypress",
+  "Webpack",
+  "Vite"
+ ],
+ "641": [
+  "Jira",
+  "Confluence",
+  "Agile",
+  "Scrum",
+  "Postman",
+  "Microsoft Project",
+  "Project Management Professional (PMP)",
+  "API Testing"
+ ],
+ "642": [
+  "Figma",
+  "Adobe XD",
+  "Adobe Photoshop",
+  "Adobe Illustrator",
+  "Wireframing",
+  "Prototyping",
+  "Information Architecture",
+  "User Research"
+ ],
+ "643": [
+  "Jira",
+  "Confluence",
+  "Microsoft Project",
+  "Asana",
+  "Trello",
+  "Postman",
+  "Project Management Professional (PMP)",
+  "PRINCE2"
+ ],
+ "644": [
+  "Windows OS",
+  "Microsoft Office",
+  "Hardware Troubleshooting",
+  "Network Troubleshooting",
+  "Help Desk Software",
+  "Remote Desktop Applications",
+  "Operating System Support",
+  "Database Support"
+ ],
+ "645": [
+  "Unity 3D",
+  "C#",
+  "Git",
+  "WebGL",
+  "Photon SDK",
+  "WebSockets",
+  "SOLID Principles",
+  "Zenject"
+ ],
+ "646": [
+  "Telecommunications Systems",
+  "Electrical Systems",
+  "Cable Installation",
+  "Structured Cabling",
+  "Equipment Installation",
+  "Technical Documentation",
+  "System Testing",
+  "Safety Procedures"
+ ],
+ "647": [
+  "Microsoft Office",
+  "Video Surveillance Systems",
+  "CCTV Monitoring"
+ ],
+ "648": [
+  "CCTV Systems",
+  "Video Surveillance",
+  "Access Control Systems",
+  "Security Monitoring",
+  "Video Analysis",
+  "Security Equipment Operation",
+  "Incident Reporting Systems",
+  "Perimeter Security Systems"
+ ],
+ "649": [
+  "C++",
+  "Python",
+  "Data Structures",
+  "Algorithms",
+  "Linux",
+  "Git",
+  "EDA Tools",
+  "VLSI Design"
+ ]
+}

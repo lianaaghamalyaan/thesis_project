@@ -1,0 +1,40 @@
+university,program_name,degree_level,relevant_job_groups,comparison_type
+AUA,Computer Science,Bachelor,ALL,full market
+AUA,Computer and Information Science,Master,ALL,full market
+AUA,Data Science,Bachelor,Data / ML / AI,specialised
+AUA,Engineering Sciences,Bachelor,Hardware / Embedded | Software Engineering,specialised
+AUA,Environmental and Sustainability Sciences,Bachelor,EXCLUDED,excluded
+AUA,General Education,General,EXCLUDED,excluded
+AUA,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP | Technical Management,specialised
+NPUA,Computer Engineering,Bachelor,Hardware / Embedded | Software Engineering,specialised
+NPUA,Computer Engineering,Master,Hardware / Embedded | Software Engineering,specialised
+NPUA,Informatics (Computer Science),Bachelor,ALL,full market
+NPUA,Informatics (Computer Science),Master,ALL,full market
+NPUA,Information Security,Bachelor,Security,specialised
+NPUA,Information Systems,Bachelor,IT Support / Admin / ERP | Software Engineering,specialised
+NPUA,Information Systems,Master,IT Support / Admin / ERP | Software Engineering,specialised
+NPUA,Information Technologies,Bachelor,ALL,full market
+NPUA,Software Engineering,Bachelor,Software Engineering | QA / Testing,specialised
+NPUA,Software Engineering,Master,Software Engineering | QA / Testing,specialised
+NUACA,Geographic Information Systems,Master,Data / ML / AI | IT Support / Admin / ERP,specialised
+NUACA,Informatics (Computer Science),Bachelor,ALL,full market
+NUACA,Informatics (Computer Science),Master,ALL,full market
+NUACA,Information Systems,Bachelor,IT Support / Admin / ERP | Software Engineering,specialised
+NUACA,Project Management (in Information Technologies),Master,Technical Management | IT Support / Admin / ERP,specialised
+RAU,Applied Mathematics and Informatics,Bachelor,ALL,full market
+UFAR,Computer Science,Bachelor,ALL,full market
+UFAR,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI | Software Engineering,specialised
+YSU,Applied Statistics and Data Science,Bachelor,Data / ML / AI,specialised
+YSU,Applied Statistics and Data Science,Master,Data / ML / AI,specialised
+YSU,Blockchain and Digital Currencies,Master,Software Engineering | Data / ML / AI,specialised
+YSU,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,specialised
+YSU,Data Science in Business,Master,Data / ML / AI,specialised
+YSU,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI | Software Engineering,specialised
+YSU,Informatics and Applied Mathematics,Bachelor,ALL,full market
+YSU,Informatics and Applied Mathematics (Part time),Bachelor,ALL,full market
+YSU,Information Security,Bachelor,Security,specialised
+YSU,Information Systems Development,Master,IT Support / Admin / ERP | Software Engineering,specialised
+YSU,Information Systems Management,Master,IT Support / Admin / ERP | Technical Management,specialised
+YSU,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering | DevOps / Cloud,specialised
+YSU,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI | Software Engineering,specialised
+YSU,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,specialised

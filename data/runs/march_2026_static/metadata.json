@@ -1,0 +1,20 @@
+{
+  "run_id": "march_2026_static",
+  "is_canonical": true,
+  "experiment": "LLM_desc_semantic",
+  "created_at": "2026-03-21",
+  "curriculum_snapshot": {
+    "collected_at": "2026-03-20",
+    "n_universities": 8,
+    "n_programs": 44,
+    "n_courses": 1545
+  },
+  "job_snapshot": {
+    "collected_at": "2026-03-20",
+    "n_it_postings": 753,
+    "n_sources": 13,
+    "window": "static"
+  },
+  "esco_version": "v1.2",
+  "notes": "Thesis research snapshot. Static. Not refreshed after March 2026."
+}

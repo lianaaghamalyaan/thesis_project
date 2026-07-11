@@ -1,0 +1,21 @@
+﻿source_url,program_name_original,degree_type,rows,status,mapped_program_name_en,reason
+https://polytech.am/edu/computer-engineering/,Համակարգչային ճարտարագիտություն,Bachelor,21,included,Computer Engineering,Included in thesis IT scope.
+https://polytech.am/edu/computer_science/,Ինֆորմատիկա (Համակարգչային Գիտություն),Bachelor,26,included,Informatics (Computer Science),Included in thesis IT scope.
+https://polytech.am/edu/electrical_engineering/,Էլեկտրատեխնիկա,Bachelor,38,excluded,,Excluded: electrical engineering is outside the thesis IT scope.
+https://polytech.am/edu/electronics/,Էլեկտրոնիկա,Bachelor,80,excluded,,Excluded: electronics is outside the thesis IT scope.
+https://polytech.am/edu/information_security/,Տեղեկատվական Անվտանգություն,Bachelor,16,included,Information Security,Included in thesis IT scope.
+https://polytech.am/edu/information_systems/,Տեղեկատվական Համակարգեր,Bachelor,28,included,Information Systems,Included in thesis IT scope.
+https://polytech.am/edu/information_technologies-2/,Տեղեկատվական Տեխնոլոգիաներ,Bachelor,21,included,Information Technologies,Included in thesis IT scope.
+https://polytech.am/edu/master-informatics-computer-science/,Ինֆորմատիկա (Համակարգչային գիտություն),Master,14,included,Informatics (Computer Science),Included in thesis IT scope.
+https://polytech.am/edu/master_computer_engineering/,Համակարգչային Ճարտարագիտություն,Master,15,included,Computer Engineering,Included in thesis IT scope.
+https://polytech.am/edu/master_electronics/,Էլեկտրոնիկա,Master,48,excluded,,Excluded: electronics is outside the thesis IT scope.
+https://polytech.am/edu/master_information_systems/,Տեղեկատվական Համակարգեր,Master,17,included,Information Systems,Included in thesis IT scope.
+https://polytech.am/edu/master_mechanical_engineering/,Մեքենագիտություն,Master,30,excluded,,Excluded: mechanical engineering is outside the thesis IT scope.
+https://polytech.am/edu/master_radioengineering_and_communication/,Ռադիոտեխնիկա Եվ Կապ,Master,39,excluded,,Excluded: radioengineering/communication is adjacent but outside the thesis IT scope.
+https://polytech.am/edu/master_software_engineering-2/,Ծրագրային Ճարտարագիտություն,Master,31,included,Software Engineering,Included in thesis IT scope.
+https://polytech.am/edu/master_transportation_engineering/,Տրանսպորտային Մեքենաշինություն,Master,15,excluded,,Excluded: transportation engineering is outside the thesis IT scope.
+https://polytech.am/edu/master_transportation_systems/,Տրանսպորտային Համակարգեր,Master,26,excluded,,Excluded: transport systems is outside the thesis IT scope.
+https://polytech.am/edu/mechanical_engineering/,Մեքենագիտություն,Bachelor,46,excluded,,Excluded: mechanical engineering is outside the thesis IT scope.
+https://polytech.am/edu/radioengineering_and_communication/,Ռադիոտեխնիկա և կապ,Bachelor,64,excluded,,Excluded: radioengineering/communication is adjacent but outside the thesis IT scope.
+https://polytech.am/edu/software_engineering/,Ծրագրային ճարտարագիտություն,Bachelor,35,included,Software Engineering,Included in thesis IT scope.
+https://polytech.am/edu/transport_systems/,Տրանսպորտային Համակարգեր,Bachelor,71,excluded,,Excluded: transport systems is outside the thesis IT scope.

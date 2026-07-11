@@ -1,0 +1,125 @@
+{
+  "American University of Armenia | Computer Science | Bachelor": "ALL",
+  "American University of Armenia | Computer and Information Science | Master": "ALL",
+  "American University of Armenia | Data Science | Bachelor": [
+    "Data / ML / AI"
+  ],
+  "American University of Armenia | Engineering Sciences | Bachelor": null,
+  "American University of Armenia | Environmental and Sustainability Sciences | Bachelor": null,
+  "American University of Armenia | General Education | General": null,
+  "American University of Armenia | Industrial Engineering and Systems Management | Master": [
+    "IT Support / Admin / ERP",
+    "Technical Management"
+  ],
+  "Armenian State Pedagogical University | Informatics | Bachelor": [
+    "Software Engineering",
+    "IT Support / Admin / ERP"
+  ],
+  "Armenian State Pedagogical University | Informatics | Master": [
+    "IT Support / Admin / ERP",
+    "Software Engineering"
+  ],
+  "Armenian State University of Economics | Applied Statistics and Data Science | Master": [
+    "Data / ML / AI"
+  ],
+  "Armenian State University of Economics | Information Systems | Bachelor": [
+    "IT Support / Admin / ERP",
+    "Software Engineering"
+  ],
+  "Armenian State University of Economics | Information Technology in Business | Master": [
+    "IT Support / Admin / ERP",
+    "Technical Management",
+    "Software Engineering"
+  ],
+  "National Polytechnic University of Armenia | Computer Engineering | Bachelor": [
+    "Hardware / Embedded",
+    "Software Engineering"
+  ],
+  "National Polytechnic University of Armenia | Computer Engineering | Master": [
+    "Hardware / Embedded",
+    "Software Engineering"
+  ],
+  "National Polytechnic University of Armenia | Informatics (Computer Science) | Bachelor": "ALL",
+  "National Polytechnic University of Armenia | Informatics (Computer Science) | Master": "ALL",
+  "National Polytechnic University of Armenia | Information Security | Bachelor": [
+    "Security"
+  ],
+  "National Polytechnic University of Armenia | Information Systems | Bachelor": [
+    "IT Support / Admin / ERP",
+    "Software Engineering"
+  ],
+  "National Polytechnic University of Armenia | Information Systems | Master": [
+    "IT Support / Admin / ERP",
+    "Software Engineering"
+  ],
+  "National Polytechnic University of Armenia | Information Technologies | Bachelor": "ALL",
+  "National Polytechnic University of Armenia | Software Engineering | Bachelor": [
+    "Software Engineering",
+    "QA / Testing"
+  ],
+  "National Polytechnic University of Armenia | Software Engineering | Master": [
+    "Software Engineering",
+    "QA / Testing"
+  ],
+  "National University of Architecture and Construction of Armenia | Geographic Information Systems | Master": [
+    "Data / ML / AI",
+    "IT Support / Admin / ERP"
+  ],
+  "National University of Architecture and Construction of Armenia | Informatics (Computer Science) | Bachelor": "ALL",
+  "National University of Architecture and Construction of Armenia | Informatics (Computer Science) | Master": "ALL",
+  "National University of Architecture and Construction of Armenia | Information Systems | Bachelor": [
+    "IT Support / Admin / ERP",
+    "Software Engineering"
+  ],
+  "National University of Architecture and Construction of Armenia | Project Management (in Information Technologies) | Master": [
+    "Technical Management",
+    "IT Support / Admin / ERP"
+  ],
+  "Russian-Armenian University | Applied Mathematics and Informatics | Bachelor": "ALL",
+  "Université Française en Arménie | Computer Science | Bachelor": "ALL",
+  "Université Française en Arménie | MS in Computer Science - Artificial Intelligence: Foundations and Applications | Master": [
+    "Data / ML / AI",
+    "Software Engineering"
+  ],
+  "Yerevan State University | Applied Statistics and Data Science | Bachelor": [
+    "Data / ML / AI"
+  ],
+  "Yerevan State University | Applied Statistics and Data Science | Master": [
+    "Data / ML / AI"
+  ],
+  "Yerevan State University | Blockchain and Digital Currencies | Master": null,
+  "Yerevan State University | Data Processing in Physics and Artificial Intelligence | Bachelor": [
+    "Data / ML / AI"
+  ],
+  "Yerevan State University | Data Science in Business | Master": [
+    "Data / ML / AI"
+  ],
+  "Yerevan State University | Discrete Mathematics and Theoretical Informatics | Master": [
+    "Data / ML / AI",
+    "Software Engineering"
+  ],
+  "Yerevan State University | Informatics and Applied Mathematics (Part time) | Bachelor": "ALL",
+  "Yerevan State University | Informatics and Applied Mathematics | Bachelor": "ALL",
+  "Yerevan State University | Information Security | Bachelor": [
+    "Security"
+  ],
+  "Yerevan State University | Information Systems Development | Master": [
+    "IT Support / Admin / ERP",
+    "Software Engineering"
+  ],
+  "Yerevan State University | Information Systems Management | Master": [
+    "IT Support / Admin / ERP",
+    "Technical Management"
+  ],
+  "Yerevan State University | Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks | Master": [
+    "Software Engineering",
+    "DevOps / Cloud"
+  ],
+  "Yerevan State University | Numerical Analysis and Mathematical Modelling | Master": [
+    "Data / ML / AI",
+    "Software Engineering"
+  ],
+  "Yerevan State University | Radiophysics and Computer Technology | Bachelor": [
+    "Hardware / Embedded"
+  ]
+}

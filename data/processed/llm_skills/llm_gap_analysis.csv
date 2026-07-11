@@ -1,0 +1,556 @@
+university,program_name,degree_level,role_groups,missing_skill,job_frequency,category
+American University of Armenia,Computer Science,Bachelor,ALL,SQL,103,Databases
+American University of Armenia,Computer Science,Bachelor,ALL,TypeScript,78,Programming Languages
+American University of Armenia,Computer Science,Bachelor,ALL,AWS,72,DevOps & Cloud
+American University of Armenia,Computer Science,Bachelor,ALL,React,60,Web & Mobile Frameworks
+American University of Armenia,Computer Science,Bachelor,ALL,Git,52,DevOps & Cloud
+American University of Armenia,Computer Science,Bachelor,ALL,PostgreSQL,52,Databases
+American University of Armenia,Computer Science,Bachelor,ALL,Node.js,52,Web & Mobile Frameworks
+American University of Armenia,Computer Science,Bachelor,ALL,Docker,51,DevOps & Cloud
+American University of Armenia,Computer Science,Bachelor,ALL,Microservices Architecture,47,Software Engineering
+American University of Armenia,Computer Science,Bachelor,ALL,Kubernetes,41,DevOps & Cloud
+American University of Armenia,Computer Science,Bachelor,ALL,Linux,37,DevOps & Cloud
+American University of Armenia,Computer Science,Bachelor,ALL,Large Language Models,37,Data & ML
+American University of Armenia,Computer Science,Bachelor,ALL,Agile,31,Software Engineering
+American University of Armenia,Computer Science,Bachelor,ALL,.NET,29,Web & Mobile Frameworks
+American University of Armenia,Computer Science,Bachelor,ALL,Go,27,Programming Languages
+American University of Armenia,Computer and Information Science,Master,ALL,REST API,120,Web & Mobile Frameworks
+American University of Armenia,Computer and Information Science,Master,ALL,TypeScript,78,Programming Languages
+American University of Armenia,Computer and Information Science,Master,ALL,AWS,72,DevOps & Cloud
+American University of Armenia,Computer and Information Science,Master,ALL,React,60,Web & Mobile Frameworks
+American University of Armenia,Computer and Information Science,Master,ALL,CI/CD,59,DevOps & Cloud
+American University of Armenia,Computer and Information Science,Master,ALL,Git,52,DevOps & Cloud
+American University of Armenia,Computer and Information Science,Master,ALL,PostgreSQL,52,Databases
+American University of Armenia,Computer and Information Science,Master,ALL,Node.js,52,Web & Mobile Frameworks
+American University of Armenia,Computer and Information Science,Master,ALL,Docker,51,DevOps & Cloud
+American University of Armenia,Computer and Information Science,Master,ALL,Microservices Architecture,47,Software Engineering
+American University of Armenia,Computer and Information Science,Master,ALL,Kubernetes,41,DevOps & Cloud
+American University of Armenia,Computer and Information Science,Master,ALL,C#,38,Programming Languages
+American University of Armenia,Computer and Information Science,Master,ALL,Linux,37,DevOps & Cloud
+American University of Armenia,Computer and Information Science,Master,ALL,Large Language Models,37,Data & ML
+American University of Armenia,Computer and Information Science,Master,ALL,Test Automation,31,Software Engineering
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,Large Language Models,25,Data & ML
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,AWS,14,DevOps & Cloud
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,Retrieval-Augmented Generation,11,Data & ML
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,Power BI,11,Data & ML
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,Tableau,8,Data & ML
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,FastAPI,8,Web & Mobile Frameworks
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,PyTorch,8,Data & ML
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,Docker,7,DevOps & Cloud
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,REST API,7,Web & Mobile Frameworks
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,PostgreSQL,7,Databases
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,Data Pipelines,7,Data & ML
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,Product Analytics,7,Data & ML
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,TensorFlow,6,Data & ML
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,Databricks,6,Data & ML
+American University of Armenia,Data Science,Bachelor,Data / ML / AI,Apache Spark,6,Data & ML
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,REST API,93,Web & Mobile Frameworks
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,JavaScript,66,Programming Languages
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,TypeScript,57,Programming Languages
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,React,54,Web & Mobile Frameworks
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,Python,52,Programming Languages
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,Node.js,47,Web & Mobile Frameworks
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,Git,36,DevOps & Cloud
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,Microservices Architecture,36,Software Engineering
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,SQL,33,Databases
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,C#,33,Programming Languages
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,PostgreSQL,33,Databases
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,AWS,29,DevOps & Cloud
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,Docker,28,DevOps & Cloud
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,Java,27,Programming Languages
+American University of Armenia,Engineering Sciences,Bachelor,Hardware / Embedded + Software Engineering,MySQL,25,Databases
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,Python,14,Programming Languages
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,Agile,10,Software Engineering
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,AWS,9,DevOps & Cloud
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,SAP Configuration,8,Other Technical
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,Jira,8,Other Technical
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,SAP S/4HANA,7,Other Technical
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,REST API,7,Web & Mobile Frameworks
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,Windows,6,Other Technical
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,SAP Logistics,6,Other Technical
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,Scrum,6,Software Engineering
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,SAP FICO,6,Other Technical
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,Cloud Platforms,5,DevOps & Cloud
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,PHP,5,Programming Languages
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,Kubernetes,5,DevOps & Cloud
+American University of Armenia,Industrial Engineering and Systems Management,Master,IT Support / Admin / ERP + Technical Management,Distributed Systems,5,Software Engineering
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,REST API,93,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,JavaScript,66,Programming Languages
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,TypeScript,57,Programming Languages
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,React,54,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,Node.js,47,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,Git,36,DevOps & Cloud
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,Microservices Architecture,36,Software Engineering
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,SQL,33,Databases
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,C#,33,Programming Languages
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,PostgreSQL,33,Databases
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,AWS,29,DevOps & Cloud
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,Docker,28,DevOps & Cloud
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,Java,27,Programming Languages
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,MySQL,25,Databases
+National Polytechnic University of Armenia,Computer Engineering,Bachelor,Hardware / Embedded + Software Engineering,CI/CD,25,DevOps & Cloud
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,REST API,93,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,JavaScript,66,Programming Languages
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,TypeScript,57,Programming Languages
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,React,54,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,Node.js,47,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,Git,36,DevOps & Cloud
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,Microservices Architecture,36,Software Engineering
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,SQL,33,Databases
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,C#,33,Programming Languages
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,PostgreSQL,33,Databases
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,AWS,29,DevOps & Cloud
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,Docker,28,DevOps & Cloud
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,Java,27,Programming Languages
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,MySQL,25,Databases
+National Polytechnic University of Armenia,Computer Engineering,Master,Hardware / Embedded + Software Engineering,CI/CD,25,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,Python,173,Programming Languages
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,REST API,120,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,TypeScript,78,Programming Languages
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,AWS,72,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,React,60,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,CI/CD,59,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,Git,52,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,PostgreSQL,52,Databases
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,Node.js,52,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,Docker,51,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,Microservices Architecture,47,Software Engineering
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,Machine Learning,44,Data & ML
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,Java,43,Programming Languages
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,Kubernetes,41,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Bachelor,ALL,C#,38,Programming Languages
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,Python,173,Programming Languages
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,REST API,120,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,TypeScript,78,Programming Languages
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,AWS,72,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,React,60,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,CI/CD,59,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,Git,52,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,PostgreSQL,52,Databases
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,Node.js,52,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,Docker,51,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,Microservices Architecture,47,Software Engineering
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,Machine Learning,44,Data & ML
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,Java,43,Programming Languages
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,Kubernetes,41,DevOps & Cloud
+National Polytechnic University of Armenia,Informatics (Computer Science),Master,ALL,C#,38,Programming Languages
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Python,6,Programming Languages
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Identity and Access Management,5,Security
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Incident Response,4,Other Technical
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Compliance Management,3,Other Technical
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Terraform,3,DevOps & Cloud
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Penetration Testing,3,Other Technical
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,CI/CD,3,DevOps & Cloud
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Single Sign-On (SSO),2,Other Technical
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,SIEM,2,Other Technical
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,AWS,2,DevOps & Cloud
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Microservices Architecture,2,Software Engineering
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,GitLab,2,DevOps & Cloud
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Security Auditing,2,Other Technical
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Active Directory,2,Security
+National Polytechnic University of Armenia,Information Security,Bachelor,Security,Okta,2,Security
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,REST API,98,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,JavaScript,67,Programming Languages
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,TypeScript,58,Programming Languages
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,React,55,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Node.js,47,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Git,37,DevOps & Cloud
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Microservices Architecture,36,Software Engineering
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,PostgreSQL,35,Databases
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,C#,33,Programming Languages
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,AWS,32,DevOps & Cloud
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Docker,29,DevOps & Cloud
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Java,27,Programming Languages
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,MySQL,25,Databases
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,CI/CD,25,DevOps & Cloud
+National Polytechnic University of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,CSS,23,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,REST API,98,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,JavaScript,67,Programming Languages
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,TypeScript,58,Programming Languages
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,React,55,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,Node.js,47,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,Git,37,DevOps & Cloud
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,Microservices Architecture,36,Software Engineering
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,PostgreSQL,35,Databases
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,C#,33,Programming Languages
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,AWS,32,DevOps & Cloud
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,Docker,29,DevOps & Cloud
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,Java,27,Programming Languages
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,MySQL,25,Databases
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,CI/CD,25,DevOps & Cloud
+National Polytechnic University of Armenia,Information Systems,Master,IT Support / Admin / ERP + Software Engineering,CSS,23,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,Python,173,Programming Languages
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,TypeScript,78,Programming Languages
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,AWS,72,DevOps & Cloud
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,React,60,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,CI/CD,59,DevOps & Cloud
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,Git,52,DevOps & Cloud
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,PostgreSQL,52,Databases
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,Node.js,52,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,Docker,51,DevOps & Cloud
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,Microservices Architecture,47,Software Engineering
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,Machine Learning,44,Data & ML
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,Java,43,Programming Languages
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,Kubernetes,41,DevOps & Cloud
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,C#,38,Programming Languages
+National Polytechnic University of Armenia,Information Technologies,Bachelor,ALL,Linux,37,DevOps & Cloud
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,TypeScript,68,Programming Languages
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,React,54,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,Node.js,46,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,CI/CD,44,DevOps & Cloud
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,Git,43,DevOps & Cloud
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,Microservices Architecture,39,Software Engineering
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,Java,38,Programming Languages
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,PostgreSQL,35,Databases
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,AWS,34,DevOps & Cloud
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,Docker,29,DevOps & Cloud
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,MySQL,25,Databases
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,Go,22,Programming Languages
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,.NET,22,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,PHP,19,Programming Languages
+National Polytechnic University of Armenia,Software Engineering,Bachelor,Software Engineering + QA / Testing,C++,19,Programming Languages
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,TypeScript,68,Programming Languages
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,React,54,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,Node.js,46,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,CI/CD,44,DevOps & Cloud
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,Git,43,DevOps & Cloud
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,Microservices Architecture,39,Software Engineering
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,Java,38,Programming Languages
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,PostgreSQL,35,Databases
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,AWS,34,DevOps & Cloud
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,Docker,29,DevOps & Cloud
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,MySQL,25,Databases
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,Go,22,Programming Languages
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,.NET,22,Web & Mobile Frameworks
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,PHP,19,Programming Languages
+National Polytechnic University of Armenia,Software Engineering,Master,Software Engineering + QA / Testing,C++,19,Programming Languages
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,SQL,54,Databases
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,Machine Learning,26,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,Large Language Models,25,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,A/B Testing,18,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,Data Visualization,18,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,AWS,17,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,ETL,13,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,Power BI,11,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,Statistical Analysis,11,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,Retrieval-Augmented Generation,11,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,Generative AI,10,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,Natural Language Processing,10,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,PostgreSQL,9,Databases
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,MLOps,9,Data & ML
+National University of Architecture and Construction of Armenia,Geographic Information Systems,Master,Data / ML / AI + IT Support / Admin / ERP,Business Intelligence,9,Data & ML
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,REST API,120,Web & Mobile Frameworks
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,JavaScript,79,Programming Languages
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,TypeScript,78,Programming Languages
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,AWS,72,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,React,60,Web & Mobile Frameworks
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,CI/CD,59,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,Git,52,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,PostgreSQL,52,Databases
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,Node.js,52,Web & Mobile Frameworks
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,Docker,51,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,Microservices Architecture,47,Software Engineering
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,Java,43,Programming Languages
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,Kubernetes,41,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,C#,38,Programming Languages
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Bachelor,ALL,Linux,37,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,REST API,120,Web & Mobile Frameworks
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,JavaScript,79,Programming Languages
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,TypeScript,78,Programming Languages
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,AWS,72,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,React,60,Web & Mobile Frameworks
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,CI/CD,59,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,Git,52,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,PostgreSQL,52,Databases
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,Node.js,52,Web & Mobile Frameworks
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,Docker,51,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,Microservices Architecture,47,Software Engineering
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,Java,43,Programming Languages
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,Kubernetes,41,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,C#,38,Programming Languages
+National University of Architecture and Construction of Armenia,Informatics (Computer Science),Master,ALL,Linux,37,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,REST API,98,Web & Mobile Frameworks
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,JavaScript,67,Programming Languages
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,TypeScript,58,Programming Languages
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,React,55,Web & Mobile Frameworks
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Python,49,Programming Languages
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Node.js,47,Web & Mobile Frameworks
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Git,37,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Microservices Architecture,36,Software Engineering
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,PostgreSQL,35,Databases
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,C#,33,Programming Languages
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,AWS,32,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Docker,29,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,Java,27,Programming Languages
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,MySQL,25,Databases
+National University of Architecture and Construction of Armenia,Information Systems,Bachelor,IT Support / Admin / ERP + Software Engineering,CI/CD,25,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,Python,14,Programming Languages
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,AWS,9,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,SAP Configuration,8,Other Technical
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,Jira,8,Other Technical
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,SAP S/4HANA,7,Other Technical
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,REST API,7,Web & Mobile Frameworks
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,Windows,6,Other Technical
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,SAP Logistics,6,Other Technical
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,SAP FICO,6,Other Technical
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,Distributed Systems,5,Software Engineering
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,Cloud Platforms,5,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,Full-Stack Development,5,Software Engineering
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,PHP,5,Programming Languages
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,Kubernetes,5,DevOps & Cloud
+National University of Architecture and Construction of Armenia,Project Management (in Information Technologies),Master,Technical Management + IT Support / Admin / ERP,Confluence,5,Other Technical
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,REST API,120,Web & Mobile Frameworks
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,JavaScript,79,Programming Languages
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,TypeScript,78,Programming Languages
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,AWS,72,DevOps & Cloud
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,React,60,Web & Mobile Frameworks
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,CI/CD,59,DevOps & Cloud
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,Git,52,DevOps & Cloud
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,PostgreSQL,52,Databases
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,Node.js,52,Web & Mobile Frameworks
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,Docker,51,DevOps & Cloud
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,Microservices Architecture,47,Software Engineering
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,Machine Learning,44,Data & ML
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,Java,43,Programming Languages
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,Kubernetes,41,DevOps & Cloud
+Russian-Armenian University,Applied Mathematics and Informatics,Bachelor,ALL,C#,38,Programming Languages
+Université Française en Arménie,Computer Science,Bachelor,ALL,REST API,120,Web & Mobile Frameworks
+Université Française en Arménie,Computer Science,Bachelor,ALL,JavaScript,79,Programming Languages
+Université Française en Arménie,Computer Science,Bachelor,ALL,TypeScript,78,Programming Languages
+Université Française en Arménie,Computer Science,Bachelor,ALL,AWS,72,DevOps & Cloud
+Université Française en Arménie,Computer Science,Bachelor,ALL,React,60,Web & Mobile Frameworks
+Université Française en Arménie,Computer Science,Bachelor,ALL,CI/CD,59,DevOps & Cloud
+Université Française en Arménie,Computer Science,Bachelor,ALL,Git,52,DevOps & Cloud
+Université Française en Arménie,Computer Science,Bachelor,ALL,PostgreSQL,52,Databases
+Université Française en Arménie,Computer Science,Bachelor,ALL,Node.js,52,Web & Mobile Frameworks
+Université Française en Arménie,Computer Science,Bachelor,ALL,Docker,51,DevOps & Cloud
+Université Française en Arménie,Computer Science,Bachelor,ALL,Microservices Architecture,47,Software Engineering
+Université Française en Arménie,Computer Science,Bachelor,ALL,Kubernetes,41,DevOps & Cloud
+Université Française en Arménie,Computer Science,Bachelor,ALL,Linux,37,DevOps & Cloud
+Université Française en Arménie,Computer Science,Bachelor,ALL,Distributed Systems,34,Software Engineering
+Université Française en Arménie,Computer Science,Bachelor,ALL,Test Automation,31,Software Engineering
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,REST API,100,Web & Mobile Frameworks
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,SQL,83,Databases
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,JavaScript,68,Programming Languages
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,TypeScript,59,Programming Languages
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,React,55,Web & Mobile Frameworks
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,Node.js,47,Web & Mobile Frameworks
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,AWS,43,DevOps & Cloud
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,PostgreSQL,40,Databases
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,Git,39,DevOps & Cloud
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,Microservices Architecture,38,Software Engineering
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,C#,35,Programming Languages
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,Docker,35,DevOps & Cloud
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,Large Language Models,30,Data & ML
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,Java,28,Programming Languages
+Université Française en Arménie,MS in Computer Science - Artificial Intelligence: Foundations and Applications,Master,Data / ML / AI + Software Engineering,Distributed Systems,26,Software Engineering
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,A/B Testing,18,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,AWS,14,DevOps & Cloud
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,ETL,13,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,Power BI,11,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,Retrieval-Augmented Generation,11,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,MLOps,9,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,Dashboard Development,9,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,FastAPI,8,Web & Mobile Frameworks
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,Tableau,8,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,Business Intelligence,8,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,PostgreSQL,7,Databases
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,Data Pipelines,7,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,Docker,7,DevOps & Cloud
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,Product Analytics,7,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Bachelor,Data / ML / AI,REST API,7,Web & Mobile Frameworks
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,A/B Testing,18,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,AWS,14,DevOps & Cloud
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,ETL,13,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,Power BI,11,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,Retrieval-Augmented Generation,11,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,MLOps,9,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,Dashboard Development,9,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,FastAPI,8,Web & Mobile Frameworks
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,Tableau,8,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,Business Intelligence,8,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,PostgreSQL,7,Databases
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,Data Pipelines,7,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,Docker,7,DevOps & Cloud
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,Product Analytics,7,Data & ML
+Yerevan State University,Applied Statistics and Data Science,Master,Data / ML / AI,REST API,7,Web & Mobile Frameworks
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,Python,119,Programming Languages
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,REST API,100,Web & Mobile Frameworks
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,SQL,83,Databases
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,JavaScript,68,Programming Languages
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,TypeScript,59,Programming Languages
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,React,55,Web & Mobile Frameworks
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,Node.js,47,Web & Mobile Frameworks
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,AWS,43,DevOps & Cloud
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,PostgreSQL,40,Databases
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,Git,39,DevOps & Cloud
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,Microservices Architecture,38,Software Engineering
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,C#,35,Programming Languages
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,Docker,35,DevOps & Cloud
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,Machine Learning,34,Data & ML
+Yerevan State University,Blockchain and Digital Currencies,Master,Software Engineering + Data / ML / AI,Large Language Models,30,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,SQL,50,Databases
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,Large Language Models,25,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,A/B Testing,18,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,AWS,14,DevOps & Cloud
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,ETL,13,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,Power BI,11,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,Statistical Analysis,11,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,Retrieval-Augmented Generation,11,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,Generative AI,10,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,Natural Language Processing,10,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,MLOps,9,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,Dashboard Development,9,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,FastAPI,8,Web & Mobile Frameworks
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,PyTorch,8,Data & ML
+Yerevan State University,Data Processing in Physics and Artificial Intelligence,Bachelor,Data / ML / AI,Tableau,8,Data & ML
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,A/B Testing,18,Data & ML
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,AWS,14,DevOps & Cloud
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,Retrieval-Augmented Generation,11,Data & ML
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,Power BI,11,Data & ML
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,Dashboard Development,9,Data & ML
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,MLOps,9,Data & ML
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,Tableau,8,Data & ML
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,FastAPI,8,Web & Mobile Frameworks
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,PyTorch,8,Data & ML
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,Business Intelligence,8,Data & ML
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,Docker,7,DevOps & Cloud
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,REST API,7,Web & Mobile Frameworks
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,PostgreSQL,7,Databases
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,Product Analytics,7,Data & ML
+Yerevan State University,Data Science in Business,Master,Data / ML / AI,TensorFlow,6,Data & ML
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,Python,119,Programming Languages
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,SQL,83,Databases
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,JavaScript,68,Programming Languages
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,TypeScript,59,Programming Languages
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,React,55,Web & Mobile Frameworks
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,Node.js,47,Web & Mobile Frameworks
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,AWS,43,DevOps & Cloud
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,PostgreSQL,40,Databases
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,Git,39,DevOps & Cloud
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,Microservices Architecture,38,Software Engineering
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,C#,35,Programming Languages
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,Docker,35,DevOps & Cloud
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,Large Language Models,30,Data & ML
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,Java,28,Programming Languages
+Yerevan State University,Discrete Mathematics and Theoretical Informatics,Master,Data / ML / AI + Software Engineering,Distributed Systems,26,Software Engineering
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,REST API,120,Web & Mobile Frameworks
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,TypeScript,78,Programming Languages
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,AWS,72,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,CI/CD,59,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,Git,52,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,PostgreSQL,52,Databases
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,Docker,51,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,Microservices Architecture,47,Software Engineering
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,Java,43,Programming Languages
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,Kubernetes,41,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,Linux,37,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,Large Language Models,37,Data & ML
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,Distributed Systems,34,Software Engineering
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,Agile,31,Software Engineering
+Yerevan State University,Informatics and Applied Mathematics (Part time),Bachelor,ALL,Test Automation,31,Software Engineering
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,REST API,120,Web & Mobile Frameworks
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,TypeScript,78,Programming Languages
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,AWS,72,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,CI/CD,59,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,Git,52,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,PostgreSQL,52,Databases
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,Docker,51,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,Microservices Architecture,47,Software Engineering
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,Java,43,Programming Languages
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,Kubernetes,41,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,C#,38,Programming Languages
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,Linux,37,DevOps & Cloud
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,Large Language Models,37,Data & ML
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,Distributed Systems,34,Software Engineering
+Yerevan State University,Informatics and Applied Mathematics,Bachelor,ALL,Agile,31,Software Engineering
+Yerevan State University,Information Security,Bachelor,Security,Identity and Access Management,5,Security
+Yerevan State University,Information Security,Bachelor,Security,Incident Response,4,Other Technical
+Yerevan State University,Information Security,Bachelor,Security,Vulnerability Assessment,3,Other Technical
+Yerevan State University,Information Security,Bachelor,Security,Compliance Management,3,Other Technical
+Yerevan State University,Information Security,Bachelor,Security,Terraform,3,DevOps & Cloud
+Yerevan State University,Information Security,Bachelor,Security,Penetration Testing,3,Other Technical
+Yerevan State University,Information Security,Bachelor,Security,CI/CD,3,DevOps & Cloud
+Yerevan State University,Information Security,Bachelor,Security,Information Security,3,Other Technical
+Yerevan State University,Information Security,Bachelor,Security,Single Sign-On (SSO),2,Other Technical
+Yerevan State University,Information Security,Bachelor,Security,SIEM,2,Other Technical
+Yerevan State University,Information Security,Bachelor,Security,AWS,2,DevOps & Cloud
+Yerevan State University,Information Security,Bachelor,Security,Microservices Architecture,2,Software Engineering
+Yerevan State University,Information Security,Bachelor,Security,GitLab,2,DevOps & Cloud
+Yerevan State University,Information Security,Bachelor,Security,Security Auditing,2,Other Technical
+Yerevan State University,Information Security,Bachelor,Security,Active Directory,2,Security
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,JavaScript,67,Programming Languages
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,TypeScript,58,Programming Languages
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,React,55,Web & Mobile Frameworks
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,Node.js,47,Web & Mobile Frameworks
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,Git,37,DevOps & Cloud
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,Microservices Architecture,36,Software Engineering
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,PostgreSQL,35,Databases
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,AWS,32,DevOps & Cloud
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,Docker,29,DevOps & Cloud
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,Java,27,Programming Languages
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,MySQL,25,Databases
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,CI/CD,25,DevOps & Cloud
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,CSS,23,Web & Mobile Frameworks
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,Go,21,Programming Languages
+Yerevan State University,Information Systems Development,Master,IT Support / Admin / ERP + Software Engineering,.NET,21,Web & Mobile Frameworks
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,Agile,10,Software Engineering
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,AWS,9,DevOps & Cloud
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,SAP Configuration,8,Other Technical
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,Jira,8,Other Technical
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,SAP S/4HANA,7,Other Technical
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,Windows,6,Other Technical
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,SAP Logistics,6,Other Technical
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,Scrum,6,Software Engineering
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,SAP FICO,6,Other Technical
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,Cloud Platforms,5,DevOps & Cloud
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,PHP,5,Programming Languages
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,Kubernetes,5,DevOps & Cloud
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,Full-Stack Development,5,Software Engineering
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,Confluence,5,Other Technical
+Yerevan State University,Information Systems Management,Master,IT Support / Admin / ERP + Technical Management,Linux,5,DevOps & Cloud
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,JavaScript,66,Programming Languages
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,TypeScript,59,Programming Languages
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,React,54,Web & Mobile Frameworks
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,Node.js,46,Web & Mobile Frameworks
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,AWS,42,DevOps & Cloud
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,Docker,40,DevOps & Cloud
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,PostgreSQL,39,Databases
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,Git,39,DevOps & Cloud
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,Microservices Architecture,36,Software Engineering
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,CI/CD,36,DevOps & Cloud
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,C#,33,Programming Languages
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,Kubernetes,31,DevOps & Cloud
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,Linux,25,DevOps & Cloud
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,MySQL,25,Databases
+Yerevan State University,"Mathematical and Software Development of Computing Machines, Complexes, Systems and Networks",Master,Software Engineering + DevOps / Cloud,CSS,23,Web & Mobile Frameworks
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,Python,119,Programming Languages
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,SQL,83,Databases
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,JavaScript,68,Programming Languages
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,TypeScript,59,Programming Languages
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,React,55,Web & Mobile Frameworks
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,Node.js,47,Web & Mobile Frameworks
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,AWS,43,DevOps & Cloud
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,PostgreSQL,40,Databases
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,Git,39,DevOps & Cloud
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,Microservices Architecture,38,Software Engineering
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,C#,35,Programming Languages
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,Docker,35,DevOps & Cloud
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,Large Language Models,30,Data & ML
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,Java,28,Programming Languages
+Yerevan State University,Numerical Analysis and Mathematical Modelling,Master,Data / ML / AI + Software Engineering,Distributed Systems,26,Software Engineering
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Static Timing Analysis,10,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Tcl,7,Programming Languages
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,RTL-to-GDSII,6,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,RTL Design,5,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Clock Tree Synthesis,5,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,ASIC Design,5,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Formal Verification,5,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,SystemVerilog,5,Programming Languages
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Perl,4,Programming Languages
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Physical Verification,4,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Design for Test (DFT),4,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Synthesis,4,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Floorplanning,4,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Signal Integrity,3,Other Technical
+Yerevan State University,Radiophysics and Computer Technology,Bachelor,Hardware / Embedded,Place and Route,3,Other Technical

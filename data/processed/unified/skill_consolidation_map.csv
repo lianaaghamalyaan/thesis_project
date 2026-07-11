@@ -1,0 +1,319 @@
+original,canonical,original_freq,canonical_freq
+3D Graphics Computer,3D Graphics,1,8
+3D Graphics In,3D Graphics,1,8
+Administration And,Administration,1,6
+Agile Business,Agile,2,86
+Algebra Computer,Computer Algebra,1,1
+Algebra Computer Science,Computer Algebra,1,1
+Algorithms Business Information,Algorithms Business,1,1
+Analysis Business,Business Analysis,1,15
+Analysis Business Information,Business Analysis,1,15
+Analysis Business Intelligence,Business Intelligence,1,52
+Analysis Mathematical Foundations,Mathematical Foundations,1,41
+Analysis Of,Analysis,1,154
+Analysis Of Business,Business Analysis,1,15
+Analysis Statistical Analysis,Statistical Analysis,5,126
+Analysis Statistical Modeling,Statistical Modeling,1,59
+Analysis Statistics,Statistics,1,141
+Analysis Using Gis,Gis Analysis,1,2
+Analytics Business,Analytics,1,66
+Analytics Business Intelligence,Business Intelligence,1,52
+Analytics and Data,Analytics,9,66
+Android Development Business,Android Development,1,22
+Applications Mobile,Mobile Applications,1,24
+Applications Mobile Development,Mobile Development,1,40
+Applied Programming In,Applied Programming,1,1
+Applied Statistics And,Applied Statistics,4,18
+Applied Statistics For,Applied Statistics,1,18
+Architecture Computer Architecture,Computer Architecture,1,94
+Architecture Computer Hardware,Computer Architecture,1,94
+Boolean,Boolean Logic,2,9
+Boolean Algebra Computer,Boolean Algebra,2,85
+Business Analysis Business,Business Analysis,1,15
+Business Analytics,Analytics,52,66
+Business Analytics Business,Business Analytics and Data,1,17
+Business Digital,Digital Business,6,36
+Business Digital Transformation,Digital Transformation,6,30
+Business Information Systems,Information Systems,97,146
+Business Intelligence Data,Business Intelligence,1,52
+Business Intelligence In,Business Intelligence,1,52
+Business Intelligence Systems,Business Intelligence,1,52
+Business Management And,Business Management,2,4
+Business Master With,Business Master,3,4
+Business Process,Business Processes,1,4
+Business Process Modeling,Process Modeling,5,32
+Business Risks In,Business Risks,1,1
+Business Statistical,Statistics In Business,1,5
+Business Strategy And,Business Strategy,1,10
+Business Strategy In,Business Strategy,1,10
+Business Strategy So,Business Strategy,1,10
+Cloud Computing Cloud,Cloud Computing,1,83
+Cloud Technologies In,Cloud Technologies,1,5
+Collections,Collection,2,2
+Complexity Data Structures,Complexity Structure,1,1
+Computational Complexity,Computational Complexity Theory,5,81
+Computer Architecture Computer,Computer Architecture,1,94
+Computer Architecture In,Computer Architecture,1,94
+Computer Hardware,Hardware,10,39
+Computer Information Systems Program,Information Systems Computer,1,2
+Computer Modeling Computer,Computer Modeling,1,13
+Computer Modeling In,Computer Modeling,1,13
+Computer Networks,Computer Networking,22,144
+Computer Networks And,Computer Networks and Information,1,2
+Computer Networks Computer,Computer Networking,1,144
+Computer Science Cybersecurity,Cybersecurity,1,57
+Computer Science Education,Computer Science,5,299
+Computer Science Educational,Computer Science,2,299
+Computer Science Graphics,Graphics Computer Science,1,2
+Computer Science Informatics,Informatics,22,149
+Computing Cloud Platforms,Cloud Platforms,1,41
+Cpu,Processor,1,12
+Cpu Architecture Computer,Computer Architecture,1,94
+Cybersecurity Informatics Information,Cybersecurity Information,1,2
+Cybersecurity Information Security,Cybersecurity,1,57
+Data Analysis Data,Data Analysis,3,173
+Data Business Information,Data Business,1,2
+Data Collection And,Data Collection,1,35
+Data Driven Decision,Data-Driven Decision Making,3,8
+Data Driven Decision Making,Data-Driven Decision Making,5,8
+Data Mining And,Data Mining,1,39
+Data Mining Data,Data Mining,1,39
+Data Processing Data,Data Processing,1,32
+Data Quality,Data Quality Analysis,6,10
+Data Science In,Data Science,2,154
+Data Science Research,Data Science,1,154
+Data Structures And,Data Structures,1,166
+Data Structures and Functions,Data Structures,1,166
+Data-Driven,Data Driven,1,8
+Database Management Information,Database Management,1,76
+Database Management Systems,Database Management,1,76
+Databases In,Databases,1,121
+Databases In The,Databases,1,121
+Databases SQL,SQL Database,2,4
+Design UX,UX Design,1,32
+Design UX Design,UX Design,1,32
+Design User Interface,User Interface Design,1,28
+Development Web Development,Web Development,3,102
+Digital Business Digital,Digital Business,2,36
+Digital Business In,Digital Business,1,36
+Digital Business Management,Digital Business,1,36
+Discrete Mathematics Graph,Discrete Mathematics and Graph Theory,1,1
+Discrete Mathematics In,Discrete Mathematics,1,118
+Driven Decision Making,Driven Decision,2,5
+E Commerce,E-Commerce,10,12
+Educational,Education,4,7
+Educational Technologies,Educational Technology,4,24
+Electronic Educational Systems,Electronic Educational,1,1
+Evaluation,Evaluating,1,5
+Evaluation Of,Evaluating,1,5
+Financial Statistics Monetary,Monetary Statistics,1,5
+Forecasting Python Statistical,Forecasting Python,1,1
+Geographic Information Systems,Geographic Information Systems (GIS),1,63
+Gis Geographic,Geographic Information Systems (GIS),1,63
+Gis Geographic Information,Geographic Information Systems (GIS),1,63
+Gis Systems,Geographic Information Systems (GIS),1,63
+Gis Systems In,GIS Infrastructure,1,1
+Git Informatics Java,Git Informatics,1,1
+Git Informatics Knowledge,Git Informatics,1,1
+Graphics Computer Graphics,Computer Graphics,1,41
+Graphics Programming Informatics,Graphics Programming,1,8
+In Business Master,Business Master,4,4
+In Business Statistical,Statistics In Business,1,5
+In The Informatics,Informatics,11,149
+Informatics And,Informatics,1,149
+Informatics And These,Informatics,1,149
+Informatics Bachelor With,Informatics Bachelor,16,23
+Informatics Course,Informatics Bachelor,1,23
+Informatics Informatics,Informatics,1,149
+Informatics Informatics Teaching,Informatics Teaching Methodology,1,5
+Informatics Instructional Design,Informatics Instructional,1,1
+Informatics Java Object,Informatics Java,1,1
+Informatics Knowledge,Informatics,1,149
+Informatics Linux,Informatics Linux Network,1,2
+Informatics Management,Informatics,2,149
+Informatics Master,Informatics Bachelor,9,23
+Informatics Mathematical,Mathematics and Informatics,10,17
+Informatics Mathematical Analysis,Mathematics and Informatics,1,17
+Informatics Numerical Methods,Informatics Numerical,1,1
+Informatics Online,Informatics,1,149
+Informatics Operating Systems,Informatics Operating,1,1
+Informatics Probability Theory,Informatics Probability,1,1
+Informatics Teaching,Informatics Teaching Methodology,1,5
+Informatics Visualization And,Informatics Visualization,2,2
+Informatics Visualization So,Informatics Visualization,2,2
+Information Security And,Information Security,2,59
+Information Security In,Information Security,1,59
+Information Security Information,Information Security,1,59
+Information Systems And,Information Systems,15,146
+Information Systems Business,Information Systems,3,146
+Information Systems Digital,Digital Systems,7,9
+Information Systems In,Information Systems,4,146
+Information Systems It,Information Systems,1,146
+Information Systems Machine,Information Systems Computer,2,2
+Information Systems Software,Information Software,1,3
+Information Technology In,Information Technology,6,22
+Inheritance Object Oriented,Object-Oriented Inheritance,1,1
+Innovation Management And,Innovation Management,2,10
+Instructional Design Management,Instructional Design,1,8
+Intelligence Business Information,Intelligence Business,1,1
+It Project Management,IT Project Management,1,31
+Java Programming,Java,1,131
+Java Programming In,Java,1,131
+Linux And,Linux,1,105
+Management And,Management,6,26
+Management Informatics,Informatics Management Systems,1,2
+Management Information Systems,Management Information Systems (MIS),1,4
+Management Innovation Management,Innovation Management,1,10
+Management So That,Management So,2,2
+Management Startup,Startup Management,1,4
+Management Startup Management,Startup Management,1,4
+Management Systems,Systems Management,3,10
+Mathematical Analysis In,Mathematical Analysis,1,78
+Mathematical Analysis Mathematical,Mathematical Analysis,1,78
+Mathematical Logic And,Mathematical Logic,1,26
+Mathematical Logic In,Mathematical Logic,1,26
+Mathematics Graph Theory,Graph Theory,1,139
+Methodology,Research Methodology,1,32
+Methods In,Methods,1,15
+Mobile Applications Mobile,Mobile Applications,1,24
+Mobile Development And,Mobile Development,1,40
+Mobile Technologies In,Mobile Technologies,1,2
+Model Evaluation And,Model Evaluation,1,30
+Modeling Computer,Computer Modeling,1,13
+Monetary Statistics In,Monetary Statistics,1,5
+Multivariate Statistical,Multivariate Statistics,2,14
+Multivariate Statistical Analysis,Multivariate Statistics,5,14
+Network Administration And,Network Administration,1,26
+Network Technologies And,Network Technologies,1,16
+Networks Computer,Computer Networking,1,144
+Networks In,Networks,2,26
+Numerical Methods In,Numerical Methods,1,180
+Numerical Methods Optimization,Numerical Optimization,1,16
+Object Oriented Programming,Object-Oriented Programming,25,224
+Object-Oriented Programming (OOP),Object-Oriented Programming,7,224
+Of Business Risks,Business Risks,1,1
+Of Business Strategy,Business Strategy,1,10
+Of Cyber Security,Cyber Security In,1,1
+Of Programming,Programming,1,215
+Of Programming Python,Programming Technologies Python,1,2
+Operating Systems In,Operating Systems,2,110
+Operating Systems Process,Operating Systems,2,110
+Oriented Programming In,Oriented Programming And,1,1
+Physics Scientific Computing,Computational Physics,1,14
+Probability Theory In,Probability Theory,1,124
+Probability Theory Statistical,Probability Theory & Mathematical Statistics,1,1
+Programming Fundamentals In,Programming Fundamentals,1,24
+Programming Fundamentals Python,Programming Technologies Python,1,2
+Programming In,Programming,3,215
+Programming In The,Programming,1,215
+Programming Informatics Visualization,Informatics Visualization,1,2
+Programming Python In,Python,1,574
+Programming Python Software,Python,2,574
+Programming Technologies,Programming Technology,3,12
+Programming Technologies In,Programming Technology,1,12
+Project Management And,Project Management,2,113
+Project Management In,Project Management,1,113
+Public Policy,Of Public Policy,1,1
+Public Policy And,Of Public Policy,1,1
+Public Policy In,Of Public Policy,1,1
+Python Development,Python Software Development,1,3
+Python Scikit,Scikit-learn,1,32
+Python Software,Python,1,574
+Qualitative Methods,Qualitative Analysis,1,16
+Qualitative Methods In,Qualitative Analysis,1,16
+Reasoning Informatics,Formal Reasoning Informatics,2,2
+Reasoning Informatics Mathematical,Formal Reasoning Informatics,2,2
+Relational Databases SQL,Relational Databases,1,46
+Research Methods,Research Methodology,6,32
+Risk Analysis Statistical,Risk Analysis,1,19
+Science Cybersecurity Informatics,Cybersecurity Informatics,1,1
+Science Informatics,Informatics,11,149
+Science Informatics Instructional,Informatics Instructional,1,1
+Science Informatics Mathematical,Mathematics and Informatics,6,17
+Science Informatics Numerical,Informatics Numerical,1,1
+Science Informatics Probability,Informatics Probability,1,1
+Scikit Learn,Scikit-learn,3,32
+Security Information Systems,Information Security,1,59
+Security Risk Management,Security Management,2,8
+Software Development So,Software Development,8,175
+Software Engineering (Python),Python Software Development,2,3
+Software Testing In,Software Testing,1,133
+Software Testing Test,Software Testing,1,133
+Spatial Analysis And,Spatial Analysis,1,43
+Spatial Analysis Using,Spatial Analysis,1,43
+Startup Management And,Startup Management,1,4
+Startup Management Technology,Startup Management,1,4
+Statistical Analysis And,Statistical Analysis,1,126
+Statistical Analysis Of,Statistical Analysis,1,126
+Statistical Analysis Statistical,Statistical Analysis,6,126
+Statistics And,Statistics,1,141
+Statistics And Data,Statistics,4,141
+Statistics Business,Statistics In Business,1,5
+Statistics Business Analytics,Business Analytics and Data,1,17
+Statistics For Business,Statistics In Business,1,5
+Statistics In,Statistics,1,141
+Statistics Monetary,Monetary Statistics,1,5
+Statistics Monetary Statistics,Monetary Statistics,1,5
+Strategy Digital Business,Digital Strategy,1,2
+Systems And,Systems,1,27
+Systems And These,Systems,2,27
+Systems Cloud Computing,Cloud Computing,1,83
+Systems Computer Architecture,Computer Architecture,1,94
+Systems Cybersecurity,Cybersecurity,2,57
+Systems Cybersecurity Digital,Cybersecurity Digital,1,1
+Systems Cybersecurity Information,Cybersecurity Information,1,2
+Systems Data Analysis,Systems Analysis,1,40
+Systems Digital,Digital Systems,3,9
+Systems Digital Business,Digital Business,7,36
+Systems Informatics,Distributed Systems Informatics,1,1
+Systems Informatics Operating,Informatics Operating,1,1
+Systems Information Systems,Information Systems,1,146
+Systems Software Development,Systems Development,1,13
+Technologies,Technology,2,58
+Technologies In,Technologies In The,1,5
+Technologies Python,Programming Technologies Python,2,2
+Technologies Python In,Programming Technologies Python,2,2
+Technology In Business,Business Technology,1,3
+Technology Informatics,Informatics,8,149
+Technology Informatics Informatics,Informatics,1,149
+Technology Informatics Management,Informatics Management Systems,2,2
+Telecommunications Networks,Telecommunications,1,46
+Telecommunications Networks In,Telecommunications,1,46
+Telecommunications Systems,Telecommunications,5,46
+Testing Software Development,Software Testing,1,133
+Testing Test Automation,Test Automation,1,79
+The Applied Statistics,Applied Statistics,3,18
+The Informatics,Informatics,10,149
+The Informatics Bachelor,Informatics Bachelor,22,23
+The Informatics Master,Informatics,6,149
+The Information Systems,Information Systems,6,146
+Theory Informatics,Informatics,1,149
+Theory Informatics And,Theoretical Informatics,1,4
+This 3D Graphics,3D Graphics,1,8
+This Business Analysis,Business Analysis,1,15
+This Cloud Technologies,Cloud Technologies,1,5
+This Computer Architecture,Computer Architecture,1,94
+This Computer Networks,Computer Networks In,1,1
+This Database Management,Database Management,1,76
+This Digital Business,Digital Business,1,36
+This Informatics Teaching,Informatics,1,149
+This Information Security,Information Security,1,59
+This Mobile Technologies,Mobile Technologies,1,2
+This Numerical Methods,Numerical Methods,1,180
+This Operating Systems,Operating Systems,1,110
+This Software Testing,Software Testing,1,133
+This Startup Management,Startup Management,1,4
+This Web Programming,Web Programming,2,7
+This Web Technologies,Web Technologies,1,18
+To Information Systems,Information Systems,1,146
+UX Design And,UX Design,1,32
+UX Design In,UX Design,2,32
+User Interface,User Interface Design,2,28
+Using Gis Systems,GIS Infrastructure,1,1
+Visualization,Data Visualization,10,179
+Visualization Financial Statistics,Data Visualization Financial,1,1
+Web Development So,Web Development,3,102
+Web Programming In,Web Programming,1,7
+Web Programming Technologies,Web Programming,1,7
+Web Technologies In,Web Technologies,2,18
+With Telecommunications Systems,Telecommunications,1,46

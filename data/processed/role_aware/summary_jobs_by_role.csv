@@ -1,0 +1,10 @@
+role_group,job_count,pct,csv_file
+Software Engineering,259,39.8,jobs_by_role/software_engineering.csv
+Data / ML / AI,110,16.9,jobs_by_role/data_ml_ai.csv
+DevOps / Cloud,57,8.8,jobs_by_role/devops_cloud.csv
+IT Support / Admin / ERP,56,8.6,jobs_by_role/it_support_admin_erp.csv
+QA / Testing,56,8.6,jobs_by_role/qa_testing.csv
+Technical Management,43,6.6,jobs_by_role/technical_management.csv
+Hardware / Embedded,33,5.1,jobs_by_role/hardware_embedded.csv
+Security,18,2.8,jobs_by_role/security.csv
+UX / Product Design,18,2.8,jobs_by_role/ux_product_design.csv

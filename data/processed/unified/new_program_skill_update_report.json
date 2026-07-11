@@ -1,0 +1,27 @@
+[
+  {
+    "file": "best_descriptions.json",
+    "entries": 1545,
+    "missing": 0
+  },
+  {
+    "file": "course_skills_names_only_norm.json",
+    "entries": 1545,
+    "missing": 0
+  },
+  {
+    "file": "course_skills_with_desc_norm.json",
+    "entries": 1545,
+    "missing": 0
+  },
+  {
+    "file": "tfidf_desc_norm.json",
+    "entries": 1545,
+    "missing": 0
+  },
+  {
+    "file": "keybert_desc_norm.json",
+    "entries": 1545,
+    "missing": 0
+  }
+]

@@ -1,0 +1,602 @@
+source,source_type,source_url,job_title,company_name,location,employment_type,seniority_level,industries,posting_date,deadline,skills_tags,full_text,role_group
+linkedin,aggregator,https://am.linkedin.com/jobs/view/cybersecurity-specialist-red-team-at-armeconombank-ojsc-4384424952?refId=ZngEP2SVHNhD%2FlU3fNAxtg%3D%3D&trackingId=v7CiXvAJGL5oeDMMzQbzuA%3D%3D&position=7&pageNum=1,Cybersecurity specialist (Red team),ARMECONOMBANK OJSC,"Yerevan, Armenia",Full-time,,,2026-03-17,,,"Job description:Perform threat detection by identifying suspicious patterns and vulnerabilities within the organization’s network and systems.Collaborate with IT and Information Security teams to improve detection rules, manuals, and incident response procedures.Update security logs and prepare reports on security incidents, vulnerabilities, and trends.Discover and report on vulnerabilities, cooperate with the Read team on detection and recovery issues, carry out monitoring through threat intelligence channels for emerging vulnerabilities (0-day and N-day), assist in developing a standardized toolkit for operational workflows and reporting practices.Participate in the development and maintenance of security policies, guidelines, and best practices.
+Required qualifications:
+Professional knowledge, qualifications and skillsHigher education in Information Technology (IT), Information Security, Cybersecurity, or related fields. Professional training in these areas is required.3 or more years of practical experience in penetration testing and Red Team operations.Strong written and verbal communication skills, with the ability to provide clear executive summaries and detailed, reproducible technical reports.Knowledge of cybersecurity principles, including threat detection, incident response, and risk management.Previous experience in the financial sector will be considered an advantage.Relevant certifications such as OSCP, CompTIA PenTest+, CEH will be considered an advantageParticipation in CTF competitions, bug bounty programs, or security research will be considered an advantage.
+Technical SkillsOffensive SecurityWeb application and API penetration testingNetwork penetration testingPrivilege escalation in Linux, FreeBSD, and Windows systemsActive Directory attacksAdversary simulations, including social engineering, phishing, and ransomware scenariosKnowledge of Industry Standard ToolsKali Linux, Burp Suite, Metasploit, SQLMap, Nmap, Nessus, Wireshark, etc.ScriptingFor development of custom toolsets and automation using Python, Bash, PowerShell, etc.Additional AdvantagesUnderstanding of Artificial Intelligence / Large Language Model (LLM) security risks and attack surfacesUnderstanding of cloud security will be considered an advantageKnowledge of international standards relevant to the banking sector, such as PCI-DSS and NISTStrong development or networking skills
+Business qualities and personal skillsArmenian and Russian -excellentHonestyTeam-working skillsPunctualityInitiative in proposing new projectsAttention to detailAnalytical mindset for incident analysis",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/associate-application-security-engineer-at-align-technology-4380602405?refId=RtS2ZWI%2F%2BPQiJOPQiO7a2Q%3D%3D&trackingId=YEbSy6NpgIqeKwbWayOWpg%3D%3D&position=16&pageNum=4,Associate Application Security Engineer,Align Technology,"Yerevan, Yerevan, Armenia",Full-time,Associate,Medical Equipment Manufacturing,2026-03-05,,,"Department: Information Technology
+
+Location: EMEA-Armenia-Yerevan
+
+Description
+
+Join a team that is changing millions of lives.
+
+Transforming smiles. Transforming lives. Transforming an industry.
+
+At Align Technology, we believe a great smile can transform a person’s life, so we create technology that gives people the confidence to take on whatever’s next. We revolutionized the orthodontic industry with the introduction of the Invisalign system, and we have never lost sight of that spirit of innovation. Our teams are constantly pushing the boundaries of what’s possible.
+
+Ready to join us?
+
+About This Opportunity
+
+Align Technology, Inc. is seeking an Associate Application Security Engineer. The Associate Application Security Engineer will be supporting and maintaining software security in an agile environment: your mission is to ensure best-in-class application security and data protection for Align and its customers while enabling fast-paced innovation on desktop, cloud and mobile solutions. As an Associate Application Security Engineer, you will be implementing improvements in application security processes and tools for the entire Align source code base and ensuring adoption through training and team collaboration. Your innovation will be needed to build the global security maturity by working with development teams to produce more secure software out of the gate.
+
+Key Responsibilities
+
+In this role, you will…
+
+ Enhance your knowledge of core application security concepts On-board development teams to static application security testing tools, SCA, and Bug Bounty programs, including reviewing and removal of false positives, working with application team Security Champions, and improving internal tools and processes Develop stronger relationships of trust with the application teams and build stronger team global unity Cross-train with security partners, such as GRC and Operations teams Formulate testing and training procedures for developers Provide security training for developers and improve quality of training materials
+
+Skills, Knowledge & Expertise
+
+In this role, you’ll need …
+
+ Bachelor’s degree in Information Technology, Computer Science, Engineering, Mathematics or equivalent work experience 3+ years of software development experience and the ability to work directly with source code A strong desire to learn new technologies and enhance your knowledge application security and security concepts Candidate should have experience making and defending sound technical arguments that incorporate relevant technical and business considerations and building consensus among relevant stakeholders Basic understanding of software engineering concepts (OOP, SDLC, and unit-testing)
+
+Nice to have/Optional
+
+Knowledge/hands-on experience with static analysis testingWillingness and ability to earn a certification from one of the following organizations: SANS - GIAC, ISC2 – CSSLP or CISSP, EC Council – CEH, CASE (having one of these even better)Mobile Application Security on iOS and/or Android devices; includes experience in secure development of applications and/or analysisKnowledge/hands-on experiences of AWS or other cloud hosting fundamentals and security
+
+Travel:
+
+Willingness to travel up to 10%, including international, to visit offices in Germany, Israel, Mexico, and North Carolina.
+
+Applicant Privacy Policy
+
+Review our Applicant Privacy Policyfor additional information.
+
+Equal Opportunity Statement
+
+Align Technology is an equal opportunity employer. We are committed to providing equal employment opportunities in all our practices, without regard to race, color, religion, sex, national origin, ancestry, marital status, protected veteran status, age, disability, sexual orientation, gender identity or expression, or any other legally protected category. Applicants must be legally authorized to work in the country for which they are applying, and employment eligibility will be verified as a condition of hire.",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/access-administrator-information-security-at-brainrocket-4378506103?refId=pIxQCQJYQtOQBNxiWT%2BH%2Bw%3D%3D&trackingId=0oYZaTgzKERLAihn6X1QRQ%3D%3D&position=10&pageNum=7,Access Administrator (Information Security),BrainRocket,"Yerevan, Armenia",Full-time,Mid-Senior level,Gambling Facilities and Casinos,2026-03-03,,,"❗️ Important – On-Site Role❗️This is an on-site position based at one of our offices:Belgrade (Serbia),Lisbon (Portugal),Sofia (Bulgaria),Valencia (Spain),Warsaw (Poland),Yerevan (Armenia).❌ Remote or hybrid arrangements are not available. Candidates must already be in the location or be willing to relocate. The relocation support will be provided if needed.
+BrainRocket is a global company creating end-to-end tech products for clients across Fintech, iGaming, and Marketing. Young, ambitious, and unstoppable, we've already taken Cyprus, Malta, Portugal, Poland, and Serbia by storm. Our BRO team consists of 1,300 bright minds creating innovative ideas and products. We don’t follow formats. We shape them. We build what works, launch it fast, and make sure it hits.
+We are looking for an Access Administrator who will be responsible for managing user access to company systems and data, ensuring security and compliance with information security requirements.
+✅ Responsibilities:Access Management:✔ Manage user accounts, including creating, modifying, and deleting accounts.✔ Ensure appropriate access levels are granted to employees based on their roles and job responsibilities.✔ Conduct regular audits of user accounts to identify and eliminate excessive or outdated access rights.✔ Implement and maintain access control policies to enhance security.Monitoring and Analysis:✔ Continuously monitor user access activities to systems and data.✔ Analyze incidents related to access violations and respond promptly.✔ Identify and analyze potential threats and vulnerabilities in access management systems.Incident Response:✔ Respond to and investigate incidents related to access control violations.✔ Escalate incidents to other teams as necessary.✔ Assist in coordinating incident response efforts and provide documentation of incidents.Reporting, Documentation, and Continuous Improvement:✔ Maintain accurate and detailed records of access management actions and steps taken.✔ Prepare reports on incidents and access audits.✔ Suggest improvements to access management processes.✔ Participate in post-incident reviews and propose enhancements.
+✅ Requirements:✔ 1-2 years of experience in access management, account administration, or information security roles.✔ Understanding of access management principles and best practices in information security.✔ Excellent written and verbal communication skills. Ability to clearly and effectively convey complex security concepts to employees at all levels.✔ Strong analytical and problem-solving skills.✔ Experience with identity and access management (IAM) systems and other security technologies.✔ Skills in working with access monitoring and management tools such as Active Directory, LDAP, and similar systems.
+✅ Nice-to-Have:✔ A Bachelor's degree in Computer Science, Information Technology, Cybersecurity, or a related field.✔ Knowledge of regulatory requirements and standards such as ISO27001, ISO27701, PCI DSS, GDPR, and others.✔ Experience in automating access management tasks and writing scripts to improve processes.✔ Certifications in access management or information security, such as CISSP, CISM, or similar.✔ Experience working with the Okta access management platform is a strong plus.
+✅ We offer excellent benefits, including but not limited to:🧑🏻 💻 Learning and development opportunities and interesting, challenging tasks.📚 Opportunity to develop language skills, with partial compensation for the cost of English/Spanish classes (for localisation purposes).🏥 Global coverage health insurance.🏝 Time for proper rest, with 20 working days of annual vacation and additional paid sick days.📈 Competitive remuneration level with annual review.🤝 Team-building activities.
+Bold moves start here. Make yours. Apply today!",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/okta-administrator-security-team-at-brainrocket-4348315922?refId=Sea%2FLAshEfgvzg8elCZJ0w%3D%3D&trackingId=tGtAYHiaMojG4qwhApRHyw%3D%3D&position=12&pageNum=5,Okta Administrator (Security Team),BrainRocket,"Yerevan, Armenia",Full-time,Mid-Senior level,Software Development and Gambling Facilities and Casinos,2026-03-03,,,"❗️ Important – On-Site Role❗️This is an on-site position based at one of our offices:Belgrade (Serbia),Lisbon (Portugal), Sofia (Bulgaria),Valencia (Spain),Warsaw (Poland),Yerevan (Armenia).❌ Remote or hybrid arrangements are not available. Candidates must already be in the location or be willing to relocate. The relocation support will be provided if needed.
+BrainRocket is a global company creating end-to-end tech products for clients across Fintech, iGaming, and Marketing. Young, ambitious, and unstoppable, we've already taken Cyprus, Malta, Portugal, Poland, and Serbia by storm. Our BRO team consists of 1,300 bright minds creating innovative ideas and products. We don’t follow formats. We shape them. We build what works, launch it fast, and make sure it hits.
+This role is responsible for the administration and secure operation of corporate applications that are critical to identity and access management (IAM) processes — including platforms such as Okta, Google Workspace, and similar systems. The administrator ensures these services are reliably integrated into the company’s IT and IAM architecture, configured in line with security policies, and continuously improved through the expanded use of platform-native features and capabilities. The role also involves proactively identifying opportunities to optimise access workflows, strengthen controls, and enhance the overall maturity of the IAM ecosystem.
+✅ Key responsibilities:✔️ Platform Availability & SupportOwn and manage the Okta Identity platform and Google Workspace, including Universal Directory, SSO, MFA, Lifecycle Management, and API Access Management.Monitor platform health, perform routine audits, and manage incident response related to access issues or suspicious behaviour.Troubleshoot advanced access or authentication issues and serve as L3 support for IAM-related tickets.Provide technical leadership in IAM projects and contribute to the broader IT security roadmap.✔️ Processes automation, Integrations and Access ControlDesign, implement, and maintain user access policies, roles, and groups based on business needs and security standards.Manage onboarding/offboarding workflows, automation rules, and app integrations (SCIM, SAML, OIDC).Lead Okta integration projects with cloud apps and internal systems and InfrastructureDrive adoption of Zero Trust Architecture and enforce least privilege principles.✔️ Documentation & Process ManagementCollaborate with Security and Compliance teams to meet ISO 27001, SOC 2, or GDPR access control requirements.Maintain clear and current documentation of configurations, processes, and access models.
+✅ Requirements:✔️ 3+ years of experience in Okta administration or enterprise IAM systems.✔️ Strong knowledge of Okta SSO, MFA, Lifecycle Management, and Directory Integrations.✔️ Hands-on experience with SAML, OIDC, SCIM, LDAP, AD, or Azure AD Scripting experience (e.g., PowerShell, Python, Bash) for automation and audits.✔️ Strong understanding of IAM best practices, security principles, and regulatory requirements.Nice to have: ✔️ Okta Certified Administrator or Consultant certification is a strong plus.✔️ Experience with cloud platforms (AWS, GCP, Azure) Familiarity with SIEM tools, ITSM systems (e.g., Jira, Google Workspace).✔️ Project leadership or mentorship experience in cross-functional teams.✔️ Working knowledge of Zero Trust and access governance frameworks.
+✅ We offer excellent benefits, including but not limited to: 🧑🏻 💻 Learning and development opportunities and interesting, challenging tasks✈️ Relocation package (tickets, staying in a hotel for up to 2 weeks, and visa relocation support for our employees and their family members)📚 Opportunity to develop language skills, with partial compensation for the cost of English/Spanish language classes (for localisation purposes)🏥 Private medical coverage🏝 Time for proper rest, with 20 non-business days per year and an additional 6 paid sick days📈 Competitive remuneration level with annual review🤝 Team building activitiesBold moves start here. Make yours. Apply today!",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/senior-application-security-engineer-at-brainrocket-4378191651?refId=Sea%2FLAshEfgvzg8elCZJ0w%3D%3D&trackingId=ogOKEeugOsxCzMhMQYTnWw%3D%3D&position=22&pageNum=5,Senior Application Security Engineer,BrainRocket,"Yerevan, Yerevan, Armenia",Full-time,Mid-Senior level,"Financial Services, Gambling Facilities and Casinos, and Computer Games",2026-03-03,,,"We’re BrainRocket — an international software development and digital solutions company driven by 1,300 talented professionals across Cyprus, Malta, and Portugal.Here, everything moves at rocket speed: driving innovation, pioneering projects, and fast-tracking careers.Together, we turn ideas into action — let’s get started!
+We invite a Senior Application Security Engineer to join our team in Yerevan, Armenia.
+🌎 Global Remote: Available for Senior roles in selected jurisdictions.
+✅ Responsibilities:✔️ Demonstrated ability to collaborate with other teams to achieve complex objectives.✔️ Responsible for security architecture design from cloud infrastructure to application through the implementation of ""secure by design"" principles.✔️ Collaborate with product managers, architects, and developers on the implementation of the security controls platform ecosystem and products.✔️ Proof security implementations within infrastructure and application deployment manifests and the CI/CD pipelines.✔️ Define required policies, controls, and capabilities for the protection of products and environments.✔️ Build and validate declarative threat models automation.✔️ Participate in engineering teams’ product planning cycles and committees.✔️ Oversee the product security aspects for migration of products and services from Data Center to public cloud, e.g., AWS.✔️ Serve as a trusted cyber security advisor to product and application teams.
+✅ Requirements:✔️ Minimum of 3 years experience as an Application Security Engineer.✔️ Experience integrating security scanning/tooling into development pipeline.✔️ Experience in analyzing and securing microservices and applications developed using Javascript and Typescript.✔️ Experience with CI/CD pipelines (such as Gitlab, Jenkins) and infrastructure-as-a-code models (such as Terraform, Helm, or CloudFormation).✔️ Hands-on development experience in Python/shell scripting.✔️ Strong understanding of supply chain security, software integrity, and secure software delivery.✔️ Experience with docker and mesh technologies (such as ISTIO).✔️ Experience with architecture and security reviews, threat modeling and applications risk highly desired.✔️ Experience working with Agile methodologies.✔️ Knowledge of privacy laws and regulations, such as GDPR desired.✔️ Familiarity with industry regulations, frameworks, and practices. For example, PCI, ISO 27001, NIST, etc.
+✅ PREFERRED QUALIFICATIONS:✔️ In-depth experience with architecting secure services on Kubernetes.✔️ Extensive experience with architecting secure services on AWS or on-prem data centers.✔️ Security-related professional certifications e.g., CISSP, CISM, CCSK, CCSP, CEH is highly desirable.
+✅ We offer excellent benefits, including but not limited to:🧑🏻 💻 Learning and development opportunities and interesting, challenging tasks.📚 Opportunity to develop language skills, with partial compensation for the cost of English classes.🏝 Time for proper rest, with 24 working days of annual vacation.📈 Competitive remuneration level with annual review.🤝 Teambuilding activities.
+Bold moves start here. Make yours. Apply today!",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/asic-engineer-soc-design-internship-armenia-at-cisco-4378611497?refId=cw2XotlELg9j1bm%2FKn9I4Q%3D%3D&trackingId=87yTwQGgzUpr9R%2BqN7MjMw%3D%3D&position=23&pageNum=3,ASIC Engineer_SoC Design Internship (Armenia),Cisco,Armenia,Full-time,Internship,Software Development,2026-02-26,,,"Please note this posting is to advertise potential job opportunities. This exact role may not be open today but could open in the near future. When you apply, a Cisco representative may contact you directly if a relevant position opens.
+
+Meet the Team
+
+Cisco is building some of the most complex and advanced silicon in the industry, focusing on high-performance, large-scale SoCs that power next-generation networking platforms. Our team provides an end-to-end view of chip development, offering interns the rare opportunity to work on full-chip and SoC-level designs rather than being limited to a single IP. You will join a collaborative and supportive environment where industry experts with real tape-out experience provide mentorship and structured technical training. The vibe is fast-paced and innovation-driven, perfect for those eager to see how production silicon is built from spec to tape-out. It is an exciting place to gain exposure to the latest silicon technologies and methodologies used in global-scale systems.
+
+Your Impact
+
+Contribute to the development of state-of-the-art chips by working on full-chip digital design, Design for Test (DFT), and physical design tasks. Develop automation and productivity scripts using Python or Tcl to streamline the ASIC design cycle and improve engineering efficiency. Collaborate with cross-functional teams across design and implementation to ensure seamless integration of complex SoC architectures. Gain hands-on experience with synthesis, floorplanning, and routing to understand the complete RTL-to-GDS flow. This role allows you to make a tangible impact on silicon that powers infrastructure used by millions of people worldwide.
+
+Minimum Qualifications
+
+Currently enrolled in a Bachelor’s or Master’s program in Microelectronics, VLSI, Electrical/Electronics Engineering, Computer Science, or a related field.Good proficiency in a scripting language such as Python or Tcl.Completed coursework in digital logic and computer architecture fundamentals.Foundational knowledge of MOS devices and semiconductor physics.Academic exposure to introductory VLSI or ASIC design concepts.
+
+Preferred Qualifications
+
+Interest in learning industry-standard ASIC design flows and EDA tools.Strong analytical and problem-solving skills applied to hardware design.Ability to thrive and collaborate effectively in a fast-paced engineering environment.Desire to learn about complex SoC interconnects, clocks, resets, and power domains.Willingness to engage in structured onboarding and technical mentorship programs.
+
+Why Cisco?
+
+At Cisco, we’re revolutionizing how data and infrastructure connect and protect organizations in the AI era – and beyond. We’ve been innovating fearlessly for 40 years to create solutions that power how humans and technology work together across the physical and digital worlds. These solutions provide customers with unparalleled security, visibility, and insights across the entire digital footprint.
+
+Fueled by the depth and breadth of our technology, we experiment and create meaningful solutions. Add to that our worldwide network of doers and experts, and you’ll see that the opportunities to grow and build are limitless. We work as a team, collaborating with empathy to make really big things happen on a global scale. Because our solutions are everywhere, our impact is everywhere.
+
+We are Cisco, and our power starts with you.",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/team-lead-cybersecurity-ai-web-hosting-security-remote-only-at-cloudlinux-4353969367?refId=oXvoInvAPS4kiHD5XsDDPw%3D%3D&trackingId=LFkAbORSwvUxIE3H9KJbBA%3D%3D&position=15&pageNum=4,Team Lead (Cybersecurity & AI) Web Hosting Security (remote-only),CloudLinux,"Yerevan, Yerevan, Armenia",Full-time,Mid-Senior level,Primary and Secondary Education and Non-profit Organizations,2026-01-21,,,"Imunify360 Security Suite is a product of CloudLinux Inc., the maker of the #1 OS in security and stability for hosting providers. Imunify is an innovative security solution designed specifically for shared and VPS/Dedicated servers. The automated, easy-to-use solution with the six-layer approach to security delivers comprehensive and complete attack prevention.
+
+For more information, visit our website: https://www.imunify360.com/
+
+To our CloudAV team, we're looking for a strong leader with enough technical depth to steer confidently in complex environments. CloudAV team processes massive datasets, builds intelligent detection pipelines, and leverages modern AI to stay ahead of emerging threats.
+
+You'll set direction, enable the team, and turn strategy into results while building advanced security systems used by hosting providers worldwide, helping protect millions of websites and the businesses behind them. You also will:
+
+Lead at the edge of AI-driven cybersecurity and influence decisions across the global web hosting ecosystem Combine strategy, execution, and team leadership in a high-visibility role Define direction and priorities for a high-impact security engineering team Convert business goals into focused technical initiatives Build a high-performance team culture through mentorship, feedback, and growth Work in a culture that values autonomy, speed, and innovation
+
+
+Requirements
+
+Experience leading an engineering teamStrong judgment in prioritization, trade-offs, and execution under uncertaintyComfort working in Python-centric environments and discussing system design choicesPractical understanding of Linux-based production systems and engineering workflowsFamiliarity with modern data-driven platforms (large-scale processing, automation, analytics)Confidence with Git-based development, quality practices, and CI/CD cultureClear English communication and strong stakeholder management
+
+
+Benefits
+
+
+What's in it for you?
+
+A focus on professional developmentInteresting and challenging projectsFully remote work with flexible working hours, that allows you to schedule your day and work from any location worldwidePaid 24 days of vacation per year, 10 days of national holidays, and unlimited sick leavesCompensation for private medical insuranceCo-working and gym/sports reimbursementBudget for educationThe opportunity to receive a reward for the most innovative idea that the company can patent
+
+By applying for this position, you consent to the processing of your personal data as described in our Privacy Policy (https://cloudlinux.com/candidate-privacy-notice), which provides detailed information on how we maintain and handle your data.",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/senior-backend-engineer-trading-platform-performance-security-reliability-at-freedx-4340067040?refId=aTiCEIfFX3N6nKdD8EyOAw%3D%3D&trackingId=r96kDQ1V29jx7y1fnh5sMA%3D%3D&position=15&pageNum=1,"Senior Backend Engineer - Trading Platform (Performance, Security, Reliability)",Freedx,Armenia,Full-time,Mid-Senior level,IT Services and IT Consulting,2025-11-12,,,"Who We Are
+
+FreedX is a newly established cryptocurrency exchange dedicated to providing a seamless, secure, and innovative trading experience. Our team comprises experienced professionals from the crypto, ﬁnance, and technology sectors, all passionate about driving the future of digital ﬁnance. At FreedX, we are committed
+
+to creating a platform that empowers our clients with the freedom to manage their digital assets conﬁdently and eﬃciently.
+
+Our Vision:
+
+At FreedX, our vision is to be the most trusted and reliable cryptocurrency exchange, oﬀering unparalleled freedom and scalability to our clients. We aim to build a platform where users can trade and manage their assets with complete peace of mind, knowing that their security and reliability are our top priorities. We strive to continuously innovate and adapt to the evolving needs of the crypto market, ensuring that our clients have access to the best tools and services to achieve their ﬁnancial goals. Join us on our journey to redeﬁne the standards of digital asset trading and experience the freedom, reliability, and scalability that FreedX has to oﬀer.
+
+About The Role
+
+We're looking for a senior backend engineer to evolve our trading platform — the backbone powering everything from API order intake to position management and clearing. You'll focus on core quality attributes: high-throughput processing, low-latency response times, robust fault tolerance, and tight security controls across the stack.
+
+Responsibilities
+
+Design and develop scalable backend services for order routing, risk checks, balance trackingOptimize performance for low-latency API and real-time data feedsEnsure platform resilience under load using circuit breakers, graceful degradation, and auto-recoveryImplement and monitor security controls: API key access, rate-limits, trade validationWrite unit/integration tests with high coverage and measurable SLAsParticipate in incident response and postmortems to continuously improve system reliability
+
+Requirements
+
+5+ years of backend development experience with strong proficiency in .NET (C#)Strong knowledge of concurrent systems, event-driven architecture, and messaging (e.g., Kafka, NATS)Experience designing systems with 99.95%+ uptime, ideally in financial or high-throughput environmentsSolid grasp of API security, data integrity, and auditabilityProven skills in profiling, benchmarking, and performance tuning
+
+Nice to Have
+
+Experience with FIX, WebSocket, and REST trading APIsFamiliarity with cloud-native deployments (K8s, Istio, AWS/GCP)Contributions to high-stakes production systems in fintech or crypto
+
+Benefits
+
+What We Offer:
+
+Competitive salary
+
+Flexible work schedule, remote /hyrbid work opportunity.
+
+Opportunity for professional development, participation to industry events.
+
+Freedx is an equal opportunity employer. We stand for an open and inclusive work environment that fosters the well-being of everyone. We embrace and encourage differences in age, color, disability, ethnicity, family or marital status, gender identity or expression, language, national origin, physical and mental ability, race, religion, sexual orientation, socio-economic status, veteran status, and other characteristics that make our people unique.",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/access-administrator-information-security-team-at-gamblingcareers-com-4327787627?refId=S2Sfmb63wzfUbOl6lqGI%2FQ%3D%3D&trackingId=BaVFeYbvvKUgzWOZ%2FjwI7A%3D%3D&position=24&pageNum=2,Access Administrator (Information Security Team),GamblingCareers.com,"Yerevan, Armenia",Full-time,Entry level,Gambling Facilities and Casinos,2025-12-15,,,"BrainRocket is a global company creating end-to-end tech products for clients across Fintech, iGaming, and Marketing. ‍Young, ambitious, and unstoppable, we've already taken Cyprus, Malta, Portugal, Poland, and Serbia by storm. Our BRO team consists of 1,300 bright minds creating innovative ideas and products. We don’t follow formats. We shape them. We build what works, launch it fast, and make sure it hits.
+
+❗️ Important – On-Site Role❗️
+
+This is an on-site position based at one of our offices:
+
+✔ Belgrade (Serbia),
+
+ ✔ Lisbon (Portugal),
+
+ ✔ Sofia (Bulgaria),✔ Valencia (Spain),
+
+✔ Warsaw (Poland),
+
+✔ Yerevan (Armenia). 
+
+Remote or hybrid arrangements are not available. Candidates must already be in the location or be willing to relocate. The relocation support will be provided if needed.
+
+We are looking for an Access Administrator who will be responsible for managing user access to company systems and data, ensuring security and compliance with information security requirements.
+
+✅ Responsibilities
+
+Access Management:
+
+✔ Manage user accounts, including creating, modifying, and deleting accounts.
+
+✔ Ensure appropriate access levels are granted to employees based on their roles and job responsibilities.
+
+✔ Conduct regular audits of user accounts to identify and eliminate excessive or outdated access rights.
+
+✔ Implement and maintain access control policies to enhance security.
+
+Monitoring And Analysis
+
+✔ Continuously monitor user access activities to systems and data.
+
+✔ Analyze incidents related to access violations and respond promptly.
+
+✔ Identify and analyze potential threats and vulnerabilities in access management systems.
+
+Incident Response
+
+✔ Respond to and investigate incidents related to access control violations.
+
+✔ Escalate incidents to other teams as necessary.
+
+✔ Assist in coordinating incident response efforts and provide documentation of incidents.
+
+Reporting, Documentation, And Continuous Improvement
+
+✔ Maintain accurate and detailed records of access management actions and steps taken.
+
+✔ Prepare reports on incidents and access audits.
+
+✔ Suggest improvements to access management processes.
+
+✔ Participate in post-incident reviews and propose enhancements.
+
+✅ Requirements
+
+✔ 1-2 years of experience in access management, account administration, or information security roles.
+
+✔ Understanding of access management principles and best practices in information security.
+
+✔ Excellent written and verbal communication skills. Ability to clearly and effectively convey complex security concepts to employees at all levels.
+
+✔ Strong analytical and problem-solving skills.
+
+✔ Experience with identity and access management (IAM) systems and other security technologies.
+
+✔ Skills in working with access monitoring and management tools such as Active Directory, LDAP, and similar systems.
+
+✅ Nice-to-Have
+
+✔ A Bachelor's degree in Computer Science, Information Technology, Cybersecurity, or a related field.
+
+✔ Knowledge of regulatory requirements and standards such as ISO27001, ISO27701, PCI DSS, GDPR, and others.
+
+✔ Experience in automating access management tasks and writing scripts to improve processes.
+
+✔ Certifications in access management or information security, such as CISSP, CISM, or similar.
+
+✔ Experience working with the Okta access management platform is a strong plus.
+
+✅ We offer excellent benefits, including but not limited to:
+
+🧑🏻‍💻 Learning and development opportunities and interesting, challenging tasks.
+
+📚 Opportunity to develop language skills, with partial compensation for the cost of English/Spanish classes (for localisation purposes).
+
+🏥 Global coverage health insurance.
+
+🏝 Time for proper rest, with 20 working days of annual vacation and additional paid sick days.
+
+📈 Competitive remuneration level with annual review.
+
+🤝 Team-building activities.
+
+Bold moves start here. Make yours. Apply today!
+
+By submitting your application, you agree to our Privacy Policy.",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/application-security-engineer-at-gamblingcareers-com-4366238343?refId=ZngEP2SVHNhD%2FlU3fNAxtg%3D%3D&trackingId=lC19bwJxLlf7m0OE3ysi7g%3D%3D&position=21&pageNum=1,Application Security Engineer,GamblingCareers.com,"Yerevan, Yerevan, Armenia",Full-time,Mid-Senior level,Gambling Facilities and Casinos,2026-01-26,,,"BrainRocket is a global company creating end-to-end tech products for clients across Fintech, iGaming, and Marketing. ‍Young, ambitious, and unstoppable, we've already taken Cyprus, Malta, Portugal, Poland, and Serbia by storm. Our BRO team consists of 1,300 bright minds creating innovative ideas and products. We don’t follow formats. We shape them. We build what works, launch it fast, and make sure it hits.
+
+We invite a Senior Application Security Engineer to join our team.
+
+🌎 Global Remote Mobility: Available for Senior roles in selected jurisdictions.
+
+✅ Responsibilities
+
+✔️ Demonstrated ability to collaborate with other teams to achieve complex objectives.
+
+✔️ Responsible for security architecture design from cloud infrastructure to application through the implementation of ""secure by design"" principles.
+
+✔️ Collaborate with product managers, architects, and developers on the implementation of the security controls platform ecosystem and products.
+
+✔️ Proof security implementations within infrastructure and application deployment manifests and the CI/CD pipelines.
+
+✔️ Define required policies, controls, and capabilities for the protection of products and environments.
+
+✔️ Build and validate declarative threat models automation.
+
+✔️ Participate in engineering teams’ product planning cycles and committees.
+
+✔️ Oversee the product security aspects for migration of products and services from Data Center to public cloud, e.g., AWS.
+
+✔️ Serve as a trusted cyber security advisor to product and application teams.
+
+✅ Minimum Requirements
+
+✔️ Experience integrating security scanning/tooling into the development pipeline.
+
+✔️ Experience in analysing and securing microservices and applications developed using JavaScript and Typescript.
+
+✔️ Experience with CI/CD pipelines (such as Gitlab, Jenkins) and infrastructure-as-a-code models (such as Terraform, Helm, or CloudFormation).
+
+✔️ Hands-on development experience in Python/shell scripting.
+
+✔️ Strong understanding of supply chain security, software integrity, and secure software delivery.
+
+✔️ Experience with Docker and mesh technologies (such as ISTIO).
+
+✔️ Experience with architecture and security reviews, threat modelling, and application risk is highly desired.
+
+✔️ Experience working with Agile methodologies.
+
+✔️ Knowledge of privacy laws and regulations, such as GDPR desired.
+
+✔️ Familiarity with industry regulations, frameworks, and practices. For example, PCI, ISO 27001, NIST, etc.
+
+✅ Preferred Qualifications
+
+✔️ In-depth experience with architecting secure services on Kubernetes.
+
+✔️ Extensive experience with architecting secure services on AWS or on-prem data centers.
+
+✔️ Security-related professional certifications e.g., CISSP, CISM, CCSK, CCSP, CEH, are highly desirable.
+
+✅ We offer excellent benefits, including but not limited to:
+
+🚀 Career growth opportunities in an international and dynamic environment;
+
+📚 Opportunity to develop language skills with partial compensation for language courses;
+
+🎁 Special gifts for birthdays, weddings, and newborns;
+
+🏝️ 20 working days of paid annual vacation, plus 6 paid sick leaves;
+
+🍲 Office snacks and refreshments;
+
+🏋️‍♂️ Sports package to support a healthy lifestyle;
+
+🩺 Comprehensive medical insurance;
+
+📍 Comfortable office with great facilities in a prime location;
+
+🎉 Exciting corporate events, team-building activities, and international company parties.
+
+Bold moves start here. Make yours. Apply today!
+
+By submitting your application, you agree to our Privacy Policy.",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/okta-administrator-security-team-at-gamblingcareers-com-4327827703?refId=VrjKePYRgmArNPlIh%2BuryQ%3D%3D&trackingId=pKVS3P79l3s8X6CRWqAvTA%3D%3D&position=15&pageNum=2,Okta Administrator (Security Team),GamblingCareers.com,"Yerevan, Armenia",Full-time,Mid-Senior level,Gambling Facilities and Casinos,2025-12-15,,,"BrainRocket is a global company creating end-to-end tech products for clients across Fintech, iGaming, and Marketing. ‍Young, ambitious, and unstoppable, we've already taken Cyprus, Malta, Portugal, Poland, and Serbia by storm. Our BRO team consists of 1,300 bright minds creating innovative ideas and products. We don’t follow formats. We shape them. We build what works, launch it fast, and make sure it hits.
+
+❗️ Important – On-Site Role❗️
+
+This is an on-site position based at one of our offices:
+
+ Belgrade (Serbia), Lisbon (Portugal), Sofia (Bulgaria), Valencia (Spain), Warsaw (Poland), Yerevan (Armenia).
+
+Remote or hybrid arrangements are not available. Candidates must already be in the location or be willing to relocate. The relocation support will be provided if needed.
+
+This role is responsible for the administration and secure operation of corporate applications that are critical to identity and access management (IAM) processes — including platforms such as Okta, Google Workspace, and similar systems. The administrator ensures these services are reliably integrated into the company’s IT and IAM architecture, configured in line with security policies, and continuously improved through the expanded use of platform-native features and capabilities. The role also involves proactively identifying opportunities to optimize access workflows, strengthen controls, and enhance the overall maturity of the IAM ecosystem.
+
+✅ Key Responsibilities
+
+✔️ Platform Availability & Support
+
+Own and manage the Okta Identity platform and Google Workspace, including Universal Directory, SSO, MFA, Lifecycle Management, and API Access Management.Monitor platform health, perform routine audits, and manage incident response related to access issues or suspicious behavior.Troubleshoot advanced access or authentication issues and serve as L3 support for IAM-related tickets. Provide technical leadership in IAM projects and contribute to the broader IT security roadmap.
+
+✔️ Processes automation, Integrations and Access Control
+
+Design, implement, and maintain user access policies, roles, and groups based on business needs and security standards. Manage onboarding/offboarding workflows, automation rules, and app integrations (SCIM, SAML, OIDC). Lead Okta integration projects with cloud apps and internal systems and InfrastructureDrive adoption of Zero Trust Architecture and enforce least privilege principles.
+
+✔️ Documentation & Process Management
+
+Collaborate with Security and Compliance teams to meet ISO 27001, SOC 2, or GDPR access control requirements. Maintain clear and current documentation of configurations, processes, and access models.
+
+✅ Requirements
+
+✔️ 3+ years of experience in Okta administration or enterprise IAM systems.
+
+✔️ Strong knowledge of Okta SSO, MFA, Lifecycle Management, and Directory Integrations.
+
+✔️ Hands-on experience with SAML, OIDC, SCIM, LDAP, AD, or Azure AD Scripting experience (e.g., PowerShell, Python, Bash) for automation and audits.
+
+✔️ Strong understanding of IAM best practices, security principles, and regulatory requirements.
+
+Nice To Have
+
+✔️ Okta Certified Administrator or Consultant certification is a strong plus.
+
+✔️ Experience with cloud platforms (AWS, GCP, Azure) Familiarity with SIEM tools, ITSM systems (e.g., Jira, Google Workspace).
+
+✔️ Project leadership or mentorship experience in cross-functional teams.
+
+✔️ Working knowledge of Zero Trust and access governance frameworks.
+
+✅ We offer excellent benefits, including but not limited to: 
+
+🧑🏻‍💻 Learning and development opportunities and interesting, challenging tasks
+
+✈️ Relocation package (tickets, staying in a hotel for up to 2 weeks, and visa relocation support for our employees and their family members)
+
+📚 Opportunity to develop language skills, with partial compensation for the cost of English/Spanish language classes (for localisation purposes)
+
+🏥 Private medical coverage
+
+🏝 Time for proper rest, with 20 non-business days per year and an additional 6 paid sick days
+
+📈 Competitive remuneration level with annual review
+
+🤝 Team building activities
+
+Bold moves start here. Make yours. Apply today!
+
+By submitting your application, you agree to our Privacy Policy.",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/head-of-security-jetbrains-cloud-platform-at-jetbrains-4380299198?refId=I5aUTz4LyGXjnhCIQJ904g%3D%3D&trackingId=Mt3ke0Czfz6%2BAIRqMkDjjg%3D%3D&position=5&pageNum=7,Head of Security (JetBrains Cloud Platform),JetBrains,"Yerevan, Armenia",Full-time,Mid-Senior level,Software Development,2026-03-06,,,"At JetBrains, we are building an AI-native platform for software development that connects developer workflows, team-level collaboration, and organizational control in a single coherent system. Designed to work across teams, tools, and environments, this platform serves as the execution and governance layer for AI-driven development, with security, policy, and auditability built in from day one.
+We are now looking for a Head of Security to own the security strategy and execution for the agentic platform and its core services (governance, identity, agent execution, integrations, telemetry, and billing surfaces). This is a senior leadership role that combines product security, cloud and platform security, and enterprise trust-building. You will partner closely with product and engineering leaders to ensure we can ship fast while meeting the security expectations of regulated and security-conscious organizations.
+Key Responsibilities
+Platform security engineering and operational readinessBuild and run an actionable security program, taking responsibility for vulnerability management, security testing, incident response playbooks, on-call interfaces, and secure SDLC practices aligned with the platform’s release cadence.Define and implement security controls for platform foundations, such as identity and organizational model, integrations, telemetry, billing surfaces, and administrative UX.Lead readiness for enterprise security reviews, ensuring security documentation, security posture transparency, and customer-facing security assurance artifacts.
+Success criteria:Implementation of a repeatable security review process that scales with releases (not dependent on heroics).Measurable reduction in critical security risks across the platform’s surface.
+Customer trust, compliance enablement, and field partnershipPartner with Sales, Solutions, and Professional Services teams to unblock early design partners and enterprise rollouts with credible security answers and practical mitigations.Drive a pragmatic compliance path (with enterprise-grade expectations) that includes security control mapping, audit support, and customer security questionnaires, at speed.Act as a security-facing executive in customer conversations when needed.
+Success criteria:Security becoming an adoption enabler, with fewer blocked deals or PoCs due to security concerns, as well as faster security sign-offs.Implementation of a clear enterprise-grade security baseline for the platform that supports scale. 
+Leadership and team buildingBuild and mentor a lean security team (platform security and product security), with strong relationships with infrastructure, identity, and agent runtime teams.Implement decision frameworks that clarify what must be centralized vs delegated, when to block vs mitigate, and how to ship securely in an early-stage product environment.Establish security KPIs that reflect real risk reduction and adoption readiness (not vanity metrics).
+Success criteria:A high-trust, high-velocity security organization that product and engineering teams want to partner with.Security priorities that are clearly tied to platform milestones and customer adoption.
+RequirementsSenior experience leading platform or product security for a cloud platform, developer tooling platform, or infrastructure product.Strong hands-on background in threat modeling, secure architecture, identity and access control, secret management, isolation and sandboxing, and supply chain security.Experience building security programs that support enterprise adoption (security reviews, compliance enablement, incident readiness, etc.).Comfort operating in early-stage, evolving product contexts, with the ability to define the security system while the product is still being built and help the organization ship with confidence.
+We process the data provided in your job application in accordance with the Recruitment Privacy Policy.",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/junior-network-security-engineer-at-npo-usa-inc-4377562370?refId=iPWmShRkQAC5eHSv2RVE4A%3D%3D&trackingId=CmQ4fD02OmY0GR2qMoJMIQ%3D%3D&position=6&pageNum=0,Junior Network Security Engineer,NPO USA Inc,"Yerevan, Yerevan, Armenia",Full-time,Not Applicable,IT Services and IT Consulting,2026-02-24,,,"About Us
+
+NPO Torino is a specialized Digital Transformation company, recently acquired by the Fondo Italiano d'Investimento (Italian Investment Fund). With headquarters in Turin and operational presence in the United States and Brazil, we support companies in their technological evolution by combining consulting expertise with advanced IT solutions.
+
+We offer services in cloud computing, cybersecurity, AI for business, FinOps, system integration, and IT governance. Our mission is to simplify digital complexity and transform it into strategic value for enterprises.
+
+Role Description
+
+We are looking for a motivated Junior Network Security Engineer to join our Network & Security Business Unit. This is an excellent entry-level opportunity for a passionate professional who wants to build a career in network security, working alongside senior engineers on real-world enterprise infrastructure projects.
+
+You will be exposed to leading security vendors — including Fortinet, Palo Alto Networks, Cisco, and F5 — gaining hands-on experience in a fast-paced, mentorship-driven environment.
+
+Salary range: USD $18K - $24K
+
+Key Responsibilities
+
+Support the design, implementation, and maintenance of network security infrastructures under senior supervision.Assist in the configuration and monitoring of Next-Generation Firewalls (NGFW) from leading vendors.Perform log analysis, basic incident response, and escalation of security events.Help manage network security policies and firewall rule sets.Assist in documentation of network topologies, security configurations, and change management processes.Participate in troubleshooting activities for network connectivity and security issues.Contribute to system hardening tasks and vulnerability remediation.Collaborate with the team to support enterprise clients and grow your technical knowledge.
+
+Technical Requirements
+
+Must-Have (Foundational Knowledge):
+
+Basic understanding of networking fundamentals: TCP/IP, routing, switching, VLANs, subnetting.Familiarity with firewall concepts and security policy management.Understanding of VPN technologies (IPSec, SSL/TLS).Basic knowledge of at least one security vendor platform: Fortinet (FortiGate), Palo Alto Networks, Cisco (ASA/Firepower), or F5.Understanding of common security concepts: perimeter security, DMZ, NAT, access control lists.
+
+Nice-to-Have (Advantageous)
+
+Hands-on lab or academic experience with Fortinet FortiGate or Palo Alto NGFW.Exposure to SASE or SD-WAN concepts.Basic scripting skills (Python, Bash) for automation tasks.Experience with network monitoring and log management tools.Familiarity with cloud networking concepts (AWS, Azure, or GCP).
+
+Education & Certifications
+
+Degree (or current enrollment) in Computer Science, Network Engineering, Telecommunications, or related field.
+
+Preferred certifications (any of the following is a strong plus):
+
+Cisco: CCNA or CCNA SecurityFortinet: NSE 1 / NSE 2 / NSE 3 (free Fortinet NSE training available online)Palo Alto: PCCSE or completion of Palo Alto Networks EDU coursesCompTIA: Security+, Network+Any vendor-neutral cybersecurity certification (e.g., CEH, eJPT)
+
+Soft Skills & Personal Qualities
+
+Strong curiosity and passion for cybersecurity and technology.Eagerness to learn and grow in a dynamic, fast-evolving field.Good analytical and problem-solving skills.Ability to work collaboratively within a team environment.Strong attention to detail and structured thinking.Good communication skills in English (written and spoken).
+
+Screening Questions
+
+To help us understand your background, please answer the following when applying:""What network security technologies have you worked with, even in a lab or academic setting? Describe a scenario you configured.""""Which security certifications have you obtained or are currently pursuing?""""Why are you interested in a career in network security?""
+
+What We Offer
+
+Competitive entry-level salary commensurate with skills and experience.Structured onboarding and mentorship program with senior engineers.Paid training and certification plans (Fortinet, Palo Alto, Cisco, F5 and more).Exposure to enterprise-grade, multi-vendor security environments.Corporate benefits: Welfare Plan, Smart Working flexibility.Clear career progression path toward Mid-Level and Senior roles.A collaborative, international work culture.
+
+About NPO USA
+
+If you are smart and curious about new things, we are looking for you: this is an exciting opportunity to work, learn and acquire new skills!",Security
+linkedin,aggregator,https://am.linkedin.com/jobs/view/it-governance-information-security-specialist-at-q-group-4382584158?refId=cw2XotlELg9j1bm%2FKn9I4Q%3D%3D&trackingId=F0Az1cb%2By0mrLga5w3vfGA%3D%3D&position=3&pageNum=3,IT Governance & Information Security Specialist,Q-Group,"Yerevan, Yerevan, Armenia",Full-time,Mid-Senior level,IT Services and IT Consulting,2026-03-11,,,"Q-Group is seeking a systematic and analytically minded professional who will establish and maintain IT governance processes for our clients.
+Position ObjectiveTo design, implement, and maintain information security and IT governance systems, ensuring effective risk management, compliance, and controlled operational processes.
+Key Responsibilities• Conduct IT internal audits • Implement and continuously monitor compliance with ISO 27001:2022 requirements • Develop and update IT policies and procedures • Oversee access management and privilege control processes • Maintain security logs and reporting documentation • Identify and assess IT risks • Provide clients with recommendations to improve security posture • Ensure continuous maintenance and monitoring of IT governance processes
+Requirements• Higher education in IT, Information Security, or a related field • Strong knowledge of the ISO 27001 standard • Experience in IT internal audit or GRC • Analytical and systematic thinking • Strong documentation skills • Effective communication skills with clients
+Advantages• ISO 27001 Lead Auditor or Lead Implementer certification • Experience in IT risk management • Practical experience in implementing IT policies",Security
+epam,company_portal,https://careers.epam.com/en/vacancy/blt9wbosr5si76cyvro_en,Senior Endpoint Operations Technician,EPAM Systems,"Armenia, Georgia, Kazakhstan, Uzbekistan",,Senior,Other,2026-03-16,,"Endpoint Solutions, Azure Virtual Desktop, Microsoft System Center Operations Manager, Microsoft Intune","We are seeking a Senior Endpoint Operations Technician to join our team, responsible for operating and supporting our Azure Virtual Desktop (AVD) and Microsoft Intune environments, as well as managing physical endpoints and virtual solutions. This role involves close collaboration with Desktop Engineering, Security, and Compliance teams, providing escalation support to end users globally. The ideal candidate will create and maintain technical documentation, SOPs, and user-facing runbooks, ensuring high standards in service delivery. Responsibilities Provide advanced support for Windows platforms in both physical and virtual environments (including AVD) Manage and maintain desktop images, SCCM task sequences, and the lifecycle of global standard desktop/laptop models Develop and maintain technical documentation, SOPs, and end user runbooks Serve as an escalation point for Deskside Support Services and End User Computing issues Collaborate with Engineering, Security, and Compliance teams to validate application requests and maintenance tasks Develop automated solutions for software deployment, application patches/updates, and workstation imaging Monitor and address alerts from desktops, including endpoint security and application management Manage Microsoft and third-party patch deployments, including packaging, testing, and deployment of new applications Administer and troubleshoot Microsoft Auto Pilot deployments and manage Windows Device Management via Intune Maintain and expand the Knowledge Base to support high-quality service delivery Requirements Minimum 4 years’ hands-on experience with Azure Virtual Desktops and as an Endpoint Operations Technician or similar role Strong expertise in SCCM administration, patch management, imaging, scripting, MSI packaging, and automation Proficient in managing VDI environments (Azure Virtual Desktop preferred) Experience with Windows 10/11, Active Directory, Group Policy, and endpoint protection engineering Working knowledge of Microsoft Azure, FsLogix, GPO, PowerShell, and ITIL framework Experience with software development life cycle methods and current technologies Strong problem-solving, root cause analysis, and troubleshooting skills Excellent communication skills, both written and verbal Experience in desktop support and operations within an enterprise environment Nice to have Scripting experience (batch, SQL, PowerShell, vbscript) Experience with InstallShield or equivalent for software packaging Familiarity with CyberArk and 1E products for desktop alert monitoring and PXE environment management Exposure to global enterprise environments and best practices for Windows-based project management Experience developing and maintaining workstation images in a global setting
+
+Responsibilities:
+- Provide advanced support for Windows platforms in both physical and virtual environments (including AVD)
+- Manage and maintain desktop images, SCCM task sequences, and the lifecycle of global standard desktop/laptop models
+- Develop and maintain technical documentation, SOPs, and end user runbooks
+- Serve as an escalation point for Deskside Support Services and End User Computing issues
+- Collaborate with Engineering, Security, and Compliance teams to validate application requests and maintenance tasks
+- Develop automated solutions for software deployment, application patches/updates, and workstation imaging
+- Monitor and address alerts from desktops, including endpoint security and application management
+- Manage Microsoft and third-party patch deployments, including packaging, testing, and deployment of new applications
+- Administer and troubleshoot Microsoft Auto Pilot deployments and manage Windows Device Management via Intune
+- Maintain and expand the Knowledge Base to support high-quality service delivery
+
+Requirements:
+- Minimum 4 years’ hands-on experience with Azure Virtual Desktops and as an Endpoint Operations Technician or similar role
+- Strong expertise in SCCM administration, patch management, imaging, scripting, MSI packaging, and automation
+- Proficient in managing VDI environments (Azure Virtual Desktop preferred)
+- Experience with Windows 10/11, Active Directory, Group Policy, and endpoint protection engineering
+- Working knowledge of Microsoft Azure, FsLogix, GPO, PowerShell, and ITIL framework
+- Experience with software development life cycle methods and current technologies
+- Strong problem-solving, root cause analysis, and troubleshooting skills
+- Excellent communication skills, both written and verbal
+- Experience in desktop support and operations within an enterprise environment
+
+Nice To Have:
+- Scripting experience (batch, SQL, PowerShell, vbscript)
+- Experience with InstallShield or equivalent for software packaging
+- Familiarity with CyberArk and 1E products for desktop alert monitoring and PXE environment management
+- Exposure to global enterprise environments and best practices for Windows-based project management
+- Experience developing and maintaining workstation images in a global setting",Security
+epam,company_portal,https://careers.epam.com/en/vacancy/blt9ygqueijju3atr16_en,Senior Security Engineer,EPAM Systems,"Armenia, Georgia, Kazakhstan",,Senior,Other,2026-03-16,,"Security.Development, CI/CD, GitHub, Interactive Application Security Testing, Large Language Models (LLM), Model Context Protocol, SAST (Static Application Security Testing), Go Language, Google Cloud Platform, Kubernetes, Python, Terraform","We are seeking a Senior Security Engineer to lead the development and operation of MCP-driven security automation, focusing on software supply chain security. This role centers on designing and managing an orchestration layer that connects security tools, policy controls and engineering workflows to standardize, automate and govern supply chain security across multiple repositories and build pipelines. Responsibilities Build and own MCP-based orchestration to automate security checks, enrichment, triage and reporting across repositories and CI/CD Implement guardrails and governance for MCP flows such as least privilege, allowlists, input validation, secure secrets handling, audit logs and monitoring Drive supply chain security program execution including dependency risk management, SBOM generation/verification, provenance and integrity controls and policy enforcement in pipelines Integrate and tune security tooling like GHAS and CodeQL to improve coverage and reduce noise across multi-repo environments Enable engineering teams with remediation playbooks, automation-first workflows and measurable adoption Requirements 3+ years of experience in security engineering or related fields Knowledge of CI/CD, GitHub and Model Context Protocol Skills in SAST, Interactive Application Security Testing and Large Language Models (LLM) Background in designing and operating orchestration layers for security automation Understanding of supply chain security concepts such as dependency risk management, SBOM and policy enforcement English proficiency at B2 level or higher Nice to have Proficiency in Go Language, Python and Terraform Familiarity with Google Cloud Platform and Kubernetes
+
+Responsibilities:
+- Build and own MCP-based orchestration to automate security checks, enrichment, triage and reporting across repositories and CI/CD
+- Implement guardrails and governance for MCP flows such as least privilege, allowlists, input validation, secure secrets handling, audit logs and monitoring
+- Drive supply chain security program execution including dependency risk management, SBOM generation/verification, provenance and integrity controls and policy enforcement in pipelines
+- Integrate and tune security tooling like GHAS and CodeQL to improve coverage and reduce noise across multi-repo environments
+- Enable engineering teams with remediation playbooks, automation-first workflows and measurable adoption
+
+Requirements:
+- 3+ years of experience in security engineering or related fields
+- Knowledge of CI/CD, GitHub and Model Context Protocol
+- Skills in SAST, Interactive Application Security Testing and Large Language Models (LLM)
+- Background in designing and operating orchestration layers for security automation
+- Understanding of supply chain security concepts such as dependency risk management, SBOM and policy enforcement
+- English proficiency at B2 level or higher
+
+Nice To Have:
+- Proficiency in Go Language, Python and Terraform
+- Familiarity with Google Cloud Platform and Kubernetes",Security
+softconstruct,company_portal,https://peopleforce.softconstruct.com/careers/v/2342-cyber-security-specialist,Cyber Security Specialist,SoftConstruct,Yerevan,,,Technology,,,,"Cyber Security Specialist
+Are you GAME to JOIN US
+and be our new Cyber Security Specialist
+?
+SoftConstruct is on a search for a new player to join our team!
+We are seeking a highly motivated
+Cyber Security Specialist
+to join our team. The ideal candidate will have
+at least 3 years of experience in cybersecurity or an IT security role
+, hands-on experience with security tools and technologies such as firewalls, intrusion detection/prevention systems, and vulnerability scanners, and proficiency in security technologies and practices for protecting IT systems and data.
+Responsibilities
+Implement and manage security measures to protect the organization's IT systems, networks, and applications
+Perform regular security audits and vulnerability assessments to identify and mitigate potential risks
+Monitor network traffic and security alerts to detect and respond to security incidents in real time
+Conduct penetration testing to assess the effectiveness of security controls and identify weaknesses
+Ensure compliance with security policies and procedures to meet industry standards and regulations
+Collaborate with cross-functional teams to integrate security practices into the organization's processes and software development lifecycle (DevSecOps)
+Provide support for incident response, including identification, containment, and resolution of security incidents
+Stay updated on the latest cyber threats and trends to proactively strengthen security measures
+Develop and implement disaster recovery and business continuity plans in the event of a security breach
+Create and maintain detailed security documentation, including incident reports, risk assessments, and mitigation strategies
+Responsible for organizing the collection of logs from various systems and services, as well as participating in their aggregation, analysis, and correlation to ensure timely detection of information security incidents
+Responsible for facilitating the organization and operational readiness of the Security Operations Center (SOC), ensuring it functions effectively and is equipped to respond to security incidents promptly
+Requirements
+Strong understanding of cybersecurity principles, including risk management, threat detection, and incident response
+Proficient with security tools such as firewalls, SIEM systems, intrusion detection/prevention systems (IDS/IPS), and endpoint protection
+Familiarity with security standards and frameworks (e.g., ISO 27001, SOC2, GDPR)
+Experience with vulnerability management and conducting risk assessments
+Ability to perform penetration testing and security assessments to identify weaknesses in systems and applications
+Knowledge of networking concepts and protocols, including TCP/IP, DNS, HTTP, and SSL/TLS
+Experience in securing cloud environments (Azure, Google Cloud) is a plus
+Familiarity with programming and scripting languages (e.g., Python, Bash, PowerShell) is an advantage
+Strong analytical skills with the ability to identify and mitigate security risks
+Do you like to learn hard, work hard and play hard?
+Do you imagine better things, technologies, future?
+If you answered “Yes” to at least two of these questions then we might be a great fit for you.
+Department
+Information Security / Տեղեկատվական Անվտանգության Բաժին
+Location
+Yerevan",Security
+softconstruct,company_portal,https://peopleforce.softconstruct.com/careers/v/2319-security-operations-center-soc-analyst,Security Operations Center (SOC) Analyst,SoftConstruct,Yerevan,,,Technology,,,,"Security Operations Center (SOC) Analyst
+Are you GAME to JOIN US
+and be our new
+Security Operations Center (SOC) Analyst?
+SoftConstruct is on a search for a new player to join our team!
+We are seeking a highly motivated and analytical
+Security Operations Cente
+r
+Analyst
+to join our team. The ideal candidate will have
+at least 1 year of experience in cybersecurity, SOC operations, or IT security
+, experience in monitoring security incidents and working with cybersecurity tools, a strong analytical and problem-solving skills,
+knowledge of security monitoring, threat intelligence, and digital forensics
+.
+Responsibilities
+Monitor and analyze security events and alerts from various sources, including SIEM, IDS/IPS, firewalls, and endpoint protection tools
+Investigate potential security incidents, assess their severity, and escalate as necessary
+Conduct real-time threat analysis and respond to cybersecurity threats, ensuring timely mitigation
+Support incident response activities, including triage, containment, eradication, and recovery
+Perform threat hunting to identify suspicious patterns and vulnerabilities within the organization's network and systems
+Collaborate with IT and security teams to improve detection rules, playbooks, and incident response procedures
+Maintain security logs and generate reports on security incidents, vulnerabilities, and trends
+Research emerging cybersecurity threats, tactics, and best practices to enhance security operations
+Participate in red and blue team exercises to improve security defenses and threat detection capabilities
+Assist in developing and maintaining security policies, guidelines, and best practices
+Requirements
+Understanding of cybersecurity principles, including threat detection, incident response, and risk management
+Familiarity with security tools such as SIEM (Splunk, ELK), IDS/IPS, EDR/XDR, and firewall management systems
+Basic knowledge of networking concepts and protocols, including TCP/IP, DNS, HTTP, and VPNs
+Experience in analyzing and responding to security alerts from various source Awareness of common cyber threats, attack techniques, and frameworks such as MITRE ATT&CK
+Ability to work in a high-pressure environment and respond to security incidents in real time
+Knowledge of scripting or automation tools (Python, PowerShell, Bash) is a plus
+Understanding of compliance and regulatory frameworks (ISO 27001, NIST, GDPR, etc.)
+Do you like to learn hard, work hard and play hard?
+Do you imagine better things, technologies, future?
+If you answered “Yes” to at least two of these questions then we might be a great fit for you.
+Department
+Information Security / Տեղեկատվական Անվտանգության Բաժին
+Location
+Yerevan",Security

@@ -1,0 +1,8858 @@
+{
+ "1": [
+  "Python",
+  "Data Visualization",
+  "Arrays",
+  "Functions",
+  "Control Flow",
+  "Data Manipulation"
+ ],
+ "2": [],
+ "3": [
+  "Mathematical Optimization",
+  "Linear Programming",
+  "Economic-Mathematical Modeling",
+  "Extremal Problems",
+  "Numerical Methods",
+  "Operations Research"
+ ],
+ "4": [
+  "Probability Theory",
+  "Statistics",
+  "Calculus",
+  "Linear Algebra",
+  "Mathematical Modeling",
+  "Statistical Inference"
+ ],
+ "5": [
+  "Data Visualization",
+  "Data Analysis",
+  "Business Process Analysis"
+ ],
+ "6": [
+  "SQL",
+  "Relational Databases",
+  "NoSQL",
+  "Database Design",
+  "ETL",
+  "OLAP"
+ ],
+ "7": [
+  "Data Mining",
+  "Machine Learning",
+  "Classification Algorithms",
+  "Clustering",
+  "Data Preprocessing",
+  "Pattern Recognition"
+ ],
+ "8": [
+  "Machine Learning",
+  "Supervised Learning",
+  "Unsupervised Learning",
+  "Machine Learning Algorithms",
+  "Python",
+  "Scikit-learn"
+ ],
+ "9": [
+  "Neural Networks",
+  "Deep Learning",
+  "Machine Learning",
+  "Backpropagation",
+  "Python",
+  "Optimization Algorithms"
+ ],
+ "10": [
+  "NoSQL",
+  "Data Warehousing",
+  "ETL Pipelines",
+  "Data Pipelines",
+  "Data Modeling",
+  "Data Cleaning"
+ ],
+ "11": [
+  "Large Language Models",
+  "Prompt Engineering",
+  "LangChain",
+  "Model Fine-Tuning",
+  "Natural Language Processing",
+  "Generative AI"
+ ],
+ "12": [
+  "Distributed Systems",
+  "Big Data Processing",
+  "System Architecture",
+  "Apache Hadoop",
+  "Apache Spark",
+  "Data Pipeline Architecture"
+ ],
+ "13": [
+  "Computer Vision",
+  "Image Recognition",
+  "Deep Learning",
+  "Convolutional Neural Networks",
+  "Feature Extraction",
+  "Python"
+ ],
+ "14": [
+  "Cloud Computing",
+  "Distributed Systems",
+  "Information Security",
+  "Network Security",
+  "Cloud Architecture",
+  "Cybersecurity"
+ ],
+ "15": [
+  "Generative Adversarial Networks",
+  "Autoencoders",
+  "Diffusion Models",
+  "Large Language Models",
+  "Deep Learning",
+  "ChatGPT"
+ ],
+ "16": [
+  "Bayesian Statistics",
+  "Probabilistic Modeling",
+  "Statistical Inference",
+  "Machine Learning",
+  "Data Science",
+  "Markov Chain Monte Carlo"
+ ],
+ "17": [
+  "Big Data",
+  "Data Science",
+  "Predictive Analytics",
+  "Social Psychology",
+  "Behavioral Economics",
+  "Statistical Modeling"
+ ],
+ "18": [
+  "Time Series Analysis",
+  "Econometrics",
+  "Forecasting",
+  "Statistical Modeling",
+  "Machine Learning",
+  "Python"
+ ],
+ "19": [
+  "Hadoop",
+  "Apache Spark",
+  "Distributed Computing",
+  "Data Processing",
+  "NoSQL",
+  "Big Data Analytics"
+ ],
+ "20": [],
+ "21": [
+  "Microeconomics",
+  "Macroeconomics",
+  "Mathematical Modeling",
+  "Econometrics",
+  "Statistical Analysis",
+  "Optimization Methods"
+ ],
+ "22": [],
+ "23": [],
+ "24": [
+  "Artificial Intelligence",
+  "Data Science",
+  "Machine Learning",
+  "Scientific Literature Analysis"
+ ],
+ "25": [],
+ "26": [],
+ "27": [],
+ "28": [],
+ "29": [],
+ "30": [],
+ "31": [],
+ "32": [],
+ "33": [],
+ "34": [],
+ "35": [],
+ "36": [],
+ "37": [],
+ "38": [],
+ "39": [],
+ "40": [],
+ "41": [],
+ "42": [],
+ "43": [],
+ "44": [],
+ "45": [],
+ "46": [],
+ "47": [],
+ "48": [
+  "Descriptive Statistics",
+  "Hypothesis Testing",
+  "Probability Theory",
+  "Regression Analysis",
+  "Statistical Inference",
+  "Data Analysis"
+ ],
+ "49": [],
+ "50": [],
+ "51": [],
+ "52": [],
+ "53": [],
+ "54": [],
+ "55": [],
+ "56": [],
+ "57": [],
+ "58": [],
+ "59": [
+  "Linear Algebra",
+  "Vector Spaces",
+  "Linear Operators",
+  "Matrix Theory",
+  "Eigenvalues and Eigenvectors",
+  "Linear Transformations"
+ ],
+ "60": [
+  "Combinatorial Algorithms",
+  "Complexity Theory",
+  "P and NP Classes",
+  "NP-Completeness",
+  "Polynomial Reduction",
+  "Algorithm Analysis"
+ ],
+ "61": [
+  "Data Analysis",
+  "Machine Learning",
+  "Statistical Modeling",
+  "Data Visualization",
+  "Python",
+  "Data Mining"
+ ],
+ "62": [
+  "Linear Programming",
+  "Numerical Optimization",
+  "Convex Optimization",
+  "Gradient Descent",
+  "Mathematical Analysis",
+  "Operations Research"
+ ],
+ "63": [
+  "Linear Programming",
+  "Mathematical Modeling",
+  "Optimization",
+  "Decision Analysis",
+  "Graph Theory",
+  "Simulation"
+ ],
+ "64": [
+  "Partial Differential Equations",
+  "Hyperbolic Equations",
+  "Parabolic Equations",
+  "Elliptic Equations",
+  "Cauchy Problem",
+  "Boundary Value Problems"
+ ],
+ "65": [
+  "Formal Logic",
+  "Propositional Logic",
+  "Predicate Logic",
+  "Proof Theory",
+  "Axiomatic Systems",
+  "Mathematical Reasoning"
+ ],
+ "66": [
+  "Machine Learning",
+  "Supervised Learning",
+  "Unsupervised Learning",
+  "Neural Networks",
+  "Statistical Modeling",
+  "Optimization Algorithms"
+ ],
+ "67": [
+  "Complex Numbers",
+  "Analytic Functions",
+  "Contour Integration",
+  "Taylor Series",
+  "Laurent Series",
+  "Conformal Mapping"
+ ],
+ "68": [
+  "Numerical Methods",
+  "Linear Algebra",
+  "Matrix Operations",
+  "Eigenvalue Computation",
+  "Systems of Linear Equations",
+  "Computational Mathematics"
+ ],
+ "69": [
+  "Ordinary Differential Equations",
+  "Cauchy Problem",
+  "Linear Differential Equations",
+  "Systems of Differential Equations",
+  "Differential Equations Theory",
+  "Mathematical Analysis"
+ ],
+ "70": [
+  "Graph Theory",
+  "Graph Algorithms",
+  "Combinatorics",
+  "Discrete Mathematics",
+  "Mathematical Proofs",
+  "Network Analysis"
+ ],
+ "71": [
+  "Data Structures",
+  "Abstract Data Types",
+  "Algorithm Complexity Analysis",
+  "C++",
+  "STL Containers",
+  "Object-Oriented Programming"
+ ],
+ "72": [
+  "Calculus",
+  "Differential Calculus",
+  "Limits",
+  "Real Analysis",
+  "Mathematical Sequences",
+  "Continuous Functions"
+ ],
+ "73": [
+  "Curve Integrals",
+  "Surface Integrals",
+  "Double Integrals",
+  "Triple Integrals",
+  "Parameter-Dependent Integrals",
+  "Multivariable Calculus"
+ ],
+ "74": [
+  "Computer Networks",
+  "OSI Model",
+  "Network Protocols",
+  "Network Architecture",
+  "TCP/IP",
+  "Network Design"
+ ],
+ "75": [
+  "Turing Machines",
+  "Recursive Functions",
+  "Computability Theory",
+  "Decidability",
+  "Formal Languages",
+  "Complexity Theory"
+ ],
+ "76": [
+  "Limits and Continuity",
+  "Differentiation",
+  "Integration",
+  "Sequences and Series",
+  "Function Analysis",
+  "Fundamental Theorem of Calculus"
+ ],
+ "77": [
+  "Functional Series",
+  "Power Series",
+  "Multivariable Calculus",
+  "Implicit Functions",
+  "Fourier Series",
+  "Mathematical Analysis"
+ ],
+ "78": [
+  "HTML/CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "MongoDB",
+  "NoSQL"
+ ],
+ "79": [
+  "C++",
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Encapsulation",
+  "Polymorphism"
+ ],
+ "80": [
+  "Boolean Functions",
+  "Discrete Mathematics",
+  "Boolean Algebra",
+  "Coding Theory",
+  "Combinatorics",
+  "Graph Theory"
+ ],
+ "81": [
+  "Integral Calculus",
+  "Improper Integrals",
+  "Numerical Series",
+  "Metric Spaces",
+  "Normed Spaces",
+  "Mathematical Analysis"
+ ],
+ "82": [
+  "Analytic Geometry",
+  "Linear Algebra",
+  "Complex Numbers",
+  "Polynomial Analysis",
+  "Matrix Operations",
+  "Set Theory"
+ ],
+ "83": [
+  "C++",
+  "Algorithms",
+  "Debugging",
+  "Number Systems",
+  "Problem Solving",
+  "Algorithmic Thinking"
+ ],
+ "84": [
+  "Set Theory",
+  "Binary Relations",
+  "Combinatorics",
+  "Graph Theory",
+  "Logic",
+  "Discrete Mathematics"
+ ],
+ "85": [
+  "Formal Grammars",
+  "Finite Automata",
+  "Pushdown Automata",
+  "Syntax-Directed Translation",
+  "Lexical Analysis",
+  "Syntactic Analysis"
+ ],
+ "86": [
+  "Qt",
+  "C++",
+  "GUI Development",
+  "Event-Driven Programming",
+  "Object-Oriented Programming",
+  "Widget Design"
+ ],
+ "87": [
+  "Combinatorial Algorithms",
+  "Algorithm Analysis",
+  "Complexity Theory",
+  "Discrete Mathematics",
+  "Approximation Algorithms",
+  "Optimization"
+ ],
+ "88": [
+  "Graph Algorithms",
+  "Algorithm Design",
+  "Algorithm Analysis",
+  "Graph Theory",
+  "Optimization Algorithms",
+  "Approximation Algorithms"
+ ],
+ "89": [
+  "Functional Analysis",
+  "Linear Algebra",
+  "Topology",
+  "Banach Spaces",
+  "Hilbert Spaces",
+  "Operator Theory"
+ ],
+ "90": [
+  "Ordinary Differential Equations",
+  "Dynamical Systems",
+  "Stability Analysis",
+  "Phase Plane Analysis",
+  "Lyapunov Methods",
+  "Bifurcation Theory"
+ ],
+ "91": [
+  "Data Structures",
+  "Data Modeling",
+  "Relational Databases",
+  "SQL",
+  "Object-Oriented Design",
+  "Logical Data Models"
+ ],
+ "92": [
+  "x86 Assembly Language",
+  "CPU Architecture",
+  "Data Representation",
+  "Instruction Set Architecture",
+  "Interrupt Handling",
+  "Macros and Directives"
+ ],
+ "93": [
+  "Streaming Algorithms",
+  "Integer Linear Programming",
+  "Total Unimodular Matrices",
+  "Min-Max Theorems",
+  "Combinatorial Optimization",
+  "Mathematical Modeling"
+ ],
+ "94": [
+  "Boolean Algebra",
+  "Disjunctive Normal Forms",
+  "Logic Circuit Design",
+  "Discrete Mathematics",
+  "Boolean Function Minimization",
+  "Digital Logic"
+ ],
+ "95": [],
+ "96": [
+  "Numerical Methods",
+  "Root Finding Algorithms",
+  "Function Approximation",
+  "Numerical Integration",
+  "Computational Mathematics",
+  "Error Analysis"
+ ],
+ "97": [
+  "Partial Differential Equations",
+  "Differential Equations",
+  "Mathematical Modeling",
+  "Calculus",
+  "Boundary Value Problems",
+  "Applied Mathematics"
+ ],
+ "98": [],
+ "99": [],
+ "100": [],
+ "101": [],
+ "102": [],
+ "103": [],
+ "104": [],
+ "105": [],
+ "106": [
+  "Web Development",
+  "Concurrent Programming",
+  "Network Programming",
+  "Database Management",
+  "Application Design",
+  "REST API"
+ ],
+ "107": [],
+ "108": [
+  "Computational Complexity",
+  "Turing Machines",
+  "Computability Theory",
+  "Complexity Classes",
+  "Algorithm Analysis",
+  "Formal Languages"
+ ],
+ "109": [
+  "Combinatorial Optimization",
+  "Integer Linear Programming",
+  "Algorithm Design",
+  "Computational Complexity",
+  "Approximation Algorithms",
+  "Matroid Theory"
+ ],
+ "110": [
+  "Lambda Calculus",
+  "Formal Semantics",
+  "Functional Programming",
+  "Lisp",
+  "Programming Language Theory",
+  "Denotational Semantics"
+ ],
+ "111": [
+  "Linear Algebra",
+  "Matrix Theory",
+  "Eigenvalue Analysis",
+  "Generalized Inverses",
+  "Numerical Analysis",
+  "Mathematical Proofs"
+ ],
+ "112": [
+  "VLSI Design",
+  "Computational Geometry",
+  "Graph Theory",
+  "Physical Design Automation",
+  "EDA Algorithms",
+  "Circuit Layout"
+ ],
+ "113": [
+  "Computational Complexity",
+  "Turing Machines",
+  "Computability Theory",
+  "Complexity Classes",
+  "Algorithm Analysis",
+  "Formal Languages"
+ ],
+ "114": [
+  "Graph Theory",
+  "Extremal Graph Theory",
+  "Combinatorics",
+  "Graph Algorithms",
+  "Graph Coloring",
+  "Combinatorial Optimization"
+ ],
+ "115": [
+  "Error-Correcting Codes",
+  "Coding Theory",
+  "Public Key Cryptography",
+  "Algorithm Design",
+  "Information Theory",
+  "Discrete Mathematics"
+ ],
+ "116": [
+  "Cryptography",
+  "Number Theory",
+  "Linear Feedback Shift Registers",
+  "Symmetric Encryption",
+  "Public Key Encryption",
+  "Zero-Knowledge Proofs"
+ ],
+ "117": [
+  "Control System Design",
+  "Logic Synthesis",
+  "Finite State Machines",
+  "Algorithm Complexity Analysis",
+  "Boolean Algebra",
+  "Hardware Modeling"
+ ],
+ "118": [
+  "Polynomial Factorization",
+  "Finite Fields",
+  "Abstract Algebra",
+  "Modular Arithmetic",
+  "Number Theory Algorithms",
+  "Algorithmic Combinatorics"
+ ],
+ "119": [
+  "Pattern Recognition",
+  "Classification Algorithms",
+  "Machine Learning",
+  "Computer Vision",
+  "Feature Extraction",
+  "Neural Networks"
+ ],
+ "120": [
+  "Computational Geometry",
+  "Geometric Algorithms",
+  "Algorithm Analysis",
+  "Data Structures",
+  "Convex Hull Algorithms",
+  "Plane Geometry"
+ ],
+ "121": [
+  "Formal Specification",
+  "Model Checking",
+  "Temporal Logic",
+  "Theorem Proving",
+  "Z Notation",
+  "Software Verification"
+ ],
+ "122": [
+  "Search Algorithms",
+  "Knowledge Representation",
+  "Machine Learning",
+  "Logic and Reasoning",
+  "Heuristics",
+  "Problem Solving"
+ ],
+ "123": [
+  "Entropy",
+  "Channel Capacity",
+  "Data Compression",
+  "Error Correction Coding",
+  "Probability Theory",
+  "Signal Encoding"
+ ],
+ "124": [
+  "Formal Logic",
+  "Algorithm Design",
+  "Algorithm Analysis",
+  "Propositional Logic",
+  "Automated Reasoning",
+  "Computational Complexity"
+ ],
+ "125": [
+  "Combinatorics",
+  "Generating Functions",
+  "Recurrence Relations",
+  "Asymptotic Analysis",
+  "Graph Theory",
+  "Boolean Algebra"
+ ],
+ "126": [
+  "Approximation Algorithms",
+  "Greedy Algorithms",
+  "NP-Hard Problems",
+  "Discrete Optimization",
+  "PTAS/FPTAS",
+  "Matroid Theory"
+ ],
+ "127": [
+  "Test Theory",
+  "Fault Detection Algorithms",
+  "Diagnostic Test Construction",
+  "Boolean Logic",
+  "Algorithm Design",
+  "Combinatorial Optimization"
+ ],
+ "128": [],
+ "129": [],
+ "130": [],
+ "131": [],
+ "132": [],
+ "133": [],
+ "134": [],
+ "135": [],
+ "136": [],
+ "137": [],
+ "138": [],
+ "139": [
+  "Web Development",
+  "Network Programming",
+  "Concurrent Programming",
+  "Database Management",
+  "Application Design",
+  "REST API"
+ ],
+ "140": [],
+ "141": [
+  "Computational Complexity",
+  "Turing Computability",
+  "Complexity Classes",
+  "Formal Languages",
+  "Automata Theory",
+  "Algorithm Analysis"
+ ],
+ "142": [
+  "Combinatorial Optimization",
+  "Algorithm Design",
+  "Complexity Theory",
+  "Graph Theory",
+  "Linear Programming",
+  "Discrete Mathematics"
+ ],
+ "143": [
+  "Lambda Calculus",
+  "Formal Semantics",
+  "Functional Programming",
+  "Lisp",
+  "Procedural Programming",
+  "Logic Programming"
+ ],
+ "144": [
+  "Linear Algebra",
+  "Matrix Theory",
+  "Eigenvalue Analysis",
+  "Generalized Inverses",
+  "Numerical Analysis",
+  "Mathematical Proofs"
+ ],
+ "145": [
+  "Linear Algebra",
+  "Numerical Methods",
+  "Iterative Algorithms",
+  "Direct Methods",
+  "Ill-Conditioned Systems",
+  "Computational Mathematics"
+ ],
+ "146": [
+  "Linear Algebra",
+  "Calculus",
+  "Optimization Theory",
+  "Gradient Descent",
+  "Machine Learning",
+  "Loss Functions"
+ ],
+ "147": [
+  "Multivariate Polynomial Interpolation",
+  "Numerical Analysis",
+  "Approximation Theory",
+  "Linear Algebra",
+  "Mathematical Proofs",
+  "Computational Mathematics"
+ ],
+ "148": [
+  "Numerical Optimization",
+  "Constrained Optimization",
+  "Unconstrained Optimization",
+  "Optimization Algorithms",
+  "Mathematical Programming",
+  "Numerical Methods"
+ ],
+ "149": [
+  "Machine Learning",
+  "Supervised Learning",
+  "Unsupervised Learning",
+  "Neural Networks",
+  "Statistical Modeling",
+  "Optimization Algorithms"
+ ],
+ "150": [
+  "Uniform Distribution Theory",
+  "Numerical Integration",
+  "Sequence Analysis",
+  "Number Theory",
+  "Quasi-Monte Carlo Methods",
+  "Mathematical Analysis"
+ ],
+ "151": [
+  "Functional Analysis",
+  "Linear Algebra",
+  "Operator Theory",
+  "Hilbert Spaces",
+  "Banach Spaces",
+  "Numerical Methods"
+ ],
+ "152": [
+  "Euclidean Algorithm",
+  "Abstract Algebra",
+  "Polynomial Arithmetic",
+  "GCD/LCM Computation",
+  "Ring Theory",
+  "Computational Complexity"
+ ],
+ "153": [
+  "Financial Mathematics",
+  "Investment Analysis",
+  "Risk Assessment",
+  "Portfolio Theory",
+  "Securities Valuation",
+  "Loan Amortization"
+ ],
+ "154": [
+  "Spline Interpolation",
+  "Numerical Methods",
+  "Function Approximation",
+  "Polynomial Mathematics",
+  "Computational Mathematics",
+  "Numerical Analysis"
+ ],
+ "155": [
+  "Algebraic Geometry",
+  "Polynomial Arithmetic",
+  "Gr\u00f6bner Bases",
+  "Affine Varieties",
+  "Variable Elimination",
+  "Computational Algorithms"
+ ],
+ "156": [
+  "Fourier Transform",
+  "Z-Transform",
+  "Digital Filter Design",
+  "Signal Processing",
+  "Transfer Functions",
+  "Discrete-Time Systems"
+ ],
+ "157": [
+  "Differential Equations",
+  "Mathematical Modeling",
+  "Dynamical Systems",
+  "Computational Neuroscience",
+  "Biophysical Simulation",
+  "Numerical Analysis"
+ ],
+ "158": [
+  "Linear Algebra",
+  "Geometric Modeling",
+  "B\u00e9zier Curves and Splines",
+  "3D Mathematics",
+  "Computational Geometry",
+  "Computer Graphics"
+ ],
+ "159": [
+  "Regularization Methods",
+  "Numerical Analysis",
+  "Ill-Posed Problems",
+  "Iterative Methods",
+  "Projection Methods",
+  "Operator Theory"
+ ],
+ "160": [
+  "Mathematical Modeling",
+  "Numerical Methods",
+  "Computational Algorithms",
+  "Differential Equations",
+  "Simulation",
+  "Scientific Computing"
+ ],
+ "161": [
+  "Data Analysis",
+  "Machine Learning"
+ ],
+ "162": [],
+ "163": [],
+ "164": [],
+ "165": [],
+ "166": [],
+ "167": [],
+ "168": [],
+ "169": [],
+ "170": [],
+ "171": [],
+ "172": [
+  "Web Development",
+  "Concurrent Programming",
+  "Network Programming",
+  "Database Management",
+  "Application Design",
+  "REST API"
+ ],
+ "173": [],
+ "174": [
+  "Computational Complexity",
+  "Turing Machines",
+  "Computability Theory",
+  "Complexity Classes",
+  "Algorithm Analysis",
+  "Formal Languages"
+ ],
+ "175": [
+  "Combinatorial Optimization",
+  "Expert Systems",
+  "Knowledge Representation",
+  "Optimization Algorithms",
+  "Heuristics",
+  "Graph Theory"
+ ],
+ "176": [
+  "Lambda Calculus",
+  "Formal Semantics",
+  "Functional Programming",
+  "Lisp",
+  "Programming Language Theory",
+  "Denotational Semantics"
+ ],
+ "177": [
+  "Java",
+  "Object-Oriented Programming",
+  "Java Standard Library",
+  "Distributed Programming",
+  "Web Application Development",
+  "Applet Development"
+ ],
+ "178": [
+  "Type Systems",
+  "Semantic Analysis",
+  "Compiler Design",
+  "Type Inference",
+  "Lambda Calculus",
+  "Static Analysis"
+ ],
+ "179": [
+  "Machine Learning",
+  "Neural Networks",
+  "Deep Learning",
+  "Convolutional Neural Networks (CNN)",
+  "Recurrent Neural Networks",
+  "Reinforcement Learning"
+ ],
+ "180": [
+  "Prolog",
+  "Logic Programming",
+  "SLD Resolution",
+  "Declarative Semantics",
+  "Fixed-Point Semantics",
+  "Formal Proof Systems"
+ ],
+ "181": [
+  "Database Management",
+  "Database Design",
+  "Indexing",
+  "Query Optimization",
+  "SQL",
+  "Query Execution Algorithms"
+ ],
+ "182": [
+  "Linear Algebra",
+  "Matrix Decomposition",
+  "Eigenvalue Analysis",
+  "Generalized Inverses",
+  "Numerical Methods",
+  "Applied Mathematics"
+ ],
+ "183": [
+  "Network Architecture",
+  "Network Protocols",
+  "TCP/IP",
+  "Network Design",
+  "Network Technologies",
+  "OSI Model"
+ ],
+ "184": [
+  "Software Testing",
+  "Quality Assurance",
+  "Functional Testing",
+  "Structural Testing",
+  "Software Verification",
+  "Test Methods"
+ ],
+ "185": [
+  "Storage Architecture",
+  "Data Management",
+  "RAID",
+  "Storage Networking",
+  "Data Security",
+  "Backup and Recovery"
+ ],
+ "186": [
+  "Machine Learning",
+  "Data Mining",
+  "Big Data",
+  "Data Analysis",
+  "Predictive Modeling",
+  "Data Processing"
+ ],
+ "187": [
+  "Parallel Programming",
+  "Distributed Systems",
+  "Multithreading",
+  "Shared Memory Architecture",
+  "MPI",
+  "Concurrent Algorithms"
+ ],
+ "188": [
+  "Knowledge Bases",
+  "Expert Systems",
+  "Knowledge Representation",
+  "Inference Engines",
+  "Rule-Based Systems",
+  "Knowledge Base Optimization"
+ ],
+ "189": [
+  "Formal Grammars",
+  "Lexical Analysis",
+  "Syntactic Analysis",
+  "Parsing Algorithms",
+  "Automata Theory",
+  "Compiler Design"
+ ],
+ "190": [
+  "Econometric Modeling",
+  "Neural Networks",
+  "Time Series Forecasting",
+  "Classification Algorithms",
+  "Statistical Analysis",
+  "Python"
+ ],
+ "191": [
+  "Network Security",
+  "Encryption",
+  "Vulnerability Assessment",
+  "Risk Management",
+  "Malware Analysis",
+  "Intrusion Detection"
+ ],
+ "192": [
+  "Big Data Analytics",
+  "Distributed Computing",
+  "Statistical Modeling",
+  "Data Pipelines",
+  "Machine Learning",
+  "Hadoop/Spark"
+ ],
+ "193": [
+  "Image Processing",
+  "Mathematical Modeling",
+  "Linear Algebra",
+  "Numerical Methods",
+  "Signal Processing",
+  "Python"
+ ],
+ "194": [
+  "Cloud Services",
+  "Cloud Computing",
+  "Information Technology",
+  "Software Packages"
+ ],
+ "195": [],
+ "196": [],
+ "197": [],
+ "198": [],
+ "199": [],
+ "200": [],
+ "201": [],
+ "202": [],
+ "203": [],
+ "204": [],
+ "205": [],
+ "206": [],
+ "207": [],
+ "208": [],
+ "209": [],
+ "210": [],
+ "211": [],
+ "212": [],
+ "213": [],
+ "214": [],
+ "215": [],
+ "216": [],
+ "217": [],
+ "218": [],
+ "219": [],
+ "220": [],
+ "221": [],
+ "222": [],
+ "223": [],
+ "224": [],
+ "225": [
+  "Descriptive Statistics",
+  "Hypothesis Testing",
+  "Probability Theory",
+  "Regression Analysis",
+  "Statistical Inference",
+  "Data Analysis"
+ ],
+ "226": [],
+ "227": [],
+ "228": [],
+ "229": [],
+ "230": [],
+ "231": [],
+ "232": [],
+ "233": [],
+ "234": [
+  "Linear Algebra",
+  "Vector Spaces",
+  "Linear Operators",
+  "Matrix Theory",
+  "Eigenvalues and Eigenvectors",
+  "Linear Transformations"
+ ],
+ "235": [
+  "Numerical Optimization",
+  "Convex Optimization",
+  "Gradient Descent",
+  "Linear Programming",
+  "Multidimensional Optimization",
+  "Calculus"
+ ],
+ "236": [
+  "Complexity Theory",
+  "P and NP Classes",
+  "NP-Completeness",
+  "Polynomial Reduction",
+  "Combinatorial Algorithms",
+  "Algorithm Analysis"
+ ],
+ "237": [
+  "Data Analysis",
+  "Machine Learning",
+  "Statistical Modeling",
+  "Data Visualization",
+  "Python",
+  "Data Mining"
+ ],
+ "238": [
+  "Turing Machines",
+  "Recursive Functions",
+  "Computability Theory",
+  "Decidability",
+  "Formal Languages",
+  "Algorithm Analysis"
+ ],
+ "239": [
+  "Partial Differential Equations",
+  "Hyperbolic Equations",
+  "Parabolic Equations",
+  "Elliptic Equations",
+  "Cauchy Problem",
+  "Boundary Value Problems"
+ ],
+ "240": [
+  "Ordinary Differential Equations",
+  "Cauchy Problem",
+  "Linear Differential Equations",
+  "Systems of Differential Equations",
+  "Differential Equations Theory",
+  "Mathematical Analysis"
+ ],
+ "241": [
+  "Linear Programming",
+  "Mathematical Modeling",
+  "Optimization",
+  "Decision Analysis",
+  "Graph Theory",
+  "Simulation"
+ ],
+ "242": [
+  "Numerical Methods",
+  "Linear Algebra",
+  "Matrix Decomposition",
+  "Eigenvalue Computation",
+  "Systems of Linear Equations",
+  "Computational Mathematics"
+ ],
+ "243": [
+  "Complex Numbers",
+  "Complex Functions",
+  "Analytic Functions",
+  "Contour Integration",
+  "Taylor and Laurent Series",
+  "Conformal Mapping"
+ ],
+ "244": [
+  "Data Structures",
+  "Abstract Data Types",
+  "Algorithm Complexity Analysis",
+  "C++",
+  "STL Containers",
+  "Big-O Notation"
+ ],
+ "245": [
+  "Machine Learning",
+  "Supervised Learning",
+  "Unsupervised Learning",
+  "Neural Networks",
+  "Statistical Modeling",
+  "Optimization Algorithms"
+ ],
+ "246": [
+  "Propositional Logic",
+  "Predicate Logic",
+  "Formal Proof Systems",
+  "Model Theory",
+  "Axiomatic Systems",
+  "Decidability"
+ ],
+ "247": [
+  "Calculus",
+  "Differential Calculus",
+  "Limits",
+  "Real Analysis",
+  "Mathematical Sequences",
+  "Continuous Functions"
+ ],
+ "248": [
+  "Curve Integrals",
+  "Surface Integrals",
+  "Double Integrals",
+  "Triple Integrals",
+  "Parameter-Dependent Integrals",
+  "Multivariable Calculus"
+ ],
+ "249": [
+  "Graph Theory",
+  "Graph Algorithms",
+  "Combinatorics",
+  "Discrete Mathematics",
+  "Mathematical Proofs",
+  "Network Analysis"
+ ],
+ "250": [
+  "Computer Networks",
+  "OSI Model",
+  "Network Protocols",
+  "Network Architecture",
+  "TCP/IP",
+  "Network Technologies"
+ ],
+ "251": [
+  "Differential Calculus",
+  "Integral Calculus",
+  "Limits",
+  "Derivatives",
+  "Mathematical Analysis",
+  "Functions"
+ ],
+ "252": [
+  "Functional Series",
+  "Power Series",
+  "Multivariable Calculus",
+  "Implicit Functions",
+  "Fourier Series",
+  "Mathematical Analysis"
+ ],
+ "253": [
+  "Boolean Algebra",
+  "Discrete Mathematics",
+  "Coding Theory",
+  "Combinatorics",
+  "Graph Theory",
+  "Logic"
+ ],
+ "254": [
+  "C++",
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation"
+ ],
+ "255": [
+  "HTML/CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "MongoDB",
+  "NoSQL"
+ ],
+ "256": [
+  "Integral Calculus",
+  "Definite Integrals",
+  "Improper Integrals",
+  "Numerical Series",
+  "Metric Spaces",
+  "Mathematical Analysis"
+ ],
+ "257": [
+  "C++",
+  "Algorithms",
+  "Debugging",
+  "Number Systems",
+  "Algorithmic Thinking",
+  "Program Implementation"
+ ],
+ "258": [
+  "Analytic Geometry",
+  "Complex Numbers",
+  "Linear Algebra",
+  "Matrix Operations",
+  "Polynomial Algebra",
+  "Set Theory"
+ ],
+ "259": [
+  "Set Theory",
+  "Binary Relations",
+  "Combinatorics",
+  "Discrete Mathematics",
+  "Mathematical Proofs",
+  "Graph Theory"
+ ],
+ "260": [
+  "C#",
+  ".NET",
+  "Windows Forms",
+  "GUI Development",
+  "Event-Driven Programming",
+  "Windows API"
+ ],
+ "261": [
+  "Formal Grammars",
+  "Finite Automata",
+  "Pushdown Automata",
+  "Syntax-Directed Translation",
+  "Lexical Analysis",
+  "Syntactic Analysis"
+ ],
+ "262": [
+  "Numerical Methods",
+  "Root Finding Algorithms",
+  "Function Approximation",
+  "Numerical Integration",
+  "Computational Mathematics",
+  "Error Analysis"
+ ],
+ "263": [
+  "Partial Differential Equations",
+  "Differential Equations",
+  "Mathematical Modeling",
+  "Calculus",
+  "Linear Algebra",
+  "Numerical Methods"
+ ],
+ "264": [
+  "Data Structures",
+  "Data Modeling",
+  "Relational Databases",
+  "SQL",
+  "Object-Oriented Design",
+  "Logical Data Models"
+ ],
+ "265": [
+  "x86 Assembly Language",
+  "CPU Architecture",
+  "Data Representation",
+  "Instruction Set Architecture",
+  "Interrupt Handling",
+  "Assembler Macros and Directives"
+ ],
+ "266": [
+  "Functional Analysis",
+  "Linear Algebra",
+  "Topology",
+  "Hilbert Spaces",
+  "Banach Spaces",
+  "Operator Theory"
+ ],
+ "267": [
+  "Ordinary Differential Equations",
+  "Dynamical Systems",
+  "Stability Analysis",
+  "Phase Plane Analysis",
+  "Lyapunov Theory",
+  "Bifurcation Theory"
+ ],
+ "268": [
+  "Combinatorial Algorithms",
+  "Algorithm Analysis",
+  "Complexity Theory",
+  "Discrete Mathematics",
+  "Approximation Algorithms",
+  "Optimization"
+ ],
+ "269": [
+  "Graph Algorithms",
+  "Algorithm Design",
+  "Algorithm Analysis",
+  "Optimization Algorithms",
+  "Approximation Algorithms",
+  "Data Structures"
+ ],
+ "270": [],
+ "271": [
+  "Boolean Algebra",
+  "Disjunctive Normal Forms",
+  "Logic Circuit Design",
+  "Discrete Mathematics",
+  "Boolean Function Minimization",
+  "Digital Logic"
+ ],
+ "272": [
+  "Streaming Algorithms",
+  "Integer Linear Programming",
+  "Total Unimodular Matrices",
+  "Min-Max Theorems",
+  "Combinatorial Optimization",
+  "Mathematical Modeling"
+ ],
+ "273": [],
+ "274": [],
+ "275": [],
+ "276": [],
+ "277": [],
+ "278": [],
+ "279": [],
+ "280": [],
+ "281": [],
+ "282": [],
+ "283": [],
+ "284": [],
+ "285": [],
+ "286": [],
+ "287": [],
+ "288": [],
+ "289": [],
+ "290": [],
+ "291": [],
+ "292": [],
+ "293": [],
+ "294": [],
+ "295": [],
+ "296": [
+  "Descriptive Statistics",
+  "Probability Theory",
+  "Hypothesis Testing",
+  "Regression Analysis",
+  "Statistical Inference",
+  "Data Analysis"
+ ],
+ "297": [],
+ "298": [],
+ "299": [],
+ "300": [],
+ "301": [],
+ "302": [],
+ "303": [],
+ "304": [],
+ "305": [],
+ "306": [],
+ "307": [
+  "Network Security",
+  "Information Systems",
+  "Cryptography",
+  "Access Control",
+  "Threat Analysis",
+  "Security Protocols"
+ ],
+ "308": [
+  "Cryptography",
+  "Number Theory",
+  "Modular Arithmetic",
+  "Symmetric Encryption",
+  "Mathematical Proofs",
+  "Cryptographic Algorithms"
+ ],
+ "309": [
+  "Linear Programming",
+  "Mathematical Modeling",
+  "Optimization",
+  "Operations Research",
+  "Numerical Methods",
+  "Decision Analysis"
+ ],
+ "310": [
+  "OSI Model",
+  "Network Protocols",
+  "Network Architecture",
+  "TCP/IP",
+  "Cryptography",
+  "Network Security"
+ ],
+ "311": [
+  "Numerical Methods",
+  "Linear Algebra",
+  "Matrix Computations",
+  "Eigenvalue Algorithms",
+  "Systems of Linear Equations",
+  "Computational Mathematics"
+ ],
+ "312": [
+  "Formal Logic",
+  "Automata Theory",
+  "Formal Languages",
+  "Mathematical Proofs",
+  "Axiomatic Systems",
+  "Computability Theory"
+ ],
+ "313": [
+  "Data Analysis",
+  "Machine Learning",
+  "Statistical Modeling",
+  "Data Visualization",
+  "Python",
+  "Data Mining"
+ ],
+ "314": [
+  "Ordinary Differential Equations",
+  "Cauchy Problem",
+  "Boundary Value Problems",
+  "Linear Differential Equations",
+  "Systems of Differential Equations",
+  "Stability Theory"
+ ],
+ "315": [
+  "HTML/CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "MongoDB",
+  "NoSQL"
+ ],
+ "316": [
+  "Complex Numbers",
+  "Complex Functions",
+  "Analytic Functions",
+  "Contour Integration",
+  "Taylor and Laurent Series",
+  "Conformal Mapping"
+ ],
+ "317": [
+  "Combinatorial Algorithms",
+  "Algorithm Design",
+  "Complexity Theory",
+  "Approximation Algorithms",
+  "Discrete Mathematics",
+  "Algorithm Analysis"
+ ],
+ "318": [
+  "Linear Algebra",
+  "Vector Spaces",
+  "Linear Operators",
+  "Matrix Theory",
+  "Eigenvalues and Eigenvectors",
+  "Linear Transformations"
+ ],
+ "319": [
+  "Turing Machines",
+  "Recursive Functions",
+  "Computability Theory",
+  "Decidability",
+  "Formal Languages",
+  "Algorithm Analysis"
+ ],
+ "320": [
+  "Set Theory",
+  "Binary Relations",
+  "Combinatorics",
+  "Discrete Mathematics",
+  "Logic",
+  "Proof Techniques"
+ ],
+ "321": [
+  "Data Structures",
+  "Abstract Data Types",
+  "Algorithm Complexity Analysis",
+  "Big-O Notation",
+  "C++ STL",
+  "Object-Oriented Programming"
+ ],
+ "322": [
+  "Machine Learning",
+  "Supervised Learning",
+  "Unsupervised Learning",
+  "Neural Networks",
+  "Statistical Modeling",
+  "Optimization Algorithms"
+ ],
+ "323": [
+  "Multivariable Calculus",
+  "Differential Calculus",
+  "Multiple Integrals",
+  "Surface Integrals",
+  "Curve Integrals",
+  "Real Analysis"
+ ],
+ "324": [
+  "Differential Calculus",
+  "Integral Calculus",
+  "Limits",
+  "Derivatives",
+  "Functions",
+  "Mathematical Analysis"
+ ],
+ "325": [
+  "Network Security",
+  "OSI Model",
+  "Network Protocols",
+  "Cryptography",
+  "Cyber Threat Analysis",
+  "Network Attack Mitigation"
+ ],
+ "326": [
+  "Integral Calculus",
+  "Improper Integrals",
+  "Series Convergence",
+  "Fourier Series",
+  "Power Series",
+  "Multivariable Calculus"
+ ],
+ "327": [
+  "C++",
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Encapsulation",
+  "Polymorphism"
+ ],
+ "328": [
+  "Boolean Algebra",
+  "Graph Theory",
+  "Discrete Mathematics",
+  "Combinatorics",
+  "Logic Circuit Design",
+  "Computational Complexity"
+ ],
+ "329": [
+  "Analytic Geometry",
+  "Linear Algebra",
+  "Matrix Operations",
+  "Complex Numbers",
+  "Polynomial Algebra",
+  "Combinatorics"
+ ],
+ "330": [
+  "Calculus",
+  "Differential Calculus",
+  "Limits",
+  "Real Analysis",
+  "Numerical Sequences",
+  "Continuity"
+ ],
+ "331": [
+  "C++",
+  "Algorithms",
+  "Debugging",
+  "Number Systems",
+  "Control Flow",
+  "Problem Solving"
+ ],
+ "332": [
+  "Data Structures",
+  "Data Modeling",
+  "Relational Databases",
+  "SQL",
+  "Object-Oriented Design",
+  "Logical Data Representation"
+ ],
+ "333": [
+  "Assembly Language",
+  "x86 Architecture",
+  "CPU Architecture",
+  "Data Representation",
+  "Instruction Set Architecture",
+  "Interrupt Systems"
+ ],
+ "334": [
+  "Linear Programming",
+  "Numerical Optimization",
+  "Gradient Descent",
+  "Convex Optimization",
+  "Multidimensional Optimization",
+  "Calculus"
+ ],
+ "335": [
+  "Functional Analysis",
+  "Linear Algebra",
+  "Topology",
+  "Banach Spaces",
+  "Hilbert Spaces",
+  "Operator Theory"
+ ],
+ "336": [
+  "Error-Correcting Codes",
+  "Linear Codes",
+  "Information Theory",
+  "Abstract Algebra",
+  "Hamming Distance",
+  "Finite Fields"
+ ],
+ "337": [
+  "Entropy",
+  "Shannon Information Theory",
+  "Data Compression",
+  "Channel Capacity",
+  "Probability Theory",
+  "Coding Theory"
+ ],
+ "338": [
+  "Graph Algorithms",
+  "Algorithm Design",
+  "Algorithm Analysis",
+  "Optimization Algorithms",
+  "Approximation Algorithms",
+  "Data Structures"
+ ],
+ "339": [
+  "Cryptography",
+  "Number Theory",
+  "Cryptographic Algorithms",
+  "Public Key Cryptography",
+  "Hash Functions",
+  "Digital Signatures"
+ ],
+ "340": [],
+ "341": [
+  "Parallel Computing",
+  "Multithreading",
+  "Distributed Memory Programming",
+  "Shared Memory Programming",
+  "MPI",
+  "OpenMP"
+ ],
+ "342": [
+  "Formal Grammars",
+  "Finite Automata",
+  "Pushdown Automata",
+  "Syntax-Directed Translation",
+  "Lexical Analysis",
+  "Syntactic Analysis"
+ ],
+ "343": [
+  "Numerical Methods",
+  "Root Finding Algorithms",
+  "Function Approximation",
+  "Numerical Integration",
+  "Computational Mathematics",
+  "Error Analysis"
+ ],
+ "344": [
+  "Mathematical Modeling",
+  "Differential Equations",
+  "Numerical Methods",
+  "Optimization",
+  "Applied Mathematics",
+  "Simulation"
+ ],
+ "345": [],
+ "346": [],
+ "347": [],
+ "348": [],
+ "349": [],
+ "350": [],
+ "351": [],
+ "352": [],
+ "353": [],
+ "354": [],
+ "355": [],
+ "356": [],
+ "357": [],
+ "358": [],
+ "359": [],
+ "360": [],
+ "361": [],
+ "362": [],
+ "363": [],
+ "364": [],
+ "365": [],
+ "366": [],
+ "367": [],
+ "368": [],
+ "369": [],
+ "370": [],
+ "371": [],
+ "372": [],
+ "373": [],
+ "374": [],
+ "375": [
+  "Operating Systems",
+  "Microsoft Office",
+  "Information Systems",
+  "Database Management",
+  "Computer Hardware",
+  "Software Applications"
+ ],
+ "376": [],
+ "377": [],
+ "378": [],
+ "379": [
+  "Real Analysis",
+  "Set Theory",
+  "Sequence Limits",
+  "Real Number Systems",
+  "Mathematical Proofs",
+  "Calculus"
+ ],
+ "380": [
+  "Linear Programming",
+  "Convex Optimization",
+  "Gradient Descent",
+  "Numerical Optimization",
+  "Calculus of Variations",
+  "Mathematical Analysis"
+ ],
+ "381": [
+  "Machine Learning",
+  "Neural Networks",
+  "Deep Learning",
+  "Model Optimization",
+  "Python",
+  "Statistical Learning"
+ ],
+ "382": [
+  "Descriptive Statistics",
+  "Probability Theory",
+  "Hypothesis Testing",
+  "Regression Analysis",
+  "Statistical Inference",
+  "Data Analysis"
+ ],
+ "383": [
+  "Machine Learning",
+  "Supervised Learning",
+  "Classification",
+  "Regression",
+  "Model Evaluation",
+  "Python"
+ ],
+ "384": [
+  "Numerical Methods",
+  "Linear Algebra",
+  "Differential Equations",
+  "Root Finding Algorithms",
+  "Iterative Methods",
+  "Approximation Theory"
+ ],
+ "385": [
+  "Mathematical Statistics",
+  "Statistical Inference",
+  "Probability Theory",
+  "Hypothesis Testing",
+  "Estimation Theory",
+  "Data Analysis"
+ ],
+ "386": [
+  "Data Science",
+  "Big Data",
+  "Data Exploration",
+  "Data Analysis",
+  "Python",
+  "Statistics"
+ ],
+ "387": [
+  "Algorithms",
+  "Data Structures",
+  "Algorithm Analysis",
+  "Complexity Theory",
+  "Sorting Algorithms",
+  "Graph Algorithms"
+ ],
+ "388": [
+  "Measure Theory",
+  "Lebesgue Integration",
+  "Measurable Functions",
+  "Real Analysis",
+  "Harmonic Analysis",
+  "Mathematical Proofs"
+ ],
+ "389": [
+  "Python",
+  "Programming Fundamentals",
+  "Control Flow",
+  "Functions",
+  "Data Structures",
+  "Debugging"
+ ],
+ "390": [
+  "SQL",
+  "Database Design",
+  "Query Optimization",
+  "Data Mining",
+  "Pattern Extraction",
+  "Database Management"
+ ],
+ "391": [
+  "Probability Theory",
+  "Continuous Probability Distributions",
+  "Statistical Modeling",
+  "Stochastic Processes",
+  "Mathematical Analysis",
+  "Applied Mathematics"
+ ],
+ "392": [
+  "Probability Theory",
+  "Combinatorics",
+  "Discrete Mathematics",
+  "Statistical Modeling",
+  "Random Variables",
+  "Probabilistic Analysis"
+ ],
+ "393": [
+  "Ordinary Differential Equations",
+  "Cauchy Problem",
+  "Linear Differential Equations",
+  "Mathematical Analysis",
+  "Differential Equations Solution Methods",
+  "Calculus"
+ ],
+ "394": [
+  "Multivariable Calculus",
+  "Multiple Integrals",
+  "Series Convergence Analysis",
+  "Real Analysis",
+  "Vector Mathematics",
+  "Numerical Series"
+ ],
+ "395": [
+  "Group Theory",
+  "Abstract Algebra",
+  "Ring Theory",
+  "Subgroup Analysis",
+  "Quotient Groups",
+  "Algebraic Structures"
+ ],
+ "396": [
+  "C++",
+  "Object-Oriented Programming",
+  "Procedural Programming",
+  "Programming Language Concepts",
+  "Integrated Development Environments",
+  "Program Implementation"
+ ],
+ "397": [
+  "Differential Calculus",
+  "Integral Calculus",
+  "Mathematical Analysis",
+  "Multivariable Calculus",
+  "Sequences and Series",
+  "Ordinary Differential Equations"
+ ],
+ "398": [
+  "Linear Algebra",
+  "Linear Transformations",
+  "Eigenvalues and Eigenvectors",
+  "Vector Spaces",
+  "Quadratic Forms",
+  "Matrix Theory"
+ ],
+ "399": [
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Propositional Logic",
+  "Boolean Functions",
+  "Algorithm Analysis"
+ ],
+ "400": [
+  "Microsoft Windows",
+  "Microsoft Word",
+  "Microsoft Excel",
+  "Microsoft Office",
+  "Internet Technologies",
+  "Web 2.0"
+ ],
+ "401": [
+  "Linear Algebra",
+  "Matrix Operations",
+  "Complex Numbers",
+  "Determinants",
+  "Polynomial Arithmetic",
+  "Euclidean Algorithm"
+ ],
+ "402": [
+  "Analytic Geometry",
+  "Linear Algebra",
+  "Coordinate Systems",
+  "Conic Sections",
+  "Quadric Surfaces",
+  "Vector Mathematics"
+ ],
+ "403": [
+  "Statistical Modeling",
+  "Regression Analysis",
+  "Hypothesis Testing",
+  "Time Series Analysis",
+  "Probability Theory",
+  "Statistical Inference"
+ ],
+ "404": [
+  "Banach Spaces",
+  "Hilbert Spaces",
+  "Functional Analysis",
+  "Operator Theory",
+  "Linear Functionals",
+  "Normed Spaces"
+ ],
+ "405": [
+  "R",
+  "Statistical Analysis",
+  "Data Manipulation",
+  "Statistical Modeling",
+  "Data Visualization",
+  "Probability"
+ ],
+ "406": [
+  "Time Value of Money",
+  "Cash Flow Analysis",
+  "Yield Calculation",
+  "Financial Instruments Pricing",
+  "Portfolio Theory"
+ ],
+ "407": [
+  "Statistical Methods",
+  "Data Analysis",
+  "Applied Statistics",
+  "Professional Research Methods"
+ ],
+ "408": [
+  "Digital Signal Processing",
+  "Fourier Transform",
+  "Filter Design",
+  "Signal Filtering",
+  "MATLAB",
+  "Frequency Analysis"
+ ],
+ "409": [
+  "Bayesian Statistics",
+  "Probability Theory",
+  "Statistical Inference",
+  "Prior and Posterior Distributions",
+  "Markov Chain Monte Carlo",
+  "Bayesian Modeling"
+ ],
+ "410": [
+  "Natural Language Processing",
+  "Text Processing",
+  "Machine Learning",
+  "Language Models",
+  "Natural Language Processing Algorithms",
+  "Large Language Models"
+ ],
+ "411": [
+  "Time Series Analysis",
+  "Autoregressive Models",
+  "ARIMA",
+  "Statistical Modeling",
+  "Forecasting",
+  "R"
+ ],
+ "412": [
+  "Deep Learning",
+  "Neural Networks",
+  "Convolutional Neural Networks",
+  "Recurrent Neural Networks",
+  "Transformer Models",
+  "PyTorch"
+ ],
+ "413": [
+  "Probability Theory",
+  "Stochastic Processes",
+  "Statistical Analysis",
+  "Markov Chains",
+  "Poisson Processes",
+  "Brownian Motion"
+ ],
+ "414": [
+  "Image Processing",
+  "Computer Vision",
+  "Neural Networks",
+  "Convolutional Neural Networks",
+  "Feature Extraction",
+  "Deep Learning"
+ ],
+ "415": [
+  "Game Theory",
+  "Linear Programming",
+  "Optimization",
+  "Nash Equilibrium",
+  "Sequential Games",
+  "Zero-Sum Games"
+ ],
+ "416": [
+  "Multivariate Statistics",
+  "Principal Component Analysis",
+  "Cluster Analysis",
+  "Regression Analysis",
+  "Statistical Analysis",
+  "Linear Algebra"
+ ],
+ "417": [
+  "Stochastic Geometry",
+  "Probability Theory",
+  "Spatial Statistics",
+  "Point Processes",
+  "Geometric Probability",
+  "Measure Theory"
+ ],
+ "418": [
+  "Python",
+  "Object-Oriented Programming",
+  "Data Structures",
+  "Functions",
+  "Variables and Data Types",
+  "Problem Solving"
+ ],
+ "419": [
+  "SQL",
+  "Database Design",
+  "Database Management",
+  "Data Storage",
+  "Data Management"
+ ],
+ "420": [],
+ "421": [],
+ "422": [],
+ "423": [],
+ "424": [
+  "Linear Programming",
+  "Convex Optimization",
+  "Numerical Optimization",
+  "Constrained Optimization",
+  "Calculus of Variations",
+  "Mathematical Analysis"
+ ],
+ "425": [
+  "Regression Analysis",
+  "Statistical Estimation",
+  "Econometric Modeling",
+  "Hypothesis Testing",
+  "Statistical Inference",
+  "Linear Algebra"
+ ],
+ "426": [
+  "Linear Algebra",
+  "Probability Theory",
+  "Numerical Analysis",
+  "Mathematical Analysis",
+  "Optimization",
+  "Statistics"
+ ],
+ "427": [
+  "R",
+  "Statistical Modeling",
+  "Descriptive Statistics",
+  "Hypothesis Testing",
+  "Regression Analysis",
+  "Data Analysis"
+ ],
+ "428": [
+  "Data Processing",
+  "ETL Pipelines",
+  "Database Management",
+  "SQL",
+  "Data Transformation",
+  "Data Warehousing"
+ ],
+ "429": [
+  "Python",
+  "Unit Testing",
+  "Error Handling",
+  "Debugging",
+  "Python Libraries",
+  "Object-Oriented Programming"
+ ],
+ "430": [
+  "Bayesian Statistics",
+  "Prior and Posterior Distributions",
+  "Likelihood Functions",
+  "Bayesian Networks",
+  "Probabilistic Inference",
+  "Data Analysis"
+ ],
+ "431": [
+  "Time Series Analysis",
+  "Forecasting",
+  "Statistical Modeling",
+  "Econometrics",
+  "Data Analysis",
+  "Statistical Software"
+ ],
+ "432": [
+  "Multivariate Statistics",
+  "Multivariate Normal Distribution",
+  "Hypothesis Testing",
+  "Factor Analysis",
+  "Cluster Analysis",
+  "Probability Theory"
+ ],
+ "433": [
+  "Machine Learning",
+  "Python",
+  "Supervised Learning",
+  "Predictive Modeling",
+  "Data Preprocessing",
+  "Scikit-learn"
+ ],
+ "434": [
+  "Entropy and Information Measures",
+  "Data Compression",
+  "Channel Capacity",
+  "Error-Correcting Codes",
+  "Coding Theory",
+  "Probability Theory"
+ ],
+ "435": [
+  "Image Processing",
+  "Computer Vision",
+  "Neural Networks",
+  "Convolutional Neural Networks",
+  "Feature Extraction",
+  "Deep Learning"
+ ],
+ "436": [
+  "Natural Language Processing",
+  "Text Classification",
+  "Information Extraction",
+  "Machine Learning",
+  "Language Models",
+  "Text Mining"
+ ],
+ "437": [
+  "Generative AI",
+  "Machine Learning",
+  "Neural Networks",
+  "Deep Learning",
+  "Prompt Engineering",
+  "Python"
+ ],
+ "438": [
+  "Neural Networks",
+  "Convolutional Neural Networks",
+  "Recurrent Neural Networks",
+  "Deep Unsupervised Learning",
+  "Image Recognition",
+  "Speech Recognition"
+ ],
+ "439": [
+  "Statistics",
+  "Probability Theory",
+  "Hypothesis Testing",
+  "Statistical Analysis",
+  "Biological Data Interpretation",
+  "Regression Analysis"
+ ],
+ "440": [
+  "Python",
+  "Machine Learning",
+  "Probabilistic Modeling",
+  "Predictive Modeling",
+  "Statistical Learning",
+  "Data Modeling"
+ ],
+ "441": [
+  "Stochastic Processes",
+  "Brownian Motion",
+  "Martingales",
+  "Markov Processes",
+  "Stochastic Calculus",
+  "It\u00f4's Formula"
+ ],
+ "442": [
+  "Digital Signal Processing",
+  "Fourier Transform",
+  "Digital Filter Design",
+  "Signal Analysis",
+  "MATLAB",
+  "Numerical Methods"
+ ],
+ "443": [
+  "Product Management",
+  "Market Research",
+  "Financial Planning",
+  "Portfolio Management"
+ ],
+ "444": [
+  "Machine Learning",
+  "Deep Learning",
+  "Statistics",
+  "Healthcare Informatics",
+  "Python",
+  "Data Analysis"
+ ],
+ "445": [
+  "Monte Carlo Methods",
+  "Random Number Generation",
+  "Nonparametric Statistics",
+  "Generalized Linear Models",
+  "Model Selection",
+  "Statistical Modeling"
+ ],
+ "446": [
+  "Reinforcement Learning",
+  "Python",
+  "Dynamic Programming",
+  "Monte Carlo Methods",
+  "Machine Learning",
+  "Markov Decision Processes"
+ ],
+ "447": [
+  "Graph Neural Networks",
+  "Machine Learning",
+  "Graph Algorithms",
+  "Deep Learning",
+  "Python",
+  "Network Analysis"
+ ],
+ "448": [
+  "Probability Theory",
+  "Data Visualization",
+  "Machine Learning"
+ ],
+ "449": [],
+ "450": [],
+ "451": [
+  "Blockchain",
+  "Digital Currencies",
+  "Data Analysis",
+  "Simulation Environments",
+  "FinTech",
+  "IT Management Tools"
+ ],
+ "452": [],
+ "453": [
+  "Research Methodology",
+  "Experimental Design",
+  "Comparative Evaluation",
+  "Systems Analysis",
+  "Expert Methods",
+  "Research Planning"
+ ],
+ "454": [],
+ "455": [],
+ "458": [
+  "Blockchain",
+  "Decentralized Systems",
+  "Digital Currencies",
+  "Smart Contracts"
+ ],
+ "459": [],
+ "460": [],
+ "461": [],
+ "462": [],
+ "463": [],
+ "464": [],
+ "465": [],
+ "466": [],
+ "467": [],
+ "468": [
+  "Kotlin",
+  "Mobile Application Development",
+  "Android Development",
+  "AI Integration",
+  "Software Engineering",
+  "API Integration"
+ ],
+ "469": [],
+ "470": [
+  "Semantic Data Models",
+  "Semi-Structured Data Models",
+  "Object-Oriented Data Models",
+  "Object-Relational Data Models",
+  "Database Design",
+  "NoSQL"
+ ],
+ "471": [
+  "Natural Language Processing",
+  "Text Normalization",
+  "Edit Distance",
+  "Logistic Regression",
+  "Neural Networks",
+  "Python"
+ ],
+ "472": [
+  "Object-Oriented Analysis",
+  "Object-Oriented Design",
+  "Design Patterns",
+  "UML",
+  "Software Architecture",
+  "Object-Oriented Programming"
+ ],
+ "473": [
+  "SQL",
+  "Relational Algebra",
+  "Relational Data Model",
+  "Database Management",
+  "Query Languages",
+  "Relational Calculus"
+ ],
+ "474": [
+  "Finite Automata",
+  "Formal Languages",
+  "Computability Theory",
+  "Mathematical Modeling",
+  "State Machines",
+  "System Design"
+ ],
+ "475": [
+  "Web Development",
+  "Mobile Application Development",
+  "Software Security",
+  "UI/UX Design",
+  "REST API",
+  "Application Performance Optimization"
+ ],
+ "476": [
+  "Database Management",
+  "Indexing Structures",
+  "Query Optimization",
+  "Transaction Management",
+  "Data Processing",
+  "Information Integration"
+ ],
+ "477": [
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "CPU Scheduling",
+  "System Calls"
+ ],
+ "478": [
+  "Cloud Computing",
+  "Cloud Architecture",
+  "Distributed Systems",
+  "Scalability",
+  "Cloud Security",
+  "DevOps"
+ ],
+ "479": [
+  "Digital Circuit Fault Detection",
+  "Test Algorithms",
+  "Fault Diagnosis",
+  "Memory Device Testing",
+  "Memory Repair Algorithms",
+  "Digital Systems Testing"
+ ],
+ "480": [
+  "Design Patterns",
+  "Generic Programming",
+  "Logic Programming",
+  "Object-Oriented Programming",
+  "Functional Programming",
+  "Software Architecture"
+ ],
+ "481": [
+  "Big Data",
+  "Hadoop",
+  "Distributed Storage",
+  "Data Analytics",
+  "NoSQL",
+  "Data Processing"
+ ],
+ "482": [
+  "Embedded Systems Design",
+  "Digital Hardware Design",
+  "Microcontroller Programming",
+  "Real-Time Systems",
+  "Hardware-Software Co-design",
+  "Digital Logic"
+ ],
+ "483": [
+  "SQL",
+  "NoSQL",
+  "Distributed Databases",
+  "Database Transactions",
+  "Data Integration",
+  "Database Management"
+ ],
+ "484": [
+  "Software Testing",
+  "Quality Assurance",
+  "Test Automation",
+  "Requirements Engineering",
+  "Test Case Design",
+  "Software Quality Metrics"
+ ],
+ "485": [
+  "Machine Learning",
+  "Supervised Learning",
+  "Unsupervised Learning",
+  "Model Evaluation",
+  "Feature Engineering",
+  "Statistics"
+ ],
+ "486": [
+  "Compiler Design",
+  "Lexical Analysis",
+  "Syntactic Analysis",
+  "Code Optimization",
+  "Register Allocation",
+  "Parsing Algorithms"
+ ],
+ "487": [
+  "Fault Modeling",
+  "Memory Testing Algorithms",
+  "Nanoscale Electronics",
+  "VLSI Testing",
+  "Semiconductor Device Physics",
+  "Digital Systems Design"
+ ],
+ "488": [
+  "Neural Networks",
+  "Deep Learning",
+  "Backpropagation",
+  "Gradient Descent",
+  "Machine Learning",
+  "Python"
+ ],
+ "489": [
+  "C#",
+  ".NET Framework",
+  "Common Language Runtime (CLR)",
+  "Software Architecture",
+  "Object-Oriented Programming",
+  "Microsoft Development Tools"
+ ],
+ "490": [],
+ "491": [
+  "Software Prototyping",
+  "Software Design",
+  "Software Development",
+  "Systems Implementation"
+ ],
+ "492": [],
+ "493": [],
+ "494": [],
+ "495": [],
+ "496": [],
+ "497": [],
+ "498": [],
+ "499": [],
+ "500": [],
+ "501": [
+  "Kotlin",
+  "Mobile Application Development",
+  "Android Development",
+  "Artificial Intelligence Integration",
+  "UI/UX Design",
+  "API Integration"
+ ],
+ "502": [],
+ "503": [
+  "Semantic Data Models",
+  "Semi-Structured Data Models",
+  "Object-Oriented Data Models",
+  "Object-Relational Data Models",
+  "Database Design",
+  "XML"
+ ],
+ "504": [
+  "Natural Language Processing",
+  "Text Normalization",
+  "Edit Distance",
+  "Logistic Regression",
+  "Neural Networks",
+  "Python"
+ ],
+ "505": [
+  "Object-Oriented Analysis",
+  "Object-Oriented Design",
+  "Design Patterns",
+  "UML",
+  "Software Architecture",
+  "Object-Oriented Programming"
+ ],
+ "506": [
+  "Relational Data Model",
+  "Relational Algebra",
+  "Relational Calculus",
+  "SQL",
+  "Query Languages",
+  "Database Management"
+ ],
+ "507": [
+  "Financial Markets",
+  "Capital Markets",
+  "Derivatives",
+  "Securities Analysis",
+  "Foreign Exchange Markets",
+  "Money Markets"
+ ],
+ "508": [
+  "Transaction Management",
+  "Concurrency Control",
+  "Database Recovery",
+  "Database Management",
+  "ACID Properties",
+  "Locking Protocols"
+ ],
+ "509": [
+  "Web Development",
+  "Mobile Application Development",
+  "Software Security",
+  "System Scalability",
+  "UI/UX Design",
+  "REST API"
+ ],
+ "510": [
+  "Algorithms",
+  "Data Structures",
+  "Algorithm Analysis",
+  "Time Complexity",
+  "Sorting Algorithms",
+  "Algorithm Design"
+ ],
+ "511": [
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "Scheduling Algorithms",
+  "System Calls"
+ ],
+ "512": [],
+ "513": [
+  "Cloud Computing",
+  "Cloud Architecture",
+  "Distributed Systems",
+  "Scalable Systems Design",
+  "Cloud Security",
+  "DevOps"
+ ],
+ "514": [
+  "IT Strategy",
+  "Business Process Management",
+  "IT Governance",
+  "Digital Transformation",
+  "Enterprise Systems",
+  "IT Planning"
+ ],
+ "515": [
+  "Big Data",
+  "Hadoop",
+  "Distributed Storage",
+  "Data Processing",
+  "NoSQL",
+  "Data Analytics"
+ ],
+ "516": [
+  "Computer Networks",
+  "Data Transmission",
+  "Network Protocols",
+  "Network Security",
+  "Network Media",
+  "Data Communication"
+ ],
+ "517": [
+  "Swift",
+  "iOS SDK",
+  "Xcode",
+  "Mobile Application Development",
+  "UIKit",
+  "API Integration"
+ ],
+ "518": [
+  "Mathematical Modeling",
+  "Optimization Methods",
+  "Game Theory",
+  "Statistical Analysis",
+  "Econometric Methods",
+  "Mathematical Economics"
+ ],
+ "519": [
+  "Design Patterns",
+  "Distributed Systems",
+  "Software Architecture",
+  "Enterprise Application Development",
+  "Security Engineering",
+  "Scalability"
+ ],
+ "520": [
+  "Neural Networks",
+  "Deep Learning",
+  "Backpropagation",
+  "Gradient Descent",
+  "Machine Learning",
+  "Python"
+ ],
+ "521": [
+  "Unix/Linux",
+  "Shell Scripting",
+  "File System Management",
+  "Process Management",
+  "System Administration",
+  "Command Line Interface"
+ ],
+ "522": [
+  "Machine Learning",
+  "Supervised Learning",
+  "Unsupervised Learning",
+  "Neural Networks",
+  "Model Evaluation",
+  "Python"
+ ],
+ "523": [],
+ "524": [
+  "Software Prototyping",
+  "Software Design",
+  "Software Development",
+  "Requirements Analysis"
+ ],
+ "525": [],
+ "526": [],
+ "527": [],
+ "528": [],
+ "529": [],
+ "530": [],
+ "531": [],
+ "532": [],
+ "533": [],
+ "534": [],
+ "535": [],
+ "536": [],
+ "537": [],
+ "538": [],
+ "539": [],
+ "540": [],
+ "541": [],
+ "542": [],
+ "543": [],
+ "544": [],
+ "545": [],
+ "546": [],
+ "547": [],
+ "548": [],
+ "549": [
+  "Descriptive Statistics",
+  "Probability Theory",
+  "Hypothesis Testing",
+  "Regression Analysis",
+  "Statistical Inference",
+  "Data Analysis"
+ ],
+ "550": [],
+ "551": [],
+ "552": [],
+ "553": [
+  "Algebra",
+  "Geometry",
+  "Mathematical Reasoning",
+  "Proof Techniques"
+ ],
+ "554": [],
+ "555": [],
+ "556": [],
+ "557": [],
+ "558": [
+  "Computer Fundamentals",
+  "Software Applications",
+  "Information Security",
+  "Data Analysis",
+  "Research Methods",
+  "IT Literacy"
+ ],
+ "559": [],
+ "560": [],
+ "561": [],
+ "562": [
+  "Electrodynamics",
+  "Quantum Optics",
+  "Electromagnetism",
+  "Magnetostatics",
+  "Wave-Particle Duality",
+  "Maxwell's Equations"
+ ],
+ "563": [
+  "Numerical Methods",
+  "Interpolation",
+  "Numerical Integration",
+  "Numerical Differentiation",
+  "Linear Algebra",
+  "Solving Nonlinear Equations"
+ ],
+ "564": [
+  "Fourier Transform",
+  "Digital Signal Processing",
+  "Linear Systems",
+  "Filter Design",
+  "Differential Equations",
+  "MATLAB"
+ ],
+ "565": [
+  "Thermodynamics",
+  "Statistical Physics",
+  "Quantum Mechanics",
+  "Canonical Distribution Methods",
+  "Phase Transitions",
+  "Statistical Mechanics"
+ ],
+ "566": [
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Neural Networks",
+  "Data Analysis",
+  "Python",
+  "Scientific Computing"
+ ],
+ "567": [
+  "Mathematical Modeling",
+  "Differential Equations",
+  "Numerical Methods",
+  "Physics Simulation",
+  "Scientific Computing",
+  "Linear Algebra"
+ ],
+ "568": [
+  "Quantum Mechanics",
+  "Wave Functions",
+  "Schr\u00f6dinger Equation",
+  "Linear Algebra",
+  "Differential Equations",
+  "Quantum Operators"
+ ],
+ "569": [
+  "Machine Learning",
+  "Python",
+  "Data Modeling",
+  "Predictive Modeling",
+  "Large-Scale Data Processing",
+  "Scikit-learn"
+ ],
+ "570": [
+  "Newtonian Mechanics",
+  "Differential Equations",
+  "Kinematics",
+  "Dynamics",
+  "Vector Calculus",
+  "Classical Physics"
+ ],
+ "571": [
+  "Set Theory",
+  "Binary Relations",
+  "Combinatorics",
+  "Boolean Algebra",
+  "Graph Theory",
+  "Discrete Mathematics"
+ ],
+ "572": [
+  "Probability Theory",
+  "Mathematical Statistics",
+  "Statistical Inference",
+  "Probability Distributions",
+  "Hypothesis Testing",
+  "Descriptive Statistics"
+ ],
+ "573": [
+  "Calculus",
+  "Limits and Continuity",
+  "Differential Calculus",
+  "Derivatives",
+  "Function Analysis",
+  "Real Analysis"
+ ],
+ "574": [
+  "Ordinary Differential Equations",
+  "Cauchy Problem",
+  "Boundary Value Problems",
+  "Linear Differential Equations",
+  "Systems of Differential Equations",
+  "Integral Equations"
+ ],
+ "575": [
+  "Vector Calculus",
+  "Linear Algebra",
+  "Matrices and Determinants",
+  "Numerical Methods",
+  "Analytic Geometry",
+  "Linear Operators"
+ ],
+ "576": [
+  "Complex Analysis",
+  "Analytic Functions",
+  "Complex Integration",
+  "Conformal Mapping",
+  "Residue Theorem",
+  "Complex Variables"
+ ],
+ "577": [
+  "Circuit Analysis",
+  "Electronic Components",
+  "Analog Electronics",
+  "Signal Processing",
+  "Electronic Systems Design",
+  "Semiconductor Devices"
+ ],
+ "578": [
+  "Machine Learning",
+  "Python",
+  "Supervised Learning",
+  "Predictive Modeling",
+  "Data Preprocessing",
+  "Scikit-learn"
+ ],
+ "579": [
+  "Electrostatics",
+  "Magnetostatics",
+  "Maxwell's Equations",
+  "Vector Calculus",
+  "Electromagnetic Field Theory",
+  "Differential and Integral Forms"
+ ],
+ "580": [
+  "Python",
+  "Programming Fundamentals",
+  "Problem Solving",
+  "Data Processing",
+  "Algorithms",
+  "Visualization"
+ ],
+ "581": [
+  "Integral Calculus",
+  "Improper Integrals",
+  "Parameter-Dependent Integrals",
+  "Multivariable Calculus",
+  "Differential Calculus",
+  "Mathematical Analysis"
+ ],
+ "582": [
+  "Python",
+  "Data Structures",
+  "Algorithms",
+  "Data Processing",
+  "Problem Solving",
+  "Data Visualization"
+ ],
+ "583": [
+  "Classical Mechanics",
+  "Newtonian Mechanics",
+  "Kinematics",
+  "Newton's Laws",
+  "Force Analysis",
+  "Mathematical Modeling"
+ ],
+ "584": [
+  "Quantum Computing",
+  "Quantum Information Theory",
+  "Quantum Algorithms",
+  "Quantum Communication",
+  "Quantum State Management",
+  "Computational Complexity"
+ ],
+ "585": [
+  "Telecommunication Systems Modeling",
+  "Digital Communications",
+  "Signal Error Analysis",
+  "Simulation Methods",
+  "Communication System Design",
+  "Probability Theory"
+ ],
+ "586": [
+  "Electrodynamics",
+  "Differential Equations",
+  "Microwave Engineering",
+  "COMSOL Multiphysics",
+  "Electromagnetic Simulation",
+  "Computer Modeling"
+ ],
+ "587": [
+  "LabVIEW",
+  "Data Acquisition",
+  "Digital-to-Analog Conversion",
+  "NI Hardware Integration",
+  "Signal Processing",
+  "Instrumentation Control"
+ ],
+ "588": [
+  "MEMS/NEMS Simulation",
+  "Multiphysics Modeling",
+  "Finite Element Analysis",
+  "Nanoscale Systems Design",
+  "COMSOL Multiphysics",
+  "Computational Modeling"
+ ],
+ "589": [
+  "Wave Propagation",
+  "Electromagnetic Waves",
+  "Mechanical Waves",
+  "Linear Systems Theory",
+  "Signal Processing",
+  "Wave Physics"
+ ],
+ "590": [
+  "MATLAB",
+  "Numerical Modeling",
+  "Numerical Analysis",
+  "Signal Processing",
+  "Computational Methods",
+  "Radiophysics"
+ ],
+ "591": [
+  "Signal Processing",
+  "Fourier Transform",
+  "Z-Transform",
+  "Digital Filters",
+  "Discrete-Time Systems",
+  "Linear Algebra"
+ ],
+ "592": [
+  "Neural Networks",
+  "Deep Learning",
+  "Backpropagation",
+  "Machine Learning",
+  "Linear Algebra",
+  "Python"
+ ],
+ "593": [
+  "Linear Programming",
+  "Convex Optimization",
+  "Gradient Descent",
+  "Numerical Methods",
+  "Mathematical Analysis",
+  "Operations Research"
+ ],
+ "594": [
+  "Semiconductor Electronics",
+  "Circuit Design",
+  "Electronic Circuit Analysis",
+  "SPICE Simulation",
+  "Device Modeling",
+  "Analog Electronics"
+ ],
+ "595": [
+  "Linear Algebra",
+  "Functional Analysis",
+  "Banach Spaces",
+  "Hilbert Spaces",
+  "Linear Operators",
+  "Mathematical Proofs"
+ ],
+ "596": [
+  "Functional Analysis",
+  "Approximation Theory",
+  "Orthogonal Bases",
+  "Bernstein Polynomials",
+  "Metric Spaces",
+  "Banach Spaces"
+ ],
+ "597": [],
+ "598": [
+  "Network Protocols",
+  "Network Design",
+  "TCP/IP",
+  "Data Encoding",
+  "IoT",
+  "Network Architecture"
+ ],
+ "599": [
+  "Electromagnetic Simulation",
+  "Finite Element Method (FEM)",
+  "Boundary Conditions",
+  "CST/ANSYS HFSS",
+  "Numerical Methods",
+  "Computational Electromagnetics"
+ ],
+ "600": [
+  "Graph Theory",
+  "Search Algorithms",
+  "Optimization Algorithms",
+  "Data Structures",
+  "Artificial Intelligence",
+  "Combinatorics"
+ ],
+ "601": [],
+ "602": [],
+ "603": [],
+ "604": [],
+ "605": [],
+ "606": [],
+ "607": [],
+ "608": [],
+ "609": [],
+ "610": [],
+ "611": [],
+ "612": [],
+ "613": [],
+ "614": [],
+ "615": [],
+ "616": [],
+ "617": [],
+ "618": [],
+ "619": [],
+ "620": [],
+ "621": [],
+ "622": [],
+ "623": [],
+ "624": [
+  "Descriptive Statistics",
+  "Probability Theory",
+  "Hypothesis Testing",
+  "Regression Analysis",
+  "Statistical Inference",
+  "Data Analysis"
+ ],
+ "625": [],
+ "626": [],
+ "627": [],
+ "628": [],
+ "629": [],
+ "630": [],
+ "631": [],
+ "632": [],
+ "633": [],
+ "634": [],
+ "635": [
+  "Electrodynamics",
+  "Electromagnetic Wave Propagation",
+  "Transmission Line Theory",
+  "Maxwell's Equations",
+  "RLC Circuit Analysis",
+  "Microwave Resonator Design"
+ ],
+ "636": [
+  "Laser Physics",
+  "Optical Communication Systems",
+  "Electromagnetic Wave Theory",
+  "Photonics",
+  "Signal Transmission",
+  "Optoelectronics"
+ ],
+ "637": [
+  "Finite Element Method (FEM)",
+  "FDTD Method",
+  "Electromagnetic Simulation",
+  "Numerical Methods",
+  "Physics Modeling",
+  "EM Simulation Tools (COMSOL/CST)"
+ ],
+ "638": [
+  "Circuit Design",
+  "Electronic Circuit Analysis",
+  "SPICE Simulation",
+  "Radio-Electronic Engineering",
+  "Circuit Modeling",
+  "Electronic Components"
+ ],
+ "639": [
+  "Information Theory",
+  "Shannon Coding Theorems",
+  "Lossless Data Compression",
+  "Lossy Data Compression",
+  "Entropy Coding",
+  "Digital Communications"
+ ],
+ "640": [
+  "Probability Theory",
+  "Statistical Signal Processing",
+  "Random Processes",
+  "Noise Analysis",
+  "Stochastic Methods",
+  "Signal Detection Theory"
+ ],
+ "641": [
+  "Nonlinear Circuit Analysis",
+  "Radio Receiver Design",
+  "Radio Transmitter Design",
+  "Fluctuation Theory",
+  "Signal Processing",
+  "Electronic Components"
+ ],
+ "642": [
+  "Semiconductor Physics",
+  "Device Physics",
+  "P-N Junctions",
+  "Transistor Theory",
+  "Solid-State Physics",
+  "Electronic Devices"
+ ],
+ "643": [
+  "LabVIEW",
+  "Data Acquisition",
+  "Digital-to-Analog Conversion",
+  "NI Hardware Integration",
+  "Signal Processing",
+  "Data Import/Export"
+ ],
+ "644": [
+  "Quantum Mechanics",
+  "Wave-Particle Duality",
+  "Schr\u00f6dinger Equation",
+  "Quantum State Theory",
+  "Quantum Measurement",
+  "Mathematical Physics"
+ ],
+ "645": [
+  "Linear Circuit Analysis",
+  "Time Domain Analysis",
+  "Frequency Domain Analysis",
+  "Signal Theory",
+  "Radio Engineering",
+  "Network Circuit Theory"
+ ],
+ "646": [
+  "Electromagnetic Theory",
+  "Optics",
+  "Quantum Mechanics",
+  "Photonics",
+  "Wave Physics",
+  "Optical Systems Design"
+ ],
+ "647": [
+  "Calculus",
+  "Limits",
+  "Derivatives",
+  "Mathematical Analysis",
+  "Functions",
+  "Sequences"
+ ],
+ "648": [
+  "Electrostatics",
+  "Electromagnetic Fields",
+  "Maxwell's Equations",
+  "Magnetic Field Theory",
+  "Differential Equations",
+  "Vector Calculus"
+ ],
+ "649": [
+  "Complex Analysis",
+  "Complex Functions",
+  "Contour Integration",
+  "Laurent Series",
+  "Residue Theorem",
+  "Conformal Mapping"
+ ],
+ "650": [
+  "Numerical Series",
+  "Functional Series",
+  "Fourier Series",
+  "Contour Integration",
+  "Surface Integrals",
+  "Multivariable Calculus"
+ ],
+ "651": [
+  "MATLAB",
+  "Data Visualization",
+  "Graph Analysis",
+  "Surface Plotting",
+  "Numerical Methods"
+ ],
+ "652": [
+  "Electrostatics",
+  "Electric Fields",
+  "Magnetic Fields",
+  "Electromagnetic Theory",
+  "Maxwell's Equations",
+  "Classical Physics"
+ ],
+ "653": [
+  "Molecular Kinetic Theory",
+  "Thermodynamics",
+  "Statistical Physics",
+  "Phase Transitions",
+  "Thermodynamic Modeling",
+  "Equations of State"
+ ],
+ "654": [
+  "Object-Oriented Programming",
+  "Structured Programming",
+  "File I/O",
+  "String Manipulation",
+  "Memory Management",
+  "Data Structures"
+ ],
+ "655": [
+  "Differential Calculus",
+  "Integral Calculus",
+  "Mathematical Analysis",
+  "Multivariable Calculus",
+  "Sequences and Series",
+  "Differential Equations"
+ ],
+ "656": [
+  "Research Methodology",
+  "Data Collection Methods",
+  "Computer Simulation",
+  "Statistical Data Processing",
+  "Experimental Design"
+ ],
+ "657": [
+  "Classical Mechanics",
+  "Thermodynamics",
+  "Molecular Physics",
+  "Kinetic Theory",
+  "Newton's Laws",
+  "Mathematical Modeling"
+ ],
+ "658": [
+  "Python",
+  "Control Flow",
+  "Arrays",
+  "String Manipulation",
+  "File I/O",
+  "Object-Oriented Programming"
+ ],
+ "659": [
+  "VHDL",
+  "Verilog",
+  "Digital Circuit Design",
+  "Hardware Description Language",
+  "Analog-Digital Systems Modeling",
+  "FPGA Programming"
+ ],
+ "660": [],
+ "661": [
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Data Processing",
+  "Neural Networks",
+  "Classification Algorithms",
+  "Python"
+ ],
+ "662": [
+  "Digital Logic Design",
+  "Microprocessor Architecture",
+  "Assembly Language",
+  "Instruction Set Architecture",
+  "Memory Systems",
+  "Digital Circuits"
+ ],
+ "663": [
+  "IoT Architecture",
+  "Sensor Networks",
+  "Wireless Communication",
+  "Embedded Systems",
+  "Network Protocols",
+  "IoT Application Development"
+ ],
+ "664": [
+  "Modulation Techniques",
+  "Channel Coding",
+  "Error Correction",
+  "Mobile Networks",
+  "Wireless Communication",
+  "Signal Processing"
+ ],
+ "665": [
+  "Telecommunication Systems Modeling",
+  "Digital Communication Systems",
+  "Error Analysis",
+  "Signal Modeling",
+  "Simulation Methods",
+  "Network Performance Evaluation"
+ ],
+ "666": [
+  "Electrodynamics",
+  "Differential Equations",
+  "Microwave Engineering",
+  "COMSOL Multiphysics",
+  "Electromagnetic Simulation",
+  "Numerical Methods"
+ ],
+ "667": [
+  "MEMS/NEMS Modeling",
+  "Finite Element Analysis",
+  "Multiphysics Simulation",
+  "CAD Software",
+  "Nanoscale Physics",
+  "Parameter Analysis"
+ ],
+ "668": [
+  "LabVIEW",
+  "Data Acquisition",
+  "Experiment Automation",
+  "Signal Processing",
+  "Virtual Instrumentation",
+  "Data Visualization"
+ ],
+ "669": [
+  "Digital Signal Processing",
+  "Analog-to-Digital Conversion",
+  "Channel Coding",
+  "Modulation Techniques",
+  "Error Analysis",
+  "Communication Systems"
+ ],
+ "670": [
+  "Semiconductor Physics",
+  "Sensor Characterization",
+  "Resistive Gas Sensors",
+  "Nanosensors",
+  "Electronic Devices",
+  "Materials Science"
+ ],
+ "671": [
+  "Semiconductor Physics",
+  "Photodetector Design",
+  "Solar Cell Technology",
+  "Optoelectronics",
+  "Signal-to-Noise Ratio Analysis",
+  "Renewable Energy Systems"
+ ],
+ "672": [
+  "Thin Film Deposition",
+  "Crystal Growth Techniques",
+  "Nanotechnology",
+  "Physical Vapor Deposition",
+  "Chemical Vapor Deposition",
+  "Nanofabrication"
+ ],
+ "673": [
+  "Materials Science",
+  "Composite Materials",
+  "Manufacturing Processes",
+  "Structural Analysis",
+  "Material Properties Characterization",
+  "Engineering Design"
+ ],
+ "674": [
+  "Transistor Theory",
+  "Diode Characteristics",
+  "Microelectronics",
+  "Integrated Circuit Design",
+  "Semiconductor Devices",
+  "Electronic Circuit Analysis"
+ ],
+ "675": [
+  "Circuit Modeling",
+  "Integrated Circuit Design",
+  "Functional Modeling",
+  "Logic Simulation",
+  "Algorithm Design",
+  "Digital Circuit Analysis"
+ ],
+ "676": [
+  "Wireless Communication",
+  "Signal Modulation",
+  "Network Protocols",
+  "Radio Frequency (RF) Technology",
+  "Wireless Standards (WiFi/Bluetooth/5G)",
+  "Antenna Theory"
+ ],
+ "677": [
+  "Network Security",
+  "TCP/IP",
+  "Cryptography",
+  "Firewalls",
+  "Network Protocols",
+  "Information Security"
+ ],
+ "678": [
+  "Radio Communication Systems",
+  "Television Broadcasting",
+  "Signal Transmission",
+  "Broadcast Engineering",
+  "Modulation Techniques",
+  "Wireless Communication"
+ ],
+ "679": [
+  "Digital Modulation/Demodulation",
+  "Signal Encoding",
+  "Digital Communications",
+  "Receiver/Transmitter Design",
+  "Telecommunications Systems",
+  "Signal Processing"
+ ],
+ "680": [
+  "Wave Propagation",
+  "Signal Processing",
+  "Electromagnetic Waves",
+  "Linear Systems Theory",
+  "Fourier Analysis",
+  "Wave Mechanics"
+ ],
+ "681": [
+  "MATLAB",
+  "Numerical Methods",
+  "Computer Modeling",
+  "Signal Processing",
+  "Data Analysis",
+  "Radiophysics"
+ ],
+ "682": [
+  "Signal Detection",
+  "Noise and Interference Analysis",
+  "Radio Systems Design",
+  "Signal Processing",
+  "RF Systems",
+  "Block Diagram Design"
+ ],
+ "683": [
+  "Circuit Analysis",
+  "Semiconductor Devices",
+  "Electronic Components",
+  "Signal Processing",
+  "Microelectronics",
+  "Differential Equations"
+ ],
+ "684": [
+  "Digital Signal Processing",
+  "Discrete Fourier Transform",
+  "Fast Fourier Transform",
+  "Digital Filter Design",
+  "Signal Analysis",
+  "Discrete-Time Systems"
+ ],
+ "685": [
+  "Semiconductor Device Fabrication",
+  "Integrated Circuit Manufacturing",
+  "Semiconductor Materials",
+  "Photolithography",
+  "Thin Film Deposition",
+  "Doping Techniques"
+ ],
+ "686": [
+  "Band Theory",
+  "Semiconductor Physics",
+  "Carrier Statistics",
+  "Charge Carrier Dynamics",
+  "Diffusion and Drift",
+  "Quantum Mechanics"
+ ],
+ "687": [
+  "Electromagnetic Simulation",
+  "Finite Element Method (FEM)",
+  "Boundary Conditions",
+  "Numerical Methods",
+  "FDTD Method",
+  "CAE Software"
+ ],
+ "688": [
+  "Network Security",
+  "Cryptography",
+  "Telecommunications Security",
+  "Information Security",
+  "Secure Protocols",
+  "Cybersecurity"
+ ],
+ "689": [
+  "Digital Communications",
+  "Signal Modulation",
+  "Analog-to-Digital Conversion",
+  "Channel Coding",
+  "Error Detection and Correction",
+  "Telecommunications Systems"
+ ],
+ "690": [
+  "Network Protocols",
+  "Network Architecture",
+  "TCP/IP",
+  "LAN Design",
+  "IoT",
+  "Data Encoding"
+ ],
+ "691": [
+  "Semiconductor Device Physics",
+  "Vacuum Electronics",
+  "Gas-Discharge Devices",
+  "Electronic Circuit Components",
+  "Solid-State Physics",
+  "Optoelectronics"
+ ],
+ "692": [
+  "Differential Calculus",
+  "Integral Calculus",
+  "Limits and Continuity",
+  "Transcendental Functions",
+  "Polar Coordinates",
+  "Complex Numbers"
+ ],
+ "693": [
+  "Definite Integrals",
+  "Riemann Integration",
+  "Improper Integrals",
+  "Numerical Series",
+  "Taylor Series",
+  "Integral Applications"
+ ],
+ "694": [
+  "Multivariable Calculus",
+  "Partial Derivatives",
+  "Vector Mathematics",
+  "Multiple Integrals",
+  "Linear Algebra",
+  "Differential Equations"
+ ],
+ "695": [
+  "Real Analysis",
+  "Mathematical Proofs",
+  "Topology",
+  "Metric Spaces",
+  "Measure Theory",
+  "Calculus"
+ ],
+ "696": [
+  "Linear Algebra",
+  "Matrix Operations",
+  "Eigenvalues and Eigenvectors",
+  "Vector Spaces",
+  "Gaussian Elimination",
+  "Differential Equations"
+ ],
+ "697": [
+  "Ordinary Differential Equations",
+  "Laplace Transforms",
+  "Linear Algebra",
+  "Eigenvalue Problems",
+  "Dynamical Systems",
+  "Sturm-Liouville Theory"
+ ],
+ "698": [
+  "Probability Theory",
+  "Statistics",
+  "Random Variables",
+  "Markov Chains",
+  "Statistical Distributions",
+  "Linear Algebra"
+ ],
+ "699": [
+  "Descriptive Statistics",
+  "Statistical Inference",
+  "Maximum Likelihood Estimation",
+  "Bayesian Statistics",
+  "Linear Regression",
+  "Hypothesis Testing"
+ ],
+ "700": [
+  "Binary/Octal/Hexadecimal Number Systems",
+  "Logic Gates",
+  "Computer Architecture",
+  "Von Neumann Architecture",
+  "Operating Systems",
+  "Digital Hardware Fundamentals"
+ ],
+ "701": [
+  "Propositional Logic",
+  "Boolean Algebra",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Number Theory"
+ ],
+ "702": [
+  "Numerical Methods",
+  "Floating-Point Arithmetic",
+  "Interpolation and Approximation",
+  "Numerical Integration",
+  "Ordinary Differential Equations",
+  "Monte Carlo Methods"
+ ],
+ "703": [
+  "Object-Oriented Programming",
+  "Java",
+  "Classes and Data Abstraction",
+  "Inheritance and Polymorphism",
+  "UML",
+  "Data Structures"
+ ],
+ "704": [
+  "Data Structures",
+  "Object-Oriented Programming",
+  "Algorithms",
+  "Dynamic Memory Management",
+  "Searching and Sorting",
+  "Linked Lists"
+ ],
+ "705": [
+  "Formal Logic",
+  "Propositional Logic",
+  "Predicate Logic",
+  "Formal Verification",
+  "Mathematical Reasoning",
+  "Logic Programming"
+ ],
+ "706": [
+  "Assembly Language",
+  "Computer Architecture",
+  "Memory Addressing",
+  "Stack Operations",
+  "Linkers and Debuggers",
+  "Device Drivers"
+ ],
+ "707": [
+  "UI Design",
+  "User-Centered Design",
+  "Usability Testing",
+  "Prototyping",
+  "Human-Computer Interaction",
+  "UX Design"
+ ],
+ "708": [
+  "Graph Theory",
+  "Network Topology",
+  "Distributed Algorithms",
+  "Communication Complexity",
+  "Network Design",
+  "Combinatorics"
+ ],
+ "709": [
+  "Classical Mechanics",
+  "Kinematics",
+  "Newtonian Mechanics",
+  "Conservation Laws",
+  "Gravitational Physics",
+  "Differential Equations"
+ ],
+ "710": [
+  "Complex Analysis",
+  "Complex Integration",
+  "Taylor and Laurent Series",
+  "Conformal Mapping",
+  "Cauchy-Riemann Equations",
+  "Singularity Theory"
+ ],
+ "711": [
+  "Functional Analysis",
+  "Banach Spaces",
+  "Hilbert Spaces",
+  "Spectral Theory",
+  "Linear Operators",
+  "Real Analysis"
+ ],
+ "712": [
+  "Partial Differential Equations",
+  "Mathematical Modeling",
+  "Elliptic Equations",
+  "Hyperbolic Equations",
+  "Wave Propagation",
+  "Heat Transfer Modeling"
+ ],
+ "713": [
+  "Algorithms",
+  "Data Structures",
+  "Sorting Algorithms",
+  "Graph Algorithms",
+  "Dynamic Programming",
+  "Computational Complexity"
+ ],
+ "714": [
+  "Nonlinear Optimization",
+  "Conjugate Gradient Methods",
+  "Newton-Type Methods",
+  "Simulated Annealing",
+  "Approximation Algorithms",
+  "Game Theory"
+ ],
+ "715": [
+  "Cryptography",
+  "Symmetric Encryption",
+  "Public Key Infrastructure",
+  "Hash Functions",
+  "Network Security",
+  "Information Security"
+ ],
+ "716": [
+  "HTML/CSS",
+  "JavaScript",
+  "Full-Stack Development",
+  "Client-Server Architecture",
+  "Database Integration",
+  "REST API"
+ ],
+ "717": [
+  "OpenGL",
+  "GLSL",
+  "3D Geometry",
+  "Texture Mapping",
+  "Rendering Algorithms",
+  "Graphics Primitives"
+ ],
+ "718": [
+  "Unity",
+  "C#",
+  "Game AI",
+  "Animation Systems",
+  "UI Design",
+  "Physics Programming"
+ ],
+ "719": [
+  "Mobile Application Development",
+  "UI/UX Design",
+  "Application Testing & Debugging",
+  "Mobile Frameworks",
+  "Libraries Integration",
+  "App Monitoring & Analytics"
+ ],
+ "720": [
+  "OpenMP",
+  "MPI",
+  "Parallel Algorithms",
+  "Distributed Computing",
+  "HPC Numerical Libraries",
+  "Parallel Hardware Architectures"
+ ],
+ "721": [
+  "Cloud Computing",
+  "Distributed Systems",
+  "Virtualization",
+  "Cloud Architecture",
+  "Infrastructure as a Service",
+  "Cloud Security"
+ ],
+ "722": [
+  "Mathematical Modeling",
+  "Numerical Simulation",
+  "Differential Equations",
+  "Computational Methods",
+  "MATLAB",
+  "Statistical Analysis"
+ ],
+ "723": [
+  "Software Testing",
+  "Test Automation",
+  "Black-Box Testing",
+  "White-Box Testing",
+  "Agile/Scrum",
+  "CI/CD"
+ ],
+ "724": [
+  "Quantum Computing",
+  "Qubits and Quantum Gates",
+  "Quantum Fourier Transform",
+  "Shor's Algorithm",
+  "Quantum Information Processing",
+  "Computational Complexity"
+ ],
+ "725": [
+  "Network Security",
+  "Cryptography",
+  "Web Security",
+  "Mobile Security",
+  "Penetration Testing",
+  "Digital Forensics"
+ ],
+ "726": [
+  "Lexical Analysis",
+  "Parsing",
+  "Finite State Machines",
+  "Code Generation",
+  "Compiler Construction",
+  "Object-Oriented Programming"
+ ],
+ "727": [
+  "Dynamical Systems",
+  "Chaos Theory",
+  "Lyapunov Exponents",
+  "Nonlinear Systems",
+  "Symbolic Dynamics",
+  "Computational Mathematics"
+ ],
+ "728": [
+  "Sequence Alignment Algorithms",
+  "BLAST",
+  "Smith-Waterman Algorithm",
+  "Bioinformatics Databases",
+  "Molecular Biology",
+  "Dynamic Programming"
+ ],
+ "729": [
+  "Search Algorithms",
+  "Heuristic Search",
+  "Constraint Satisfaction Problems",
+  "Game Tree Search",
+  "Optimization",
+  "AI Planning"
+ ],
+ "730": [
+  "Machine Learning",
+  "Supervised Learning",
+  "Unsupervised Learning",
+  "Statistical Modeling",
+  "Data Analysis",
+  "Python"
+ ],
+ "731": [
+  "R",
+  "Data Analysis",
+  "Data Visualization",
+  "Exploratory Data Analysis",
+  "Data Wrangling",
+  "Statistical Modeling"
+ ],
+ "732": [
+  "Image Processing",
+  "Computer Vision",
+  "2D Discrete Fourier Transform",
+  "Signal Filtering",
+  "Edge Detection",
+  "Image Segmentation"
+ ],
+ "733": [],
+ "734": [],
+ "735": [],
+ "736": [],
+ "737": [
+  "Quantitative Analysis",
+  "Linear Algebra",
+  "Calculus",
+  "Probability",
+  "Statistics",
+  "Data Analysis"
+ ],
+ "738": [
+  "Programming Fundamentals",
+  "Computer Fundamentals",
+  "Problem Solving"
+ ],
+ "739": [
+  "Metallurgy",
+  "Semiconductor Manufacturing",
+  "Chemical Production",
+  "Construction Technology"
+ ],
+ "740": [
+  "Descriptive Statistics",
+  "Data Visualization",
+  "Data Analysis",
+  "Statistical Reasoning",
+  "Pattern Recognition"
+ ],
+ "741": [
+  "Cybersecurity",
+  "Network Security",
+  "Information Security",
+  "Risk Assessment"
+ ],
+ "742": [],
+ "743": [
+  "Molecular Biology",
+  "Cell Biology",
+  "Biochemistry",
+  "Molecular Genetics",
+  "Computational Biology",
+  "Biotechnology"
+ ],
+ "744": [],
+ "745": [
+  "Classical Mechanics",
+  "Thermodynamics",
+  "Wave Propagation",
+  "Optics",
+  "Electromagnetism",
+  "Physics"
+ ],
+ "746": [
+  "Design Thinking",
+  "Innovation Methodology",
+  "Problem Solving",
+  "Prototyping",
+  "Project Management"
+ ],
+ "747": [],
+ "748": [
+  "Set Theory",
+  "Calculus",
+  "Probability",
+  "Statistics",
+  "Game Theory",
+  "Differential Equations"
+ ],
+ "749": [
+  "Quantum Computing",
+  "Emerging Technologies",
+  "Engineering Design",
+  "Scientific Methodology",
+  "Interdisciplinary Technology Development",
+  "Organic Electronics"
+ ],
+ "750": [
+  "Nanomaterials Science",
+  "Nanotechnology",
+  "Materials Characterization",
+  "Quantum Mechanics",
+  "Surface Science",
+  "Nanofabrication"
+ ],
+ "751": [
+  "Digital Audio Workstations",
+  "Digital Signal Processing",
+  "Acoustics",
+  "Psychoacoustics",
+  "Analog Audio Technology",
+  "Audio Transducer Design"
+ ],
+ "752": [
+  "Data Mining",
+  "Descriptive Statistics",
+  "Statistical Inference",
+  "Predictive Modeling",
+  "Pattern Recognition",
+  "Data Analytics"
+ ],
+ "753": [],
+ "754": [],
+ "755": [],
+ "756": [
+  "Statistical Analysis",
+  "Data Analytics",
+  "Predictive Modeling",
+  "Sports Data Analysis",
+  "Performance Modeling",
+  "Python"
+ ],
+ "757": [
+  "Descriptive Statistics",
+  "Hypothesis Testing",
+  "Probability",
+  "Data Quality",
+  "Trend Analysis",
+  "Quantitative Analysis"
+ ],
+ "758": [],
+ "759": [
+  "Computer Systems",
+  "Cybersecurity",
+  "Digital Media",
+  "Cellular Technology",
+  "Nuclear Power",
+  "Solar Power"
+ ],
+ "760": [],
+ "761": [
+  "3D Modeling",
+  "CAD",
+  "Assembly Design",
+  "Mechanism Design",
+  "Simulation",
+  "Engineering Drawing"
+ ],
+ "762": [],
+ "763": [
+  "Logistic Regression",
+  "Nonlinear Regression",
+  "Bayesian Statistics",
+  "Nonparametric Statistics",
+  "Hypothesis Testing",
+  "Statistical Modeling"
+ ],
+ "764": [
+  "Data Structures",
+  "Algorithms",
+  "Functional Programming",
+  "Trees and Graphs",
+  "Python",
+  "Problem Solving"
+ ],
+ "765": [
+  "Data Visualization",
+  "Grammar of Graphics",
+  "Dashboard Development",
+  "Multivariate Data Analysis",
+  "Geospatial Data Visualization",
+  "Text Data Visualization"
+ ],
+ "766": [
+  "Python",
+  "R",
+  "Data Structures",
+  "Data Manipulation",
+  "Object-Oriented Programming",
+  "Numerical Computing"
+ ],
+ "767": [
+  "Chemical Bonding",
+  "Thermodynamics",
+  "Mechanics",
+  "Electromagnetism",
+  "Nuclear Physics",
+  "Fluid Dynamics"
+ ],
+ "768": [],
+ "769": [
+  "Distributed Database Design",
+  "Query Processing",
+  "Transaction Management",
+  "Concurrency Control",
+  "Graph Databases",
+  "NoSQL"
+ ],
+ "770": [
+  "Business Intelligence",
+  "ETL",
+  "Data Modeling",
+  "Dashboard Design",
+  "Data Warehousing",
+  "SQL"
+ ],
+ "771": [
+  "Time Series Analysis",
+  "ARIMA",
+  "GARCH Modeling",
+  "VAR Models",
+  "Regression Analysis",
+  "Statistical Forecasting"
+ ],
+ "772": [
+  "Geographic Information Systems",
+  "Spatial Data Analysis",
+  "Geostatistics",
+  "Spatial Machine Learning",
+  "Coordinate Systems",
+  "Spatial Optimization"
+ ],
+ "773": [
+  "Bioinformatics",
+  "Sequence Alignment Algorithms",
+  "Biological Databases",
+  "Computational Biology",
+  "Data Analysis",
+  "Genomics"
+ ],
+ "774": [
+  "Next-Generation Sequencing Analysis",
+  "Bioinformatics",
+  "RNA-seq",
+  "Genome-Wide Association Studies",
+  "Variant Calling",
+  "ChIP-seq"
+ ],
+ "775": [
+  "Graph Theory",
+  "Network Analysis",
+  "Biological Network Modeling",
+  "Protein-Protein Interaction Analysis",
+  "Rule-Based Modeling",
+  "Bioinformatics"
+ ],
+ "776": [
+  "Cheminformatics",
+  "Molecular Representation",
+  "Machine Learning",
+  "Chemical Data Analysis",
+  "Molecular Property Prediction",
+  "RDKit"
+ ],
+ "777": [
+  "Statistics",
+  "Biostatistics",
+  "Data Analysis",
+  "Probability",
+  "Experimental Design",
+  "Statistical Modeling"
+ ],
+ "778": [
+  "Causal Inference",
+  "Potential Outcomes Framework",
+  "Propensity Score Weighting",
+  "Causal Graphical Models",
+  "Python",
+  "R"
+ ],
+ "779": [
+  "Python",
+  "Spatial Statistics",
+  "Machine Learning",
+  "Network Theory",
+  "Spatial Optimization",
+  "Geographic Information Systems"
+ ],
+ "780": [
+  "Marketing Analytics",
+  "Customer Lifetime Value",
+  "Data Science",
+  "ROI Analysis",
+  "Predictive Modeling",
+  "Statistical Analysis"
+ ],
+ "781": [
+  "Machine Learning",
+  "Deep Neural Networks",
+  "Reinforcement Learning",
+  "Transformer Models",
+  "Diffusion Models",
+  "Protein Structure Prediction"
+ ],
+ "782": [
+  "Bayesian Inference",
+  "Probability Theory",
+  "Statistical Modeling",
+  "Data Analysis",
+  "Probabilistic Programming",
+  "Markov Chain Monte Carlo"
+ ],
+ "783": [
+  "Business Analytics",
+  "Data Strategy",
+  "KPI Development",
+  "Big Data",
+  "Analytics Frameworks",
+  "Data-Driven Decision Making"
+ ],
+ "784": [
+  "Product Lifecycle Management",
+  "MVP Development",
+  "KPI Metrics",
+  "Agile",
+  "Product Roadmapping",
+  "A/B Testing"
+ ],
+ "785": [
+  "MLOps",
+  "Machine Learning",
+  "Model Deployment",
+  "Model Monitoring",
+  "Machine Learning Pipeline Engineering",
+  "CI/CD for Machine Learning"
+ ],
+ "786": [
+  "Computer Vision",
+  "Image Processing",
+  "Deep Learning",
+  "Feature Extraction",
+  "Object Recognition",
+  "3D Scene Reconstruction"
+ ],
+ "787": [
+  "Reinforcement Learning",
+  "Machine Learning",
+  "Sequential Decision-Making",
+  "Markov Decision Processes",
+  "Q-Learning",
+  "Neural Networks"
+ ],
+ "788": [
+  "Natural Language Processing",
+  "Machine Learning",
+  "Text Classification",
+  "Named Entity Recognition",
+  "Topic Modeling",
+  "Machine Translation"
+ ],
+ "789": [
+  "Generative AI",
+  "Deep Learning",
+  "Neural Networks",
+  "Natural Language Processing",
+  "Computer Vision",
+  "Generative Adversarial Networks"
+ ],
+ "790": [
+  "Confocal Microscopy",
+  "Hyperspectral Imaging",
+  "Atomic Force Microscopy",
+  "Cell and Tissue Staining",
+  "Biomedical Image Analysis",
+  "Quantitative Image Processing"
+ ],
+ "791": [
+  "Financial Analysis",
+  "Data Analysis",
+  "Cost Accounting",
+  "Performance Metrics",
+  "Data Science",
+  "Business Intelligence"
+ ],
+ "792": [
+  "Data Science",
+  "Data Analysis",
+  "Machine Learning",
+  "Statistical Modeling",
+  "Data Visualization",
+  "Problem Solving"
+ ],
+ "793": [
+  "Data Collection",
+  "Data Processing",
+  "Data Science",
+  "Exploratory Data Analysis",
+  "Statistical Analysis",
+  "Machine Learning"
+ ],
+ "794": [
+  "Probability Theory",
+  "Statistical Estimation",
+  "Hypothesis Testing",
+  "Bayesian Statistics",
+  "Regression Analysis",
+  "Markov Chains"
+ ],
+ "795": [
+  "Imperative Programming",
+  "Data Structures",
+  "Algorithms",
+  "Recursion",
+  "Sorting and Searching",
+  "Pointers"
+ ],
+ "796": [
+  "Classical Mechanics",
+  "Kinematics",
+  "Newtonian Mechanics",
+  "Conservation Laws",
+  "Gravitational Motion",
+  "Differential Equations"
+ ],
+ "797": [
+  "Experimental Design",
+  "Data Collection",
+  "Measurement Techniques",
+  "Error Analysis",
+  "Classical Mechanics",
+  "Laboratory Instrumentation"
+ ],
+ "798": [
+  "Electromagnetics",
+  "Circuit Analysis",
+  "Wave Physics",
+  "Quantum Physics",
+  "Semiconductor Physics",
+  "Differential Equations"
+ ],
+ "799": [
+  "Circuit Analysis",
+  "Electromagnetic Theory",
+  "Experimental Physics",
+  "Data Measurement",
+  "Error Analysis",
+  "Scientific Instrumentation"
+ ],
+ "800": [],
+ "801": [],
+ "802": [
+  "Static Equilibrium Analysis",
+  "Free Body Diagrams",
+  "Structural Analysis",
+  "Force and Moment Calculations",
+  "Truss and Frame Analysis",
+  "Centroids and Center of Mass"
+ ],
+ "803": [
+  "Kinematics",
+  "Newtonian Mechanics",
+  "Equations of Motion",
+  "Work-Energy Methods",
+  "Impulse and Momentum",
+  "Coordinate Systems"
+ ],
+ "804": [
+  "Circuit Analysis",
+  "AC/DC Circuits",
+  "Op-Amp Circuits",
+  "Signal Processing",
+  "SPICE Simulation",
+  "Power Electronics"
+ ],
+ "805": [
+  "Circuit Analysis",
+  "Electrical Measurements",
+  "Oscilloscope Usage",
+  "Breadboard Prototyping",
+  "Voltage and Current Measurement",
+  "Signal Analysis"
+ ],
+ "806": [
+  "Aerodynamics",
+  "Computational Fluid Dynamics",
+  "Compressible Flow Theory",
+  "Potential Flow Theory",
+  "Gas Dynamics",
+  "Aerospace Propulsion"
+ ],
+ "807": [
+  "Water Treatment",
+  "Waste Management",
+  "Environmental Modeling",
+  "Fluid Mechanics",
+  "Thermodynamics",
+  "Pollution Control"
+ ],
+ "808": [],
+ "809": [
+  "Numerical Methods",
+  "Floating-Point Arithmetic",
+  "Linear Algebra",
+  "Function Approximation",
+  "Numerical Integration",
+  "Ordinary Differential Equations"
+ ],
+ "810": [
+  "Quantum Computing",
+  "Quantum Mechanics",
+  "Quantum Circuits",
+  "Quantum Fourier Transform",
+  "Shor's Algorithm",
+  "Quantum Information Theory"
+ ],
+ "811": [
+  "CAD Software",
+  "Geometric Modeling",
+  "3D Transformations",
+  "Data Structures",
+  "CAD/CAM Data Exchange",
+  "Mechanical Assembly Design"
+ ],
+ "812": [
+  "CAM Software",
+  "NC Programming",
+  "3D Scanning",
+  "3D Printing",
+  "Reverse Engineering",
+  "Design for Manufacturability"
+ ],
+ "813": [
+  "Thermodynamics",
+  "Energy Systems Analysis",
+  "Thermodynamic Cycles",
+  "Entropy",
+  "Engineering Thermodynamics",
+  "Heat Transfer"
+ ],
+ "814": [
+  "Conduction",
+  "Convection",
+  "Radiation Heat Transfer",
+  "Thermal Analysis",
+  "Heat Exchanger Design",
+  "Numerical Methods for Heat Transfer"
+ ],
+ "815": [
+  "Fluid Mechanics",
+  "Navier-Stokes Equations",
+  "Computational Fluid Dynamics",
+  "Differential Equations",
+  "Vector Calculus",
+  "Conservation Laws"
+ ],
+ "816": [
+  "Embedded Systems",
+  "Microcontroller Programming",
+  "C",
+  "Hardware-Software Interface",
+  "SPI Protocol",
+  "Sensor Integration"
+ ],
+ "817": [
+  "Fourier Analysis",
+  "Laplace Transforms",
+  "Z-Transform",
+  "Signal Processing",
+  "Linear Time-Invariant Systems",
+  "Differential Equations"
+ ],
+ "818": [
+  "C",
+  "Microcontroller Programming",
+  "Hardware Interfacing",
+  "Real-Time Operating Systems",
+  "Embedded Systems",
+  "Debugging"
+ ],
+ "819": [
+  "MATLAB",
+  "Signal Processing",
+  "Fourier Analysis",
+  "Feedback Control Systems",
+  "Laplace Transforms",
+  "Filter Design"
+ ],
+ "820": [
+  "Laplace Transforms",
+  "Transfer Functions",
+  "Feedback Control Systems",
+  "Stability Analysis",
+  "Frequency Response Analysis",
+  "Systems Modeling"
+ ],
+ "821": [
+  "MATLAB",
+  "Simulink",
+  "PID Control",
+  "Systems Modeling",
+  "Transfer Functions",
+  "Frequency Response Analysis"
+ ],
+ "822": [
+  "MATLAB",
+  "Simulink",
+  "PID Control",
+  "Frequency Response Analysis",
+  "State-Space Modeling",
+  "Control System Design"
+ ],
+ "823": [
+  "Mechatronics",
+  "Robotics",
+  "Sensor Integration",
+  "Actuator Control",
+  "Computer Interfacing",
+  "Embedded Systems"
+ ],
+ "824": [
+  "System Design",
+  "Systems Engineering Methodology",
+  "Requirements Engineering",
+  "System Architecture",
+  "Project Management",
+  "Risk Analysis"
+ ],
+ "825": [],
+ "826": [
+  "Renewable Energy Systems",
+  "Energy Conversion",
+  "Solar Power",
+  "Wind Energy",
+  "Thermodynamics",
+  "Power Systems Engineering"
+ ],
+ "827": [
+  "Orbital Mechanics",
+  "Differential Equations",
+  "Aerodynamics",
+  "Flight Dynamics",
+  "Newtonian Mechanics",
+  "Trajectory Analysis"
+ ],
+ "828": [],
+ "829": [],
+ "830": [
+  "Project Management",
+  "Systems Engineering",
+  "Technical Documentation",
+  "Engineering Design",
+  "Teamwork and Collaboration",
+  "Presentation Skills"
+ ],
+ "831": [],
+ "832": [
+  "Quantitative Analysis",
+  "Qualitative Research",
+  "Mixed Methods Research",
+  "Data Analysis",
+  "Critical Evaluation",
+  "Case Study Analysis"
+ ],
+ "833": [
+  "Statistical Analysis",
+  "Regression Analysis",
+  "Correlation Analysis",
+  "Data Visualization",
+  "Statistical Software",
+  "Quantitative Research"
+ ],
+ "834": [
+  "Cost-Benefit Analysis",
+  "Supply and Demand Analysis",
+  "Market Equilibrium",
+  "Externalities Analysis",
+  "Public Goods Theory",
+  "Environmental Policy Evaluation"
+ ],
+ "835": [],
+ "836": [],
+ "837": [
+  "Chemical Kinetics",
+  "Thermochemistry",
+  "Molecular Structure",
+  "Chemical Bonding",
+  "Data Analysis",
+  "Data Mining"
+ ],
+ "838": [
+  "Laboratory Techniques",
+  "Scientific Data Analysis",
+  "Chemical Safety",
+  "Experimental Design",
+  "Scientific Reporting"
+ ],
+ "839": [
+  "Plate Tectonics",
+  "Geological Mapping",
+  "Rock and Mineral Identification",
+  "Soil and Sediment Analysis",
+  "Geohazard Assessment",
+  "Engineering Geology"
+ ],
+ "840": [
+  "Rock and Mineral Identification",
+  "Geological Mapping",
+  "Environmental Sampling",
+  "Laboratory Analysis",
+  "Stratigraphic Analysis",
+  "Field Instrumentation"
+ ],
+ "841": [
+  "Energy Systems Design",
+  "Smart Grid Technology",
+  "Energy Storage",
+  "Distributed Energy Generation",
+  "Energy Efficiency",
+  "Renewable Energy"
+ ],
+ "842": [],
+ "843": [
+  "Geographic Information Systems",
+  "Remote Sensing",
+  "Spatial Analysis",
+  "Satellite Image Processing",
+  "Geospatial Data Visualization",
+  "Environmental Data Analysis"
+ ],
+ "844": [
+  "Environmental Monitoring",
+  "Data Quality",
+  "Instrument Calibration",
+  "Data Management",
+  "Water Quality Analysis",
+  "Soil Contamination Assessment"
+ ],
+ "845": [
+  "Systems Modeling",
+  "Environmental Modeling",
+  "Simulation",
+  "Model Validation",
+  "Complexity Theory"
+ ],
+ "846": [],
+ "847": [],
+ "848": [],
+ "849": [],
+ "850": [],
+ "851": [],
+ "852": [
+  "Risk Assessment",
+  "Disaster Risk Reduction",
+  "Emergency Management",
+  "Hazard Mitigation Planning",
+  "Resilience Frameworks",
+  "Crisis Decision-Making"
+ ],
+ "853": [
+  "Environmental Impact Assessment",
+  "Strategic Environmental Assessment",
+  "Life Cycle Assessment (LCA)",
+  "Sustainability Assessment",
+  "Environmental Policy Analysis"
+ ],
+ "854": [
+  "Probability Theory",
+  "Statistical Inference",
+  "Hypothesis Testing",
+  "Regression Analysis",
+  "Markov Chains",
+  "Bayesian Statistics"
+ ],
+ "855": [
+  "Linear Programming",
+  "Mixed-Integer Programming",
+  "Optimization",
+  "Network Models",
+  "Game Theory",
+  "Decision Analysis"
+ ],
+ "856": [
+  "Systems Analysis",
+  "System Design",
+  "Data Modeling",
+  "Database Design",
+  "Data Processing",
+  "Requirements Analysis"
+ ],
+ "857": [
+  "Statistical Process Control",
+  "Quality Engineering",
+  "Total Quality Management",
+  "Statistical Analysis",
+  "Process Improvement",
+  "Six Sigma"
+ ],
+ "858": [
+  "Data Mining",
+  "Classification Algorithms",
+  "Linear Regression",
+  "Logistic Regression",
+  "Cluster Analysis",
+  "Anomaly Detection"
+ ],
+ "859": [
+  "SQL",
+  "Business Intelligence",
+  "Data Visualization",
+  "Data Modeling",
+  "LOD Expressions",
+  "Dashboard Design"
+ ],
+ "860": [
+  "ANOVA",
+  "Factorial Design",
+  "Regression Modeling",
+  "Statistical Experimental Design",
+  "Nonparametric Statistics",
+  "Randomized Block Design"
+ ],
+ "861": [
+  "Integer Programming",
+  "Dynamic Programming",
+  "Markov Chains",
+  "Queueing Theory",
+  "Network Analysis",
+  "Stochastic Optimization"
+ ],
+ "862": [
+  "Probability Theory",
+  "Statistical Inference",
+  "Propagation of Error",
+  "Model Fitting",
+  "Bootstrap Methods",
+  "Confidence Intervals"
+ ],
+ "863": [
+  "Decision Trees",
+  "Bayesian Decision Theory",
+  "Utility Theory",
+  "Multiple-Attribute Decision Analysis",
+  "Game Theory",
+  "Operations Research"
+ ],
+ "864": [
+  "Discrete Event Simulation",
+  "Random Variable Generation",
+  "Variance Reduction Techniques",
+  "Statistical Analysis",
+  "Probability Distributions",
+  "Simulation Programming"
+ ],
+ "865": [
+  "Productivity Measurement",
+  "Forecasting",
+  "Project Planning",
+  "Inventory Management",
+  "Operations Scheduling",
+  "Just-In-Time Production"
+ ],
+ "866": [
+  "Time Value of Money",
+  "Cash Flow Analysis",
+  "Net Present Value",
+  "Internal Rate of Return",
+  "Depreciation Analysis",
+  "Benefit-Cost Analysis"
+ ],
+ "867": [],
+ "868": [],
+ "869": [
+  "Information Systems Design",
+  "Service Design",
+  "Data Architecture",
+  "Innovation Methodology",
+  "UX Design",
+  "Systems Thinking"
+ ],
+ "870": [],
+ "871": [],
+ "872": [
+  "Renewable Energy Systems",
+  "Solar Energy Technology",
+  "Wind Energy",
+  "Energy Conversion",
+  "Environmental Impact Assessment",
+  "Thermodynamics"
+ ],
+ "873": [
+  "Energy Systems Analysis",
+  "Carbon Footprint Analysis",
+  "Sustainability Metrics",
+  "Water Resource Management",
+  "Waste Management",
+  "Green Building Standards"
+ ],
+ "874": [
+  "Life Cycle Assessment (LCA)",
+  "Cost-Benefit Analysis",
+  "Net Present Value",
+  "Input-Output Analysis",
+  "Carbon Footprint Analysis",
+  "Financial Modeling"
+ ],
+ "875": [
+  "CAD Software",
+  "Geometric Modeling",
+  "3D Transformations",
+  "Data Structures",
+  "CAD/CAM Integration",
+  "Mechanical Assembly Design"
+ ],
+ "876": [
+  "CAM Software",
+  "NC Programming",
+  "Manufacturing Processes",
+  "Design for Manufacturability",
+  "Process Engineering",
+  "Group Technology"
+ ],
+ "877": [
+  "CAD/CAM",
+  "Solid Modeling",
+  "Finite Element Analysis",
+  "Design Optimization",
+  "CNC Part Programming",
+  "Mold Design"
+ ],
+ "878": [
+  "Portfolio Optimization",
+  "Risk Management",
+  "Interest Theory",
+  "Financial Mathematics",
+  "Statistical Analysis",
+  "Quantitative Modeling"
+ ],
+ "879": [
+  "Operations Management",
+  "Operations Research",
+  "Statistical Analysis",
+  "Quality Management",
+  "Process Improvement",
+  "Project Management"
+ ],
+ "880": [],
+ "881": [
+  "Data Analytics",
+  "Decision Modeling",
+  "Statistical Modeling",
+  "Process Improvement",
+  "Systems Management",
+  "Operations Research"
+ ],
+ "882": [
+  "Literature Review",
+  "Research Methodology",
+  "Technical Writing",
+  "Project Management"
+ ],
+ "883": [],
+ "884": [],
+ "885": [
+  "Functional Analysis",
+  "Banach Spaces",
+  "Hilbert Spaces",
+  "Spectral Theory",
+  "Linear Operator Theory",
+  "Normed Spaces"
+ ],
+ "886": [
+  "Finite Automata",
+  "Pushdown Automata",
+  "Turing Machines",
+  "Formal Languages",
+  "Computability Theory",
+  "Automata Theory"
+ ],
+ "887": [
+  "Data Structures",
+  "Sorting Algorithms",
+  "Graph Algorithms",
+  "Divide and Conquer",
+  "Dynamic Programming",
+  "Computational Complexity"
+ ],
+ "888": [
+  "UML",
+  "Object-Oriented Design",
+  "Design Patterns",
+  "Unified Process",
+  "Software Architecture",
+  "CASE Tools"
+ ],
+ "889": [
+  "Algorithm Design",
+  "Dynamic Programming",
+  "Graph Algorithms",
+  "Network Flow",
+  "NP-Completeness",
+  "Approximation Algorithms"
+ ],
+ "890": [
+  "Graph Theory",
+  "Network Topology",
+  "Algorithm Design",
+  "Distributed Computing",
+  "Combinatorics",
+  "Network Optimization"
+ ],
+ "891": [
+  "Cryptography",
+  "Symmetric Encryption",
+  "Public Key Cryptography",
+  "Hash Functions",
+  "Network Security Protocols",
+  "Cryptographic Algorithm Implementation"
+ ],
+ "892": [
+  "Public Key Cryptography",
+  "Homomorphic Encryption",
+  "White-Box Cryptography",
+  "Identity-Based Encryption",
+  "Secure Multi-Party Computation",
+  "Searchable Encryption"
+ ],
+ "893": [
+  "OpenGL",
+  "GLSL",
+  "3D Geometry and Transformations",
+  "Texture Mapping",
+  "Rendering Pipeline",
+  "Computer Graphics"
+ ],
+ "894": [
+  "Computability Theory",
+  "Complexity Theory",
+  "Formal Languages",
+  "Automata Theory",
+  "Algorithm Analysis",
+  "Mathematical Proofs"
+ ],
+ "895": [
+  "Computer Vision",
+  "Image Processing",
+  "Pattern Recognition",
+  "Camera Calibration",
+  "Edge Detection",
+  "Deep Learning"
+ ],
+ "896": [
+  "Software Development Life Cycle (SDLC)",
+  "Requirements Analysis",
+  "Object-Oriented Design",
+  "Systems Engineering",
+  "Software Documentation",
+  "UML"
+ ],
+ "897": [
+  "Object-Oriented Programming",
+  "UML",
+  "Design Patterns",
+  "Agile",
+  "Software Architecture",
+  "Java"
+ ],
+ "898": [
+  "Web Development",
+  "Geographic Information Systems",
+  "Cartography",
+  "Client-Server Architecture",
+  "JavaScript",
+  "Maps API Integration"
+ ],
+ "899": [
+  "SQL",
+  "Relational Algebra",
+  "Entity-Relationship Modeling",
+  "Database Design",
+  "Query Optimization",
+  "Transaction Management"
+ ],
+ "900": [
+  "OpenMP",
+  "MPI",
+  "Parallel Algorithms",
+  "Distributed Computing",
+  "HPC Numerical Libraries",
+  "Parallel Hardware Architectures"
+ ],
+ "901": [
+  "UI Design",
+  "User-Centered Design",
+  "Usability Testing",
+  "Prototyping",
+  "Human-Computer Interaction",
+  "Visual Development Environments"
+ ],
+ "902": [
+  "Data Warehousing",
+  "ETL Pipelines",
+  "Dimensional Modeling",
+  "Business Intelligence",
+  "SQL",
+  "Data Visualization"
+ ],
+ "903": [
+  "Operating Systems",
+  "Unix/Linux",
+  "Windows",
+  "Systems Programming",
+  "Process Management",
+  "Memory Management"
+ ],
+ "904": [
+  "Linux System Administration",
+  "User Management",
+  "OS Installation and Configuration",
+  "Network Administration",
+  "Security Management",
+  "Performance Tuning"
+ ],
+ "905": [
+  "TCP/IP",
+  "Socket Programming",
+  "Client-Server Architecture",
+  "Concurrent Programming",
+  "Multicast Networking",
+  "Peer-to-Peer Systems"
+ ],
+ "906": [
+  "Probability Theory",
+  "Stochastic Processes",
+  "Markov Chains",
+  "Queueing Theory",
+  "Laplace Transforms",
+  "Z-Transform"
+ ],
+ "907": [
+  "VLSI Design",
+  "EDA Tools",
+  "System on Chip (SoC) Architecture",
+  "Digital Circuit Design",
+  "ASIC Design",
+  "RTL Design"
+ ],
+ "908": [
+  "Lexical Analysis",
+  "Parsing",
+  "Finite State Machines",
+  "Code Generation",
+  "Compiler Design",
+  "Object-Oriented Programming"
+ ],
+ "909": [
+  "Network Security",
+  "Cryptography",
+  "Web Security",
+  "Mobile Security",
+  "Penetration Testing",
+  "Digital Forensics"
+ ],
+ "910": [
+  "Distributed Systems",
+  "Cloud Computing",
+  "Fault Tolerance",
+  "Distributed Synchronization",
+  "Consistency Models",
+  "Cluster Computing"
+ ],
+ "911": [
+  "Quantum Computing",
+  "Qubits and Quantum Gates",
+  "Quantum Fourier Transform",
+  "Shor's Algorithm",
+  "Quantum Algorithms",
+  "Number Theory"
+ ],
+ "912": [
+  "Machine Learning",
+  "Supervised Learning",
+  "Unsupervised Learning",
+  "Data Analysis",
+  "Statistical Modeling",
+  "Python"
+ ],
+ "913": [
+  "Cryptography",
+  "Blockchain Development",
+  "Hash Functions",
+  "Public Key Encryption",
+  "Digital Signatures",
+  "Consensus Algorithms"
+ ],
+ "914": [
+  "R",
+  "Data Wrangling",
+  "Exploratory Data Analysis",
+  "Data Visualization",
+  "Statistical Modeling",
+  "Data Acquisition"
+ ],
+ "915": [
+  "D3.js",
+  "Data Visualization",
+  "JavaScript",
+  "Data Analysis",
+  "Visual Design",
+  "Big Data"
+ ],
+ "916": [
+  "Parallel Computing",
+  "Multithreading",
+  "MPI",
+  "OpenMP",
+  "Performance Optimization",
+  "C/C++"
+ ],
+ "917": [
+  "Sequence Alignment Algorithms",
+  "BLAST",
+  "Smith-Waterman Algorithm",
+  "Bioinformatics Databases",
+  "Dynamic Programming",
+  "Molecular Biology"
+ ],
+ "918": [
+  "Knowledge-Based Systems",
+  "Intelligent Agents",
+  "Planning Algorithms",
+  "Probabilistic Reasoning",
+  "Decision Theory",
+  "Logic Programming"
+ ],
+ "919": [
+  "Knowledge Representation",
+  "Ontology Design",
+  "Logic Programming",
+  "Semantic Reasoning",
+  "Uncertainty Modeling",
+  "Inference Systems"
+ ],
+ "920": [
+  "Project Planning",
+  "Cost Estimation",
+  "Risk Assessment",
+  "Quality Management",
+  "Resource Management",
+  "Software Development Methodologies"
+ ],
+ "921": [
+  "Agile",
+  "Product Engineering",
+  "Strategic Thinking",
+  "Team Management"
+ ],
+ "922": [],
+ "923": [
+  "Numerical Linear Algebra",
+  "Iterative Methods",
+  "Numerical Optimization",
+  "Interpolation and Approximation",
+  "Numerical Integration",
+  "Numerical ODE Solvers"
+ ],
+ "924": [
+  "Linear Regression",
+  "Nonlinear Regression",
+  "Generalized Linear Models",
+  "Bayesian Inference",
+  "Hypothesis Testing",
+  "Nonparametric Statistics"
+ ],
+ "925": [
+  "Time Series Analysis",
+  "ARMA Models",
+  "Kalman Filter",
+  "Spectral Analysis",
+  "Fourier Transform",
+  "Maximum Likelihood Estimation"
+ ],
+ "926": [
+  "Markov Chains",
+  "Hidden Markov Models",
+  "Markov Chain Monte Carlo",
+  "Conditional Probability",
+  "Poisson Processes",
+  "Queueing Theory"
+ ],
+ "927": [
+  "Game Theory",
+  "Mathematical Modeling",
+  "Nash Equilibrium",
+  "Optimization",
+  "Probability Theory",
+  "Decision Theory"
+ ],
+ "928": [
+  "Computational Complexity",
+  "NP-Completeness",
+  "Algorithm Design",
+  "Graph Algorithms",
+  "Combinatorial Optimization",
+  "Reductions"
+ ],
+ "929": [
+  "Design Patterns",
+  "Generic Programming",
+  "C++ STL",
+  "Functional Programming",
+  "Logic Programming",
+  "C++"
+ ],
+ "930": [
+  "Image Processing",
+  "2D Discrete Fourier Transform",
+  "Image Filtering",
+  "Edge Detection",
+  "Image Segmentation",
+  "Image Compression"
+ ],
+ "931": [
+  "Data Visualization",
+  "Exploratory Data Analysis",
+  "Data Cleaning",
+  "Dashboard Development",
+  "Statistical Analysis",
+  "D3.js"
+ ],
+ "932": [
+  "Reinforcement Learning",
+  "Machine Learning",
+  "Markov Decision Processes",
+  "Dynamic Programming",
+  "Q-Learning",
+  "Python"
+ ],
+ "933": [
+  "Generative AI",
+  "Deep Learning",
+  "Neural Networks",
+  "Natural Language Processing",
+  "Computer Vision",
+  "Model Optimization"
+ ],
+ "934": [],
+ "935": [],
+ "936": [
+  "Distributed Algorithms",
+  "NP-Completeness",
+  "Approximation Algorithms",
+  "Network Models",
+  "Computational Complexity",
+  "Graph Theory"
+ ],
+ "937": [
+  "Research Methodology",
+  "Technical Writing",
+  "Literature Review"
+ ],
+ "938": [],
+ "939": [
+  "Deep Learning",
+  "Neural Networks",
+  "Convolutional Neural Networks",
+  "Recurrent Neural Networks",
+  "Generative Adversarial Networks",
+  "Transfer Learning"
+ ],
+ "940": [
+  "Generative AI",
+  "Deep Learning",
+  "Natural Language Processing",
+  "Computer Vision",
+  "Neural Networks",
+  "Prompt Engineering"
+ ],
+ "941": [
+  "Geographic Information Systems",
+  "Remote Sensing",
+  "Spatial Data Analysis",
+  "GPS Technology",
+  "Geospatial Data Visualization",
+  "Coordinate Systems"
+ ],
+ "942": [
+  "Geographic Information Systems",
+  "Spatial Data Analysis",
+  "Map Projections",
+  "Remote Sensing",
+  "Cartographic Design",
+  "Geospatial Data Visualization"
+ ],
+ "943": [
+  "Geographic Information Systems",
+  "Cartography",
+  "Spatial Data Analysis",
+  "Geographic Data Visualization",
+  "Map Projections",
+  "Remote Sensing"
+ ],
+ "944": [
+  "GNSS",
+  "Satellite Navigation",
+  "Signal Processing",
+  "Positioning Algorithms",
+  "Geodesy",
+  "Data Analysis"
+ ],
+ "945": [
+  "Geographic Information Systems",
+  "Spatial Data Management",
+  "Geodatabases",
+  "Coordinate Reference Systems",
+  "Spatial Data Infrastructure (SDI)",
+  "Remote Sensing"
+ ],
+ "946": [
+  "Python",
+  "Geographic Information Systems",
+  "Spatial Data Analysis",
+  "ArcPy",
+  "Geospatial Algorithms",
+  "Automation Scripting"
+ ],
+ "947": [],
+ "948": [
+  "Geographic Information Systems",
+  "Building Information Modeling (BIM)",
+  "Spatial Data Analysis",
+  "BIM-GIS Integration",
+  "3D Modeling",
+  "Geospatial Databases"
+ ],
+ "949": [
+  "Remote Sensing",
+  "Digital Image Processing",
+  "Geospatial Analysis",
+  "Image Classification",
+  "Geographic Information Systems",
+  "Spectral Analysis"
+ ],
+ "950": [
+  "Signal Processing",
+  "Radar Systems",
+  "Image Processing",
+  "Remote Sensing",
+  "Fourier Transform",
+  "MATLAB"
+ ],
+ "951": [
+  "Spatial Statistics",
+  "Kriging",
+  "Variogram Analysis",
+  "Stochastic Modeling",
+  "R",
+  "Geographic Information Systems"
+ ],
+ "952": [
+  "Geographic Information Systems",
+  "Web Mapping",
+  "JavaScript",
+  "REST API",
+  "Spatial Data Analysis",
+  "ArcGIS/Leaflet"
+ ],
+ "953": [],
+ "954": [],
+ "955": [],
+ "956": [],
+ "957": [
+  "Geometry",
+  "3D Mathematics",
+  "Problem Solving",
+  "Computational Geometry",
+  "Trigonometry",
+  "Algorithms"
+ ],
+ "958": [
+  "Network Architecture",
+  "TCP/IP",
+  "Network Protocols",
+  "Routing Algorithms",
+  "Network Topology",
+  "OSI Model"
+ ],
+ "959": [
+  "Cryptography",
+  "Network Security",
+  "Access Control",
+  "Authentication Protocols",
+  "Data Encryption",
+  "Cybersecurity"
+ ],
+ "960": [
+  "Reliability Engineering",
+  "Fault Tree Analysis",
+  "Failure Mode and Effects Analysis (FMEA)",
+  "Probability Theory",
+  "Systems Modeling",
+  "Statistical Analysis"
+ ],
+ "961": [
+  "Systems Analysis",
+  "Requirements Engineering",
+  "Process Modeling",
+  "UML",
+  "Feasibility Analysis",
+  "System Design"
+ ],
+ "962": [
+  "Algorithms",
+  "Object-Oriented Programming",
+  "Data Structures",
+  "Algorithm Analysis",
+  "Software Design",
+  "Complexity Theory"
+ ],
+ "963": [
+  "Parallel Programming",
+  "MPI",
+  "OpenMP",
+  "Performance Optimization",
+  "Distributed Computing",
+  "CPU/GPU Architecture"
+ ],
+ "964": [],
+ "965": [
+  "Microcontroller Architecture",
+  "Embedded C",
+  "Assembly Language",
+  "GPIO Programming",
+  "Interrupt Handling",
+  "Embedded Systems"
+ ],
+ "966": [],
+ "967": [
+  "Fault Tolerance",
+  "Software Testing",
+  "Reliability Modeling",
+  "Failure Analysis",
+  "Probability Theory",
+  "Software Quality Assurance"
+ ],
+ "968": [
+  "MATLAB",
+  "Numerical Methods",
+  "Mathematical Modeling",
+  "Differential Equations",
+  "Simulation",
+  "Applied Mathematics"
+ ],
+ "969": [
+  "Hadoop",
+  "Apache Spark",
+  "Distributed Computing",
+  "MapReduce",
+  "NoSQL",
+  "Data Pipelines"
+ ],
+ "970": [
+  "Python",
+  "Machine Learning",
+  "TensorFlow",
+  "Neural Networks",
+  "Data Preprocessing",
+  "AI Frameworks"
+ ],
+ "971": [],
+ "972": [
+  "CAD Software",
+  "Design Automation",
+  "Parametric Modeling",
+  "Scripting",
+  "Engineering Design Methodology",
+  "Algorithms"
+ ],
+ "973": [
+  "Market Design",
+  "Auction Theory",
+  "Game Theory",
+  "Mechanism Design",
+  "Pricing Strategies",
+  "Market Simulation"
+ ],
+ "974": [],
+ "975": [],
+ "976": [],
+ "977": [],
+ "978": [
+  "Calculus",
+  "Linear Algebra",
+  "Differential Equations",
+  "Mathematical Analysis",
+  "Probability Theory",
+  "Analytic Geometry"
+ ],
+ "979": [
+  "Classical Mechanics",
+  "Thermodynamics",
+  "Electromagnetism",
+  "Wave Mechanics",
+  "Calculus",
+  "Newton's Laws"
+ ],
+ "980": [
+  "Programming Fundamentals",
+  "Algorithms",
+  "Data Structures",
+  "Computer Architecture",
+  "Operating Systems",
+  "Information Systems"
+ ],
+ "981": [],
+ "982": [
+  "Orthographic Projection",
+  "3D Visualization",
+  "Technical Drawing",
+  "Geometric Constructions",
+  "Spatial Reasoning",
+  "Engineering Graphics"
+ ],
+ "983": [],
+ "984": [],
+ "985": [],
+ "986": [],
+ "987": [],
+ "988": [],
+ "989": [
+  "Calculus",
+  "Linear Algebra",
+  "Differential Equations",
+  "Mathematical Analysis",
+  "Analytic Geometry",
+  "Probability Theory"
+ ],
+ "990": [
+  "Classical Mechanics",
+  "Thermodynamics",
+  "Electromagnetism",
+  "Wave Mechanics",
+  "Newton's Laws",
+  "Calculus-Based Problem Solving"
+ ],
+ "991": [
+  "Programming Fundamentals",
+  "Algorithms",
+  "Data Structures",
+  "Computer Systems",
+  "Problem Solving",
+  "Information Theory"
+ ],
+ "992": [
+  "Linear Algebra",
+  "Discrete Mathematics",
+  "Calculus",
+  "Logic",
+  "Combinatorics",
+  "Probability Theory"
+ ],
+ "993": [
+  "Computer Hardware",
+  "I/O Interfaces",
+  "USB Protocol",
+  "Serial Communication",
+  "Device Drivers",
+  "Port Configuration"
+ ],
+ "994": [],
+ "995": [
+  "Calculus",
+  "Linear Algebra",
+  "Differential Equations",
+  "Mathematical Analysis",
+  "Analytic Geometry",
+  "Sequences and Series"
+ ],
+ "996": [
+  "Crystal Structure Analysis",
+  "Material Properties",
+  "Thermodynamics",
+  "Phase Diagrams",
+  "Mechanical Testing",
+  "Semiconductor Materials"
+ ],
+ "997": [
+  "Statics",
+  "Dynamics",
+  "Free Body Diagrams",
+  "Newton's Laws",
+  "Kinematics",
+  "Structural Analysis"
+ ],
+ "998": [
+  "Circuit Analysis",
+  "Ohm's Law",
+  "Kirchhoff's Laws",
+  "AC/DC Circuits",
+  "Electronic Components",
+  "Signal Theory"
+ ],
+ "999": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Design Patterns"
+ ],
+ "1000": [
+  "Computer Architecture",
+  "Operating Systems",
+  "Network Protocols",
+  "TCP/IP",
+  "Telecommunications",
+  "Network Security"
+ ],
+ "1001": [
+  "Computer Hardware",
+  "I/O Interfaces",
+  "USB Protocol",
+  "Serial Communication",
+  "Device Drivers",
+  "Computer Architecture"
+ ],
+ "1002": [
+  "Logic and Proofs",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Number Theory",
+  "Boolean Algebra"
+ ],
+ "1003": [
+  "Circuit Analysis",
+  "Semiconductor Physics",
+  "MOSFET",
+  "Analog Electronics",
+  "Electronic Circuit Design",
+  "Signal Amplification"
+ ],
+ "1004": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Abstraction"
+ ],
+ "1005": [
+  "Probability Theory",
+  "Stochastic Processes",
+  "Markov Chains",
+  "Statistical Analysis",
+  "Signal Processing",
+  "Time Series Analysis"
+ ],
+ "1006": [
+  "C",
+  "Microcontrollers",
+  "Real-Time Operating Systems",
+  "Hardware-Software Interface",
+  "Assembly Language",
+  "Memory Management"
+ ],
+ "1007": [
+  "Cryptography",
+  "Network Security",
+  "Access Control",
+  "Information Security",
+  "Cybersecurity",
+  "Data Protection"
+ ],
+ "1008": [
+  "SQL",
+  "Database Design",
+  "Entity-Relationship Modeling",
+  "Normalization",
+  "Relational Databases",
+  "Database Management"
+ ],
+ "1009": [
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "CPU Scheduling",
+  "System Calls"
+ ],
+ "1010": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Design Patterns"
+ ],
+ "1011": [],
+ "1012": [
+  "Computer Architecture",
+  "Operating Systems",
+  "Network Protocols",
+  "TCP/IP",
+  "Telecommunications",
+  "Network Security"
+ ],
+ "1013": [
+  "Circuit Analysis",
+  "Ohm's Law",
+  "Electronic Components",
+  "DC/AC Circuits",
+  "Semiconductor Devices",
+  "Signal Theory"
+ ],
+ "1014": [
+  "SQL",
+  "Database Design",
+  "Entity-Relationship Modeling",
+  "Normalization",
+  "Relational Algebra",
+  "Database Management"
+ ],
+ "1015": [],
+ "1016": [
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "CPU Scheduling",
+  "Inter-Process Communication"
+ ],
+ "1017": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Design Patterns"
+ ],
+ "1018": [
+  "C",
+  "Memory Management",
+  "Operating Systems",
+  "System Calls",
+  "Process Management",
+  "File Systems"
+ ],
+ "1019": [
+  "IoT Architecture",
+  "Embedded Systems",
+  "Wireless Communication Protocols",
+  "Sensor Integration",
+  "MQTT",
+  "Edge Computing"
+ ],
+ "1020": [
+  "Data Structures",
+  "Arrays",
+  "Linked Lists",
+  "Trees",
+  "Sorting Algorithms",
+  "Algorithm Analysis"
+ ],
+ "1021": [],
+ "1022": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Design Patterns"
+ ],
+ "1023": [
+  "Python",
+  "SQL",
+  "Database Design",
+  "Data Analysis",
+  "Database Querying",
+  "Pandas"
+ ],
+ "1024": [
+  "Machine Learning",
+  "Search Algorithms",
+  "Knowledge Representation",
+  "Logic and Reasoning",
+  "Neural Networks",
+  "Probability and Statistics"
+ ],
+ "1025": [
+  "Measurement Theory",
+  "Error Analysis",
+  "Calibration",
+  "Statistical Data Processing",
+  "Measurement Uncertainty",
+  "Standardization"
+ ],
+ "1026": [
+  "PCB Design",
+  "Electronic Circuit Assembly",
+  "Soldering Techniques",
+  "Electronic Components",
+  "Hardware Prototyping",
+  "Schematic Reading"
+ ],
+ "1027": [
+  "Object-Oriented Programming",
+  "Design Patterns",
+  "Software Development Methodologies",
+  "Version Control",
+  "Debugging",
+  "UML"
+ ],
+ "1028": [],
+ "1029": [],
+ "1030": [
+  "Python",
+  "SQL",
+  "Database Design",
+  "Data Analysis",
+  "Database Querying",
+  "Pandas"
+ ],
+ "1031": [
+  "Software Testing",
+  "Test Case Design",
+  "Debugging",
+  "Unit Testing",
+  "Test Automation",
+  "Quality Assurance"
+ ],
+ "1032": [],
+ "1033": [],
+ "1034": [],
+ "1035": [],
+ "1036": [
+  "Calculus",
+  "Linear Algebra",
+  "Differential Equations",
+  "Mathematical Analysis",
+  "Probability Theory",
+  "Analytic Geometry"
+ ],
+ "1037": [
+  "Classical Mechanics",
+  "Thermodynamics",
+  "Electromagnetism",
+  "Wave Optics",
+  "Kinematics",
+  "Newton's Laws"
+ ],
+ "1038": [
+  "Computer Science Fundamentals",
+  "Information Systems",
+  "Data Management",
+  "Networking",
+  "Operating Systems",
+  "Software Development"
+ ],
+ "1039": [],
+ "1040": [],
+ "1041": [],
+ "1042": [],
+ "1043": [],
+ "1044": [],
+ "1045": [],
+ "1046": [
+  "Calculus",
+  "Linear Algebra",
+  "Differential Equations",
+  "Mathematical Analysis",
+  "Probability Theory",
+  "Analytic Geometry"
+ ],
+ "1047": [
+  "Classical Mechanics",
+  "Thermodynamics",
+  "Electromagnetism",
+  "Wave Theory",
+  "Calculus",
+  "Newtonian Mechanics"
+ ],
+ "1048": [
+  "Computer Architecture",
+  "Operating Systems",
+  "Networking",
+  "Database Management",
+  "Algorithms",
+  "Information Systems"
+ ],
+ "1049": [],
+ "1050": [
+  "Discrete Mathematics",
+  "Logic",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Proof Techniques"
+ ],
+ "1051": [],
+ "1052": [
+  "Calculus",
+  "Linear Algebra",
+  "Differential Equations",
+  "Mathematical Analysis",
+  "Probability Theory",
+  "Analytic Geometry"
+ ],
+ "1053": [
+  "Classical Mechanics",
+  "Thermodynamics",
+  "Electromagnetism",
+  "Wave Mechanics",
+  "Mathematical Modeling",
+  "Calculus"
+ ],
+ "1054": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Design Patterns"
+ ],
+ "1055": [
+  "C",
+  "Embedded Systems",
+  "Microcontrollers",
+  "Memory Management",
+  "Hardware Interfacing",
+  "Real-Time Programming"
+ ],
+ "1056": [
+  "Database Management",
+  "ERP Systems",
+  "Electronic Document Management",
+  "Information Systems",
+  "System Administration",
+  "IT Project Management"
+ ],
+ "1057": [
+  "Computer Networks",
+  "TCP/IP",
+  "Network Protocols",
+  "Telecommunications",
+  "Operating Systems",
+  "Network Architecture"
+ ],
+ "1058": [
+  "Logic and Proofs",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Boolean Algebra",
+  "Number Theory"
+ ],
+ "1059": [
+  "Cryptography",
+  "Network Security",
+  "Access Control",
+  "Data Encryption",
+  "Information Security",
+  "Cybersecurity"
+ ],
+ "1060": [
+  "Probability Theory",
+  "Stochastic Processes",
+  "Markov Chains",
+  "Statistical Analysis",
+  "Fourier Analysis",
+  "Autocorrelation"
+ ],
+ "1061": [
+  "Systems Analysis",
+  "Requirements Engineering",
+  "Process Modeling",
+  "System Design",
+  "Operational Analysis",
+  "Documentation Methods"
+ ],
+ "1062": [
+  "Computer Architecture",
+  "Network Protocols",
+  "TCP/IP",
+  "Telecommunications Systems",
+  "Operating Systems",
+  "Data Transmission"
+ ],
+ "1063": [],
+ "1064": [
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "CPU Scheduling",
+  "Linux"
+ ],
+ "1065": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Design Patterns"
+ ],
+ "1066": [
+  "Entropy",
+  "Shannon Information Theory",
+  "Data Compression",
+  "Channel Capacity",
+  "Probability Theory",
+  "Error Correction Codes"
+ ],
+ "1067": [
+  "UI Design",
+  "Usability Engineering",
+  "Human-Computer Interaction",
+  "Interaction Design",
+  "UX Design",
+  "Prototyping"
+ ],
+ "1068": [
+  "Systems Analysis",
+  "Requirements Engineering",
+  "Process Modeling",
+  "System Design",
+  "Feasibility Analysis",
+  "Documentation Methods"
+ ],
+ "1069": [],
+ "1070": [
+  "UML",
+  "System Architecture",
+  "State Machines",
+  "Data Flow Diagrams",
+  "Requirements Modeling",
+  "Software Design Patterns"
+ ],
+ "1071": [],
+ "1072": [],
+ "1073": [
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "Scheduling Algorithms",
+  "Linux"
+ ],
+ "1074": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Design Patterns"
+ ],
+ "1075": [
+  "Systems Analysis",
+  "Requirements Engineering",
+  "Process Modeling",
+  "System Design",
+  "Feasibility Analysis",
+  "Documentation Methods"
+ ],
+ "1076": [
+  "UML",
+  "System Architecture",
+  "State Machines",
+  "Data Flow Diagrams",
+  "Requirements Engineering",
+  "Mathematical Modeling"
+ ],
+ "1077": [
+  "Enterprise Information Systems",
+  "Organizational Control Systems",
+  "Database Management",
+  "ERP Systems",
+  "Decision Support Systems",
+  "Business Process Management"
+ ],
+ "1078": [],
+ "1079": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Data Abstraction"
+ ],
+ "1080": [
+  "Machine Learning",
+  "Decision Support Systems",
+  "Data Mining",
+  "Fuzzy Logic",
+  "Neural Networks",
+  "Optimization Algorithms"
+ ],
+ "1081": [
+  "SQL",
+  "Database Design",
+  "Knowledge Representation",
+  "Expert Systems",
+  "Inference Engines",
+  "Data Modeling"
+ ],
+ "1082": [
+  "Systems Analysis",
+  "Automated Control Systems",
+  "Information Processing",
+  "System Design",
+  "Database Management",
+  "Decision Support Systems"
+ ],
+ "1083": [
+  "Enterprise Information Systems",
+  "Decision Support Systems",
+  "Database Management",
+  "Business Process Modeling",
+  "ERP Systems",
+  "Management Information Systems"
+ ],
+ "1084": [
+  "Linear Programming",
+  "Mathematical Optimization",
+  "Game Theory",
+  "Econometric Modeling",
+  "Statistics",
+  "Operations Research"
+ ],
+ "1085": [],
+ "1086": [],
+ "1087": [
+  "Machine Learning",
+  "Decision Support Systems",
+  "Data Mining",
+  "Fuzzy Logic",
+  "Neural Networks",
+  "Optimization Algorithms"
+ ],
+ "1088": [
+  "SQL",
+  "Database Design",
+  "Knowledge Representation",
+  "Expert Systems",
+  "Inference Engines",
+  "Data Modeling"
+ ],
+ "1089": [
+  "Performance Evaluation",
+  "Reliability Engineering",
+  "Systems Modeling",
+  "Queueing Theory",
+  "Benchmarking",
+  "Fault Tolerance"
+ ],
+ "1090": [],
+ "1091": [
+  "Enterprise Information Systems",
+  "Database Management",
+  "ERP Systems",
+  "Decision Support Systems",
+  "Systems Analysis",
+  "Business Process Modeling"
+ ],
+ "1092": [],
+ "1093": [
+  "Project Scope Management",
+  "Work Breakdown Structure",
+  "Requirements Analysis",
+  "Project Planning",
+  "Risk Management",
+  "Project Management Methodologies"
+ ],
+ "1094": [
+  "Project Scheduling",
+  "Cost Planning",
+  "Work Breakdown Structure",
+  "Critical Path Method",
+  "Earned Value Management",
+  "Risk Management"
+ ],
+ "1095": [],
+ "1096": [],
+ "1097": [
+  "Risk Assessment",
+  "Quality Management",
+  "Project Management",
+  "Risk Mitigation Strategies",
+  "Quality Control Methods",
+  "Process Improvement"
+ ],
+ "1098": [],
+ "1099": [],
+ "1100": [
+  "Agile",
+  "Scrum",
+  "Kanban",
+  "Sprint Planning",
+  "Project Management",
+  "Backlog Management"
+ ],
+ "1101": [
+  "Systems Analysis",
+  "Operations Research",
+  "Linear Programming",
+  "Optimization Algorithms",
+  "Decision Support Systems",
+  "Mathematical Modeling"
+ ],
+ "1102": [
+  "Financial Modeling",
+  "Portfolio Analysis",
+  "Risk Assessment",
+  "Valuation Methods",
+  "Statistical Analysis",
+  "Financial Statement Analysis"
+ ],
+ "1103": [
+  "Data Analysis",
+  "Business Intelligence",
+  "Data Modeling",
+  "Statistical Methods",
+  "Data Visualization",
+  "SQL"
+ ],
+ "1104": [
+  "Software Testing",
+  "Test Case Design",
+  "Bug Tracking",
+  "Test Automation",
+  "Quality Metrics",
+  "Testing Methodologies"
+ ],
+ "1105": [
+  "Cryptography",
+  "Network Security",
+  "Access Control",
+  "Data Encryption",
+  "Authentication Protocols",
+  "Information Security"
+ ],
+ "1106": [
+  "Project Planning",
+  "Risk Management",
+  "Agile",
+  "Gantt Charts",
+  "Resource Allocation",
+  "Project Management Tools"
+ ],
+ "1107": [
+  "Database Design",
+  "SQL",
+  "Data Modeling",
+  "Entity-Relationship Diagrams",
+  "Normalization",
+  "Database Management"
+ ],
+ "1108": [
+  "Network Protocols",
+  "TCP/IP",
+  "OSI Model",
+  "Network Architecture",
+  "Data Transmission",
+  "Telecommunications Systems"
+ ],
+ "1109": [],
+ "1110": [],
+ "1111": [
+  "Product Design",
+  "Prototyping",
+  "Requirements Engineering",
+  "UI/UX Design",
+  "Agile",
+  "Software Development Life Cycle (SDLC)"
+ ],
+ "1112": [
+  "UI Design",
+  "UX Design",
+  "Wireframing",
+  "Prototyping",
+  "Usability Testing",
+  "Figma"
+ ],
+ "1113": [
+  "Machine Learning",
+  "Search Algorithms",
+  "Knowledge Representation",
+  "Neural Networks",
+  "Logic and Reasoning",
+  "Problem Solving"
+ ],
+ "1114": [],
+ "1115": [],
+ "1116": [],
+ "1117": [],
+ "1118": [
+  "Differential Calculus",
+  "Integral Calculus",
+  "Limits",
+  "Derivatives",
+  "Sequences and Series",
+  "Multivariable Calculus"
+ ],
+ "1119": [
+  "Linear Algebra",
+  "Matrix Operations",
+  "Vector Spaces",
+  "Analytic Geometry",
+  "Eigenvalues and Eigenvectors",
+  "Coordinate Transformations"
+ ],
+ "1120": [
+  "C",
+  "Algorithms",
+  "Data Structures",
+  "Algorithm Complexity Analysis",
+  "Control Flow",
+  "Problem Decomposition"
+ ],
+ "1121": [
+  "Complex Numbers",
+  "Analytic Functions",
+  "Contour Integration",
+  "Taylor and Laurent Series",
+  "Residue Theorem",
+  "Conformal Mapping"
+ ],
+ "1122": [
+  "Logic and Proofs",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Number Theory",
+  "Recursion and Induction"
+ ],
+ "1123": [
+  "Assembly Language",
+  "Computer Architecture",
+  "Memory Management",
+  "CPU Design",
+  "Binary Arithmetic",
+  "Instruction Set Architecture"
+ ],
+ "1124": [
+  "SQL",
+  "Database Design",
+  "Relational Algebra",
+  "Normalization",
+  "Indexing",
+  "Transaction Management"
+ ],
+ "1125": [
+  "Numerical Analysis",
+  "Linear Algebra",
+  "Calculus",
+  "Root Finding Algorithms",
+  "Numerical Integration",
+  "MATLAB"
+ ],
+ "1126": [
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "CPU Scheduling",
+  "C"
+ ],
+ "1127": [
+  "Linear Programming",
+  "Convex Optimization",
+  "Gradient Descent",
+  "Numerical Methods",
+  "Operations Research",
+  "Mathematical Modeling"
+ ],
+ "1128": [],
+ "1129": [],
+ "1130": [
+  "Metric Spaces",
+  "Normed Spaces",
+  "Banach Spaces",
+  "Hilbert Spaces",
+  "Linear Operators",
+  "Topology"
+ ],
+ "1131": [
+  "Data Structures",
+  "Object-Oriented Programming",
+  "Arrays",
+  "Linked Lists",
+  "Trees",
+  "Algorithms"
+ ],
+ "1132": [
+  "Algorithms",
+  "Data Structures",
+  "Complexity Analysis",
+  "Dynamic Programming",
+  "Graph Theory",
+  "Sorting and Searching"
+ ],
+ "1133": [
+  "Differential Equations",
+  "Calculus",
+  "Linear Algebra",
+  "Mathematical Modeling",
+  "Numerical Methods",
+  "Laplace Transforms"
+ ],
+ "1134": [
+  "Graph Algorithms",
+  "Dynamic Programming",
+  "Combinatorics",
+  "Algorithm Design",
+  "Complexity Theory",
+  "Greedy Algorithms"
+ ],
+ "1135": [
+  "Algorithm Analysis",
+  "Computational Complexity",
+  "Mathematical Logic",
+  "Formal Languages",
+  "Automata Theory",
+  "Proof Techniques"
+ ],
+ "1136": [],
+ "1137": [],
+ "1138": [
+  "Linux",
+  "Shell Scripting",
+  "C",
+  "System Calls",
+  "File I/O",
+  "Process Management"
+ ],
+ "1139": [
+  "Functional Programming",
+  "Haskell",
+  "Lambda Calculus",
+  "Recursion",
+  "Higher-Order Functions",
+  "Type Systems"
+ ],
+ "1140": [
+  "Python",
+  "Variables and Data Types",
+  "Control Flow",
+  "Functions",
+  "Object-Oriented Programming",
+  "Basic Algorithms"
+ ],
+ "1141": [
+  "Algorithms",
+  "Data Structures",
+  "Programming",
+  "Computer Architecture",
+  "Operating Systems",
+  "Software Engineering"
+ ],
+ "1142": [
+  "Algorithms",
+  "Data Structures",
+  "Programming",
+  "Computer Architecture",
+  "Operating Systems",
+  "Software Engineering"
+ ],
+ "1143": [
+  "Algorithms",
+  "Data Structures",
+  "Programming",
+  "Computer Architecture",
+  "Operating Systems",
+  "Software Engineering"
+ ],
+ "1144": [
+  "Asymptotic Analysis",
+  "Algorithm Complexity",
+  "Recurrence Relations",
+  "Probability Theory",
+  "Discrete Mathematics",
+  "Graph Theory"
+ ],
+ "1145": [
+  "Finite Element Method (FEM)",
+  "Variational Methods",
+  "Numerical Analysis",
+  "Partial Differential Equations",
+  "Approximation Theory",
+  "Functional Analysis"
+ ],
+ "1146": [
+  "Classical Mechanics",
+  "Thermodynamics",
+  "Electromagnetism",
+  "Optics",
+  "Calculus",
+  "Wave Mechanics"
+ ],
+ "1147": [],
+ "1148": [],
+ "1149": [
+  "Mathematica",
+  "Symbolic Computation",
+  "Wolfram Language",
+  "Calculus",
+  "Linear Algebra",
+  "Mathematical Modeling"
+ ],
+ "1150": [
+  "Graph Algorithms",
+  "Network Flow Theory",
+  "Linear Programming",
+  "Optimization",
+  "Algorithm Design",
+  "Combinatorial Optimization"
+ ],
+ "1151": [
+  "TCP/IP",
+  "Network Protocols",
+  "OSI Model",
+  "Routing Algorithms",
+  "Socket Programming",
+  "Network Security"
+ ],
+ "1152": [],
+ "1153": [],
+ "1154": [],
+ "1155": [],
+ "1156": [
+  "Graph Theory",
+  "Algorithm Design",
+  "Combinatorics",
+  "Network Analysis",
+  "Discrete Mathematics",
+  "Computational Complexity"
+ ],
+ "1157": [
+  "Partial Differential Equations",
+  "Boundary Value Problems",
+  "Fourier Analysis",
+  "Green's Functions",
+  "Mathematical Modeling",
+  "Complex Analysis"
+ ],
+ "1158": [
+  "Game Theory",
+  "Linear Programming",
+  "Optimization",
+  "Nash Equilibrium",
+  "Decision Analysis",
+  "Network Flow Algorithms"
+ ],
+ "1159": [],
+ "1160": [],
+ "1161": [
+  "Probability Theory",
+  "Statistical Inference",
+  "Random Variables",
+  "Hypothesis Testing",
+  "Probability Distributions",
+  "Stochastic Processes"
+ ],
+ "1162": [
+  "Differential Calculus",
+  "Integral Calculus",
+  "Limits",
+  "Derivatives",
+  "Functions",
+  "Mathematical Analysis"
+ ],
+ "1163": [
+  "Linear Algebra",
+  "Analytic Geometry",
+  "Vector Operations",
+  "Matrix Operations",
+  "Coordinate Systems",
+  "Algebraic Equations"
+ ],
+ "1164": [
+  "Descriptive Statistics",
+  "Data Visualization",
+  "Probability Distributions",
+  "Measures of Central Tendency",
+  "Statistical Analysis",
+  "Data Interpretation"
+ ],
+ "1165": [
+  "Algorithms",
+  "Data Structures",
+  "Computational Complexity",
+  "Problem Solving",
+  "Pseudocode",
+  "Python"
+ ],
+ "1166": [
+  "Generative AI",
+  "Prompt Engineering",
+  "Large Language Models",
+  "AI Image Generation",
+  "AI Tools",
+  "Machine Learning"
+ ],
+ "1167": [
+  "Propositional Logic",
+  "Predicate Logic",
+  "Proof Techniques",
+  "Boolean Algebra",
+  "Logical Reasoning",
+  "Formal Verification"
+ ],
+ "1168": [
+  "Integration Techniques",
+  "Sequences and Series",
+  "Multivariable Calculus",
+  "Differential Equations",
+  "Polar Coordinates",
+  "Taylor Series"
+ ],
+ "1169": [
+  "Probability Theory",
+  "Statistics",
+  "Random Variables",
+  "Stochastic Processes",
+  "Combinatorics",
+  "Mathematical Modeling"
+ ],
+ "1170": [
+  "Discrete Mathematics",
+  "Logic and Proof Techniques",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Number Theory"
+ ],
+ "1171": [
+  "Python",
+  "Object-Oriented Programming",
+  "Data Structures",
+  "Algorithms",
+  "Debugging",
+  "Software Design"
+ ],
+ "1172": [
+  "Low-Code Development",
+  "No-Code Development",
+  "Visual Programming",
+  "Workflow Automation",
+  "Application Design",
+  "Database Configuration"
+ ],
+ "1173": [],
+ "1174": [
+  "Probability Theory",
+  "Statistical Inference",
+  "Hypothesis Testing",
+  "Regression Analysis",
+  "Descriptive Statistics",
+  "Data Analysis"
+ ],
+ "1175": [
+  "Logic and Proof Techniques",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Boolean Algebra",
+  "Number Theory"
+ ],
+ "1176": [
+  "C",
+  "Memory Management",
+  "Pointers",
+  "Data Structures",
+  "Algorithms",
+  "Low-Level Programming"
+ ],
+ "1177": [
+  "Algorithms",
+  "Data Structures",
+  "Programming",
+  "Binary Systems",
+  "Computer Networks",
+  "Boolean Logic"
+ ],
+ "1178": [
+  "Classical Mechanics",
+  "Thermodynamics",
+  "Electromagnetism",
+  "Optics",
+  "Calculus",
+  "Wave Mechanics"
+ ],
+ "1179": [],
+ "1180": [
+  "CAD/CAM",
+  "Digital Manufacturing",
+  "CNC Machining",
+  "3D Printing",
+  "Product Design",
+  "Manufacturing Process Planning"
+ ],
+ "1181": [
+  "Numerical Analysis",
+  "Linear Algebra",
+  "Calculus",
+  "Root Finding Algorithms",
+  "Numerical Integration",
+  "Error Analysis"
+ ],
+ "1182": [
+  "Propositional Logic",
+  "Logical Reasoning",
+  "Truth Tables",
+  "Formal Proof Systems",
+  "Boolean Algebra",
+  "Predicate Logic"
+ ],
+ "1183": [
+  "Entropy",
+  "Shannon Information Theory",
+  "Data Compression",
+  "Channel Capacity",
+  "Probability Theory",
+  "Error Correction Codes"
+ ],
+ "1184": [
+  "Computer Architecture",
+  "Digital Logic",
+  "Binary Arithmetic",
+  "Data Representation",
+  "Information Encoding",
+  "Boolean Algebra"
+ ],
+ "1185": [
+  "Algorithms",
+  "Data Structures",
+  "Complexity Analysis",
+  "Dynamic Programming",
+  "Graph Algorithms",
+  "Sorting and Searching"
+ ],
+ "1186": [
+  "C#",
+  "Object-Oriented Programming",
+  ".NET Framework",
+  "Data Structures",
+  "Exception Handling",
+  "Visual Studio"
+ ],
+ "1187": [],
+ "1188": [
+  "Digital Logic",
+  "Boolean Algebra",
+  "Computer Architecture",
+  "Assembly Language",
+  "Memory Systems",
+  "Logic Gates"
+ ],
+ "1189": [
+  "Computer Architecture",
+  "Pipeline Design",
+  "Memory Hierarchy",
+  "Instruction Set Architecture",
+  "Cache Systems",
+  "Parallel Processing"
+ ],
+ "1190": [
+  "Propositional Logic",
+  "Predicate Logic",
+  "Formal Proof Systems",
+  "Mathematical Reasoning",
+  "Set Theory",
+  "Model Theory"
+ ],
+ "1191": [
+  "Linear Algebra",
+  "Mathematical Modeling",
+  "Abstract Algebra",
+  "Matrix Operations",
+  "Discrete Mathematics",
+  "Logic"
+ ],
+ "1192": [
+  "Network Protocols",
+  "TCP/IP",
+  "OSI Model",
+  "Data Link Layer",
+  "Network Topology",
+  "Subnetting"
+ ],
+ "1193": [
+  "UI Design",
+  "Usability Testing",
+  "Prototyping",
+  "User Research Methods",
+  "Wireframing",
+  "Accessibility Standards"
+ ],
+ "1194": [
+  "Algorithms",
+  "Data Structures",
+  "Programming Languages",
+  "Algorithm Analysis",
+  "Complexity Theory",
+  "Problem Solving"
+ ],
+ "1195": [],
+ "1196": [
+  "Operating Systems",
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "System Calls"
+ ],
+ "1197": [
+  "Computer Architecture",
+  "Pipelining",
+  "Memory Hierarchy",
+  "Instruction Set Architecture",
+  "Cache Design",
+  "Parallel Processing"
+ ],
+ "1198": [
+  "Computational Complexity",
+  "Big-O Notation",
+  "NP-Completeness",
+  "Algorithm Analysis",
+  "Turing Machines",
+  "Reduction Techniques"
+ ],
+ "1199": [
+  "SQL",
+  "Relational Database Design",
+  "Entity-Relationship Modeling",
+  "Normalization",
+  "Query Optimization",
+  "Database Management"
+ ],
+ "1200": [
+  "TCP/IP",
+  "Network Protocols",
+  "Routing Algorithms",
+  "Network Security",
+  "Socket Programming",
+  "Wireless Networks"
+ ],
+ "1201": [
+  "Object-Oriented Programming",
+  "Java",
+  "Classes and Objects",
+  "Inheritance",
+  "Encapsulation",
+  "Polymorphism"
+ ],
+ "1202": [
+  "Data Structures",
+  "Algorithms",
+  "Arrays",
+  "Linked Lists",
+  "Trees",
+  "Hash Tables"
+ ],
+ "1203": [],
+ "1204": [
+  "C",
+  "Memory Management",
+  "Operating Systems",
+  "Pointers",
+  "System Calls",
+  "Process Management"
+ ],
+ "1205": [
+  "Parallel Algorithms",
+  "Multithreading",
+  "OpenMP",
+  "MPI",
+  "Concurrent Programming",
+  "Performance Optimization"
+ ],
+ "1206": [
+  "Functional Programming",
+  "Abstract Data Types",
+  "Recursion",
+  "Higher-Order Functions",
+  "Immutability",
+  "Type Systems"
+ ],
+ "1207": [
+  "Probability Theory",
+  "Statistics",
+  "Data Analysis",
+  "R",
+  "SPSS",
+  "Hypothesis Testing"
+ ],
+ "1208": [
+  "Graph Theory",
+  "Algorithms",
+  "Discrete Mathematics",
+  "Combinatorics",
+  "Graph Algorithms",
+  "Mathematical Proofs"
+ ],
+ "1209": [
+  "Finite Automata",
+  "Regular Expressions",
+  "Context-Free Grammars",
+  "Pushdown Automata",
+  "Turing Machines",
+  "Computability Theory"
+ ],
+ "1210": [
+  "Network Protocols",
+  "TCP/IP",
+  "Routing Algorithms",
+  "Network Security",
+  "Wireless Networks",
+  "Network Architecture"
+ ],
+ "1211": [
+  "Object-Oriented Programming",
+  "Inheritance and Polymorphism",
+  "Design Patterns",
+  "Exception Handling",
+  "Data Structures",
+  "UML"
+ ],
+ "1212": [],
+ "1213": [
+  "Computer Graphics",
+  "Image Processing",
+  "Image Analysis",
+  "OpenGL",
+  "Signal Processing",
+  "Linear Algebra"
+ ],
+ "1214": [
+  "Functional Programming",
+  "Abstract Data Types",
+  "Type Theory",
+  "Higher-Order Functions",
+  "Recursion",
+  "Lambda Calculus"
+ ],
+ "1215": [
+  "Fourier Transform",
+  "Signal Analysis",
+  "Digital Filters",
+  "Laplace Transforms",
+  "MATLAB",
+  "Convolution"
+ ],
+ "1216": [
+  "Software Development Life Cycle (SDLC)",
+  "Requirements Engineering",
+  "System Design",
+  "UML",
+  "Testing & Quality Assurance",
+  "Agile"
+ ],
+ "1217": [
+  "Cryptography",
+  "Network Security",
+  "Authentication",
+  "Vulnerability Assessment",
+  "Access Control",
+  "Firewalls"
+ ],
+ "1218": [
+  "SQL",
+  "Database Design",
+  "Query Optimization",
+  "Transactions",
+  "Indexing",
+  "Stored Procedures"
+ ],
+ "1219": [
+  "Machine Learning",
+  "Search Algorithms",
+  "Knowledge Representation",
+  "Neural Networks",
+  "Problem Solving",
+  "Logic and Reasoning"
+ ],
+ "1220": [],
+ "1221": [
+  "Parallel Algorithms",
+  "Multithreading",
+  "MPI",
+  "OpenMP",
+  "Concurrent Programming",
+  "Performance Optimization"
+ ],
+ "1222": [
+  "Python",
+  "Numerical Methods",
+  "Machine Learning",
+  "Linear Algebra",
+  "Data Analysis",
+  "Scientific Computing"
+ ],
+ "1223": [
+  "Algorithm Design",
+  "Dynamic Programming",
+  "Graph Algorithms",
+  "Complexity Theory",
+  "Data Structures",
+  "Greedy Algorithms"
+ ],
+ "1224": [
+  "Formal Languages",
+  "Automata Theory",
+  "Regular Expressions",
+  "Context-Free Grammars",
+  "Finite State Machines",
+  "Turing Machines"
+ ],
+ "1225": [
+  "UML Modeling",
+  "Software Design Patterns",
+  "Agile Development",
+  "Version Control",
+  "Software Architecture",
+  "Collaborative Development Tools"
+ ],
+ "1226": [
+  "Signal Processing",
+  "Image Processing",
+  "Audio Processing",
+  "Natural Language Processing",
+  "Feature Extraction",
+  "Python"
+ ],
+ "1227": [
+  "Artificial Intelligence",
+  "Search Algorithms",
+  "Knowledge Representation",
+  "Machine Learning",
+  "Logic and Reasoning",
+  "Problem Solving"
+ ],
+ "1228": [
+  "OpenGL",
+  "3D Rendering",
+  "Linear Algebra",
+  "Rasterization",
+  "Shading Algorithms",
+  "Geometric Transformations"
+ ],
+ "1229": [
+  "Multi-Agent Systems",
+  "Distributed AI",
+  "Game Theory",
+  "Agent Communication Languages",
+  "Autonomous Agents",
+  "Reinforcement Learning"
+ ],
+ "1230": [],
+ "1231": [],
+ "1232": [],
+ "1233": [
+  "Computer Graphics",
+  "3D Modeling",
+  "Rendering",
+  "CAD Software",
+  "Geometric Algorithms",
+  "Linear Algebra"
+ ],
+ "1234": [
+  "Statics",
+  "Dynamics",
+  "Free Body Diagrams",
+  "Newton's Laws",
+  "Mechanics of Materials",
+  "Differential Equations"
+ ],
+ "1235": [
+  "Circuit Analysis",
+  "Ohm's Law",
+  "AC/DC Theory",
+  "Electrical Components",
+  "Kirchhoff's Laws",
+  "Signal Analysis"
+ ],
+ "1236": [
+  "Multivariable Calculus",
+  "Multiple Integrals",
+  "Vector Analysis",
+  "Differential Equations",
+  "Series Convergence",
+  "Complex Analysis"
+ ],
+ "1237": [
+  "MATLAB",
+  "Numerical Computing",
+  "Data Visualization",
+  "Matrix Operations",
+  "Scientific Programming",
+  "Mathematical Modeling"
+ ],
+ "1238": [
+  "Differential Equations",
+  "Mathematical Modeling",
+  "Calculus",
+  "Linear Algebra",
+  "Numerical Methods",
+  "Laplace Transforms"
+ ],
+ "1239": [
+  "Complex Numbers",
+  "Analytic Functions",
+  "Contour Integration",
+  "Cauchy's Theorem",
+  "Laurent Series",
+  "Residue Theorem"
+ ],
+ "1240": [
+  "Probability Theory",
+  "Statistical Inference",
+  "Random Variables",
+  "Probability Distributions",
+  "Hypothesis Testing",
+  "Descriptive Statistics"
+ ],
+ "1241": [
+  "Partial Differential Equations",
+  "Fourier Analysis",
+  "Boundary Value Problems",
+  "Mathematical Modeling",
+  "Vector Calculus",
+  "Special Functions"
+ ],
+ "1242": [
+  "Metric Spaces",
+  "Normed Spaces",
+  "Banach Spaces",
+  "Hilbert Spaces",
+  "Linear Operators",
+  "Topology"
+ ],
+ "1243": [
+  "Propositional Logic",
+  "Predicate Logic",
+  "Formal Proof Systems",
+  "Boolean Algebra",
+  "Set Theory",
+  "Proof Theory"
+ ],
+ "1244": [
+  "Algorithm Analysis",
+  "Big-O Notation",
+  "Dynamic Programming",
+  "Graph Algorithms",
+  "Data Structures",
+  "Computational Complexity"
+ ],
+ "1245": [
+  "Logic and Propositional Calculus",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Mathematical Proofs",
+  "Number Theory"
+ ],
+ "1246": [
+  "Linear Programming",
+  "Optimization",
+  "Simplex Method",
+  "Integer Programming",
+  "Duality Theory",
+  "Operations Research"
+ ],
+ "1247": [
+  "Data Visualization",
+  "Digital Research Methods",
+  "Web Scraping",
+  "Data Analysis",
+  "Network Analysis",
+  "Text Mining"
+ ],
+ "1248": [
+  "Differential Geometry",
+  "Manifolds",
+  "Tensor Calculus",
+  "Differential Equations",
+  "Linear Algebra",
+  "Topology"
+ ],
+ "1249": [
+  "Error-Correcting Codes",
+  "Linear Algebra",
+  "Information Theory",
+  "Finite Fields",
+  "Hamming Codes",
+  "Cryptography"
+ ],
+ "1250": [
+  "Information Theory",
+  "Entropy",
+  "Data Compression",
+  "Error Correction Codes",
+  "Channel Capacity",
+  "Probability Theory"
+ ],
+ "1251": [
+  "C++",
+  "Object-Oriented Programming",
+  "Data Structures",
+  "Algorithms",
+  "File I/O",
+  "Pointers and Memory Management"
+ ],
+ "1252": [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "HTTP",
+  "Web Frameworks",
+  "DOM Manipulation"
+ ],
+ "1253": [],
+ "1254": [
+  "Object-Oriented Programming",
+  "Design Patterns",
+  "Software Development Methodologies",
+  "Version Control",
+  "Debugging",
+  "API"
+ ],
+ "1255": [
+  "C",
+  "Memory Management",
+  "System Calls",
+  "Process Management",
+  "File I/O",
+  "Unix/Linux"
+ ],
+ "1256": [
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "CPU Scheduling",
+  "System Calls"
+ ],
+ "1257": [
+  "Computational Geometry",
+  "Geometric Algorithms",
+  "Data Structures",
+  "Linear Algebra",
+  "Convex Hull",
+  "Spatial Data Structures"
+ ],
+ "1258": [
+  "SQL",
+  "Relational Database Design",
+  "Normalization",
+  "Query Optimization",
+  "Transaction Management",
+  "Indexing"
+ ],
+ "1259": [
+  "Data Structures",
+  "Algorithms",
+  "Algorithm Complexity Analysis",
+  "Sorting and Searching",
+  "Trees and Graphs",
+  "Dynamic Programming"
+ ],
+ "1260": [],
+ "1261": [
+  "Discrete Mathematics",
+  "Algorithms",
+  "Graph Theory",
+  "Combinatorics",
+  "Algorithm Analysis",
+  "Programming"
+ ],
+ "1262": [
+  "UX Design",
+  "Usability Testing",
+  "UI Design",
+  "Prototyping",
+  "Cognitive Ergonomics",
+  "Human Factors Engineering"
+ ],
+ "1263": [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "HTTP",
+  "Web Frameworks",
+  "REST API"
+ ],
+ "1264": [
+  "SQL",
+  "Database Design",
+  "Entity-Relationship Modeling",
+  "Normalization",
+  "Transaction Management",
+  "Query Optimization"
+ ],
+ "1265": [
+  "Mathematical Modeling",
+  "Differential Equations",
+  "Numerical Methods",
+  "MATLAB",
+  "Simulation",
+  "System Analysis"
+ ],
+ "1266": [],
+ "1267": [
+  "Network Architecture",
+  "Network Protocols",
+  "Quality of Service (QoS)",
+  "Network Security",
+  "Telecommunications Regulation",
+  "Network Management"
+ ],
+ "1268": [
+  "ERP Systems",
+  "IT Project Management",
+  "Resource Allocation",
+  "Capacity Planning",
+  "IT Budgeting",
+  "Enterprise Architecture"
+ ],
+ "1269": [
+  "Operating Systems",
+  "Virtualization",
+  "Cloud Computing",
+  "Containerization",
+  "Platform Architecture",
+  "DevOps"
+ ],
+ "1270": [
+  "Operating Systems",
+  "System Configuration",
+  "File System Management",
+  "Process Management",
+  "Shell Scripting",
+  "User Administration"
+ ],
+ "1271": [
+  "Digital Media Processing",
+  "Audio/Video Compression",
+  "Image Processing",
+  "Multimedia Formats",
+  "Streaming Technologies",
+  "Data Encoding"
+ ],
+ "1272": [
+  "Hardware Troubleshooting",
+  "Operating Systems",
+  "Network Fundamentals",
+  "Help Desk Tools",
+  "System Diagnostics",
+  "Customer Support Processes"
+ ],
+ "1273": [],
+ "1274": [
+  "SEO",
+  "Keyword Research",
+  "Google Analytics",
+  "On-Page Optimization",
+  "Link Building",
+  "Web Analytics"
+ ],
+ "1275": [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "HTTP",
+  "Web Frameworks",
+  "REST API"
+ ],
+ "1276": [
+  "Mobile Application Development",
+  "iOS/Android Development",
+  "Mobile UI/UX Design",
+  "REST API",
+  "Mobile Security",
+  "Wireless Networks"
+ ],
+ "1277": [
+  "Systems Integration",
+  "API Design",
+  "Software Architecture",
+  "Middleware",
+  "Enterprise Application Integration",
+  "Web Services"
+ ],
+ "1278": [
+  "IT Infrastructure Management",
+  "Network Administration",
+  "System Configuration",
+  "Performance Monitoring",
+  "Resource Allocation",
+  "IT Operations"
+ ],
+ "1279": [
+  "SQL",
+  "Database Design",
+  "Entity-Relationship Modeling",
+  "Normalization",
+  "Query Optimization",
+  "Transaction Management"
+ ],
+ "1280": [
+  "Boolean Algebra",
+  "Logic Gates",
+  "Binary Arithmetic",
+  "Number Systems",
+  "Combinational Circuits",
+  "Digital Logic Design"
+ ],
+ "1281": [
+  "Boolean Algebra",
+  "Logic Gates",
+  "Combinational Circuits",
+  "Sequential Circuits",
+  "Hardware Description Language",
+  "Digital Electronics"
+ ],
+ "1282": [
+  "Circuit Schematics",
+  "Electronic Components",
+  "PCB Design",
+  "Logic Gates",
+  "CAD Tools",
+  "Electrical Engineering Fundamentals"
+ ],
+ "1283": [
+  "Digital Logic Design",
+  "Boolean Algebra",
+  "Combinational Circuits",
+  "Sequential Circuits",
+  "Hardware Description Language",
+  "Finite State Machines"
+ ],
+ "1284": [
+  "Computer Architecture",
+  "Assembly Language",
+  "Digital Logic",
+  "Memory Systems",
+  "CPU Design",
+  "Instruction Set Architecture"
+ ],
+ "1285": [
+  "Computer Architecture",
+  "Assembly Language",
+  "Digital Logic Design",
+  "Memory Hierarchy",
+  "Instruction Set Architecture",
+  "CPU Pipeline"
+ ],
+ "1286": [
+  "Fault Diagnosis",
+  "System Testing",
+  "Debugging",
+  "Hardware Troubleshooting",
+  "Error Detection Algorithms",
+  "System Reliability Analysis"
+ ],
+ "1287": [
+  "Network Protocols",
+  "TCP/IP",
+  "OSI Model",
+  "Network Architecture",
+  "Data Transmission",
+  "Network Security"
+ ],
+ "1288": [
+  "Digital Logic Design",
+  "Circuit Analysis",
+  "VLSI Design",
+  "Boolean Algebra",
+  "Semiconductor Devices",
+  "Hardware Description Language"
+ ],
+ "1289": [
+  "Network Protocols",
+  "TCP/IP",
+  "Network Architecture",
+  "Routing Algorithms",
+  "Data Link Layer",
+  "Network Security"
+ ],
+ "1290": [
+  "Linux",
+  "Network Administration",
+  "TCP/IP",
+  "Network Configuration",
+  "Shell Scripting",
+  "Directory Services"
+ ],
+ "1291": [
+  "Assembly Language",
+  "Microprocessor Architecture",
+  "Embedded Systems",
+  "Memory Management",
+  "Input/Output Interfacing",
+  "Digital Logic"
+ ],
+ "1292": [],
+ "1293": [
+  "FPGA Programming",
+  "VHDL",
+  "Digital Logic Design",
+  "Hardware Description Language",
+  "Embedded Systems",
+  "Programmable Logic Devices"
+ ],
+ "1294": [
+  "Data Storage",
+  "Network Protocols",
+  "Digital Archiving",
+  "Data Transmission",
+  "Information Management",
+  "Network Infrastructure"
+ ],
+ "1295": [
+  "Network Operating Systems",
+  "TCP/IP",
+  "Network Configuration",
+  "Linux",
+  "Routing Protocols",
+  "Network Security"
+ ],
+ "1296": [
+  "Network Architecture",
+  "E-Government Systems",
+  "Information Security",
+  "Network Protocols",
+  "Distributed Systems",
+  "Database Management"
+ ],
+ "1297": [
+  "Network Security",
+  "Firewalls",
+  "Cryptography",
+  "Intrusion Detection Systems",
+  "VPN",
+  "Network Protocols"
+ ],
+ "1298": [
+  "Parallel Computing",
+  "Multiprocessor Architecture",
+  "Synchronization",
+  "Concurrency",
+  "Cache Coherence",
+  "Thread Management"
+ ],
+ "1299": [
+  "Power Supply Design",
+  "DC-DC Converters",
+  "Voltage Regulation",
+  "Electronic Circuit Analysis",
+  "Power Electronics",
+  "Switching Power Supplies"
+ ],
+ "1300": [
+  "Network Configuration",
+  "Network Monitoring",
+  "TCP/IP",
+  "Network Troubleshooting",
+  "Network Security",
+  "SNMP"
+ ],
+ "1301": [
+  "Discrete Mathematics",
+  "Logic",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Boolean Algebra"
+ ],
+ "1302": [
+  "Finite Automata",
+  "Regular Expressions",
+  "Context-Free Grammars",
+  "Turing Machines",
+  "Formal Languages",
+  "Computability Theory"
+ ],
+ "1303": [
+  "Number Theory",
+  "Modular Arithmetic",
+  "Prime Numbers",
+  "Cryptography",
+  "Mathematical Proofs",
+  "Abstract Algebra"
+ ],
+ "1304": [
+  "Software Architecture",
+  "System Design",
+  "Design Patterns",
+  "Software Development Methodologies",
+  "Modular Programming",
+  "UML"
+ ],
+ "1305": [
+  "C",
+  "Memory Management",
+  "Operating Systems",
+  "System Calls",
+  "Process Management",
+  "File Systems"
+ ],
+ "1306": [
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "CPU Scheduling",
+  "Linux"
+ ],
+ "1307": [
+  "Cryptography",
+  "Steganography",
+  "Symmetric Encryption",
+  "Asymmetric Encryption",
+  "Information Security",
+  "Data Hiding Techniques"
+ ],
+ "1308": [
+  "SQL",
+  "Database Design",
+  "Data Modeling",
+  "Database Security",
+  "Normalization",
+  "Access Control"
+ ],
+ "1309": [
+  "Network Architecture",
+  "Network Security",
+  "Cryptography",
+  "Firewalls",
+  "Network Protocols",
+  "Access Control"
+ ],
+ "1310": [
+  "Object-Oriented Programming",
+  "Design Patterns",
+  "Software Development Methodologies",
+  "Version Control",
+  "Debugging",
+  "Code Refactoring"
+ ],
+ "1311": [
+  "Malware Analysis",
+  "Antivirus Software",
+  "Cybersecurity",
+  "Threat Detection",
+  "Reverse Engineering",
+  "Network Security"
+ ],
+ "1312": [
+  "Object-Oriented Programming",
+  "Component-Based Design",
+  "Encapsulation",
+  "Inheritance",
+  "Design Patterns",
+  "Software Architecture"
+ ],
+ "1313": [
+  "Cryptography",
+  "Access Control",
+  "Network Security",
+  "Authentication",
+  "Data Encryption",
+  "Cybersecurity"
+ ],
+ "1314": [
+  "Network Programming",
+  "Socket Programming",
+  "Client-Server Architecture",
+  "TCP/IP",
+  "API Development",
+  "Multithreading"
+ ],
+ "1315": [
+  "Software Testing",
+  "Unit Testing",
+  "Test Automation",
+  "Debugging",
+  "Test-Driven Development",
+  "Quality Assurance"
+ ],
+ "1316": [
+  "Risk Assessment",
+  "Threat Modeling",
+  "Security Frameworks",
+  "Vulnerability Assessment",
+  "NIST/ISO Standards",
+  "Security Controls"
+ ],
+ "1317": [
+  "Database Management",
+  "SQL",
+  "Information Systems",
+  "Data Analysis",
+  "Business Intelligence",
+  "ERP Systems"
+ ],
+ "1318": [
+  "Numerical Methods",
+  "Algorithm Analysis",
+  "Computational Complexity",
+  "Linear Algebra",
+  "Differential Equations",
+  "Optimization"
+ ],
+ "1319": [
+  "Information Theory",
+  "Entropy",
+  "Data Compression",
+  "Channel Coding",
+  "Probability Theory",
+  "Shannon Theory"
+ ],
+ "1320": [
+  "Distributed Systems",
+  "Client-Server Architecture",
+  "Network Protocols",
+  "Database Replication",
+  "Concurrency Control",
+  "Fault Tolerance"
+ ],
+ "1321": [
+  "Mathematical Optimization",
+  "Linear Programming",
+  "Systems Analysis",
+  "Operations Research",
+  "Decision Support Systems",
+  "Performance Modeling"
+ ],
+ "1322": [
+  "Systems Analysis",
+  "Operations Research",
+  "Linear Programming",
+  "Optimization Methods",
+  "Mathematical Modeling",
+  "Decision Analysis"
+ ],
+ "1323": [
+  "System Dynamics",
+  "UML",
+  "Simulation",
+  "Mathematical Modeling",
+  "State Machines",
+  "Differential Equations"
+ ],
+ "1324": [
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Neural Networks",
+  "Python",
+  "Data Preprocessing",
+  "Algorithm Design"
+ ],
+ "1325": [
+  "Decision Theory",
+  "Multi-Criteria Decision Analysis",
+  "Optimization",
+  "Probability and Statistics",
+  "Game Theory",
+  "Scenario Analysis"
+ ],
+ "1326": [
+  "SQL",
+  "Database Design",
+  "Normalization",
+  "Entity-Relationship Modeling",
+  "Transaction Management",
+  "Indexing"
+ ],
+ "1327": [
+  "Hadoop",
+  "Apache Spark",
+  "Distributed Computing",
+  "MapReduce",
+  "NoSQL",
+  "Data Processing"
+ ],
+ "1328": [
+  "Process Automation",
+  "Banking Information Systems",
+  "Operations Research",
+  "Financial Modeling",
+  "Workflow Optimization",
+  "Payment Systems"
+ ],
+ "1329": [
+  "Database Management",
+  "Banking Information Systems",
+  "SQL",
+  "Financial Data Processing",
+  "Automated Transaction Processing",
+  "Information Security"
+ ],
+ "1330": [
+  "Database Design",
+  "Financial Systems Architecture",
+  "Banking Software Development",
+  "Automated Management Systems",
+  "System Analysis and Design",
+  "Business Process Automation"
+ ],
+ "1331": [
+  "Accounting Software",
+  "Database Management",
+  "Financial Reporting",
+  "Spreadsheet Automation",
+  "ERP Systems",
+  "Data Entry Automation"
+ ],
+ "1332": [
+  "CRM Systems",
+  "Marketing Automation",
+  "Data Analysis",
+  "Customer Segmentation",
+  "Database Management",
+  "Business Intelligence"
+ ],
+ "1333": [
+  "E-Government Systems",
+  "Digital Public Administration",
+  "Business Process Management",
+  "Information Systems",
+  "IT Policy and Strategy"
+ ],
+ "1334": [
+  "Decision Support Systems",
+  "Financial Modeling",
+  "Investment Analysis",
+  "Strategic Management Tools",
+  "Business Intelligence",
+  "Data-Driven Decision Making"
+ ],
+ "1335": [
+  "E-Commerce Platforms",
+  "Digital Payment Systems",
+  "Web Technologies",
+  "Online Marketing Analytics",
+  "Database Management",
+  "Supply Chain Management"
+ ],
+ "1336": [
+  "Network Management",
+  "SNMP",
+  "Network Monitoring",
+  "Network Protocols",
+  "Fault Management",
+  "Network Security"
+ ],
+ "1337": [
+  "Database Management",
+  "Enterprise Information Systems",
+  "SQL",
+  "Software Requirements Analysis",
+  "System Design",
+  "Business Process Modeling"
+ ],
+ "1338": [
+  "System Design",
+  "Information Systems Architecture",
+  "Database Management",
+  "Automated Control Systems",
+  "Requirements Analysis",
+  "Data Processing"
+ ],
+ "1339": [
+  "Decision Support Systems",
+  "Systematic Analysis Methods",
+  "Operations Research",
+  "Data Modeling",
+  "Decision Theory",
+  "Optimization"
+ ],
+ "1340": [
+  "Reliability Engineering",
+  "Fault Tree Analysis",
+  "Probability Theory",
+  "Failure Mode and Effects Analysis",
+  "Systems Modeling",
+  "Statistical Analysis"
+ ],
+ "1341": [
+  "Real-Time Systems",
+  "Stream Processing",
+  "Database Management",
+  "Data Pipelines",
+  "Concurrency",
+  "Event-Driven Architecture"
+ ],
+ "1342": [
+  "Database Management",
+  "Systems Integration",
+  "Information Architecture",
+  "Data Processing",
+  "Enterprise Information Systems",
+  "SQL"
+ ],
+ "1343": [
+  "Distributed Systems",
+  "Fault Tolerance",
+  "Consensus Algorithms",
+  "Distributed Databases",
+  "Network Protocols",
+  "Concurrency"
+ ],
+ "1344": [
+  "Reliability Engineering",
+  "Fault Tree Analysis",
+  "Probability Theory",
+  "Systems Modeling",
+  "Failure Mode Analysis",
+  "Control Systems"
+ ],
+ "1345": [
+  "Differential Calculus",
+  "Integral Calculus",
+  "Limits",
+  "Derivatives",
+  "Mathematical Analysis",
+  "Multivariable Calculus"
+ ],
+ "1346": [
+  "Fourier Analysis",
+  "Signal Processing",
+  "Linear Algebra",
+  "Functional Analysis",
+  "Differential Equations",
+  "Mathematical Proofs"
+ ],
+ "1347": [
+  "Numerical Methods",
+  "Differential Equations",
+  "Finite Difference Methods",
+  "Runge-Kutta Methods",
+  "MATLAB",
+  "Numerical Analysis"
+ ],
+ "1348": [
+  "Partial Differential Equations",
+  "Mathematical Physics",
+  "Boundary Value Problems",
+  "Fourier Analysis",
+  "Green's Functions",
+  "Special Functions"
+ ],
+ "1349": [
+  "Complex Analysis",
+  "Analytic Functions",
+  "Contour Integration",
+  "Complex Differentiation",
+  "Series Expansions",
+  "Conformal Mapping"
+ ],
+ "1350": [
+  "Algorithm Analysis",
+  "Time Complexity",
+  "Space Complexity",
+  "Big-O Notation",
+  "NP-Completeness",
+  "Data Structures"
+ ],
+ "1351": [
+  "Fourier Analysis",
+  "Linear Algebra",
+  "Signal Processing",
+  "Differential Equations",
+  "Convolution",
+  "Laplace Transforms"
+ ],
+ "1352": [
+  "Discrete Mathematics",
+  "Graph Theory",
+  "Combinatorics",
+  "Logic",
+  "Proof Techniques",
+  "Number Theory"
+ ],
+ "1353": [
+  "MATLAB",
+  "Numerical Methods",
+  "Data Visualization",
+  "Signal Processing",
+  "Matrix Operations",
+  "Simulation"
+ ],
+ "1354": [
+  "Probability Theory",
+  "Stochastic Processes",
+  "Statistical Estimation",
+  "Signal Processing",
+  "Spectral Analysis",
+  "Time Series Analysis"
+ ],
+ "1355": [
+  "Partial Differential Equations",
+  "Boundary Value Problems",
+  "Fourier Series",
+  "Separation of Variables",
+  "Mathematical Analysis",
+  "Green's Functions"
+ ],
+ "1356": [
+  "Discrete Fourier Transform",
+  "Digital Signal Processing",
+  "Z-Transform",
+  "Discrete Wavelet Transform",
+  "Signal Filtering",
+  "Linear Algebra"
+ ],
+ "1357": [
+  "Information Theory",
+  "Entropy",
+  "Data Compression",
+  "Channel Coding",
+  "Probability Theory",
+  "Shannon Theory"
+ ],
+ "1358": [
+  "Differential Geometry",
+  "Parametric Curves",
+  "Surface Theory",
+  "Calculus",
+  "Linear Algebra",
+  "Topology"
+ ],
+ "1359": [
+  "Network Security",
+  "Firewall Configuration",
+  "Intrusion Detection Systems",
+  "Cryptography",
+  "VPN",
+  "Vulnerability Assessment"
+ ],
+ "1360": [
+  "Network Protocols",
+  "TCP/IP",
+  "Network Architecture",
+  "Routing Algorithms",
+  "Network Security",
+  "Socket Programming"
+ ],
+ "1361": [
+  "Network Operating Systems",
+  "Interoperability Protocols",
+  "Virtualization",
+  "Network Configuration Management",
+  "Cross-Platform Compatibility",
+  "Network Automation"
+ ],
+ "1362": [
+  "Network Management",
+  "SNMP",
+  "Network Monitoring",
+  "Linux",
+  "Network Configuration",
+  "Scripting"
+ ],
+ "1363": [
+  "Parallel Computing",
+  "Computer Architecture",
+  "Multithreading",
+  "Cache Coherence",
+  "SIMD/MIMD Architectures",
+  "Synchronization Mechanisms"
+ ],
+ "1364": [
+  "Cluster Computing",
+  "Grid Computing",
+  "Parallel Programming",
+  "Distributed Systems",
+  "MPI",
+  "Load Balancing"
+ ],
+ "1365": [
+  "Cryptographic Algorithms",
+  "Hardware Security",
+  "Processor Architecture",
+  "AES/RSA Implementation",
+  "FPGA Programming",
+  "Side-Channel Analysis"
+ ],
+ "1366": [
+  "Server Administration",
+  "Network Architecture",
+  "Client-Server Model",
+  "Operating Systems",
+  "Network Protocols",
+  "System Configuration"
+ ],
+ "1367": [
+  "Software Testing",
+  "Test Automation",
+  "Debugging",
+  "Quality Assurance",
+  "Test Case Design",
+  "Continuous Integration"
+ ],
+ "1368": [
+  "Software-Defined Networking",
+  "Network Virtualization",
+  "5G Networks",
+  "Network Security",
+  "Cloud Networking",
+  "IPv6"
+ ],
+ "1369": [
+  "Network Device Selection",
+  "Telecommunications Networks",
+  "Network Equipment Evaluation",
+  "Network Architecture",
+  "Technical Specifications Analysis",
+  "Network Planning"
+ ],
+ "1370": [
+  "Neural Networks",
+  "Deep Learning",
+  "Backpropagation",
+  "Gradient Descent",
+  "Python",
+  "Linear Algebra"
+ ],
+ "1371": [
+  "Computer Architecture",
+  "I/O Systems",
+  "Peripheral Devices",
+  "Bus Interfaces",
+  "Device Controllers",
+  "Hardware Protocols"
+ ],
+ "1372": [
+  "Numerical Methods",
+  "Linear Algebra",
+  "Calculus",
+  "Algorithms",
+  "Computational Mathematics",
+  "Error Analysis"
+ ],
+ "1373": [
+  "Network Measurement",
+  "Performance Benchmarking",
+  "System Monitoring",
+  "Traffic Analysis",
+  "Statistical Analysis",
+  "Profiling Tools"
+ ],
+ "1374": [
+  "Systems Analysis",
+  "Mathematical Modeling",
+  "Differential Equations",
+  "Optimization",
+  "Simulation",
+  "Linear Algebra"
+ ],
+ "1375": [
+  "Decision Theory",
+  "Neural Networks",
+  "Genetic Algorithms",
+  "Optimization",
+  "Machine Learning",
+  "Evolutionary Computation"
+ ],
+ "1376": [
+  "Systems Analysis",
+  "UML",
+  "Database Design",
+  "Requirements Engineering",
+  "Software Architecture",
+  "Data Modeling"
+ ],
+ "1377": [
+  "Project Planning",
+  "Risk Management",
+  "Agile",
+  "Scrum",
+  "PMBOK",
+  "Microsoft Project"
+ ],
+ "1378": [
+  "Software Development Methodologies",
+  "Version Control",
+  "UML",
+  "Software Testing",
+  "Project Management Tools",
+  "Requirements Engineering"
+ ],
+ "1379": [
+  "Differential Equations",
+  "Laplace Transforms",
+  "Fourier Transforms",
+  "Mathematical Analysis",
+  "Numerical Methods",
+  "Calculus"
+ ],
+ "1380": [
+  "Enterprise Resource Planning",
+  "Database Management",
+  "Business Process Modeling",
+  "Information Systems Architecture",
+  "Data Management",
+  "Systems Integration"
+ ],
+ "1381": [
+  "Machine Learning",
+  "Knowledge Representation",
+  "Natural Language Processing",
+  "Data Mining",
+  "Expert Systems",
+  "Artificial Intelligence"
+ ],
+ "1382": [
+  "Business Process Modeling",
+  "UML",
+  "Data Flow Diagrams",
+  "Systems Analysis",
+  "Requirements Engineering",
+  "BPMN"
+ ],
+ "1383": [
+  "Agent-Based Modeling",
+  "System Dynamics",
+  "Game Theory",
+  "Network Analysis",
+  "Simulation",
+  "Statistical Analysis"
+ ],
+ "1384": [
+  "Algorithm Design",
+  "Algorithm Analysis",
+  "Data Structures",
+  "Computational Complexity",
+  "Sorting Algorithms",
+  "Dynamic Programming"
+ ],
+ "1385": [
+  "Adobe Photoshop",
+  "Vector Graphics",
+  "Image Processing",
+  "Raster Graphics",
+  "Color Theory",
+  "Adobe Illustrator"
+ ],
+ "1386": [
+  "MATLAB",
+  "Spreadsheet Modeling",
+  "Numerical Methods",
+  "Data Analysis",
+  "Engineering Problem Solving",
+  "Visualization"
+ ],
+ "1387": [
+  "Information Theory",
+  "Entropy",
+  "Data Compression",
+  "Channel Coding",
+  "Probability Theory",
+  "Signal Processing"
+ ],
+ "1388": [
+  "LaTeX",
+  "Technical Writing",
+  "Markdown",
+  "Document Markup Languages",
+  "XML",
+  "Version Control"
+ ],
+ "1389": [],
+ "1390": [],
+ "1391": [
+  "Information Retrieval",
+  "Search Algorithms",
+  "Text Indexing",
+  "Natural Language Processing",
+  "Ranking Algorithms",
+  "Query Processing"
+ ],
+ "1392": [
+  "Software Development Life Cycle (SDLC)",
+  "Requirements Engineering",
+  "Software Architecture",
+  "UML",
+  "Agile",
+  "Software Testing"
+ ],
+ "1393": [
+  "Probability Theory",
+  "Game Theory",
+  "Optimization",
+  "Statistical Decision Theory",
+  "Utility Theory",
+  "Bayesian Inference"
+ ],
+ "1394": [
+  "Programming Paradigms",
+  "Object-Oriented Programming",
+  "Functional Programming",
+  "Code Design Patterns",
+  "Software Engineering Methodology",
+  "Modular Programming"
+ ],
+ "1395": [
+  "Algorithms",
+  "Data Structures",
+  "Algorithm Analysis",
+  "Complexity Theory",
+  "Graph Algorithms",
+  "Sorting and Searching"
+ ],
+ "1396": [
+  "HTML/CSS",
+  "JavaScript",
+  "REST API",
+  "Web Frameworks",
+  "Database Integration",
+  "Web Security"
+ ],
+ "1397": [
+  "C",
+  "Microcontrollers",
+  "Real-Time Operating Systems",
+  "Hardware-Software Integration",
+  "Assembly Language",
+  "Memory Management"
+ ],
+ "1398": [
+  "Software Development Tools",
+  "Library Management",
+  "Build Systems",
+  "Package Management",
+  "API",
+  "Software Engineering"
+ ],
+ "1399": [
+  "Software Testing",
+  "Test Automation",
+  "Quality Assurance",
+  "Test Case Design",
+  "Debugging",
+  "Software Evaluation"
+ ],
+ "1400": [
+  "SQL",
+  "Relational Database Design",
+  "Normalization",
+  "Query Optimization",
+  "Transaction Management",
+  "Indexing"
+ ],
+ "1401": [
+  "Embedded Systems",
+  "Low-Level Programming",
+  "Device Drivers",
+  "Hardware Interfaces",
+  "Real-Time Programming",
+  "Assembly Language"
+ ],
+ "1402": [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "HTTP",
+  "Web Frameworks",
+  "REST API"
+ ],
+ "1403": [
+  "Python",
+  "Machine Learning",
+  "TensorFlow",
+  "Data Preprocessing",
+  "Neural Networks",
+  "AI Frameworks"
+ ],
+ "1404": [],
+ "1405": [],
+ "1406": [],
+ "1407": [
+  "Circuit Modeling",
+  "Interconnect Optimization",
+  "VLSI Design",
+  "Signal Integrity",
+  "Numerical Methods",
+  "Parasitic Extraction"
+ ],
+ "1408": [
+  "Cryptography",
+  "Network Security",
+  "Access Control",
+  "Authentication Protocols",
+  "Data Encryption",
+  "Cybersecurity"
+ ],
+ "1409": [
+  "Numerical Methods",
+  "Computational Algorithms",
+  "Mathematical Modeling",
+  "Scientific Computing",
+  "Optimization",
+  "Linear Algebra"
+ ],
+ "1410": [
+  "Computer Architecture",
+  "Network Infrastructure",
+  "Operating Systems",
+  "Hardware Configuration",
+  "Systems Integration",
+  "Network Protocols"
+ ],
+ "1411": [
+  "Optoelectronics",
+  "Photonic Devices",
+  "Optical Signal Processing",
+  "Semiconductor Physics",
+  "Optical Fiber Communication",
+  "Laser Technology"
+ ],
+ "1412": [
+  "Linear Algebra",
+  "Optimization",
+  "Calculus",
+  "Numerical Methods",
+  "Mathematical Modeling",
+  "Algorithm Design"
+ ],
+ "1413": [
+  "EDA Tools",
+  "Circuit Design",
+  "PCB Layout",
+  "VHDL",
+  "Schematic Capture",
+  "SPICE Simulation"
+ ],
+ "1414": [
+  "Signal Processing",
+  "Fourier Transform",
+  "Filter Design",
+  "MATLAB",
+  "Discrete-Time Systems",
+  "Z-Transform"
+ ],
+ "1415": [
+  "Parallel Algorithms",
+  "Multithreading",
+  "MPI",
+  "OpenMP",
+  "Concurrency",
+  "Performance Optimization"
+ ],
+ "1416": [
+  "Cloud Architecture",
+  "Virtualization",
+  "AWS/Azure/GCP",
+  "Distributed Systems",
+  "Containerization",
+  "Cloud Security"
+ ],
+ "1417": [
+  "Systems Analysis",
+  "Mathematical Modeling",
+  "Differential Equations",
+  "Optimization Methods",
+  "Control Theory",
+  "Simulation"
+ ],
+ "1418": [
+  "Numerical Methods",
+  "Computational Mathematics",
+  "Linear Algebra",
+  "Differential Equations",
+  "Algorithms",
+  "Mathematical Modeling"
+ ],
+ "1419": [
+  "CAD Software",
+  "Design Automation",
+  "Parametric Modeling",
+  "Scripting",
+  "Engineering Design Methodologies",
+  "Optimization Algorithms"
+ ],
+ "1420": [
+  "VLSI Physical Design",
+  "Graph Algorithms",
+  "Placement Algorithms",
+  "Routing Algorithms",
+  "Floorplanning",
+  "Computational Geometry"
+ ],
+ "1421": [
+  "Formal Verification",
+  "Algorithm Design",
+  "Model Checking",
+  "Temporal Logic",
+  "Automated Theorem Proving",
+  "Program Analysis"
+ ],
+ "1422": [
+  "Discrete Mathematics",
+  "Logic",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Boolean Algebra"
+ ],
+ "1423": [
+  "Discrete Mathematics",
+  "Graph Theory",
+  "Formal Methods",
+  "Software Architecture",
+  "Logic",
+  "Set Theory"
+ ],
+ "1424": [
+  "Finite Automata",
+  "Regular Expressions",
+  "Context-Free Grammars",
+  "Turing Machines",
+  "Formal Languages",
+  "Computability Theory"
+ ],
+ "1425": [
+  "Mathematical Modeling",
+  "Differential Equations",
+  "Numerical Methods",
+  "MATLAB",
+  "Simulation",
+  "System Analysis"
+ ],
+ "1426": [
+  "Software Architecture",
+  "System Design",
+  "Design Patterns",
+  "Software Development Methodologies",
+  "UML",
+  "Modular Programming"
+ ],
+ "1427": [
+  "C",
+  "Memory Management",
+  "Operating Systems",
+  "System Calls",
+  "Process Management",
+  "File I/O"
+ ],
+ "1428": [
+  "Process Management",
+  "Memory Management",
+  "File Systems",
+  "Concurrency",
+  "CPU Scheduling",
+  "System Calls"
+ ],
+ "1429": [
+  "Cryptography",
+  "Secure Software Development",
+  "Vulnerability Assessment",
+  "Access Control",
+  "Malware Protection",
+  "Software Security Testing"
+ ],
+ "1430": [
+  "SQL",
+  "Database Design",
+  "Entity-Relationship Modeling",
+  "Normalization",
+  "Relational Databases",
+  "Data Modeling"
+ ],
+ "1431": [
+  "Socket Programming",
+  "TCP/IP",
+  "Network Protocols",
+  "Client-Server Architecture",
+  "C/C++",
+  "Network APIs"
+ ],
+ "1432": [
+  "Object-Oriented Design",
+  "Design Patterns",
+  "UML",
+  "Software Architecture",
+  "SOLID Principles",
+  "Modular Programming"
+ ],
+ "1433": [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "HTTP",
+  "Web Frameworks",
+  "REST API"
+ ],
+ "1434": [
+  "Object-Oriented Programming",
+  "Design Patterns",
+  "Software Development Methodologies",
+  "Version Control",
+  "Debugging",
+  "UML"
+ ],
+ "1435": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Design Patterns"
+ ],
+ "1436": [
+  "C#",
+  ".NET Framework",
+  "Object-Oriented Programming",
+  "CLR",
+  "ASP.NET",
+  "Visual Studio"
+ ],
+ "1437": [
+  "Unit Testing",
+  "Test Automation",
+  "Black-Box Testing",
+  "White-Box Testing",
+  "Test Case Design",
+  "Debugging"
+ ],
+ "1438": [
+  "Mobile Application Development",
+  "Android/iOS Development",
+  "Java/Kotlin/Swift",
+  "UI/UX Design",
+  "REST API",
+  "App Lifecycle Management"
+ ],
+ "1439": [
+  "Network Architecture",
+  "Network Protocols",
+  "TCP/IP",
+  "Network Topology",
+  "Routing",
+  "Switching"
+ ],
+ "1440": [
+  "EDA Tools",
+  "VLSI Design",
+  "Hardware Description Language",
+  "Logic Synthesis",
+  "Circuit Simulation",
+  "Place and Route"
+ ],
+ "1441": [],
+ "1442": [
+  "CPU Architecture",
+  "Memory Management",
+  "Operating Systems",
+  "Assembly Language",
+  "Process Scheduling",
+  "File Systems"
+ ],
+ "1443": [
+  "Digital Circuit Design",
+  "Boolean Algebra",
+  "Logic Gates",
+  "Combinational Circuits",
+  "Sequential Circuits",
+  "Hardware Description Language"
+ ],
+ "1444": [
+  "Analog Circuit Design",
+  "CMOS Technology",
+  "Operational Amplifiers",
+  "Transistor Biasing",
+  "Frequency Response Analysis",
+  "Signal Amplification"
+ ],
+ "1445": [
+  "Algorithm Design",
+  "Computational Complexity",
+  "Big-O Notation",
+  "Dynamic Programming",
+  "Graph Algorithms",
+  "Data Structures"
+ ],
+ "1446": [
+  "Linear Algebra",
+  "Optimization",
+  "Calculus",
+  "Numerical Methods",
+  "Mathematical Modeling",
+  "Algorithm Design"
+ ],
+ "1447": [
+  "Logic and Proofs",
+  "Set Theory",
+  "Graph Theory",
+  "Combinatorics",
+  "Number Theory",
+  "Discrete Probability"
+ ],
+ "1448": [
+  "Algorithm Design",
+  "Numerical Integration",
+  "Computational Mathematics",
+  "Optimization",
+  "Numerical Methods",
+  "Mathematical Modeling"
+ ],
+ "1449": [
+  "Mathematical Modeling",
+  "Integral Calculus",
+  "Numerical Methods",
+  "Differential Equations",
+  "Linear Algebra",
+  "Systems Analysis"
+ ],
+ "1450": [
+  "Programming Languages",
+  "Syntax and Semantics",
+  "Type Systems",
+  "Functional Programming",
+  "Compilers",
+  "Language Paradigms"
+ ],
+ "1451": [
+  "Object-Oriented Programming",
+  "Classes and Objects",
+  "Inheritance",
+  "Polymorphism",
+  "Encapsulation",
+  "Design Patterns"
+ ],
+ "1452": [
+  "Programming Paradigms",
+  "Syntax and Semantics",
+  "Type Systems",
+  "Functional Programming",
+  "Compilers and Interpreters",
+  "Language Design"
+ ],
+ "1453": [
+  "Object-Oriented Programming",
+  "Design Patterns",
+  "Software Development Methodologies",
+  "Version Control",
+  "Debugging",
+  "API Design"
+ ],
+ "1454": [],
+ "1455": [
+  "UI Design Principles",
+  "Event-Driven Programming",
+  "JavaScript",
+  "HTML/CSS",
+  "Frontend Frameworks",
+  "Usability Testing"
+ ],
+ "1456": [
+  "Linux",
+  "Bash Scripting",
+  "C",
+  "System Calls",
+  "File I/O",
+  "Process Management"
+ ],
+ "1457": [
+  "Blockchain",
+  "Cryptography",
+  "Cybersecurity",
+  "Distributed Systems",
+  "Smart Contracts",
+  "Network Security"
+ ],
+ "1458": [
+  "Blockchain",
+  "Smart Contracts",
+  "Ethereum",
+  "Solidity",
+  "Cryptography",
+  "Tokenomics"
+ ],
+ "1459": [
+  "Probability Theory",
+  "Statistics",
+  "Blockchain",
+  "Cryptographic Protocols",
+  "Stochastic Processes",
+  "Bayesian Inference"
+ ],
+ "1460": [],
+ "1461": [
+  "Cryptographic Hash Functions",
+  "Public Key Cryptography",
+  "Distributed Consensus Algorithms",
+  "Number Theory",
+  "Digital Signatures",
+  "Merkle Trees"
+ ],
+ "1462": [
+  "Cryptocurrency Markets",
+  "Blockchain",
+  "Technical Analysis",
+  "Trading Strategies",
+  "Decentralized Finance (DeFi)",
+  "Market Economics"
+ ],
+ "1463": [
+  "Decentralized Finance (DeFi)",
+  "Smart Contract Security",
+  "Blockchain",
+  "Risk Assessment",
+  "Liquidity Risk Modeling",
+  "Cryptographic Protocols"
+ ],
+ "1464": [
+  "Game Theory",
+  "Nash Equilibrium",
+  "Decision Theory",
+  "Probability Theory",
+  "Linear Programming",
+  "Mathematical Modeling"
+ ],
+ "1465": [
+  "Machine Learning",
+  "Neural Networks",
+  "Search Algorithms",
+  "Knowledge Representation",
+  "Natural Language Processing",
+  "Probabilistic Reasoning"
+ ],
+ "1466": [
+  "Signal Processing",
+  "Image Processing",
+  "Computer Vision",
+  "Python",
+  "Fourier Transform",
+  "Machine Learning"
+ ],
+ "1467": [
+  "Graph Algorithms",
+  "Data Mining",
+  "Big Data Analytics",
+  "Network Analysis",
+  "Machine Learning",
+  "Graph Theory"
+ ],
+ "1468": [
+  "Natural Language Processing",
+  "Text Preprocessing",
+  "Machine Learning",
+  "Deep Learning",
+  "Python",
+  "Linguistics"
+ ],
+ "1469": [
+  "Artificial Intelligence",
+  "Decision Theory",
+  "Machine Learning",
+  "Optimization Algorithms",
+  "Probabilistic Reasoning",
+  "Game Theory"
+ ],
+ "1470": [
+  "Signal Processing",
+  "Fourier Transform",
+  "Digital Filtering",
+  "Image Processing",
+  "Convolution",
+  "Frequency Domain Analysis"
+ ],
+ "1471": [
+  "Image Processing",
+  "Convolutional Neural Networks",
+  "Feature Extraction",
+  "Object Detection",
+  "OpenCV",
+  "Deep Learning"
+ ],
+ "1472": [
+  "Signal Processing",
+  "Image Reconstruction",
+  "Linear Algebra",
+  "Fourier Transform",
+  "Optimization Algorithms",
+  "Computer Vision"
+ ],
+ "1473": [
+  "Machine Learning",
+  "Neural Networks",
+  "Deep Learning",
+  "Natural Language Processing",
+  "Reinforcement Learning",
+  "AI Algorithms"
+ ],
+ "1474": [
+  "Signal Processing",
+  "Fourier Transform",
+  "Speech Recognition",
+  "Natural Language Processing",
+  "Hidden Markov Models",
+  "Feature Extraction"
+ ]
+}

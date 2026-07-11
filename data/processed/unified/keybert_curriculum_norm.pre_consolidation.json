@@ -1,0 +1,5628 @@
+{
+ "1": [
+  "Professional Technologies",
+  "Python"
+ ],
+ "2": [],
+ "3": [
+  "Data Analysis & Calculations",
+  "Mathematical Methods & Calculations",
+  "Data Calculations",
+  "Mathematical Methods",
+  "Data Analysis",
+  "Calculations",
+  "Mathematics"
+ ],
+ "4": [
+  "Mathematics & Probability Theory",
+  "Probability Theory & Data Analysis",
+  "Probability Theory",
+  "Data Science",
+  "Mathematics & Probability",
+  "Mathematics",
+  "Theory & Data",
+  "Probability",
+  "Data"
+ ],
+ "5": [
+  "Data Visualization & Processes",
+  "Data Visualization",
+  "Data Processes",
+  "Data"
+ ],
+ "6": [],
+ "7": [
+  "Data Mining",
+  "Data",
+  "Technology"
+ ],
+ "8": [],
+ "9": [
+  "Deep Neural Networks",
+  "Neural Networks"
+ ],
+ "10": [
+  "Data Warehouse & Pipeline",
+  "Data Warehouses",
+  "Data Warehouse Pipelines",
+  "Data Warehouse",
+  "Data Pipelines"
+ ],
+ "11": [
+  "Language Models",
+  "Machine Learning Models",
+  "Large-Scale Applications",
+  "Applications"
+ ],
+ "12": [
+  "Distributed Data Systems",
+  "Distributed Systems",
+  "Data Engineering",
+  "Data Engineering Systems",
+  "Data Systems",
+  "Engineering",
+  "Data"
+ ],
+ "13": [],
+ "14": [
+  "Cloud Systems",
+  "Information Security",
+  "Security",
+  "Cloud Computing"
+ ],
+ "15": [
+  "Generative Model Applications",
+  "Generative Models",
+  "Generative AI",
+  "Model Applications",
+  "Model Development",
+  "Applications"
+ ],
+ "16": [],
+ "17": [],
+ "18": [
+  "Econometrics & Time Series",
+  "Econometrics",
+  "Data Science",
+  "Time Series Data",
+  "Data"
+ ],
+ "19": [
+  "Big Data Technologies",
+  "Big Data",
+  "Data Technologies",
+  "Data"
+ ],
+ "20": [
+  "Technological Entrepreneurship",
+  "Entrepreneurship"
+ ],
+ "21": [
+  "Economics for Data Scientists",
+  "Economics & Data",
+  "Data Science",
+  "Economics",
+  "Data"
+ ],
+ "22": [],
+ "23": [],
+ "24": [],
+ "27": [
+  "Ecology & Environmental Protection",
+  "Environmental Protection",
+  "Fundamentals of Ecology & Environmental Science",
+  "Fundamentals of Ecology",
+  "Ecology",
+  "Environmental Studies",
+  "Protection"
+ ],
+ "28": [],
+ "29": [],
+ "30": [],
+ "31": [
+  "Population Emergency Situations",
+  "Civil Protection & Aid",
+  "Aid, Population & Emergency Management",
+  "Protection & Aid",
+  "Protection & Aid to Population",
+  "Emergency Situations",
+  "Population Emergency",
+  "Civil Protection",
+  "Aid to Population",
+  "Aid"
+ ],
+ "34": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "42": [],
+ "43": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "44": [
+  "Fundamentals of Ethics",
+  "Ethics"
+ ],
+ "45": [
+  "Contemporary Concepts",
+  "Natural Science",
+  "Contemporary Studies",
+  "Science"
+ ],
+ "46": [],
+ "47": [],
+ "48": [],
+ "49": [
+  "Religious Studies",
+  "Fundamentals of Religious Studies"
+ ],
+ "50": [],
+ "51": [
+  "Fundamentals of Psychology",
+  "Psychology"
+ ],
+ "53": [
+  "Cultural Studies",
+  "Fundamentals of Cultural Studies"
+ ],
+ "54": [],
+ "55": [
+  "Fundamentals of Sociology",
+  "Sociology"
+ ],
+ "56": [
+  "Principles of Economics",
+  "Economics"
+ ],
+ "57": [
+  "Fundamentals of Logic",
+  "Logic"
+ ],
+ "58": [
+  "Fundamentals of Political Science",
+  "Political Science",
+  "Science"
+ ],
+ "59": [],
+ "60": [
+  "Combinatorial Analysis & Algorithms",
+  "Combinatorial Algorithms",
+  "Combinatorial Analysis",
+  "Combinatorics",
+  "Algorithms",
+  "Analysis"
+ ],
+ "61": [],
+ "62": [
+  "Optimization Methods",
+  "Optimization"
+ ],
+ "63": [
+  "Operations Research"
+ ],
+ "64": [
+  "Mathematical Physics Equations",
+  "Mathematical Physics",
+  "Mathematical Equations",
+  "Equations",
+  "Physics",
+  "Mathematics"
+ ],
+ "65": [],
+ "66": [],
+ "67": [],
+ "68": [
+  "Numerical Methods & Linear Algebra",
+  "Numerical Methods",
+  "Linear Algebra Methods",
+  "Linear Methods",
+  "Linear Algebra",
+  "Algebra"
+ ],
+ "69": [
+  "Ordinary Differential Equations",
+  "Differential Equations",
+  "Equations"
+ ],
+ "70": [],
+ "71": [],
+ "72": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "73": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "74": [
+  "Introduction to Computer Networks",
+  "Computer Networks",
+  "Introduction to Computer Science",
+  "Computer Science"
+ ],
+ "75": [
+  "Theory of Algorithms",
+  "Algorithms"
+ ],
+ "76": [],
+ "77": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "78": [],
+ "79": [],
+ "80": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "81": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "82": [
+  "Analytic Geometry",
+  "Public Mathematics",
+  "Geometry",
+  "Mathematical Analysis",
+  "Mathematics",
+  "Analytical Skills"
+ ],
+ "83": [],
+ "84": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "85": [],
+ "86": [],
+ "87": [
+  "Combinatorial Algorithms",
+  "Combinatorics",
+  "Algorithms"
+ ],
+ "88": [],
+ "89": [],
+ "90": [
+  "Qualitative Theory of Differential Equations",
+  "Theory of Differential Equations",
+  "Qualitative Theory",
+  "Differential Equations",
+  "Qualitative Analysis",
+  "Equations"
+ ],
+ "91": [],
+ "92": [
+  "Computer Architecture & Assembly Language",
+  "Assembly Language",
+  "Computer Architecture",
+  "Computer Science"
+ ],
+ "93": [
+  "Chapters Action Research",
+  "Action Research",
+  "Chapters Action",
+  "Additional Chapters Action",
+  "Additional Chapters",
+  "Chapters",
+  "Additional"
+ ],
+ "94": [
+  "Mathematical Cybernetics",
+  "Elements of Mathematical Cybernetics",
+  "Cybernetics",
+  "Mathematics",
+  "Elements of Mathematics"
+ ],
+ "95": [],
+ "96": [],
+ "97": [
+  "Mathematical Methods",
+  "Mathematics"
+ ],
+ "106": [
+  "Professional Technologies"
+ ],
+ "107": [
+  "Research Planning Methods",
+  "Research Planning",
+  "Planning Methods",
+  "Planning"
+ ],
+ "108": [
+  "Specialization",
+  "Field Specialization"
+ ],
+ "109": [
+  "Combinatorial Optimization",
+  "Combinatorics",
+  "Optimization"
+ ],
+ "110": [
+  "Semantics of Programming Languages",
+  "Semantics of Programming",
+  "Programming Languages",
+  "Semantics",
+  "Programming"
+ ],
+ "111": [],
+ "112": [
+  "VLSI Automated Design",
+  "VLSI",
+  "Automated Design",
+  "Automated",
+  "Design"
+ ],
+ "113": [
+  "Complexity & Computability",
+  "Complexity Theory",
+  "Computability Theory"
+ ],
+ "114": [
+  "Graph Theory",
+  "special chapters graph",
+  "Chapters",
+  "Special Topics"
+ ],
+ "115": [
+  "Coding Theory",
+  "Coding",
+  "Public Key Cryptography",
+  "Chapters",
+  "Additional Chapters",
+  "Additional"
+ ],
+ "116": [
+  "Mathematical Foundations of Cryptography",
+  "Cryptography",
+  "Mathematical Problem Solving",
+  "Mathematics"
+ ],
+ "117": [
+  "Logical Modeling & Synthesis",
+  "Logical Modeling of Control Systems",
+  "Modeling of Control Systems",
+  "Logical Synthesis",
+  "Logical Modeling",
+  "Control Systems",
+  "Synthesis",
+  "Modeling",
+  "Control Theory"
+ ],
+ "118": [
+  "Algorithmic Algebra & Ring Theory",
+  "Algorithmic Algebra",
+  "Ring Theory",
+  "Algorithms",
+  "Algebra"
+ ],
+ "119": [
+  "Character Recognition Algorithms",
+  "Character Recognition",
+  "Character Recognition Models & Algorithms",
+  "Recognition",
+  "Machine Learning Algorithms",
+  "Machine Learning Models",
+  "Algorithms"
+ ],
+ "120": [
+  "Computational Geometry",
+  "Geometry",
+  "Computational Methods"
+ ],
+ "121": [
+  "Software Engineering Methods",
+  "Software Engineering",
+  "Software",
+  "Engineering"
+ ],
+ "122": [
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "123": [],
+ "124": [],
+ "125": [
+  "Combinatorial Analysis",
+  "Combinatorics",
+  "Analysis"
+ ],
+ "126": [
+  "Approximation Algorithms",
+  "Algorithms"
+ ],
+ "128": [],
+ "129": [],
+ "130": [],
+ "139": [
+  "Professional Technologies"
+ ],
+ "140": [
+  "Research Planning Methods",
+  "Research Planning",
+  "Planning Methods",
+  "Planning"
+ ],
+ "141": [
+  "Specialization",
+  "Field Specialization"
+ ],
+ "142": [
+  "Combinatorial Optimization",
+  "Combinatorics",
+  "Optimization"
+ ],
+ "143": [
+  "Semantics of Programming Languages",
+  "Semantics of Programming",
+  "Programming Languages",
+  "Semantics",
+  "Programming"
+ ],
+ "144": [],
+ "145": [
+  "Linear Algebra Algorithms",
+  "Computational Linear Algebra",
+  "Computational Algorithms",
+  "Linear Algebra",
+  "Algorithms",
+  "Computational Methods",
+  "Algebra"
+ ],
+ "146": [
+  "Mathematical Foundations",
+  "Mathematical Foundations of Machine Learning",
+  "Machine Learning",
+  "Mathematics"
+ ],
+ "147": [
+  "Multidimensional Interpolation",
+  "Interpolation",
+  "Multidimensional Methods"
+ ],
+ "148": [
+  "Digital Optimization",
+  "Optimization",
+  "Digital"
+ ],
+ "149": [],
+ "150": [
+  "Equitable Distribution Sequences",
+  "Distribution Sequences",
+  "Equitable Distribution",
+  "Sequences",
+  "Equitable"
+ ],
+ "151": [
+  "Applied Functional Analysis",
+  "Functional Analysis",
+  "Analysis",
+  "Applied Studies"
+ ],
+ "152": [
+  "Accounting Euclidean Algorithms",
+  "Public Accounting Euclidean Algorithms",
+  "Euclidean Algorithms",
+  "Public Accounting",
+  "Accounting",
+  "Algorithms"
+ ],
+ "153": [
+  "Financial Mathematics",
+  "Mathematics"
+ ],
+ "154": [],
+ "155": [
+  "Computational Discrete Geometry",
+  "Discrete Geometry",
+  "Geometry",
+  "Computational Methods",
+  "Discrete Mathematics"
+ ],
+ "156": [
+  "Digital Signal Processing",
+  "Digital Signal",
+  "Signal Processing",
+  "Digital",
+  "Signal",
+  "Processing"
+ ],
+ "157": [
+  "Mathematical Modeling of Biophysical Systems",
+  "Modeling Biophysical Systems",
+  "Biophysical Systems",
+  "Mathematical Modeling",
+  "Modeling",
+  "Mathematics"
+ ],
+ "158": [
+  "Foundations of Computer Graphics",
+  "Mathematical Foundations of Computer Graphics",
+  "Mathematical Foundations",
+  "Computer Graphics",
+  "Mathematics",
+  "Computer Science"
+ ],
+ "159": [
+  "Regularization Methods",
+  "Regularization"
+ ],
+ "160": [
+  "Mathematical Modeling",
+  "Modeling",
+  "Mathematics"
+ ],
+ "161": [],
+ "162": [],
+ "163": [],
+ "172": [
+  "Professional Technologies"
+ ],
+ "173": [
+  "Research Planning Methods",
+  "Research Planning",
+  "Planning Methods",
+  "Planning"
+ ],
+ "174": [
+  "Specialization",
+  "Field Specialization"
+ ],
+ "175": [
+  "Combinatorial Optimization",
+  "Combinatorics",
+  "Optimization"
+ ],
+ "176": [
+  "Semantics of Programming Languages",
+  "Semantics of Programming",
+  "Programming Languages",
+  "Semantics",
+  "Programming"
+ ],
+ "177": [],
+ "178": [
+  "Types of Semantic Analysis",
+  "Analysis of Programming Languages",
+  "Semantic Analysis of Programming Languages",
+  "Programming Languages",
+  "Semantic Analysis",
+  "Programming",
+  "Semantic Search",
+  "Analysis"
+ ],
+ "179": [
+  "Artificial Intelligence Systems",
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "180": [
+  "Fundamentals of Logic Programming",
+  "Logic Programming",
+  "Fundamentals of Logic",
+  "Logic",
+  "Programming"
+ ],
+ "181": [
+  "Data Structures",
+  "Data"
+ ],
+ "182": [],
+ "183": [
+  "Computer Networks and Protocols",
+  "Networks and Protocols",
+  "Organization of Computer Networks",
+  "Computer Networks",
+  "Protocols",
+  "Computer Science"
+ ],
+ "184": [
+  "Software Systems Testing",
+  "Testing and Quality Assurance",
+  "Systems Testing",
+  "Quality Assurance",
+  "Software Testing",
+  "Software Systems",
+  "Software Quality Assurance",
+  "Software"
+ ],
+ "185": [
+  "Information Storage",
+  "Storage Management",
+  "Storage"
+ ],
+ "186": [
+  "Intellectual Data Analysis",
+  "Intellectual Data Methods",
+  "Intellectual Data",
+  "Intellectual Methods",
+  "Data Analysis",
+  "Intellectual Skills",
+  "Analysis",
+  "Data"
+ ],
+ "187": [
+  "Parallel and Distributed Programming",
+  "Distributed Programming",
+  "Parallel and Distributed Computing",
+  "Distributed Systems",
+  "Parallel Programming",
+  "Programming"
+ ],
+ "188": [
+  "Knowledge Bases",
+  "Optimization Implementation",
+  "Databases",
+  "Optimization"
+ ],
+ "189": [
+  "Compiler Construction",
+  "Fundamentals of Compiler Construction"
+ ],
+ "190": [
+  "Business Forecasting Models",
+  "Forecasting Models",
+  "Applied Forecasting Models",
+  "Applied Forecasting",
+  "Forecasting",
+  "Business Models",
+  "Machine Learning Models"
+ ],
+ "191": [
+  "Cybersecurity",
+  "Information Technology",
+  "Technology"
+ ],
+ "192": [
+  "Big Data Analysis",
+  "Big Data",
+  "Data Analysis",
+  "Analysis",
+  "Data"
+ ],
+ "193": [
+  "Image Processing Models",
+  "Image Processing",
+  "Mathematical Models for Image Processing",
+  "Mathematical Modeling",
+  "Machine Learning Models",
+  "Mathematics",
+  "Processing"
+ ],
+ "194": [],
+ "195": [],
+ "196": [],
+ "199": [
+  "Ecology & Environmental Protection",
+  "Environmental Protection",
+  "Fundamentals of Ecology & Environmental Science",
+  "Fundamentals of Ecology",
+  "Ecology",
+  "Environmental Studies",
+  "Protection"
+ ],
+ "200": [],
+ "201": [],
+ "202": [],
+ "207": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "208": [
+  "Population Emergency Situations",
+  "Civil Protection & Aid",
+  "Aid, Population & Emergency Management",
+  "Protection & Aid",
+  "Protection & Aid to Population",
+  "Emergency Situations",
+  "Population Emergency",
+  "Civil Protection",
+  "Aid to Population",
+  "Aid"
+ ],
+ "214": [],
+ "215": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "216": [],
+ "217": [
+  "Fundamentals of Political Science",
+  "Political Science",
+  "Science"
+ ],
+ "218": [
+  "Religious Studies",
+  "Fundamentals of Religious Studies"
+ ],
+ "219": [
+  "Cultural Studies",
+  "Fundamentals of Cultural Studies"
+ ],
+ "220": [
+  "Fundamentals of Psychology",
+  "Psychology"
+ ],
+ "221": [
+  "Fundamentals of Logic",
+  "Logic"
+ ],
+ "222": [
+  "Fundamentals of Ethics",
+  "Ethics"
+ ],
+ "223": [
+  "Fundamentals of Sociology",
+  "Sociology"
+ ],
+ "224": [
+  "Contemporary Concepts",
+  "Natural Science",
+  "Contemporary Studies",
+  "Science"
+ ],
+ "225": [],
+ "226": [],
+ "227": [
+  "Critical & Creative Thinking",
+  "Creative Thinking"
+ ],
+ "228": [],
+ "230": [
+  "Critical & Creative Thinking",
+  "Creative Thinking"
+ ],
+ "231": [
+  "Critical & Creative Thinking",
+  "Creative Thinking"
+ ],
+ "232": [],
+ "233": [
+  "Principles of Economics",
+  "Economics"
+ ],
+ "234": [],
+ "235": [
+  "Optimization Methods",
+  "Optimization"
+ ],
+ "236": [
+  "Combinatorial Analysis & Algorithms",
+  "Combinatorial Algorithms",
+  "Combinatorial Analysis",
+  "Combinatorics",
+  "Algorithms",
+  "Analysis"
+ ],
+ "237": [],
+ "238": [
+  "Theory of Algorithms",
+  "Algorithms"
+ ],
+ "239": [
+  "Mathematical Physics Equations",
+  "Mathematical Physics",
+  "Mathematical Equations",
+  "Equations",
+  "Physics",
+  "Mathematics"
+ ],
+ "240": [
+  "Ordinary Differential Equations",
+  "Differential Equations",
+  "Equations"
+ ],
+ "241": [
+  "Operations Research"
+ ],
+ "242": [
+  "Numerical Methods & Linear Algebra",
+  "Numerical Methods",
+  "Linear Algebra Methods",
+  "Linear Methods",
+  "Linear Algebra",
+  "Algebra"
+ ],
+ "243": [],
+ "244": [],
+ "245": [],
+ "246": [],
+ "247": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "248": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "249": [],
+ "250": [
+  "Introduction to Computer Networks",
+  "Computer Networks",
+  "Introduction to Computer Science",
+  "Computer Science"
+ ],
+ "251": [],
+ "252": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "253": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "254": [],
+ "255": [],
+ "256": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "257": [],
+ "258": [
+  "Analytic Geometry",
+  "Public Mathematics",
+  "Geometry",
+  "Mathematical Analysis",
+  "Mathematics",
+  "Analytical Skills"
+ ],
+ "259": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "260": [],
+ "261": [],
+ "262": [],
+ "263": [
+  "Mathematical Methods",
+  "Mathematics"
+ ],
+ "264": [],
+ "265": [
+  "Computer Architecture & Assembly Language",
+  "Assembly Language",
+  "Computer Architecture",
+  "Computer Science"
+ ],
+ "266": [],
+ "267": [
+  "Qualitative Theory of Differential Equations",
+  "Theory of Differential Equations",
+  "Qualitative Theory",
+  "Differential Equations",
+  "Qualitative Analysis",
+  "Equations"
+ ],
+ "268": [
+  "Combinatorial Algorithms",
+  "Combinatorics",
+  "Algorithms"
+ ],
+ "269": [],
+ "270": [],
+ "271": [
+  "Mathematical Cybernetics",
+  "Elements of Mathematical Cybernetics",
+  "Cybernetics",
+  "Mathematics",
+  "Elements of Mathematics"
+ ],
+ "272": [
+  "Chapters Action Research",
+  "Action Research",
+  "Chapters Action",
+  "Additional Chapters Action",
+  "Additional Chapters",
+  "Chapters",
+  "Additional"
+ ],
+ "273": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "275": [
+  "Ecology & Environmental Protection",
+  "Environmental Protection",
+  "Fundamentals of Ecology & Environmental Science",
+  "Fundamentals of Ecology",
+  "Ecology",
+  "Environmental Studies",
+  "Protection"
+ ],
+ "276": [],
+ "277": [],
+ "278": [],
+ "279": [
+  "Population Emergency Situations",
+  "Civil Protection & Aid",
+  "Aid, Population & Emergency Management",
+  "Protection & Aid",
+  "Protection & Aid to Population",
+  "Emergency Situations",
+  "Population Emergency",
+  "Civil Protection",
+  "Aid to Population",
+  "Aid"
+ ],
+ "280": [],
+ "281": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "292": [
+  "Fundamentals of Ethics",
+  "Ethics"
+ ],
+ "293": [
+  "Contemporary Concepts",
+  "Natural Science",
+  "Contemporary Studies",
+  "Science"
+ ],
+ "294": [],
+ "295": [],
+ "296": [],
+ "297": [
+  "Religious Studies",
+  "Fundamentals of Religious Studies"
+ ],
+ "298": [],
+ "299": [
+  "Fundamentals of Psychology",
+  "Psychology"
+ ],
+ "301": [
+  "Cultural Studies",
+  "Fundamentals of Cultural Studies"
+ ],
+ "302": [],
+ "303": [
+  "Fundamentals of Sociology",
+  "Sociology"
+ ],
+ "304": [
+  "Principles of Economics",
+  "Economics"
+ ],
+ "305": [
+  "Fundamentals of Logic",
+  "Logic"
+ ],
+ "306": [
+  "Fundamentals of Political Science",
+  "Political Science",
+  "Science"
+ ],
+ "307": [
+  "Information Security",
+  "Security"
+ ],
+ "308": [
+  "Mathematical Methods in Cryptography",
+  "Cryptography Methods",
+  "Cryptography",
+  "Mathematical Methods",
+  "Mathematics"
+ ],
+ "309": [
+  "Operations Research",
+  "Mathematical Methods",
+  "Mathematics"
+ ],
+ "310": [],
+ "311": [
+  "Numerical Methods & Linear Algebra",
+  "Numerical Methods",
+  "Linear Algebra Methods",
+  "Linear Methods",
+  "Linear Algebra",
+  "Algebra"
+ ],
+ "312": [
+  "Systems Modeling",
+  "Machine Learning Models"
+ ],
+ "313": [],
+ "314": [
+  "Differential Equations",
+  "Equations"
+ ],
+ "315": [],
+ "316": [],
+ "317": [
+  "Combinatorial Algorithms and Analysis",
+  "Combinatorial Algorithms",
+  "Combinatorics",
+  "Algorithm Analysis",
+  "Algorithms",
+  "Analysis"
+ ],
+ "318": [],
+ "319": [
+  "Theory of Algorithms",
+  "Algorithms"
+ ],
+ "320": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "321": [],
+ "322": [],
+ "323": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "324": [],
+ "325": [
+  "Network Security",
+  "Computer Networking",
+  "Security",
+  "Computer Science"
+ ],
+ "326": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "327": [],
+ "328": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "329": [
+  "Analytic Geometry",
+  "Public Mathematics",
+  "Geometry",
+  "Mathematical Analysis",
+  "Mathematics",
+  "Analytical Skills"
+ ],
+ "330": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "331": [],
+ "332": [],
+ "333": [
+  "Computer Architecture & Assembly Language",
+  "Assembly Language",
+  "Computer Architecture",
+  "Computer Science"
+ ],
+ "334": [
+  "Optimization Methods",
+  "Optimization"
+ ],
+ "335": [],
+ "336": [],
+ "337": [],
+ "338": [],
+ "339": [
+  "Mathematical Methods in Cryptography",
+  "Cryptography Methods",
+  "Cryptography",
+  "Mathematical Methods",
+  "Mathematics"
+ ],
+ "340": [],
+ "341": [
+  "Parallel Programming",
+  "Programming"
+ ],
+ "342": [],
+ "343": [],
+ "344": [
+  "Mathematical Modeling",
+  "Modeling",
+  "Mathematics"
+ ],
+ "347": [
+  "Ecology & Environmental Protection",
+  "Environmental Protection",
+  "Fundamentals of Ecology & Environmental Science",
+  "Fundamentals of Ecology",
+  "Ecology",
+  "Environmental Studies",
+  "Protection"
+ ],
+ "348": [],
+ "349": [],
+ "350": [],
+ "351": [
+  "Population Emergency Situations",
+  "Civil Protection & Aid",
+  "Aid, Population & Emergency Management",
+  "Protection & Aid",
+  "Protection & Aid to Population",
+  "Emergency Situations",
+  "Population Emergency",
+  "Civil Protection",
+  "Aid to Population",
+  "Aid"
+ ],
+ "354": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "357": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "363": [],
+ "364": [
+  "Cultural Studies",
+  "Fundamentals of Cultural Studies"
+ ],
+ "365": [
+  "Fundamentals of Ethics",
+  "Ethics"
+ ],
+ "366": [
+  "Contemporary Concepts",
+  "Natural Science",
+  "Contemporary Studies",
+  "Science"
+ ],
+ "367": [],
+ "368": [],
+ "369": [
+  "Religious Studies",
+  "Fundamentals of Religious Studies"
+ ],
+ "370": [],
+ "371": [
+  "Fundamentals of Psychology",
+  "Psychology"
+ ],
+ "373": [],
+ "374": [
+  "Fundamentals of Sociology",
+  "Sociology"
+ ],
+ "375": [
+  "Information Technology Applications",
+  "Technology Applications",
+  "Information Technology",
+  "Applications",
+  "Technology"
+ ],
+ "376": [
+  "Principles of Economics",
+  "Economics"
+ ],
+ "377": [
+  "Fundamentals of Logic",
+  "Logic"
+ ],
+ "378": [
+  "Fundamentals of Political Science",
+  "Political Science",
+  "Science"
+ ],
+ "379": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "380": [],
+ "381": [],
+ "382": [],
+ "383": [],
+ "384": [],
+ "385": [
+  "Mathematical Statistics",
+  "Statistics",
+  "Mathematics"
+ ],
+ "386": [],
+ "387": [
+  "Algorithm Theory",
+  "Algorithm Fundamentals",
+  "Algorithms"
+ ],
+ "388": [],
+ "389": [
+  "Python",
+  "Programming"
+ ],
+ "391": [],
+ "392": [
+  "Discrete Probability",
+  "Probability Theory",
+  "Discrete Mathematics"
+ ],
+ "393": [
+  "Ordinary Differential Equations",
+  "Differential Equations",
+  "Equations"
+ ],
+ "394": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "396": [
+  "Programming",
+  "Programming Languages"
+ ],
+ "397": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "399": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "400": [],
+ "402": [],
+ "403": [],
+ "404": [],
+ "405": [
+  "Statistical Programming",
+  "Statistics",
+  "Programming"
+ ],
+ "406": [],
+ "407": [],
+ "408": [],
+ "409": [],
+ "410": [
+  "Natural Language Processing",
+  "Processing"
+ ],
+ "411": [],
+ "412": [],
+ "413": [],
+ "414": [],
+ "415": [],
+ "416": [
+  "Multivariate Statistics",
+  "Statistics"
+ ],
+ "417": [],
+ "418": [
+  "Information Technologies",
+  "Technology Specialization",
+  "Specialization"
+ ],
+ "419": [
+  "Research Planning Methods",
+  "Research Planning",
+  "Planning Methods",
+  "Planning"
+ ],
+ "424": [],
+ "425": [],
+ "426": [
+  "Linear Algebra and Applications",
+  "Linear Algebra",
+  "Applied Algebra",
+  "Applications",
+  "Algebra"
+ ],
+ "427": [],
+ "428": [],
+ "429": [
+  "Python",
+  "Programming Languages",
+  "Programming"
+ ],
+ "430": [],
+ "431": [],
+ "432": [
+  "Multivariate Statistics",
+  "Statistics"
+ ],
+ "433": [],
+ "434": [],
+ "435": [],
+ "436": [
+  "Natural Language Processing",
+  "Processing"
+ ],
+ "437": [],
+ "438": [],
+ "439": [],
+ "440": [],
+ "441": [
+  "Stochastic Processes",
+  "Stochastic Process Analysis",
+  "Stochastic Analysis",
+  "Random Processes",
+  "Analysis"
+ ],
+ "442": [
+  "Digital Signal Processing",
+  "Digital Signal",
+  "Signal Processing",
+  "Digital",
+  "Signal",
+  "Processing"
+ ],
+ "443": [
+  "Machine Learning Product Development"
+ ],
+ "444": [
+  "Machine Learning in Healthcare",
+  "Machine Learning",
+  "Healthcare"
+ ],
+ "445": [
+  "Advanced Statistics",
+  "Statistics",
+  "Additional Chapters",
+  "Chapters",
+  "Additional"
+ ],
+ "446": [
+  "Reinforcement Learning"
+ ],
+ "447": [
+  "Graph Neural Networks",
+  "Neural Networks",
+  "Graph Theory"
+ ],
+ "448": [],
+ "449": [],
+ "451": [
+  "Information Technologies",
+  "Technology Specialization",
+  "Specialization"
+ ],
+ "452": [],
+ "453": [
+  "Research Planning Methods",
+  "Research Planning",
+  "Planning Methods",
+  "Planning"
+ ],
+ "454": [],
+ "455": [],
+ "458": [],
+ "459": [],
+ "468": [
+  "Technologies Professional Research",
+  "Professional Technologies",
+  "Professional Research",
+  "Modern Mobile Applications",
+  "Mobile",
+  "Applications"
+ ],
+ "469": [
+  "Research Planning Methods",
+  "Research Planning",
+  "Planning Methods",
+  "Planning"
+ ],
+ "470": [
+  "Database Paradigms Specialization",
+  "Database Specialization",
+  "Database Specialization Issues",
+  "Database Paradigms",
+  "Issues of Specialization",
+  "Specialization",
+  "Databases"
+ ],
+ "471": [
+  "Natural Language Processing",
+  "Processing"
+ ],
+ "472": [
+  "Object-Oriented Analysis",
+  "Object-Oriented Programming",
+  "Object-Oriented Analysis and Design",
+  "Analysis and Design",
+  "Design",
+  "Analysis"
+ ],
+ "473": [
+  "Database Systems",
+  "Databases",
+  "Database Issues"
+ ],
+ "474": [
+  "Theory of Computer Design",
+  "Computer Design",
+  "Theory of Computing",
+  "Design",
+  "Computer Science"
+ ],
+ "475": [
+  "Web and Mobile Applications",
+  "Web & Mobile Development",
+  "Mobile Applications",
+  "Web Design & Development",
+  "Web Development",
+  "Mobile",
+  "Design & Development",
+  "Applications",
+  "Design"
+ ],
+ "476": [
+  "Database Systems",
+  "Databases",
+  "Database Principles"
+ ],
+ "477": [],
+ "478": [],
+ "479": [
+  "Testing of Electronic Devices",
+  "Electronic Testing",
+  "Software Testing",
+  "Electronic Devices",
+  "Electronics"
+ ],
+ "480": [
+  "Programming Paradigms",
+  "Programming"
+ ],
+ "481": [
+  "Data Management & Analytics",
+  "Big Data",
+  "Data Management",
+  "Management Analytics",
+  "Analytics",
+  "Data"
+ ],
+ "482": [
+  "Embedded Systems Design",
+  "Embedded Systems",
+  "Embedded Design",
+  "Design"
+ ],
+ "483": [
+  "Database Technologies",
+  "Databases"
+ ],
+ "484": [
+  "Software Systems Testing",
+  "Testing and Quality Assurance",
+  "Systems Testing",
+  "Quality Assurance",
+  "Software Testing",
+  "Software Systems",
+  "Software Quality Assurance",
+  "Software"
+ ],
+ "485": [],
+ "486": [
+  "Compiler Construction",
+  "Compiler Construction Issues",
+  "Compiler Issues"
+ ],
+ "487": [
+  "Nanoscale Testing Issues",
+  "Nanoscale Electronic Devices",
+  "Nanoscale Electronic Issues",
+  "Nanoscale Electronics",
+  "Nanoscale Issues",
+  "Nanoscale",
+  "Electronic Devices",
+  "Testing Issues",
+  "Software Testing",
+  "Electronics"
+ ],
+ "488": [],
+ "489": [
+  ".NET Platform",
+  ".NET",
+  "Platform Development"
+ ],
+ "490": [],
+ "491": [],
+ "492": [],
+ "501": [
+  "Technologies Professional Research",
+  "Professional Technologies",
+  "Professional Research",
+  "Modern Mobile Applications",
+  "Mobile",
+  "Applications"
+ ],
+ "502": [
+  "Research Planning Methods",
+  "Research Planning",
+  "Planning Methods",
+  "Planning"
+ ],
+ "503": [
+  "Database Paradigms Specialization",
+  "Database Specialization",
+  "Database Specialization Issues",
+  "Database Paradigms",
+  "Issues of Specialization",
+  "Specialization",
+  "Databases"
+ ],
+ "504": [
+  "Natural Language Processing",
+  "Processing"
+ ],
+ "505": [
+  "Object-Oriented Analysis",
+  "Object-Oriented Programming",
+  "Object-Oriented Analysis and Design",
+  "Analysis and Design",
+  "Design",
+  "Analysis"
+ ],
+ "506": [
+  "Database Systems",
+  "Databases",
+  "Database Issues"
+ ],
+ "507": [],
+ "508": [
+  "Competition Management & Recovery",
+  "Database Systems Disruptions",
+  "Competition Management",
+  "Database Recovery & Disruptions",
+  "Database Systems",
+  "Management of Recovery & Disruptions",
+  "Database Disruptions",
+  "Competition Implementation",
+  "Competition",
+  "Databases"
+ ],
+ "509": [
+  "Web and Mobile Applications",
+  "Web & Mobile Development",
+  "Mobile Applications",
+  "Web Design & Development",
+  "Web Development",
+  "Mobile",
+  "Design & Development",
+  "Applications",
+  "Design"
+ ],
+ "510": [
+  "Fundamental Algorithms",
+  "Algorithms"
+ ],
+ "511": [],
+ "513": [],
+ "514": [
+  "Digital Firm Management",
+  "Digital Firm",
+  "Firm Management",
+  "Digital"
+ ],
+ "515": [
+  "Data Management & Analytics",
+  "Big Data",
+  "Data Management",
+  "Management Analytics",
+  "Analytics",
+  "Data"
+ ],
+ "516": [
+  "Communication Network Technologies",
+  "Data Communication",
+  "Data Communication Networks",
+  "Network Technologies",
+  "Communication Networks",
+  "Computer Networking",
+  "Data"
+ ],
+ "517": [
+  "iOS Application Development",
+  "iOS"
+ ],
+ "518": [],
+ "519": [
+  "Corporate Design Patterns",
+  "Corporate Technology Patterns",
+  "Corporate Patterns",
+  "Design Patterns",
+  "Corporate Technologies",
+  "Design",
+  "Patterns"
+ ],
+ "520": [],
+ "521": [
+  "Unix Operating System Management",
+  "Unix Operating System",
+  "Unix Management",
+  "Unix",
+  "Operating Systems"
+ ],
+ "522": [],
+ "523": [],
+ "524": [],
+ "525": [],
+ "528": [],
+ "529": [
+  "Ecology & Environmental Protection",
+  "Environmental Protection",
+  "Fundamentals of Ecology & Environmental Science",
+  "Fundamentals of Ecology",
+  "Ecology",
+  "Environmental Studies",
+  "Protection"
+ ],
+ "530": [],
+ "531": [],
+ "536": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "537": [],
+ "538": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "544": [
+  "Population Emergency Situations",
+  "Civil Protection & Aid",
+  "Aid, Population & Emergency Management",
+  "Protection & Aid",
+  "Protection & Aid to Population",
+  "Emergency Situations",
+  "Population Emergency",
+  "Civil Protection",
+  "Aid to Population",
+  "Aid"
+ ],
+ "545": [
+  "Fundamentals of Ethics",
+  "Ethics"
+ ],
+ "546": [
+  "Contemporary Concepts",
+  "Natural Science",
+  "Contemporary Studies",
+  "Science"
+ ],
+ "547": [],
+ "548": [],
+ "549": [],
+ "550": [
+  "Religious Studies",
+  "Fundamentals of Religious Studies"
+ ],
+ "551": [],
+ "552": [
+  "Fundamentals of Psychology",
+  "Psychology"
+ ],
+ "553": [
+  "Mathematics Foundations",
+  "Mathematics"
+ ],
+ "555": [
+  "Cultural Studies",
+  "Fundamentals of Cultural Studies"
+ ],
+ "556": [],
+ "557": [
+  "Fundamentals of Sociology",
+  "Sociology"
+ ],
+ "558": [
+  "Information Technology Applications",
+  "Technology Applications",
+  "Information Technology",
+  "Applications",
+  "Technology"
+ ],
+ "559": [
+  "Principles of Economics",
+  "Economics"
+ ],
+ "560": [
+  "Fundamentals of Logic",
+  "Logic"
+ ],
+ "561": [
+  "Fundamentals of Political Science",
+  "Political Science",
+  "Science"
+ ],
+ "562": [
+  "Optical Phenomena in Physics",
+  "Optical Phenomena",
+  "Optical Physics",
+  "Optics",
+  "Physics",
+  "Phenomena"
+ ],
+ "563": [],
+ "564": [],
+ "565": [
+  "Thermodynamics and Statistical Physics",
+  "Thermodynamics and Statistics",
+  "Statistical Physics",
+  "Thermodynamics",
+  "Statistics",
+  "Physics"
+ ],
+ "566": [
+  "Artificial Intelligence in Physics",
+  "Artificial Intelligence Applications",
+  "Intelligence in Physics",
+  "Physics",
+  "Artificial Intelligence",
+  "Artificial Applications",
+  "Intelligence",
+  "Applications"
+ ],
+ "567": [
+  "Physical Modeling",
+  "Modeling"
+ ],
+ "568": [],
+ "569": [],
+ "570": [],
+ "571": [
+  "Discrete Mathematics and Graph Theory",
+  "Mathematics and Graph Theory",
+  "Graph Theory",
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "572": [
+  "Probability Theory and Statistics",
+  "Probability Theory",
+  "Probability and Statistics",
+  "Statistics",
+  "Probability"
+ ],
+ "573": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "574": [
+  "Differential Equations",
+  "Equations"
+ ],
+ "575": [
+  "Calculus and Analytical Geometry",
+  "Analytic Geometry",
+  "Advanced Calculus and Analytical Geometry",
+  "Geometry",
+  "Advanced Calculus",
+  "Analytical Skills",
+  "Calculus"
+ ],
+ "576": [],
+ "577": [],
+ "578": [],
+ "579": [
+  "Electricity and Magnetism",
+  "Magnetism",
+  "Electricity"
+ ],
+ "580": [
+  "Programming Fundamentals",
+  "Programming"
+ ],
+ "581": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "582": [
+  "Programming Fundamentals",
+  "Programming"
+ ],
+ "583": [
+  "Mechanics Fundamentals",
+  "Mechanics"
+ ],
+ "584": [],
+ "585": [
+  "Telecommunication Systems Modeling",
+  "Telecommunication Modeling",
+  "Telecommunication Systems",
+  "Telecommunications",
+  "Modeling"
+ ],
+ "586": [
+  "Applied Microwave Electrodynamics",
+  "Microwave Electrodynamics",
+  "Applied Microwave",
+  "Electrodynamics",
+  "Microwave Engineering",
+  "Applied Studies"
+ ],
+ "587": [
+  "Automation Experiments Practicum",
+  "Automation",
+  "Automation Practicum",
+  "Practicum"
+ ],
+ "588": [
+  "Micro/Nano Simulation",
+  "Micro and Nano Systems",
+  "Micro Simulation",
+  "Nano Systems",
+  "Micro/Nano Technology",
+  "Nanotechnology",
+  "Simulation",
+  "Microtechnology"
+ ],
+ "589": [
+  "Digital Processes",
+  "Digital Theory",
+  "Digital"
+ ],
+ "590": [
+  "Radiophysical Problem Modeling",
+  "Radiophysical Computer Modeling",
+  "Radiophysical Modeling",
+  "Radiophysical Problems",
+  "Radiophysics",
+  "Computer Modeling",
+  "Modeling",
+  "Computer Science"
+ ],
+ "591": [
+  "Digital Signal Processing",
+  "Digital Signal",
+  "Signal Processing",
+  "Digital",
+  "Signal",
+  "Processing"
+ ],
+ "592": [],
+ "593": [
+  "Optimization Methods",
+  "Optimization"
+ ],
+ "594": [
+  "Semiconductor Electronics and Circuit Design",
+  "Semiconductor Electronics",
+  "Electronics Circuit Design",
+  "Circuit Design",
+  "Semiconductors",
+  "Electronics",
+  "Design"
+ ],
+ "595": [],
+ "596": [
+  "Orthogonal Bases and Approximations",
+  "Orthogonal Approximations",
+  "Orthogonal Bases",
+  "Orthogonal Methods",
+  "Approximations",
+  "Databases"
+ ],
+ "597": [],
+ "598": [],
+ "599": [
+  "Electrodynamic Process Simulation",
+  "Electrodynamic Simulation",
+  "Electrodynamic Processes",
+  "Electrodynamics",
+  "Simulation"
+ ],
+ "600": [
+  "Search Algorithms",
+  "Graph Theory",
+  "Algorithms"
+ ],
+ "603": [
+  "Ecology & Environmental Protection",
+  "Environmental Protection",
+  "Fundamentals of Ecology & Environmental Science",
+  "Fundamentals of Ecology",
+  "Ecology",
+  "Environmental Studies",
+  "Protection"
+ ],
+ "604": [],
+ "605": [],
+ "606": [],
+ "611": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "612": [],
+ "613": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "619": [
+  "Population Emergency Situations",
+  "Civil Protection & Aid",
+  "Aid, Population & Emergency Management",
+  "Protection & Aid",
+  "Protection & Aid to Population",
+  "Emergency Situations",
+  "Population Emergency",
+  "Civil Protection",
+  "Aid to Population",
+  "Aid"
+ ],
+ "620": [
+  "Fundamentals of Ethics",
+  "Ethics"
+ ],
+ "621": [
+  "Contemporary Concepts",
+  "Natural Science",
+  "Contemporary Studies",
+  "Science"
+ ],
+ "622": [],
+ "623": [],
+ "624": [],
+ "625": [
+  "Religious Studies",
+  "Fundamentals of Religious Studies"
+ ],
+ "626": [],
+ "627": [
+  "Fundamentals of Psychology",
+  "Psychology"
+ ],
+ "629": [
+  "Cultural Studies",
+  "Fundamentals of Cultural Studies"
+ ],
+ "630": [],
+ "631": [
+  "Fundamentals of Sociology",
+  "Sociology"
+ ],
+ "632": [
+  "Principles of Economics",
+  "Economics"
+ ],
+ "633": [
+  "Fundamentals of Logic",
+  "Logic"
+ ],
+ "634": [
+  "Fundamentals of Political Science",
+  "Political Science",
+  "Science"
+ ],
+ "635": [],
+ "636": [
+  "Lasers and Optical Communication",
+  "Optical Communication",
+  "Lasers & Optical Systems",
+  "Lasers",
+  "Optics"
+ ],
+ "637": [
+  "Computer Modeling of Physical Processes",
+  "Physical Modeling",
+  "Computer Modeling",
+  "Modeling",
+  "Computer Science"
+ ],
+ "638": [
+  "Fundamentals of Circuit Design",
+  "Circuit Design",
+  "Design"
+ ],
+ "639": [
+  "Theory of Coding",
+  "Coding"
+ ],
+ "640": [
+  "Radiophysics & Theory of Probabilities",
+  "Statistical Radiophysics",
+  "Radiophysics",
+  "Theory of Probabilities",
+  "Probability Theory",
+  "Statistics"
+ ],
+ "641": [
+  "Radio Engineering Theory",
+  "Theory of Fluctuations in Engineering",
+  "Theory of Fluctuations",
+  "Fundamentals of Radio Engineering",
+  "Radio Engineering",
+  "Engineering Theory",
+  "Engineering"
+ ],
+ "642": [
+  "Physics of Semiconductor Devices",
+  "Semiconductor Devices",
+  "Semiconductors",
+  "Physics"
+ ],
+ "643": [
+  "Automation"
+ ],
+ "644": [
+  "Quantum Physics of the Microcosm",
+  "Quantum Physics",
+  "Quantum Mechanics",
+  "Physics"
+ ],
+ "645": [
+  "Radio Engineering Theory",
+  "Fundamentals of Radio Engineering",
+  "Theory of Oscillations in Engineering",
+  "Radio Engineering",
+  "Theory of Oscillations",
+  "Engineering Theory",
+  "Engineering"
+ ],
+ "646": [
+  "Fundamentals of Photonics",
+  "Photonics"
+ ],
+ "647": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "648": [
+  "Electricity and Magnetism",
+  "Magnetism",
+  "Electricity"
+ ],
+ "649": [],
+ "650": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "651": [],
+ "652": [
+  "Electricity and Magnetism",
+  "Magnetism",
+  "Electricity"
+ ],
+ "653": [
+  "Molecular Physics & Thermodynamics",
+  "Molecular Physics",
+  "Thermodynamics",
+  "Molecular Science",
+  "Physics"
+ ],
+ "654": [
+  "Programming Fundamentals",
+  "Programming"
+ ],
+ "655": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "656": [
+  "Research Planning Methods",
+  "Research Planning",
+  "Planning Methods",
+  "Planning"
+ ],
+ "657": [
+  "Mechanics Fundamentals",
+  "Mechanics"
+ ],
+ "658": [
+  "Programming Fundamentals",
+  "Programming"
+ ],
+ "659": [
+  "Programmable Electronics",
+  "Programmable Logic",
+  "Electronics"
+ ],
+ "660": [],
+ "661": [
+  "Artificial Intelligence Systems",
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "662": [
+  "Digital Logic & Microprocessors",
+  "Digital Logic Design",
+  "Microprocessors",
+  "Digital",
+  "Logic"
+ ],
+ "663": [
+  "Internet of Things (IoT) Applications",
+  "Internet of Things (IoT)",
+  "Applications",
+  "Internet Technologies"
+ ],
+ "664": [
+  "Mobile Communication",
+  "Mobile"
+ ],
+ "665": [
+  "Telecommunication Systems Modeling",
+  "Telecommunication Modeling",
+  "Telecommunication Systems",
+  "Telecommunications",
+  "Modeling"
+ ],
+ "666": [
+  "Applied Microwave Electrodynamics",
+  "Microwave Electrodynamics",
+  "Applied Microwave",
+  "Electrodynamics",
+  "Microwave Engineering",
+  "Applied Studies"
+ ],
+ "667": [
+  "Micro/Nano Simulation",
+  "Micro and Nano Systems",
+  "Micro Simulation",
+  "Nano Systems",
+  "Micro/Nano Technology",
+  "Nanotechnology",
+  "Simulation",
+  "Microtechnology"
+ ],
+ "668": [
+  "Automation Experiments Practicum",
+  "Automation",
+  "Automation Practicum",
+  "Practicum"
+ ],
+ "669": [
+  "Digital Communication",
+  "Digital"
+ ],
+ "670": [
+  "Semiconductor Devices & Nanosensors",
+  "Nanosensors",
+  "Semiconductor Devices",
+  "Semiconductors"
+ ],
+ "671": [
+  "Optoelectronics & Renewable Energy",
+  "Optoelectronics",
+  "Renewable Energy Sources",
+  "Energy Sources",
+  "Renewable Energy",
+  "Energy"
+ ],
+ "672": [
+  "Growth of Volumetric Crystals",
+  "Volumetric Crystals and Films",
+  "Volumetric Crystals",
+  "Crystals, Films and Nanostructures",
+  "Crystals and Films",
+  "Films and Nanostructures",
+  "Volumetric Growth",
+  "Nanostructures",
+  "Crystals",
+  "Volumetric"
+ ],
+ "673": [
+  "Technology of Composite Materials",
+  "Composite Materials",
+  "Engineering Technology of Composites",
+  "Composite Technology",
+  "Physics, Engineering and Technology",
+  "Engineering Technology",
+  "Physics and Engineering",
+  "Physics",
+  "Engineering"
+ ],
+ "674": [
+  "Microelectronics Chip Design",
+  "Microelectronics",
+  "Chip Design",
+  "Design"
+ ],
+ "675": [
+  "Integrated Circuit Modeling",
+  "Circuit Modeling",
+  "Integrated Circuit Theory",
+  "Integrated Circuits",
+  "Modeling",
+  "Circuit Design"
+ ],
+ "676": [
+  "Wireless Communication",
+  "Fundamentals of Wireless Communication"
+ ],
+ "677": [
+  "Network Information Security",
+  "Computer Networks",
+  "Computer Networks and Information",
+  "Information Security",
+  "Security",
+  "Computer Science"
+ ],
+ "678": [
+  "Fundamentals of Radio and Television",
+  "Radio and Television",
+  "Radio Engineering",
+  "Fundamentals of Radio Engineering",
+  "Television"
+ ],
+ "679": [
+  "Telecommunications Practicum",
+  "Telecommunications",
+  "Practicum"
+ ],
+ "680": [
+  "Digital Processes",
+  "Digital Theory",
+  "Digital"
+ ],
+ "681": [
+  "Radiophysical Problem Modeling",
+  "Radiophysical Computer Modeling",
+  "Radiophysical Modeling",
+  "Radiophysical Problems",
+  "Radiophysics",
+  "Computer Modeling",
+  "Modeling",
+  "Computer Science"
+ ],
+ "682": [
+  "Radio Technical Systems",
+  "Technical Systems",
+  "Radio Engineering",
+  "Technical Engineering"
+ ],
+ "683": [
+  "Microelectronics",
+  "GBH"
+ ],
+ "684": [
+  "Digital Signal Processing",
+  "Digital Signal",
+  "Signal Processing",
+  "Digital",
+  "Signal",
+  "Processing"
+ ],
+ "685": [
+  "Technology of Semiconductor Materials",
+  "Semiconductor Materials",
+  "Semiconductor Technology",
+  "Semiconductors",
+  "Technology"
+ ],
+ "686": [
+  "Physics of Semiconductors",
+  "Semiconductors",
+  "Physics"
+ ],
+ "687": [
+  "Electrodynamic Process Simulation",
+  "Electrodynamic Simulation",
+  "Electrodynamic Processes",
+  "Electrodynamics",
+  "Simulation"
+ ],
+ "688": [
+  "Secure Communication",
+  "Security"
+ ],
+ "689": [
+  "Fundamentals of Telecommunications",
+  "Telecommunications"
+ ],
+ "690": [],
+ "691": [
+  "Physical Electronics",
+  "Electronics"
+ ],
+ "695": [],
+ "696": [],
+ "697": [
+  "Ordinary Differential Equations",
+  "Differential Equations",
+  "Equations"
+ ],
+ "698": [],
+ "700": [
+  "Introduction to Computer Science",
+  "Computer Science",
+  "Science"
+ ],
+ "701": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "702": [],
+ "703": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "704": [],
+ "705": [
+  "Logic in Computer Science",
+  "Logic",
+  "Computer Science",
+  "Science"
+ ],
+ "706": [
+  "Computer Organization",
+  "Computer Science"
+ ],
+ "707": [
+  "Human-Computer Interaction (HCI)",
+  "Human-Computer Interaction",
+  "Computer Science"
+ ],
+ "708": [
+  "Communication Networks"
+ ],
+ "710": [],
+ "711": [],
+ "712": [
+  "Partial Differential Equations",
+  "Differential Equations",
+  "Equations"
+ ],
+ "713": [
+  "Introduction to Algorithms",
+  "Algorithms"
+ ],
+ "714": [],
+ "715": [],
+ "716": [
+  "Web Application Development",
+  "Web Development"
+ ],
+ "717": [],
+ "718": [],
+ "719": [
+  "Mobile Application Development",
+  "Application Development",
+  "Mobile",
+  "Development"
+ ],
+ "720": [
+  "High-Performance Computing (HPC)",
+  "Parallel Computing",
+  "Parallel Programming",
+  "Parallel High-Performance Computing",
+  "Computing"
+ ],
+ "721": [],
+ "722": [
+  "Mathematical Modeling and Applications",
+  "Mathematical Modeling",
+  "Modeling and Applications",
+  "Modeling",
+  "Applications",
+  "Mathematics"
+ ],
+ "723": [
+  "Software Testing Fundamentals",
+  "Software Testing",
+  "Software"
+ ],
+ "724": [],
+ "725": [],
+ "726": [],
+ "727": [],
+ "728": [],
+ "729": [
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "730": [],
+ "731": [],
+ "732": [],
+ "733": [
+  "Topics in Applied Computer Science",
+  "Applied Computer Science",
+  "Computer Science",
+  "Applied Studies",
+  "Science"
+ ],
+ "735": [],
+ "736": [],
+ "737": [
+  "Mathematical Thinking",
+  "Mathematics"
+ ],
+ "738": [
+  "Programming",
+  "World Programming"
+ ],
+ "739": [
+  "Industrial Technologies",
+  "Industrial Engineering"
+ ],
+ "740": [],
+ "741": [
+  "Cybersecurity and Society",
+  "Cybersecurity",
+  "Society"
+ ],
+ "742": [
+  "Introduction to Energy Sources",
+  "Energy Sources",
+  "Introduction to Energy",
+  "Energy"
+ ],
+ "743": [
+  "Introduction to Bioscience",
+  "Bioscience"
+ ],
+ "744": [
+  "Chemistry of Everyday Life",
+  "Chemistry",
+  "Everyday Life"
+ ],
+ "745": [],
+ "746": [
+  "Creativity and Technological Innovation",
+  "Creativity"
+ ],
+ "747": [
+  "Engineering for Non-Engineers",
+  "Engineering"
+ ],
+ "748": [
+  "Historical Development of Mathematical Ideas",
+  "Mathematical Ideas",
+  "Development of Mathematical Ideas",
+  "Historical Development",
+  "Mathematics",
+  "History"
+ ],
+ "749": [
+  "Technologies of Tomorrow"
+ ],
+ "750": [
+  "Nanotechnology: Science and Application",
+  "Nanotechnology",
+  "Nanotechnology Science",
+  "Science and Application",
+  "Science"
+ ],
+ "751": [],
+ "752": [],
+ "753": [],
+ "754": [],
+ "756": [],
+ "757": [
+  "Numbers and Statistics",
+  "Statistics and the Environment",
+  "Statistics"
+ ],
+ "758": [],
+ "759": [],
+ "760": [],
+ "761": [
+  "Product Design",
+  "Design"
+ ],
+ "762": [],
+ "763": [],
+ "764": [
+  "Data Structures & Algorithms",
+  "Data Structures",
+  "Data Structures and Algorithms",
+  "Algorithms for Data Science",
+  "Algorithms & Data Structures",
+  "Data Science",
+  "Algorithms",
+  "Data",
+  "Science"
+ ],
+ "765": [],
+ "766": [
+  "Programming for Data Science",
+  "Data Science",
+  "Programming for Data",
+  "Programming",
+  "Data",
+  "Science"
+ ],
+ "767": [
+  "Chemistry for Life Science",
+  "Physics, Chemistry, and Life Science",
+  "Life Science",
+  "Physics and Chemistry",
+  "Chemistry and Life Science",
+  "Chemistry",
+  "Science",
+  "Physics"
+ ],
+ "768": [
+  "Cell and Molecular Biology",
+  "Molecular Biology",
+  "Biology",
+  "Cell Biology",
+  "Molecular Science"
+ ],
+ "769": [],
+ "770": [
+  "Business Intelligence",
+  "Intelligence"
+ ],
+ "771": [
+  "Time Series Forecasting",
+  "Forecasting"
+ ],
+ "772": [
+  "Spatial Data Science",
+  "Spatial Data",
+  "Spatial Analysis",
+  "Data Science",
+  "Data",
+  "Science"
+ ],
+ "773": [
+  "Introduction to Bioinformatics",
+  "Bioinformatics"
+ ],
+ "774": [
+  "Computational Biology",
+  "Computational Methods",
+  "Biology"
+ ],
+ "775": [
+  "Networks in Biology",
+  "Biology"
+ ],
+ "776": [],
+ "777": [],
+ "778": [],
+ "779": [],
+ "780": [],
+ "781": [
+  "Machine Learning for Science",
+  "Applications of Machine Learning",
+  "Machine Learning",
+  "Learning Science",
+  "Science",
+  "Applications"
+ ],
+ "782": [],
+ "783": [
+  "Business Analytics",
+  "Analytics for Data Science",
+  "Business Analytics and Data",
+  "Analytics",
+  "Analytics and Data",
+  "Data Science",
+  "Data",
+  "Science"
+ ],
+ "784": [],
+ "785": [
+  "ML Operations (MLOps)",
+  "MLOps",
+  "Machine Learning"
+ ],
+ "786": [],
+ "787": [
+  "Reinforcement Learning"
+ ],
+ "788": [
+  "Natural Language Processing",
+  "Processing"
+ ],
+ "789": [],
+ "790": [
+  "Biomedical Imaging, Cell, and Staining",
+  "Biomedical Imaging and Cell Biology",
+  "Imaging and Cell Biology",
+  "Cell Staining",
+  "Biomedical Imaging",
+  "Imaging",
+  "Staining",
+  "Biomedical",
+  "Cell Biology"
+ ],
+ "791": [
+  "Managerial Accounting and Analysis",
+  "Managerial Accounting",
+  "Accounting Analysis",
+  "Accounting",
+  "Managerial Skills",
+  "Analysis"
+ ],
+ "792": [
+  "Topics in Data Science",
+  "Data Science",
+  "Topics in Data",
+  "Data",
+  "Science"
+ ],
+ "794": [
+  "Probability and Statistics",
+  "Statistics",
+  "Probability"
+ ],
+ "795": [
+  "Introduction to Programming",
+  "Programming"
+ ],
+ "797": [],
+ "798": [
+  "Electricity and Magnetism",
+  "Magnetism",
+  "Electricity"
+ ],
+ "799": [
+  "Electricity and Magnetism Lab",
+  "Magnetism Lab",
+  "Electricity and Magnetism",
+  "Electricity",
+  "Magnetism"
+ ],
+ "801": [],
+ "802": [],
+ "803": [
+  "Engineering Dynamics",
+  "Engineering"
+ ],
+ "805": [],
+ "806": [
+  "Introduction to Aerodynamics",
+  "Aerodynamics"
+ ],
+ "807": [
+  "Environmental Engineering",
+  "Environmental Studies",
+  "Engineering"
+ ],
+ "808": [
+  "Materials Science",
+  "Science"
+ ],
+ "809": [],
+ "810": [
+  "Introduction to Quantum Computing",
+  "Quantum Computing",
+  "Introduction to Quantum Mechanics",
+  "Quantum Mechanics",
+  "Computing"
+ ],
+ "811": [
+  "Computer-Aided Design (CAD)",
+  "Design",
+  "Computer Science"
+ ],
+ "812": [
+  "Computer-Aided Manufacturing (CAM)",
+  "Computer-Aided Design (CAD)",
+  "Manufacturing",
+  "Computer Science"
+ ],
+ "813": [],
+ "814": [],
+ "815": [
+  "Introduction to Fluid Mechanics",
+  "Fluid Mechanics",
+  "Mechanics"
+ ],
+ "816": [],
+ "817": [],
+ "818": [
+  "Embedded Systems"
+ ],
+ "819": [
+  "Signals and Systems",
+  "Signals & Systems"
+ ],
+ "820": [],
+ "821": [],
+ "822": [
+  "Control Systems",
+  "Control Theory"
+ ],
+ "823": [],
+ "824": [],
+ "825": [],
+ "826": [],
+ "827": [
+  "Flight and Orbital Mechanics",
+  "Orbital Mechanics",
+  "Flight Mechanics",
+  "Mechanics"
+ ],
+ "828": [],
+ "831": [
+  "Introduction to Environmental Science",
+  "Environmental Sustainability",
+  "Environmental Studies"
+ ],
+ "832": [
+  "Inquiry in Earth and Space Science",
+  "Modes of Inquiry in Earth and Space Science",
+  "Earth and Space Science",
+  "Inquiry Methods",
+  "Modes of Inquiry",
+  "Modes"
+ ],
+ "833": [
+  "Research Methods and Statistics",
+  "Research Methods",
+  "Statistics"
+ ],
+ "834": [
+  "Resource Economics",
+  "Economics",
+  "Environmental Studies",
+  "Environmental and Natural Resources"
+ ],
+ "835": [
+  "Biology & Ecosystems",
+  "Ecosystems",
+  "Biology"
+ ],
+ "836": [
+  "Biology of Ecosystems Laboratory",
+  "Ecosystems Laboratory",
+  "Biology & Ecosystems",
+  "Ecosystems",
+  "Biology"
+ ],
+ "837": [
+  "Chemistry of the Environment",
+  "Chemistry"
+ ],
+ "838": [
+  "Chemistry of the Environment",
+  "Chemistry"
+ ],
+ "839": [
+  "Environmental Geology",
+  "Geology",
+  "Environmental Studies"
+ ],
+ "840": [
+  "Environmental Geology Lab",
+  "Geology Lab",
+  "Environmental Geology",
+  "Geology",
+  "Environmental Studies"
+ ],
+ "841": [
+  "Sustainable Energy Systems",
+  "Sustainable Energy",
+  "Energy Systems",
+  "Sustainability",
+  "Energy"
+ ],
+ "842": [
+  "Sustainable Food Systems",
+  "Food Systems",
+  "Sustainability"
+ ],
+ "843": [
+  "GIS and Remote Sensing",
+  "Geographic Information Systems (GIS)",
+  "Introduction to Geographic Information Systems (GIS)",
+  "Remote Sensing",
+  "Sensing & Sensors"
+ ],
+ "844": [
+  "Environmental Monitoring",
+  "Monitoring",
+  "Environmental Studies"
+ ],
+ "845": [
+  "Environmental Sustainability Modeling",
+  "Sustainability Modeling",
+  "Environmental Sustainability",
+  "Environmental Studies",
+  "Modeling"
+ ],
+ "846": [
+  "Climate Change Science",
+  "Climate Change",
+  "Climate Change Science and Politics",
+  "Science and Politics",
+  "Climate Science",
+  "Politics",
+  "Change Science",
+  "Science"
+ ],
+ "847": [],
+ "849": [
+  "Waste & Circular Economy",
+  "Solid Waste & Circular Economy",
+  "Solid Waste Management",
+  "Circular Economy",
+  "Waste Management",
+  "Economics"
+ ],
+ "850": [
+  "Biodiversity Conservation & Restoration",
+  "Biodiversity Conservation",
+  "Conservation & Restoration",
+  "Biodiversity",
+  "Conservation",
+  "Restoration"
+ ],
+ "851": [
+  "Environmental Sustainability & Governance",
+  "Sustainability Governance",
+  "Environmental Sustainability",
+  "Environmental Studies",
+  "Governance"
+ ],
+ "852": [
+  "Disaster Resilience Management",
+  "Disaster Resilience",
+  "Resilience Management",
+  "Resilience",
+  "Disaster Management"
+ ],
+ "853": [
+  "Environmental Sustainability",
+  "Environmental Studies"
+ ],
+ "854": [
+  "Probability and Statistics",
+  "Statistics",
+  "Probability"
+ ],
+ "855": [
+  "Operations Research"
+ ],
+ "856": [
+  "Data Systems Design",
+  "Data Systems",
+  "Analysis and Design",
+  "Data Analysis & Systems Design",
+  "Data",
+  "Design",
+  "Analysis"
+ ],
+ "857": [
+  "Quality Assurance",
+  "Quality Assurance Management",
+  "Software Quality Assurance"
+ ],
+ "858": [
+  "Data Mining & Predictive Analytics",
+  "Predictive Analytics",
+  "Data Mining",
+  "Analytics",
+  "Data"
+ ],
+ "859": [
+  "Business Intelligence",
+  "Intelligent Systems Analytics",
+  "Systems Analytics",
+  "Analytics",
+  "Artificial Intelligence Systems",
+  "Intelligence"
+ ],
+ "860": [
+  "Experimental Analysis",
+  "Design & Analysis of Experiments",
+  "Design & Analysis",
+  "Design",
+  "Analysis"
+ ],
+ "861": [
+  "Operations Research"
+ ],
+ "862": [
+  "Applied Statistics for Engineers",
+  "Statistics for Engineers",
+  "Applied Statistics",
+  "Statistics",
+  "Applied Studies"
+ ],
+ "863": [],
+ "864": [
+  "Simulation & Industrial Engineering",
+  "Industrial Engineering Systems",
+  "Industrial Engineering",
+  "Engineering Systems",
+  "Simulation",
+  "Engineering"
+ ],
+ "865": [
+  "Systems Analysis",
+  "Analysis"
+ ],
+ "866": [
+  "Engineering Economics",
+  "Engineering",
+  "Economics"
+ ],
+ "867": [],
+ "868": [
+  "Managing Engineering & Technology",
+  "Managing Engineering",
+  "Engineering Technology",
+  "Engineering",
+  "Technology"
+ ],
+ "869": [
+  "Design & Innovation",
+  "Design"
+ ],
+ "870": [
+  "Society in the Age of AI",
+  "Technology Ethics & Society",
+  "Technology Ethics",
+  "Ethics, Society & the Age of AI",
+  "Age of AI",
+  "Ethics & Society",
+  "Ethics",
+  "Society & the Age of AI",
+  "Technology",
+  "Society"
+ ],
+ "871": [
+  "Competitive Advantage through Information Technology",
+  "Enabling Competitive Advantage",
+  "Competitive Advantage",
+  "Information Technology",
+  "Advantage",
+  "Technology"
+ ],
+ "872": [],
+ "873": [
+  "Sustainable Smart Resource Management",
+  "Sustainable Smart Systems",
+  "Sustainability",
+  "Smart Resource Management",
+  "Smart Systems"
+ ],
+ "874": [
+  "Sustainable Smart Resource Management",
+  "Sustainable Smart Systems",
+  "Sustainability",
+  "Smart Systems"
+ ],
+ "875": [
+  "Computer-Aided Design (CAD)",
+  "Design",
+  "Computer Science"
+ ],
+ "876": [
+  "Computer-Aided Manufacturing (CAM)",
+  "Computer-Aided Design (CAD)",
+  "Manufacturing",
+  "Computer Science"
+ ],
+ "877": [
+  "CAD/CAM Applications",
+  "Advanced CAD/CAM",
+  "CAD/CAM",
+  "Computer-Aided Design (CAD)",
+  "Applications"
+ ],
+ "878": [],
+ "879": [
+  "Integrative Project"
+ ],
+ "880": [],
+ "881": [
+  "Topics in IESM",
+  "IESM"
+ ],
+ "882": [
+  "Capstone Preparation",
+  "Capstone Project"
+ ],
+ "883": [],
+ "884": [],
+ "885": [],
+ "886": [],
+ "887": [
+  "Theory of Algorithms",
+  "Algorithms"
+ ],
+ "888": [
+  "Object-Oriented Analysis",
+  "Object-Oriented Programming",
+  "Object-Oriented Analysis and Design",
+  "Analysis and Design",
+  "Design",
+  "Analysis"
+ ],
+ "889": [
+  "Algorithms",
+  "Topics in Algorithms"
+ ],
+ "890": [
+  "Communication Networks"
+ ],
+ "891": [],
+ "892": [
+  "Advanced Cryptography",
+  "Cryptography"
+ ],
+ "893": [],
+ "894": [
+  "Theory of Computation"
+ ],
+ "895": [],
+ "896": [
+  "Software Engineering",
+  "Engineering",
+  "Software"
+ ],
+ "897": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "898": [
+  "Geo-Collaborative Applications",
+  "Geo-Collaborative Development",
+  "Geospatial Technology",
+  "Applications"
+ ],
+ "899": [],
+ "900": [
+  "High-Performance Computing (HPC)",
+  "Parallel Computing",
+  "Parallel Programming",
+  "Parallel High-Performance Computing",
+  "Computing"
+ ],
+ "901": [
+  "Human-Computer Interaction",
+  "Computer Science"
+ ],
+ "902": [],
+ "903": [],
+ "904": [
+  "Administration"
+ ],
+ "905": [],
+ "906": [
+  "Performance Analysis & Queueing Theory",
+  "Queueing Theory",
+  "Performance Analysis",
+  "Analysis"
+ ],
+ "907": [],
+ "908": [],
+ "909": [],
+ "910": [],
+ "911": [],
+ "912": [],
+ "913": [
+  "Blockchain Technologies",
+  "Blockchain"
+ ],
+ "914": [],
+ "915": [],
+ "916": [
+  "Performance Programming",
+  "Applications",
+  "High Performance Applications",
+  "Programming"
+ ],
+ "917": [],
+ "918": [
+  "Artificial Intelligence & Decision Making",
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "919": [
+  "Knowledge Representation"
+ ],
+ "920": [
+  "Software Project Management",
+  "Software"
+ ],
+ "921": [
+  "Technical Leadership",
+  "Technical Engineering"
+ ],
+ "922": [],
+ "923": [
+  "Computational Methods"
+ ],
+ "924": [
+  "Advanced Statistical Modeling",
+  "Statistical Modeling",
+  "Statistics",
+  "Modeling"
+ ],
+ "925": [
+  "Series Analysis",
+  "Analysis"
+ ],
+ "926": [],
+ "927": [],
+ "928": [
+  "Computational Optimization",
+  "Optimization",
+  "Computational Methods"
+ ],
+ "929": [
+  "Programming Paradigms",
+  "Programming"
+ ],
+ "930": [],
+ "931": [
+  "Information Visualization",
+  "Data Visualization"
+ ],
+ "932": [
+  "Reinforcement Learning"
+ ],
+ "933": [],
+ "934": [],
+ "935": [],
+ "936": [
+  "Topics in Computer Science",
+  "Computer Science",
+  "Science"
+ ],
+ "937": [
+  "Capstone Preparation",
+  "Capstone Project"
+ ],
+ "938": [
+  "Thesis Writing",
+  "Capstone Thesis",
+  "Capstone Project",
+  "Thesis"
+ ],
+ "939": [],
+ "940": [],
+ "941": [
+  "Geospatial Data Acquisition",
+  "Geospatial Data",
+  "Geospatial Analysis",
+  "Data Acquisition & Analysis",
+  "Data Acquisition",
+  "Data",
+  "Analysis"
+ ],
+ "942": [],
+ "943": [],
+ "944": [
+  "GNSS",
+  "Summary Analysis"
+ ],
+ "945": [],
+ "946": [],
+ "947": [],
+ "948": [
+  "BIM",
+  "GIS & BIM Integration",
+  "GIS Integration",
+  "Geographic Information Systems (GIS)",
+  "Modelling & Simulation"
+ ],
+ "949": [
+  "Remote Sensing & Digital Image Processing",
+  "Remote Sensing",
+  "Digital Image Processing",
+  "Image Processing",
+  "Sensing & Sensors",
+  "Digital",
+  "Processing"
+ ],
+ "950": [
+  "Radar Image Decoding",
+  "Radar Imagery",
+  "Radar"
+ ],
+ "951": [],
+ "953": [
+  "Research Methodology",
+  "Scientific Research",
+  "Science"
+ ],
+ "955": [],
+ "956": [
+  "Master Diploma Supervisor",
+  "Diploma Supervision",
+  "Thesis Development & Defence",
+  "Master Thesis Supervision",
+  "Master Thesis",
+  "Diploma",
+  "Defence"
+ ],
+ "957": [
+  "Foundational Domain Knowledge",
+  "Sphere"
+ ],
+ "958": [
+  "Computer Network Organisation",
+  "Computer Networking",
+  "Computer Organisation",
+  "Computer Organisation and Design",
+  "Organisation and Design",
+  "Organisation",
+  "Design",
+  "Computer Science"
+ ],
+ "959": [
+  "Information Security and Protection",
+  "Information Protection",
+  "Protection and Security",
+  "Security",
+  "Protection"
+ ],
+ "960": [],
+ "961": [
+  "Operational Analysis",
+  "Analysis"
+ ],
+ "962": [
+  "Algorithms and Object-Oriented Theory",
+  "Algorithm Theory",
+  "Object-Oriented Theory",
+  "Object-Oriented Programming",
+  "Theories",
+  "Algorithms"
+ ],
+ "963": [
+  "High-Performance Computing (HPC)",
+  "Computing Systems",
+  "Computing"
+ ],
+ "964": [],
+ "965": [
+  "Microcontroller Programming",
+  "Microcontrollers",
+  "Microcontroller",
+  "Programming"
+ ],
+ "966": [
+  "Research Methodology",
+  "Scientific Research",
+  "Science"
+ ],
+ "967": [
+  "Software Reliability",
+  "Reliability",
+  "Software"
+ ],
+ "968": [
+  "Engineering Problem Simulation",
+  "Mathematical Simulation in Engineering",
+  "Engineering Simulation",
+  "Mathematical Simulation",
+  "Applied Engineering Problems",
+  "Simulation",
+  "Engineering Problems",
+  "Applied Software Packages",
+  "Engineering",
+  "Applied Problems"
+ ],
+ "969": [],
+ "970": [
+  "Artificial Intelligence Tools",
+  "Intelligence Tools",
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "972": [
+  "Automated Design Systems",
+  "Automated Design",
+  "Design Systems",
+  "Automated",
+  "Design"
+ ],
+ "973": [],
+ "974": [
+  "Master Diploma Supervisor",
+  "Diploma Supervision",
+  "Thesis Development & Defence",
+  "Master Thesis Supervision",
+  "Master Thesis",
+  "Diploma",
+  "Defence"
+ ],
+ "975": [
+  "Speech Culture",
+  "Speech"
+ ],
+ "976": [],
+ "978": [],
+ "980": [],
+ "981": [
+  "Emergency Defence",
+  "Civil Defence",
+  "Defence"
+ ],
+ "982": [
+  "Descriptive Geometry",
+  "Geometry"
+ ],
+ "983": [
+  "Fundamentals of Economics",
+  "Economics"
+ ],
+ "984": [
+  "Introduction to Speciality",
+  "Speciality"
+ ],
+ "985": [],
+ "986": [
+  "Speech Culture",
+  "Speech"
+ ],
+ "987": [],
+ "988": [],
+ "989": [],
+ "991": [],
+ "992": [
+  "Computer Engineering and Informatics",
+  "Basics of Computer Engineering",
+  "Engineering Informatics",
+  "Mathematical Basics of Computer Science",
+  "Computer Engineering",
+  "Mathematical Basics",
+  "Informatics",
+  "Basics of Computer Science",
+  "Mathematics",
+  "Engineering"
+ ],
+ "993": [
+  "Devices and Ports",
+  "Ports"
+ ],
+ "994": [],
+ "995": [],
+ "996": [],
+ "997": [],
+ "998": [
+  "Fundamentals of Electrical Engineering",
+  "Electrical Engineering",
+  "Engineering",
+  "Fundamentals"
+ ],
+ "999": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1000": [
+  "Telecommunications Systems and Networks",
+  "Networks and Telecommunications",
+  "Computing Systems",
+  "Telecommunications",
+  "Computing Systems and Networks",
+  "Computing"
+ ],
+ "1001": [
+  "Devices and Ports",
+  "Ports"
+ ],
+ "1002": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "1003": [
+  "Fundamentals of Microelectronics",
+  "Microelectronics"
+ ],
+ "1004": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1005": [],
+ "1006": [],
+ "1007": [
+  "Computer Information Protection",
+  "Computer Protection",
+  "Computer Information",
+  "Protection",
+  "Computer Science"
+ ],
+ "1008": [
+  "Database Design",
+  "Database",
+  "Database Design Technologies",
+  "Design Technologies",
+  "Data",
+  "Design"
+ ],
+ "1009": [
+  "Operating Systems"
+ ],
+ "1010": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1011": [],
+ "1012": [
+  "Telecommunications Systems and Networks",
+  "Networks and Telecommunications",
+  "Computing Systems",
+  "Telecommunications",
+  "Computing Systems and Networks",
+  "Computing"
+ ],
+ "1013": [],
+ "1014": [
+  "Database Design",
+  "Database",
+  "Database Design Technologies",
+  "Design Technologies",
+  "Data",
+  "Design"
+ ],
+ "1015": [
+  "Standardization and Certification",
+  "Standardization",
+  "Certification"
+ ],
+ "1016": [
+  "Operating Systems"
+ ],
+ "1017": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1018": [],
+ "1019": [],
+ "1020": [],
+ "1022": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1023": [
+  "Database Analysis with Python",
+  "Data Analysis and Python Programming",
+  "Database Analysis",
+  "Python",
+  "Data Analysis with Python",
+  "Database",
+  "Programming Languages"
+ ],
+ "1024": [
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "1025": [
+  "Fundamentals of Metrology",
+  "Metrology"
+ ],
+ "1026": [
+  "Construction of Electronic Equipment",
+  "Construction of Electronic Systems",
+  "Electronic Equipment",
+  "Electronics",
+  "Compiler Construction"
+ ],
+ "1027": [
+  "Programming Technology",
+  "Programming",
+  "Technology"
+ ],
+ "1030": [
+  "Database Analysis with Python",
+  "Data Analysis and Python Programming",
+  "Database Analysis",
+  "Python",
+  "Data Analysis with Python",
+  "Database",
+  "Programming Languages"
+ ],
+ "1031": [],
+ "1033": [
+  "Speech Culture",
+  "Speech"
+ ],
+ "1034": [],
+ "1036": [],
+ "1038": [
+  "Informatics and Information Technologies",
+  "Informatics",
+  "Informatics and Information"
+ ],
+ "1039": [
+  "Emergency Defence",
+  "Civil Defence",
+  "Defence"
+ ],
+ "1040": [
+  "Fundamentals of Economics",
+  "Economics"
+ ],
+ "1041": [
+  "Introduction to Speciality",
+  "Speciality"
+ ],
+ "1042": [],
+ "1043": [
+  "Speech Culture",
+  "Speech"
+ ],
+ "1044": [],
+ "1045": [],
+ "1046": [],
+ "1048": [
+  "Informatics and Information Technologies",
+  "Informatics",
+  "Informatics and Information"
+ ],
+ "1049": [
+  "Fundamentals of Economics",
+  "Economics"
+ ],
+ "1050": [
+  "Foundations of Computing and Informatics",
+  "Computing and Informatics",
+  "Mathematical Foundations of Computing",
+  "Mathematical Foundations",
+  "Foundations of Computing",
+  "Informatics",
+  "Computing",
+  "Mathematics"
+ ],
+ "1051": [],
+ "1052": [],
+ "1054": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1055": [],
+ "1056": [
+  "Management of Electronic Systems",
+  "Electronic Systems",
+  "Electronics"
+ ],
+ "1057": [
+  "Telecommunications Systems and Networks",
+  "Networks and Telecommunications",
+  "Computing Systems",
+  "Telecommunications",
+  "Computing Systems and Networks",
+  "Computing"
+ ],
+ "1058": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "1059": [
+  "Protection of Computed Information",
+  "Computed Information",
+  "Protection of Computed Data",
+  "Protection",
+  "Computing"
+ ],
+ "1060": [],
+ "1061": [
+  "Operational Analysis",
+  "Analysis"
+ ],
+ "1062": [
+  "Telecommunications Systems and Networks",
+  "Networks and Telecommunications",
+  "Computing Systems",
+  "Telecommunications",
+  "Computing Systems and Networks",
+  "Computing"
+ ],
+ "1064": [
+  "Operating Systems"
+ ],
+ "1065": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1066": [],
+ "1067": [
+  "Human-Computer Interaction",
+  "Computer Science",
+  "Human Factors"
+ ],
+ "1068": [
+  "Operational Analysis",
+  "Analysis"
+ ],
+ "1069": [],
+ "1070": [],
+ "1071": [
+  "Standardization and Certification",
+  "Standardization",
+  "Certification"
+ ],
+ "1073": [
+  "Operating Systems"
+ ],
+ "1074": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1075": [
+  "Operational Analysis",
+  "Analysis"
+ ],
+ "1076": [],
+ "1077": [
+  "Organizational Control",
+  "Control Systems",
+  "Control Theory"
+ ],
+ "1079": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1080": [],
+ "1081": [
+  "Knowledge Bases and Expert Systems",
+  "Data and Knowledge Bases",
+  "Expert Systems",
+  "Knowledge Bases",
+  "Data and Knowledge Management",
+  "Expertise",
+  "Database Expertise",
+  "Data",
+  "Databases"
+ ],
+ "1082": [
+  "Automated Information Processing",
+  "Information Processing",
+  "Automated Systems",
+  "Automated Processing Systems",
+  "Automated Processing",
+  "Automated",
+  "Design of Information Processing Systems",
+  "Basics of Design",
+  "Processing"
+ ],
+ "1083": [
+  "Organizational Control",
+  "Control Systems",
+  "Control Theory"
+ ],
+ "1084": [
+  "Economic and Mathematical Models",
+  "Economic and Mathematical Methods",
+  "Mathematical Modeling",
+  "Machine Learning Models",
+  "Mathematics"
+ ],
+ "1087": [],
+ "1088": [
+  "Knowledge Bases and Expert Systems",
+  "Data and Knowledge Bases",
+  "Expert Systems",
+  "Knowledge Bases",
+  "Data and Knowledge Management",
+  "Expertise",
+  "Database Expertise",
+  "Data",
+  "Databases"
+ ],
+ "1089": [
+  "Systems Productivity and Reliability",
+  "Computing Systems Productivity",
+  "Systems Productivity",
+  "Productivity and Reliability Improvement",
+  "Productivity and Reliability",
+  "Computing Systems",
+  "Reliability Improvement and Evaluation",
+  "Computing",
+  "Productivity",
+  "Reliability"
+ ],
+ "1090": [],
+ "1091": [
+  "Organizational Control",
+  "Control Systems",
+  "Control Theory"
+ ],
+ "1093": [],
+ "1094": [
+  "Project Scheduling",
+  "Scheduling and Cost Planning",
+  "Cost Planning",
+  "Planning",
+  "Scheduling"
+ ],
+ "1095": [
+  "Human Resources Management",
+  "Resources Management",
+  "Resource Management"
+ ],
+ "1096": [],
+ "1097": [],
+ "1098": [
+  "Strategic Management",
+  "Strategic Planning"
+ ],
+ "1099": [
+  "Negotiations and Leadership",
+  "Negotiations"
+ ],
+ "1100": [
+  "Agile Methodology",
+  "Agile Management",
+  "Agile"
+ ],
+ "1101": [
+  "Automated Management",
+  "Automated Systems",
+  "Operations Research & Analysis",
+  "Operations Research",
+  "Automated",
+  "Analysis"
+ ],
+ "1102": [],
+ "1103": [
+  "BI Analysis & Modelling",
+  "BI Modelling",
+  "Data Analysis & Modelling",
+  "Analysis & Modelling",
+  "Data Analysis",
+  "Modelling & Simulation",
+  "Analysis",
+  "Data"
+ ],
+ "1104": [
+  "Quality Assurance (QA)",
+  "Quality Assurance",
+  "Software Quality Assurance"
+ ],
+ "1105": [
+  "Information Protection",
+  "Protection"
+ ],
+ "1106": [],
+ "1107": [
+  "Database Design",
+  "Database",
+  "Automated Management",
+  "Automated Data Systems",
+  "Database Design Technologies",
+  "Automated Systems",
+  "Data Systems",
+  "Design Technologies",
+  "Data"
+ ],
+ "1108": [
+  "Computer Networks & Telecommunications",
+  "Networks & Telecommunications",
+  "Computer Networks",
+  "Telecommunications",
+  "Computer Science"
+ ],
+ "1109": [
+  "Research Methodology"
+ ],
+ "1111": [
+  "Product Design & Realization",
+  "Design & Realization",
+  "Product Design",
+  "Design",
+  "Realization"
+ ],
+ "1112": [],
+ "1113": [
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "1114": [
+  "Master Diploma Supervisor",
+  "Diploma Supervision",
+  "Thesis Development & Defence",
+  "Master Thesis Supervision",
+  "Master Thesis",
+  "Diploma",
+  "Defence"
+ ],
+ "1115": [],
+ "1116": [],
+ "1119": [
+  "Algebra & Geometry",
+  "Geometry",
+  "Algebra"
+ ],
+ "1120": [
+  "Algorithms & Algorithmic Languages",
+  "Algorithmic Languages",
+  "Algorithms & Algorithmic Methods",
+  "Algorithms"
+ ],
+ "1121": [],
+ "1122": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "1123": [
+  "Computer Architecture & Assembly Language",
+  "Assembly Language",
+  "Computer Architecture",
+  "Computer Science"
+ ],
+ "1125": [],
+ "1126": [],
+ "1127": [
+  "Optimization Methods",
+  "Optimization"
+ ],
+ "1128": [],
+ "1129": [],
+ "1130": [],
+ "1131": [
+  "Data Structures & OOP",
+  "Data Structures",
+  "Object-Oriented Programming (OOP)",
+  "Data"
+ ],
+ "1133": [
+  "Differential Equations",
+  "Equations"
+ ],
+ "1134": [
+  "Combinatorial Algorithms",
+  "Combinatorics",
+  "Algorithms"
+ ],
+ "1135": [
+  "Algorithms & Mathematical Logic",
+  "Mathematical Theory of Algorithms",
+  "Theory of Algorithms",
+  "Mathematical Logic",
+  "Mathematical Algorithms",
+  "Algorithms",
+  "Logic",
+  "Mathematics"
+ ],
+ "1136": [
+  "Russian Statehood",
+  "Statehood"
+ ],
+ "1137": [],
+ "1138": [],
+ "1139": [
+  "Functional Programming",
+  "Programming"
+ ],
+ "1140": [],
+ "1141": [
+  "Computer Science Specialization",
+  "Computer Science",
+  "Specialization",
+  "Science"
+ ],
+ "1142": [
+  "Computer Science Specialization",
+  "Computer Science",
+  "Specialization",
+  "Science"
+ ],
+ "1143": [
+  "Computer Science Specialization",
+  "Computer Science",
+  "Specialization",
+  "Science"
+ ],
+ "1144": [
+  "Algorithm Analysis Methods",
+  "Algorithm Analysis",
+  "Mathematical Methods of Algorithm Design",
+  "Algorithm Methods",
+  "Algorithms",
+  "Mathematical Methods",
+  "Mathematics",
+  "Analysis"
+ ],
+ "1145": [
+  "Variational & Difference Methods",
+  "Difference Methods",
+  "Variational Methods",
+  "Difference"
+ ],
+ "1147": [
+  "Speech Culture",
+  "Language & Speech",
+  "Speech"
+ ],
+ "1148": [],
+ "1149": [],
+ "1150": [],
+ "1151": [],
+ "1152": [],
+ "1153": [
+  "Computer Science Specialization",
+  "Computer Science",
+  "Specialization",
+  "Science"
+ ],
+ "1154": [],
+ "1156": [
+  "Graph Theory & Applications",
+  "Graph Theory",
+  "Theory & Applications",
+  "Applications"
+ ],
+ "1157": [
+  "Mathematical Physics Equations",
+  "Mathematical Physics",
+  "Mathematical Equations",
+  "Equations",
+  "Physics",
+  "Mathematics"
+ ],
+ "1158": [
+  "Game Theory",
+  "Operations Research",
+  "Game Development"
+ ],
+ "1159": [
+  "Diploma Internship",
+  "Pre-Diploma Practice",
+  "Diploma"
+ ],
+ "1160": [],
+ "1161": [
+  "Probability Theory & Mathematical Statistics",
+  "Probability Theory",
+  "Mathematical Statistics",
+  "Statistics",
+  "Probability",
+  "Mathematical Theory",
+  "Mathematics"
+ ],
+ "1163": [
+  "Analytic Geometry & Algebra",
+  "Analytic Geometry",
+  "Geometry & Algebra",
+  "Geometry",
+  "Analytic Methods",
+  "Algebra"
+ ],
+ "1164": [
+  "Descriptive Statistics",
+  "Statistics",
+  "Descriptive Geometry"
+ ],
+ "1165": [
+  "Reinforced Algorithms (Introduction)",
+  "Reinforced Algorithms (CS)",
+  "Reinforced Algorithms",
+  "Introduction to Algorithms",
+  "Algorithms",
+  "Reinforced CS",
+  "Reinforced Learning"
+ ],
+ "1166": [
+  "Generative AI & Creativity",
+  "Generative AI",
+  "AI Creativity (Practical)",
+  "AI Creativity",
+  "Creativity",
+  "Creativity (Practical)"
+ ],
+ "1167": [],
+ "1169": [],
+ "1170": [
+  "Discrete Mathematics Tools",
+  "Discrete Mathematics",
+  "Discrete Tools",
+  "Mathematics"
+ ],
+ "1171": [
+  "Reinforced Python Coding",
+  "Reinforced Python (CS)",
+  "Reinforced Python",
+  "Python Coding",
+  "Reinforced CS",
+  "Python",
+  "Coding",
+  "Reinforced Learning"
+ ],
+ "1172": [
+  "Introduction to Low-Code",
+  "Low-Code",
+  "Code Development",
+  "Code",
+  "Low"
+ ],
+ "1173": [
+  "Enterprise SA Knowledge",
+  "SA Knowledge",
+  "Enterprise Knowledge",
+  "SA Project",
+  "Enterprise"
+ ],
+ "1174": [],
+ "1175": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "1176": [
+  "Programming Languages",
+  "Programming"
+ ],
+ "1177": [
+  "Computer Science",
+  "Digital Sciences",
+  "Digital Technology",
+  "Science"
+ ],
+ "1180": [
+  "Digital Manufacturing (S1)",
+  "Digital Manufacturing",
+  "Digital Project (S1)",
+  "Digital (S1)",
+  "Manufacturing",
+  "Project (S1)",
+  "Digital"
+ ],
+ "1181": [],
+ "1183": [],
+ "1184": [
+  "Digital Processing Architecture",
+  "Digital Architecture",
+  "Digital Information Processing",
+  "Digital Processing",
+  "Information Processing",
+  "Computer Architecture",
+  "Processing",
+  "Digital"
+ ],
+ "1186": [],
+ "1189": [
+  "Computer Architecture",
+  "Computer Science"
+ ],
+ "1191": [
+  "Algebra & Modeling (CS)",
+  "CS Algebra & Mathematics",
+  "Algebra & Modeling",
+  "CS Mathematics",
+  "CS Algebra",
+  "Mathematics",
+  "Modeling",
+  "Algebra"
+ ],
+ "1192": [],
+ "1193": [
+  "Human-Computer Interaction",
+  "Computer Science"
+ ],
+ "1194": [
+  "Algorithms & Programming Languages",
+  "Algorithms & Programming",
+  "Programming Languages",
+  "Algorithms",
+  "Programming"
+ ],
+ "1197": [
+  "Computer Architecture",
+  "Computer Science"
+ ],
+ "1199": [],
+ "1200": [],
+ "1201": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1202": [],
+ "1204": [],
+ "1205": [
+  "Parallel Programming",
+  "Programming"
+ ],
+ "1206": [
+  "Abstract Data Types",
+  "Functional Programming",
+  "Introduction to Abstract Data",
+  "Data Types",
+  "Introduction to Abstract Programming",
+  "Introduction to Abstract Concepts",
+  "Introduction to Programming",
+  "Data"
+ ],
+ "1207": [
+  "Statistical Analysis Packages",
+  "Statistical Packages",
+  "Statistics & Data Analysis",
+  "Statistical Data Analysis",
+  "Probability & Statistics",
+  "Statistical Analysis",
+  "Statistics & Data",
+  "Statistics",
+  "Probability and Statistics"
+ ],
+ "1208": [],
+ "1209": [
+  "Automata Theory",
+  "Formal Automata"
+ ],
+ "1210": [],
+ "1211": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1213": [
+  "Graphics & Image Processing",
+  "Image Processing & Analysis",
+  "Computer Graphics & Imaging",
+  "Computer Graphics",
+  "Image Processing",
+  "Graphics & Imaging",
+  "Data Processing and Analysis",
+  "Processing",
+  "Analysis"
+ ],
+ "1214": [
+  "Functional Programming and Abstract Data Types",
+  "Abstract Data Types",
+  "Functional Programming",
+  "Programming and Abstract Data Types",
+  "Data Types",
+  "Data",
+  "Programming"
+ ],
+ "1215": [],
+ "1216": [
+  "Software Engineering",
+  "Engineering",
+  "Software"
+ ],
+ "1217": [
+  "Computer Security",
+  "Security",
+  "Computer Science"
+ ],
+ "1218": [],
+ "1219": [
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "1221": [],
+ "1222": [
+  "Scientific Computing",
+  "Scientific Computing & Machine Learning",
+  "Computing & Machine Learning",
+  "Machine Learning",
+  "Computing"
+ ],
+ "1223": [],
+ "1224": [],
+ "1225": [
+  "Collaborative Modeling & Design",
+  "Collaborative Design",
+  "Modeling & Design",
+  "Modeling",
+  "Design"
+ ],
+ "1226": [
+  "Data & Image Processing",
+  "Data Processing",
+  "Sound & Text Processing",
+  "Image Processing",
+  "Processing",
+  "Data",
+  "Text Processing"
+ ],
+ "1227": [
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "1228": [],
+ "1229": [],
+ "1230": [
+  "Research-Oriented Projects",
+  "Research-Oriented",
+  "Project-Oriented",
+  "Object-Oriented Programming"
+ ],
+ "1231": [],
+ "1232": [],
+ "1233": [
+  "Computer Architecture & Graphics",
+  "Computer Graphics",
+  "Computer Architecture",
+  "Computer Science"
+ ],
+ "1234": [],
+ "1235": [
+  "Electrical Engineering",
+  "Engineering"
+ ],
+ "1236": [
+  "Mathematical Analysis",
+  "Analysis",
+  "Mathematics"
+ ],
+ "1237": [
+  "MATLAB",
+  "Software Packages",
+  "Software"
+ ],
+ "1238": [
+  "Differential Equations",
+  "Equations"
+ ],
+ "1239": [],
+ "1240": [
+  "Probability and Mathematical Statistics",
+  "Mathematical Statistics",
+  "Mathematical Probability Theory",
+  "Probability Theory",
+  "Statistics",
+  "Probability",
+  "Mathematics"
+ ],
+ "1241": [
+  "Mathematical Physics Equations",
+  "Mathematical Physics",
+  "Equations",
+  "Physics",
+  "Mathematics"
+ ],
+ "1242": [],
+ "1243": [],
+ "1244": [
+  "Theory of Algorithms",
+  "Algorithms"
+ ],
+ "1245": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "1246": [
+  "Mathematical Programming",
+  "Programming",
+  "Mathematics"
+ ],
+ "1247": [
+  "Digital Methods",
+  "Digital"
+ ],
+ "1248": [
+  "Applied Differential Geometry",
+  "Differential Geometry",
+  "Applied Differential Equations",
+  "Differential Equations",
+  "Geometry",
+  "Applied Studies"
+ ],
+ "1249": [],
+ "1250": [
+  "Applied Theory",
+  "Applied Studies"
+ ],
+ "1251": [
+  "Programming Fundamentals",
+  "Programming"
+ ],
+ "1252": [],
+ "1253": [
+  "EHMS Architecture",
+  "EHMS",
+  "Computer Architecture"
+ ],
+ "1254": [
+  "Programming Technologies",
+  "Programming"
+ ],
+ "1255": [],
+ "1256": [],
+ "1257": [],
+ "1258": [],
+ "1259": [
+  "Data Structures & Algorithms",
+  "Data Structures",
+  "Algorithms",
+  "Data"
+ ],
+ "1260": [],
+ "1261": [
+  "Discrete Mathematics & Algorithms",
+  "Mathematics, Algorithms & Programming",
+  "Mathematics & Algorithms",
+  "Algorithms & Programming",
+  "Discrete Mathematics",
+  "Algorithms",
+  "Mathematics"
+ ],
+ "1262": [
+  "Human-Machine Interaction",
+  "Machine Learning"
+ ],
+ "1263": [],
+ "1264": [
+  "Database Management",
+  "Databases"
+ ],
+ "1265": [
+  "Engineering Modeling",
+  "Modeling",
+  "Engineering"
+ ],
+ "1266": [
+  "Social & Ethical Issues",
+  "Ethical Issues",
+  "Ethics",
+  "Social Media"
+ ],
+ "1267": [
+  "Network Technologies Regulation",
+  "Network Management & Regulation",
+  "Network Technologies",
+  "Network Regulation",
+  "Management & Regulation",
+  "Computer Networking",
+  "Regulation"
+ ],
+ "1268": [
+  "Resource Planning",
+  "Planning"
+ ],
+ "1269": [
+  "Platform Technologies",
+  "Platform Development"
+ ],
+ "1270": [
+  "Operating Systems",
+  "Operating Systems Configuration & Use",
+  "Operating Systems Use",
+  "Configuration & Use",
+  "Configuration Management"
+ ],
+ "1271": [
+  "Multimedia Technologies",
+  "Multimedia"
+ ],
+ "1272": [],
+ "1273": [
+  "Security Investment",
+  "Security Management",
+  "Security"
+ ],
+ "1274": [
+  "Search Engine Optimization",
+  "SEO",
+  "Search Engine",
+  "Optimization",
+  "Engine"
+ ],
+ "1275": [],
+ "1276": [],
+ "1277": [],
+ "1278": [],
+ "1279": [
+  "Database Management",
+  "Databases"
+ ],
+ "1280": [
+  "Arithmetic & Logical Principles",
+  "Logical Principles of Computing",
+  "Fundamentals of Arithmetic & Logic",
+  "Arithmetic & Logic",
+  "Computing Systems",
+  "Principles of Computing",
+  "Logical Principles",
+  "Fundamentals of Arithmetic",
+  "Computing",
+  "Arithmetic"
+ ],
+ "1281": [
+  "Digital Circuit Design",
+  "Fundamentals of Digital Circuits",
+  "Digital Circuits",
+  "Circuit Design",
+  "Fundamentals of Digital Systems",
+  "Digital",
+  "Design"
+ ],
+ "1282": [
+  "Computer Schematics & Engineering",
+  "Schematics & Engineering",
+  "Computer Schematics",
+  "Schematics",
+  "Engineering",
+  "Computer Science"
+ ],
+ "1283": [
+  "Digital Systems Design",
+  "Digital Systems",
+  "Digital Design",
+  "Digital",
+  "Design"
+ ],
+ "1284": [
+  "Computer Organization",
+  "Computer Science"
+ ],
+ "1285": [
+  "Computing Systems Architecture",
+  "Computing Systems",
+  "Software Architecture and Computing",
+  "Computer Architecture",
+  "Computing"
+ ],
+ "1286": [
+  "Computing Systems Diagnosis",
+  "Computing Diagnosis",
+  "Computing Systems",
+  "Computing",
+  "Diagnosis"
+ ],
+ "1287": [
+  "Fundamentals of Computer Networks",
+  "Computer Networks",
+  "Fundamentals of Computing",
+  "Computer Science"
+ ],
+ "1288": [
+  "Computer Integrated Circuits",
+  "Integrated Circuits",
+  "Computer Integrated Systems",
+  "Circuits",
+  "Computer Science"
+ ],
+ "1289": [
+  "Organization of Computer Networks",
+  "Computer Networks",
+  "Computer Science"
+ ],
+ "1290": [
+  "Network Operating Systems",
+  "Operating Systems",
+  "Computer Networking"
+ ],
+ "1291": [
+  "Microprocessor Systems",
+  "Microprocessor"
+ ],
+ "1292": [
+  "Computer Specialized Schemes",
+  "Specialized Schemes",
+  "Computer Specialized Systems",
+  "Specialized Computing",
+  "Computer Science"
+ ],
+ "1293": [
+  "Programmable Computing Systems",
+  "Programmable Devices",
+  "Programmable Systems",
+  "Computing Systems",
+  "Programmable Logic",
+  "Computing Systems Design",
+  "Computing",
+  "Computing Design",
+  "Design"
+ ],
+ "1294": [
+  "Information Preservation",
+  "Information Preservation Network Circulation",
+  "Information Preservation Network",
+  "Preservation Network",
+  "Network Circulation Technologies",
+  "Network Circulation",
+  "Data Preservation",
+  "Circulation Technologies",
+  "Computer Networking",
+  "Circulation Systems"
+ ],
+ "1295": [
+  "Specialized Operating Systems",
+  "Operating Systems",
+  "Computer Network Systems",
+  "Computer Operating Systems",
+  "Computer Networks",
+  "Computer Systems",
+  "Specialized Computing",
+  "Computer Science"
+ ],
+ "1296": [
+  "Electronic Governance Systems",
+  "Electronic Governance",
+  "Governance",
+  "Networked Electronic Systems",
+  "Networked Systems",
+  "Electronic Systems",
+  "Electronics"
+ ],
+ "1297": [
+  "Network Security",
+  "Hardware and Software Solutions",
+  "Computer Network Solutions",
+  "Computer Networking",
+  "Security",
+  "Computer Software Solutions",
+  "Software Solutions",
+  "Hardware",
+  "Computer Solutions"
+ ],
+ "1298": [
+  "Multiprocessor Systems",
+  "Multiprocessor"
+ ],
+ "1299": [
+  "Secondary Power Sources",
+  "Computer Power Sources",
+  "Power Sources",
+  "Secondary Organization",
+  "Computers",
+  "Energy Sources"
+ ],
+ "1300": [
+  "Computer Network Management",
+  "Network Management",
+  "Computer Networking",
+  "Computer Science"
+ ],
+ "1301": [
+  "Mathematical Foundations of Informatics",
+  "Informatics",
+  "Mathematical Foundations",
+  "Mathematics"
+ ],
+ "1302": [
+  "Applied Theory of Automata",
+  "Automata Theory",
+  "Applied Theory",
+  "Applied Studies"
+ ],
+ "1303": [],
+ "1304": [
+  "Software Development Architecture",
+  "Computing Systems Architecture",
+  "Software Development",
+  "Computing Systems",
+  "Software Architecture and Computing",
+  "Computer Architecture",
+  "Software",
+  "Computing"
+ ],
+ "1305": [],
+ "1306": [],
+ "1307": [
+  "Cryptographic and Steganographic Protection",
+  "Steganographic Information Protection",
+  "Cryptography and Steganography",
+  "Steganographic Protection",
+  "Steganography",
+  "Cryptography",
+  "Information Protection",
+  "Protection"
+ ],
+ "1308": [
+  "Database Design and Technologies",
+  "Database Design",
+  "Databases",
+  "Security Design Technologies",
+  "Security",
+  "Security Technologies",
+  "Design Technologies",
+  "Design"
+ ],
+ "1309": [
+  "Computer Network Security",
+  "Security Organization",
+  "Computer Security Organization",
+  "Computer Networks",
+  "Security",
+  "Computer Security",
+  "Computer Science"
+ ],
+ "1310": [
+  "Programming Technology",
+  "Programming",
+  "Technology"
+ ],
+ "1311": [
+  "Antivirus Protection for Computing Systems",
+  "Antivirus Protection",
+  "Antivirus",
+  "Computing Systems Protection",
+  "Computing Protection",
+  "Protection",
+  "Computing Systems",
+  "Computing"
+ ],
+ "1312": [
+  "Component-Based Programming",
+  "Object-Oriented Component Design",
+  "Object-Oriented Programming",
+  "Object-Oriented Component-Based Design",
+  "Component-Based Development",
+  "Programming",
+  "Object-Oriented Components",
+  "component"
+ ],
+ "1313": [
+  "Data Protection from Unauthorized Access",
+  "Protection from Unauthorized Access",
+  "Data Protection",
+  "Unauthorized Access Prevention",
+  "Protection",
+  "Data"
+ ],
+ "1314": [
+  "Network Application Development",
+  "Network Applications",
+  "Network Software Development",
+  "Network Development",
+  "Software Development",
+  "Computer Networking",
+  "Software",
+  "Applications"
+ ],
+ "1315": [],
+ "1316": [
+  "Information Security",
+  "Security Risk Management",
+  "Security"
+ ],
+ "1317": [],
+ "1318": [
+  "Applied Computational Theory",
+  "Computational Methods",
+  "Computational Theory",
+  "Applied Theory",
+  "Applied Studies"
+ ],
+ "1319": [
+  "Applied Theory",
+  "Applied Studies"
+ ],
+ "1320": [
+  "Distributed Information Systems",
+  "Distributed Systems"
+ ],
+ "1321": [
+  "Information Optimization",
+  "Optimization"
+ ],
+ "1322": [
+  "Operations Research",
+  "Operations Research and Analysis",
+  "Systems Analysis",
+  "Operations Analysis",
+  "Analysis"
+ ],
+ "1323": [],
+ "1324": [
+  "Artificial Intelligence",
+  "Machine Learning",
+  "Intelligence"
+ ],
+ "1325": [],
+ "1326": [
+  "Database Management",
+  "Databases"
+ ],
+ "1328": [
+  "Banking Operations Optimization and Automation",
+  "Banking Operations Automation",
+  "Banking and Monetary Operations",
+  "Banking Operations",
+  "Banking Automation",
+  "Operations Monetary Circulation",
+  "Banking Systems",
+  "Operations Monetary",
+  "Optimization Automation",
+  "Monetary Circulation"
+ ],
+ "1329": [
+  "Automated Bank Management",
+  "Bank Management",
+  "Automated Management",
+  "Banking",
+  "Automated"
+ ],
+ "1330": [
+  "Automated Bank Management",
+  "Automated Financial Banking",
+  "Automated Banking",
+  "Financial Banking Design",
+  "Financial Banking",
+  "Automated Management",
+  "Banking Systems",
+  "Financial Design",
+  "Automated",
+  "Financial Mathematics"
+ ],
+ "1331": [
+  "Automated Accounting Systems",
+  "Automated Accounting",
+  "Accounting Systems",
+  "Accounting",
+  "Automated"
+ ],
+ "1332": [
+  "Automated Banking Systems",
+  "Banking Systems Marketing",
+  "Banking Marketing",
+  "Banking Systems",
+  "Automated Systems",
+  "Automated",
+  "Marketing"
+ ],
+ "1333": [
+  "Management Governance",
+  "Governance"
+ ],
+ "1334": [
+  "Automated Financial Systems",
+  "Strategic Financial Investment",
+  "Comparative Strategic Investment",
+  "Strategic Investment",
+  "Financial Investment",
+  "Automated Systems",
+  "Financial Systems",
+  "Comparative Management",
+  "Automated",
+  "Financial Mathematics"
+ ],
+ "1335": [
+  "E-Commerce",
+  "E-Business",
+  "Electronics"
+ ],
+ "1336": [
+  "Information Networks",
+  "Network Management",
+  "Computer Networking"
+ ],
+ "1337": [
+  "Information Software",
+  "Software Support",
+  "Software"
+ ],
+ "1338": [
+  "Automated Information Processing",
+  "Automated Information",
+  "Information Processing",
+  "Automated Information Design",
+  "Automated",
+  "Automated Design",
+  "Fundamentals of Automated Design",
+  "Processing",
+  "Design"
+ ],
+ "1339": [
+  "Systematic Analysis Methods",
+  "Applied Systematic Analysis",
+  "Systematic Analysis",
+  "Applied Systematic Methods",
+  "Analysis Methods",
+  "Analysis"
+ ],
+ "1340": [
+  "Automated Systems Reliability",
+  "Automated Reliability",
+  "Automated Systems",
+  "Reliability",
+  "Automated"
+ ],
+ "1341": [
+  "Information Processing",
+  "Processing Management",
+  "Processing"
+ ],
+ "1342": [
+  "Integrated Systems",
+  "Information Processing",
+  "Processing Management",
+  "Integrated Circuits",
+  "Processing"
+ ],
+ "1343": [
+  "Distributed Systems",
+  "Processing Management",
+  "Information Processing",
+  "Processing"
+ ],
+ "1344": [
+  "Technological Reliability",
+  "Reliability"
+ ],
+ "1345": [],
+ "1346": [],
+ "1347": [
+  "Numerical Methods",
+  "Differential Equations",
+  "Equations"
+ ],
+ "1348": [
+  "Mathematical Physics Sections",
+  "Mathematical Physics Equations",
+  "Supplementary Mathematical Sections",
+  "Mathematical Physics",
+  "Mathematical Sections",
+  "Supplementary Sections",
+  "Equations",
+  "Supplementary",
+  "Sections"
+ ],
+ "1349": [
+  "Complex Analysis",
+  "Analysis"
+ ],
+ "1350": [
+  "Algorithm Complexity",
+  "Complexity Theory",
+  "Algorithms"
+ ],
+ "1351": [
+  "Signal Processing",
+  "Foundations of Signal Processing",
+  "Mathematical Foundations of Signal Processing",
+  "Mathematical Foundations",
+  "Signal",
+  "Mathematics",
+  "Processing"
+ ],
+ "1352": [
+  "Topics in Discrete Mathematics",
+  "Additional Topics in Discrete Mathematics",
+  "Discrete Mathematics",
+  "Additional Topics",
+  "Mathematics",
+  "Additional"
+ ],
+ "1353": [
+  "MATLAB",
+  "Software Packages",
+  "Software"
+ ],
+ "1354": [
+  "Estimation of Stationary Random Processes",
+  "Statistical Estimation of Stationary Processes",
+  "Stationary Random Processes",
+  "Estimation of Stationary Processes",
+  "Statistical Estimation",
+  "Stochastic Processes",
+  "Stationary Processes",
+  "Estimation",
+  "Statistics"
+ ],
+ "1355": [
+  "Boundary Problems in Differential Equations",
+  "Boundary Problems",
+  "Partial Differential Equations",
+  "Partial Derivative Equations",
+  "Partial Equations",
+  "Differential Equation Problems",
+  "Partial Derivatives",
+  "Boundary",
+  "Differential Equations",
+  "Differential Problems"
+ ],
+ "1356": [
+  "Discrete Transformations in Digital Signal Processing",
+  "Applications of Discrete Transformations",
+  "Digital Signal Transformations",
+  "Digital Signal Processing",
+  "Digital Transformations",
+  "Discrete Transformations",
+  "Digital Signal",
+  "Signal Processing",
+  "Discrete Applications",
+  "Digital"
+ ],
+ "1357": [],
+ "1358": [
+  "Geometry of Curves and Surfaces",
+  "Curves and Surfaces",
+  "Geometry of Curves",
+  "Curves",
+  "Surfaces",
+  "Geometry"
+ ],
+ "1359": [
+  "Network Systems Protection",
+  "Systems Protection and Security",
+  "Systems Protection",
+  "Protection and Security",
+  "Network Systems",
+  "Security",
+  "Protection",
+  "Computer Networking"
+ ],
+ "1360": [
+  "Computer Network Implementation",
+  "Computer Networks",
+  "Design and Implementation",
+  "Computer Design and Implementation",
+  "Computer Implementation",
+  "Design",
+  "Computer Science"
+ ],
+ "1361": [
+  "Network Operating Systems",
+  "Modern Network Operating",
+  "Compatibility Modern Network",
+  "Operating Systems",
+  "Compatibility Modern",
+  "Modern Network",
+  "Compatibility"
+ ],
+ "1362": [
+  "Network Management",
+  "Network Tools",
+  "Computer Networking"
+ ],
+ "1363": [
+  "Parallel Computer Architectures",
+  "Parallel Computing",
+  "Computer Architectures",
+  "Parallel Programming",
+  "Software Architecture",
+  "Computer Science"
+ ],
+ "1364": [
+  "Cluster and Grid Systems",
+  "Cluster Systems",
+  "Cluster"
+ ],
+ "1365": [
+  "Hardware Implementation of Cryptographic Methods",
+  "Cryptographic Implementation",
+  "Hardware Implementation",
+  "Cryptographic Methods",
+  "Modern Processors",
+  "Cryptography",
+  "Processors",
+  "Hardware"
+ ],
+ "1366": [
+  "Servers and Computing Systems",
+  "Servers and Computing",
+  "Server Management",
+  "Computing Systems and Networks",
+  "Computing Systems",
+  "Computing"
+ ],
+ "1367": [
+  "Computing Testing Tools",
+  "Testing Tools",
+  "Computing Tools",
+  "Computing Systems",
+  "Software Testing",
+  "Computing"
+ ],
+ "1368": [
+  "Networking Technologies",
+  "Next-Generation Networking Technologies",
+  "Next-Generation Networking",
+  "Networking"
+ ],
+ "1369": [
+  "Telecommunication Network Device Selection Tools",
+  "Selecting Telecommunication Networks",
+  "Telecommunication Network Devices",
+  "Selecting Telecommunication",
+  "Telecommunication Network",
+  "Network Devices",
+  "Telecommunications",
+  "Selection Tools",
+  "Computer Networking",
+  "Selection"
+ ],
+ "1370": [],
+ "1371": [
+  "Computing Devices",
+  "Computing Systems",
+  "Computing"
+ ],
+ "1372": [
+  "Elemental Base of Computational Systems",
+  "Computational Methods",
+  "Modern Elemental Base",
+  "Elemental Base"
+ ],
+ "1373": [
+  "Measuring Computational Systems",
+  "Computational Systems and Networks",
+  "Computational Systems",
+  "Computational Methods"
+ ],
+ "1374": [
+  "Systems Analysis and Mathematical Modeling",
+  "Systems Analysis",
+  "Mathematical Modeling and Analysis",
+  "Mathematical Modeling",
+  "Modeling",
+  "Mathematical Analysis",
+  "Mathematics",
+  "Analysis"
+ ],
+ "1375": [
+  "Genetic Algorithms",
+  "Neural Networks and Genetic Algorithms",
+  "Neural Network Theory",
+  "Neural Networks",
+  "Algorithms"
+ ],
+ "1376": [
+  "Information Design",
+  "Design"
+ ],
+ "1377": [],
+ "1378": [
+  "Software Engineering Tools",
+  "Software Engineering",
+  "Software Tools",
+  "Software",
+  "Engineering"
+ ],
+ "1379": [
+  "Differential Transformations",
+  "Transformations",
+  "Differential Equations"
+ ],
+ "1380": [],
+ "1381": [],
+ "1382": [],
+ "1383": [
+  "Multi-Agent Modeling",
+  "Socio-Economic Analysis",
+  "Socio-Economic",
+  "Multi-Agent Systems",
+  "Agent Modeling",
+  "Agent Systems",
+  "Socio",
+  "Multi-Systems",
+  "Modeling"
+ ],
+ "1384": [
+  "Data Processing Algorithms",
+  "Data Processing",
+  "Data Analysis & Processing",
+  "Processing Algorithms",
+  "Algorithms",
+  "Processing",
+  "Construction Analysis",
+  "Data Analysis",
+  "Data",
+  "Construction Data Analysis"
+ ],
+ "1385": [
+  "Graphical Information Processing",
+  "Information Processing Software",
+  "Processing Software Tools",
+  "Software Tools",
+  "Graphical Information",
+  "Processing Software",
+  "Graphical",
+  "Information Processing",
+  "Software",
+  "Processing"
+ ],
+ "1386": [
+  "Software Packages Engineering",
+  "Applied Software Packages",
+  "Software Packages",
+  "Packages Engineering",
+  "Applied Software",
+  "Software",
+  "Engineering Problem Solving",
+  "Engineering",
+  "Applied Studies"
+ ],
+ "1387": [],
+ "1388": [
+  "Technical Document Development",
+  "Document Development",
+  "Technical Documentation Technologies",
+  "Technical Documentation",
+  "Modern Technical Technologies",
+  "Documentation",
+  "Modern Technologies",
+  "Technical Technologies",
+  "Technical Engineering"
+ ],
+ "1389": [
+  "Strategic Project Analysis",
+  "Strategic Projects",
+  "Strategic Analysis",
+  "Strategic Planning",
+  "Analysis"
+ ],
+ "1390": [
+  "Intellectual Property Protection",
+  "Intellectual Property",
+  "Property Protection",
+  "Protection",
+  "Property Management",
+  "Intellectual Skills"
+ ],
+ "1391": [
+  "Information Retrieval Systems Software",
+  "Information Retrieval",
+  "Retrieval Systems",
+  "Systems Software",
+  "Software Engineering & Computer Science",
+  "Systems Software Engineering",
+  "Retrieval",
+  "Software Engineering",
+  "Software",
+  "Computer Science"
+ ],
+ "1392": [
+  "Software Engineering Methodology",
+  "Software Engineering & Computer Science",
+  "Software Engineering",
+  "Engineering & Computer Science",
+  "Software Methodology",
+  "Software",
+  "Engineering"
+ ],
+ "1393": [],
+ "1394": [
+  "Programming Styles & Methods",
+  "Programming Styles",
+  "Programming"
+ ],
+ "1395": [
+  "Algorithms & Data Structures",
+  "Data Structures",
+  "Theory of Algorithms",
+  "Algorithms",
+  "Data"
+ ],
+ "1396": [
+  "Advanced Web Technologies",
+  "Web Technologies",
+  "Web Development"
+ ],
+ "1397": [],
+ "1398": [
+  "Software Libraries & Frameworks",
+  "Libraries",
+  "Software Development",
+  "Software"
+ ],
+ "1399": [
+  "Software Testing & Evaluation",
+  "Software Tools",
+  "Software Testing",
+  "Software"
+ ],
+ "1400": [],
+ "1401": [
+  "Specialized Equipment Programming",
+  "Programming",
+  "Specialized Computing"
+ ],
+ "1402": [],
+ "1403": [
+  "AI Programming Tools",
+  "Programming Tools",
+  "Artificial Intelligence",
+  "Programming",
+  "Intelligence"
+ ],
+ "1404": [
+  "Entrepreneurship in Software Engineering",
+  "Entrepreneurship",
+  "Software Engineering",
+  "Engineering",
+  "Software"
+ ],
+ "1405": [
+  "Entrepreneurship in Information Technology",
+  "Entrepreneurship",
+  "Information Technology",
+  "Technology"
+ ],
+ "1406": [],
+ "1407": [
+  "Optimization of Large-Scale Interconnections",
+  "Modeling & Optimization",
+  "Optimization",
+  "Modeling"
+ ],
+ "1408": [
+  "Information Security and Protection",
+  "Information Protection",
+  "Protection and Security",
+  "Security",
+  "Protection"
+ ],
+ "1409": [
+  "Specialized Computational Methods",
+  "Computational Methods",
+  "Specialized Computing"
+ ],
+ "1410": [
+  "Hardware and Software Solutions",
+  "Computing Systems",
+  "Computing Systems and Networks",
+  "Software Solutions",
+  "Hardware",
+  "Software Solutions for Computing",
+  "Computing",
+  "Software"
+ ],
+ "1411": [
+  "Optoelectronics",
+  "Information Processing & Transmission",
+  "Information Processing",
+  "Transmission",
+  "Processing"
+ ],
+ "1412": [
+  "Automated Design Methods",
+  "Automated Design",
+  "Mathematical Methods for Automated Design",
+  "Mathematical Methods",
+  "Design",
+  "Mathematics",
+  "Automated"
+ ],
+ "1413": [
+  "Automated Design Software Tools",
+  "Electronic Design Automation",
+  "Automated Design",
+  "Software Design",
+  "Software Tools",
+  "Automated",
+  "Software",
+  "Electronics"
+ ],
+ "1414": [
+  "Digital Signal Processing",
+  "Digital Signal",
+  "Signal Processing",
+  "Digital",
+  "Signal",
+  "Processing"
+ ],
+ "1415": [
+  "Parallel Programming Techniques",
+  "Parallel Programming",
+  "Programming Techniques",
+  "Programming"
+ ],
+ "1416": [],
+ "1417": [
+  "Mathematical Modeling of Processes",
+  "Systems Analysis and Mathematical Modeling",
+  "Systems Analysis",
+  "Mathematical Modeling",
+  "Machine Learning Models",
+  "Mathematical Analysis",
+  "Mathematics",
+  "Analysis"
+ ],
+ "1418": [
+  "Elemental Base of Computational Systems",
+  "Computational Methods",
+  "Modern Elemental Base",
+  "Elemental Base"
+ ],
+ "1419": [
+  "Automated Design Systems",
+  "Automated Design",
+  "Design Systems",
+  "Automated",
+  "Design"
+ ],
+ "1420": [
+  "Large-Scale Integrated Circuits",
+  "Physical Design Algorithms",
+  "Design of Large Integrated Systems",
+  "Integrated Circuits",
+  "Algorithms for Physical Design",
+  "Physical Design",
+  "Large Integrated Systems",
+  "Circuits",
+  "Design of Large Systems",
+  "Algorithms"
+ ],
+ "1421": [
+  "Algorithms for Verification of Large Systems",
+  "Algorithms for Verification",
+  "Verification of Large Systems",
+  "Algorithms",
+  "Verification"
+ ],
+ "1422": [
+  "Mathematical Foundations of Informatics",
+  "Informatics",
+  "Mathematical Foundations",
+  "Mathematics"
+ ],
+ "1423": [
+  "Software Architecture",
+  "Foundations of Software Architecture",
+  "Computer Architecture",
+  "Mathematical Foundations of Software",
+  "Mathematical Foundations",
+  "Foundations of Software",
+  "Software",
+  "Mathematics"
+ ],
+ "1424": [
+  "Applied Theory of Automata",
+  "Automata Theory",
+  "Applied Theory",
+  "Applied Studies"
+ ],
+ "1425": [
+  "Engineering Modeling",
+  "Modeling",
+  "Engineering"
+ ],
+ "1426": [
+  "Software Development Architecture",
+  "Computing Systems Architecture",
+  "Software Development",
+  "Computing Systems",
+  "Software Architecture and Computing",
+  "Computer Architecture",
+  "Software",
+  "Computing"
+ ],
+ "1427": [],
+ "1428": [],
+ "1429": [
+  "Protection of Software Systems",
+  "Software Protection",
+  "Software Systems",
+  "Protection",
+  "Software"
+ ],
+ "1430": [
+  "Database Design and Technologies",
+  "Database Design",
+  "Databases",
+  "Design Technologies",
+  "Design"
+ ],
+ "1431": [
+  "Computer Network Programming",
+  "Network Programming",
+  "Computer Networking",
+  "Programming",
+  "Computer Science"
+ ],
+ "1432": [],
+ "1433": [],
+ "1434": [
+  "Programming Technology",
+  "Programming",
+  "Technology"
+ ],
+ "1435": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1436": [
+  "Programming in .NET Environment",
+  ".NET Environment",
+  "Programming in .NET",
+  "Programming",
+  ".NET"
+ ],
+ "1437": [],
+ "1438": [
+  "Mobile Application Development",
+  "Mobile"
+ ],
+ "1439": [
+  "Network Organization",
+  "Computer Networking"
+ ],
+ "1440": [
+  "Electronic Design Automation",
+  "Design Automation",
+  "Introduction to Electronic Design",
+  "Electronic Design",
+  "Automation",
+  "Introduction to Electronics",
+  "Electronics",
+  "Design"
+ ],
+ "1441": [],
+ "1442": [
+  "Computer Architecture and Operating Systems",
+  "Architecture and Operating Systems",
+  "Computer Architecture",
+  "Operating Systems",
+  "Computer Science"
+ ],
+ "1443": [
+  "Digital Integrated Circuits",
+  "Digital"
+ ],
+ "1444": [
+  "Analog Integrated Circuits",
+  "Integrated Circuits",
+  "Analog Design",
+  "Circuits"
+ ],
+ "1445": [
+  "Theory of Algorithms",
+  "Algorithms"
+ ],
+ "1446": [
+  "Automated Design Methods",
+  "Automated Design",
+  "Mathematical Methods for Automated Design",
+  "Mathematical Methods",
+  "Design",
+  "Mathematics",
+  "Automated"
+ ],
+ "1447": [
+  "Discrete Mathematics",
+  "Mathematics"
+ ],
+ "1448": [
+  "Algorithms for Designing Integrated Circuits",
+  "Designing Integrated Circuits",
+  "Algorithms for Designing",
+  "Algorithms",
+  "System Design"
+ ],
+ "1449": [
+  "Integrated Circuit Scheme Modeling",
+  "Integrated Circuit Scheme",
+  "Scheme Modeling",
+  "Scheme",
+  "Modeling"
+ ],
+ "1450": [
+  "Programming Languages",
+  "Programming"
+ ],
+ "1451": [
+  "Object-Oriented Programming (OOP)",
+  "Object-Oriented Programming",
+  "Programming"
+ ],
+ "1452": [
+  "Programming Languages",
+  "Programming"
+ ],
+ "1453": [
+  "Programming Technologies",
+  "Programming"
+ ],
+ "1454": [],
+ "1455": [
+  "User Interface Programming",
+  "Interface Programming",
+  "User Interface",
+  "Programming",
+  "Interface"
+ ],
+ "1456": [
+  "Programming in Linux Operating Environment",
+  "Programming in Linux",
+  "Linux Operating Environment",
+  "Linux Operating System",
+  "Linux",
+  "Operating Environment",
+  "Programming",
+  "Operating Systems"
+ ],
+ "1457": [
+  "Blockchain Fundamentals and Cybersecurity",
+  "Blockchain Fundamentals",
+  "Fundamentals of Cybersecurity",
+  "Blockchain",
+  "Cybersecurity"
+ ],
+ "1458": [
+  "Decentralized Finance (DeFi)",
+  "Decentralized Finance",
+  "Finance and DeFi",
+  "Decentralized Systems",
+  "Finance",
+  "DeFi"
+ ],
+ "1459": [
+  "Probability and Statistics for Blockchain",
+  "Statistics for Blockchain",
+  "Probability and Statistics",
+  "Blockchain",
+  "Statistics",
+  "Probability"
+ ],
+ "1460": [
+  "Financial Fundamentals",
+  "Financial Mathematics"
+ ],
+ "1461": [
+  "Mathematical Foundations of Blockchain",
+  "Blockchain Foundations",
+  "Mathematical Foundations",
+  "Blockchain",
+  "Mathematics"
+ ],
+ "1462": [
+  "Cryptocurrency Trading Economics",
+  "Cryptocurrency Trading",
+  "Cryptocurrency",
+  "Trading Economics",
+  "Economics",
+  "Trading"
+ ],
+ "1463": [
+  "DeFi Risk Management",
+  "DeFi"
+ ],
+ "1464": [
+  "Game Theory Applications",
+  "Game Theory",
+  "Theory & Applications",
+  "Game Development",
+  "Applications"
+ ],
+ "1465": [
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "1466": [
+  "Sound Processing and Analysis",
+  "Data Processing and Analysis",
+  "Computer Vision",
+  "Data Processing",
+  "Sound Analysis",
+  "Data",
+  "Analysis",
+  "Computer Science"
+ ],
+ "1467": [
+  "Graph Mining Models",
+  "Graph Mining",
+  "Big Data Mining Models",
+  "Big Data Models",
+  "Mining Models",
+  "Big Data",
+  "Graph Theory",
+  "Data Mining",
+  "Machine Learning Models"
+ ],
+ "1468": [
+  "Natural Language Processing",
+  "Processing"
+ ],
+ "1469": [
+  "AI Decision Making"
+ ],
+ "1470": [
+  "Signal Processing Applications",
+  "Image Processing Applications",
+  "Image Processing",
+  "Signal Processing",
+  "Processing Applications",
+  "Applications",
+  "Signal",
+  "Processing"
+ ],
+ "1471": [],
+ "1472": [
+  "Computational Imaging",
+  "Imaging",
+  "Computational Methods"
+ ],
+ "1473": [
+  "Artificial Intelligence",
+  "Intelligence"
+ ],
+ "1474": []
+}
