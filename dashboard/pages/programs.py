@@ -8,6 +8,7 @@ import streamlit as st
 
 from src.data_loader import load_alignment, load_gaps
 from src.formatting import format_score, score_color, score_label, roles_short
+from src.auth_ui import current_university
 
 
 def _render():
@@ -71,6 +72,7 @@ def _render():
                 if st.button("View →", key=f"view_{program}_{degree}"):
                     st.session_state["selected_program"] = program
                     st.session_state["selected_degree"] = degree
+                    st.session_state["selected_program_university"] = current_university()
                     st.switch_page("pages/program_detail.py")
                 st.markdown("</div>", unsafe_allow_html=True)
 

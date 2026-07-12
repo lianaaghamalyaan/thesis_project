@@ -152,13 +152,24 @@ def load_gaps(university: str | None) -> pd.DataFrame:
         session.close()
 
 
+_LLM_GAPS_COLUMNS = ["university", "program_name", "degree_level", "role_groups", "missing_skill", "job_frequency", "category"]
+
+
 def load_llm_gaps(university: str | None) -> pd.DataFrame:
-    """Matches llm_gap_analysis.csv shape (has category)."""
+    """Matches llm_gap_analysis.csv shape (has category). Only the frozen
+    March 2026 snapshot has per-skill categories (LLM-classified as part of
+    the original thesis pipeline); live-recomputed runs (pipeline/
+    compute_alignment.py) don't classify categories, so this legitimately
+    returns zero rows for those — callers fall back to load_gaps() /
+    load_llm_gaps()'s "role_groups"-less sibling in that case. Always
+    returns the expected columns (even when empty) so
+    `df["some_column"]` boolean-indexing in callers doesn't KeyError on an
+    empty, columnless DataFrame."""
     session = get_session()
     try:
         run = _canonical_run(session)
         if run is None:
-            return pd.DataFrame()
+            return pd.DataFrame(columns=_LLM_GAPS_COLUMNS)
         q = (
             select(GapSkill, Program, University)
             .join(AlignmentResult, GapSkill.result_id == AlignmentResult.id)
@@ -178,7 +189,7 @@ def load_llm_gaps(university: str | None) -> pd.DataFrame:
             "job_frequency": gap.job_frequency,
             "category": gap.category,
         } for gap, program, uni in rows]
-        return pd.DataFrame.from_records(records)
+        return pd.DataFrame.from_records(records, columns=_LLM_GAPS_COLUMNS) if records else pd.DataFrame(columns=_LLM_GAPS_COLUMNS)
     finally:
         session.close()
 

@@ -39,7 +39,7 @@ DATABASE_URL = os.environ.get(
     f"postgresql+psycopg2://{getpass.getuser()}@localhost:5432/curriculumlens",
 )
 
-engine = create_engine(DATABASE_URL, pool_pre_ping=True)
+engine = create_engine(DATABASE_URL, pool_pre_ping=True, use_insertmanyvalues=False)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, expire_on_commit=False)
 
 

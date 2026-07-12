@@ -80,18 +80,47 @@ def render_sidebar_identity() -> None:
     st.sidebar.markdown(f"**{user['full_name']}**")
     st.sidebar.caption(f"{user['org_name']} · {user['role']}")
 
-    if can_switch_university():
-        universities = list_universities()
-        current = current_university()
-        idx = universities.index(current) if current in universities else 0
-        selected = st.sidebar.selectbox("Viewing university", universities, index=idx, key="university_switcher")
-        if selected != current:
-            st.session_state["current_university"] = selected
-            st.rerun()
-    else:
+    if not can_switch_university():
         st.sidebar.caption(f"\U0001f4cc {current_university()}")
 
     if st.sidebar.button("Log out", use_container_width=True):
         for key in ("user", "current_university"):
             st.session_state.pop(key, None)
+        st.rerun()
+
+
+def render_university_banner() -> None:
+    """Prominent, main-content-area university selector for policy/internal
+    (admin) accounts — replaces a small sidebar dropdown that was easy to
+    miss when switching between universities' data. Renders nothing for
+    university-tier accounts (they have no switch to make)."""
+    if not can_switch_university():
+        return
+
+    universities = list_universities()
+    current = current_university()
+    idx = universities.index(current) if current in universities else 0
+
+    st.markdown(
+        """
+        <div style="background:linear-gradient(135deg,#1F6F78 0%,#153F45 100%);
+                    color:white;border-radius:12px;padding:10px 22px 4px 22px;margin-bottom:10px;">
+            <div style="font-size:0.78em;text-transform:uppercase;letter-spacing:0.08em;opacity:0.85;">
+                Admin view · currently viewing
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        selected = st.selectbox(
+            "University", universities, index=idx, key="university_switcher",
+            label_visibility="collapsed",
+        )
+    with col2:
+        user = st.session_state.get("user", {})
+        st.caption(f"👁️ Viewing as {user.get('role') or user.get('org_type') or 'admin'}")
+    if selected != current:
+        st.session_state["current_university"] = selected
         st.rerun()

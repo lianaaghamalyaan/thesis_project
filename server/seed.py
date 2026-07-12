@@ -16,6 +16,7 @@ from datetime import date, datetime
 from pathlib import Path
 
 import pandas as pd
+from psycopg2.extras import execute_values
 
 from .auth import hash_password
 from .db import SessionLocal, engine
@@ -44,9 +45,39 @@ CURRICULUM_COLLECTED_AT = date(2026, 3, 20)
 JOB_SNAPSHOT_DATE = date(2026, 3, 20)
 RUN_KEY = "march_2026_static"
 
-# Default local passwords — change before any real deployment. Printed at the
-# end of the run so they're not silently lost.
+# Default local passwords. This script drops and recreates every table it
+# manages (including users), so re-running seed.py against a live database
+# WILL reset all passwords back to this value — always run
+# server/reset_passwords.py again immediately after any re-seed of a
+# database anyone outside development can reach.
 DEFAULT_PASSWORD = "changeme123"
+
+
+def bulk_insert(session, table_name: str, columns: list[str], rows: list[tuple]) -> None:
+    """Bulk-insert via psycopg2.extras.execute_values on the same connection
+    (and transaction) as the ORM session — session.commit()/rollback() still
+    covers these rows.
+
+    Used instead of the ORM for CourseSkill/JobSkill (8,298 + 5,137 rows):
+    neither table's generated id is referenced afterward, so there's no need
+    for RETURNING. That matters because SQLAlchemy 2.0's ORM bulk-insert path
+    (insertmanyvalues, used automatically once >1 row is pending at flush())
+    combined with RETURNING hit a real bug against this schema — a FLOAT
+    column (Course.credits) sitting next to a VARCHAR column of similarly
+    formatted values (Course.semester, e.g. "1.0") caused Postgres to receive
+    a value in the wrong column position ("invalid input syntax for type
+    double precision: 'Թուրքերեն-2'"), reproduced consistently both locally
+    and against Supabase. Root-causing that further wasn't worth the time
+    against a one-time migration script; execute_values sidesteps it (and is
+    also just plain faster over a slow network — one round trip per page
+    instead of one per row, without needing use_insertmanyvalues at all).
+    """
+    if not rows:
+        return
+    raw_conn = session.connection().connection
+    with raw_conn.cursor() as cur:
+        col_list = ", ".join(columns)
+        execute_values(cur, f"INSERT INTO {table_name} ({col_list}) VALUES %s", rows, page_size=500)
 
 
 def load_json(path: Path) -> dict:
@@ -84,6 +115,7 @@ def seed_curriculum(session, course_skills: dict, tiers: dict) -> dict[tuple[str
 
     program_id_by_key: dict[tuple[str, str, str], int] = {}
     program_courses: dict[int, list[int]] = {}  # program.id -> [course_id,...] for doc-score calc
+    all_course_skill_rows: list[tuple] = []  # accumulated for one bulk_insert at the end
 
     grouped = curriculum.groupby(["university", "program_name", "degree_level"], sort=False)
     for (uni_name, prog_name, degree), rows in grouped:
@@ -125,7 +157,14 @@ def seed_curriculum(session, course_skills: dict, tiers: dict) -> dict[tuple[str
         session.add(version)
         session.flush()
 
+        # Build all of this program's Course rows first and flush ONCE
+        # (rather than after every course) — over a remote DB, one
+        # round-trip per row for ~1,545 courses made this migration
+        # effectively hang (14+ minutes with nothing committed). SQLAlchemy
+        # assigns .id to every pending object in a single flush, so this
+        # batching is free correctness-wise, just far fewer round trips.
         course_ids_for_doc_score = []
+        courses_batch = []
         for _, crow in rows.iterrows():
             orig_course_id = int(crow["course_id"])
             course = Course(
@@ -141,19 +180,25 @@ def seed_curriculum(session, course_skills: dict, tiers: dict) -> dict[tuple[str
                 notes=crow.get("notes") or None,
             )
             session.add(course)
-            session.flush()
+            courses_batch.append((course, orig_course_id))
             course_ids_for_doc_score.append(orig_course_id)
+        session.flush()
 
+        for course, orig_course_id in courses_batch:
             skills = course_skills.get(str(orig_course_id), [])
             tier_data = tiers.get(str(orig_course_id), {})
             high_conf = set(tier_data.get("tier1", []))
             for skill in skills:
-                session.add(CourseSkill(
-                    course_id=course.id,
-                    skill_name=skill,
-                    confidence_tier="high" if skill in high_conf else "low",
+                all_course_skill_rows.append((
+                    course.id, skill, "high" if skill in high_conf else "low", "LLM", "names",
                 ))
         program_courses[program.id] = course_ids_for_doc_score
+
+    bulk_insert(
+        session, "course_skills",
+        ["course_id", "skill_name", "confidence_tier", "extraction_method", "input_type"],
+        all_course_skill_rows,
+    )
 
     session.commit()
     return program_id_by_key, program_courses, tiers
@@ -181,7 +226,10 @@ def seed_jobs(session) -> dict[str, int]:
             notes="Migrated from thesis March 2026 snapshot",
         ))
 
+    # Same batching fix as seed_curriculum: build all postings first, flush
+    # once (not once per row), then attach skills using the now-populated ids.
     job_id_to_pk: dict[str, int] = {}
+    postings_batch = []
     for _, row in jobs.iterrows():
         posting_date = pd.to_datetime(row["posting_date"], errors="coerce")
         deadline = pd.to_datetime(row.get("deadline"), errors="coerce")
@@ -204,16 +252,20 @@ def seed_jobs(session) -> dict[str, int]:
             is_active=True,
         )
         session.add(posting)
-        session.flush()
-        job_id_to_pk[row["job_id"]] = posting.id
+        postings_batch.append((posting, row["job_id"]))
+    session.flush()
 
-        for skill in job_skills_raw.get(row["job_id"], []):
-            session.add(JobSkill(
-                posting_id=posting.id,
-                skill_name=skill,
-                extraction_method="LLM",
-                prompt_version="thesis_march_2026",
-            ))
+    job_skill_rows: list[tuple] = []
+    for posting, job_id in postings_batch:
+        job_id_to_pk[job_id] = posting.id
+        for skill in job_skills_raw.get(job_id, []):
+            job_skill_rows.append((posting.id, skill, "LLM", "thesis_march_2026"))
+
+    bulk_insert(
+        session, "job_skills",
+        ["posting_id", "skill_name", "extraction_method", "prompt_version"],
+        job_skill_rows,
+    )
 
     session.commit()
     return job_id_to_pk
@@ -370,7 +422,14 @@ def main():
     session = SessionLocal()
     try:
         print("Loading course skills / confidence tiers ...")
-        course_skills = load_json(PROCESSED / "unified/course_skills_names_only.json")
+        # CANONICAL_EXPERIMENT is "LLM_desc_semantic" — "desc" means skills
+        # extracted from full course DESCRIPTIONS, not just course names.
+        # Confirmed empirically 2026-07-12: course_skills_with_desc_norm.json
+        # aggregated per program reproduces the historical n_program_skills
+        # exactly (193 for YSU Data Science in Business); the names_only file
+        # (used here previously) gives only 103 — a real bug that understated
+        # every program's skill coverage in this database until this fix.
+        course_skills = load_json(PROCESSED / "unified/course_skills_with_desc_norm.json")
         tiers = load_json(PROCESSED / "unified/course_confidence_tiers.json")
 
         print("Seeding universities, programs, courses, course skills ...")

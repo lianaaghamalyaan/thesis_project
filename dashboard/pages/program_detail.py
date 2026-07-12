@@ -35,22 +35,28 @@ from src.auth_ui import current_university
 
 
 def _program_selector(alignment):
-    """Sidebar or top-of-page program selector. Respects session state."""
+    """Sidebar or top-of-page program selector. Respects session state,
+    but only within the same university — switching university (via the
+    admin banner) must not carry over a program selection that belongs to
+    a different university's data, even if a same-named program happens
+    to exist there too."""
     options = [
         (row["program"], row["degree"])
         for _, row in alignment.sort_values("core_role_coverage_pct", ascending=False, na_position="last").iterrows()
     ]
     labels = [f"{p} ({d})" for p, d in options]
 
-    # Try to restore selection from session state (e.g. navigated from Programs page)
+    # Try to restore selection from session state (e.g. navigated from
+    # Programs page) — but only if it was saved for the same university.
     default_idx = 0
-    saved_program = st.session_state.get("selected_program")
-    saved_degree = st.session_state.get("selected_degree")
-    if saved_program and saved_degree:
-        for i, (p, d) in enumerate(options):
-            if p == saved_program and d == saved_degree:
-                default_idx = i
-                break
+    if st.session_state.get("selected_program_university") == current_university():
+        saved_program = st.session_state.get("selected_program")
+        saved_degree = st.session_state.get("selected_degree")
+        if saved_program and saved_degree:
+            for i, (p, d) in enumerate(options):
+                if p == saved_program and d == saved_degree:
+                    default_idx = i
+                    break
 
     selected_label = st.selectbox(
         "Select a program",
@@ -60,9 +66,10 @@ def _program_selector(alignment):
     )
     idx = labels.index(selected_label)
     program, degree = options[idx]
-    # Persist selection
+    # Persist selection, tagged with the university it belongs to.
     st.session_state["selected_program"] = program
     st.session_state["selected_degree"] = degree
+    st.session_state["selected_program_university"] = current_university()
     return program, degree
 
 
