@@ -2,14 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { api, ProgramAlignment } from "@/lib/api";
+import { api, DocQualityResponse, ProgramAlignment } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { ScoreDisplay } from "@/components/ScoreBadge";
 import { rolesShort } from "@/lib/format";
 
+const LOW_DOC_THRESHOLD = 0.25;
+
 export default function ProgramsPage() {
   const { currentUniversity, universityParam, isAllUniversities } = useAuth();
   const [programs, setPrograms] = useState<ProgramAlignment[] | null>(null);
+  const [docQuality, setDocQuality] = useState<DocQualityResponse | null>(null);
   const [degreeFilter, setDegreeFilter] = useState("All");
   const [search, setSearch] = useState("");
 
@@ -18,6 +21,19 @@ export default function ProgramsPage() {
     setPrograms(null);
     api.programs(universityParam).then(setPrograms);
   }, [currentUniversity, universityParam]);
+
+  useEffect(() => {
+    if (!currentUniversity || isAllUniversities) {
+      setDocQuality(null);
+      return;
+    }
+    api.docQuality(universityParam).then(setDocQuality);
+  }, [currentUniversity, universityParam, isAllUniversities]);
+
+  const docScoreFor = (program: string, degree: string): number | null => {
+    const row = docQuality?.programs.find((p) => p.program === program && p.degree === degree);
+    return row ? row.doc_score : null;
+  };
 
   const degrees = useMemo(
     () => ["All", ...Array.from(new Set((programs ?? []).map((p) => p.degree))).sort()],
@@ -41,9 +57,9 @@ export default function ProgramsPage() {
     <div>
       <h1 className="text-3xl font-bold text-primary-dark">Programs</h1>
       <p className="mt-1 text-sm text-muted">
-        {isAllUniversities
-          ? "All programs across every university, ordered by alignment score."
-          : "Select a program to see its full alignment breakdown."}
+        The full, searchable catalog of programs. {isAllUniversities ? "Across every university, " : ""}Filter or
+        search below, then open a program to see its full strengths/gaps breakdown. For a portfolio-level summary
+        instead, see <Link href="/" className="font-medium text-primary">Overview</Link>.
       </p>
 
       <div className="mt-5 flex flex-wrap gap-3">
@@ -76,7 +92,14 @@ export default function ProgramsPage() {
             className="flex items-center justify-between rounded-xl border border-border p-4"
           >
             <div>
-              <div className="font-semibold">{p.program}</div>
+              <div className="font-semibold">
+                {p.program}
+                {docScoreFor(p.program, p.degree) !== null && docScoreFor(p.program, p.degree)! < LOW_DOC_THRESHOLD && (
+                  <span className="ml-2 rounded-full bg-orange-100 px-2 py-0.5 text-[10px] font-medium text-orange-700">
+                    📝 Limited course data
+                  </span>
+                )}
+              </div>
               <div className="text-xs text-muted">
                 {p.degree} · {rolesShort(p.relevant_roles)}
                 {isAllUniversities ? ` · ${p.university}` : ""}

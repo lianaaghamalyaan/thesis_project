@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { api, JobFitResult, ProgramAlignment } from "@/lib/api";
+import { api, JobFitResult, ProgramAlignment, RunMetadata } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
+import { InfoTip } from "@/components/InfoTip";
+import { DataFreshnessNote } from "@/components/DataFreshnessNote";
 import { formatScore, scoreColor } from "@/lib/format";
 
 export default function JobFitPage() {
@@ -13,6 +15,11 @@ export default function JobFitPage() {
   const [degree, setDegree] = useState("");
   const [role, setRole] = useState("");
   const [result, setResult] = useState<JobFitResult | null>(null);
+  const [meta, setMeta] = useState<RunMetadata | null>(null);
+
+  useEffect(() => {
+    api.runMetadata().then(setMeta);
+  }, []);
 
   useEffect(() => {
     if (!currentUniversity || isAllUniversities) return;
@@ -90,18 +97,23 @@ export default function JobFitPage() {
               <div className="text-4xl font-bold" style={{ color: scoreColor(result.match_score) }}>
                 {formatScore(result.match_score)}
               </div>
-              <div className="text-xs text-muted">core skills covered</div>
+              <div className="text-xs text-muted">
+                core skills covered <InfoTip term="core_coverage" />
+              </div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-semibold" style={{ color: scoreColor(result.weighted_score) }}>
                 {formatScore(result.weighted_score)}
               </div>
-              <div className="text-xs text-muted">frequency-weighted</div>
+              <div className="text-xs text-muted">
+                frequency-weighted <InfoTip term="weighted_coverage" />
+              </div>
             </div>
             <div className="text-sm text-muted">
               Covers {result.n_core_skills - result.missing.length} of <strong>{result.n_core_skills} core skills</strong>{" "}
               for <strong>{role}</strong> — skills demanded in at least 5% of the role's {result.n_role_postings}{" "}
-              postings. Same matching methodology (semantic, cosine ≥ 0.65) as the program alignment scores.
+              postings. Same matching methodology as the program alignment scores, so these numbers are directly
+              comparable to a program's headline score.
             </div>
           </div>
 
@@ -139,6 +151,8 @@ export default function JobFitPage() {
           </div>
         </>
       )}
+
+      <DataFreshnessNote meta={meta} />
     </div>
   );
 }

@@ -1,11 +1,15 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
-import { api, ProgramDetail } from "@/lib/api";
+import { api, ProgramDetail, RunMetadata } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { ScoreDisplay } from "@/components/ScoreBadge";
 import { MetricCard, Card } from "@/components/MetricCard";
+import { InfoTip } from "@/components/InfoTip";
+import { DataFreshnessNote } from "@/components/DataFreshnessNote";
 import { formatScore, GAP_TYPE_ICONS, GAP_TYPE_LABELS } from "@/lib/format";
+
+const LOW_DOC_THRESHOLD = 0.25;
 
 export default function ProgramDetailPage({
   params,
@@ -22,12 +26,17 @@ export default function ProgramDetailPage({
   // both NPUA and NUACA) and the session's current university is no help.
   const [pinnedUniversity, setPinnedUniversity] = useState<string | null>(null);
   const [detail, setDetail] = useState<ProgramDetail | null>(null);
+  const [meta, setMeta] = useState<RunMetadata | null>(null);
   const [tab, setTab] = useState<"strengths" | "gaps">("strengths");
 
   useEffect(() => {
     const u = new URLSearchParams(window.location.search).get("u");
     setPinnedUniversity(u || null);
   }, [program, degree]);
+
+  useEffect(() => {
+    api.runMetadata().then(setMeta);
+  }, []);
 
   const effectiveUniversity = pinnedUniversity ?? universityParam ?? null;
 
@@ -66,7 +75,9 @@ export default function ProgramDetailPage({
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-[220px_1fr]">
         <div className="flex flex-col items-center justify-center rounded-xl border border-border bg-surface py-6">
           <ScoreDisplay score={score} />
-          <div className="mt-1 text-xs text-muted">Core role-aware coverage</div>
+          <div className="mt-1 text-xs text-muted">
+            Core role-aware coverage <InfoTip term="core_coverage" />
+          </div>
         </div>
         <div className="text-sm">
           <p>
@@ -78,7 +89,19 @@ export default function ProgramDetailPage({
             Covers {alignment?.core_n_overlap ?? "—"} of {alignment?.core_n_job_skills ?? "—"} core skills ·{" "}
             {displayGaps.length} skills identified as gaps
           </p>
-          <p className="mt-2 text-xs text-muted">📌 Relevant roles: {alignment?.relevant_roles ?? "unmapped"}</p>
+          <p className="mt-2 text-xs text-muted">
+            📌 Relevant roles: {alignment?.relevant_roles ?? "unmapped"} <InfoTip term="relevant_roles" />
+          </p>
+          {doc_score < LOW_DOC_THRESHOLD && (
+            <p className="mt-2 flex items-start gap-1.5 rounded-lg bg-orange-50 px-3 py-2 text-xs text-orange-800">
+              📝 <span>
+                This program&apos;s course descriptions are limited ({(doc_score * 100).toFixed(0)}% documentation
+                quality) — the score above may understate this program because there wasn&apos;t much published
+                course detail to analyze, not necessarily because the curriculum is weak.{" "}
+                <InfoTip term="doc_score" />
+              </span>
+            </p>
+          )}
         </div>
       </div>
 
@@ -87,7 +110,7 @@ export default function ProgramDetailPage({
           <h2 className="mt-8 text-base font-semibold">📊 How this compares</h2>
           <div className="mt-3 grid grid-cols-3 gap-4">
             <MetricCard label="This program" value={formatScore(score)} />
-            <MetricCard label={`Peer average (n=${benchmark.peer_n})`} value={formatScore(benchmark.peer_mean)} />
+            <MetricCard label={<>Peer average (n={benchmark.peer_n}) <InfoTip term="peer_average" /></>} value={formatScore(benchmark.peer_mean)} />
             <MetricCard
               label="Difference"
               value={`${score - benchmark.peer_mean >= 0 ? "+" : ""}${(score - benchmark.peer_mean).toFixed(1)} pts`}
@@ -130,6 +153,9 @@ export default function ProgramDetailPage({
 
       {tab === "gaps" && (
         <div className="mt-4">
+          <p className="mb-2 text-xs text-muted">
+            Each gap is labeled as a likely curriculum gap, documentation gap, or uncertain. <InfoTip term="gap_type" />
+          </p>
           {doc_score <= 0.2 && (
             <Card className="mb-4 border-score-moderate bg-orange-50">
               <p className="text-sm">
@@ -153,10 +179,12 @@ export default function ProgramDetailPage({
           </ul>
           <p className="mt-4 text-xs text-muted">
             Documentation quality score for this program: {(doc_score * 100).toFixed(0)}% (proportion of extracted
-            skills with high extraction confidence)
+            skills with high extraction confidence) <InfoTip term="doc_score" />
           </p>
         </div>
       )}
+
+      <DataFreshnessNote meta={meta} />
     </div>
   );
 }

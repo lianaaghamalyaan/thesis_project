@@ -33,6 +33,13 @@ export function rolesShort(relevantRoles: string | null | undefined): string {
   return parts.join(" / ");
 }
 
+export function formatDate(iso: string | null | undefined): string {
+  if (!iso) return "unknown date";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+}
+
 export function uniAbbr(name: string): string {
   const skip = new Set(["of", "the", "in", "and", "en", "de"]);
   const parts = name.split(/[\s-]+/).filter((w) => w && !skip.has(w.toLowerCase()));

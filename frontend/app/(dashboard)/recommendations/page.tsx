@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { api, RecommendationsResponse } from "@/lib/api";
+import { api, RecommendationsResponse, RunMetadata } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { Card } from "@/components/MetricCard";
+import { DataFreshnessNote } from "@/components/DataFreshnessNote";
 import { formatScore } from "@/lib/format";
 
 const PRIORITY_COLORS: Record<string, string> = {
@@ -15,12 +16,17 @@ const PRIORITY_COLORS: Record<string, string> = {
 export default function RecommendationsPage() {
   const { currentUniversity, universityParam, isAllUniversities } = useAuth();
   const [data, setData] = useState<RecommendationsResponse | null>(null);
+  const [meta, setMeta] = useState<RunMetadata | null>(null);
 
   useEffect(() => {
     if (!currentUniversity || isAllUniversities) return;
     setData(null);
     api.recommendations(universityParam).then(setData);
   }, [currentUniversity, universityParam, isAllUniversities]);
+
+  useEffect(() => {
+    api.runMetadata().then(setMeta);
+  }, []);
 
   if (isAllUniversities) {
     return (
@@ -106,6 +112,8 @@ export default function RecommendationsPage() {
           </Card>
         ))}
       </div>
+
+      <DataFreshnessNote meta={meta} />
     </div>
   );
 }

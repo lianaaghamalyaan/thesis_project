@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { api, RunMetadata } from "@/lib/api";
 import { Card, MetricCard } from "@/components/MetricCard";
+import { formatExperiment } from "@/lib/experiments";
+import { formatDate } from "@/lib/format";
 
 export default function MethodologyPage() {
   const [meta, setMeta] = useState<RunMetadata | null>(null);
@@ -15,62 +17,185 @@ export default function MethodologyPage() {
     <div className="max-w-3xl">
       <h1 className="text-3xl font-bold text-primary-dark">📐 Methodology</h1>
       <p className="mt-1 text-sm text-muted">
-        How alignment scores are computed, what the numbers mean, and where the underlying data comes from.
+        A plain-language explanation of what data this dashboard uses, how scores are calculated, and what to keep
+        in mind when reading them. Every technical term used elsewhere in the dashboard links back to a section
+        here.
       </p>
 
-      <h2 className="mt-6 text-lg font-semibold">What the score measures</h2>
-      <Card className="mt-2">
-        <p className="text-sm">
-          <strong>Core role-aware coverage</strong> (the headline number shown throughout the dashboard) = the
-          percentage of skills commonly required in job postings for roles relevant to a program that the program's
-          courses demonstrably cover.
-        </p>
-        <table className="mt-3 w-full text-sm">
-          <thead>
-            <tr className="text-left text-muted">
-              <th className="pb-1 pr-4">Score</th>
-              <th className="pb-1">Meaning</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td className="pr-4 py-0.5">50%+</td><td><strong>Strong</strong> — covers over half the role-relevant market skills</td></tr>
-            <tr><td className="pr-4 py-0.5">35–50%</td><td><strong>Good</strong> — solid coverage with targeted gaps</td></tr>
-            <tr><td className="pr-4 py-0.5">25–35%</td><td><strong>Moderate</strong> — clear opportunities to strengthen alignment</td></tr>
-            <tr><td className="pr-4 py-0.5">Below 25%</td><td><strong>Developing</strong> — significant gaps or documentation issues likely</td></tr>
-          </tbody>
-        </table>
-        <p className="mt-3 text-sm text-muted">
-          A lower score does not mean a program is poor — job postings routinely wishlist skills far beyond what any
-          single degree could reasonably teach. The score reflects what is documented in course descriptions.
+      <h2 id="data" className="mt-8 scroll-mt-6 text-lg font-semibold">📊 About the data</h2>
+      <Card className="mt-2 text-sm">
+        <p>Two independent datasets are compared against each other:</p>
+        <ul className="mt-2 list-disc space-y-1 pl-5">
+          <li>
+            <strong>Course catalogs</strong> published by each university — course names, descriptions, credits, and
+            program structure.
+          </li>
+          <li>
+            <strong>IT job postings</strong> from Armenian job boards and company career pages — used as a proxy for
+            what skills the market currently demands.
+          </li>
+        </ul>
+        {meta && (
+          <div className="mt-4 grid grid-cols-2 gap-4">
+            <MetricCard
+              label="Curriculum dataset"
+              value={`${meta.curriculum_snapshot.n_courses?.toLocaleString()} courses`}
+              caption={`${meta.curriculum_snapshot.n_programs} programs · ${meta.curriculum_snapshot.n_universities} universities · collected ${formatDate(meta.curriculum_snapshot.collected_at)}`}
+            />
+            <MetricCard
+              label="Job market dataset"
+              value={`${meta.job_snapshot.n_it_postings?.toLocaleString()} postings`}
+              caption={`${meta.job_snapshot.n_sources} sources · collected ${formatDate(meta.job_snapshot.collected_at)}`}
+            />
+          </div>
+        )}
+        <p className="mt-4 text-muted">
+          <strong>What&apos;s excluded:</strong> non-IT job postings are filtered out before analysis, since they
+          aren&apos;t relevant to IT program alignment. Both datasets are one-time snapshots — see{" "}
+          <a href="/admin" className="font-medium text-primary">Data &amp; Admin</a> for exact collection dates and
+          when the analysis was last recomputed.
         </p>
       </Card>
 
-      <h2 className="mt-6 text-lg font-semibold">Pipeline, step by step</h2>
+      <h2 id="fairness" className="mt-8 scroll-mt-6 text-lg font-semibold">✍️ When a university publishes little course detail</h2>
+      <Card className="mt-2 text-sm">
+        <p>
+          Some universities publish only a course name for each course, with no description of what&apos;s actually
+          taught. Since scores are computed from course descriptions, a program with thin published documentation
+          can score lower for that reason alone — even if the actual curriculum is strong.
+        </p>
+        <p className="mt-2">
+          To reduce this problem, courses with no published description have a short description generated by AI
+          from the course name and program context, so they can still be analyzed rather than being ignored
+          entirely. This is disclosed wherever it matters: programs relying heavily on AI-generated descriptions are
+          flagged, and every program shows a <strong>documentation quality score</strong> — the share of its skills
+          that were extracted with high confidence from clearly-written text.
+        </p>
+        <p className="mt-2">
+          <strong>When you see a low score paired with a low documentation quality score, read it as &ldquo;we
+          don&apos;t have enough information to tell,&rdquo; not as &ldquo;this program is weak.&rdquo;</strong> More
+          detailed, published course descriptions are the single best way for a university to improve the accuracy
+          of its own results here.
+        </p>
+      </Card>
+
+      <h2 id="pipeline" className="mt-8 scroll-mt-6 text-lg font-semibold">⚙️ How a score is calculated, step by step</h2>
       <Card className="mt-2">
-        <ol className="list-decimal space-y-2 pl-5 text-sm">
-          <li><strong>Skill extraction.</strong> An LLM extracts a normalized list of skill phrases from each course description and each job posting independently.</li>
-          <li><strong>Skill consolidation.</strong> All extracted phrases (course-side and job-side together) are embedded and greedily clustered at cosine similarity ≥ 0.85; the most frequent phrase per cluster becomes canonical.</li>
-          <li><strong>Matching.</strong> Bidirectional cosine similarity ≥ 0.65 between a program's and a job market's consolidated skills, with a hand-curated blocklist (e.g. React vs. Angular) and allowlist (e.g. Python → NumPy/Pandas).</li>
-          <li><strong>Role scoping.</strong> Each program is scored against its relevant role group(s)' postings only, not the full IT market.</li>
-          <li><strong>Core skill filtering.</strong> A market skill counts as core if it appears in at least 5% of that role's postings.</li>
-          <li><strong>Weighting.</strong> The weighted core coverage metric weights each core skill by posting frequency rather than counting all core skills equally.</li>
+        <ol className="list-decimal space-y-3 pl-5 text-sm">
+          <li>
+            <strong>Extracting skills.</strong> An AI model reads each course description and each job posting and
+            pulls out a normalized list of specific skills mentioned (e.g. "Python," "SQL," "React") — separately for
+            the curriculum side and the job market side.
+          </li>
+          <li>
+            <strong>Consolidating skill names.</strong> The same skill is often written differently ("JS" vs.
+            "JavaScript"). All extracted skill phrases are grouped so equivalent phrasings count as one skill.
+          </li>
+          <li>
+            <strong>Matching by meaning, not just exact text.</strong> A course teaching "NumPy and Pandas" should
+            count toward a job asking for "Python data analysis," even though the words don&apos;t match exactly.
+            Skills are compared using <em>semantic similarity</em> — a technique that measures how close two phrases
+            are in meaning — with a small set of hand-checked exceptions (e.g. "React" is never counted as covering
+            "Angular," even though both are frontend frameworks).
+          </li>
+          <li>
+            <strong>Scoping to relevant roles.</strong> Each program is compared only against job postings for roles
+            relevant to it (e.g. a Data Science program against Data / ML / AI postings), not the entire IT job
+            market — a general IT market comparison would unfairly penalize specialized programs.
+          </li>
+          <li>
+            <strong>Filtering to &ldquo;core&rdquo; skills.</strong> A market skill only counts toward the score if
+            it appears in at least 5% of that role&apos;s job postings. This excludes one-off, rarely-requested
+            skills that no single program could reasonably be expected to teach.
+          </li>
+          <li>
+            <strong>Two ways of counting coverage.</strong> See <a href="#core-coverage" className="font-medium text-primary">below</a>.
+          </li>
         </ol>
       </Card>
 
-      <h2 className="mt-6 text-lg font-semibold">Documentation gaps vs. curriculum gaps</h2>
+      <h2 id="core-coverage" className="mt-8 scroll-mt-6 text-lg font-semibold">🎯 Core coverage vs. weighted coverage</h2>
       <Card className="mt-2 text-sm">
-        <p>🔴 <strong>Curriculum gap</strong> — the skill is genuinely not taught.</p>
-        <p className="mt-1">🟡 <strong>Documentation gap</strong> — the skill is likely taught but not explicitly described.</p>
+        <p>
+          <strong>Core coverage</strong> (the main score shown throughout the dashboard) treats every core skill
+          equally: it&apos;s the percentage of core skills the program covers, out of all core skills for its
+          relevant roles. Covering a skill mentioned in 3 postings counts the same as covering one mentioned in 30.
+        </p>
+        <p className="mt-2">
+          <strong>Weighted coverage</strong> (shown alongside it in some places, e.g. Job Fit) instead weights each
+          skill by how often employers actually ask for it. Covering the two or three most in-demand skills for a
+          role can pull this number up more than covering several rarely-requested ones — it rewards getting the
+          highest-value skills right, even if a longer tail of niche skills remains uncovered.
+        </p>
+        <p className="mt-2 text-muted">
+          The two numbers can diverge noticeably: a program might cover relatively few core skills by count (lower
+          core coverage) but happen to cover the most in-demand ones (higher weighted coverage), or vice versa.
+          Neither is "more correct" — they answer slightly different questions.
+        </p>
+      </Card>
+
+      <h2 id="gaps" className="mt-8 scroll-mt-6 text-lg font-semibold">🔍 Documentation gaps vs. curriculum gaps</h2>
+      <Card className="mt-2 text-sm">
+        <p>When a market skill isn&apos;t covered, it&apos;s classified as one of:</p>
+        <p className="mt-2">🔴 <strong>Curriculum gap</strong> — the skill is likely genuinely not taught.</p>
+        <p className="mt-1">🟡 <strong>Documentation gap</strong> — the skill may already be taught, but the course
+          description doesn&apos;t clearly say so, so it can&apos;t be verified from the data.</p>
         <p className="mt-1">⚪ <strong>Uncertain</strong> — not enough signal either way.</p>
+        <p className="mt-2 text-muted">
+          This distinction exists because of the documentation-thinness issue described{" "}
+          <a href="#fairness" className="font-medium text-primary">above</a> — a missing skill is a very different
+          problem depending on whether it&apos;s a curriculum decision or a documentation oversight.
+        </p>
+      </Card>
+
+      <h2 id="experiments" className="mt-8 scroll-mt-6 text-lg font-semibold">🧪 Why several methods were tried</h2>
+      <Card className="mt-2 text-sm">
+        <p>
+          There isn&apos;t one obvious way to extract skills from text or decide whether two skills match, so twelve
+          different combinations were tested — three extraction approaches (keyword-frequency, keyword-extraction,
+          and AI-extraction), applied to two kinds of input (course names only vs. full descriptions), each with two
+          matching strategies (exact text vs. matching by meaning). Every score shown in this dashboard uses the
+          single combination that performed best in evaluation:
+        </p>
+        {meta && (
+          <p className="mt-2 rounded-lg bg-surface px-3 py-2 font-medium">{formatExperiment(meta.experiment)}</p>
+        )}
+        <p className="mt-2 text-muted">
+          The other eleven combinations exist only as an internal evaluation record and are never shown in the
+          product.
+        </p>
+      </Card>
+
+      <h2 className="mt-8 text-lg font-semibold">⚖️ Strengths and limitations</h2>
+      <Card className="mt-2 text-sm">
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            Scores reflect a <strong>snapshot</strong> of the job market and curricula at the collection dates shown
+            in <a href="/admin" className="font-medium text-primary">Data &amp; Admin</a> — they will drift as both
+            change over time, and can be refreshed and recalculated.
+          </li>
+          <li>
+            Skills are normalized against a fixed European skills vocabulary (ESCO); very new or niche technologies
+            not yet in that vocabulary may be under-represented.
+          </li>
+          <li>
+            A score measures <em>documented skill overlap</em>, not teaching quality, faculty expertise, or student
+            outcomes — a low score is a prompt to look closer, not a verdict.
+          </li>
+          <li>
+            A score of 30–60% core coverage is typical and not a failure signal: the job market collectively demands
+            far more skills than any single degree program could reasonably teach.
+          </li>
+        </ul>
       </Card>
 
       {meta && (
         <>
-          <h2 className="mt-6 text-lg font-semibold">Reproducibility & data snapshot</h2>
+          <h2 className="mt-8 text-lg font-semibold">Reproducibility</h2>
           <div className="mt-2 grid grid-cols-3 gap-4">
-            <MetricCard label="Job postings" value={meta.job_snapshot.n_it_postings ?? "—"} caption={`Collected: ${meta.job_snapshot.collected_at ?? "—"}`} />
+            <MetricCard label="Job postings" value={meta.job_snapshot.n_it_postings ?? "—"} caption={`Collected: ${formatDate(meta.job_snapshot.collected_at)}`} />
             <MetricCard label="Programs" value={meta.curriculum_snapshot.n_programs ?? "—"} caption={`Courses: ${meta.curriculum_snapshot.n_courses ?? "—"}`} />
-            <MetricCard label="Universities" value={meta.curriculum_snapshot.n_universities ?? "—"} caption={`Run: ${meta.run_id}`} />
+            <MetricCard label="Universities" value={meta.curriculum_snapshot.n_universities ?? "—"} caption={`Analysis generated: ${formatDate(meta.created_at)}`} />
           </div>
         </>
       )}

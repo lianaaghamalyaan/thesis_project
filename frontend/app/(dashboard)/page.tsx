@@ -3,16 +3,21 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { api, GapSkillRow, ProgramAlignment, RunMetadata } from "@/lib/api";
+import { api, DocQualityResponse, GapSkillRow, ProgramAlignment, RunMetadata } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { MetricCard } from "@/components/MetricCard";
-import { formatScore, scoreColor, uniAbbr } from "@/lib/format";
+import { InfoTip } from "@/components/InfoTip";
+import { DataFreshnessNote } from "@/components/DataFreshnessNote";
+import { formatDate, formatScore, scoreColor, uniAbbr } from "@/lib/format";
+
+const LOW_DOC_THRESHOLD = 0.25;
 
 export default function OverviewPage() {
   const { currentUniversity, universityParam, isAllUniversities } = useAuth();
   const [programs, setPrograms] = useState<ProgramAlignment[] | null>(null);
   const [gaps, setGaps] = useState<GapSkillRow[] | null>(null);
   const [meta, setMeta] = useState<RunMetadata | null>(null);
+  const [docQuality, setDocQuality] = useState<DocQualityResponse | null>(null);
 
   useEffect(() => {
     if (!currentUniversity) return;
@@ -21,6 +26,19 @@ export default function OverviewPage() {
     api.gaps(universityParam).then(setGaps);
     api.runMetadata().then(setMeta);
   }, [currentUniversity, universityParam]);
+
+  useEffect(() => {
+    if (!currentUniversity || isAllUniversities) {
+      setDocQuality(null);
+      return;
+    }
+    api.docQuality(universityParam).then(setDocQuality);
+  }, [currentUniversity, universityParam, isAllUniversities]);
+
+  const docScoreFor = (program: string, degree: string): number | null => {
+    const row = docQuality?.programs.find((p) => p.program === program && p.degree === degree);
+    return row ? row.doc_score : null;
+  };
 
   const scored = useMemo(
     () => (programs ?? []).filter((p) => p.core_role_coverage_pct !== null),
@@ -65,12 +83,14 @@ export default function OverviewPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-primary-dark">Curriculum–Labor Market Alignment</h1>
+      <h1 className="text-3xl font-bold text-primary-dark">Overview</h1>
       <p className="mt-1 text-sm text-muted">
+        A portfolio-level snapshot for{" "}
         <span className="font-semibold text-foreground">
-          {isAllUniversities ? "All universities" : currentUniversity}
+          {isAllUniversities ? "all universities" : currentUniversity}
         </span>{" "}
-        · Program portfolio overview
+        — how programs are doing overall. To look up one specific program, go to{" "}
+        <Link href="/programs" className="font-medium text-primary">Programs</Link>.
       </p>
       {meta && (
         <p className="mt-0.5 text-xs text-muted">
@@ -80,19 +100,31 @@ export default function OverviewPage() {
 
       <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
         <MetricCard label="Programs" value={programs.length} />
-        <MetricCard label="Mean alignment score" value={meanScore !== null ? formatScore(meanScore) : "—"} />
+        <MetricCard
+          label={<>Mean alignment score <InfoTip term="core_coverage" /></>}
+          value={meanScore !== null ? formatScore(meanScore) : "—"}
+        />
         <MetricCard label="Unique gap skills" value={nGapSkills} />
-        <MetricCard label="Data snapshot" value={meta?.run_id ?? "—"} />
+        <MetricCard
+          label="Analysis last generated"
+          value={meta ? formatDate(meta.created_at) : "—"}
+          caption={meta ? `Run ID: ${meta.run_id}` : undefined}
+        />
       </div>
 
       <hr className="my-6 border-border" />
 
-      <h2 className="text-lg font-semibold">All Programs — Alignment Scores</h2>
+      <h2 className="text-lg font-semibold">Score distribution — all programs</h2>
+      <p className="text-xs text-muted">
+        Each bar is one program&apos;s own alignment score, from 0% to 100%. Bars are independent — they compare a
+        program against its own relevant job market, not against each other, so they are not parts of a whole and
+        will never add up to 100%.
+      </p>
       <div className="mt-3" style={{ height: Math.max(320, chartData.length * 34) }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={chartData} layout="vertical" margin={{ left: 24, right: 40 }}>
             <CartesianGrid strokeDasharray="3 3" horizontal={false} />
-            <XAxis type="number" domain={[0, "dataMax + 10"]} tickFormatter={(v) => `${v}%`} fontSize={12} />
+            <XAxis type="number" domain={[0, 100]} ticks={[0, 20, 40, 60, 80, 100]} tickFormatter={(v) => `${v}%`} fontSize={12} />
             <YAxis type="category" dataKey="name" width={260} fontSize={11} interval={0} />
             <Tooltip formatter={(v) => `${Number(v).toFixed(1)}%`} />
             <Bar dataKey="score" radius={[0, 4, 4, 0]}>
@@ -104,6 +136,10 @@ export default function OverviewPage() {
           </BarChart>
         </ResponsiveContainer>
       </div>
+      <p className="mt-2 text-xs text-muted">
+        👉 <Link href="/programs" className="font-medium text-primary">Browse the full list</Link> to filter, search,
+        and open any program&apos;s detail page.
+      </p>
 
       <hr className="my-6 border-border" />
 
@@ -115,6 +151,11 @@ export default function OverviewPage() {
               <li key={`${p.university}-${p.program}-${p.degree}`}>
                 <div className="text-sm font-medium">
                   {p.program} ({p.degree}){isAllUniversities ? ` · ${uniAbbr(p.university)}` : ""}
+                  {docScoreFor(p.program, p.degree) !== null && docScoreFor(p.program, p.degree)! < LOW_DOC_THRESHOLD && (
+                    <span className="ml-2 rounded-full bg-orange-100 px-2 py-0.5 text-[10px] font-medium text-orange-700">
+                      📝 Limited course data
+                    </span>
+                  )}
                 </div>
                 <div className="text-xs text-muted">
                   {formatScore(p.core_role_coverage_pct)} · {p.relevant_roles ?? ""}
@@ -148,11 +189,7 @@ export default function OverviewPage() {
         </div>
       </div>
 
-      <hr className="my-6 border-border" />
-      <p className="rounded-lg bg-surface px-4 py-3 text-sm text-muted">
-        👉 Go to <Link href="/programs" className="font-medium text-primary">Programs</Link> to explore individual
-        programs and see their full gap/strengths breakdown.
-      </p>
+      <DataFreshnessNote meta={meta} />
     </div>
   );
 }
