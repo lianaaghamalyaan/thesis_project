@@ -66,6 +66,7 @@ def get_program_detail(
     strengths = analytics.get_strengths(
         program, degree, relevant_roles, curriculum_df, course_skills, job_skills_by_role, n=20
     ) if relevant_roles not in (None, "unmapped", "nan", "") else []
+    skill_courses = analytics.get_skill_courses(program, degree, curriculum_df, course_skills, tiers)
 
     doc_score = analytics.compute_program_doc_score(program, degree, curriculum_df, tiers)
     gap_type = analytics.classify_gap_type(doc_score)
@@ -79,6 +80,7 @@ def get_program_detail(
         "gaps": _clean_nan(prog_llm_gaps.to_dict("records")) if not prog_llm_gaps.empty else [],
         "fallback_gaps": _clean_nan(prog_fallback_gaps.to_dict("records")) if not prog_fallback_gaps.empty else [],
         "strengths": strengths,
+        "skill_courses": skill_courses,
         "benchmark": benchmark,
         "doc_score": doc_score,
         "gap_type": gap_type,

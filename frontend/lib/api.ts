@@ -73,6 +73,8 @@ export type LlmGapSkillRow = {
 
 export type StrengthSkill = { skill: string; job_count: number };
 
+export type SkillCourse = { course_name: string; high_confidence: boolean };
+
 export type BenchmarkResult = {
   peer_mean: number;
   peer_median: number;
@@ -86,6 +88,7 @@ export type ProgramDetail = {
   gaps: LlmGapSkillRow[];
   fallback_gaps: GapSkillRow[];
   strengths: StrengthSkill[];
+  skill_courses: Record<string, SkillCourse[]>;
   benchmark: BenchmarkResult | null;
   doc_score: number;
   gap_type: string;

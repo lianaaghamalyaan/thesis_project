@@ -102,6 +102,11 @@ class StrengthSkill(BaseModel):
     job_count: int
 
 
+class SkillCourse(BaseModel):
+    course_name: str
+    high_confidence: bool
+
+
 class ProgramDetail(BaseModel):
     """Bundle for the Program Detail page — replaces the 7 separate loader
     calls dashboard/pages/program_detail.py used to make."""
@@ -109,6 +114,7 @@ class ProgramDetail(BaseModel):
     gaps: list[LlmGapSkillRow]
     fallback_gaps: list[GapSkillRow]
     strengths: list[StrengthSkill]
+    skill_courses: dict[str, list[SkillCourse]]
     benchmark: BenchmarkResult | None
     doc_score: float
     gap_type: str

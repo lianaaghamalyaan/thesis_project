@@ -49,7 +49,7 @@ export default function ProgramDetailPage({
 
   if (!detail) return <p className="text-muted">Loading…</p>;
 
-  const { alignment, gaps, fallback_gaps, strengths, benchmark, doc_score, gap_type } = detail;
+  const { alignment, gaps, fallback_gaps, strengths, skill_courses, benchmark, doc_score, gap_type } = detail;
   const score = alignment?.core_role_coverage_pct ?? null;
   const displayGaps = gaps.length
     ? gaps.map((g) => ({ skill: g.missing_skill, freq: g.job_frequency, category: g.category }))
@@ -152,12 +152,38 @@ export default function ProgramDetailPage({
       {tab === "strengths" && (
         <ul className="mt-4 space-y-2">
           {strengths.length === 0 && <p className="text-sm text-muted">No mapped role data for this program.</p>}
-          {strengths.map((s) => (
-            <li key={s.skill} className="flex items-center justify-between rounded-lg border border-border px-3 py-2 text-sm">
-              <span>{s.skill}</span>
-              <span className="text-xs text-muted">{s.job_count} job postings</span>
-            </li>
-          ))}
+          {strengths.map((s) => {
+            const courses = skill_courses[s.skill] ?? [];
+            return (
+              <li key={s.skill} className="rounded-lg border border-border px-3 py-2 text-sm">
+                <details>
+                  <summary className="flex cursor-pointer list-none items-center justify-between marker:content-none">
+                    <span>
+                      {s.skill}
+                      {courses.length > 0 && (
+                        <span className="ml-2 text-xs text-muted">▾ how was this decided?</span>
+                      )}
+                    </span>
+                    <span className="text-xs text-muted">{s.job_count} job postings</span>
+                  </summary>
+                  {courses.length > 0 ? (
+                    <ul className="mt-2 space-y-1 border-t border-border pt-2 text-xs text-muted">
+                      {courses.map((c, i) => (
+                        <li key={i}>
+                          Taught in <strong>{c.course_name}</strong>
+                          {c.high_confidence ? "" : " (weakly evidenced — short/generic course description)"}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-2 border-t border-border pt-2 text-xs text-muted">
+                      No course-level detail available for this skill.
+                    </p>
+                  )}
+                </details>
+              </li>
+            );
+          })}
         </ul>
       )}
 

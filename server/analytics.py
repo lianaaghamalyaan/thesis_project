@@ -51,6 +51,26 @@ def get_program_skills(program: str, degree: str, curriculum_df: pd.DataFrame, c
     return skills
 
 
+def get_skill_courses(
+    program: str, degree: str, curriculum_df: pd.DataFrame, course_skills: dict, tiers: dict
+) -> dict[str, list[dict]]:
+    """For every skill taught anywhere in this program, which course(s) contributed it —
+    the traceability behind a Strengths row: "why did this skill count as covered?" """
+    courses = curriculum_df[
+        (curriculum_df["program_name"] == program) & (curriculum_df["degree_level"] == degree)
+    ]
+    out: dict[str, list[dict]] = {}
+    for _, row in courses.iterrows():
+        course_id = str(int(row["course_id"]))
+        course_tier1 = set(tiers.get(course_id, {}).get("tier1", []))
+        for skill in course_skills.get(course_id, []):
+            out.setdefault(skill, []).append({
+                "course_name": row["course_name"],
+                "high_confidence": skill in course_tier1,
+            })
+    return out
+
+
 def get_role_skill_counter(relevant_roles: str | None, job_skills_by_role: dict) -> Counter:
     job_roles = expand_roles(relevant_roles)
     agg: Counter = Counter()
