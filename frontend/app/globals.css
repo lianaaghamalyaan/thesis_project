@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c2b2e;
+  --primary: #1f6f78;
+  --primary-dark: #153f45;
+  --surface: #f4f7f7;
+  --border: #e1e8e8;
+  --muted: #5b6b6e;
+  --score-strong: #2e7d32;
+  --score-good: #558b2f;
+  --score-moderate: #f57c00;
+  --score-developing: #c62828;
+  --score-none: #9e9e9e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-score-strong: var(--score-strong);
+  --color-score-good: var(--score-good);
+  --color-score-moderate: var(--score-moderate);
+  --color-score-developing: var(--score-developing);
+  --color-score-none: var(--score-none);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+}
