@@ -45,14 +45,17 @@ def get_doc_quality(university: str | None = None, user: dict = Depends(get_curr
     rows = []
     for _, row in alignment_df.sort_values("core_role_coverage_pct", ascending=False, na_position="last").iterrows():
         doc_score = analytics.compute_program_doc_score(row["program"], row["degree"], curriculum_df, tiers)
-        n_courses = len(curriculum_df[
-            (curriculum_df["program_name"] == row["program"]) & (curriculum_df["degree_level"] == row["degree"])
-        ])
+        breakdown = analytics.program_documentation_breakdown(row["program"], row["degree"], curriculum_df)
         rows.append({
             "program": row["program"],
             "degree": row["degree"],
-            "n_courses": n_courses,
+            "n_courses": breakdown["n_courses"],
             "doc_score": doc_score,
+            "documentation_level": breakdown["level"],
+            "n_missing": breakdown["missing"],
+            "n_ai_generated": breakdown["ai_generated"],
+            "n_short": breakdown["short"],
+            "n_full": breakdown["full"],
         })
 
     missing_desc = curriculum_df[

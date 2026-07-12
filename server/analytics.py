@@ -99,6 +99,53 @@ def get_strengths(
     return matched[:n]
 
 
+SHORT_DESCRIPTION_CHARS = 50  # matches the existing "missing_descriptions" threshold in admin/doc-quality
+
+
+def classify_course_description(description: object, notes: object) -> str:
+    """One of "missing" (nothing published), "ai_generated" (no real
+    description existed — an AI one was generated from the course name/program
+    context so the course could still be analyzed), "short" (a real but
+    thin description), or "full"."""
+    has_notes = isinstance(notes, str) and "AI-generated" in notes
+    if has_notes:
+        return "ai_generated"
+    if not isinstance(description, str) or not description.strip():
+        return "missing"
+    if len(description) < SHORT_DESCRIPTION_CHARS:
+        return "short"
+    return "full"
+
+
+def program_documentation_breakdown(program: str, degree: str, curriculum_df: pd.DataFrame) -> dict:
+    """How much of this program's curriculum data is actually published by
+    the university, vs. missing or AI-filled-in. Distinct from doc_score
+    (which measures skill-extraction confidence) — this measures what raw
+    material existed in the first place."""
+    courses = curriculum_df[
+        (curriculum_df["program_name"] == program) & (curriculum_df["degree_level"] == degree)
+    ]
+    counts = {"missing": 0, "ai_generated": 0, "short": 0, "full": 0}
+    for _, row in courses.iterrows():
+        counts[classify_course_description(row.get("description"), row.get("notes"))] += 1
+
+    n = len(courses)
+    no_real_data = counts["missing"] + counts["ai_generated"]
+    pct_no_real_data = no_real_data / n if n else 0.0
+
+    pct_thin_or_missing = pct_no_real_data + (counts["short"] / n if n else 0)
+    if n == 0 or pct_no_real_data >= 0.9:
+        level = "no_published_data"
+    elif pct_no_real_data >= 0.5 or pct_thin_or_missing >= 0.75:
+        level = "minimal"
+    elif no_real_data > 0 or counts["short"] > 0:
+        level = "partial"
+    else:
+        level = "full"
+
+    return {"n_courses": n, **counts, "pct_no_real_data": pct_no_real_data, "level": level}
+
+
 def compute_program_doc_score(program: str, degree: str, curriculum_df: pd.DataFrame, tiers: dict) -> float:
     courses = curriculum_df[
         (curriculum_df["program_name"] == program) & (curriculum_df["degree_level"] == degree)

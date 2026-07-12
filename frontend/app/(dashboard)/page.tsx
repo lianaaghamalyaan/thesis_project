@@ -3,14 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { api, DocQualityResponse, GapSkillRow, ProgramAlignment, RunMetadata } from "@/lib/api";
+import { api, DocQualityResponse, DocumentationLevel, GapSkillRow, ProgramAlignment, RunMetadata } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { MetricCard } from "@/components/MetricCard";
 import { InfoTip } from "@/components/InfoTip";
 import { DataFreshnessNote } from "@/components/DataFreshnessNote";
-import { formatDate, formatScore, scoreColor, uniAbbr } from "@/lib/format";
-
-const LOW_DOC_THRESHOLD = 0.25;
+import { DOC_LEVEL_ICONS, DOC_LEVEL_LABELS, DOC_LEVEL_SHORT_LABELS, formatDate, formatScore, scoreColor, uniAbbr } from "@/lib/format";
 
 export default function OverviewPage() {
   const { currentUniversity, universityParam, isAllUniversities } = useAuth();
@@ -35,9 +33,9 @@ export default function OverviewPage() {
     api.docQuality(universityParam).then(setDocQuality);
   }, [currentUniversity, universityParam, isAllUniversities]);
 
-  const docScoreFor = (program: string, degree: string): number | null => {
+  const docLevelFor = (program: string, degree: string): DocumentationLevel | null => {
     const row = docQuality?.programs.find((p) => p.program === program && p.degree === degree);
-    return row ? row.doc_score : null;
+    return row ? row.documentation_level : null;
   };
 
   const scored = useMemo(
@@ -147,13 +145,18 @@ export default function OverviewPage() {
         <div>
           <h2 className="text-lg font-semibold">🌟 Strongest programs</h2>
           <ul className="mt-3 space-y-4">
-            {strongest.map((p) => (
+            {strongest.map((p) => {
+              const docLevel = docLevelFor(p.program, p.degree);
+              return (
               <li key={`${p.university}-${p.program}-${p.degree}`}>
                 <div className="text-sm font-medium">
                   {p.program} ({p.degree}){isAllUniversities ? ` · ${uniAbbr(p.university)}` : ""}
-                  {docScoreFor(p.program, p.degree) !== null && docScoreFor(p.program, p.degree)! < LOW_DOC_THRESHOLD && (
-                    <span className="ml-2 rounded-full bg-orange-100 px-2 py-0.5 text-[10px] font-medium text-orange-700">
-                      📝 Limited course data
+                  {docLevel && docLevel !== "full" && (
+                    <span
+                      title={DOC_LEVEL_LABELS[docLevel]}
+                      className="ml-2 cursor-help rounded-full bg-orange-100 px-2 py-0.5 text-[10px] font-medium text-orange-700"
+                    >
+                      {DOC_LEVEL_ICONS[docLevel]} {DOC_LEVEL_SHORT_LABELS[docLevel]}
                     </span>
                   )}
                 </div>
@@ -170,7 +173,8 @@ export default function OverviewPage() {
                   />
                 </div>
               </li>
-            ))}
+              );
+            })}
           </ul>
         </div>
 

@@ -47,6 +47,29 @@ export function uniAbbr(name: string): string {
   return parts.map((w) => w[0]).join("").toUpperCase();
 }
 
+import type { DocumentationLevel } from "./api";
+
+export const DOC_LEVEL_LABELS: Record<DocumentationLevel, string> = {
+  no_published_data: "No published course data — analysis relies on AI-generated descriptions",
+  minimal: "Minimal published data — mostly missing or AI-generated descriptions",
+  partial: "Partial published data — some courses missing or thin descriptions",
+  full: "Full course descriptions published",
+};
+
+export const DOC_LEVEL_SHORT_LABELS: Record<DocumentationLevel, string> = {
+  no_published_data: "No published data",
+  minimal: "Minimal data",
+  partial: "Partial data",
+  full: "Full data",
+};
+
+export const DOC_LEVEL_ICONS: Record<DocumentationLevel, string> = {
+  no_published_data: "⛔",
+  minimal: "🟠",
+  partial: "🟡",
+  full: "✅",
+};
+
 export const GAP_TYPE_ICONS: Record<string, string> = {
   curriculum_gap: "🔴",
   documentation_gap: "🟡",

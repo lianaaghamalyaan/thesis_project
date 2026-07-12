@@ -185,7 +185,19 @@ export type JobFitResult = {
   n_role_postings: number;
 };
 
-export type DocQualityProgram = { program: string; degree: string; n_courses: number; doc_score: number };
+export type DocumentationLevel = "no_published_data" | "minimal" | "partial" | "full";
+
+export type DocQualityProgram = {
+  program: string;
+  degree: string;
+  n_courses: number;
+  doc_score: number;
+  documentation_level: DocumentationLevel;
+  n_missing: number;
+  n_ai_generated: number;
+  n_short: number;
+  n_full: number;
+};
 
 export type MissingDescriptionCourse = {
   program_name: string;

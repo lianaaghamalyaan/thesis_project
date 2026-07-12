@@ -5,9 +5,8 @@ import Link from "next/link";
 import { api, DocQualityResponse, ProgramAlignment } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { ScoreDisplay } from "@/components/ScoreBadge";
-import { rolesShort } from "@/lib/format";
-
-const LOW_DOC_THRESHOLD = 0.25;
+import { DOC_LEVEL_ICONS, DOC_LEVEL_LABELS, DOC_LEVEL_SHORT_LABELS, rolesShort } from "@/lib/format";
+import type { DocumentationLevel } from "@/lib/api";
 
 export default function ProgramsPage() {
   const { currentUniversity, universityParam, isAllUniversities } = useAuth();
@@ -30,9 +29,9 @@ export default function ProgramsPage() {
     api.docQuality(universityParam).then(setDocQuality);
   }, [currentUniversity, universityParam, isAllUniversities]);
 
-  const docScoreFor = (program: string, degree: string): number | null => {
+  const docLevelFor = (program: string, degree: string): DocumentationLevel | null => {
     const row = docQuality?.programs.find((p) => p.program === program && p.degree === degree);
-    return row ? row.doc_score : null;
+    return row ? row.documentation_level : null;
   };
 
   const degrees = useMemo(
@@ -86,7 +85,9 @@ export default function ProgramsPage() {
       <p className="mt-3 text-xs text-muted">Showing {filtered.length} programs</p>
 
       <ul className="mt-3 space-y-3">
-        {filtered.map((p) => (
+        {filtered.map((p) => {
+          const docLevel = docLevelFor(p.program, p.degree);
+          return (
           <li
             key={`${p.university}-${p.program}-${p.degree}`}
             className="flex items-center justify-between rounded-xl border border-border p-4"
@@ -94,9 +95,12 @@ export default function ProgramsPage() {
             <div>
               <div className="font-semibold">
                 {p.program}
-                {docScoreFor(p.program, p.degree) !== null && docScoreFor(p.program, p.degree)! < LOW_DOC_THRESHOLD && (
-                  <span className="ml-2 rounded-full bg-orange-100 px-2 py-0.5 text-[10px] font-medium text-orange-700">
-                    📝 Limited course data
+                {docLevel && docLevel !== "full" && (
+                  <span
+                    title={DOC_LEVEL_LABELS[docLevel]}
+                    className="ml-2 cursor-help rounded-full bg-orange-100 px-2 py-0.5 text-[10px] font-medium text-orange-700"
+                  >
+                    {DOC_LEVEL_ICONS[docLevel]} {DOC_LEVEL_SHORT_LABELS[docLevel]}
                   </span>
                 )}
               </div>
@@ -129,7 +133,8 @@ export default function ProgramsPage() {
               </Link>
             </div>
           </li>
-        ))}
+          );
+        })}
       </ul>
     </div>
   );

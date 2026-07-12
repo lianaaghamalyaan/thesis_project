@@ -6,7 +6,7 @@ import { useAuth } from "@/lib/auth-context";
 import { Card } from "@/components/MetricCard";
 import { InfoTip } from "@/components/InfoTip";
 import { formatExperiment } from "@/lib/experiments";
-import { formatDate } from "@/lib/format";
+import { DOC_LEVEL_ICONS, DOC_LEVEL_LABELS, DOC_LEVEL_SHORT_LABELS, formatDate } from "@/lib/format";
 
 function docStatus(score: number): string {
   if (score < 0.25) return "⚠️";
@@ -110,7 +110,10 @@ export default function AdminPage() {
           </h2>
           <p className="text-xs text-muted">
             Programs with low documentation quality may show lower alignment scores because there wasn&apos;t much
-            published course detail to analyze — not necessarily because the curriculum itself is weak. See{" "}
+            published course detail to analyze — not necessarily because the curriculum itself is weak. &ldquo;Data
+            level&rdquo; below shows exactly what was published per program: how many courses have no description at
+            all, how many were filled in with an AI-generated description because none existed, how many have only a
+            short/thin one, and how many have a full published description. See{" "}
             <a href="/methodology#fairness" className="font-medium text-primary">Methodology</a> for more.
           </p>
           <table className="mt-3 w-full text-sm">
@@ -119,6 +122,7 @@ export default function AdminPage() {
                 <th className="py-2">Program</th>
                 <th>Degree</th>
                 <th>Courses</th>
+                <th>Data level</th>
                 <th>Doc. quality</th>
                 <th>Status</th>
               </tr>
@@ -129,13 +133,29 @@ export default function AdminPage() {
                   <td className="py-1.5">{p.program}</td>
                   <td>{p.degree}</td>
                   <td>{p.n_courses}</td>
+                  <td>
+                    <span title={DOC_LEVEL_LABELS[p.documentation_level]} className="cursor-help">
+                      {DOC_LEVEL_ICONS[p.documentation_level]} {DOC_LEVEL_SHORT_LABELS[p.documentation_level]}
+                    </span>
+                    <div className="text-[10px] text-muted">
+                      {p.n_missing > 0 && <>{p.n_missing} no description</>}
+                      {p.n_missing > 0 && (p.n_ai_generated > 0 || p.n_short > 0) && " · "}
+                      {p.n_ai_generated > 0 && <>{p.n_ai_generated} AI-generated</>}
+                      {p.n_ai_generated > 0 && p.n_short > 0 && " · "}
+                      {p.n_short > 0 && <>{p.n_short} very short</>}
+                    </div>
+                  </td>
                   <td>{(p.doc_score * 100).toFixed(0)}%</td>
                   <td>{docStatus(p.doc_score)}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <p className="mt-2 text-xs text-muted">✅ Good (≥40%) · 🟡 Mixed (25–40%) · ⚠️ Weak (&lt;25%)</p>
+          <p className="mt-2 text-xs text-muted">
+            Data level: ⛔ No published data · 🟠 Minimal · 🟡 Partial · ✅ Full. Doc. quality/Status is the
+            skill-extraction confidence score described above. ✅ Good (≥40%) · 🟡 Mixed (25–40%) · ⚠️ Weak
+            (&lt;25%)
+          </p>
 
           {docQuality.missing_descriptions.length > 0 && (
             <>
