@@ -24,8 +24,11 @@ def get_job_fit(
     curriculum_df = queries.load_curriculum(scoped)
     course_skills = queries.load_course_skills(scoped)
     job_skills_by_role = queries.load_job_skills_by_role()
+    role_posting_counts = queries.load_role_posting_counts()
 
-    return analytics.compute_job_fit(program, degree, role, curriculum_df, course_skills, job_skills_by_role)
+    return analytics.compute_job_fit(
+        program, degree, role, curriculum_df, course_skills, job_skills_by_role, role_posting_counts
+    )
 
 
 @router.get("/job-fit/roles")

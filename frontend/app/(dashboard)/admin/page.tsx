@@ -12,7 +12,7 @@ function docStatus(score: number): string {
 }
 
 export default function AdminPage() {
-  const { currentUniversity } = useAuth();
+  const { currentUniversity, universityParam, isAllUniversities } = useAuth();
   const [meta, setMeta] = useState<RunMetadata | null>(null);
   const [docQuality, setDocQuality] = useState<DocQualityResponse | null>(null);
 
@@ -21,8 +21,12 @@ export default function AdminPage() {
   }, []);
 
   useEffect(() => {
-    if (currentUniversity) api.docQuality(currentUniversity).then(setDocQuality);
-  }, [currentUniversity]);
+    if (!currentUniversity || isAllUniversities) {
+      setDocQuality(null);
+      return;
+    }
+    api.docQuality(universityParam).then(setDocQuality);
+  }, [currentUniversity, universityParam, isAllUniversities]);
 
   return (
     <div>
@@ -74,6 +78,13 @@ export default function AdminPage() {
             </p>
           </Card>
         </>
+      )}
+
+      {isAllUniversities && (
+        <p className="mt-6 rounded-lg bg-surface px-4 py-3 text-sm text-muted">
+          Documentation quality is reported per university — select a specific university in the banner above to
+          see it.
+        </p>
       )}
 
       {docQuality && (

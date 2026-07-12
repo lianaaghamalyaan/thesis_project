@@ -33,6 +33,13 @@ export function rolesShort(relevantRoles: string | null | undefined): string {
   return parts.join(" / ");
 }
 
+export function uniAbbr(name: string): string {
+  const skip = new Set(["of", "the", "in", "and", "en", "de"]);
+  const parts = name.split(/[\s-]+/).filter((w) => w && !skip.has(w.toLowerCase()));
+  if (parts.length === 1) return parts[0].slice(0, 4).toUpperCase();
+  return parts.map((w) => w[0]).join("").toUpperCase();
+}
+
 export const GAP_TYPE_ICONS: Record<string, string> = {
   curriculum_gap: "🔴",
   documentation_gap: "🟡",

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
-import { useAuth } from "@/lib/auth-context";
+import { ALL_UNIVERSITIES, useAuth } from "@/lib/auth-context";
 
 export function UniversityBanner() {
   const { canSwitchUniversity, currentUniversity, switchUniversity, user } = useAuth();
@@ -25,6 +25,7 @@ export function UniversityBanner() {
           onChange={(e) => switchUniversity(e.target.value)}
           className="w-full max-w-md rounded-lg border-0 bg-white px-3 py-1.5 text-sm font-medium text-foreground"
         >
+          <option value={ALL_UNIVERSITIES}>🌐 All universities</option>
           {universities.map((u) => (
             <option key={u} value={u}>
               {u}

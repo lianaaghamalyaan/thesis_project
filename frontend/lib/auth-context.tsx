@@ -3,10 +3,18 @@
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import { api, User } from "./api";
 
+// Sentinel value for the admin "view every university at once" mode —
+// pages translate it to an omitted `university` API param (the backend
+// treats no-param from an admin account as "all universities").
+export const ALL_UNIVERSITIES = "__ALL__";
+
 type AuthContextValue = {
   user: User | null;
   loading: boolean;
   currentUniversity: string | null;
+  /** What to pass as the `university` API param: undefined in ALL mode. */
+  universityParam: string | undefined;
+  isAllUniversities: boolean;
   canSwitchUniversity: boolean;
   switchUniversity: (university: string) => void;
   login: (email: string, password: string) => Promise<void>;
@@ -70,9 +78,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setCurrentUniversity(null);
   }, []);
 
+  const isAllUniversities = currentUniversity === ALL_UNIVERSITIES;
+  const universityParam = isAllUniversities ? undefined : currentUniversity ?? undefined;
+
   return (
     <AuthContext.Provider
-      value={{ user, loading, currentUniversity, canSwitchUniversity, switchUniversity, login, logout }}
+      value={{
+        user, loading, currentUniversity, universityParam, isAllUniversities,
+        canSwitchUniversity, switchUniversity, login, logout,
+      }}
     >
       {children}
     </AuthContext.Provider>

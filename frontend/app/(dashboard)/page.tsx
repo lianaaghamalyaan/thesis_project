@@ -6,20 +6,21 @@ import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, Too
 import { api, GapSkillRow, ProgramAlignment, RunMetadata } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { MetricCard } from "@/components/MetricCard";
-import { formatScore, scoreColor } from "@/lib/format";
+import { formatScore, scoreColor, uniAbbr } from "@/lib/format";
 
 export default function OverviewPage() {
-  const { currentUniversity } = useAuth();
+  const { currentUniversity, universityParam, isAllUniversities } = useAuth();
   const [programs, setPrograms] = useState<ProgramAlignment[] | null>(null);
   const [gaps, setGaps] = useState<GapSkillRow[] | null>(null);
   const [meta, setMeta] = useState<RunMetadata | null>(null);
 
   useEffect(() => {
     if (!currentUniversity) return;
-    api.programs(currentUniversity).then(setPrograms);
-    api.gaps(currentUniversity).then(setGaps);
+    setPrograms(null);
+    api.programs(universityParam).then(setPrograms);
+    api.gaps(universityParam).then(setGaps);
     api.runMetadata().then(setMeta);
-  }, [currentUniversity]);
+  }, [currentUniversity, universityParam]);
 
   const scored = useMemo(
     () => (programs ?? []).filter((p) => p.core_role_coverage_pct !== null),
@@ -35,10 +36,12 @@ export default function OverviewPage() {
       [...scored]
         .sort((a, b) => (a.core_role_coverage_pct ?? 0) - (b.core_role_coverage_pct ?? 0))
         .map((p) => ({
-          name: `${p.program} (${p.degree})`,
+          name: isAllUniversities
+            ? `${p.program} (${p.degree}) · ${uniAbbr(p.university)}`
+            : `${p.program} (${p.degree})`,
           score: p.core_role_coverage_pct ?? 0,
         })),
-    [scored]
+    [scored, isAllUniversities]
   );
 
   const topGaps = useMemo(() => {
@@ -64,7 +67,10 @@ export default function OverviewPage() {
     <div>
       <h1 className="text-3xl font-bold text-primary-dark">Curriculum–Labor Market Alignment</h1>
       <p className="mt-1 text-sm text-muted">
-        <span className="font-semibold text-foreground">{currentUniversity}</span> · Program portfolio overview
+        <span className="font-semibold text-foreground">
+          {isAllUniversities ? "All universities" : currentUniversity}
+        </span>{" "}
+        · Program portfolio overview
       </p>
       {meta && (
         <p className="mt-0.5 text-xs text-muted">
@@ -106,9 +112,9 @@ export default function OverviewPage() {
           <h2 className="text-lg font-semibold">🌟 Strongest programs</h2>
           <ul className="mt-3 space-y-4">
             {strongest.map((p) => (
-              <li key={`${p.program}-${p.degree}`}>
+              <li key={`${p.university}-${p.program}-${p.degree}`}>
                 <div className="text-sm font-medium">
-                  {p.program} ({p.degree})
+                  {p.program} ({p.degree}){isAllUniversities ? ` · ${uniAbbr(p.university)}` : ""}
                 </div>
                 <div className="text-xs text-muted">
                   {formatScore(p.core_role_coverage_pct)} · {p.relevant_roles ?? ""}

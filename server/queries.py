@@ -265,6 +265,24 @@ def load_job_skills_by_role(university: str | None = None) -> dict:
         session.close()
 
 
+def load_role_posting_counts() -> dict:
+    """role -> number of active postings. Needed by the core-skill rule
+    ('appears in >= 5% of the role's postings'), which is defined against
+    posting counts, not skill-mention counts."""
+    from sqlalchemy import func
+
+    session = get_session()
+    try:
+        rows = session.execute(
+            select(JobPosting.it_role_group, func.count(JobPosting.id))
+            .where(JobPosting.is_active == True)  # noqa: E712
+            .group_by(JobPosting.it_role_group)
+        ).all()
+        return {role: count for role, count in rows if role}
+    finally:
+        session.close()
+
+
 def job_skills_coverage() -> dict:
     session = get_session()
     try:

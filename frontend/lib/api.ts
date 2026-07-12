@@ -168,12 +168,17 @@ export type RecommendationsResponse = {
   cross_program_gaps: CrossProgramGap[];
 };
 
+export type MatchedSkill = { skill: string; job_count: number; is_core: boolean };
+
 export type JobFitResult = {
   match_score: number | null;
-  matched: StrengthSkill[];
+  weighted_score: number | null;
+  matched: MatchedSkill[];
   missing: StrengthSkill[];
+  n_core_skills: number;
   n_role_skills: number;
   n_program_skills: number;
+  n_role_postings: number;
 };
 
 export type DocQualityProgram = { program: string; degree: string; n_courses: number; doc_score: number };

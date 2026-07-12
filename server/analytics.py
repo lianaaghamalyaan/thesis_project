@@ -10,7 +10,9 @@ doc_gap.py, recs.py, job_fit_engine.py. Kept side-effect-free (no st.* calls)
 from __future__ import annotations
 
 from collections import Counter
+from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 MIN_ROLE_MATCHED_PEERS = 3
@@ -225,6 +227,71 @@ def get_cross_program_gaps(gaps_df: pd.DataFrame) -> pd.DataFrame:
     return agg.head(25)
 
 
+# ── Job Fit (semantic, consistent with the validated pipeline) ────────────
+#
+# The original Job Fit metric divided exact-string matches by ALL distinct
+# skills ever mentioned in a role's postings — for QA / Testing that meant a
+# 199-skill denominator of which 131 appear in exactly ONE posting, giving
+# absurdly low scores (7.0% for pairs that the headline metric scores far
+# higher). Rewritten 2026-07-12 to use the exact same methodology as the
+# validated pipeline (pipeline/compute_alignment.py): core-skill filter
+# (>= 5% of the role's postings), semantic matching at cosine >= 0.65 with
+# the same blocklist/allowlist, frequency-weighted secondary score. With
+# identical inputs this reproduces the headline core/weighted numbers
+# exactly for a program's own mapped role.
+#
+# The API server (512MB instance) can't run sentence-transformers, so
+# embeddings for every known skill phrase are precomputed offline by
+# pipeline/build_skill_embeddings.py into skill_embeddings.npz and matching
+# here is pure numpy. Skills missing from that file (added to the DB after
+# the last rebuild) fall back to exact-string matching — degraded, not
+# broken; rerun the build script after data refreshes.
+
+_ROOT = Path(__file__).resolve().parents[1]
+_SKILL_EMB_PATH = _ROOT / "data" / "processed" / "unified" / "skill_embeddings.npz"
+_skill_emb_cache: tuple[dict, "np.ndarray"] | None = None
+
+
+def _skill_embeddings() -> tuple[dict, "np.ndarray"]:
+    global _skill_emb_cache
+    if _skill_emb_cache is None:
+        data = np.load(_SKILL_EMB_PATH, allow_pickle=True)
+        names = list(data["names"])
+        _skill_emb_cache = ({n: i for i, n in enumerate(names)}, data["embeddings"])
+    return _skill_emb_cache
+
+
+def semantic_covered_job_skills(prog_skills: set[str], job_skills: set[str]) -> set[str]:
+    """Which job-side skills does the program cover? Same decision rule as
+    pipeline/compute_alignment.py::compute_semantic_alignment's job_covered
+    pass: best cosine >= 0.65 wins unless that specific (program skill, job
+    skill) pair is blocklisted (then walk down the similarity ranking), with
+    the allowlist as a below-threshold rescue."""
+    from pipeline.compute_alignment import ALLOWLIST, BLOCKLIST, SIMILARITY_THRESHOLD
+
+    idx, mat = _skill_embeddings()
+    covered = {j for j in job_skills if j in prog_skills}
+
+    prog_list = [s for s in prog_skills if s in idx]
+    pending = [j for j in job_skills if j not in covered and j in idx]
+    if prog_list and pending:
+        prog_m = mat[[idx[s] for s in prog_list]]
+        job_m = mat[[idx[s] for s in pending]]
+        sims = job_m @ prog_m.T
+        for row, j in enumerate(pending):
+            for pi in np.argsort(sims[row])[::-1]:
+                if sims[row][pi] < SIMILARITY_THRESHOLD:
+                    break
+                if (prog_list[pi], j) not in BLOCKLIST:
+                    covered.add(j)
+                    break
+
+    for j in job_skills - covered:
+        if any((p, j) in ALLOWLIST for p in prog_skills):
+            covered.add(j)
+    return covered
+
+
 def compute_job_fit(
     program: str,
     degree: str,
@@ -232,34 +299,48 @@ def compute_job_fit(
     curriculum_df: pd.DataFrame,
     course_skills: dict,
     job_skills_by_role: dict,
+    role_posting_counts: dict,
 ) -> dict:
     """Compare program skills against a specific role group (it_role_group
-    labels, not the coarser relevant_roles taxonomy). Ported from
-    dashboard/src/job_fit_engine.py."""
+    labels, not the coarser relevant_roles taxonomy)."""
+    from pipeline.compute_alignment import CORE_SKILL_FREQ_PCT
+
     prog_skills = get_program_skills(program, degree, curriculum_df, course_skills)
     role_counter: Counter = Counter(job_skills_by_role.get(role_group, {}))
 
-    if not role_counter:
+    if not role_counter or not prog_skills:
         return {
-            "match_score": None, "matched": [], "missing": [],
-            "n_role_skills": 0, "n_program_skills": len(prog_skills),
+            "match_score": None, "weighted_score": None, "matched": [], "missing": [],
+            "n_core_skills": 0, "n_role_skills": len(role_counter),
+            "n_program_skills": len(prog_skills), "n_role_postings": 0,
         }
 
-    role_skills_set = set(role_counter.keys())
-    matched_set = prog_skills & role_skills_set
-    missing_set = role_skills_set - prog_skills
-    match_score = len(matched_set) / len(role_skills_set) * 100
+    n_postings = role_posting_counts.get(role_group, 0)
+    core_threshold = max(1, round(CORE_SKILL_FREQ_PCT * n_postings)) if n_postings else 1
+    core = {s for s, c in role_counter.items() if c >= core_threshold}
+
+    covered = semantic_covered_job_skills(prog_skills, set(role_counter))
+    core_covered = covered & core
+
+    match_score = len(core_covered) / len(core) * 100 if core else None
+    core_total_weight = sum(role_counter[s] for s in core)
+    weighted_score = (
+        sum(role_counter[s] for s in core_covered) / core_total_weight * 100
+        if core_total_weight else None
+    )
 
     matched = sorted(
-        [{"skill": s, "job_count": role_counter[s]} for s in matched_set],
+        [{"skill": s, "job_count": role_counter[s], "is_core": s in core} for s in covered],
         key=lambda x: -x["job_count"],
     )
     missing = sorted(
-        [{"skill": s, "job_count": role_counter[s]} for s in missing_set],
+        [{"skill": s, "job_count": role_counter[s]} for s in core - core_covered],
         key=lambda x: -x["job_count"],
     )
 
     return {
-        "match_score": match_score, "matched": matched, "missing": missing,
-        "n_role_skills": len(role_skills_set), "n_program_skills": len(prog_skills),
+        "match_score": match_score, "weighted_score": weighted_score,
+        "matched": matched, "missing": missing,
+        "n_core_skills": len(core), "n_role_skills": len(role_counter),
+        "n_program_skills": len(prog_skills), "n_role_postings": n_postings,
     }

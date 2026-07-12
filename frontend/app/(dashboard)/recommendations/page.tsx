@@ -13,12 +13,27 @@ const PRIORITY_COLORS: Record<string, string> = {
 };
 
 export default function RecommendationsPage() {
-  const { currentUniversity } = useAuth();
+  const { currentUniversity, universityParam, isAllUniversities } = useAuth();
   const [data, setData] = useState<RecommendationsResponse | null>(null);
 
   useEffect(() => {
-    if (currentUniversity) api.recommendations(currentUniversity).then(setData);
-  }, [currentUniversity]);
+    if (!currentUniversity || isAllUniversities) return;
+    setData(null);
+    api.recommendations(universityParam).then(setData);
+  }, [currentUniversity, universityParam, isAllUniversities]);
+
+  if (isAllUniversities) {
+    return (
+      <div>
+        <h1 className="text-3xl font-bold text-primary-dark">Recommendations</h1>
+        <p className="mt-4 rounded-lg bg-surface px-4 py-3 text-sm text-muted">
+          Recommendations are generated per university — select a specific university in the banner above to see
+          them. (Program names can repeat across universities, which would make cross-university aggregation here
+          ambiguous.)
+        </p>
+      </div>
+    );
+  }
 
   if (!data) return <p className="text-muted">Loading…</p>;
 

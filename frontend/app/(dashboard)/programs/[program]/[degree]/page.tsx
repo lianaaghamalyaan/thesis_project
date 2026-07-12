@@ -15,15 +15,28 @@ export default function ProgramDetailPage({
   const { program: rawProgram, degree: rawDegree } = use(params);
   const program = decodeURIComponent(rawProgram);
   const degree = decodeURIComponent(rawDegree);
-  const { currentUniversity } = useAuth();
+  const { currentUniversity, universityParam } = useAuth();
+  // A `?u=` query param pins the university explicitly — required in the
+  // admin "All universities" mode, where the same program name + degree can
+  // exist at two universities (e.g. "Informatics (Computer Science)" at
+  // both NPUA and NUACA) and the session's current university is no help.
+  const [pinnedUniversity, setPinnedUniversity] = useState<string | null>(null);
   const [detail, setDetail] = useState<ProgramDetail | null>(null);
   const [tab, setTab] = useState<"strengths" | "gaps">("strengths");
 
   useEffect(() => {
+    const u = new URLSearchParams(window.location.search).get("u");
+    setPinnedUniversity(u || null);
+  }, [program, degree]);
+
+  const effectiveUniversity = pinnedUniversity ?? universityParam ?? null;
+
+  useEffect(() => {
     if (!currentUniversity) return;
+    if (!effectiveUniversity) return; // ALL mode with no ?u= — wait for pin
     setDetail(null);
-    api.programDetail(program, degree, currentUniversity).then(setDetail);
-  }, [program, degree, currentUniversity]);
+    api.programDetail(program, degree, effectiveUniversity).then(setDetail);
+  }, [program, degree, currentUniversity, effectiveUniversity]);
 
   if (!detail) return <p className="text-muted">Loading…</p>;
 
@@ -39,11 +52,11 @@ export default function ProgramDetailPage({
         <div>
           <h1 className="text-3xl font-bold text-primary-dark">{program}</h1>
           <p className="mt-1 text-sm text-muted">
-            {degree} · {currentUniversity}
+            {degree} · {effectiveUniversity}
           </p>
         </div>
         <a
-          href={currentUniversity ? api.programBriefPdfUrl(program, degree, currentUniversity) : "#"}
+          href={effectiveUniversity ? api.programBriefPdfUrl(program, degree, effectiveUniversity) : "#"}
           className="rounded-lg border border-border px-3 py-1.5 text-sm font-medium hover:bg-surface"
         >
           📄 Export program brief (PDF)
