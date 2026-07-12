@@ -12,12 +12,23 @@ from ..schemas import ProgramAlignment
 router = APIRouter(tags=["admin"])
 
 
+def _clean_nan(records: list[dict]) -> list[dict]:
+    """DataFrame.to_dict("records") leaves NaN for missing values (numeric
+    AND string columns, e.g. relevant_roles); JSON/pydantic has no NaN
+    literal, so normalize to None before the response model validates it."""
+    for r in records:
+        for k, v in r.items():
+            if isinstance(v, float) and math.isnan(v):
+                r[k] = None
+    return records
+
+
 @router.get("/all-universities", response_model=list[ProgramAlignment])
 def get_all_universities(user: dict = Depends(require_admin)):
     """Cross-university alignment data — policy/internal accounts only.
     Mirrors dashboard/pages/all_universities.py's gate."""
     df = queries.load_alignment(university=None)
-    return df.to_dict("records") if not df.empty else []
+    return _clean_nan(df.to_dict("records")) if not df.empty else []
 
 
 @router.get("/admin/doc-quality")
