@@ -66,7 +66,7 @@ import argparse
 import json
 import sys
 from collections import Counter
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -76,6 +76,11 @@ SIMILARITY_THRESHOLD = 0.65  # thesis_final.docx para 260: calibrated value
 CORE_SKILL_FREQ_PCT = 0.05   # thesis_final.docx para 161: "at least 5% of such posts"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 RUN_KEY_PREFIX = "live"
+# Date the underlying job postings were actually scraped (matches
+# server/seed.py's JOB_SNAPSHOT_DATE) — NOT today's date. Update this only
+# when the job postings dataset itself is re-collected, not on every rerun
+# of this recompute script.
+JOB_SNAPSHOT_DATE = date(2026, 3, 20)
 RECOVERED_650_PATH = ROOT / "data" / "processed" / "jobs" / "_recovered_final_jobs_dataset_it_with_roles.csv"
 
 BLOCKLIST = {
@@ -394,7 +399,7 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
             run_key=run_key,
             experiment="LLM_desc_semantic",
             esco_version="n/a (direct)",
-            job_snapshot_date=datetime.utcnow().date(),
+            job_snapshot_date=JOB_SNAPSHOT_DATE,
             n_active_postings=len(posting_skills),
             is_canonical=False,
             status="complete",
