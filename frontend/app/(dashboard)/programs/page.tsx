@@ -103,6 +103,20 @@ export default function ProgramsPage() {
               <div className="text-xs text-muted">
                 {p.degree} · {rolesShort(p.relevant_roles)}
                 {isAllUniversities ? ` · ${p.university}` : ""}
+                {p.source_url && (
+                  <>
+                    {" · "}
+                    <a
+                      href={p.source_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-primary hover:underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      🔗 View curriculum on university site
+                    </a>
+                  </>
+                )}
               </div>
             </div>
             <div className="flex items-center gap-6">

@@ -39,6 +39,7 @@ export type ProgramAlignment = {
   program: string;
   degree: string;
   relevant_roles: string | null;
+  source_url: string | null;
   n_program_skills: number | null;
   n_job_skills: number | null;
   n_overlap: number | null;

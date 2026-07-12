@@ -63,6 +63,16 @@ export default function ProgramDetailPage({
           <p className="mt-1 text-sm text-muted">
             {degree} · {effectiveUniversity}
           </p>
+          {alignment?.source_url && (
+            <a
+              href={alignment.source_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 inline-block text-sm font-medium text-primary hover:underline"
+            >
+              🔗 View official curriculum on university website →
+            </a>
+          )}
         </div>
         <a
           href={effectiveUniversity ? api.programBriefPdfUrl(program, degree, effectiveUniversity) : "#"}

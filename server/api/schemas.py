@@ -15,6 +15,7 @@ class ProgramAlignment(BaseModel):
     program: str
     degree: str
     relevant_roles: str | None
+    source_url: str | None
     n_program_skills: int | None
     n_job_skills: int | None
     n_overlap: int | None

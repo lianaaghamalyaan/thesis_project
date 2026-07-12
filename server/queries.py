@@ -105,6 +105,7 @@ def load_alignment(university: str | None) -> pd.DataFrame:
                 "program": program.name,
                 "degree": program.degree_level,
                 "relevant_roles": program.relevant_roles,
+                "source_url": program.source_url,
                 "n_program_skills": result.n_program_skills,
                 "n_job_skills": result.n_job_skills,
                 "n_overlap": result.n_overlap,
