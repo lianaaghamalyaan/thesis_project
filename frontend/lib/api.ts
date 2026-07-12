@@ -188,6 +188,7 @@ export type JobFitResult = {
 export type DocumentationLevel = "no_published_data" | "minimal" | "partial" | "full";
 
 export type DocQualityProgram = {
+  university: string;
   program: string;
   degree: string;
   n_courses: number;

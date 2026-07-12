@@ -185,7 +185,17 @@ def seed_curriculum(session, course_skills: dict, tiers: dict) -> dict[tuple[str
             course_id_str = str(orig_course_id)
             description = best_descriptions.get(course_id_str) or crow.get("description") or None
             notes = crow.get("notes") or None
-            if course_id_str in generated_ids:
+            # generated_descriptions.json flags 1,228 course_ids as "AI-generated,"
+            # but 614 of those (all Armenian-language, mostly YSU) already had a
+            # real, substantial raw description — the generation notebook just
+            # produced an English rewrite for extraction consistency, it wasn't
+            # filling an actual gap. Only attach the "no public description was
+            # available" disclosure when that's literally true (verified
+            # 2026-07-13 by comparing generated_ids against the raw CSV
+            # description column directly).
+            raw_desc = crow.get("description")
+            had_real_raw_description = isinstance(raw_desc, str) and len(raw_desc.strip()) > 50
+            if course_id_str in generated_ids and not had_real_raw_description:
                 ai_note = "Description AI-generated from course name/program context — no public description was available from the university."
                 notes = f"{notes} {ai_note}" if notes else ai_note
             course = Course(

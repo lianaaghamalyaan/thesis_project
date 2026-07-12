@@ -44,9 +44,15 @@ def get_doc_quality(university: str | None = None, user: dict = Depends(get_curr
 
     rows = []
     for _, row in alignment_df.sort_values("core_role_coverage_pct", ascending=False, na_position="last").iterrows():
-        doc_score = analytics.compute_program_doc_score(row["program"], row["degree"], curriculum_df, tiers)
-        breakdown = analytics.program_documentation_breakdown(row["program"], row["degree"], curriculum_df)
+        # In "all universities" mode curriculum_df spans every institution, and
+        # program name + degree alone isn't unique across universities (e.g.
+        # "Informatics (Computer Science)" exists at both NPUA and NUACA) — scope
+        # to this row's university first so two programs' courses never get merged.
+        program_curriculum_df = curriculum_df[curriculum_df["university"] == row["university"]]
+        doc_score = analytics.compute_program_doc_score(row["program"], row["degree"], program_curriculum_df, tiers)
+        breakdown = analytics.program_documentation_breakdown(row["program"], row["degree"], program_curriculum_df)
         rows.append({
+            "university": row["university"],
             "program": row["program"],
             "degree": row["degree"],
             "n_courses": breakdown["n_courses"],

@@ -22,15 +22,19 @@ export default function ProgramsPage() {
   }, [currentUniversity, universityParam]);
 
   useEffect(() => {
-    if (!currentUniversity || isAllUniversities) {
+    if (!currentUniversity) {
       setDocQuality(null);
       return;
     }
+    // In "all universities" mode this omits the university param — an admin
+    // account then gets documentation quality for every program at once.
     api.docQuality(universityParam).then(setDocQuality);
-  }, [currentUniversity, universityParam, isAllUniversities]);
+  }, [currentUniversity, universityParam]);
 
-  const docLevelFor = (program: string, degree: string): DocumentationLevel | null => {
-    const row = docQuality?.programs.find((p) => p.program === program && p.degree === degree);
+  const docLevelFor = (university: string, program: string, degree: string): DocumentationLevel | null => {
+    const row = docQuality?.programs.find(
+      (p) => p.university === university && p.program === program && p.degree === degree
+    );
     return row ? row.documentation_level : null;
   };
 
@@ -86,7 +90,7 @@ export default function ProgramsPage() {
 
       <ul className="mt-3 space-y-3">
         {filtered.map((p) => {
-          const docLevel = docLevelFor(p.program, p.degree);
+          const docLevel = docLevelFor(p.university, p.program, p.degree);
           return (
           <li
             key={`${p.university}-${p.program}-${p.degree}`}
