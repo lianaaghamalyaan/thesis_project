@@ -105,6 +105,21 @@ def seed_curriculum(session, course_skills: dict, tiers: dict) -> dict[tuple[str
     """Returns {(university, program, degree): program_id}."""
     curriculum = pd.read_csv(PROCESSED / "curriculum/final_curriculum_dataset.csv")
     role_map = load_json(PROCESSED / "role_aware/program_role_mapping.json")
+    # 6 of 8 universities (NPUA, NUACA, RAU, UFAR, ASUE, ASPU) never had real
+    # course descriptions published anywhere public (confirmed 2026-07-12 by
+    # checking each university's actual curriculum page/PDF/doc directly —
+    # not a scraper gap, the institutions simply don't publish per-course
+    # syllabi). notebooks/02_extraction/llm/generate_descriptions.ipynb
+    # (recovered from git history) already solved this by LLM-generating a
+    # short description from course name + program context for every course
+    # lacking one, and course_skills_with_desc_norm.json's skill extraction
+    # already used this file — the alignment SCORES were never affected by
+    # this gap. What WAS broken: seed.py used the raw CSV `description`
+    # column here instead, so the DB stored literal "NaN" for ~599 courses
+    # (a purely cosmetic/reporting bug — see server/fix_course_descriptions.py
+    # for the non-destructive correction of an already-seeded DB).
+    best_descriptions = load_json(PROCESSED / "unified/best_descriptions.json")
+    generated_ids = set(load_json(PROCESSED / "unified/generated_descriptions.json").keys())
 
     university_by_name: dict[str, University] = {}
     for uni_name in sorted(curriculum["university"].unique()):
@@ -167,17 +182,23 @@ def seed_curriculum(session, course_skills: dict, tiers: dict) -> dict[tuple[str
         courses_batch = []
         for _, crow in rows.iterrows():
             orig_course_id = int(crow["course_id"])
+            course_id_str = str(orig_course_id)
+            description = best_descriptions.get(course_id_str) or crow.get("description") or None
+            notes = crow.get("notes") or None
+            if course_id_str in generated_ids:
+                ai_note = "Description AI-generated from course name/program context — no public description was available from the university."
+                notes = f"{notes} {ai_note}" if notes else ai_note
             course = Course(
                 program_version_id=version.id,
                 course_code=crow.get("course_code") or None,
                 name=crow["course_name"],
                 name_original=crow.get("course_name_original") or None,
-                description=crow.get("description") or None,
+                description=description,
                 credits=float(crow["credits"]) if pd.notna(crow.get("credits")) else None,
                 semester=str(crow["semester"]) if pd.notna(crow.get("semester")) else None,
                 source_language=crow.get("source_language") or None,
                 source_url=crow.get("source_url") or None,
-                notes=crow.get("notes") or None,
+                notes=notes,
             )
             session.add(course)
             courses_batch.append((course, orig_course_id))
