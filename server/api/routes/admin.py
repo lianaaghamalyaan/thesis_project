@@ -28,6 +28,9 @@ def get_all_universities(user: dict = Depends(require_admin)):
     """Cross-university alignment data — policy/internal accounts only.
     Mirrors dashboard/pages/all_universities.py's gate."""
     df = queries.load_alignment(university=None)
+    # Same non-IT-program exclusion as /programs (see that route for why).
+    if not df.empty:
+        df = df[df["relevant_roles"].notna()]
     return _clean_nan(df.to_dict("records")) if not df.empty else []
 
 
@@ -41,6 +44,10 @@ def get_doc_quality(university: str | None = None, user: dict = Depends(get_curr
     alignment_df = queries.load_alignment(scoped)
     curriculum_df = queries.load_curriculum(scoped)
     tiers = queries.load_confidence_tiers(scoped)
+    # Same non-IT-program exclusion as /programs — these have no role
+    # mapping and no score, so a documentation-quality row for them is noise.
+    if not alignment_df.empty:
+        alignment_df = alignment_df[alignment_df["relevant_roles"].notna()]
 
     rows = []
     for _, row in alignment_df.sort_values("core_role_coverage_pct", ascending=False, na_position="last").iterrows():

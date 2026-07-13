@@ -27,6 +27,14 @@ def _clean_nan(records: list[dict]) -> list[dict]:
 def list_programs(university: str | None = None, user: dict = Depends(get_current_user)):
     scoped = resolve_university(university, user)
     df = queries.load_alignment(scoped)
+    # A handful of programs (e.g. AUA's "General Education" core-curriculum
+    # block, "Environmental and Sustainability Sciences") were never given an
+    # IT role mapping in the original pipeline — they aren't IT programs, so
+    # there's nothing to score them against and they'd only ever show "no
+    # data" here. Direct-link program detail pages still work; this just
+    # keeps them out of the browsable/ranked catalog.
+    if not df.empty:
+        df = df[df["relevant_roles"].notna()]
     return _clean_nan(df.to_dict("records")) if not df.empty else []
 
 
