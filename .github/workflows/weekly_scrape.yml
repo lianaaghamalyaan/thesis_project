@@ -1,0 +1,120 @@
+name: Weekly Job Market Refresh
+
+# Closes the loop that used to stop after scraping (see git history before
+# 2026-07-20): scrape -> classify IT postings -> extract skills for new
+# postings -> consolidate near-duplicate skill names -> rebuild embeddings
+# -> recompute alignment -> verify it's safe -> promote if so. Every step
+# that writes to the database is either idempotent (safe to rerun) or
+# scoped to only genuinely-new data, and pipeline/verify_promotion_gate.py
+# is the last line of defense: it blocks promotion (and fails this
+# workflow, which sends the same kind of failure notification that already
+# caught the two broken Render deploys on 2026-07-20) if the new numbers
+# look like a bug rather than real data drift. Nothing here ever runs
+# server/seed.py (destructive) or drops any table.
+#
+# Required repository secrets (Settings -> Secrets and variables -> Actions):
+#   DATABASE_URL      — production Postgres connection string.
+#   ANTHROPIC_API_KEY — for skill extraction on newly-scraped postings only
+#                        (pipeline/extract_new_postings_skills.py).
+# Without ANTHROPIC_API_KEY the extraction step fails loudly (by design —
+# see that script) rather than silently skipping newly-imported postings.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Every Monday at 06:00 UTC
+  workflow_dispatch:        # Manual trigger from GitHub UI
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Install Python dependencies
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Install Playwright browsers
+        run: playwright install chromium --with-deps
+
+      - name: Scrape job postings
+        run: python -m pipeline.run_collection
+
+      - name: Commit raw scrape data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/raw/jobs/
+          git add data/runs/
+          git diff --staged --quiet || git commit -m "data: weekly job collection $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Import + classify new postings
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m pipeline.import_new_postings
+
+      - name: Commit review-queue postings, if any need a human decision
+        run: |
+          git add data/processed/jobs/latest_review_queue.csv 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "data: postings needing manual IT/role review $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git push || true
+
+      - name: Extract skills for newly-imported postings
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m pipeline.extract_new_postings_skills
+
+      - name: Consolidate near-duplicate skill names
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m pipeline.consolidate_skills
+
+      - name: Rebuild skill embeddings
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m pipeline.build_skill_embeddings
+
+      - name: Commit updated embeddings (Job Fit reads this file directly)
+        run: |
+          git add data/processed/unified/skill_embeddings.npz
+          git diff --staged --quiet || git commit -m "data: refresh skill embeddings $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git push
+        # Pushing here (independent of whether the alignment run below gets
+        # promoted) is what closes C4: Render auto-deploys on every push to
+        # main, so the API picks up the matching embeddings the moment
+        # job_skills actually changed — no separate deploy hook needed.
+
+      - name: Recompute alignment, verify, promote if safe
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          set -e
+          OUTPUT=$(python -m pipeline.compute_alignment)
+          echo "$OUTPUT"
+          RUN_KEY=$(echo "$OUTPUT" | grep -oP "Wrote run '\K[^']+")
+          if [ -z "$RUN_KEY" ]; then
+            echo "Could not find the new run key in compute_alignment output — failing." >&2
+            exit 1
+          fi
+          echo "New run: $RUN_KEY"
+          if python -m pipeline.verify_promotion_gate --run-key "$RUN_KEY"; then
+            python -m pipeline.promote_run --run-key "$RUN_KEY"
+          else
+            echo "Promotion gate failed — leaving $RUN_KEY un-promoted. This workflow will report as" >&2
+            echo "failed so it's visible (same as any other failed run) — investigate before the next" >&2
+            echo "scheduled run promotes something else on top of this." >&2
+            exit 1
+          fi
