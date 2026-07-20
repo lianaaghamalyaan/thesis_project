@@ -6,7 +6,7 @@ import { useAuth } from "@/lib/auth-context";
 import { Card } from "@/components/MetricCard";
 import { InfoTip } from "@/components/InfoTip";
 import { formatExperiment } from "@/lib/experiments";
-import { DOC_LEVEL_ICONS, DOC_LEVEL_LABELS, DOC_LEVEL_SHORT_LABELS, formatDate } from "@/lib/format";
+import { DOC_LEVEL_ICONS, DOC_LEVEL_LABELS, DOC_LEVEL_SHORT_LABELS, formatDate, formatJobDateRange } from "@/lib/format";
 
 function docStatus(score: number): string {
   if (score < 0.25) return "⚠️";
@@ -59,7 +59,11 @@ export default function AdminPage() {
               <p className="mt-1 text-muted">
                 Status: 🟡 Static snapshot (not live)
                 <br />
-                Job postings data collected on: <strong>{formatDate(meta.job_snapshot.collected_at)}</strong>
+                Postings collected:{" "}
+                <strong>{formatJobDateRange(meta.job_snapshot.earliest_at, meta.job_snapshot.collected_at)}</strong>
+                {(meta.job_snapshot.n_unknown_date ?? 0) > 0 && (
+                  <> ({meta.job_snapshot.n_unknown_date} active postings have no known collection date)</>
+                )}
                 <br />
                 IT postings analyzed: <strong>{meta.job_snapshot.n_it_postings?.toLocaleString()}</strong>
                 <br />
@@ -122,7 +126,7 @@ export default function AdminPage() {
                 <th className="py-2">Program</th>
                 <th>Degree</th>
                 <th>Courses</th>
-                <th>Data level</th>
+                <th>Documentation level</th>
                 <th>Doc. quality</th>
                 <th>Status</th>
               </tr>
@@ -152,7 +156,7 @@ export default function AdminPage() {
             </tbody>
           </table>
           <p className="mt-2 text-xs text-muted">
-            Data level: ⛔ No published data · 🟠 Minimal · 🟡 Partial · ✅ Full. Doc. quality/Status is the
+            Documentation level: ⛔ No course descriptions · 🟠 Limited descriptions · 🟡 Some descriptions · ✅ Full descriptions. Doc. quality/Status is the
             skill-extraction confidence score described above. ✅ Good (≥40%) · 🟡 Mixed (25–40%) · ⚠️ Weak
             (&lt;25%)
           </p>

@@ -15,29 +15,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from .role_mapping import expand_program_roles
+
 MIN_ROLE_MATCHED_PEERS = 3
-
-ROLE_MAPPING = {
-    "Software Engineering": ["Backend", "Full Stack", "General IT"],
-    "Data / ML / AI": ["Data / ML / AI"],
-    "DevOps / Cloud": ["DevOps / Cloud"],
-    "Hardware / Embedded": ["Hardware / Embedded"],
-    "Security": ["Security"],
-    "QA / Testing": ["QA / Testing"],
-    "IT Support / Admin / ERP": ["IT Support / Admin", "General IT"],
-    "Technical Management": ["Technical Management"],
-    "UX / Product Design": ["UX / Product Design"],
-}
-
-
-def expand_roles(relevant_roles: str | None) -> list[str]:
-    if not relevant_roles or str(relevant_roles) in ("unmapped", "nan", ""):
-        return []
-    job_roles = []
-    for r in str(relevant_roles).split(","):
-        r = r.strip()
-        job_roles.extend(ROLE_MAPPING.get(r, [r]))
-    return list(dict.fromkeys(job_roles))
 
 
 def get_program_skills(program: str, degree: str, curriculum_df: pd.DataFrame, course_skills: dict) -> set:
@@ -71,12 +51,35 @@ def get_skill_courses(
     return out
 
 
-def get_role_skill_counter(relevant_roles: str | None, job_skills_by_role: dict) -> Counter:
-    job_roles = expand_roles(relevant_roles)
-    agg: Counter = Counter()
-    for role in job_roles:
-        agg.update(job_skills_by_role.get(role, {}))
-    return agg
+def _get_core_job_skills_for_roles(role_set: set[str], job_skills_by_role: dict, role_posting_counts: dict) -> set[str]:
+    """Same per-role "core" definition as pipeline/compute_alignment.py's
+    get_core_job_skills: a skill counts as core for a role if it appears in
+    >= 5% of THAT role's own postings, and a multi-role program's core set
+    is the UNION of each role's core set (not a threshold on the combined
+    count) — a skill can be core for one of a program's roles even if it
+    wouldn't clear 5% of the roles' postings pooled together."""
+    from pipeline.compute_alignment import CORE_SKILL_FREQ_PCT
+
+    out: set[str] = set()
+    for role in role_set:
+        n_postings = role_posting_counts.get(role, 0)
+        if n_postings == 0:
+            continue
+        min_count = max(1, round(CORE_SKILL_FREQ_PCT * n_postings))
+        out |= {s for s, c in job_skills_by_role.get(role, {}).items() if c >= min_count}
+    return out
+
+
+def _get_role_freq_map(role_set: set[str], job_skills_by_role: dict) -> Counter:
+    """Same combined-frequency definition as compute_alignment.py's
+    get_freq_map: a skill's displayed job_count is its posting count summed
+    across every one of the program's resolved roles, not just the role
+    that made it core."""
+    combined: Counter = Counter()
+    for role in role_set:
+        for skill, count in job_skills_by_role.get(role, {}).items():
+            combined[skill] += count
+    return combined
 
 
 def get_strengths(
@@ -86,14 +89,31 @@ def get_strengths(
     curriculum_df: pd.DataFrame,
     course_skills: dict,
     job_skills_by_role: dict,
+    role_posting_counts: dict,
     n: int = 20,
 ) -> list[dict]:
+    """The program's core skills (same definition the headline
+    core_role_coverage_pct is computed from) that the program's own
+    curriculum covers, via the same bidirectional semantic matching used
+    everywhere else (semantic_covered_job_skills_with_source) — not exact
+    string equality against every skill ever mentioned for the role. This
+    is what makes "Covers N of M core skills" (compute_alignment.py) and
+    the Strengths list shown on the same page describe the same N, instead
+    of two independently-computed numbers that a careful reader couldn't
+    reconcile."""
+    known_roles = set(job_skills_by_role.keys())
+    role_set = expand_program_roles(relevant_roles, known_roles)
+    if not role_set:
+        return []
+
     prog_skills = get_program_skills(program, degree, curriculum_df, course_skills)
-    role_counter = get_role_skill_counter(relevant_roles, job_skills_by_role)
+    core_skills = _get_core_job_skills_for_roles(role_set, job_skills_by_role, role_posting_counts)
+    freq_map = _get_role_freq_map(role_set, job_skills_by_role)
+
+    covered = semantic_covered_job_skills_with_source(prog_skills, core_skills)
     matched = [
-        {"skill": s, "job_count": role_counter[s]}
-        for s in prog_skills
-        if s in role_counter
+        {"skill": job_skill, "job_count": freq_map.get(job_skill, 0), "matched_program_skills": sources}
+        for job_skill, sources in covered.items()
     ]
     matched.sort(key=lambda x: -x["job_count"])
     return matched[:n]
@@ -328,16 +348,22 @@ def _skill_embeddings() -> tuple[dict, "np.ndarray"]:
     return _skill_emb_cache
 
 
-def semantic_covered_job_skills(prog_skills: set[str], job_skills: set[str]) -> set[str]:
-    """Which job-side skills does the program cover? Same decision rule as
+def semantic_covered_job_skills_with_source(prog_skills: set[str], job_skills: set[str]) -> dict[str, list[str]]:
+    """Which job-side skills does the program cover, and which of the
+    program's own skill(s) justified each one? Same decision rule as
     pipeline/compute_alignment.py::compute_semantic_alignment's job_covered
     pass: best cosine >= 0.65 wins unless that specific (program skill, job
     skill) pair is blocklisted (then walk down the similarity ranking), with
-    the allowlist as a below-threshold rescue."""
+    the allowlist as a below-threshold rescue. Returning the source program
+    skill(s) (not just a boolean) is what lets a Strengths row whose
+    job-market wording differs from the program's own wording (e.g. program
+    teaches "Distributed Computing Systems", the market calls it
+    "Distributed Systems") still point "how was this decided?" at the real
+    course, instead of failing to find one under an exact-name lookup."""
     from pipeline.compute_alignment import ALLOWLIST, BLOCKLIST, SIMILARITY_THRESHOLD
 
     idx, mat = _skill_embeddings()
-    covered = {j for j in job_skills if j in prog_skills}
+    covered: dict[str, list[str]] = {j: [j] for j in job_skills if j in prog_skills}
 
     prog_list = [s for s in prog_skills if s in idx]
     pending = [j for j in job_skills if j not in covered and j in idx]
@@ -350,13 +376,22 @@ def semantic_covered_job_skills(prog_skills: set[str], job_skills: set[str]) -> 
                 if sims[row][pi] < SIMILARITY_THRESHOLD:
                     break
                 if (prog_list[pi], j) not in BLOCKLIST:
-                    covered.add(j)
+                    covered[j] = [prog_list[pi]]
                     break
 
-    for j in job_skills - covered:
-        if any((p, j) in ALLOWLIST for p in prog_skills):
-            covered.add(j)
+    for j in job_skills - covered.keys():
+        sources = [p for p in prog_skills if (p, j) in ALLOWLIST]
+        if sources:
+            covered[j] = sources
     return covered
+
+
+def semantic_covered_job_skills(prog_skills: set[str], job_skills: set[str]) -> set[str]:
+    """Which job-side skills does the program cover — see
+    semantic_covered_job_skills_with_source for the decision rule. This is
+    the set-only view used where the matching program skill doesn't matter
+    (e.g. Job Fit's score, which only needs coverage counts)."""
+    return set(semantic_covered_job_skills_with_source(prog_skills, job_skills).keys())
 
 
 def compute_job_fit(

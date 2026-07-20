@@ -40,6 +40,19 @@ export function formatDate(iso: string | null | undefined): string {
   return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 }
 
+// A single "collected on <date>" reads as fact but stops being true the
+// moment a later scrape adds postings on top of an earlier one — postings
+// then span a range of collection dates, not one. Collapses to a single
+// date when the range genuinely is one day (or unknown), otherwise shows
+// the true earliest–latest range.
+export function formatJobDateRange(earliestAt: string | null | undefined, latestAt: string | null | undefined): string {
+  if (!earliestAt && !latestAt) return "unknown date";
+  if (!earliestAt || !latestAt || earliestAt === latestAt) {
+    return formatDate(latestAt ?? earliestAt);
+  }
+  return `${formatDate(earliestAt)} – ${formatDate(latestAt)}`;
+}
+
 export function uniAbbr(name: string): string {
   const skip = new Set(["of", "the", "in", "and", "en", "de"]);
   const parts = name.split(/[\s-]+/).filter((w) => w && !skip.has(w.toLowerCase()));
@@ -50,17 +63,17 @@ export function uniAbbr(name: string): string {
 import type { DocumentationLevel } from "./api";
 
 export const DOC_LEVEL_LABELS: Record<DocumentationLevel, string> = {
-  no_published_data: "No published course data — analysis relies on AI-generated descriptions",
-  minimal: "Minimal published data — mostly missing or AI-generated descriptions",
-  partial: "Partial published data — some courses missing or thin descriptions",
+  no_published_data: "No published course descriptions — course titles, credits, or program-level outcomes may be available, but analysis relies on AI-generated descriptions for course-level skills",
+  minimal: "Limited published descriptions — many courses use AI-generated descriptions",
+  partial: "Some published descriptions — some courses are missing or have thin descriptions",
   full: "Full course descriptions published",
 };
 
 export const DOC_LEVEL_SHORT_LABELS: Record<DocumentationLevel, string> = {
-  no_published_data: "No published data",
-  minimal: "Minimal data",
-  partial: "Partial data",
-  full: "Full data",
+  no_published_data: "No course descriptions",
+  minimal: "Limited descriptions",
+  partial: "Some descriptions",
+  full: "Full descriptions",
 };
 
 export const DOC_LEVEL_ICONS: Record<DocumentationLevel, string> = {

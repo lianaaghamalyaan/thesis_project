@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { api, RunMetadata } from "@/lib/api";
 import { Card, MetricCard } from "@/components/MetricCard";
 import { formatExperiment } from "@/lib/experiments";
-import { formatDate } from "@/lib/format";
+import { formatDate, formatJobDateRange } from "@/lib/format";
 
 export default function MethodologyPage() {
   const [meta, setMeta] = useState<RunMetadata | null>(null);
@@ -45,7 +45,7 @@ export default function MethodologyPage() {
             <MetricCard
               label="Job market dataset"
               value={`${meta.job_snapshot.n_it_postings?.toLocaleString()} postings`}
-              caption={`${meta.job_snapshot.n_sources} sources · collected ${formatDate(meta.job_snapshot.collected_at)}`}
+              caption={`${meta.job_snapshot.n_sources} sources · collected ${formatJobDateRange(meta.job_snapshot.earliest_at, meta.job_snapshot.collected_at)}`}
             />
           </div>
         )}
@@ -193,7 +193,7 @@ export default function MethodologyPage() {
         <>
           <h2 className="mt-8 text-lg font-semibold">Reproducibility</h2>
           <div className="mt-2 grid grid-cols-3 gap-4">
-            <MetricCard label="Job postings" value={meta.job_snapshot.n_it_postings ?? "—"} caption={`Collected: ${formatDate(meta.job_snapshot.collected_at)}`} />
+            <MetricCard label="Job postings" value={meta.job_snapshot.n_it_postings ?? "—"} caption={`Collected: ${formatJobDateRange(meta.job_snapshot.earliest_at, meta.job_snapshot.collected_at)}`} />
             <MetricCard label="Programs" value={meta.curriculum_snapshot.n_programs ?? "—"} caption={`Courses: ${meta.curriculum_snapshot.n_courses ?? "—"}`} />
             <MetricCard label="Universities" value={meta.curriculum_snapshot.n_universities ?? "—"} caption={`Analysis generated: ${formatDate(meta.created_at)}`} />
           </div>

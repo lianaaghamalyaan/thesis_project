@@ -70,11 +70,13 @@ def get_program_detail(
     course_skills = queries.load_course_skills(scoped)
     tiers = queries.load_confidence_tiers(scoped)
     job_skills_by_role = queries.load_job_skills_by_role()
+    role_posting_counts = queries.load_role_posting_counts()
 
     strengths = analytics.get_strengths(
-        program, degree, relevant_roles, curriculum_df, course_skills, job_skills_by_role, n=20
+        program, degree, relevant_roles, curriculum_df, course_skills, job_skills_by_role, role_posting_counts, n=20
     ) if relevant_roles not in (None, "unmapped", "nan", "") else []
     skill_courses = analytics.get_skill_courses(program, degree, curriculum_df, course_skills, tiers)
+    course_evidence, program_outcomes = queries.load_program_evidence(scoped, program, degree)
 
     doc_score = analytics.compute_program_doc_score(program, degree, curriculum_df, tiers)
     gap_type = analytics.classify_gap_type(doc_score)
@@ -92,4 +94,6 @@ def get_program_detail(
         "benchmark": benchmark,
         "doc_score": doc_score,
         "gap_type": gap_type,
+        "course_evidence": course_evidence,
+        "program_outcomes": program_outcomes,
     }

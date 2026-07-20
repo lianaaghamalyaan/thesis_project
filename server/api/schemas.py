@@ -65,9 +65,11 @@ class CurriculumCourse(BaseModel):
 
 
 class JobSnapshot(BaseModel):
-    collected_at: str | None
+    collected_at: str | None  # most recent posting_date among active postings
+    earliest_at: str | None  # oldest posting_date among active postings
     n_it_postings: int | None
     n_sources: int | None
+    n_unknown_date: int | None  # active postings with no posting_date on file
     window: str | None
 
 
@@ -100,11 +102,39 @@ class BenchmarkResult(BaseModel):
 class StrengthSkill(BaseModel):
     skill: str
     job_count: int
+    matched_program_skills: list[str] = []
 
 
 class SkillCourse(BaseModel):
     course_name: str
     high_confidence: bool
+
+
+class ExtractedSkillEvidence(BaseModel):
+    skill_name: str
+    confidence_tier: str | None = None
+    extraction_method: str
+    input_type: str | None = None
+
+
+class CourseEvidence(BaseModel):
+    course_name: str
+    course_name_original: str | None
+    credits: float | None
+    description: str | None
+    source_url: str | None
+    source_language: str | None
+    notes: str | None
+    skills: list[ExtractedSkillEvidence]
+
+
+class ProgramOutcomeEvidence(BaseModel):
+    outcome_text: str
+    outcome_text_original: str | None
+    source_url: str | None
+    source_language: str | None
+    is_official: bool
+    skills: list[ExtractedSkillEvidence]
 
 
 class ProgramDetail(BaseModel):
@@ -118,3 +148,5 @@ class ProgramDetail(BaseModel):
     benchmark: BenchmarkResult | None
     doc_score: float
     gap_type: str
+    course_evidence: list[CourseEvidence]
+    program_outcomes: list[ProgramOutcomeEvidence]

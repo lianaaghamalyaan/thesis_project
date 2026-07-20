@@ -71,9 +71,39 @@ export type LlmGapSkillRow = {
   category: string | null;
 };
 
-export type StrengthSkill = { skill: string; job_count: number };
+// matched_program_skills is only populated on Program Detail's Strengths list
+// (server/analytics.py::get_strengths); Job Fit's "missing" list reuses this
+// type but never sets it (no reused meaning for "not covered").
+export type StrengthSkill = { skill: string; job_count: number; matched_program_skills?: string[] };
 
 export type SkillCourse = { course_name: string; high_confidence: boolean };
+
+export type ExtractedSkillEvidence = {
+  skill_name: string;
+  confidence_tier: string | null;
+  extraction_method: string;
+  input_type: string | null;
+};
+
+export type CourseEvidence = {
+  course_name: string;
+  course_name_original: string | null;
+  credits: number | null;
+  description: string | null;
+  source_url: string | null;
+  source_language: string | null;
+  notes: string | null;
+  skills: ExtractedSkillEvidence[];
+};
+
+export type ProgramOutcomeEvidence = {
+  outcome_text: string;
+  outcome_text_original: string | null;
+  source_url: string | null;
+  source_language: string | null;
+  is_official: boolean;
+  skills: ExtractedSkillEvidence[];
+};
 
 export type BenchmarkResult = {
   peer_mean: number;
@@ -92,6 +122,8 @@ export type ProgramDetail = {
   benchmark: BenchmarkResult | null;
   doc_score: number;
   gap_type: string;
+  course_evidence: CourseEvidence[];
+  program_outcomes: ProgramOutcomeEvidence[];
 };
 
 export type RunMetadata = {
@@ -107,8 +139,10 @@ export type RunMetadata = {
   };
   job_snapshot: {
     collected_at: string | null;
+    earliest_at: string | null;
     n_it_postings: number | null;
     n_sources: number | null;
+    n_unknown_date: number | null;
     window: string | null;
   };
   esco_version: string | null;

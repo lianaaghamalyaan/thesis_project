@@ -1,6 +1,7 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { api, ProgramDetail, RunMetadata } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { ScoreDisplay } from "@/components/ScoreBadge";
@@ -24,32 +25,31 @@ export default function ProgramDetailPage({
   // admin "All universities" mode, where the same program name + degree can
   // exist at two universities (e.g. "Informatics (Computer Science)" at
   // both NPUA and NUACA) and the session's current university is no help.
-  const [pinnedUniversity, setPinnedUniversity] = useState<string | null>(null);
-  const [detail, setDetail] = useState<ProgramDetail | null>(null);
+  const searchParams = useSearchParams();
+  const pinnedUniversity = searchParams.get("u");
+  const [loadedDetail, setLoadedDetail] = useState<{ key: string; value: ProgramDetail } | null>(null);
   const [meta, setMeta] = useState<RunMetadata | null>(null);
-  const [tab, setTab] = useState<"strengths" | "gaps">("strengths");
-
-  useEffect(() => {
-    const u = new URLSearchParams(window.location.search).get("u");
-    setPinnedUniversity(u || null);
-  }, [program, degree]);
+  const [tab, setTab] = useState<"strengths" | "gaps" | "evidence">("strengths");
 
   useEffect(() => {
     api.runMetadata().then(setMeta);
   }, []);
 
   const effectiveUniversity = pinnedUniversity ?? universityParam ?? null;
+  const detailKey = `${program}\u0000${degree}\u0000${effectiveUniversity ?? ""}`;
+  const detail = loadedDetail?.key === detailKey ? loadedDetail.value : null;
 
   useEffect(() => {
     if (!currentUniversity) return;
     if (!effectiveUniversity) return; // ALL mode with no ?u= — wait for pin
-    setDetail(null);
-    api.programDetail(program, degree, effectiveUniversity).then(setDetail);
-  }, [program, degree, currentUniversity, effectiveUniversity]);
+    api.programDetail(program, degree, effectiveUniversity).then((value) => {
+      setLoadedDetail({ key: detailKey, value });
+    });
+  }, [program, degree, currentUniversity, effectiveUniversity, detailKey]);
 
   if (!detail) return <p className="text-muted">Loading…</p>;
 
-  const { alignment, gaps, fallback_gaps, strengths, skill_courses, benchmark, doc_score, gap_type } = detail;
+  const { alignment, gaps, fallback_gaps, strengths, skill_courses, benchmark, doc_score, gap_type, course_evidence, program_outcomes } = detail;
   const score = alignment?.core_role_coverage_pct ?? null;
   const displayGaps = gaps.length
     ? gaps.map((g) => ({ skill: g.missing_skill, freq: g.job_frequency, category: g.category }))
@@ -136,7 +136,7 @@ export default function ProgramDetailPage({
       <hr className="my-6 border-border" />
 
       <div className="flex gap-1 border-b border-border">
-        {(["strengths", "gaps"] as const).map((t) => (
+        {(["strengths", "gaps", "evidence"] as const).map((t) => (
           <button
             key={t}
             onClick={() => setTab(t)}
@@ -144,7 +144,7 @@ export default function ProgramDetailPage({
               tab === t ? "border-b-2 border-primary text-primary" : "text-muted"
             }`}
           >
-            {t === "strengths" ? "✅ Strengths" : "⚠️ Gaps"}
+            {t === "strengths" ? "✅ Strengths" : t === "gaps" ? "⚠️ Gaps" : "🔎 Course evidence"}
           </button>
         ))}
       </div>
@@ -153,7 +153,21 @@ export default function ProgramDetailPage({
         <ul className="mt-4 space-y-2">
           {strengths.length === 0 && <p className="text-sm text-muted">No mapped role data for this program.</p>}
           {strengths.map((s) => {
-            const courses = skill_courses[s.skill] ?? [];
+            // The displayed skill name is the job-market's wording (e.g. "Distributed
+            // Systems"), which can differ from the program's own course-skill wording
+            // (e.g. "Distributed Computing Systems") when the match was semantic, not
+            // exact — so course traceability is looked up via matched_program_skills,
+            // not the displayed name itself.
+            const rawCourses = (s.matched_program_skills ?? [s.skill]).flatMap((ps) => skill_courses[ps] ?? []);
+            // Dedupe: the same course can teach more than one of a skill's
+            // matched program-skill names.
+            const courses = Array.from(
+              rawCourses.reduce((byName, c) => {
+                const existing = byName.get(c.course_name);
+                byName.set(c.course_name, { course_name: c.course_name, high_confidence: (existing?.high_confidence ?? false) || c.high_confidence });
+                return byName;
+              }, new Map<string, { course_name: string; high_confidence: boolean }>()).values()
+            );
             return (
               <li key={s.skill} className="rounded-lg border border-border px-3 py-2 text-sm">
                 <details>
@@ -189,26 +203,33 @@ export default function ProgramDetailPage({
 
       {tab === "gaps" && (
         <div className="mt-4">
-          <p className="mb-2 text-xs text-muted">
-            Each gap is labeled as a likely curriculum gap, documentation gap, or uncertain. <InfoTip term="gap_type" />
-          </p>
-          {doc_score <= 0.2 && (
-            <Card className="mb-4 border-score-moderate bg-orange-50">
-              <p className="text-sm">
-                ⚠️ <strong>Documentation quality notice:</strong> course descriptions for this program are limited.
-                Some gaps below may be documentation gaps — the skills could already be taught but are not
-                explicitly mentioned in course syllabi.
-              </p>
-            </Card>
-          )}
+          {/* gap_type is a single program-wide estimate derived from this program's
+              overall documentation quality (doc_score), not an independent judgment
+              made on each gap below — a per-row badge stating it as such would be
+              false precision. Individual skills only get their own classification
+              when real per-skill category data exists (frozen historical runs);
+              live-recomputed runs (the current default) don't have that, so most
+              rows show no per-row badge at all — see the caveat banner instead. */}
+          <Card className="mb-4 bg-surface">
+            <p className="text-sm">
+              📋 <strong>About these gaps:</strong> this program&apos;s course descriptions score{" "}
+              {(doc_score * 100).toFixed(0)}% on documentation quality <InfoTip term="doc_score" />, so as a
+              program-wide estimate these gaps are more likely to be{" "}
+              <strong>{GAP_TYPE_LABELS[gap_type].toLowerCase()}</strong> ({GAP_TYPE_ICONS[gap_type]}). This is a
+              program-level signal, not a verified judgment on each individual skill below.{" "}
+              <InfoTip term="gap_type" />
+            </p>
+          </Card>
           <ul className="space-y-2">
             {displayGaps.map((g, i) => (
               <li key={i} className="flex items-center justify-between rounded-lg border border-border px-3 py-2 text-sm">
                 <span>
-                  {GAP_TYPE_ICONS[gap_type]} {g.skill}
+                  {g.category && `${GAP_TYPE_ICONS[g.category] ?? "⚪"} `}
+                  {g.skill}
                 </span>
                 <span className="text-xs text-muted">
-                  {g.freq ?? 0} job postings · {GAP_TYPE_LABELS[gap_type]}
+                  {g.freq ?? 0} job postings
+                  {g.category && ` · ${GAP_TYPE_LABELS[g.category] ?? "Unclear"}`}
                 </span>
               </li>
             ))}
@@ -217,6 +238,84 @@ export default function ProgramDetailPage({
             Documentation quality score for this program: {(doc_score * 100).toFixed(0)}% (proportion of extracted
             skills with high extraction confidence) <InfoTip term="doc_score" />
           </p>
+        </div>
+      )}
+
+      {tab === "evidence" && (
+        <div className="mt-4 space-y-6">
+          <div>
+            <h2 className="text-sm font-semibold">How to read this</h2>
+            <p className="mt-1 text-xs text-muted">
+              These are the skills currently extracted for each course. They are evidence for review, not a claim that
+              every listed tool is taught in depth. Generated descriptions are clearly marked and do not replace an
+              official syllabus.
+            </p>
+          </div>
+
+          {program_outcomes.length > 0 && (
+            <div>
+              <h2 className="text-sm font-semibold">Official program-level learning outcomes</h2>
+              <p className="mt-1 text-xs text-muted">
+                Program outcomes are shown separately and are not included in the alignment score yet.
+              </p>
+              <ul className="mt-3 space-y-2">
+                {program_outcomes.map((outcome, i) => (
+                  <li key={i} className="rounded-lg border border-border px-3 py-2 text-sm">
+                    <p>{outcome.outcome_text}</p>
+                    <div className="mt-2 flex flex-wrap gap-1">
+                      {outcome.skills.map((skill) => (
+                        <span key={skill.skill_name} className="rounded bg-primary/10 px-2 py-0.5 text-xs text-primary-dark">
+                          {skill.skill_name}
+                        </span>
+                      ))}
+                    </div>
+                    {outcome.source_url && (
+                      <a href={outcome.source_url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-primary hover:underline">
+                        View official source →
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <div>
+            <h2 className="text-sm font-semibold">Course-level extracted skills ({course_evidence.length} courses)</h2>
+            <ul className="mt-3 space-y-2">
+              {course_evidence.map((course) => {
+                const generated = course.notes?.includes("AI-generated");
+                return (
+                  <li key={course.course_name} className="rounded-lg border border-border px-3 py-2 text-sm">
+                    <details>
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 marker:content-none">
+                        <span>
+                          <strong>{course.course_name}</strong>
+                          {course.credits !== null && <span className="ml-2 text-xs text-muted">{course.credits} credits</span>}
+                        </span>
+                        <span className={`text-xs ${generated ? "text-orange-700" : "text-muted"}`}>
+                          {generated ? "AI-generated description" : "Published source"} · {course.skills.length} skills ▾
+                        </span>
+                      </summary>
+                      {course.description && <p className="mt-2 border-t border-border pt-2 text-xs text-muted">{course.description}</p>}
+                      <div className="mt-2 flex flex-wrap gap-1">
+                        {course.skills.map((skill) => (
+                          <span key={skill.skill_name} className="rounded bg-surface px-2 py-0.5 text-xs text-primary-dark ring-1 ring-border">
+                            {skill.skill_name}
+                          </span>
+                        ))}
+                      </div>
+                      {course.source_url && (
+                        <a href={course.source_url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-primary hover:underline">
+                          View curriculum source →
+                        </a>
+                      )}
+                    </details>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       )}
 

@@ -25,6 +25,8 @@ from .models import (
     JobSkill,
     JobSource,
     Program,
+    ProgramOutcome,
+    ProgramOutcomeSkill,
     ProgramVersion,
     University,
 )
@@ -244,6 +246,89 @@ def load_confidence_tiers(university: str | None) -> dict:
         session.close()
 
 
+def load_program_evidence(
+    university: str, program_name: str, degree_level: str
+) -> tuple[list[dict], list[dict]]:
+    """Return the current course-level and official outcome-level evidence.
+
+    This deliberately does not feed analytics. It is an audit trail so users
+    can see exactly which source text led to every displayed extracted skill.
+    """
+    session = get_session()
+    try:
+        course_rows = session.execute(
+            select(Course, CourseSkill)
+            .join(ProgramVersion, Course.program_version_id == ProgramVersion.id)
+            .join(Program, ProgramVersion.program_id == Program.id)
+            .join(University, Program.university_id == University.id)
+            .outerjoin(CourseSkill, CourseSkill.course_id == Course.id)
+            .where(
+                University.name == university,
+                Program.name == program_name,
+                Program.degree_level == degree_level,
+                ProgramVersion.is_current == True,  # noqa: E712
+            )
+            .order_by(Course.id, CourseSkill.skill_name)
+        ).all()
+
+        courses_by_id: dict[int, dict] = {}
+        for course, skill in course_rows:
+            record = courses_by_id.setdefault(course.id, {
+                "course_name": course.name,
+                "course_name_original": course.name_original,
+                "credits": course.credits,
+                "description": course.description,
+                "source_url": course.source_url,
+                "source_language": course.source_language,
+                "notes": course.notes,
+                "skills": [],
+            })
+            if skill is not None:
+                record["skills"].append({
+                    "skill_name": skill.skill_name,
+                    "confidence_tier": skill.confidence_tier,
+                    "extraction_method": skill.extraction_method,
+                    "input_type": skill.input_type,
+                })
+
+        outcome_rows = session.execute(
+            select(ProgramOutcome, ProgramOutcomeSkill)
+            .join(ProgramVersion, ProgramOutcome.program_version_id == ProgramVersion.id)
+            .join(Program, ProgramVersion.program_id == Program.id)
+            .join(University, Program.university_id == University.id)
+            .outerjoin(ProgramOutcomeSkill, ProgramOutcomeSkill.outcome_id == ProgramOutcome.id)
+            .where(
+                University.name == university,
+                Program.name == program_name,
+                Program.degree_level == degree_level,
+                ProgramVersion.is_current == True,  # noqa: E712
+            )
+            .order_by(ProgramOutcome.outcome_index, ProgramOutcomeSkill.skill_name)
+        ).all()
+
+        outcomes_by_id: dict[int, dict] = {}
+        for outcome, skill in outcome_rows:
+            record = outcomes_by_id.setdefault(outcome.id, {
+                "outcome_text": outcome.outcome_text,
+                "outcome_text_original": outcome.outcome_text_original,
+                "source_url": outcome.source_url,
+                "source_language": outcome.source_language,
+                "is_official": outcome.is_official,
+                "skills": [],
+            })
+            if skill is not None:
+                record["skills"].append({
+                    "skill_name": skill.skill_name,
+                    "confidence_tier": None,
+                    "extraction_method": skill.extraction_method,
+                    "input_type": "program_outcome",
+                })
+
+        return list(courses_by_id.values()), list(outcomes_by_id.values())
+    finally:
+        session.close()
+
+
 def load_job_skills_by_role(university: str | None = None) -> dict:
     """role -> Counter(skill -> job_count). Job market data is national, not
     per-university, so `university` is accepted for API symmetry but ignored."""
@@ -301,7 +386,16 @@ def job_skills_coverage() -> dict:
 
 
 def load_run_metadata() -> dict:
-    """Matches the shape of the old data/runs/.../metadata.json."""
+    """Matches the shape of the old data/runs/.../metadata.json.
+
+    job_snapshot's dates are computed live from active JobPosting rows
+    (MIN/MAX posting_date), not read off a single stored column — a fixed
+    "collected on <date>" was accurate for the frozen March 2026 snapshot
+    but silently went stale the moment postings from a later scrape were
+    added on top of it (postings now span multiple collection dates, not
+    one), so a single date can no longer honestly describe the data."""
+    from sqlalchemy import func
+
     session = get_session()
     try:
         run = _canonical_run(session)
@@ -311,6 +405,16 @@ def load_run_metadata() -> dict:
         n_programs = session.query(Program).count()
         n_courses = session.query(Course).count()
         n_sources = session.query(JobSource).count()
+
+        n_active = session.query(JobPosting).filter(JobPosting.is_active == True).count()  # noqa: E712
+        min_date, max_date = session.execute(
+            select(func.min(JobPosting.posting_date), func.max(JobPosting.posting_date))
+            .where(JobPosting.is_active == True)  # noqa: E712
+        ).one()
+        n_unknown_date = session.query(JobPosting).filter(
+            JobPosting.is_active == True, JobPosting.posting_date.is_(None)  # noqa: E712
+        ).count()
+
         return {
             "run_id": run.run_key,
             "is_canonical": True,
@@ -323,9 +427,11 @@ def load_run_metadata() -> dict:
                 "n_courses": n_courses,
             },
             "job_snapshot": {
-                "collected_at": run.job_snapshot_date.isoformat() if run.job_snapshot_date else None,
-                "n_it_postings": run.n_active_postings,
+                "collected_at": max_date.isoformat() if max_date else None,
+                "earliest_at": min_date.isoformat() if min_date else None,
+                "n_it_postings": n_active,
                 "n_sources": n_sources,
+                "n_unknown_date": n_unknown_date,
                 "window": "static",
             },
             "esco_version": run.esco_version,

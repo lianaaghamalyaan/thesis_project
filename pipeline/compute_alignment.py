@@ -76,11 +76,13 @@ SIMILARITY_THRESHOLD = 0.65  # thesis_final.docx para 260: calibrated value
 CORE_SKILL_FREQ_PCT = 0.05   # thesis_final.docx para 161: "at least 5% of such posts"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 RUN_KEY_PREFIX = "live"
-# Date the underlying job postings were actually scraped (matches
-# server/seed.py's JOB_SNAPSHOT_DATE) — NOT today's date. Update this only
-# when the job postings dataset itself is re-collected, not on every rerun
-# of this recompute script.
-JOB_SNAPSHOT_DATE = date(2026, 3, 20)
+# Fallback only, used if a run somehow has zero active postings with a known
+# posting_date (job_snapshot_date is otherwise derived live below from
+# MAX(posting_date) among postings actually in scope, so it self-updates on
+# every recompute instead of needing a human to remember to bump a
+# hardcoded constant — see server/seed.py's JOB_SNAPSHOT_DATE for the
+# separate one-time-seed constant, which is a different code path).
+JOB_SNAPSHOT_DATE_FALLBACK = date(2026, 3, 20)
 RECOVERED_650_PATH = ROOT / "data" / "processed" / "jobs" / "_recovered_final_jobs_dataset_it_with_roles.csv"
 
 BLOCKLIST = {
@@ -113,48 +115,13 @@ ALLOWLIST = {
 }
 
 
-# programs.relevant_roles uses the original 9-category taxonomy (thesis
-# para 146) while job_postings.it_role_group uses a newer 13-category
-# scraper classification. Confirmed by thesis para 147: "Job postings
-# whose title contains 'backend,' 'frontend,' or 'full-stack' are assigned
-# to Software Engineering" — this alias reconstructs that rule against the
-# newer, more granular labels. Confirmed with the project owner 2026-07-12
-# to also include General IT.
-ROLE_ALIASES: dict[str, set[str]] = {
-    "Software Engineering": {"Backend", "Frontend / JS", "Full Stack", "General IT"},
-}
-
-
-def _resolve_roles(role_set: set[str], known_roles: set[str]) -> set[str]:
-    """Resolve each program role to job role(s) via: explicit alias, then
-    exact match, then prefix match in either direction — so a naming drift
-    doesn't silently zero out a program's role-aware score."""
-    resolved = set()
-    for role in role_set:
-        if role in ROLE_ALIASES:
-            resolved |= ROLE_ALIASES[role]
-            continue
-        if role in known_roles:
-            resolved.add(role)
-            continue
-        candidates = [k for k in known_roles if k.startswith(role) or role.startswith(k)]
-        if len(candidates) == 1:
-            resolved.add(candidates[0])
-        elif candidates:
-            resolved.add(max(candidates, key=len))
-        else:
-            print(f"  WARNING: program role {role!r} has no match among known job roles "
-                  f"{sorted(known_roles)} — it will contribute nothing to that program's score.")
-    return resolved
-
-
 def compute_alignment(university: str | None = None, dry_run: bool = False, validate_650: bool = False) -> str | None:
     """Computes a fresh AlignmentRun for the given university (or all
     universities if None). Returns the new run_key, or None if dry_run."""
     from sentence_transformers import SentenceTransformer
     import numpy as np
     import pandas as pd
-    from sqlalchemy import select
+    from sqlalchemy import func, select
 
     from server.db import get_session
     from server.models import (
@@ -169,6 +136,14 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
         ProgramVersion,
         University,
     )
+    # programs.relevant_roles uses the original 9-category taxonomy (thesis
+    # para 146) while job_postings.it_role_group uses a newer 13-category
+    # scraper classification. expand_program_roles() lives in
+    # server/role_mapping.py — shared with server/analytics.py so the
+    # headline coverage score and the Strengths/Gaps computed for the same
+    # program can't silently diverge onto different job-market slices (see
+    # that module's docstring for the history of why this was split out).
+    from server.role_mapping import expand_program_roles
 
     session = get_session()
     try:
@@ -199,6 +174,20 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
             print("No programs with course skills found for the given scope.")
             return None
 
+        # ── Load active job postings (all of them, independent of the skill
+        # join below) so n_active_postings and job_snapshot_date reflect the
+        # true active-postings pool — a posting with zero extracted skills
+        # still counts as "active data in scope" and still has a real
+        # posting_date, but would silently disappear from both if derived
+        # from the skills join instead (that undercounted n_active_postings
+        # by however many postings had no extracted skills, and there was
+        # no live date signal at all — job_snapshot_date was a hardcoded
+        # constant a human had to remember to bump after every scrape). ──
+        active_postings = session.execute(
+            select(JobPosting.id, JobPosting.source_url, JobPosting.posting_date)
+            .where(JobPosting.is_active == True)  # noqa: E712
+        ).all()
+
         # ── Load active job postings' skills + role group ────────────────
         if validate_650:
             recovered = pd.read_csv(RECOVERED_650_PATH)
@@ -206,6 +195,8 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
             url_to_role = dict(zip(recovered["source_url"], recovered["role_group"]))
             print(f"--validate-650: restricting to the original {len(recovered)} postings "
                   f"(original 9-category role taxonomy).")
+
+            active_postings = [(pid, url, d) for pid, url, d in active_postings if url in valid_urls]
 
             jq = (
                 select(JobPosting.id, JobPosting.source_url, JobSkill.skill_name)
@@ -235,6 +226,11 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
                 posting_skills.setdefault(posting_id, set()).add(skill)
                 posting_role[posting_id] = role
 
+        n_active_postings_total = len(active_postings)
+        active_dates = [d for _, _, d in active_postings if d is not None]
+        max_posting_date = max(active_dates) if active_dates else None
+        n_unknown_posting_date = n_active_postings_total - len(active_dates)
+
         role_posting_count: Counter = Counter()
         role_skill_doc_freq: dict[str, Counter] = {}
         all_market_skills: set[str] = set()
@@ -249,7 +245,10 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
 
         known_job_roles = set(role_skill_doc_freq.keys())
         print(f"{len(program_skills)} programs, {len(all_market_skills)} distinct market skills, "
-              f"{len(posting_skills)} postings in scope, {len(known_job_roles)} role groups.")
+              f"{len(posting_skills)} postings with extracted skills "
+              f"({n_active_postings_total} active postings total, "
+              f"{n_active_postings_total - len(posting_skills)} with none), "
+              f"{len(known_job_roles)} role groups.")
 
         # ── Embed every distinct skill phrase once (courses + jobs) ──────
         all_course_skills = set().union(*program_skills.values()) if program_skills else set()
@@ -343,10 +342,7 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
                 # thesis para 459: genuinely unmapped — full coverage only.
                 pass
             else:
-                if raw_roles == "ALL":
-                    role_set = set(known_job_roles)
-                else:
-                    role_set = _resolve_roles({r.strip() for r in raw_roles.split(",")}, known_job_roles)
+                role_set = expand_program_roles(raw_roles, known_job_roles)
 
                 if role_set:
                     role_job_skills: set[str] = set()
@@ -379,6 +375,11 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
                 "core_role_coverage_pct": core_role_coverage_pct,
                 "weighted_role_coverage_pct": weighted_core_coverage_pct,
                 "core_n_job_skills": core_n_job_skills, "core_n_overlap": core_n_overlap,
+                # len(gap_skills_sorted) here is the true count before the [:100]
+                # truncation applied at insert time below — core_n_job_skills -
+                # core_n_overlap, i.e. every core skill not covered, not just the
+                # ones that end up with a stored GapSkill row.
+                "core_n_gap": len(gap_skills_sorted) if core_role_coverage_pct is not None else None,
                 "gap_skills": gap_skills_sorted,
             })
 
@@ -399,8 +400,8 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
             run_key=run_key,
             experiment="LLM_desc_semantic",
             esco_version="n/a (direct)",
-            job_snapshot_date=JOB_SNAPSHOT_DATE,
-            n_active_postings=len(posting_skills),
+            job_snapshot_date=max_posting_date or JOB_SNAPSHOT_DATE_FALLBACK,
+            n_active_postings=n_active_postings_total,
             is_canonical=False,
             status="complete",
             notes=(
@@ -408,6 +409,9 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
                 "bidirectional with blocklist/allowlist, core skill = appears in >="
                 f"{CORE_SKILL_FREQ_PCT*100:.0f}% of role postings, multi-role core sets unioned (not averaged). "
                 + ("Restricted to the original 650 postings for validation. " if validate_650 else "")
+                + (f"{n_unknown_posting_date} of {n_active_postings_total} active postings have no known "
+                   "posting_date and are excluded from the date range shown to users. "
+                   if n_unknown_posting_date else "")
             ),
         )
         session.add(run)
@@ -422,6 +426,7 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
                 role_coverage_pct=r["role_coverage_pct"],
                 core_role_coverage_pct=r["core_role_coverage_pct"],
                 core_n_job_skills=r["core_n_job_skills"], core_n_overlap=r["core_n_overlap"],
+                core_n_gap=r["core_n_gap"],
                 weighted_core_coverage_pct=r["weighted_role_coverage_pct"],
             )
             session.add(result)

@@ -44,9 +44,10 @@ def program_brief_pdf(
     course_skills = queries.load_course_skills(scoped)
     tiers = queries.load_confidence_tiers(scoped)
     job_skills_by_role = queries.load_job_skills_by_role()
+    role_posting_counts = queries.load_role_posting_counts()
 
     strengths = analytics.get_strengths(
-        program, degree, relevant_roles, curriculum_df, course_skills, job_skills_by_role, n=20
+        program, degree, relevant_roles, curriculum_df, course_skills, job_skills_by_role, role_posting_counts, n=20
     ) if relevant_roles not in (None, "unmapped", "nan", "") else []
 
     doc_score = analytics.compute_program_doc_score(program, degree, curriculum_df, tiers)
