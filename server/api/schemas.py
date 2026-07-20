@@ -185,11 +185,14 @@ class CreateAssertionRequest(BaseModel):
 
 
 class CoveragePreview(BaseModel):
-    """Same shape twice — current (extraction-only, matches the stored
-    canonical AlignmentResult) and with_assertions (also counting this
-    university's confirmed-taught skills) — so the UI can show the delta.
-    Deliberately not written back to AlignmentResult; see
-    CourseSkillAssertion's docstring for why the two stay separate."""
+    """Same shape twice — current (the stored canonical AlignmentResult, i.e.
+    the exact headline shown everywhere else in the app) and with_assertions
+    (that same baseline plus the live-computed increment from this
+    university's confirmed-taught skills) — so the UI can show a trustworthy
+    delta whose baseline can't disagree with the official score. Deliberately
+    not written back to AlignmentResult; see CourseSkillAssertion's docstring
+    for why the two stay separate, and curriculum_editor._project() for how
+    the increment is anchored to the stored level."""
     core_n_job_skills: int | None
     current_core_n_overlap: int | None
     current_core_role_coverage_pct: float | None

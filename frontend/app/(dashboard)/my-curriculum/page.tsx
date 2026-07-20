@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { api, EditorProgram, CoveragePreview } from "@/lib/api";
+import { api, EditorProgram, CoveragePreview, GapSkillRow } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { formatScore, scoreColor } from "@/lib/format";
 
@@ -10,26 +10,40 @@ import { formatScore, scoreColor } from "@/lib/format";
 // deliberately separate from the canonical AlignmentResult: confirmations
 // show up here as a live "with your confirmations" preview, not a silent
 // change to the score everyone else sees. See server/api/routes/curriculum_editor.py.
+//
+// The skill pickers lead with this program's *market gap skills* (demanded by
+// the relevant roles but not currently covered) because those are the ones
+// whose confirmation actually moves coverage — an already-extracted skill is
+// already counted, so confirming it is a no-op for the score. Any skill can
+// still be typed in free-text for the cases the gap list doesn't cover.
+
+type SkillOptions = { gaps: string[]; others: string[] };
 
 export default function MyCurriculumPage() {
   const { user } = useAuth();
   const [data, setData] = useState<EditorProgram[]>([]);
+  const [gaps, setGaps] = useState<GapSkillRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState<{ program: string; degree: string } | null>(null);
   const [tab, setTab] = useState<"courses" | "gaps">("courses");
   const [preview, setPreview] = useState<CoveragePreview | null>(null);
   const [busyKey, setBusyKey] = useState<string | null>(null);
 
+  // Only the editor list toggles the full-page "Loading…"; assertion writes
+  // refetch it in the background (see reloadData) so the editor doesn't blank
+  // out on every click.
   const load = () => {
     setLoading(true);
-    api
-      .curriculumEditor()
-      .then((d) => {
+    Promise.all([api.curriculumEditor(), api.gaps()])
+      .then(([d, g]) => {
         setData(d);
+        setGaps(g);
         if (d.length && !selected) setSelected({ program: d[0].program, degree: d[0].degree });
       })
       .finally(() => setLoading(false));
   };
+
+  const reloadData = () => api.curriculumEditor().then(setData);
 
   useEffect(() => {
     load();
@@ -41,11 +55,37 @@ export default function MyCurriculumPage() {
     [data, selected]
   );
 
+  const refreshPreview = () => {
+    if (program) api.coveragePreview(program.program, program.degree).then(setPreview);
+  };
+
   useEffect(() => {
     if (!program) return;
     setPreview(null);
     api.coveragePreview(program.program, program.degree).then(setPreview);
-  }, [program]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [program?.program, program?.degree]);
+
+  // Market gap skills for the selected program, highest-demand first — the
+  // skills that would actually raise coverage if confirmed as taught.
+  const programGapSkills = useMemo(() => {
+    if (!program) return [] as string[];
+    return gaps
+      .filter((g) => g.program === program.program && g.degree === program.degree)
+      .sort((a, b) => (b.job_frequency ?? 0) - (a.job_frequency ?? 0))
+      .map((g) => g.gap_skill);
+  }, [gaps, program]);
+
+  // Everything else already extracted somewhere in this university, as a
+  // secondary group (mostly no-ops for the score, but useful for completeness).
+  const otherExtractedSkills = useMemo(() => {
+    const set = new Set<string>();
+    for (const p of data) for (const c of p.courses) for (const s of c.extracted_skills) set.add(s);
+    for (const s of programGapSkills) set.delete(s); // don't list a skill in both groups
+    return [...set].sort();
+  }, [data, programGapSkills]);
+
+  const options: SkillOptions = { gaps: programGapSkills, others: otherExtractedSkills };
 
   if (user && user.role !== "org_admin") {
     return (
@@ -58,22 +98,12 @@ export default function MyCurriculumPage() {
     );
   }
 
-  const refreshPreview = () => {
-    if (program) api.coveragePreview(program.program, program.degree).then(setPreview);
-  };
-
-  const allExtractedSkills = useMemo(() => {
-    const set = new Set<string>();
-    for (const p of data) for (const c of p.courses) for (const s of c.extracted_skills) set.add(s);
-    return set;
-  }, [data]);
-
   async function addAssertion(courseId: number, skillName: string) {
     const key = `${courseId}:${skillName}`;
     setBusyKey(key);
     try {
       await api.createAssertion(courseId, skillName);
-      load();
+      await reloadData();
       refreshPreview();
     } catch (e) {
       alert(e instanceof Error ? e.message : "Failed to add");
@@ -86,7 +116,7 @@ export default function MyCurriculumPage() {
     setBusyKey(`del:${assertionId}`);
     try {
       await api.deleteAssertion(assertionId);
-      load();
+      await reloadData();
       refreshPreview();
     } catch (e) {
       alert(e instanceof Error ? e.message : "Failed to remove");
@@ -127,7 +157,7 @@ export default function MyCurriculumPage() {
           {preview && (
             <div className="mt-5 flex flex-wrap items-center gap-6 rounded-xl border border-border bg-surface p-5">
               <div className="text-center">
-                <div className="text-xs text-muted">Current</div>
+                <div className="text-xs text-muted">Current (official)</div>
                 <div className="text-2xl font-bold" style={{ color: scoreColor(preview.current_weighted_core_coverage_pct) }}>
                   {formatScore(preview.current_weighted_core_coverage_pct)}
                 </div>
@@ -144,8 +174,9 @@ export default function MyCurriculumPage() {
               </div>
               <div className="text-sm text-muted">
                 {preview.with_assertions_core_n_overlap ?? 0} of {preview.core_n_job_skills ?? 0} core skills covered
-                with confirmations, vs {preview.current_core_n_overlap ?? 0} today. This preview is not saved anywhere
-                — it recomputes live and only becomes the official score on the next data refresh.
+                with confirmations, vs {preview.current_core_n_overlap ?? 0} today. The "current" figure is your
+                official score; the projection adds only the estimated effect of your confirmations and isn't saved —
+                it becomes official on the next data refresh.
               </div>
             </div>
           )}
@@ -199,7 +230,7 @@ export default function MyCurriculumPage() {
                   </div>
                   <CourseSkillPicker
                     course={course}
-                    allSkills={allExtractedSkills}
+                    options={options}
                     busyKey={busyKey}
                     onAdd={(skill) => addAssertion(course.course_id, skill)}
                   />
@@ -211,12 +242,12 @@ export default function MyCurriculumPage() {
           {program && tab === "gaps" && (
             <div className="mt-4 rounded-lg border border-border p-4">
               <p className="text-sm text-muted">
-                Pick a course, then confirm any skill from the full vocabulary — useful when a skill is taught but you
-                don't want to hunt through the per-course list above.
+                Pick a course, then confirm any skill — the list leads with this program's market gaps (the skills that
+                would actually raise your coverage), or type any other skill name.
               </p>
               <GeneralSkillPicker
                 courses={program.courses}
-                allSkills={allExtractedSkills}
+                options={options}
                 busyKey={busyKey}
                 onAdd={addAssertion}
               />
@@ -230,37 +261,79 @@ export default function MyCurriculumPage() {
   );
 }
 
+// A <select> whose options are grouped into "market gaps" (score-moving) and
+// "other skills", excluding anything in `exclude`. Returns the chosen value
+// via onPick and resets itself to the placeholder.
+function GroupedSkillSelect({
+  options,
+  exclude,
+  placeholder,
+  onPick,
+}: {
+  options: SkillOptions;
+  exclude: Set<string>;
+  placeholder: string;
+  onPick: (skill: string) => void;
+}) {
+  const gaps = useMemo(() => options.gaps.filter((s) => !exclude.has(s)), [options.gaps, exclude]);
+  const others = useMemo(() => options.others.filter((s) => !exclude.has(s)), [options.others, exclude]);
+
+  return (
+    <select
+      value=""
+      onChange={(e) => {
+        if (e.target.value) onPick(e.target.value);
+      }}
+      className="min-w-56 rounded-lg border border-border bg-white px-2 py-1 text-xs"
+    >
+      <option value="">{placeholder}</option>
+      {gaps.length > 0 && (
+        <optgroup label="Market gaps (raise coverage)">
+          {gaps.map((s) => (
+            <option key={s} value={s}>
+              {s}
+            </option>
+          ))}
+        </optgroup>
+      )}
+      {others.length > 0 && (
+        <optgroup label="Other skills">
+          {others.map((s) => (
+            <option key={s} value={s}>
+              {s}
+            </option>
+          ))}
+        </optgroup>
+      )}
+    </select>
+  );
+}
+
 function CourseSkillPicker({
   course,
-  allSkills,
+  options,
   busyKey,
   onAdd,
 }: {
   course: EditorProgram["courses"][number];
-  allSkills: Set<string>;
+  options: SkillOptions;
   busyKey: string | null;
   onAdd: (skill: string) => void;
 }) {
   const [custom, setCustom] = useState("");
-  const already = new Set([...course.extracted_skills, ...course.assertions.map((a) => a.skill_name)]);
-  const options = useMemo(() => [...allSkills].filter((s) => !already.has(s)).sort(), [allSkills, already]);
+  const already = useMemo(
+    () => new Set([...course.extracted_skills, ...course.assertions.map((a) => a.skill_name)]),
+    [course]
+  );
 
   return (
     <div className="mt-3 flex flex-wrap items-center gap-2">
-      <select
-        value=""
-        onChange={(e) => {
-          if (e.target.value) onAdd(e.target.value);
-        }}
-        className="rounded-lg border border-border bg-white px-2 py-1 text-xs"
-      >
-        <option value="">+ confirm existing skill…</option>
-        {options.map((s) => (
-          <option key={s} value={s}>
-            {s}
-          </option>
-        ))}
-      </select>
+      <GroupedSkillSelect
+        options={options}
+        exclude={already}
+        placeholder="+ confirm a skill…"
+        onPick={onAdd}
+      />
       <input
         value={custom}
         onChange={(e) => setCustom(e.target.value)}
@@ -269,11 +342,12 @@ function CourseSkillPicker({
       />
       <button
         onClick={() => {
-          if (!custom.trim()) return;
-          onAdd(custom.trim());
+          const s = custom.trim();
+          if (!s) return;
           setCustom("");
+          onAdd(s);
         }}
-        disabled={!custom.trim() || busyKey === `${course.course_id}:${custom.trim()}`}
+        disabled={!custom.trim() || busyKey !== null}
         className="rounded-lg bg-primary-dark px-2.5 py-1 text-xs font-medium text-white disabled:opacity-40"
       >
         Add
@@ -284,18 +358,18 @@ function CourseSkillPicker({
 
 function GeneralSkillPicker({
   courses,
-  allSkills,
+  options,
   busyKey,
   onAdd,
 }: {
   courses: EditorProgram["courses"];
-  allSkills: Set<string>;
+  options: SkillOptions;
   busyKey: string | null;
   onAdd: (courseId: number, skill: string) => void;
 }) {
   const [courseId, setCourseId] = useState<number | "">(courses[0]?.course_id ?? "");
-  const [skill, setSkill] = useState("");
-  const sortedSkills = useMemo(() => [...allSkills].sort(), [allSkills]);
+  const [custom, setCustom] = useState("");
+  const noExclude = useMemo(() => new Set<string>(), []);
 
   return (
     <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -310,23 +384,28 @@ function GeneralSkillPicker({
           </option>
         ))}
       </select>
-      <select
-        value={skill}
-        onChange={(e) => setSkill(e.target.value)}
-        className="min-w-56 rounded-lg border border-border bg-white px-2 py-1 text-xs"
-      >
-        <option value="">Choose a skill…</option>
-        {sortedSkills.map((s) => (
-          <option key={s} value={s}>
-            {s}
-          </option>
-        ))}
-      </select>
+      <GroupedSkillSelect
+        options={options}
+        exclude={noExclude}
+        placeholder="Choose a skill…"
+        onPick={(skill) => {
+          if (courseId) onAdd(Number(courseId), skill);
+        }}
+      />
+      <input
+        value={custom}
+        onChange={(e) => setCustom(e.target.value)}
+        placeholder="or type a skill name"
+        className="rounded-lg border border-border bg-white px-2 py-1 text-xs"
+      />
       <button
         onClick={() => {
-          if (courseId && skill) onAdd(Number(courseId), skill);
+          const s = custom.trim();
+          if (!courseId || !s) return;
+          setCustom("");
+          onAdd(Number(courseId), s);
         }}
-        disabled={!courseId || !skill || busyKey === `${courseId}:${skill}`}
+        disabled={!courseId || !custom.trim() || busyKey !== null}
         className="rounded-lg bg-primary-dark px-2.5 py-1 text-xs font-medium text-white disabled:opacity-40"
       >
         Confirm taught

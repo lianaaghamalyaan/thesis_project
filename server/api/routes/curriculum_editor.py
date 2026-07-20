@@ -17,6 +17,8 @@ than a general-purpose write API.
 """
 from __future__ import annotations
 
+import math
+
 from fastapi import APIRouter, Depends, HTTPException, status
 
 from server import analytics, queries
@@ -87,12 +89,44 @@ def delete_assertion(assertion_id: int, user: dict = Depends(require_curriculum_
         session.close()
 
 
+def _num(value) -> float | None:
+    """pandas cell -> float or None (NaN/missing/non-numeric all become None),
+    so a missing stored score falls back to the live recompute cleanly."""
+    if value is None:
+        return None
+    try:
+        f = float(value)
+    except (TypeError, ValueError):
+        return None
+    return None if math.isnan(f) else f
+
+
+def _project(stored: float | None, live_current: float | None, live_with: float | None) -> float | None:
+    """The "with your confirmations" number, anchored to the stored canonical
+    level, not to the live recompute. We trust the pipeline's official value
+    for the *level* (so the baseline always equals the headline shown on
+    Program Detail) and trust the live engine only for the *increment* the
+    confirmations add — the two live numbers share one formula, so their
+    difference is a clean marginal effect even if the live baseline has
+    drifted from the stored run (different consolidation/window snapshot).
+    Falls back to the full live number only when there's no stored value to
+    anchor to (e.g. an "ALL"-mapped program with no core score)."""
+    if stored is None:
+        return live_with
+    if live_current is None or live_with is None:
+        return stored
+    return round(stored + (live_with - live_current), 2)
+
+
 @router.get("/admin/coverage-preview", response_model=CoveragePreview)
 def get_coverage_preview(program: str, degree: str, user: dict = Depends(require_curriculum_editor)):
-    """The live "if we count your confirmed skills too" number, computed
-    fresh on every request (unlike the canonical score, which only updates
-    on the next pipeline.compute_alignment.py run) — see CoveragePreview's
-    docstring for why the two are shown side by side, not merged."""
+    """The "if we count your confirmed skills too" preview. The "current"
+    side is the stored canonical score (identical to the headline everywhere
+    else in the app), and "with_assertions" adds only the live-computed
+    increment from the confirmations on top of it — see _project() and
+    CoveragePreview's docstring for why the baseline is anchored, not
+    re-derived. Neither is written back; the official score still only moves
+    on the next pipeline.compute_alignment.py run."""
     university = user["university_name"]
 
     alignment_df = queries.load_alignment(university)
@@ -101,6 +135,11 @@ def get_coverage_preview(program: str, degree: str, user: dict = Depends(require
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Program not found")
     record = row.iloc[0]
     relevant_roles = record.get("relevant_roles")
+
+    stored_core_n = _num(record.get("core_n_job_skills"))
+    stored_overlap = _num(record.get("core_n_overlap"))
+    stored_core_pct = _num(record.get("core_role_coverage_pct"))
+    stored_weighted = _num(record.get("weighted_core_coverage_pct"))
 
     curriculum_df = queries.load_curriculum(university)
     course_skills = queries.load_course_skills(university)
@@ -117,19 +156,34 @@ def get_coverage_preview(program: str, degree: str, user: dict = Depends(require
         for course in prog_entry["courses"]:
             asserted_skills.update(a["skill_name"] for a in course["assertions"])
 
-    current = analytics.compute_role_aware_coverage(
+    live_current = analytics.compute_role_aware_coverage(
         extracted_skills, relevant_roles, job_skills_by_role, role_posting_counts
     )
-    with_assertions = analytics.compute_role_aware_coverage(
+    live_with = analytics.compute_role_aware_coverage(
         extracted_skills | asserted_skills, relevant_roles, job_skills_by_role, role_posting_counts
     )
 
+    # Baseline: stored canonical where available (matches the headline), live otherwise.
+    core_n_job_skills = int(stored_core_n) if stored_core_n is not None else live_current["core_n_job_skills"]
+    current_overlap = int(stored_overlap) if stored_overlap is not None else live_current["core_n_overlap"]
+    current_core_pct = stored_core_pct if stored_core_pct is not None else live_current["core_role_coverage_pct"]
+    current_weighted = stored_weighted if stored_weighted is not None else live_current["weighted_core_coverage_pct"]
+
+    projected_overlap = _project(
+        float(current_overlap) if current_overlap is not None else None,
+        live_current["core_n_overlap"], live_with["core_n_overlap"],
+    )
+
     return {
-        "core_n_job_skills": current["core_n_job_skills"],
-        "current_core_n_overlap": current["core_n_overlap"],
-        "current_core_role_coverage_pct": current["core_role_coverage_pct"],
-        "current_weighted_core_coverage_pct": current["weighted_core_coverage_pct"],
-        "with_assertions_core_n_overlap": with_assertions["core_n_overlap"],
-        "with_assertions_core_role_coverage_pct": with_assertions["core_role_coverage_pct"],
-        "with_assertions_weighted_core_coverage_pct": with_assertions["weighted_core_coverage_pct"],
+        "core_n_job_skills": core_n_job_skills,
+        "current_core_n_overlap": current_overlap,
+        "current_core_role_coverage_pct": current_core_pct,
+        "current_weighted_core_coverage_pct": current_weighted,
+        "with_assertions_core_n_overlap": int(round(projected_overlap)) if projected_overlap is not None else None,
+        "with_assertions_core_role_coverage_pct": _project(
+            current_core_pct, live_current["core_role_coverage_pct"], live_with["core_role_coverage_pct"]
+        ),
+        "with_assertions_weighted_core_coverage_pct": _project(
+            current_weighted, live_current["weighted_core_coverage_pct"], live_with["weighted_core_coverage_pct"]
+        ),
     }
