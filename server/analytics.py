@@ -200,11 +200,13 @@ def _roles_overlap(roles_str, target_roles: set) -> bool:
 def peer_benchmark(all_alignment: pd.DataFrame, university: str, degree: str, relevant_roles: str | None) -> dict | None:
     """`all_alignment` is the unfiltered (all-universities) alignment
     DataFrame — same "backend sees everything" pattern as
-    dashboard/src/benchmark.py's load_all_universities_alignment()."""
+    dashboard/src/benchmark.py's load_all_universities_alignment(). Compares
+    on weighted_core_coverage_pct, the headline metric — see
+    pipeline/compute_alignment.py's docstring for why."""
     others = all_alignment[
         (all_alignment["university"] != university)
         & (all_alignment["degree"] == degree)
-        & (all_alignment["core_role_coverage_pct"].notna())
+        & (all_alignment["weighted_core_coverage_pct"].notna())
     ].copy()
 
     if others.empty:
@@ -219,9 +221,9 @@ def peer_benchmark(all_alignment: pd.DataFrame, university: str, degree: str, re
             matched_on = "role group"
 
     return {
-        "peer_mean": float(others["core_role_coverage_pct"].mean()),
-        "peer_median": float(others["core_role_coverage_pct"].median()),
-        "peer_max": float(others["core_role_coverage_pct"].max()),
+        "peer_mean": float(others["weighted_core_coverage_pct"].mean()),
+        "peer_median": float(others["weighted_core_coverage_pct"].median()),
+        "peer_max": float(others["weighted_core_coverage_pct"].max()),
         "peer_n": int(len(others)),
         "matched_on": matched_on,
     }
@@ -230,7 +232,7 @@ def peer_benchmark(all_alignment: pd.DataFrame, university: str, degree: str, re
 def get_program_recommendations(
     program: str,
     degree: str,
-    core_role_coverage_pct: float | None,
+    headline_score: float | None,
     gaps_df: pd.DataFrame,
     curriculum_df: pd.DataFrame,
     tiers: dict,
@@ -273,7 +275,7 @@ def get_program_recommendations(
             "priority": "high",
         })
 
-    if core_role_coverage_pct is not None and not pd.isna(core_role_coverage_pct) and core_role_coverage_pct < 25:
+    if headline_score is not None and not pd.isna(headline_score) and headline_score < 25:
         recs.append({
             "type": "strategy",
             "title": "Bridge theory to applied tooling",

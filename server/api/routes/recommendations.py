@@ -28,8 +28,13 @@ def get_recommendations(university: str | None = None, user: dict = Depends(get_
     tiers = queries.load_confidence_tiers(scoped)
 
     programs = []
-    for _, row in alignment_df.sort_values("core_role_coverage_pct", ascending=False, na_position="last").iterrows():
-        score = _clean(row.get("core_role_coverage_pct"))
+    # weighted_core_coverage_pct is the headline metric (see
+    # pipeline/compute_alignment.py's docstring) — frequency-weighted so
+    # high-demand skills dominate, which makes it far more stable run over
+    # run than the unweighted core_role_coverage_pct as market vocabulary
+    # grows, so ranking/sorting programs on it is more meaningful.
+    for _, row in alignment_df.sort_values("weighted_core_coverage_pct", ascending=False, na_position="last").iterrows():
+        score = _clean(row.get("weighted_core_coverage_pct"))
         doc_score = analytics.compute_program_doc_score(row["program"], row["degree"], curriculum_df, tiers)
         gap_type = analytics.classify_gap_type(doc_score)
         recs = analytics.get_program_recommendations(
@@ -38,7 +43,7 @@ def get_recommendations(university: str | None = None, user: dict = Depends(get_
         programs.append({
             "program": row["program"],
             "degree": row["degree"],
-            "core_role_coverage_pct": score,
+            "weighted_core_coverage_pct": score,
             "doc_score": doc_score,
             "gap_type": gap_type,
             "recommendations": recs,

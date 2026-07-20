@@ -43,23 +43,23 @@ export default function OverviewPage() {
   };
 
   const scored = useMemo(
-    () => (programs ?? []).filter((p) => p.core_role_coverage_pct !== null),
+    () => (programs ?? []).filter((p) => p.weighted_core_coverage_pct !== null),
     [programs]
   );
   const meanScore = scored.length
-    ? scored.reduce((sum, p) => sum + (p.core_role_coverage_pct ?? 0), 0) / scored.length
+    ? scored.reduce((sum, p) => sum + (p.weighted_core_coverage_pct ?? 0), 0) / scored.length
     : null;
   const nGapSkills = useMemo(() => new Set((gaps ?? []).map((g) => g.gap_skill)).size, [gaps]);
 
   const chartData = useMemo(
     () =>
       [...scored]
-        .sort((a, b) => (a.core_role_coverage_pct ?? 0) - (b.core_role_coverage_pct ?? 0))
+        .sort((a, b) => (a.weighted_core_coverage_pct ?? 0) - (b.weighted_core_coverage_pct ?? 0))
         .map((p) => ({
           name: isAllUniversities
             ? `${p.program} (${p.degree}) · ${uniAbbr(p.university)}`
             : `${p.program} (${p.degree})`,
-          score: p.core_role_coverage_pct ?? 0,
+          score: p.weighted_core_coverage_pct ?? 0,
         })),
     [scored, isAllUniversities]
   );
@@ -77,7 +77,7 @@ export default function OverviewPage() {
   }, [gaps]);
 
   const strongest = useMemo(
-    () => [...scored].sort((a, b) => (b.core_role_coverage_pct ?? 0) - (a.core_role_coverage_pct ?? 0)).slice(0, 3),
+    () => [...scored].sort((a, b) => (b.weighted_core_coverage_pct ?? 0) - (a.weighted_core_coverage_pct ?? 0)).slice(0, 3),
     [scored]
   );
 
@@ -103,7 +103,7 @@ export default function OverviewPage() {
       <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
         <MetricCard label="Programs" value={programs.length} />
         <MetricCard
-          label={<>Mean alignment score <InfoTip term="core_coverage" /></>}
+          label={<>Mean alignment score <InfoTip term="weighted_coverage" /></>}
           value={meanScore !== null ? formatScore(meanScore) : "—"}
         />
         <MetricCard label="Unique gap skills" value={nGapSkills} />
@@ -165,14 +165,14 @@ export default function OverviewPage() {
                   )}
                 </div>
                 <div className="text-xs text-muted">
-                  {formatScore(p.core_role_coverage_pct)} · {p.relevant_roles ?? ""}
+                  {formatScore(p.weighted_core_coverage_pct)} · {p.relevant_roles ?? ""}
                 </div>
                 <div className="mt-1 h-2 w-full rounded-full bg-surface">
                   <div
                     className="h-2 rounded-full"
                     style={{
-                      width: `${Math.min(p.core_role_coverage_pct ?? 0, 100)}%`,
-                      backgroundColor: scoreColor(p.core_role_coverage_pct),
+                      width: `${Math.min(p.weighted_core_coverage_pct ?? 0, 100)}%`,
+                      backgroundColor: scoreColor(p.weighted_core_coverage_pct),
                     }}
                   />
                 </div>

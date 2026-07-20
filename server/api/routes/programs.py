@@ -82,7 +82,9 @@ def get_program_detail(
     gap_type = analytics.classify_gap_type(doc_score)
 
     all_alignment_df = queries.load_alignment(university=None)
-    score = alignment_record.get("core_role_coverage_pct")
+    # weighted_core_coverage_pct is the headline metric — see
+    # pipeline/compute_alignment.py's docstring.
+    score = alignment_record.get("weighted_core_coverage_pct")
     benchmark = analytics.peer_benchmark(all_alignment_df, scoped, degree, relevant_roles) if score is not None else None
 
     return {

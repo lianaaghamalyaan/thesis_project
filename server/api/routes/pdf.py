@@ -37,7 +37,7 @@ def program_brief_pdf(
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Program not found")
     record = row.iloc[0]
     relevant_roles = record.get("relevant_roles")
-    score = record.get("core_role_coverage_pct")
+    score = record.get("weighted_core_coverage_pct")  # headline metric — see pipeline/compute_alignment.py
     score = None if score is None or (isinstance(score, float) and score != score) else float(score)
 
     curriculum_df = queries.load_curriculum(scoped)

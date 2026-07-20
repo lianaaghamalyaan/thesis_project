@@ -50,7 +50,10 @@ export default function ProgramDetailPage({
   if (!detail) return <p className="text-muted">Loading…</p>;
 
   const { alignment, gaps, fallback_gaps, strengths, skill_courses, benchmark, doc_score, gap_type, course_evidence, program_outcomes } = detail;
-  const score = alignment?.core_role_coverage_pct ?? null;
+  // weighted_core_coverage_pct is the headline metric (frequency-weighted,
+  // so high-demand skills dominate — see pipeline/compute_alignment.py's
+  // docstring for why this replaced the unweighted core_role_coverage_pct).
+  const score = alignment?.weighted_core_coverage_pct ?? null;
   const displayGaps = gaps.length
     ? gaps.map((g) => ({ skill: g.missing_skill, freq: g.job_frequency, category: g.category }))
     : fallback_gaps.map((g) => ({ skill: g.gap_skill, freq: g.job_frequency, category: null }));
@@ -86,18 +89,19 @@ export default function ProgramDetailPage({
         <div className="flex flex-col items-center justify-center rounded-xl border border-border bg-surface py-6">
           <ScoreDisplay score={score} />
           <div className="mt-1 text-xs text-muted">
-            Core role-aware coverage <InfoTip term="core_coverage" />
+            Weighted core coverage <InfoTip term="weighted_coverage" />
           </div>
         </div>
         <div className="text-sm">
           <p>
             This program covers approximately <strong>{score !== null ? Math.round(score) : "—"}%</strong> of the
-            skills commonly required in <strong>{alignment?.relevant_roles ?? "general IT"}</strong> job postings in
-            the Armenian IT market.
+            demand-weighted skills commonly required in{" "}
+            <strong>{alignment?.relevant_roles ?? "general IT"}</strong> job postings in the Armenian IT market —
+            skills employers ask for more often count for more.
           </p>
           <p className="mt-2 text-muted">
-            Covers {alignment?.core_n_overlap ?? "—"} of {alignment?.core_n_job_skills ?? "—"} core skills ·{" "}
-            {displayGaps.length} skills identified as gaps
+            Covers {alignment?.core_n_overlap ?? "—"} of {alignment?.core_n_job_skills ?? "—"} core skills (unweighted
+            count) · {displayGaps.length} skills identified as gaps
           </p>
           <p className="mt-2 text-xs text-muted">
             📌 Relevant roles: {alignment?.relevant_roles ?? "unmapped"} <InfoTip term="relevant_roles" />

@@ -34,7 +34,28 @@ thesis/thesis_final.docx §1.6 (paras 143, 146-149, 157-161, 260, 265):
   - weighted_core_coverage_pct: same core union, each skill's contribution
     weighted by its combined (summed across relevant roles) posting
     frequency rather than counted equally — the thesis's primary reported
-    metric ("the main measure employed throughout the thesis").
+    metric ("the main measure employed throughout the thesis") and, as of
+    2026-07-20, the dashboard's headline number (see
+    docs/product/implementation_plan.md's methodology notes): the
+    unweighted core_role_coverage_pct mechanically drifts down as the
+    market vocabulary grows — more postings surface more niche skills that
+    clear the 5% "core" bar, enlarging the denominator for an unchanged
+    curriculum — while the frequency-weighted number is dominated by
+    high-demand skills and stays comparatively stable run over run.
+  - Rolling recency window (CLAUDE.md's data-freshness requirement): each
+    role's core-skill set and posting frequencies are computed from
+    postings within CURRENT_WINDOW_DAYS of the most recent posting in the
+    dataset, not the role's entire history, so an April-2025 posting
+    doesn't count the same as a July-2026 one forever. A role whose
+    windowed sample is smaller than MIN_WINDOW_POSTINGS_PER_ROLE falls back
+    to its full history instead — with today's collection cadence (one
+    large one-time snapshot plus sporadic top-ups, not yet continuous
+    weekly scraping), a flat 90-day cut would leave several role groups
+    (Mobile, UX / Product Design, Hardware / Embedded) with single-digit
+    sample sizes, where the 5% threshold degenerates to "any skill
+    mentioned at all" and scores become noise. The fallback keeps thin
+    roles statistically meaningful until continuous scraping gives them
+    enough recent volume to stand on their own — see _role_stats().
   - Programs with relevant_roles == NULL in the database (thesis para 459:
     4 programs, e.g. "Blockchain and Digital Currencies", genuinely
     unmapped to any IT role group) get full_coverage_pct only — no
@@ -66,7 +87,7 @@ import argparse
 import json
 import sys
 from collections import Counter
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -76,6 +97,18 @@ SIMILARITY_THRESHOLD = 0.65  # thesis_final.docx para 260: calibrated value
 CORE_SKILL_FREQ_PCT = 0.05   # thesis_final.docx para 161: "at least 5% of such posts"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 RUN_KEY_PREFIX = "live"
+# CLAUDE.md data-freshness requirement: "the current alignment view should
+# use a rolling recent window (e.g., last 90 days)". Anchored to the most
+# recent posting_date in the dataset, not wall-clock today, so a recompute
+# against unchanged data is reproducible.
+CURRENT_WINDOW_DAYS = 90
+# Below this many postings in the window, a role's 5%-of-postings "core"
+# threshold is too small a sample to trust (n=5 postings -> threshold=1,
+# i.e. any skill mentioned even once counts as core) — fall back to that
+# role's full history instead of computing on noise. Revisit downward once
+# continuous weekly scraping (not one-time snapshots) is actually running
+# and every role reliably clears this within 90 days.
+MIN_WINDOW_POSTINGS_PER_ROLE = 30
 # Fallback only, used if a run somehow has zero active postings with a known
 # posting_date (job_snapshot_date is otherwise derived live below from
 # MAX(posting_date) among postings actually in scope, so it self-updates on
@@ -85,6 +118,18 @@ RUN_KEY_PREFIX = "live"
 JOB_SNAPSHOT_DATE_FALLBACK = date(2026, 3, 20)
 RECOVERED_650_PATH = ROOT / "data" / "processed" / "jobs" / "_recovered_final_jobs_dataset_it_with_roles.csv"
 
+# These two lists solve a DIFFERENT problem than pipeline/consolidate_skills.py
+# and are not made redundant by it, however much the vocabulary grows.
+# consolidate_skills.py merges NAME variants of the same real-world skill
+# ("NLP" / "Natural Language Processing" — one concept, two spellings).
+# BLOCKLIST and ALLOWLIST instead encode judgment calls about genuinely
+# DIFFERENT concepts that happen to be semantically close (React and Angular
+# are not the same skill, no matter how similarly worded) or in a
+# broader-implies-narrower relationship (a program teaching "Cloud Computing"
+# should get some credit for AWS demand). No amount of name-deduplication
+# eliminates the need for that judgment — expect this list to keep growing
+# by a handful of entries as new tools enter the market vocabulary, and treat
+# that as normal maintenance, not a sign consolidation isn't working.
 BLOCKLIST = {
     ('Graph Databases', 'GraphQL'), ('GraphQL', 'Graph Databases'),
     ('Diffusion Models', 'Stable Diffusion'), ('Stable Diffusion', 'Diffusion Models'),
@@ -121,7 +166,7 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
     from sentence_transformers import SentenceTransformer
     import numpy as np
     import pandas as pd
-    from sqlalchemy import func, select
+    from sqlalchemy import select
 
     from server.db import get_session
     from server.models import (
@@ -230,25 +275,65 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
         active_dates = [d for _, _, d in active_postings if d is not None]
         max_posting_date = max(active_dates) if active_dates else None
         n_unknown_posting_date = n_active_postings_total - len(active_dates)
+        posting_date_by_id = {pid: d for pid, _, d in active_postings}
 
-        role_posting_count: Counter = Counter()
-        role_skill_doc_freq: dict[str, Counter] = {}
+        # --validate-650 reproduces a fixed historical snapshot, so the
+        # rolling window is meaningless there — disable it by treating every
+        # posting as "in window" (cutoff_date=None short-circuits the check
+        # below).
+        cutoff_date = (
+            max_posting_date - timedelta(days=CURRENT_WINDOW_DAYS)
+            if max_posting_date and not validate_650 else None
+        )
+
+        # Two parallel sets of per-role stats: the full history (role_*_all,
+        # always available) and the CURRENT_WINDOW_DAYS-restricted one
+        # (role_*_window, only populated where posting_date is known and
+        # recent enough). _role_stats() below picks per-role which to
+        # actually score against.
+        role_posting_count_all: Counter = Counter()
+        role_skill_doc_freq_all: dict[str, Counter] = {}
+        role_posting_count_window: Counter = Counter()
+        role_skill_doc_freq_window: dict[str, Counter] = {}
         all_market_skills: set[str] = set()
         for posting_id, skills in posting_skills.items():
             role = posting_role.get(posting_id)
-            if role:
-                role_posting_count[role] += 1
             all_market_skills.update(skills)
+            if not role:
+                continue
+            role_posting_count_all[role] += 1
             for skill in skills:
-                if role:
-                    role_skill_doc_freq.setdefault(role, Counter())[skill] += 1
+                role_skill_doc_freq_all.setdefault(role, Counter())[skill] += 1
 
-        known_job_roles = set(role_skill_doc_freq.keys())
+            posting_date = posting_date_by_id.get(posting_id)
+            if cutoff_date is None or (posting_date and posting_date >= cutoff_date):
+                role_posting_count_window[role] += 1
+                for skill in skills:
+                    role_skill_doc_freq_window.setdefault(role, Counter())[skill] += 1
+
+        known_job_roles = set(role_skill_doc_freq_all.keys())
+        roles_using_window: set[str] = set()
+        roles_falling_back: set[str] = set()
+
+        def _role_stats(rg: str) -> tuple[Counter, int]:
+            """This role's (skill -> posting count, n_postings) — from the
+            recent window if it has enough postings to be statistically
+            meaningful, else its full history."""
+            n_window = role_posting_count_window.get(rg, 0)
+            if cutoff_date is not None and n_window >= MIN_WINDOW_POSTINGS_PER_ROLE:
+                roles_using_window.add(rg)
+                return role_skill_doc_freq_window.get(rg, Counter()), n_window
+            roles_falling_back.add(rg)
+            return role_skill_doc_freq_all.get(rg, Counter()), role_posting_count_all.get(rg, 0)
+
         print(f"{len(program_skills)} programs, {len(all_market_skills)} distinct market skills, "
               f"{len(posting_skills)} postings with extracted skills "
               f"({n_active_postings_total} active postings total, "
               f"{n_active_postings_total - len(posting_skills)} with none), "
               f"{len(known_job_roles)} role groups.")
+        if cutoff_date is not None:
+            print(f"  Rolling window: {CURRENT_WINDOW_DAYS} days back from {max_posting_date} "
+                  f"(cutoff {cutoff_date}), roles need >= {MIN_WINDOW_POSTINGS_PER_ROLE} postings in-window to use it.")
 
         # ── Embed every distinct skill phrase once (courses + jobs) ──────
         all_course_skills = set().union(*program_skills.values()) if program_skills else set()
@@ -303,17 +388,18 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
         def get_core_job_skills(relevant_roles: set[str]) -> set[str]:
             out: set[str] = set()
             for rg in relevant_roles:
-                n_rg = role_posting_count.get(rg, 0)
+                freq, n_rg = _role_stats(rg)
                 if n_rg == 0:
                     continue
                 min_count = max(1, round(CORE_SKILL_FREQ_PCT * n_rg))
-                out |= {s for s, c in role_skill_doc_freq[rg].items() if c >= min_count}
+                out |= {s for s, c in freq.items() if c >= min_count}
             return out
 
         def get_freq_map(relevant_roles: set[str]) -> Counter:
             combined: Counter = Counter()
             for rg in relevant_roles:
-                for s, c in role_skill_doc_freq.get(rg, {}).items():
+                freq, _n_rg = _role_stats(rg)
+                for s, c in freq.items():
                     combined[s] += c
             return combined
 
@@ -347,7 +433,8 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
                 if role_set:
                     role_job_skills: set[str] = set()
                     for rg in role_set:
-                        role_job_skills |= set(role_skill_doc_freq.get(rg, {}).keys())
+                        freq, _n_rg = _role_stats(rg)
+                        role_job_skills |= set(freq.keys())
                     role = compute_semantic_alignment(skills, role_job_skills)
                     role_coverage_pct = role["coverage_pct"]
 
@@ -383,6 +470,16 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
                 "gap_skills": gap_skills_sorted,
             })
 
+        window_summary = None
+        if cutoff_date is not None:
+            window_summary = (
+                f"{len(roles_using_window)} of {len(roles_using_window | roles_falling_back)} role groups scored "
+                f"against the last {CURRENT_WINDOW_DAYS} days ({sorted(roles_using_window)}); "
+                f"{len(roles_falling_back)} fell back to full history for lacking "
+                f"{MIN_WINDOW_POSTINGS_PER_ROLE}+ postings in that window ({sorted(roles_falling_back)})."
+            )
+            print(f"  {window_summary}")
+
         if dry_run:
             print("\nDry run — sample results (not written to DB):")
             for r in sorted(results, key=lambda x: -(x["core_role_coverage_pct"] or 0))[:15]:
@@ -412,6 +509,7 @@ def compute_alignment(university: str | None = None, dry_run: bool = False, vali
                 + (f"{n_unknown_posting_date} of {n_active_postings_total} active postings have no known "
                    "posting_date and are excluded from the date range shown to users. "
                    if n_unknown_posting_date else "")
+                + (window_summary + " " if window_summary else "")
             ),
         )
         session.add(run)

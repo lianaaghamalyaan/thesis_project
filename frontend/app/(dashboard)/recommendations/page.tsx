@@ -58,7 +58,7 @@ export default function RecommendationsPage() {
           <ul className="mt-3 space-y-2">
             {docGaps.map((p) => (
               <li key={`${p.program}-${p.degree}`} className="rounded-lg border border-border px-3 py-2 text-sm">
-                {p.program} ({p.degree}) — {formatScore(p.core_role_coverage_pct)}
+                {p.program} ({p.degree}) — {formatScore(p.weighted_core_coverage_pct)}
               </li>
             ))}
             {docGaps.length === 0 && <p className="text-sm text-muted">None flagged.</p>}
@@ -70,7 +70,7 @@ export default function RecommendationsPage() {
           <ul className="mt-3 space-y-2">
             {curriculumGaps.map((p) => (
               <li key={`${p.program}-${p.degree}`} className="rounded-lg border border-border px-3 py-2 text-sm">
-                {p.program} ({p.degree}) — {formatScore(p.core_role_coverage_pct)}
+                {p.program} ({p.degree}) — {formatScore(p.weighted_core_coverage_pct)}
               </li>
             ))}
             {curriculumGaps.length === 0 && <p className="text-sm text-muted">None flagged.</p>}
@@ -99,7 +99,7 @@ export default function RecommendationsPage() {
               <h3 className="font-semibold">
                 {p.program} <span className="font-normal text-muted">({p.degree})</span>
               </h3>
-              <span className="text-sm font-semibold">{formatScore(p.core_role_coverage_pct)}</span>
+              <span className="text-sm font-semibold">{formatScore(p.weighted_core_coverage_pct)}</span>
             </div>
             <ul className="mt-3 space-y-2">
               {p.recommendations.map((r, i) => (

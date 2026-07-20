@@ -6,11 +6,11 @@ export type GlossaryEntry = { text: string; href?: string };
 
 export const GLOSSARY: Record<string, GlossaryEntry> = {
   core_coverage: {
-    text: "The share of core skills the market demands for this program's relevant roles that its courses demonstrably cover. \"Core\" means the skill shows up in at least 5% of that role's job postings — rare, one-off requirements aren't counted against a program.",
+    text: "The share of core skills the market demands for this program's relevant roles that its courses demonstrably cover, each skill counted equally regardless of demand. \"Core\" means the skill shows up in at least 5% of that role's job postings — rare, one-off requirements aren't counted against a program. A secondary, unweighted view — see weighted coverage for the dashboard's headline metric.",
     href: "/methodology#core-coverage",
   },
   weighted_coverage: {
-    text: "Like core coverage, but skills are weighted by how often employers ask for them. Covering a skill demanded in 20 postings counts more than covering one demanded in 3, so this rewards covering the most in-demand skills first.",
+    text: "This dashboard's headline score: like core coverage, but skills are weighted by how often employers ask for them, so covering a skill demanded in 20 postings counts more than covering one demanded in 3. Chosen as the headline because it's dominated by high-demand skills and stays comparatively stable as the job-market vocabulary grows, unlike the unweighted count.",
     href: "/methodology#core-coverage",
   },
   relevant_roles: {
@@ -38,7 +38,7 @@ export const GLOSSARY: Record<string, GlossaryEntry> = {
     href: "/methodology#fairness",
   },
   peer_average: {
-    text: "The average core coverage score among comparable programs at other Armenian universities (same degree level and, where possible, similar role focus) — a rough sense of how this program stacks up, not a ranking.",
+    text: "The average weighted core coverage score among comparable programs at other Armenian universities (same degree level and, where possible, similar role focus) — a rough sense of how this program stacks up, not a ranking.",
   },
   experiment: {
     text: "Several different methods for extracting and matching skills were tested; the one shown throughout this dashboard performed best in evaluation. See Methodology for what was tried and why.",

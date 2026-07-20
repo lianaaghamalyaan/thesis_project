@@ -18,10 +18,10 @@ export default function AllUniversitiesPage() {
   const byUniversity = useMemo(() => {
     const map = new Map<string, { n: number; sum: number }>();
     for (const r of rows ?? []) {
-      if (r.core_role_coverage_pct === null) continue;
+      if (r.weighted_core_coverage_pct === null) continue;
       const e = map.get(r.university) ?? { n: 0, sum: 0 };
       e.n += 1;
-      e.sum += r.core_role_coverage_pct;
+      e.sum += r.weighted_core_coverage_pct;
       map.set(r.university, e);
     }
     return [...map.entries()]
@@ -43,7 +43,7 @@ export default function AllUniversitiesPage() {
       .filter((r) => degreeFilter === "All" || r.degree === degreeFilter)
       .filter((r) => universityFilter === "All" || r.university === universityFilter)
       .slice()
-      .sort((a, b) => (b.core_role_coverage_pct ?? -1) - (a.core_role_coverage_pct ?? -1));
+      .sort((a, b) => (b.weighted_core_coverage_pct ?? -1) - (a.weighted_core_coverage_pct ?? -1));
   }, [rows, degreeFilter, universityFilter]);
 
   if (!rows) return <p className="text-muted">Loading…</p>;
@@ -55,11 +55,11 @@ export default function AllUniversitiesPage() {
 
       <div className="mt-6 grid grid-cols-3 gap-4">
         <MetricCard label="Universities" value={byUniversity.length} />
-        <MetricCard label="Programs (scored)" value={rows.filter((r) => r.core_role_coverage_pct !== null).length} />
+        <MetricCard label="Programs (scored)" value={rows.filter((r) => r.weighted_core_coverage_pct !== null).length} />
         <MetricCard label="Total programs" value={rows.length} />
       </div>
 
-      <h2 className="mt-6 text-lg font-semibold">By university (average core coverage)</h2>
+      <h2 className="mt-6 text-lg font-semibold">By university (average weighted core coverage)</h2>
       <ul className="mt-3 space-y-2">
         {byUniversity.map((u) => (
           <li key={u.university} className="flex items-center justify-between rounded-lg border border-border px-3 py-2 text-sm">
@@ -117,7 +117,7 @@ export default function AllUniversitiesPage() {
                 <td className="px-3 py-1.5">{r.program}</td>
                 <td className="px-3 py-1.5">{r.degree}</td>
                 <td className="flex items-center gap-2 px-3 py-1.5">
-                  {formatScore(r.core_role_coverage_pct)} <ScoreBadge score={r.core_role_coverage_pct} />
+                  {formatScore(r.weighted_core_coverage_pct)} <ScoreBadge score={r.weighted_core_coverage_pct} />
                 </td>
               </tr>
             ))}

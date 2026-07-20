@@ -51,7 +51,7 @@ export default function ProgramsPage() {
           p.program.toLowerCase().includes(search.toLowerCase()) ||
           p.university.toLowerCase().includes(search.toLowerCase())
       )
-      .sort((a, b) => (b.core_role_coverage_pct ?? -1) - (a.core_role_coverage_pct ?? -1));
+      .sort((a, b) => (b.weighted_core_coverage_pct ?? -1) - (a.weighted_core_coverage_pct ?? -1));
   }, [programs, degreeFilter, search]);
 
   if (!programs) return <p className="text-muted">Loading…</p>;
@@ -128,7 +128,7 @@ export default function ProgramsPage() {
               </div>
             </div>
             <div className="flex items-center gap-6">
-              <ScoreDisplay score={p.core_role_coverage_pct} size="md" />
+              <ScoreDisplay score={p.weighted_core_coverage_pct} size="md" />
               <Link
                 href={`/programs/${encodeURIComponent(p.program)}/${encodeURIComponent(p.degree)}?u=${encodeURIComponent(p.university)}`}
                 className="rounded-lg border border-border px-3 py-1.5 text-sm font-medium hover:bg-surface"

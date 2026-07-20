@@ -50,7 +50,7 @@ def get_doc_quality(university: str | None = None, user: dict = Depends(get_curr
         alignment_df = alignment_df[alignment_df["relevant_roles"].notna()]
 
     rows = []
-    for _, row in alignment_df.sort_values("core_role_coverage_pct", ascending=False, na_position="last").iterrows():
+    for _, row in alignment_df.sort_values("weighted_core_coverage_pct", ascending=False, na_position="last").iterrows():
         # In "all universities" mode curriculum_df spans every institution, and
         # program name + degree alone isn't unique across universities (e.g.
         # "Informatics (Computer Science)" exists at both NPUA and NUACA) — scope

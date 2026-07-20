@@ -193,7 +193,7 @@ export type Recommendation = { type: string; title: string; description: string;
 export type ProgramRecommendations = {
   program: string;
   degree: string;
-  core_role_coverage_pct: number | null;
+  weighted_core_coverage_pct: number | null;
   doc_score: number;
   gap_type: string;
   recommendations: Recommendation[];

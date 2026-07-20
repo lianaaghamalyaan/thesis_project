@@ -94,19 +94,19 @@ export default function JobFitPage() {
         <>
           <div className="mt-6 flex items-center gap-6 rounded-xl border border-border bg-surface p-5">
             <div className="text-center">
-              <div className="text-4xl font-bold" style={{ color: scoreColor(result.match_score) }}>
-                {formatScore(result.match_score)}
-              </div>
-              <div className="text-xs text-muted">
-                core skills covered <InfoTip term="core_coverage" />
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-semibold" style={{ color: scoreColor(result.weighted_score) }}>
+              <div className="text-4xl font-bold" style={{ color: scoreColor(result.weighted_score) }}>
                 {formatScore(result.weighted_score)}
               </div>
               <div className="text-xs text-muted">
                 frequency-weighted <InfoTip term="weighted_coverage" />
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-semibold" style={{ color: scoreColor(result.match_score) }}>
+                {formatScore(result.match_score)}
+              </div>
+              <div className="text-xs text-muted">
+                core skills covered (unweighted) <InfoTip term="core_coverage" />
               </div>
             </div>
             <div className="text-sm text-muted">

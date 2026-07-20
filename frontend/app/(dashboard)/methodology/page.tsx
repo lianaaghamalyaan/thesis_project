@@ -114,23 +114,26 @@ export default function MethodologyPage() {
         </ol>
       </Card>
 
-      <h2 id="core-coverage" className="mt-8 scroll-mt-6 text-lg font-semibold">🎯 Core coverage vs. weighted coverage</h2>
+      <h2 id="core-coverage" className="mt-8 scroll-mt-6 text-lg font-semibold">🎯 Weighted coverage vs. core coverage</h2>
       <Card className="mt-2 text-sm">
         <p>
-          <strong>Core coverage</strong> (the main score shown throughout the dashboard) treats every core skill
-          equally: it&apos;s the percentage of core skills the program covers, out of all core skills for its
-          relevant roles. Covering a skill mentioned in 3 postings counts the same as covering one mentioned in 30.
+          <strong>Weighted coverage</strong> (the main score shown throughout the dashboard) weights each core skill
+          by how often employers actually ask for it: covering the two or three most in-demand skills for a role can
+          pull this number up more than covering several rarely-requested ones. It's the headline metric because it's
+          dominated by high-demand skills and stays comparatively stable over time — the unweighted count below it
+          mechanically drifts down as more job postings are collected and more niche skills clear the "core" bar,
+          even when the curriculum hasn't changed at all.
         </p>
         <p className="mt-2">
-          <strong>Weighted coverage</strong> (shown alongside it in some places, e.g. Job Fit) instead weights each
-          skill by how often employers actually ask for it. Covering the two or three most in-demand skills for a
-          role can pull this number up more than covering several rarely-requested ones — it rewards getting the
-          highest-value skills right, even if a longer tail of niche skills remains uncovered.
+          <strong>Core coverage</strong> (shown alongside it, e.g. as "Covers N of M core skills") instead treats
+          every core skill equally: covering a skill mentioned in 3 postings counts the same as covering one
+          mentioned in 30.
         </p>
         <p className="mt-2 text-muted">
           The two numbers can diverge noticeably: a program might cover relatively few core skills by count (lower
           core coverage) but happen to cover the most in-demand ones (higher weighted coverage), or vice versa.
-          Neither is "more correct" — they answer slightly different questions.
+          Neither is "more correct" — they answer slightly different questions; weighted is just the more stable one
+          to lead with.
         </p>
       </Card>
 
@@ -183,8 +186,10 @@ export default function MethodologyPage() {
             outcomes — a low score is a prompt to look closer, not a verdict.
           </li>
           <li>
-            A score of 30–60% core coverage is typical and not a failure signal: the job market collectively demands
-            far more skills than any single degree program could reasonably teach.
+            Most programs currently score in roughly the 10–30% weighted-coverage range, with the strongest observed
+            around 50%: the job market collectively demands far more skills than any single degree program could
+            reasonably teach, so a lower score is not by itself a failure signal — see how this program compares to
+            peers below.
           </li>
         </ul>
       </Card>
