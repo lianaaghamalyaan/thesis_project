@@ -53,18 +53,18 @@ export function Sidebar() {
   const ctx = { canSwitchUniversity, role: user?.role };
 
   return (
-    <aside className="flex h-full w-60 shrink-0 flex-col bg-primary-dark px-4 py-5 text-white">
-      <div className="mb-6 flex items-center gap-2 text-lg font-bold">
-        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/15">
-          <GraduationCap className="h-5 w-5" aria-hidden />
+    <aside className="flex h-full w-64 shrink-0 flex-col overflow-y-auto bg-primary-dark px-4 py-6 text-white">
+      <div className="mb-8 flex items-center gap-2.5 px-2">
+        <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--accent)]/20 ring-1 ring-[var(--accent)]/40">
+          <GraduationCap className="h-5 w-5 text-[var(--accent)]" aria-hidden />
         </span>
-        CurriculumLens
+        <span className="font-display text-lg font-bold tracking-tight">CurriculumLens</span>
       </div>
 
       <nav className="flex-1 space-y-5">
         {NAV_SECTIONS.filter((s) => !s.show || s.show(ctx)).map((section) => (
           <div key={section.title}>
-            <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-white/60">{section.title}</div>
+            <div className="mb-1.5 px-2 text-[11px] font-semibold uppercase tracking-widest text-white/45">{section.title}</div>
             <ul className="space-y-0.5">
               {section.items.map((item) => {
                 const active = pathname === item.href;
@@ -74,8 +74,10 @@ export function Sidebar() {
                     <Link
                       href={item.href}
                       aria-current={active ? "page" : undefined}
-                      className={`flex items-center gap-2.5 rounded-lg px-3 py-1.5 text-sm ${
-                        active ? "bg-white/15 font-medium" : "hover:bg-white/10"
+                      className={`flex items-center gap-2.5 rounded-md border-l-2 py-2 pl-3 pr-3 text-sm transition-colors ${
+                        active
+                          ? "border-[var(--accent)] bg-white/10 font-medium text-white"
+                          : "border-transparent text-white/75 hover:bg-white/5 hover:text-white"
                       }`}
                     >
                       <Icon className="h-4 w-4 opacity-80" aria-hidden />
@@ -90,14 +92,14 @@ export function Sidebar() {
       </nav>
 
       {user && (
-        <div className="mt-auto border-t border-white/15 pt-4 text-sm">
-          <div className="font-medium">{user.full_name}</div>
-          <div className="text-xs text-white/60">
+        <div className="mt-auto border-t border-white/10 pt-4 text-sm">
+          <div className="px-2 font-medium">{user.full_name}</div>
+          <div className="px-2 text-xs text-white/50">
             {user.org_name} · {user.role}
           </div>
           <button
             onClick={() => logout()}
-            className="mt-3 w-full rounded-lg border border-white/20 bg-white/10 py-1.5 text-xs hover:bg-white/20"
+            className="mt-3 w-full rounded-md border border-white/15 py-1.5 text-xs text-white/70 hover:bg-white/10 hover:text-white"
           >
             Log out
           </button>

@@ -6,6 +6,17 @@ export function scoreColor(score: number | null | undefined): string {
   return "var(--score-developing)";
 }
 
+// Fill variant for bars/gauges/chart marks: mid-tier colors are brighter
+// than their text-safe counterparts (validated as a status ramp on the
+// ivory surface; always shown with the numeric value + tier word).
+export function scoreFill(score: number | null | undefined): string {
+  if (score === null || score === undefined || Number.isNaN(score)) return "var(--score-none)";
+  if (score >= 50) return "var(--score-strong)";
+  if (score >= 35) return "var(--score-good-fill)";
+  if (score >= 25) return "var(--score-moderate-fill)";
+  return "var(--score-developing)";
+}
+
 export function scoreLabel(score: number | null | undefined): string {
   if (score === null || score === undefined || Number.isNaN(score)) return "No data";
   if (score >= 50) return "Strong";

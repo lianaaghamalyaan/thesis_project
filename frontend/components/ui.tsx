@@ -1,16 +1,18 @@
 "use client";
 
 import { AlertTriangle, RotateCw } from "lucide-react";
-import { scoreColor, scoreLabel } from "@/lib/format";
+import { scoreColor, scoreFill, scoreLabel } from "@/lib/format";
 import type { DocumentationLevel } from "@/lib/api";
 import { DOC_LEVEL_LABELS, DOC_LEVEL_SHORT_LABELS } from "@/lib/format";
 
-/** Serif page title + optional subtitle — the standard page opener. */
+/** Serif page title over a short gold rule + optional subtitle — the
+ *  standard "policy brief" page opener. */
 export function PageHeader({ title, subtitle }: { title: React.ReactNode; subtitle?: React.ReactNode }) {
   return (
     <div>
-      <h1 className="font-display text-3xl font-bold text-primary-dark">{title}</h1>
-      {subtitle && <p className="mt-1 max-w-3xl text-sm leading-relaxed text-muted">{subtitle}</p>}
+      <div className="mb-3 h-1 w-12 rounded-full bg-accent" aria-hidden />
+      <h1 className="font-display text-[2.1rem] font-bold leading-tight text-primary-dark">{title}</h1>
+      {subtitle && <p className="mt-2 max-w-3xl text-[15px] leading-relaxed text-muted">{subtitle}</p>}
     </div>
   );
 }
@@ -31,7 +33,7 @@ export function ScoreBar({
       <span className={`h-1.5 ${width} overflow-hidden rounded-full bg-surface-muted`} aria-hidden>
         <span
           className="block h-full rounded-full"
-          style={{ width: `${Math.min(value ?? 0, 100)}%`, backgroundColor: scoreColor(value) }}
+          style={{ width: `${Math.min(value ?? 0, 100)}%`, backgroundColor: scoreFill(value) }}
         />
       </span>
       <span className="text-sm font-semibold tabular-nums" style={{ color: scoreColor(value) }}>

@@ -23,7 +23,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   }
 
   return (
-    <div className="flex min-h-screen">
+    // h-screen + overflow-hidden keeps the sidebar painted to the full
+    // window height; only <main> scrolls.
+    <div className="flex h-screen overflow-hidden">
       <Sidebar />
       <main className="flex-1 overflow-y-auto bg-background px-8 py-6">
         <div className="mx-auto max-w-5xl">

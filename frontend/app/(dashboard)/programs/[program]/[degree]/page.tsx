@@ -177,7 +177,7 @@ function ProgramDetailInner({ program, degree }: { program: string; degree: stri
         <div className="flex flex-col items-center justify-center rounded-xl bg-surface py-6 shadow-card ring-1 ring-border/60">
           <ScoreGauge score={score} />
           <div className="mt-2 text-xs text-muted">
-            Weighted core coverage <InfoTip term="weighted_coverage" />
+            Market alignment score <InfoTip term="weighted_coverage" />
           </div>
         </div>
         <div className="text-sm leading-relaxed">

@@ -1,6 +1,6 @@
 "use client";
 
-import { formatScore, scoreColor, scoreLabel } from "@/lib/format";
+import { formatScore, scoreColor, scoreFill, scoreLabel } from "@/lib/format";
 import { ScoreBadge } from "@/components/ScoreBadge";
 
 /**
@@ -30,9 +30,9 @@ export function ScoreGauge({ score }: { score: number | null | undefined }) {
   return (
     <div className="flex flex-col items-center">
       <svg width={180} height={100} role="img" aria-label={value === null ? "No score available" : `Alignment score ${Math.round(value)} percent — ${scoreLabel(value)}`}>
-        <path d={arcPath(0, 100, r)} fill="none" stroke="var(--surface-muted)" strokeWidth={14} strokeLinecap="round" />
+        <path d={arcPath(0, 100, r)} fill="none" stroke="var(--surface-muted)" strokeWidth={11} strokeLinecap="round" />
         {value !== null && value > 0 && (
-          <path d={arcPath(0, value, r)} fill="none" stroke={scoreColor(value)} strokeWidth={14} strokeLinecap="round" />
+          <path d={arcPath(0, value, r)} fill="none" stroke={scoreFill(value)} strokeWidth={11} strokeLinecap="round" />
         )}
         {/* Tier-boundary ticks */}
         {[25, 35, 50].map((t) => {

@@ -16,7 +16,7 @@ export function JobFitPanel({ result, role }: { result: JobFitResult; role: stri
             {formatScore(result.weighted_score)}
           </div>
           <div className="text-xs text-muted">
-            frequency-weighted <InfoTip term="weighted_coverage" />
+            market alignment (demand-weighted) <InfoTip term="weighted_coverage" />
           </div>
         </div>
         <div className="text-center">

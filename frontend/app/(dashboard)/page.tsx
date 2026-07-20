@@ -4,14 +4,14 @@ import { Suspense, useMemo } from "react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { Search, Sparkles } from "lucide-react";
+import { FileText, Search, Sparkles } from "lucide-react";
 import { api, DocumentationLevel } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { MetricCard } from "@/components/MetricCard";
 import { InfoTip } from "@/components/InfoTip";
 import { DataFreshnessNote } from "@/components/DataFreshnessNote";
 import { DocBadge, ErrorState, PageHeader, PageSkeleton, ScoreBar, TierLegend } from "@/components/ui";
-import { formatDate, formatScore, scoreColor, uniAbbr } from "@/lib/format";
+import { formatDate, formatScore, scoreFill, uniAbbr } from "@/lib/format";
 import { useApi } from "@/lib/useApi";
 
 function OverviewPageInner() {
@@ -117,7 +117,7 @@ function OverviewPageInner() {
       <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
         <MetricCard label="Programs" value={programs.length} />
         <MetricCard
-          label={<>Mean alignment score <InfoTip term="weighted_coverage" /></>}
+          label={<>Average market alignment <InfoTip term="weighted_coverage" /></>}
           value={meanScore !== null ? formatScore(meanScore) : "—"}
         />
         <MetricCard label="Unique gap skills" value={nGapSkills} />
@@ -127,6 +127,35 @@ function OverviewPageInner() {
           caption={meta ? `Run ID: ${meta.run_id}` : undefined}
         />
       </div>
+
+      {strongest.length > 0 && (
+        <div className="mt-6 rounded-xl border-l-4 border-accent bg-surface p-5 shadow-card ring-1 ring-border/60">
+          <h2 className="inline-flex items-center gap-2 font-display text-lg font-bold text-primary-dark">
+            <FileText className="h-4 w-4 text-accent" aria-hidden /> Executive summary
+          </h2>
+          <ul className="mt-2 space-y-1.5 text-[15px] leading-relaxed">
+            <li>
+              The strongest program {isAllUniversities ? "across universities" : "in this portfolio"} is{" "}
+              <strong>{strongest[0].program} ({strongest[0].degree})</strong> at{" "}
+              {formatScore(strongest[0].weighted_core_coverage_pct)} market alignment.
+            </li>
+            {topGaps.length > 0 && (
+              <li>
+                The most demanded skill currently missing from programs is{" "}
+                <strong>{topGaps[topGaps.length - 1].skill}</strong>, asked for in{" "}
+                {topGaps[topGaps.length - 1].freq} job postings.
+              </li>
+            )}
+            {docQualityQ.data && docQualityQ.data.programs.some((prog) => prog.documentation_level !== "full") && (
+              <li>
+                {docQualityQ.data.programs.filter((prog) => prog.documentation_level !== "full").length} of{" "}
+                {docQualityQ.data.programs.length} programs have limited published course descriptions — their scores
+                are likely understated and improving documentation is the fastest win.
+              </li>
+            )}
+          </ul>
+        </div>
+      )}
 
       <hr className="my-6 border-border" />
 
@@ -182,14 +211,14 @@ function OverviewPageInner() {
             >
               <LabelList dataKey="score" position="right" formatter={(v: React.ReactNode) => `${Math.round(Number(v))}%`} fontSize={11} />
               {chartData.map((d, i) => (
-                <Cell key={i} fill={scoreColor(d.score)} />
+                <Cell key={i} fill={scoreFill(d.score)} />
               ))}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
       </div>
       <p className="mt-2 text-xs text-muted">
-        <Link href="/programs" className="font-medium text-primary">Browse the full list</Link> to filter, search,
+        <Link href="/programs" className="font-medium text-primary">Browse the full list</Link>{" "}to filter, search,
         and open any program&apos;s detail page.
       </p>
 
