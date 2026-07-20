@@ -445,7 +445,37 @@ def seed_accounts(session):
     return created_logins
 
 
+def _guard_against_accidental_production_seed() -> None:
+    """This script drops and recreates every table it manages — including
+    job_skills (regresses the fix_job_skills.py consolidation), users (resets
+    every password), and anything else added directly to the DB schema since
+    this file was last synced (see the ProgramOutcome/JobSkillExtraction*
+    incident 2026-07-20: those tables existed in production but their model
+    classes weren't committed yet — a seed.py run at that moment would have
+    silently dropped them). Never safe to run against a shared database
+    without a human consciously choosing to, and never safe in an automated
+    context at all. Refuses to run against anything that doesn't look like a
+    local dev database unless explicitly overridden."""
+    import os
+
+    host = (engine.url.host or "").lower()
+    is_local = host in ("", "localhost", "127.0.0.1") or host.startswith("localhost")
+    if is_local:
+        return
+    if os.environ.get("ALLOW_DESTRUCTIVE_SEED") == "i-know-this-drops-every-table":
+        print(f"ALLOW_DESTRUCTIVE_SEED override set — proceeding against non-local host {host!r}.")
+        return
+    raise SystemExit(
+        f"\nRefusing to run: DATABASE_URL points at {host!r}, which doesn't look like a local "
+        "database. This script drops and recreates every table it manages.\n"
+        "If this is genuinely intentional (e.g. provisioning a brand-new environment, never a "
+        "database with real data in it), rerun with:\n"
+        "  ALLOW_DESTRUCTIVE_SEED=i-know-this-drops-every-table ./.venv_dashboard/bin/python -m server.seed\n"
+    )
+
+
 def main():
+    _guard_against_accidental_production_seed()
     print(f"Creating tables on {engine.url.database!r} ...")
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)

@@ -69,12 +69,27 @@ thesis/thesis_final.docx §1.6 (paras 143, 146-149, 157-161, 260, 265):
 Validation: --validate-650 restricts the postings pool to the original
 650 (data/processed/jobs/_recovered_final_jobs_dataset_it_with_roles.csv,
 recovered from git history) and their historical 9-category role
-taxonomy. This exactly reproduces the thesis's published YSU "Data
-Science in Business" numbers (core=62.5%, weighted=75.46%) — confirmed
-empirically 2026-07-12 after fixing the job-skill consolidation bug (see
+taxonomy. This exactly reproduced the thesis's published YSU "Data
+Science in Business" numbers (core=62.5%, weighted=75.46%) as of
+2026-07-12, after fixing the job-skill consolidation bug (see
 fix_job_skills.py) and the row-misalignment bug (job_skills_norm.json is
 indexed against a since-regenerated jobs CSV; the recovered file restores
 the original row order/role labels it was built against).
+
+That specific reproduction is now VOID, not just drifted — the 2026-07-15
+job-skills refresh (pipeline/reextract_job_skills_v2.py) replaced the
+capped ~8-skills/posting extraction those thesis numbers were computed
+from with an uncapped, evidence-based one (~16 skills/posting on the same
+650 postings), which is a deliberate methodology upgrade, not a
+regression. As of 2026-07-20 --validate-650 on YSU "Data Science in
+Business" instead gives core=43.04, weighted=55.21 — lower not because
+matching got worse but because there are simply more job-side skills to
+match against per posting now. tests/test_alignment_guardrails.py checks
+--validate-650 against THIS current baseline (a stability snapshot, not
+the original thesis figures) — its job is to catch a future matching-logic
+regression, not to re-litigate this one already-understood, intentional
+change. If the extraction methodology changes again, re-run --validate-650
+once, confirm the new numbers by hand, and update the snapshot.
 
 Usage:
     DATABASE_URL=... ./.venv_dashboard/bin/python -m pipeline.compute_alignment [--university NAME] [--dry-run] [--validate-650]
