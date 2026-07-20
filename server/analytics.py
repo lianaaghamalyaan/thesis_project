@@ -109,10 +109,23 @@ def get_strengths(
     prog_skills = get_program_skills(program, degree, curriculum_df, course_skills)
     core_skills = _get_core_job_skills_for_roles(role_set, job_skills_by_role, role_posting_counts)
     freq_map = _get_role_freq_map(role_set, job_skills_by_role)
+    # Denominator for "% of relevant postings" below: total postings across
+    # this program's resolved roles. For a multi-role program this is an
+    # approximation (a skill mentioned in every posting of every role would
+    # show ~100%, not a rigorous per-role percentage), but it's honest for
+    # the common single-role case and gives useful relative context either way.
+    total_postings = sum(role_posting_counts.get(r, 0) for r in role_set)
 
     covered = semantic_covered_job_skills_with_source(prog_skills, core_skills)
     matched = [
-        {"skill": job_skill, "job_count": freq_map.get(job_skill, 0), "matched_program_skills": sources}
+        {
+            "skill": job_skill,
+            "job_count": freq_map.get(job_skill, 0),
+            "pct_of_role_postings": (
+                round(freq_map.get(job_skill, 0) / total_postings * 100, 1) if total_postings else None
+            ),
+            "matched_program_skills": sources,
+        }
         for job_skill, sources in covered.items()
     ]
     matched.sort(key=lambda x: -x["job_count"])

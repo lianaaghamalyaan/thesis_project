@@ -378,3 +378,21 @@ class GapSkill(Base):
     gap_type: Mapped[str | None] = mapped_column(String(30), nullable=True)  # curriculum_gap | documentation_gap | uncertain
 
     result: Mapped["AlignmentResult"] = relationship(back_populates="gap_skills")
+
+
+class SkillInfo(Base):
+    """One-line plain-English context for a skill name shown anywhere on the
+    dashboard — CLAUDE.md's target users are non-technical academic
+    leadership who "need to understand outcomes, not methodology"; a bare
+    tool name like "TypeScript" or "CI/CD" in a gap list doesn't tell a
+    vice-rector what it is. Generated once per skill
+    (pipeline/generate_skill_info.py, Claude Haiku) and cached here — never
+    regenerated live, since the answer for a given skill name doesn't change.
+    """
+    __tablename__ = "skill_info"
+
+    skill_name: Mapped[str] = mapped_column(String(300), primary_key=True)
+    description: Mapped[str] = mapped_column(Text)  # one sentence: what it is
+    where_used: Mapped[str] = mapped_column(String(200))  # short phrase: e.g. "Web frontend development"
+    model_used: Mapped[str] = mapped_column(String(60))
+    generated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)

@@ -35,6 +35,7 @@ class GapSkillRow(BaseModel):
     gap_skill: str
     job_frequency: int | None
     relevant_roles: str | None
+    pct_of_role_postings: float | None = None
 
 
 class LlmGapSkillRow(BaseModel):
@@ -45,6 +46,7 @@ class LlmGapSkillRow(BaseModel):
     missing_skill: str
     job_frequency: int | None
     category: str | None
+    pct_of_role_postings: float | None = None
 
 
 class CurriculumCourse(BaseModel):
@@ -102,6 +104,7 @@ class BenchmarkResult(BaseModel):
 class StrengthSkill(BaseModel):
     skill: str
     job_count: int
+    pct_of_role_postings: float | None = None
     matched_program_skills: list[str] = []
 
 

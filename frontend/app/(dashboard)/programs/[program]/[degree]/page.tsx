@@ -1,12 +1,12 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { use, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { api, ProgramDetail, RunMetadata } from "@/lib/api";
+import { api, ProgramDetail, RunMetadata, SkillInfo } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { ScoreDisplay } from "@/components/ScoreBadge";
 import { MetricCard, Card } from "@/components/MetricCard";
-import { InfoTip } from "@/components/InfoTip";
+import { InfoTip, TextTip } from "@/components/InfoTip";
 import { DataFreshnessNote } from "@/components/DataFreshnessNote";
 import { formatScore, GAP_TYPE_ICONS, GAP_TYPE_LABELS } from "@/lib/format";
 
@@ -30,6 +30,7 @@ export default function ProgramDetailPage({
   const [loadedDetail, setLoadedDetail] = useState<{ key: string; value: ProgramDetail } | null>(null);
   const [meta, setMeta] = useState<RunMetadata | null>(null);
   const [tab, setTab] = useState<"strengths" | "gaps" | "evidence">("strengths");
+  const [skillInfo, setSkillInfo] = useState<Record<string, SkillInfo>>({});
 
   useEffect(() => {
     api.runMetadata().then(setMeta);
@@ -38,6 +39,21 @@ export default function ProgramDetailPage({
   const effectiveUniversity = pinnedUniversity ?? universityParam ?? null;
   const detailKey = `${program}\u0000${degree}\u0000${effectiveUniversity ?? ""}`;
   const detail = loadedDetail?.key === detailKey ? loadedDetail.value : null;
+
+  // Batch-fetch "what is this skill?" context for every skill shown on this
+  // page in one request, instead of one per skill.
+  const allSkillNames = useMemo(() => {
+    if (!detail) return [];
+    const gapNames = detail.gaps.length
+      ? detail.gaps.map((g) => g.missing_skill)
+      : detail.fallback_gaps.map((g) => g.gap_skill);
+    return Array.from(new Set([...detail.strengths.map((s) => s.skill), ...gapNames]));
+  }, [detail]);
+
+  useEffect(() => {
+    if (allSkillNames.length === 0) return;
+    api.skillsInfo(allSkillNames).then(setSkillInfo);
+  }, [allSkillNames]);
 
   useEffect(() => {
     if (!currentUniversity) return;
@@ -55,8 +71,8 @@ export default function ProgramDetailPage({
   // docstring for why this replaced the unweighted core_role_coverage_pct).
   const score = alignment?.weighted_core_coverage_pct ?? null;
   const displayGaps = gaps.length
-    ? gaps.map((g) => ({ skill: g.missing_skill, freq: g.job_frequency, category: g.category }))
-    : fallback_gaps.map((g) => ({ skill: g.gap_skill, freq: g.job_frequency, category: null }));
+    ? gaps.map((g) => ({ skill: g.missing_skill, freq: g.job_frequency, pct: g.pct_of_role_postings, category: g.category }))
+    : fallback_gaps.map((g) => ({ skill: g.gap_skill, freq: g.job_frequency, pct: g.pct_of_role_postings, category: null }));
 
   return (
     <div>
@@ -178,11 +194,20 @@ export default function ProgramDetailPage({
                   <summary className="flex cursor-pointer list-none items-center justify-between marker:content-none">
                     <span>
                       {s.skill}
+                      {skillInfo[s.skill] && (
+                        <TextTip
+                          className="ml-1"
+                          text={`${skillInfo[s.skill].description} Where it's used: ${skillInfo[s.skill].where_used}.`}
+                        />
+                      )}
                       {courses.length > 0 && (
                         <span className="ml-2 text-xs text-muted">▾ how was this decided?</span>
                       )}
                     </span>
-                    <span className="text-xs text-muted">{s.job_count} job postings</span>
+                    <span className="text-xs text-muted">
+                      {s.job_count} job postings
+                      {s.pct_of_role_postings != null && ` (${s.pct_of_role_postings}%)`}
+                    </span>
                   </summary>
                   {courses.length > 0 ? (
                     <ul className="mt-2 space-y-1 border-t border-border pt-2 text-xs text-muted">
@@ -230,9 +255,16 @@ export default function ProgramDetailPage({
                 <span>
                   {g.category && `${GAP_TYPE_ICONS[g.category] ?? "⚪"} `}
                   {g.skill}
+                  {skillInfo[g.skill] && (
+                    <TextTip
+                      className="ml-1"
+                      text={`${skillInfo[g.skill].description} Where it's used: ${skillInfo[g.skill].where_used}.`}
+                    />
+                  )}
                 </span>
                 <span className="text-xs text-muted">
                   {g.freq ?? 0} job postings
+                  {g.pct != null && ` (${g.pct}%)`}
                   {g.category && ` · ${GAP_TYPE_LABELS[g.category] ?? "Unclear"}`}
                 </span>
               </li>

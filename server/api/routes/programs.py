@@ -5,6 +5,7 @@ import math
 from fastapi import APIRouter, Depends, HTTPException, status
 
 from server import analytics, queries
+from server.role_mapping import expand_program_roles
 
 from ..deps import get_current_user, resolve_university
 from ..schemas import ProgramAlignment, ProgramDetail
@@ -71,6 +72,17 @@ def get_program_detail(
     tiers = queries.load_confidence_tiers(scoped)
     job_skills_by_role = queries.load_job_skills_by_role()
     role_posting_counts = queries.load_role_posting_counts()
+
+    # Same "% of relevant postings" denominator used for Strengths (see
+    # analytics.get_strengths) — an approximation for multi-role programs,
+    # honest for the common single-role case.
+    role_set = expand_program_roles(relevant_roles, set(job_skills_by_role.keys()))
+    total_postings = sum(role_posting_counts.get(r, 0) for r in role_set)
+    for gaps_df, freq_col in ((prog_llm_gaps, "job_frequency"), (prog_fallback_gaps, "job_frequency")):
+        if not gaps_df.empty:
+            gaps_df["pct_of_role_postings"] = (
+                (gaps_df[freq_col] / total_postings * 100).round(1) if total_postings else None
+            )
 
     strengths = analytics.get_strengths(
         program, degree, relevant_roles, curriculum_df, course_skills, job_skills_by_role, role_posting_counts, n=20

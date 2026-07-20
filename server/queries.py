@@ -369,6 +369,26 @@ def load_role_posting_counts() -> dict:
         session.close()
 
 
+def load_skill_info(skill_names: list[str]) -> dict[str, dict]:
+    """skill_name -> {description, where_used} for whichever of the given
+    names have been generated so far (pipeline/generate_skill_info.py runs
+    incrementally, so a brand-new skill may not have a row yet — callers
+    should treat a missing key as "not generated yet", not an error)."""
+    from .models import SkillInfo
+
+    if not skill_names:
+        return {}
+    session = get_session()
+    try:
+        rows = session.execute(
+            select(SkillInfo.skill_name, SkillInfo.description, SkillInfo.where_used)
+            .where(SkillInfo.skill_name.in_(skill_names))
+        ).all()
+        return {name: {"description": desc, "where_used": where} for name, desc, where in rows}
+    finally:
+        session.close()
+
+
 def job_skills_coverage() -> dict:
     session = get_session()
     try:

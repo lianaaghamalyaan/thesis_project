@@ -59,6 +59,7 @@ export type GapSkillRow = {
   gap_skill: string;
   job_frequency: number | null;
   relevant_roles: string | null;
+  pct_of_role_postings: number | null;
 };
 
 export type LlmGapSkillRow = {
@@ -69,12 +70,25 @@ export type LlmGapSkillRow = {
   missing_skill: string;
   job_frequency: number | null;
   category: string | null;
+  pct_of_role_postings: number | null;
 };
 
 // matched_program_skills is only populated on Program Detail's Strengths list
 // (server/analytics.py::get_strengths); Job Fit's "missing" list reuses this
 // type but never sets it (no reused meaning for "not covered").
-export type StrengthSkill = { skill: string; job_count: number; matched_program_skills?: string[] };
+export type StrengthSkill = {
+  skill: string;
+  job_count: number;
+  pct_of_role_postings?: number | null;
+  matched_program_skills?: string[];
+};
+
+// "What is this skill?" — server/api/routes/job_skills.py's /skills/info,
+// generated once per skill (pipeline/generate_skill_info.py) since the
+// target users (CLAUDE.md: non-technical academic leadership) shouldn't be
+// expected to already know what e.g. "TypeScript" or "CI/CD" are. A skill
+// with no entry yet (generation runs incrementally) is simply absent.
+export type SkillInfo = { description: string; where_used: string };
 
 export type SkillCourse = { course_name: string; high_confidence: boolean };
 
@@ -175,6 +189,10 @@ export const api = {
       `/recommendations${university ? `?university=${encodeURIComponent(university)}` : ""}`
     ),
   jobFitRoles: () => request<string[]>("/job-fit/roles"),
+  skillsInfo: (names: string[]) =>
+    names.length
+      ? request<Record<string, SkillInfo>>(`/skills/info?names=${encodeURIComponent(names.join(","))}`)
+      : Promise.resolve({}),
   jobFit: (program: string, degree: string, role: string, university?: string) =>
     request<JobFitResult>(
       `/job-fit?program=${encodeURIComponent(program)}&degree=${encodeURIComponent(degree)}&role=${encodeURIComponent(role)}` +
