@@ -121,6 +121,7 @@ class ProgramVersion(Base):
 
     program: Mapped["Program"] = relationship(back_populates="versions")
     courses: Mapped[list["Course"]] = relationship(back_populates="program_version")
+    outcomes: Mapped[list["ProgramOutcome"]] = relationship(back_populates="program_version")
 
 
 class Course(Base):
@@ -155,6 +156,46 @@ class CourseSkill(Base):
     input_type: Mapped[str] = mapped_column(String(20), default="names")  # names | descriptions
 
     course: Mapped["Course"] = relationship(back_populates="skills")
+
+
+class ProgramOutcome(Base):
+    """An official, program-level learning outcome kept separate from courses.
+
+    Outcomes are useful evidence for visitors, but they do not enter the
+    alignment calculation until their treatment is explicitly validated.
+    """
+    __tablename__ = "program_outcomes"
+    __table_args__ = (
+        UniqueConstraint("program_version_id", "outcome_index", name="uq_program_outcome_index"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    program_version_id: Mapped[int] = mapped_column(ForeignKey("program_versions.id"))
+    outcome_index: Mapped[int] = mapped_column(Integer)
+    outcome_text: Mapped[str] = mapped_column(Text)
+    outcome_text_original: Mapped[str | None] = mapped_column(Text, nullable=True)
+    source_url: Mapped[str | None] = mapped_column(Text, nullable=True)
+    source_language: Mapped[str | None] = mapped_column(String(50), nullable=True)
+    is_official: Mapped[bool] = mapped_column(Boolean, default=True)
+    collected_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+    program_version: Mapped["ProgramVersion"] = relationship(back_populates="outcomes")
+    skills: Mapped[list["ProgramOutcomeSkill"]] = relationship(back_populates="outcome")
+
+
+class ProgramOutcomeSkill(Base):
+    """A skill extracted from a specific program-level outcome statement."""
+    __tablename__ = "program_outcome_skills"
+    __table_args__ = (
+        UniqueConstraint("outcome_id", "skill_name", name="uq_program_outcome_skill"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    outcome_id: Mapped[int] = mapped_column(ForeignKey("program_outcomes.id"))
+    skill_name: Mapped[str] = mapped_column(String(300))
+    extraction_method: Mapped[str] = mapped_column(String(30), default="LLM")
+
+    outcome: Mapped["ProgramOutcome"] = relationship(back_populates="skills")
 
 
 # ── Job market side ─────────────────────────────────────────────────────────
@@ -220,6 +261,66 @@ class JobSkill(Base):
     prompt_version: Mapped[str | None] = mapped_column(String(60), nullable=True)
 
     posting: Mapped["JobPosting"] = relationship(back_populates="skills")
+
+
+class JobSkillExtractionRun(Base):
+    """An auditable, non-destructive job-skill extraction run.
+
+    Historical ``job_skills`` remains the score-bearing data until a run has
+    been reviewed and explicitly promoted through a separate process.
+    """
+    __tablename__ = "job_skill_extraction_runs"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    run_key: Mapped[str] = mapped_column(String(80), unique=True)
+    model_name: Mapped[str] = mapped_column(String(100))
+    prompt_version: Mapped[str] = mapped_column(String(80))
+    status: Mapped[str] = mapped_column(String(20), default="running")
+    expected_postings: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    postings: Mapped[list["JobSkillExtractionPosting"]] = relationship(back_populates="run")
+
+
+class JobSkillExtractionPosting(Base):
+    """One posting processed in a versioned job-skill extraction run."""
+    __tablename__ = "job_skill_extraction_postings"
+    __table_args__ = (
+        UniqueConstraint("run_id", "posting_id", name="uq_job_skill_run_posting"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    run_id: Mapped[int] = mapped_column(ForeignKey("job_skill_extraction_runs.id"))
+    posting_id: Mapped[int] = mapped_column(ForeignKey("job_postings.id"))
+    input_hash: Mapped[str] = mapped_column(String(64))
+    raw_response: Mapped[str | None] = mapped_column(Text, nullable=True)
+    completed_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+    run: Mapped["JobSkillExtractionRun"] = relationship(back_populates="postings")
+    skills: Mapped[list["JobSkillExtractionSkill"]] = relationship(back_populates="extraction_posting")
+
+
+class JobSkillExtractionSkill(Base):
+    """A raw and normalized skill with an evidence quote from the posting."""
+    __tablename__ = "job_skill_extraction_skills"
+    __table_args__ = (
+        UniqueConstraint(
+            "extraction_posting_id", "normalized_skill_name", name="uq_job_extraction_skill"
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    extraction_posting_id: Mapped[int] = mapped_column(
+        ForeignKey("job_skill_extraction_postings.id")
+    )
+    raw_skill_name: Mapped[str] = mapped_column(String(300))
+    normalized_skill_name: Mapped[str] = mapped_column(String(300))
+    evidence_text: Mapped[str] = mapped_column(Text)
+    evidence_type: Mapped[str] = mapped_column(String(20), default="explicit")
+
+    extraction_posting: Mapped["JobSkillExtractionPosting"] = relationship(back_populates="skills")
 
 
 # ── Analysis side ───────────────────────────────────────────────────────────
