@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
 import { Sidebar } from "@/components/Sidebar";
-import { UniversityBanner } from "@/components/UniversityBanner";
+import { TopBar } from "@/components/TopBar";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -25,9 +25,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <div className="flex min-h-screen">
       <Sidebar />
-      <main className="flex-1 overflow-y-auto bg-white px-8 py-6">
-        <UniversityBanner />
-        {children}
+      <main className="flex-1 overflow-y-auto bg-background px-8 py-6">
+        <div className="mx-auto max-w-5xl">
+          <TopBar />
+          {children}
+        </div>
       </main>
     </div>
   );

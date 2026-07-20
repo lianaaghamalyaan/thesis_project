@@ -15,7 +15,7 @@ export default function MethodologyPage() {
 
   return (
     <div className="max-w-3xl">
-      <h1 className="text-3xl font-bold text-primary-dark">📐 Methodology</h1>
+      <h1 className="font-display text-3xl font-bold text-primary-dark">Methodology</h1>
       <p className="mt-1 text-sm text-muted">
         A plain-language explanation of what data this dashboard uses, how scores are calculated, and what to keep
         in mind when reading them. Every technical term used elsewhere in the dashboard links back to a section

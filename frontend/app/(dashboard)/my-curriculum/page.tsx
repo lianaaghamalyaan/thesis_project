@@ -90,7 +90,7 @@ export default function MyCurriculumPage() {
   if (user && user.role !== "org_admin") {
     return (
       <div>
-        <h1 className="text-3xl font-bold text-primary-dark">My Curriculum</h1>
+        <h1 className="font-display text-3xl font-bold text-primary-dark">My Curriculum</h1>
         <p className="mt-4 rounded-lg bg-surface px-4 py-3 text-sm text-muted">
           This page is only available to a university's curriculum-editor account.
         </p>
@@ -127,7 +127,7 @@ export default function MyCurriculumPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-primary-dark">My Curriculum</h1>
+      <h1 className="font-display text-3xl font-bold text-primary-dark">My Curriculum</h1>
       <p className="mt-1 text-sm text-muted">
         Confirm a skill is taught in a course even if the published description doesn't mention it. Confirmations are
         shown separately from the official alignment score below — they don't change it automatically.

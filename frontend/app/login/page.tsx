@@ -30,7 +30,7 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-surface px-4">
       <div className="w-full max-w-md">
-        <h1 className="text-3xl font-bold text-primary-dark">CurriculumLens</h1>
+        <h1 className="font-display text-3xl font-bold text-primary-dark">CurriculumLens</h1>
         <p className="mt-1 text-sm text-muted">Curriculum – labor market alignment for Armenian universities</p>
 
         <form onSubmit={handleSubmit} className="mt-6 rounded-xl border border-border bg-white p-6 shadow-sm">

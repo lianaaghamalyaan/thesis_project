@@ -14,9 +14,11 @@ export function scoreLabel(score: number | null | undefined): string {
   return "Developing";
 }
 
+// Whole percents in all user-facing views — decimals imply more precision
+// than the methodology supports (CLAUDE.md: no fake precision).
 export function formatScore(score: number | null | undefined): string {
   if (score === null || score === undefined || Number.isNaN(score)) return "—";
-  return `${score.toFixed(1)}%`;
+  return `${Math.round(score)}%`;
 }
 
 export function rolesDisplay(relevantRoles: string | null | undefined): string {

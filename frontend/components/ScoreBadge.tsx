@@ -1,4 +1,4 @@
-import { scoreColor, scoreLabel } from "@/lib/format";
+import { formatScore, scoreColor, scoreLabel } from "@/lib/format";
 
 export function ScoreBadge({ score }: { score: number | null | undefined }) {
   return (
@@ -15,8 +15,8 @@ export function ScoreDisplay({ score, size = "lg" }: { score: number | null | un
   const textSize = size === "lg" ? "text-4xl" : "text-2xl";
   return (
     <div className="text-center">
-      <div className={`${textSize} font-bold`} style={{ color: scoreColor(score) }}>
-        {score === null || score === undefined ? "—" : `${score.toFixed(1)}%`}
+      <div className={`font-display ${textSize} font-bold`} style={{ color: scoreColor(score) }}>
+        {formatScore(score)}
       </div>
       <ScoreBadge score={score} />
     </div>

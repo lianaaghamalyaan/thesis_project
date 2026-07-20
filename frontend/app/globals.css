@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fafaf8;
   --foreground: #1c2b2e;
   --primary: #1f6f78;
   --primary-dark: #153f45;
-  --surface: #f4f7f7;
+  --primary-50: #eef5f5;
+  --primary-100: #d9eaeb;
+  --surface: #ffffff;
+  --surface-muted: #f4f7f7;
   --border: #e1e8e8;
   --muted: #5b6b6e;
   --score-strong: #2e7d32;
@@ -13,6 +16,7 @@
   --score-moderate: #f57c00;
   --score-developing: #c62828;
   --score-none: #9e9e9e;
+  --shadow-card: 0 1px 3px rgb(0 0 0 / 0.06), 0 1px 2px rgb(0 0 0 / 0.04);
 }
 
 @theme inline {
@@ -20,7 +24,10 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
+  --color-primary-50: var(--primary-50);
+  --color-primary-100: var(--primary-100);
   --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
   --color-border: var(--border);
   --color-muted: var(--muted);
   --color-score-strong: var(--score-strong);
@@ -29,10 +36,33 @@
   --color-score-developing: var(--score-developing);
   --color-score-none: var(--score-none);
   --font-sans: var(--font-inter);
+  --font-serif: var(--font-source-serif);
+  --shadow-card: var(--shadow-card);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Serif display face for page titles and headline scores — shifts the tone
+   from "web app" to "institutional report" for the policy-maker audience. */
+.font-display {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.skeleton {
+  animation: skeleton-pulse 1.6s ease-in-out infinite;
+  background: var(--surface-muted);
+  border-radius: 0.5rem;
 }
