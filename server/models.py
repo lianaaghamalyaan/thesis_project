@@ -141,6 +141,7 @@ class Course(Base):
 
     program_version: Mapped["ProgramVersion"] = relationship(back_populates="courses")
     skills: Mapped[list["CourseSkill"]] = relationship(back_populates="course")
+    skill_assertions: Mapped[list["CourseSkillAssertion"]] = relationship(back_populates="course")
 
 
 class CourseSkill(Base):
@@ -396,3 +397,35 @@ class SkillInfo(Base):
     where_used: Mapped[str] = mapped_column(String(200))  # short phrase: e.g. "Web frontend development"
     model_used: Mapped[str] = mapped_column(String(60))
     generated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
+class CourseSkillAssertion(Base):
+    """A university admin's own claim that a specific course teaches a
+    specific skill, kept deliberately separate from CourseSkill (LLM-extracted
+    from the published description). The two are never merged into one row:
+    an extracted skill is evidence from what's published; an assertion is a
+    claim from the people who actually teach it — conflating them would make
+    it impossible to tell "we found this" from "they told us this" later,
+    which matters both for credibility (self-reported vs. independently
+    verified) and for audit (CLAUDE.md's reproducibility requirement — every
+    score change needs a traceable cause).
+
+    Deliberately does NOT feed the canonical AlignmentResult/weighted score
+    directly — server/analytics.py::compute_role_aware_coverage() computes a
+    separate live preview number that includes these, shown alongside (not
+    instead of) the official score, which only moves on the next
+    pipeline.compute_alignment.py run. See server/api/routes/curriculum_editor.py.
+    """
+    __tablename__ = "course_skill_assertions"
+    __table_args__ = (
+        UniqueConstraint("course_id", "skill_name", name="uq_course_skill_assertion"),
+    )
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    course_id: Mapped[int] = mapped_column(ForeignKey("courses.id"))
+    skill_name: Mapped[str] = mapped_column(String(300))
+    asserted_by_user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
+    asserted_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    evidence_note: Mapped[str | None] = mapped_column(Text, nullable=True)  # optional free-text, e.g. "covered weeks 4-5, graded project"
+
+    course: Mapped["Course"] = relationship(back_populates="skill_assertions")

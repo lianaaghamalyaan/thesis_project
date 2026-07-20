@@ -19,6 +19,7 @@ from .models import (
     AlignmentRun,
     Course,
     CourseSkill,
+    CourseSkillAssertion,
     GapSkill,
     JobCollection,
     JobPosting,
@@ -29,6 +30,7 @@ from .models import (
     ProgramOutcomeSkill,
     ProgramVersion,
     University,
+    User,
 )
 
 CANONICAL_EXPERIMENT = "LLM_desc_semantic"
@@ -385,6 +387,82 @@ def load_skill_info(skill_names: list[str]) -> dict[str, dict]:
             .where(SkillInfo.skill_name.in_(skill_names))
         ).all()
         return {name: {"description": desc, "where_used": where} for name, desc, where in rows}
+    finally:
+        session.close()
+
+
+def load_curriculum_editor_data(university: str) -> list[dict]:
+    """This university's programs -> courses -> extracted skills + confirmed
+    assertions, for the "My Curriculum" editor. Always scoped to one
+    specific university (never None/"all") — the caller (the
+    require_curriculum_editor-gated route) must resolve that from the
+    session, never trust a client-supplied value."""
+    session = get_session()
+    try:
+        rows = session.execute(
+            select(Course, Program)
+            .join(ProgramVersion, Course.program_version_id == ProgramVersion.id)
+            .join(Program, ProgramVersion.program_id == Program.id)
+            .join(University, Program.university_id == University.id)
+            .where(University.name == university, ProgramVersion.is_current == True)  # noqa: E712
+            .order_by(Program.name, Program.degree_level, Course.id)
+        ).all()
+
+        course_ids = [course.id for course, _ in rows]
+        extracted_by_course: dict[int, list[str]] = {}
+        if course_ids:
+            for course_id, skill_name in session.execute(
+                select(CourseSkill.course_id, CourseSkill.skill_name).where(CourseSkill.course_id.in_(course_ids))
+            ).all():
+                extracted_by_course.setdefault(course_id, []).append(skill_name)
+
+        assertions_by_course: dict[int, list[dict]] = {}
+        if course_ids:
+            assertion_rows = session.execute(
+                select(CourseSkillAssertion, User.full_name)
+                .join(User, CourseSkillAssertion.asserted_by_user_id == User.id)
+                .where(CourseSkillAssertion.course_id.in_(course_ids))
+            ).all()
+            for assertion, asserter_name in assertion_rows:
+                assertions_by_course.setdefault(assertion.course_id, []).append({
+                    "id": assertion.id,
+                    "skill_name": assertion.skill_name,
+                    "asserted_by": asserter_name,
+                    "asserted_at": assertion.asserted_at.isoformat(),
+                    "evidence_note": assertion.evidence_note,
+                })
+
+        programs: dict[tuple[str, str], dict] = {}
+        for course, program in rows:
+            key = (program.name, program.degree_level)
+            entry = programs.setdefault(key, {
+                "program": program.name, "degree": program.degree_level, "courses": [],
+            })
+            entry["courses"].append({
+                "course_id": course.id,
+                "course_name": course.name,
+                "extracted_skills": extracted_by_course.get(course.id, []),
+                "assertions": assertions_by_course.get(course.id, []),
+            })
+        return list(programs.values())
+    finally:
+        session.close()
+
+
+def get_course_university(course_id: int) -> str | None:
+    """Which university owns this course — the ownership check every write
+    in server/api/routes/curriculum_editor.py must pass before touching a
+    CourseSkillAssertion row."""
+    session = get_session()
+    try:
+        row = session.execute(
+            select(University.name)
+            .join(Program, Program.university_id == University.id)
+            .join(ProgramVersion, ProgramVersion.program_id == Program.id)
+            .join(Course, Course.program_version_id == ProgramVersion.id)
+            .where(Course.id == course_id)
+        ).one_or_none()
+        return row[0] if row else None
     finally:
         session.close()
 

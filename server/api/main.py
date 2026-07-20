@@ -15,6 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .auth import router as auth_router
 from .routes.admin import router as admin_router
 from .routes.curriculum import router as curriculum_router
+from .routes.curriculum_editor import router as curriculum_editor_router
 from .routes.gaps import router as gaps_router
 from .routes.job_fit import router as job_fit_router
 from .routes.job_skills import router as job_skills_router
@@ -42,6 +43,7 @@ app.include_router(universities_router)
 app.include_router(programs_router)
 app.include_router(gaps_router)
 app.include_router(curriculum_router)
+app.include_router(curriculum_editor_router)
 app.include_router(job_skills_router)
 app.include_router(runs_router)
 app.include_router(admin_router)

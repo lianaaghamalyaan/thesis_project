@@ -67,6 +67,23 @@ export function Sidebar() {
             </ul>
           </div>
         )}
+        {user?.role === "org_admin" && (
+          <div>
+            <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-white/60">Editor</div>
+            <ul className="space-y-0.5">
+              <li>
+                <Link
+                  href="/my-curriculum"
+                  className={`flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm ${
+                    pathname === "/my-curriculum" ? "bg-white/15 font-medium" : "hover:bg-white/10"
+                  }`}
+                >
+                  ✏️ My Curriculum
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </nav>
 
       {user && (

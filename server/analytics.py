@@ -132,6 +132,51 @@ def get_strengths(
     return matched[:n]
 
 
+def compute_role_aware_coverage(
+    prog_skills: set[str],
+    relevant_roles: str | None,
+    job_skills_by_role: dict,
+    role_posting_counts: dict,
+) -> dict:
+    """Same semantic-matching decision and core-skill definition as
+    get_strengths above, returned as summary numbers (core_n_job_skills,
+    core_n_overlap, core_role_coverage_pct, weighted_core_coverage_pct)
+    instead of a per-skill list. Takes an arbitrary program-skill set rather
+    than loading one from curriculum_df, so the exact same formula that
+    produces pipeline/compute_alignment.py's stored canonical numbers can
+    also power a live "what if" recompute — e.g. the "including your
+    confirmed skills" preview in server/api/routes/curriculum_editor.py,
+    where prog_skills is extended with CourseSkillAssertion rows before
+    calling this. The two resulting numbers are directly comparable because
+    they're the same formula on a different input, not two different
+    formulas."""
+    known_roles = set(job_skills_by_role.keys())
+    role_set = expand_program_roles(relevant_roles, known_roles)
+    if not role_set:
+        return {"core_n_job_skills": None, "core_n_overlap": None,
+                "core_role_coverage_pct": None, "weighted_core_coverage_pct": None}
+
+    core_skills = _get_core_job_skills_for_roles(role_set, job_skills_by_role, role_posting_counts)
+    if not core_skills:
+        return {"core_n_job_skills": 0, "core_n_overlap": 0,
+                "core_role_coverage_pct": None, "weighted_core_coverage_pct": None}
+    freq_map = _get_role_freq_map(role_set, job_skills_by_role)
+
+    covered = semantic_covered_job_skills_with_source(prog_skills, core_skills)
+    n_overlap = len(covered)
+    n_total = len(core_skills)
+
+    total_weight = sum(freq_map.get(s, 0) for s in core_skills)
+    overlap_weight = sum(freq_map.get(s, 0) for s in covered)
+
+    return {
+        "core_n_job_skills": n_total,
+        "core_n_overlap": n_overlap,
+        "core_role_coverage_pct": round(n_overlap / n_total * 100, 2),
+        "weighted_core_coverage_pct": round(overlap_weight / total_weight * 100, 2) if total_weight else None,
+    }
+
+
 SHORT_DESCRIPTION_CHARS = 50  # matches the existing "missing_descriptions" threshold in admin/doc-quality
 
 

@@ -204,6 +204,18 @@ export const api = {
     `${API_BASE}/programs/${encodeURIComponent(program)}/${encodeURIComponent(degree)}/brief.pdf${
       university ? `?university=${encodeURIComponent(university)}` : ""
     }`,
+  curriculumEditor: () => request<EditorProgram[]>("/admin/curriculum-editor"),
+  createAssertion: (course_id: number, skill_name: string, evidence_note?: string) =>
+    request<{ id: number; skill_name: string }>("/admin/assertions", {
+      method: "POST",
+      body: JSON.stringify({ course_id, skill_name, evidence_note: evidence_note ?? null }),
+    }),
+  deleteAssertion: (assertion_id: number) =>
+    request<{ ok: boolean }>(`/admin/assertions/${assertion_id}`, { method: "DELETE" }),
+  coveragePreview: (program: string, degree: string) =>
+    request<CoveragePreview>(
+      `/admin/coverage-preview?program=${encodeURIComponent(program)}&degree=${encodeURIComponent(degree)}`
+    ),
 };
 
 export type Recommendation = { type: string; title: string; description: string; priority: string };
@@ -262,4 +274,37 @@ export type MissingDescriptionCourse = {
 export type DocQualityResponse = {
   programs: DocQualityProgram[];
   missing_descriptions: MissingDescriptionCourse[];
+};
+
+// ── "My Curriculum" editor (university admins confirming taught skills) ───
+
+export type SkillAssertion = {
+  id: number;
+  skill_name: string;
+  asserted_by: string;
+  asserted_at: string;
+  evidence_note: string | null;
+};
+
+export type EditorCourse = {
+  course_id: number;
+  course_name: string;
+  extracted_skills: string[];
+  assertions: SkillAssertion[];
+};
+
+export type EditorProgram = {
+  program: string;
+  degree: string;
+  courses: EditorCourse[];
+};
+
+export type CoveragePreview = {
+  core_n_job_skills: number | null;
+  current_core_n_overlap: number | null;
+  current_core_role_coverage_pct: number | null;
+  current_weighted_core_coverage_pct: number | null;
+  with_assertions_core_n_overlap: number | null;
+  with_assertions_core_role_coverage_pct: number | null;
+  with_assertions_weighted_core_coverage_pct: number | null;
 };

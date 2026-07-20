@@ -153,3 +153,47 @@ class ProgramDetail(BaseModel):
     gap_type: str
     course_evidence: list[CourseEvidence]
     program_outcomes: list[ProgramOutcomeEvidence]
+
+
+# ── "My Curriculum" editor (university admins confirming taught skills) ───
+
+class SkillAssertion(BaseModel):
+    id: int
+    skill_name: str
+    asserted_by: str
+    asserted_at: str
+    evidence_note: str | None
+
+
+class EditorCourse(BaseModel):
+    course_id: int
+    course_name: str
+    extracted_skills: list[str]
+    assertions: list[SkillAssertion]
+
+
+class EditorProgram(BaseModel):
+    program: str
+    degree: str
+    courses: list[EditorCourse]
+
+
+class CreateAssertionRequest(BaseModel):
+    course_id: int
+    skill_name: str
+    evidence_note: str | None = None
+
+
+class CoveragePreview(BaseModel):
+    """Same shape twice — current (extraction-only, matches the stored
+    canonical AlignmentResult) and with_assertions (also counting this
+    university's confirmed-taught skills) — so the UI can show the delta.
+    Deliberately not written back to AlignmentResult; see
+    CourseSkillAssertion's docstring for why the two stay separate."""
+    core_n_job_skills: int | None
+    current_core_n_overlap: int | None
+    current_core_role_coverage_pct: float | None
+    current_weighted_core_coverage_pct: float | None
+    with_assertions_core_n_overlap: int | None
+    with_assertions_core_role_coverage_pct: float | None
+    with_assertions_weighted_core_coverage_pct: float | None

@@ -41,6 +41,19 @@ def require_admin(user: dict = Depends(get_current_user)) -> dict:
     return user
 
 
+def require_curriculum_editor(user: dict = Depends(get_current_user)) -> dict:
+    """Gate for the "My Curriculum" editor: a university's own org_admin
+    account only — never a policy/internal superadmin acting as a stand-in
+    for a university (this is the university self-reporting what IT teaches,
+    not a platform admin editing on its behalf), and never a "viewer"-role
+    account at a university (read access only). Combined with
+    resolve_university() at each write, this is what makes it structurally
+    impossible for e.g. NPUA's admin to see or touch YSU's courses."""
+    if user.get("org_type") != "university" or user.get("role") != "org_admin":
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "University admin access required")
+    return user
+
+
 def resolve_university(requested: str | None, user: dict) -> str | None:
     """Server-side scoping enforcement: a university-tier account can only
     ever see its own university's data, regardless of what the client sends
