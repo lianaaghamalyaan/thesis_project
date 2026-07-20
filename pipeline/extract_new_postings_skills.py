@@ -39,6 +39,7 @@ def main() -> None:
 
     from sqlalchemy import select
 
+    from pipeline.extract_course_skills import normalize_skills
     from pipeline.reextract_job_skills_v2 import (
         MODEL,
         PROMPT_VERSION,
@@ -106,7 +107,17 @@ def main() -> None:
                 n_failed += 1
                 continue
 
-            for skill_name in skills_seen:
+            # Fold each raw phrase into the nearest existing canonical skill
+            # name (cosine >= 0.85), exactly as pipeline/add_july_postings.py
+            # did — so a freshly-scraped "NodeJS"/"Node.js" spelling variant
+            # joins the existing vocabulary instead of adding a near-duplicate.
+            # Without this, weekly automation would slowly re-fragment the
+            # vocabulary that pipeline/consolidate_skills.py (which only
+            # catches acronym/word-subset pairs, a narrower net) can't fully
+            # reunify. dedupe after mapping: two raw phrases can normalize to
+            # the same canonical name.
+            canonical = set(normalize_skills(list(skills_seen), session))
+            for skill_name in canonical:
                 session.add(JobSkill(
                     posting_id=posting.id, skill_name=skill_name,
                     extraction_method="LLM", prompt_version=PROMPT_VERSION,
