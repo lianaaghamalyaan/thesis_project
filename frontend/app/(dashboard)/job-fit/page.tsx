@@ -27,26 +27,42 @@ export default function JobFitPage() {
   const programs: ProgramAlignment[] = programsQ.data ?? [];
   const roles = rolesQ.data ?? [];
 
+  // Keep the selected program valid for the loaded list. Critical when the
+  // university switches: the previous university's program lingers in state
+  // and, if it isn't in the new list, the <select> shows the first option
+  // while state still holds the stale name — firing a job-fit request for a
+  // program that doesn't exist at this university (returns 0/0). Reset to the
+  // first program whenever the current selection isn't in the loaded set.
+  const programValid = programs.some((p) => p.program === program && p.degree === degree);
   useEffect(() => {
-    if (programs.length && !program) {
+    if (programs.length && !programValid) {
       setProgram(programs[0].program);
       setDegree(programs[0].degree);
     }
-  }, [programs, program]);
+  }, [programs, programValid]);
   useEffect(() => {
     if (roles.length && !role) setRole(roles[0]);
   }, [roles, role]);
 
   useEffect(() => {
-    if (program && degree && role && universityParam) {
-      setResult(null);
-      setFitError(null);
-      api
-        .jobFit(program, degree, role, universityParam)
-        .then(setResult)
-        .catch((e: unknown) => setFitError(e instanceof Error ? e.message : "Request failed"));
-    }
-  }, [program, degree, role, universityParam]);
+    // Only fetch once the program is confirmed to belong to this university —
+    // never during the transient mismatch after a university switch.
+    if (!(program && degree && role && universityParam && programValid)) return;
+    let cancelled = false;
+    setResult(null);
+    setFitError(null);
+    api
+      .jobFit(program, degree, role, universityParam)
+      .then((r) => {
+        if (!cancelled) setResult(r);
+      })
+      .catch((e: unknown) => {
+        if (!cancelled) setFitError(e instanceof Error ? e.message : "Request failed");
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [program, degree, role, universityParam, programValid]);
 
   if (isAllUniversities) {
     return (
