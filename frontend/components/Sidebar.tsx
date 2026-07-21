@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   BookOpenCheck,
+  Database,
   Briefcase,
   Compass,
   Globe,
@@ -42,6 +43,7 @@ const NAV_SECTIONS: NavSection[] = [
     title: "About",
     items: [
       { href: "/methodology", label: "Methodology", icon: BookOpenCheck },
+      { href: "/evidence", label: "Evidence Explorer", icon: Database },
       { href: "/admin", label: "Data & Admin", icon: Settings },
     ],
   },

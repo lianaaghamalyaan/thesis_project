@@ -212,6 +212,17 @@ export const api = {
     }),
   deleteAssertion: (assertion_id: number) =>
     request<{ ok: boolean }>(`/admin/assertions/${assertion_id}`, { method: "DELETE" }),
+  evidenceMeta: () => request<EvidenceMeta>("/evidence/meta"),
+  evidenceJobs: (params: { q?: string; role?: string; source?: string; offset?: number; limit?: number }) => {
+    const qp = new URLSearchParams();
+    for (const [k, v] of Object.entries(params)) if (v !== undefined && v !== "") qp.set(k, String(v));
+    return request<EvidenceJobsResponse>(`/evidence/jobs?${qp}`);
+  },
+  evidenceCourses: (params: { q?: string; university?: string; offset?: number; limit?: number }) => {
+    const qp = new URLSearchParams();
+    for (const [k, v] of Object.entries(params)) if (v !== undefined && v !== "") qp.set(k, String(v));
+    return request<EvidenceCoursesResponse>(`/evidence/courses?${qp}`);
+  },
   coveragePreview: (program: string, degree: string) =>
     request<CoveragePreview>(
       `/admin/coverage-preview?program=${encodeURIComponent(program)}&degree=${encodeURIComponent(degree)}`
@@ -308,3 +319,67 @@ export type CoveragePreview = {
   with_assertions_core_role_coverage_pct: number | null;
   with_assertions_weighted_core_coverage_pct: number | null;
 };
+
+// ── Evidence Explorer (audit the raw records behind every score) ──────────
+
+export type EvidenceMeta = {
+  extraction_run: {
+    run_key: string;
+    model_name: string;
+    prompt_version: string;
+    status: string;
+    completed_at: string | null;
+  } | null;
+  role_groups: string[];
+  sources: string[];
+  universities: string[];
+};
+
+export type EvidenceJobSkill = {
+  skill_name: string;
+  raw_skill_name: string;
+  evidence_text: string;
+  evidence_type: string;
+};
+
+export type EvidencePosting = {
+  posting_id: number;
+  job_id: string;
+  job_title: string;
+  company_name: string | null;
+  location: string | null;
+  employment_type: string | null;
+  seniority_level: string | null;
+  posting_date: string | null;
+  deadline: string | null;
+  it_role_group: string | null;
+  source_name: string;
+  source_type: string;
+  source_url: string;
+  skills: EvidenceJobSkill[];
+};
+
+export type EvidenceJobsResponse = { total: number; run_key: string | null; postings: EvidencePosting[] };
+
+export type EvidenceCourseSkill = {
+  skill_name: string;
+  confidence_tier: string | null;
+  extraction_method: string;
+  input_type: string;
+};
+
+export type EvidenceCourse = {
+  course_id: number;
+  course_name: string;
+  course_name_original: string | null;
+  university: string;
+  program: string;
+  degree: string;
+  credits: number | null;
+  description: string | null;
+  ai_generated: boolean;
+  source_url: string | null;
+  skills: EvidenceCourseSkill[];
+};
+
+export type EvidenceCoursesResponse = { total: number; courses: EvidenceCourse[] };
