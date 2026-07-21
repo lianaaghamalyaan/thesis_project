@@ -83,7 +83,7 @@ def _generate(prompt: str) -> str:
         from google.genai import types
 
         client = genai.Client(api_key=gemini_key)
-        # gemini-2.5-flash is a "thinking" model; leaving thinking on spends
+        # gemini-3.5-flash is a "thinking" model; leaving thinking on spends
         # the output budget on reasoning and truncates the JSON. Disable it
         # (thinking_budget=0) and give ample tokens so the object completes.
         cfg = types.GenerateContentConfig(
@@ -97,7 +97,7 @@ def _generate(prompt: str) -> str:
         except Exception:  # noqa: BLE001 — older SDKs / non-thinking models
             pass
         resp = client.models.generate_content(
-            model=os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"),
+            model=os.environ.get("GEMINI_MODEL", "gemini-3.5-flash"),
             contents=prompt,
             config=cfg,
         )
