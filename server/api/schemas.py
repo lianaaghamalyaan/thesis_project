@@ -200,3 +200,19 @@ class CoveragePreview(BaseModel):
     with_assertions_core_n_overlap: int | None
     with_assertions_core_role_coverage_pct: float | None
     with_assertions_weighted_core_coverage_pct: float | None
+
+
+class AdvisorRequest(BaseModel):
+    program: str
+    degree: str
+    skill: str
+
+
+class AdvisorResponse(BaseModel):
+    skill: str
+    best_course: str
+    why_this_course: str
+    module_outline: list[str]
+    employer_rationale: str
+    effort: str
+    n_evidence_postings: int

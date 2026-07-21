@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { api, EditorProgram, CoveragePreview, GapSkillRow } from "@/lib/api";
+import { api, AdvisorResponse, EditorProgram, CoveragePreview, GapSkillRow } from "@/lib/api";
 import { useAuth } from "@/lib/auth-context";
 import { formatScore, scoreColor } from "@/lib/format";
 
@@ -255,6 +255,8 @@ export default function MyCurriculumPage() {
 
           {program && tab === "gaps" && (
             <GapWorkQueue
+              program={program.program}
+              degree={program.degree}
               gapRows={programGapRows}
               courses={program.courses}
               busyKey={busyKey}
@@ -370,12 +372,16 @@ function CourseSkillPicker({
 // queue only changes where you start (the market's most-wanted skills),
 // not the evidence standard.
 function GapWorkQueue({
+  program,
+  degree,
   gapRows,
   courses,
   busyKey,
   onAdd,
   onRemove,
 }: {
+  program: string;
+  degree: string;
   gapRows: GapSkillRow[];
   courses: EditorProgram["courses"];
   busyKey: string | null;
@@ -458,6 +464,7 @@ function GapWorkQueue({
                   onAdd={onAdd}
                 />
               )}
+              <AdvisorButton program={program} degree={degree} skill={g.gap_skill} />
             </li>
           );
         })}
@@ -514,6 +521,76 @@ function GapRowPicker({
             Confirm taught
           </button>
         </>
+      )}
+    </div>
+  );
+}
+
+
+// AI advisor: "how do we add this skill, and to which course?" Grounds its
+// answer in this skill's real job-posting evidence + the program's actual
+// course list (see server/api/routes/advisor.py). Loaded on demand per row.
+function AdvisorButton({ program, degree, skill }: { program: string; degree: string; skill: string }) {
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<AdvisorResponse | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const ask = () => {
+    setOpen(true);
+    if (result || loading) return;
+    setLoading(true);
+    setError(null);
+    api
+      .advisorIntegrateSkill(program, degree, skill)
+      .then(setResult)
+      .catch((e: unknown) => setError(e instanceof Error ? e.message : "Advisor unavailable"))
+      .finally(() => setLoading(false));
+  };
+
+  return (
+    <div className="mt-2">
+      {!open && (
+        <button onClick={ask} className="text-xs font-medium text-primary hover:underline">
+          ✨ How do we add this? (AI advisor)
+        </button>
+      )}
+      {open && (
+        <div className="mt-1 rounded-lg border border-primary/20 bg-primary-50 px-3 py-2.5 text-xs">
+          {loading && <p className="text-muted">Analyzing employer demand and your courses…</p>}
+          {error && (
+            <p className="text-muted">
+              Advisor couldn&apos;t run right now. <span className="text-foreground">{error}</span>
+            </p>
+          )}
+          {result && (
+            <div className="space-y-1.5 leading-relaxed">
+              <p>
+                <span className="font-semibold text-primary-dark">Best fit:</span>{" "}
+                <strong>{result.best_course}</strong>
+                {result.effort && <span className="ml-1 rounded-full bg-white px-1.5 py-0.5 text-[10px] text-muted ring-1 ring-border">{result.effort}</span>}
+              </p>
+              <p className="text-muted">{result.why_this_course}</p>
+              {result.module_outline.length > 0 && (
+                <ul className="ml-4 list-disc text-muted">
+                  {result.module_outline.map((m, i) => (
+                    <li key={i}>{m}</li>
+                  ))}
+                </ul>
+              )}
+              {result.employer_rationale && (
+                <p className="text-muted">
+                  <span className="font-medium text-foreground">Why it matters:</span> {result.employer_rationale}
+                  {result.n_evidence_postings > 0 && ` (from ${result.n_evidence_postings} postings)`}
+                </p>
+              )}
+              <p className="pt-1 text-[10px] text-muted">AI-generated suggestion — review before acting. Not saved.</p>
+            </div>
+          )}
+          <button onClick={() => setOpen(false)} className="mt-1.5 text-[11px] text-muted hover:text-foreground">
+            Hide
+          </button>
+        </div>
       )}
     </div>
   );

@@ -212,6 +212,11 @@ export const api = {
     }),
   deleteAssertion: (assertion_id: number) =>
     request<{ ok: boolean }>(`/admin/assertions/${assertion_id}`, { method: "DELETE" }),
+  advisorIntegrateSkill: (program: string, degree: string, skill: string) =>
+    request<AdvisorResponse>("/advisor/integrate-skill", {
+      method: "POST",
+      body: JSON.stringify({ program, degree, skill }),
+    }),
   evidenceMeta: () => request<EvidenceMeta>("/evidence/meta"),
   evidenceJobs: (params: { q?: string; role?: string; source?: string; offset?: number; limit?: number }) => {
     const qp = new URLSearchParams();
@@ -383,3 +388,14 @@ export type EvidenceCourse = {
 };
 
 export type EvidenceCoursesResponse = { total: number; courses: EvidenceCourse[] };
+
+
+export type AdvisorResponse = {
+  skill: string;
+  best_course: string;
+  why_this_course: string;
+  module_outline: string[];
+  employer_rationale: string;
+  effort: string;
+  n_evidence_postings: number;
+};
