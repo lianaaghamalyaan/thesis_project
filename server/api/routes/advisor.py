@@ -12,6 +12,8 @@ choose among the real courses, not to invent new ones.
 from __future__ import annotations
 
 import json
+import os
+from pathlib import Path
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import func
@@ -31,6 +33,8 @@ from server.models import (
 
 from ..deps import require_curriculum_editor
 from ..schemas import AdvisorRequest, AdvisorResponse
+
+ROOT = Path(__file__).resolve().parents[3]
 
 router = APIRouter(tags=["advisor"])
 
@@ -64,11 +68,51 @@ def _db() -> Session:
         db.close()
 
 
-def _message_text(message) -> str:
-    parts = [b.text for b in message.content if getattr(b, "type", None) == "text"]
-    if not parts:
-        raise ValueError("Claude returned no text block")
-    return "\n".join(parts).strip()
+def _generate(prompt: str) -> str:
+    """Call an LLM and return raw text. Gemini first (a free monthly tier),
+    Anthropic as fallback if only that key is configured. Reads keys from
+    the repo-root .env at call time so a running server picks up a newly
+    added key without a code change."""
+    from dotenv import load_dotenv
+
+    load_dotenv(ROOT / ".env")
+
+    gemini_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if gemini_key:
+        from google import genai
+        from google.genai import types
+
+        client = genai.Client(api_key=gemini_key)
+        resp = client.models.generate_content(
+            model=os.environ.get("GEMINI_MODEL", "gemini-2.0-flash"),
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT,
+                max_output_tokens=800,
+                response_mime_type="application/json",  # force clean JSON
+                temperature=0.4,
+            ),
+        )
+        text = (resp.text or "").strip()
+        if not text:
+            raise ValueError("Gemini returned no text")
+        return text
+
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        import anthropic
+
+        msg = anthropic.Anthropic().messages.create(
+            model="claude-sonnet-5",
+            max_tokens=800,
+            system=SYSTEM_PROMPT,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        parts = [b.text for b in msg.content if getattr(b, "type", None) == "text"]
+        if not parts:
+            raise ValueError("Claude returned no text block")
+        return "\n".join(parts).strip()
+
+    raise ValueError("No LLM API key configured (set GEMINI_API_KEY or ANTHROPIC_API_KEY)")
 
 
 @router.post("/advisor/integrate-skill", response_model=AdvisorResponse)
@@ -148,21 +192,8 @@ def integrate_skill(
         f"The program's current courses:\n{course_lines}\n"
     )
 
-    from dotenv import load_dotenv
-    from pathlib import Path
-
-    load_dotenv(Path(__file__).resolve().parents[3] / ".env")
-    import anthropic
-
     try:
-        client = anthropic.Anthropic()
-        msg = client.messages.create(
-            model="claude-sonnet-5",
-            max_tokens=700,
-            system=SYSTEM_PROMPT,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        raw = _message_text(msg)
+        raw = _generate(prompt)
         if raw.startswith("```"):
             raw = raw.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
         data = json.loads(raw)
