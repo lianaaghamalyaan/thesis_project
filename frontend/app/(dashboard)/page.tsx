@@ -124,7 +124,6 @@ function OverviewPageInner() {
         <MetricCard
           label="Analysis last generated"
           value={meta ? formatDate(meta.created_at) : "—"}
-          caption={meta ? `Run ID: ${meta.run_id}` : undefined}
         />
       </div>
 
