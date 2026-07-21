@@ -83,15 +83,23 @@ def _generate(prompt: str) -> str:
         from google.genai import types
 
         client = genai.Client(api_key=gemini_key)
+        # gemini-2.5-flash is a "thinking" model; leaving thinking on spends
+        # the output budget on reasoning and truncates the JSON. Disable it
+        # (thinking_budget=0) and give ample tokens so the object completes.
+        cfg = types.GenerateContentConfig(
+            system_instruction=SYSTEM_PROMPT,
+            max_output_tokens=2048,
+            response_mime_type="application/json",  # force clean JSON
+            temperature=0.4,
+        )
+        try:
+            cfg.thinking_config = types.ThinkingConfig(thinking_budget=0)
+        except Exception:  # noqa: BLE001 — older SDKs / non-thinking models
+            pass
         resp = client.models.generate_content(
-            model=os.environ.get("GEMINI_MODEL", "gemini-2.0-flash"),
+            model=os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"),
             contents=prompt,
-            config=types.GenerateContentConfig(
-                system_instruction=SYSTEM_PROMPT,
-                max_output_tokens=800,
-                response_mime_type="application/json",  # force clean JSON
-                temperature=0.4,
-            ),
+            config=cfg,
         )
         text = (resp.text or "").strip()
         if not text:
