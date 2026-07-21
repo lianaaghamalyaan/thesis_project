@@ -25,6 +25,7 @@ export default function EvidencePage() {
   // Course side
   const [courseQ, setCourseQ] = useState("");
   const [courseUni, setCourseUni] = useState("");
+  const [courseProgram, setCourseProgram] = useState("");
   const [courses, setCourses] = useState<EvidenceCourse[]>([]);
   const [courseTotal, setCourseTotal] = useState(0);
   const [courseError, setCourseError] = useState<string | null>(null);
@@ -47,7 +48,7 @@ export default function EvidencePage() {
     setCourseLoading(true);
     setCourseError(null);
     api
-      .evidenceCourses({ q: courseQ, university: courseUni, offset, limit: PAGE })
+      .evidenceCourses({ q: courseQ, university: courseUni, program: courseProgram, offset, limit: PAGE })
       .then((r) => {
         setCourseTotal(r.total);
         setCourses((prev) => (offset === 0 ? r.courses : [...prev, ...r.courses]));
@@ -67,7 +68,13 @@ export default function EvidencePage() {
     const t = setTimeout(() => loadCourses(0), 350);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [courseQ, courseUni]);
+  }, [courseQ, courseUni, courseProgram]);
+
+  // Clearing/switching the university resets the program filter, since the
+  // program list is scoped to the chosen university.
+  useEffect(() => {
+    setCourseProgram("");
+  }, [courseUni]);
 
   if (metaQ.error) return <ErrorState message={metaQ.error} onRetry={metaQ.retry} />;
   if (!metaQ.data) return <PageSkeleton />;
@@ -208,6 +215,14 @@ export default function EvidencePage() {
                 <option key={u} value={u}>{u}</option>
               ))}
             </select>
+            {courseUni && (meta.programs_by_university[courseUni]?.length ?? 0) > 0 && (
+              <select value={courseProgram} onChange={(e) => setCourseProgram(e.target.value)} aria-label="Filter by program" className="rounded-lg border border-border bg-surface px-3 py-2 text-sm">
+                <option value="">All programs</option>
+                {meta.programs_by_university[courseUni].map((p) => (
+                  <option key={p} value={p}>{p}</option>
+                ))}
+              </select>
+            )}
             <input
               type="search"
               value={courseQ}

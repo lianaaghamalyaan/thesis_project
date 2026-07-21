@@ -223,7 +223,7 @@ export const api = {
     for (const [k, v] of Object.entries(params)) if (v !== undefined && v !== "") qp.set(k, String(v));
     return request<EvidenceJobsResponse>(`/evidence/jobs?${qp}`);
   },
-  evidenceCourses: (params: { q?: string; university?: string; offset?: number; limit?: number }) => {
+  evidenceCourses: (params: { q?: string; university?: string; program?: string; offset?: number; limit?: number }) => {
     const qp = new URLSearchParams();
     for (const [k, v] of Object.entries(params)) if (v !== undefined && v !== "") qp.set(k, String(v));
     return request<EvidenceCoursesResponse>(`/evidence/courses?${qp}`);
@@ -338,6 +338,7 @@ export type EvidenceMeta = {
   role_groups: string[];
   sources: string[];
   universities: string[];
+  programs_by_university: Record<string, string[]>;
 };
 
 export type EvidenceJobSkill = {

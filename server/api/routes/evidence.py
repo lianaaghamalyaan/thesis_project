@@ -54,6 +54,19 @@ def evidence_meta(user: dict = Depends(get_current_user), db: Session = Depends(
     roles = [r[0] for r in db.query(JobPosting.it_role_group).filter(JobPosting.it_role_group.isnot(None)).distinct().order_by(JobPosting.it_role_group)]
     sources = [r[0] for r in db.query(JobSource.name).order_by(JobSource.name)]
     universities = [r[0] for r in db.query(University.name).order_by(University.name)]
+    # Programs grouped by university, so the Courses tab can offer a program
+    # picker that narrows to the chosen university (current versions only).
+    programs_by_university: dict[str, list[str]] = {}
+    prog_rows = (
+        db.query(University.name, Program.name, Program.degree_level)
+        .join(Program, Program.university_id == University.id)
+        .join(ProgramVersion, ProgramVersion.program_id == Program.id)
+        .filter(ProgramVersion.is_current.is_(True))
+        .distinct()
+        .order_by(University.name, Program.name, Program.degree_level)
+    )
+    for uni, prog, degree in prog_rows:
+        programs_by_university.setdefault(uni, []).append(f"{prog} ({degree})")
     return {
         "extraction_run": {
             "run_key": run.run_key,
@@ -67,6 +80,7 @@ def evidence_meta(user: dict = Depends(get_current_user), db: Session = Depends(
         "role_groups": roles,
         "sources": sources,
         "universities": universities,
+        "programs_by_university": programs_by_university,
     }
 
 
@@ -174,6 +188,7 @@ def evidence_jobs(
 def evidence_courses(
     q: str = "",
     university: str = "",
+    program: str = "",
     offset: int = 0,
     limit: int = 25,
     user: dict = Depends(get_current_user),
@@ -194,6 +209,14 @@ def evidence_courses(
     )
     if university:
         base = base.filter(University.name == university)
+    if program:
+        # Arrives as "Program Name (Degree)" from the meta program list.
+        name, _, degree = program.rpartition(" (")
+        degree = degree.rstrip(")")
+        if name and degree:
+            base = base.filter(Program.name == name, Program.degree_level == degree)
+        else:
+            base = base.filter(Program.name == program)
     if q:
         like = f"%{q}%"
         skill_match = db.query(CourseSkill.course_id).filter(CourseSkill.skill_name.ilike(like))
