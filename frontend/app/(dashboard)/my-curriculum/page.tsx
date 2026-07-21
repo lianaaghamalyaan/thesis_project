@@ -25,7 +25,7 @@ export default function MyCurriculumPage() {
   const [gaps, setGaps] = useState<GapSkillRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState<{ program: string; degree: string } | null>(null);
-  const [tab, setTab] = useState<"courses" | "gaps">("courses");
+  const [tab, setTab] = useState<"courses" | "gaps">("gaps");
   const [preview, setPreview] = useState<CoveragePreview | null>(null);
   const [busyKey, setBusyKey] = useState<string | null>(null);
 
@@ -68,13 +68,13 @@ export default function MyCurriculumPage() {
 
   // Market gap skills for the selected program, highest-demand first — the
   // skills that would actually raise coverage if confirmed as taught.
-  const programGapSkills = useMemo(() => {
-    if (!program) return [] as string[];
+  const programGapRows = useMemo(() => {
+    if (!program) return [] as GapSkillRow[];
     return gaps
       .filter((g) => g.program === program.program && g.degree === program.degree)
-      .sort((a, b) => (b.job_frequency ?? 0) - (a.job_frequency ?? 0))
-      .map((g) => g.gap_skill);
+      .sort((a, b) => (b.job_frequency ?? 0) - (a.job_frequency ?? 0));
   }, [gaps, program]);
+  const programGapSkills = useMemo(() => programGapRows.map((g) => g.gap_skill), [programGapRows]);
 
   // Everything else already extracted somewhere in this university, as a
   // secondary group (mostly no-ops for the score, but useful for completeness).
@@ -96,6 +96,20 @@ export default function MyCurriculumPage() {
         </p>
       </div>
     );
+  }
+
+  async function addAssertionWithNote(courseId: number, skillName: string, note?: string) {
+    const key = `${courseId}:${skillName}`;
+    setBusyKey(key);
+    try {
+      await api.createAssertion(courseId, skillName, note);
+      await reloadData();
+      refreshPreview();
+    } catch (e) {
+      alert(e instanceof Error ? e.message : "Failed to add");
+    } finally {
+      setBusyKey(null);
+    }
   }
 
   async function addAssertion(courseId: number, skillName: string) {
@@ -186,13 +200,13 @@ export default function MyCurriculumPage() {
               onClick={() => setTab("courses")}
               className={`px-3 py-2 text-sm font-medium ${tab === "courses" ? "border-b-2 border-primary-dark text-primary-dark" : "text-muted"}`}
             >
-              Per-course
+              Per-course view
             </button>
             <button
               onClick={() => setTab("gaps")}
               className={`px-3 py-2 text-sm font-medium ${tab === "gaps" ? "border-b-2 border-primary-dark text-primary-dark" : "text-muted"}`}
             >
-              Choose from all skills
+              Gap work queue ({programGapRows.length})
             </button>
           </div>
 
@@ -240,18 +254,13 @@ export default function MyCurriculumPage() {
           )}
 
           {program && tab === "gaps" && (
-            <div className="mt-4 rounded-lg border border-border p-4">
-              <p className="text-sm text-muted">
-                Pick a course, then confirm any skill — the list leads with this program's market gaps (the skills that
-                would actually raise your coverage), or type any other skill name.
-              </p>
-              <GeneralSkillPicker
-                courses={program.courses}
-                options={options}
-                busyKey={busyKey}
-                onAdd={addAssertion}
-              />
-            </div>
+            <GapWorkQueue
+              gapRows={programGapRows}
+              courses={program.courses}
+              busyKey={busyKey}
+              onAdd={addAssertionWithNote}
+              onRemove={removeAssertion}
+            />
           )}
         </>
       )}
@@ -356,60 +365,156 @@ function CourseSkillPicker({
   );
 }
 
-function GeneralSkillPicker({
+// The gap-driven work queue: this program's market gap skills, highest
+// demand first. Every confirmation still lands on a specific course — the
+// queue only changes where you start (the market's most-wanted skills),
+// not the evidence standard.
+function GapWorkQueue({
+  gapRows,
   courses,
-  options,
   busyKey,
   onAdd,
+  onRemove,
 }: {
+  gapRows: GapSkillRow[];
   courses: EditorProgram["courses"];
-  options: SkillOptions;
   busyKey: string | null;
-  onAdd: (courseId: number, skill: string) => void;
+  onAdd: (courseId: number, skill: string, note?: string) => void;
+  onRemove: (assertionId: number) => void;
 }) {
-  const [courseId, setCourseId] = useState<number | "">(courses[0]?.course_id ?? "");
-  const [custom, setCustom] = useState("");
-  const noExclude = useMemo(() => new Set<string>(), []);
+  // skill -> the assertion(s) already claiming it, with their course names.
+  const assertedBySkill = useMemo(() => {
+    const map = new Map<string, { id: number; course: string; by: string; at: string }[]>();
+    for (const c of courses)
+      for (const a of c.assertions)
+        map.set(a.skill_name, [...(map.get(a.skill_name) ?? []), { id: a.id, course: c.course_name, by: a.asserted_by, at: a.asserted_at }]);
+    return map;
+  }, [courses]);
+
+  const nAsserted = useMemo(() => courses.reduce((n, c) => n + c.assertions.length, 0), [courses]);
+  const maxFreq = Math.max(1, ...gapRows.map((g) => g.job_frequency ?? 0));
 
   return (
-    <div className="mt-3 flex flex-wrap items-center gap-2">
+    <div className="mt-4">
+      <p className="max-w-3xl text-sm leading-relaxed text-muted">
+        These are the skills the market demands from this program&apos;s relevant roles that we could not find in any
+        course description — ordered by demand, so the top of the list is where a confirmation raises your coverage
+        most. If a skill <em>is</em> taught, pick the course that teaches it.
+      </p>
+
+      {nAsserted > 0 && (
+        <p className="mt-3 max-w-3xl rounded-lg bg-accent-soft px-3 py-2 text-xs leading-relaxed text-foreground">
+          📌 {nAsserted} skill{nAsserted === 1 ? " is" : "s are"} currently self-reported but not in any published
+          course description. Self-reported skills stay visibly separate from extracted ones — the durable fix is to
+          update the official course descriptions so the next data refresh finds them on its own.
+        </p>
+      )}
+
+      <ul className="mt-4 space-y-2">
+        {gapRows.map((g) => {
+          const asserted = assertedBySkill.get(g.gap_skill) ?? [];
+          return (
+            <li key={g.gap_skill} className="rounded-lg border border-border bg-surface px-4 py-3">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <span className="text-sm font-medium">{g.gap_skill}</span>
+                <span className="flex items-center gap-3 text-xs text-muted">
+                  <span className="hidden h-1.5 w-24 overflow-hidden rounded-full bg-surface-muted sm:block" aria-hidden>
+                    <span
+                      className="block h-full rounded-full bg-primary/70"
+                      style={{ width: `${((g.job_frequency ?? 0) / maxFreq) * 100}%` }}
+                    />
+                  </span>
+                  {g.job_frequency ?? 0} postings
+                  {g.pct_of_role_postings != null && ` (${g.pct_of_role_postings}% of role postings)`}
+                </span>
+              </div>
+
+              {asserted.length > 0 ? (
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {asserted.map((a) => (
+                    <span
+                      key={a.id}
+                      title={`Self-reported by ${a.by} on ${a.at.slice(0, 10)}`}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-primary-dark/30 bg-primary-dark/5 px-2.5 py-1 text-xs"
+                    >
+                      ✓ taught in <strong>{a.course}</strong>
+                      <span className="rounded-full bg-accent-soft px-1.5 text-[10px] text-foreground">self-reported</span>
+                      <button
+                        onClick={() => onRemove(a.id)}
+                        disabled={busyKey === `del:${a.id}`}
+                        className="text-muted hover:text-red-600"
+                        aria-label={`Remove confirmation for ${g.gap_skill}`}
+                      >
+                        ×
+                      </button>
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <GapRowPicker
+                  skill={g.gap_skill}
+                  courses={courses}
+                  busy={busyKey !== null}
+                  onAdd={onAdd}
+                />
+              )}
+            </li>
+          );
+        })}
+        {gapRows.length === 0 && (
+          <p className="text-sm text-muted">No gap skills for this program — every core market skill is already covered.</p>
+        )}
+      </ul>
+    </div>
+  );
+}
+
+function GapRowPicker({
+  skill,
+  courses,
+  busy,
+  onAdd,
+}: {
+  skill: string;
+  courses: EditorProgram["courses"];
+  busy: boolean;
+  onAdd: (courseId: number, skill: string, note?: string) => void;
+}) {
+  const [courseId, setCourseId] = useState<number | "">("");
+  const [note, setNote] = useState("");
+
+  return (
+    <div className="mt-2 flex flex-wrap items-center gap-2">
       <select
         value={courseId}
-        onChange={(e) => setCourseId(Number(e.target.value))}
+        onChange={(e) => setCourseId(e.target.value ? Number(e.target.value) : "")}
+        aria-label={`Course that teaches ${skill}`}
         className="min-w-56 rounded-lg border border-border bg-white px-2 py-1 text-xs"
       >
+        <option value="">Taught somewhere? Pick the course…</option>
         {courses.map((c) => (
           <option key={c.course_id} value={c.course_id}>
             {c.course_name}
           </option>
         ))}
       </select>
-      <GroupedSkillSelect
-        options={options}
-        exclude={noExclude}
-        placeholder="Choose a skill…"
-        onPick={(skill) => {
-          if (courseId) onAdd(Number(courseId), skill);
-        }}
-      />
-      <input
-        value={custom}
-        onChange={(e) => setCustom(e.target.value)}
-        placeholder="or type a skill name"
-        className="rounded-lg border border-border bg-white px-2 py-1 text-xs"
-      />
-      <button
-        onClick={() => {
-          const s = custom.trim();
-          if (!courseId || !s) return;
-          setCustom("");
-          onAdd(Number(courseId), s);
-        }}
-        disabled={!courseId || !custom.trim() || busyKey !== null}
-        className="rounded-lg bg-primary-dark px-2.5 py-1 text-xs font-medium text-white disabled:opacity-40"
-      >
-        Confirm taught
-      </button>
+      {courseId !== "" && (
+        <>
+          <input
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+            placeholder="evidence note (optional): topic, week, lab…"
+            className="min-w-64 rounded-lg border border-border bg-white px-2 py-1 text-xs"
+          />
+          <button
+            onClick={() => onAdd(Number(courseId), skill, note.trim() || undefined)}
+            disabled={busy}
+            className="rounded-lg bg-primary-dark px-2.5 py-1 text-xs font-medium text-white disabled:opacity-40"
+          >
+            Confirm taught
+          </button>
+        </>
+      )}
     </div>
   );
 }
