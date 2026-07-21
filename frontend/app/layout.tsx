@@ -15,7 +15,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "CurriculumLens",
+  title: "AlignEd",
   description: "Curriculum – labor market alignment for Armenian universities",
 };
 

@@ -60,7 +60,7 @@ export function Sidebar() {
         <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--accent)]/20 ring-1 ring-[var(--accent)]/40">
           <GraduationCap className="h-5 w-5 text-[var(--accent)]" aria-hidden />
         </span>
-        <span className="font-display text-lg font-bold tracking-tight">CurriculumLens</span>
+        <span className="font-display text-lg font-bold tracking-tight">AlignEd</span>
       </div>
 
       <nav className="flex-1 space-y-5">

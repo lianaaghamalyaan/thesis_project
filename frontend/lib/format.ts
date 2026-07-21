@@ -66,7 +66,15 @@ export function formatJobDateRange(earliestAt: string | null | undefined, latest
   return `${formatDate(earliestAt)} – ${formatDate(latestAt)}`;
 }
 
+// Established institutional acronyms that don't fall out of plain initials
+// (e.g. "Université Française en Arménie" is branded UFAR, not UFA).
+const UNI_ABBR_OVERRIDES: Record<string, string> = {
+  "université française en arménie": "UFAR",
+};
+
 export function uniAbbr(name: string): string {
+  const override = UNI_ABBR_OVERRIDES[name.trim().toLowerCase()];
+  if (override) return override;
   const skip = new Set(["of", "the", "in", "and", "en", "de"]);
   const parts = name.split(/[\s-]+/).filter((w) => w && !skip.has(w.toLowerCase()));
   if (parts.length === 1) return parts[0].slice(0, 4).toUpperCase();
